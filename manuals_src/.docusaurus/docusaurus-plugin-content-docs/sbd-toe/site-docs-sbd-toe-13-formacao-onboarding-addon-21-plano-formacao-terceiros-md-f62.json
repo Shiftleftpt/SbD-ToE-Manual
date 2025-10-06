@@ -1,0 +1,61 @@
+{
+  "id": "formacao-onboarding/addon/plano-formacao-terceiros",
+  "title": "Plano de Formação para Terceiros",
+  "description": "Plano técnico de capacitação mínima obrigatória para fornecedores, contractors e parceiros com acesso técnico.",
+  "source": "@site/docs/sbd-toe/13-formacao-onboarding/addon/21-plano-formacao-terceiros.md",
+  "sourceDirName": "13-formacao-onboarding/addon",
+  "slug": "/formacao-onboarding/addon/plano-formacao-terceiros",
+  "permalink": "/sbd-theory-of-everything/sbd-toe/formacao-onboarding/addon/plano-formacao-terceiros",
+  "draft": false,
+  "unlisted": false,
+  "tags": [
+    {
+      "inline": true,
+      "label": "formacao",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/formacao"
+    },
+    {
+      "inline": true,
+      "label": "terceiros",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/terceiros"
+    },
+    {
+      "inline": true,
+      "label": "fornecedores",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/fornecedores"
+    },
+    {
+      "inline": true,
+      "label": "plano",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/plano"
+    },
+    {
+      "inline": true,
+      "label": "acesso seguro",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/acesso-seguro"
+    }
+  ],
+  "version": "current",
+  "sidebarPosition": 21,
+  "frontMatter": {
+    "id": "plano-formacao-terceiros",
+    "title": "Plano de Formação para Terceiros",
+    "description": "Plano técnico de capacitação mínima obrigatória para fornecedores, contractors e parceiros com acesso técnico.",
+    "tags": [
+      "formacao",
+      "terceiros",
+      "fornecedores",
+      "plano",
+      "acesso seguro"
+    ]
+  },
+  "sidebar": "sbdToeSidebar",
+  "previous": {
+    "title": "Modelo de Inclusão de Terceiros e Fornecedores",
+    "permalink": "/sbd-theory-of-everything/sbd-toe/formacao-onboarding/addon/inclusao-terceiros"
+  },
+  "next": {
+    "title": "Quiz de Validação — Formação para Terceiros",
+    "permalink": "/sbd-theory-of-everything/sbd-toe/formacao-onboarding/addon/22-quiz-terceiros"
+  }
+}

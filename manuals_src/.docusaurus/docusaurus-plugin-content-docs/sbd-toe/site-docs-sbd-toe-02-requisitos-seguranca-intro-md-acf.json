@@ -1,0 +1,98 @@
+{
+  "id": "requisitos-seguranca/intro",
+  "title": "Requisitos de Segurança",
+  "description": "Definição, aplicação, validação e rastreabilidade de requisitos de segurança aplicacionais por nível de risco",
+  "source": "@site/docs/sbd-toe/02-requisitos-seguranca/intro.md",
+  "sourceDirName": "02-requisitos-seguranca",
+  "slug": "/requisitos-seguranca/intro",
+  "permalink": "/sbd-theory-of-everything/sbd-toe/requisitos-seguranca/intro",
+  "draft": false,
+  "unlisted": false,
+  "tags": [
+    {
+      "inline": true,
+      "label": "tipo:prescricao",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/tipo-prescricao"
+    },
+    {
+      "inline": true,
+      "label": "tema:requisitos",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/tema-requisitos"
+    },
+    {
+      "inline": true,
+      "label": "segurança",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/seguranca"
+    },
+    {
+      "inline": true,
+      "label": "rastreabilidade",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/rastreabilidade"
+    },
+    {
+      "inline": true,
+      "label": "validação",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/validacao"
+    },
+    {
+      "inline": true,
+      "label": "proporcionalidade",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/proporcionalidade"
+    },
+    {
+      "inline": true,
+      "label": "SSDF",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/ssdf"
+    },
+    {
+      "inline": true,
+      "label": "SAMM",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/samm"
+    },
+    {
+      "inline": true,
+      "label": "DSOMM",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/dsomm"
+    },
+    {
+      "inline": true,
+      "label": "BSIMM",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/bsimm"
+    },
+    {
+      "inline": true,
+      "label": "ASVS",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/asvs"
+    }
+  ],
+  "version": "current",
+  "sidebarPosition": 1,
+  "frontMatter": {
+    "id": "intro",
+    "title": "Requisitos de Segurança",
+    "description": "Definição, aplicação, validação e rastreabilidade de requisitos de segurança aplicacionais por nível de risco",
+    "tags": [
+      "tipo:prescricao",
+      "tema:requisitos",
+      "segurança",
+      "rastreabilidade",
+      "validação",
+      "proporcionalidade",
+      "SSDF",
+      "SAMM",
+      "DSOMM",
+      "BSIMM",
+      "ASVS"
+    ],
+    "sidebar_position": 1
+  },
+  "sidebar": "sbdToeSidebar",
+  "previous": {
+    "title": "Critérios para Aceitação de Risco",
+    "permalink": "/sbd-theory-of-everything/sbd-toe/classificacao-aplicacoes/addon/criterios-aceitacao-risco"
+  },
+  "next": {
+    "title": "Rastreabilidade com Frameworks de Segurança",
+    "permalink": "/sbd-theory-of-everything/sbd-toe/requisitos-seguranca/addon/rastreabilidade-frameworks"
+  }
+}

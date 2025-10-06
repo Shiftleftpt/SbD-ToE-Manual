@@ -1,0 +1,29 @@
+{
+  "id": "arquitetura-segura/addon/matriz-requisitos-iac",
+  "title": "Matriz de Requisitos Técnicos para Projetos IaC",
+  "description": "Requisitos específicos para garantir segurança em projetos de Infraestrutura como Código",
+  "source": "@site/docs/sbd-toe/04-arquitetura-segura/addon/06-rastreabilidade.md",
+  "sourceDirName": "04-arquitetura-segura/addon",
+  "slug": "/arquitetura-segura/addon/matriz-requisitos-iac",
+  "permalink": "/sbd-theory-of-everything/sbd-toe/arquitetura-segura/addon/matriz-requisitos-iac",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 8,
+  "frontMatter": {
+    "id": "matriz-requisitos-iac",
+    "title": "Matriz de Requisitos Técnicos para Projetos IaC",
+    "description": "Requisitos específicos para garantir segurança em projetos de Infraestrutura como Código",
+    "sidebar_position": 8
+  },
+  "sidebar": "sbdToeSidebar",
+  "previous": {
+    "title": "📋 Critérios de Validação Arquitetural",
+    "permalink": "/sbd-theory-of-everything/sbd-toe/arquitetura-segura/addon/criterios-validacao"
+  },
+  "next": {
+    "title": "Ciclo de Vida de Aplicação — Arquitetura Segura",
+    "permalink": "/sbd-theory-of-everything/sbd-toe/arquitetura-segura/canon/aplicacao-lifecycle"
+  }
+}

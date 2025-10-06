@@ -1,0 +1,1521 @@
+{
+  "docusaurus-plugin-content-docs": {
+    "sbd-toe": {
+      "path": "/sbd-theory-of-everything/sbd-toe",
+      "versions": [
+        {
+          "name": "current",
+          "label": "Next",
+          "isLast": true,
+          "path": "/sbd-theory-of-everything/sbd-toe",
+          "mainDocId": "index",
+          "docs": [
+            {
+              "id": "arquitetura-segura/addon/01-catalogo-requisitos-aplicacionais",
+              "path": "/sbd-theory-of-everything/sbd-toe/arquitetura-segura/addon/01-catalogo-requisitos-aplicacionais",
+              "sidebar": "sbdToeSidebar"
+            },
+            {
+              "id": "arquitetura-segura/addon/casos-praticos",
+              "path": "/sbd-theory-of-everything/sbd-toe/arquitetura-segura/addon/casos-praticos",
+              "sidebar": "sbdToeSidebar"
+            },
+            {
+              "id": "arquitetura-segura/addon/criterios-validacao",
+              "path": "/sbd-theory-of-everything/sbd-toe/arquitetura-segura/addon/criterios-validacao",
+              "sidebar": "sbdToeSidebar"
+            },
+            {
+              "id": "arquitetura-segura/addon/diagramas-referencia",
+              "path": "/sbd-theory-of-everything/sbd-toe/arquitetura-segura/addon/diagramas-referencia",
+              "sidebar": "sbdToeSidebar"
+            },
+            {
+              "id": "arquitetura-segura/addon/excecoes",
+              "path": "/sbd-theory-of-everything/sbd-toe/arquitetura-segura/addon/excecoes",
+              "sidebar": "sbdToeSidebar"
+            },
+            {
+              "id": "arquitetura-segura/addon/matriz-requisitos-iac",
+              "path": "/sbd-theory-of-everything/sbd-toe/arquitetura-segura/addon/matriz-requisitos-iac",
+              "sidebar": "sbdToeSidebar"
+            },
+            {
+              "id": "arquitetura-segura/canon/ameacas-mitigadas",
+              "path": "/sbd-theory-of-everything/sbd-toe/arquitetura-segura/canon/ameacas-mitigadas"
+            },
+            {
+              "id": "arquitetura-segura/canon/aplicacao-lifecycle",
+              "path": "/sbd-theory-of-everything/sbd-toe/arquitetura-segura/canon/aplicacao-lifecycle",
+              "sidebar": "sbdToeSidebar"
+            },
+            {
+              "id": "arquitetura-segura/canon/checklist-revisao",
+              "path": "/sbd-theory-of-everything/sbd-toe/arquitetura-segura/canon/checklist-revisao"
+            },
+            {
+              "id": "arquitetura-segura/canon/maturidade",
+              "path": "/sbd-theory-of-everything/sbd-toe/arquitetura-segura/canon/maturidade"
+            },
+            {
+              "id": "arquitetura-segura/canon/policies-relevantes",
+              "path": "/sbd-theory-of-everything/sbd-toe/arquitetura-segura/canon/policies-relevantes"
+            },
+            {
+              "id": "arquitetura-segura/canon/rastreabilidade",
+              "path": "/sbd-theory-of-everything/sbd-toe/arquitetura-segura/canon/rastreabilidade"
+            },
+            {
+              "id": "arquitetura-segura/canon/recomendacoes-avancadas",
+              "path": "/sbd-theory-of-everything/sbd-toe/arquitetura-segura/canon/recomendacoes-avancadas"
+            },
+            {
+              "id": "arquitetura-segura/intro",
+              "path": "/sbd-theory-of-everything/sbd-toe/arquitetura-segura/intro",
+              "sidebar": "sbdToeSidebar"
+            },
+            {
+              "id": "capitulos-basilares",
+              "path": "/sbd-theory-of-everything/sbd-toe/capitulos-basilares",
+              "sidebar": "sbdToeSidebar"
+            },
+            {
+              "id": "cicd-seguro/addon/controle-excecoes-visibilidade",
+              "path": "/sbd-theory-of-everything/sbd-toe/cicd-seguro/addon/controle-excecoes-visibilidade",
+              "sidebar": "sbdToeSidebar"
+            },
+            {
+              "id": "cicd-seguro/addon/controle-excecoes-visibilidade",
+              "path": "/sbd-theory-of-everything/sbd-toe/cicd-seguro/addon/controle-excecoes-visibilidade",
+              "sidebar": "sbdToeSidebar"
+            },
+            {
+              "id": "cicd-seguro/addon/controle-excecoes-visibilidade",
+              "path": "/sbd-theory-of-everything/sbd-toe/cicd-seguro/addon/controle-excecoes-visibilidade",
+              "sidebar": "sbdToeSidebar"
+            },
+            {
+              "id": "cicd-seguro/addon/design-seguro-pipelines",
+              "path": "/sbd-theory-of-everything/sbd-toe/cicd-seguro/addon/design-seguro-pipelines",
+              "sidebar": "sbdToeSidebar"
+            },
+            {
+              "id": "cicd-seguro/addon/gestao-codigo-fonte",
+              "path": "/sbd-theory-of-everything/sbd-toe/cicd-seguro/addon/gestao-codigo-fonte",
+              "sidebar": "sbdToeSidebar"
+            },
+            {
+              "id": "cicd-seguro/addon/gestao-segredos-pipeline",
+              "path": "/sbd-theory-of-everything/sbd-toe/cicd-seguro/addon/gestao-segredos-pipeline",
+              "sidebar": "sbdToeSidebar"
+            },
+            {
+              "id": "cicd-seguro/addon/integridade-proveniencia",
+              "path": "/sbd-theory-of-everything/sbd-toe/cicd-seguro/addon/integridade-proveniencia",
+              "sidebar": "sbdToeSidebar"
+            },
+            {
+              "id": "cicd-seguro/addon/isolamento-runners",
+              "path": "/sbd-theory-of-everything/sbd-toe/cicd-seguro/addon/isolamento-runners",
+              "sidebar": "sbdToeSidebar"
+            },
+            {
+              "id": "cicd-seguro/addon/politicas-gates-pipeline",
+              "path": "/sbd-theory-of-everything/sbd-toe/cicd-seguro/addon/politicas-gates-pipeline",
+              "sidebar": "sbdToeSidebar"
+            },
+            {
+              "id": "cicd-seguro/addon/rastreabilidade-assinaturas",
+              "path": "/sbd-theory-of-everything/sbd-toe/cicd-seguro/addon/rastreabilidade-assinaturas",
+              "sidebar": "sbdToeSidebar"
+            },
+            {
+              "id": "cicd-seguro/addon/seguranca-codigo-pipeline",
+              "path": "/sbd-theory-of-everything/sbd-toe/cicd-seguro/addon/seguranca-codigo-pipeline",
+              "sidebar": "sbdToeSidebar"
+            },
+            {
+              "id": "cicd-seguro/addon/validacoes-seguranca-integradas",
+              "path": "/sbd-theory-of-everything/sbd-toe/cicd-seguro/addon/validacoes-seguranca-integradas",
+              "sidebar": "sbdToeSidebar"
+            },
+            {
+              "id": "cicd-seguro/canon/ameacas-mitigadas",
+              "path": "/sbd-theory-of-everything/sbd-toe/cicd-seguro/canon/ameacas-mitigadas"
+            },
+            {
+              "id": "cicd-seguro/canon/aplicacao-lifecycle",
+              "path": "/sbd-theory-of-everything/sbd-toe/cicd-seguro/canon/aplicacao-lifecycle",
+              "sidebar": "sbdToeSidebar"
+            },
+            {
+              "id": "cicd-seguro/canon/checklist-revisao",
+              "path": "/sbd-theory-of-everything/sbd-toe/cicd-seguro/canon/checklist-revisao"
+            },
+            {
+              "id": "cicd-seguro/canon/maturidade",
+              "path": "/sbd-theory-of-everything/sbd-toe/cicd-seguro/canon/maturidade"
+            },
+            {
+              "id": "cicd-seguro/canon/policies-relevantes",
+              "path": "/sbd-theory-of-everything/sbd-toe/cicd-seguro/canon/policies-relevantes"
+            },
+            {
+              "id": "cicd-seguro/canon/rastreabilidade",
+              "path": "/sbd-theory-of-everything/sbd-toe/cicd-seguro/canon/rastreabilidade"
+            },
+            {
+              "id": "cicd-seguro/canon/recomendacoes-avancadas",
+              "path": "/sbd-theory-of-everything/sbd-toe/cicd-seguro/canon/recomendacoes-avancadas"
+            },
+            {
+              "id": "cicd-seguro/intro",
+              "path": "/sbd-theory-of-everything/sbd-toe/cicd-seguro/intro",
+              "sidebar": "sbdToeSidebar"
+            },
+            {
+              "id": "classificacao-aplicacoes/addon/adopcao-drp-bia",
+              "path": "/sbd-theory-of-everything/sbd-toe/classificacao-aplicacoes/addon/adopcao-drp-bia",
+              "sidebar": "sbdToeSidebar"
+            },
+            {
+              "id": "classificacao-aplicacoes/addon/avaliacao-semiquantitativa",
+              "path": "/sbd-theory-of-everything/sbd-toe/classificacao-aplicacoes/addon/avaliacao-semiquantitativa",
+              "sidebar": "sbdToeSidebar"
+            },
+            {
+              "id": "classificacao-aplicacoes/addon/casos-praticos",
+              "path": "/sbd-theory-of-everything/sbd-toe/classificacao-aplicacoes/addon/casos-praticos",
+              "sidebar": "sbdToeSidebar"
+            },
+            {
+              "id": "classificacao-aplicacoes/addon/ciclo-vida-risco",
+              "path": "/sbd-theory-of-everything/sbd-toe/classificacao-aplicacoes/addon/ciclo-vida-risco",
+              "sidebar": "sbdToeSidebar"
+            },
+            {
+              "id": "classificacao-aplicacoes/addon/criterios-aceitacao-risco",
+              "path": "/sbd-theory-of-everything/sbd-toe/classificacao-aplicacoes/addon/criterios-aceitacao-risco",
+              "sidebar": "sbdToeSidebar"
+            },
+            {
+              "id": "classificacao-aplicacoes/addon/mapeamento-ameacas-risco",
+              "path": "/sbd-theory-of-everything/sbd-toe/classificacao-aplicacoes/addon/mapeamento-ameacas-risco",
+              "sidebar": "sbdToeSidebar"
+            },
+            {
+              "id": "classificacao-aplicacoes/addon/matriz-controlos-por-risco",
+              "path": "/sbd-theory-of-everything/sbd-toe/classificacao-aplicacoes/addon/matriz-controlos-por-risco",
+              "sidebar": "sbdToeSidebar"
+            },
+            {
+              "id": "classificacao-aplicacoes/addon/modelo-classificacao-eixos",
+              "path": "/sbd-theory-of-everything/sbd-toe/classificacao-aplicacoes/addon/modelo-classificacao-eixos",
+              "sidebar": "sbdToeSidebar"
+            },
+            {
+              "id": "classificacao-aplicacoes/addon/risco-residual",
+              "path": "/sbd-theory-of-everything/sbd-toe/classificacao-aplicacoes/addon/risco-residual",
+              "sidebar": "sbdToeSidebar"
+            },
+            {
+              "id": "classificacao-aplicacoes/aplicacao-lifecycle",
+              "path": "/sbd-theory-of-everything/sbd-toe/classificacao-aplicacoes/aplicacao-lifecycle",
+              "sidebar": "sbdToeSidebar"
+            },
+            {
+              "id": "classificacao-aplicacoes/canon/ameacas-mitigadas",
+              "path": "/sbd-theory-of-everything/sbd-toe/classificacao-aplicacoes/canon/ameacas-mitigadas"
+            },
+            {
+              "id": "classificacao-aplicacoes/canon/checklist-revisao",
+              "path": "/sbd-theory-of-everything/sbd-toe/classificacao-aplicacoes/canon/checklist-revisao"
+            },
+            {
+              "id": "classificacao-aplicacoes/canon/maturidade",
+              "path": "/sbd-theory-of-everything/sbd-toe/classificacao-aplicacoes/canon/maturidade"
+            },
+            {
+              "id": "classificacao-aplicacoes/canon/policies-relevantes",
+              "path": "/sbd-theory-of-everything/sbd-toe/classificacao-aplicacoes/canon/policies-relevantes"
+            },
+            {
+              "id": "classificacao-aplicacoes/canon/rastreabilidade",
+              "path": "/sbd-theory-of-everything/sbd-toe/classificacao-aplicacoes/canon/rastreabilidade"
+            },
+            {
+              "id": "classificacao-aplicacoes/canon/recomendacoes-avancadas",
+              "path": "/sbd-theory-of-everything/sbd-toe/classificacao-aplicacoes/canon/recomendacoes-avancadas"
+            },
+            {
+              "id": "classificacao-aplicacoes/intro",
+              "path": "/sbd-theory-of-everything/sbd-toe/classificacao-aplicacoes/intro",
+              "sidebar": "sbdToeSidebar"
+            },
+            {
+              "id": "classificacao-aplicacoes/pre-intro-rationale",
+              "path": "/sbd-theory-of-everything/sbd-toe/classificacao-aplicacoes/pre-intro-rationale"
+            },
+            {
+              "id": "como-usar-este-manual",
+              "path": "/sbd-theory-of-everything/sbd-toe/como-usar-este-manual",
+              "sidebar": "sbdToeSidebar"
+            },
+            {
+              "id": "containers-imagens/addon/assinatura-cadeia-trust",
+              "path": "/sbd-theory-of-everything/sbd-toe/containers-imagens/addon/assinatura-cadeia-trust",
+              "sidebar": "sbdToeSidebar"
+            },
+            {
+              "id": "containers-imagens/addon/exemplo-pipeline-container",
+              "path": "/sbd-theory-of-everything/sbd-toe/containers-imagens/addon/exemplo-pipeline-container",
+              "sidebar": "sbdToeSidebar"
+            },
+            {
+              "id": "containers-imagens/addon/hardening-containers",
+              "path": "/sbd-theory-of-everything/sbd-toe/containers-imagens/addon/hardening-containers",
+              "sidebar": "sbdToeSidebar"
+            },
+            {
+              "id": "containers-imagens/addon/imagens-base",
+              "path": "/sbd-theory-of-everything/sbd-toe/containers-imagens/addon/imagens-base",
+              "sidebar": "sbdToeSidebar"
+            },
+            {
+              "id": "containers-imagens/addon/kubernetes-execucao",
+              "path": "/sbd-theory-of-everything/sbd-toe/containers-imagens/addon/kubernetes-execucao",
+              "sidebar": "sbdToeSidebar"
+            },
+            {
+              "id": "containers-imagens/addon/policies-runtime-opa",
+              "path": "/sbd-theory-of-everything/sbd-toe/containers-imagens/addon/policies-runtime-opa",
+              "sidebar": "sbdToeSidebar"
+            },
+            {
+              "id": "containers-imagens/addon/runners-isolamento",
+              "path": "/sbd-theory-of-everything/sbd-toe/containers-imagens/addon/runners-isolamento",
+              "sidebar": "sbdToeSidebar"
+            },
+            {
+              "id": "containers-imagens/addon/sbom-containers",
+              "path": "/sbd-theory-of-everything/sbd-toe/containers-imagens/addon/sbom-containers",
+              "sidebar": "sbdToeSidebar"
+            },
+            {
+              "id": "containers-imagens/addon/vulnerabilidades-imagens",
+              "path": "/sbd-theory-of-everything/sbd-toe/containers-imagens/addon/vulnerabilidades-imagens",
+              "sidebar": "sbdToeSidebar"
+            },
+            {
+              "id": "containers-imagens/canon/ameacas-mitigadas",
+              "path": "/sbd-theory-of-everything/sbd-toe/containers-imagens/canon/ameacas-mitigadas"
+            },
+            {
+              "id": "containers-imagens/canon/aplicacao-lifecycle",
+              "path": "/sbd-theory-of-everything/sbd-toe/containers-imagens/canon/aplicacao-lifecycle",
+              "sidebar": "sbdToeSidebar"
+            },
+            {
+              "id": "containers-imagens/canon/checklist-revisao",
+              "path": "/sbd-theory-of-everything/sbd-toe/containers-imagens/canon/checklist-revisao"
+            },
+            {
+              "id": "containers-imagens/canon/maturidade",
+              "path": "/sbd-theory-of-everything/sbd-toe/containers-imagens/canon/maturidade"
+            },
+            {
+              "id": "containers-imagens/canon/policies-relevantes",
+              "path": "/sbd-theory-of-everything/sbd-toe/containers-imagens/canon/policies-relevantes"
+            },
+            {
+              "id": "containers-imagens/canon/rastreabilidade",
+              "path": "/sbd-theory-of-everything/sbd-toe/containers-imagens/canon/rastreabilidade"
+            },
+            {
+              "id": "containers-imagens/canon/recomendacoes-avancadas",
+              "path": "/sbd-theory-of-everything/sbd-toe/containers-imagens/canon/recomendacoes-avancadas"
+            },
+            {
+              "id": "containers-imagens/intro",
+              "path": "/sbd-theory-of-everything/sbd-toe/containers-imagens/intro",
+              "sidebar": "sbdToeSidebar"
+            },
+            {
+              "id": "coverage-frameworks",
+              "path": "/sbd-theory-of-everything/sbd-toe/coverage-frameworks",
+              "sidebar": "sbdToeSidebar"
+            },
+            {
+              "id": "dependencias-sbom-sca/addon/analise-sca",
+              "path": "/sbd-theory-of-everything/sbd-toe/dependencias-sbom-sca/addon/analise-sca",
+              "sidebar": "sbdToeSidebar"
+            },
+            {
+              "id": "dependencias-sbom-sca/addon/controle-registos-origem",
+              "path": "/sbd-theory-of-everything/sbd-toe/dependencias-sbom-sca/addon/controle-registos-origem",
+              "sidebar": "sbdToeSidebar"
+            },
+            {
+              "id": "dependencias-sbom-sca/addon/excecoes-e-aceitacao-risco",
+              "path": "/sbd-theory-of-everything/sbd-toe/dependencias-sbom-sca/addon/excecoes-e-aceitacao-risco",
+              "sidebar": "sbdToeSidebar"
+            },
+            {
+              "id": "dependencias-sbom-sca/addon/governanca-libs-terceiros",
+              "path": "/sbd-theory-of-everything/sbd-toe/dependencias-sbom-sca/addon/governanca-libs-terceiros",
+              "sidebar": "sbdToeSidebar"
+            },
+            {
+              "id": "dependencias-sbom-sca/addon/integracao-ci-cd",
+              "path": "/sbd-theory-of-everything/sbd-toe/dependencias-sbom-sca/addon/integracao-ci-cd",
+              "sidebar": "sbdToeSidebar"
+            },
+            {
+              "id": "dependencias-sbom-sca/addon/inventario-sbom",
+              "path": "/sbd-theory-of-everything/sbd-toe/dependencias-sbom-sca/addon/inventario-sbom",
+              "sidebar": "sbdToeSidebar"
+            },
+            {
+              "id": "dependencias-sbom-sca/addon/politica-atualizacoes",
+              "path": "/sbd-theory-of-everything/sbd-toe/dependencias-sbom-sca/addon/politica-atualizacoes",
+              "sidebar": "sbdToeSidebar"
+            },
+            {
+              "id": "dependencias-sbom-sca/addon/rastreabilidade-vulnerabilidades",
+              "path": "/sbd-theory-of-everything/sbd-toe/dependencias-sbom-sca/addon/rastreabilidade-vulnerabilidades",
+              "sidebar": "sbdToeSidebar"
+            },
+            {
+              "id": "dependencias-sbom-sca/addon/risco-supply-chain",
+              "path": "/sbd-theory-of-everything/sbd-toe/dependencias-sbom-sca/addon/risco-supply-chain",
+              "sidebar": "sbdToeSidebar"
+            },
+            {
+              "id": "dependencias-sbom-sca/canon/ameacas-mitigadas",
+              "path": "/sbd-theory-of-everything/sbd-toe/dependencias-sbom-sca/canon/ameacas-mitigadas"
+            },
+            {
+              "id": "dependencias-sbom-sca/canon/aplicacao-lifecycle",
+              "path": "/sbd-theory-of-everything/sbd-toe/dependencias-sbom-sca/canon/aplicacao-lifecycle",
+              "sidebar": "sbdToeSidebar"
+            },
+            {
+              "id": "dependencias-sbom-sca/canon/checklist-revisao",
+              "path": "/sbd-theory-of-everything/sbd-toe/dependencias-sbom-sca/canon/checklist-revisao"
+            },
+            {
+              "id": "dependencias-sbom-sca/canon/maturidade",
+              "path": "/sbd-theory-of-everything/sbd-toe/dependencias-sbom-sca/canon/maturidade"
+            },
+            {
+              "id": "dependencias-sbom-sca/canon/policies-relevantes",
+              "path": "/sbd-theory-of-everything/sbd-toe/dependencias-sbom-sca/canon/policies-relevantes"
+            },
+            {
+              "id": "dependencias-sbom-sca/canon/rastreabilidade",
+              "path": "/sbd-theory-of-everything/sbd-toe/dependencias-sbom-sca/canon/rastreabilidade"
+            },
+            {
+              "id": "dependencias-sbom-sca/canon/recomendacoes-avancadas",
+              "path": "/sbd-theory-of-everything/sbd-toe/dependencias-sbom-sca/canon/recomendacoes-avancadas"
+            },
+            {
+              "id": "dependencias-sbom-sca/intro",
+              "path": "/sbd-theory-of-everything/sbd-toe/dependencias-sbom-sca/intro",
+              "sidebar": "sbdToeSidebar"
+            },
+            {
+              "id": "deploy-seguro/addon/01-modelo-controle-execucao",
+              "path": "/sbd-theory-of-everything/sbd-toe/deploy-seguro/addon/01-modelo-controle-execucao",
+              "sidebar": "sbdToeSidebar"
+            },
+            {
+              "id": "deploy-seguro/addon/02-praticas-release-management",
+              "path": "/sbd-theory-of-everything/sbd-toe/deploy-seguro/addon/02-praticas-release-management",
+              "sidebar": "sbdToeSidebar"
+            },
+            {
+              "id": "deploy-seguro/addon/03-feature-flags-e-toggle",
+              "path": "/sbd-theory-of-everything/sbd-toe/deploy-seguro/addon/03-feature-flags-e-toggle",
+              "sidebar": "sbdToeSidebar"
+            },
+            {
+              "id": "deploy-seguro/addon/04-validacoes-pre-deploy",
+              "path": "/sbd-theory-of-everything/sbd-toe/deploy-seguro/addon/04-validacoes-pre-deploy",
+              "sidebar": "sbdToeSidebar"
+            },
+            {
+              "id": "deploy-seguro/addon/05-monitorizacao-e-reacao",
+              "path": "/sbd-theory-of-everything/sbd-toe/deploy-seguro/addon/05-monitorizacao-e-reacao",
+              "sidebar": "sbdToeSidebar"
+            },
+            {
+              "id": "deploy-seguro/addon/06-controle-versao-e-rollback",
+              "path": "/sbd-theory-of-everything/sbd-toe/deploy-seguro/addon/06-controle-versao-e-rollback",
+              "sidebar": "sbdToeSidebar"
+            },
+            {
+              "id": "deploy-seguro/addon/07-deploy-progressivo-e-risco",
+              "path": "/sbd-theory-of-everything/sbd-toe/deploy-seguro/addon/07-deploy-progressivo-e-risco",
+              "sidebar": "sbdToeSidebar"
+            },
+            {
+              "id": "deploy-seguro/addon/08-segregacao-e-validacao-operacional",
+              "path": "/sbd-theory-of-everything/sbd-toe/deploy-seguro/addon/08-segregacao-e-validacao-operacional",
+              "sidebar": "sbdToeSidebar"
+            },
+            {
+              "id": "deploy-seguro/canon/ameacas-mitigadas",
+              "path": "/sbd-theory-of-everything/sbd-toe/deploy-seguro/canon/ameacas-mitigadas"
+            },
+            {
+              "id": "deploy-seguro/canon/aplicacao-lifecycle",
+              "path": "/sbd-theory-of-everything/sbd-toe/deploy-seguro/canon/aplicacao-lifecycle",
+              "sidebar": "sbdToeSidebar"
+            },
+            {
+              "id": "deploy-seguro/canon/checklist-revisao",
+              "path": "/sbd-theory-of-everything/sbd-toe/deploy-seguro/canon/checklist-revisao"
+            },
+            {
+              "id": "deploy-seguro/canon/maturidade",
+              "path": "/sbd-theory-of-everything/sbd-toe/deploy-seguro/canon/maturidade"
+            },
+            {
+              "id": "deploy-seguro/canon/policies-deploy-seguro",
+              "path": "/sbd-theory-of-everything/sbd-toe/deploy-seguro/canon/policies-deploy-seguro"
+            },
+            {
+              "id": "deploy-seguro/canon/rastreabilidade",
+              "path": "/sbd-theory-of-everything/sbd-toe/deploy-seguro/canon/rastreabilidade"
+            },
+            {
+              "id": "deploy-seguro/canon/recomendacoes-avancadas-deploy",
+              "path": "/sbd-theory-of-everything/sbd-toe/deploy-seguro/canon/recomendacoes-avancadas-deploy"
+            },
+            {
+              "id": "deploy-seguro/intro",
+              "path": "/sbd-theory-of-everything/sbd-toe/deploy-seguro/intro",
+              "sidebar": "sbdToeSidebar"
+            },
+            {
+              "id": "deploy-seguro/README",
+              "path": "/sbd-theory-of-everything/sbd-toe/deploy-seguro/"
+            },
+            {
+              "id": "desenvolvimento-seguro/addon/anotacoes-evidencia",
+              "path": "/sbd-theory-of-everything/sbd-toe/desenvolvimento-seguro/addon/anotacoes-evidencia",
+              "sidebar": "sbdToeSidebar"
+            },
+            {
+              "id": "desenvolvimento-seguro/addon/boas-praticas-codigo",
+              "path": "/sbd-theory-of-everything/sbd-toe/desenvolvimento-seguro/addon/boas-praticas-codigo",
+              "sidebar": "sbdToeSidebar"
+            },
+            {
+              "id": "desenvolvimento-seguro/addon/excecoes-e-justificacoes",
+              "path": "/sbd-theory-of-everything/sbd-toe/desenvolvimento-seguro/addon/excecoes-e-justificacoes",
+              "sidebar": "sbdToeSidebar"
+            },
+            {
+              "id": "desenvolvimento-seguro/addon/genia-e-seguranca",
+              "path": "/sbd-theory-of-everything/sbd-toe/desenvolvimento-seguro/addon/genia-e-seguranca",
+              "sidebar": "sbdToeSidebar"
+            },
+            {
+              "id": "desenvolvimento-seguro/addon/guidelines-equipa",
+              "path": "/sbd-theory-of-everything/sbd-toe/desenvolvimento-seguro/addon/guidelines-equipa",
+              "sidebar": "sbdToeSidebar"
+            },
+            {
+              "id": "desenvolvimento-seguro/addon/linters-validacoes",
+              "path": "/sbd-theory-of-everything/sbd-toe/desenvolvimento-seguro/addon/linters-validacoes",
+              "sidebar": "sbdToeSidebar"
+            },
+            {
+              "id": "desenvolvimento-seguro/addon/seguranca-dependencias",
+              "path": "/sbd-theory-of-everything/sbd-toe/desenvolvimento-seguro/addon/seguranca-dependencias",
+              "sidebar": "sbdToeSidebar"
+            },
+            {
+              "id": "desenvolvimento-seguro/addon/validacoes-codigo",
+              "path": "/sbd-theory-of-everything/sbd-toe/desenvolvimento-seguro/addon/validacoes-codigo",
+              "sidebar": "sbdToeSidebar"
+            },
+            {
+              "id": "desenvolvimento-seguro/canon/ameacas-mitigadas",
+              "path": "/sbd-theory-of-everything/sbd-toe/desenvolvimento-seguro/canon/ameacas-mitigadas"
+            },
+            {
+              "id": "desenvolvimento-seguro/canon/aplicacao-lifecycle",
+              "path": "/sbd-theory-of-everything/sbd-toe/desenvolvimento-seguro/canon/aplicacao-lifecycle",
+              "sidebar": "sbdToeSidebar"
+            },
+            {
+              "id": "desenvolvimento-seguro/canon/checklist-revisao",
+              "path": "/sbd-theory-of-everything/sbd-toe/desenvolvimento-seguro/canon/checklist-revisao"
+            },
+            {
+              "id": "desenvolvimento-seguro/canon/desenvolvimento-seguro-policies",
+              "path": "/sbd-theory-of-everything/sbd-toe/desenvolvimento-seguro/canon/desenvolvimento-seguro-policies"
+            },
+            {
+              "id": "desenvolvimento-seguro/canon/maturidade",
+              "path": "/sbd-theory-of-everything/sbd-toe/desenvolvimento-seguro/canon/maturidade"
+            },
+            {
+              "id": "desenvolvimento-seguro/canon/rastreabilidade",
+              "path": "/sbd-theory-of-everything/sbd-toe/desenvolvimento-seguro/canon/rastreabilidade"
+            },
+            {
+              "id": "desenvolvimento-seguro/canon/recomendacoes-avancadas",
+              "path": "/sbd-theory-of-everything/sbd-toe/desenvolvimento-seguro/canon/recomendacoes-avancadas"
+            },
+            {
+              "id": "desenvolvimento-seguro/intro",
+              "path": "/sbd-theory-of-everything/sbd-toe/desenvolvimento-seguro/intro",
+              "sidebar": "sbdToeSidebar"
+            },
+            {
+              "id": "formacao-onboarding/addon/22-quiz-terceiros",
+              "path": "/sbd-theory-of-everything/sbd-toe/formacao-onboarding/addon/22-quiz-terceiros",
+              "sidebar": "sbdToeSidebar"
+            },
+            {
+              "id": "formacao-onboarding/addon/catalogo-formativo",
+              "path": "/sbd-theory-of-everything/sbd-toe/formacao-onboarding/addon/catalogo-formativo",
+              "sidebar": "sbdToeSidebar"
+            },
+            {
+              "id": "formacao-onboarding/addon/checklist-onboarding",
+              "path": "/sbd-theory-of-everything/sbd-toe/formacao-onboarding/addon/checklist-onboarding",
+              "sidebar": "sbdToeSidebar"
+            },
+            {
+              "id": "formacao-onboarding/addon/exemplo-manual-dev-pr",
+              "path": "/sbd-theory-of-everything/sbd-toe/formacao-onboarding/addon/exemplo-manual-dev-pr",
+              "sidebar": "sbdToeSidebar"
+            },
+            {
+              "id": "formacao-onboarding/addon/formacao-iac",
+              "path": "/sbd-theory-of-everything/sbd-toe/formacao-onboarding/addon/formacao-iac",
+              "sidebar": "sbdToeSidebar"
+            },
+            {
+              "id": "formacao-onboarding/addon/inclusao-terceiros",
+              "path": "/sbd-theory-of-everything/sbd-toe/formacao-onboarding/addon/inclusao-terceiros",
+              "sidebar": "sbdToeSidebar"
+            },
+            {
+              "id": "formacao-onboarding/addon/indicadores-metricas",
+              "path": "/sbd-theory-of-everything/sbd-toe/formacao-onboarding/addon/indicadores-metricas",
+              "sidebar": "sbdToeSidebar"
+            },
+            {
+              "id": "formacao-onboarding/addon/integracao-transversal",
+              "path": "/sbd-theory-of-everything/sbd-toe/formacao-onboarding/addon/integracao-transversal",
+              "sidebar": "sbdToeSidebar"
+            },
+            {
+              "id": "formacao-onboarding/addon/manual-formacao-capitulos",
+              "path": "/sbd-theory-of-everything/sbd-toe/formacao-onboarding/addon/manual-formacao-capitulos",
+              "sidebar": "sbdToeSidebar"
+            },
+            {
+              "id": "formacao-onboarding/addon/plano-formacao-terceiros",
+              "path": "/sbd-theory-of-everything/sbd-toe/formacao-onboarding/addon/plano-formacao-terceiros",
+              "sidebar": "sbdToeSidebar"
+            },
+            {
+              "id": "formacao-onboarding/addon/programa-champions",
+              "path": "/sbd-theory-of-everything/sbd-toe/formacao-onboarding/addon/programa-champions",
+              "sidebar": "sbdToeSidebar"
+            },
+            {
+              "id": "formacao-onboarding/addon/quiz-onboarding",
+              "path": "/sbd-theory-of-everything/sbd-toe/formacao-onboarding/addon/quiz-onboarding",
+              "sidebar": "sbdToeSidebar"
+            },
+            {
+              "id": "formacao-onboarding/addon/tecnicas-formativas",
+              "path": "/sbd-theory-of-everything/sbd-toe/formacao-onboarding/addon/tecnicas-formativas",
+              "sidebar": "sbdToeSidebar"
+            },
+            {
+              "id": "formacao-onboarding/addon/trilho-formativo",
+              "path": "/sbd-theory-of-everything/sbd-toe/formacao-onboarding/addon/trilho-formativo",
+              "sidebar": "sbdToeSidebar"
+            },
+            {
+              "id": "formacao-onboarding/canon/ameacas-mitigadas",
+              "path": "/sbd-theory-of-everything/sbd-toe/formacao-onboarding/canon/ameacas-mitigadas"
+            },
+            {
+              "id": "formacao-onboarding/canon/aplicacao-lifecycle",
+              "path": "/sbd-theory-of-everything/sbd-toe/formacao-onboarding/canon/aplicacao-lifecycle",
+              "sidebar": "sbdToeSidebar"
+            },
+            {
+              "id": "formacao-onboarding/canon/checklist-revisao",
+              "path": "/sbd-theory-of-everything/sbd-toe/formacao-onboarding/canon/checklist-revisao"
+            },
+            {
+              "id": "formacao-onboarding/canon/checklist-revisao",
+              "path": "/sbd-theory-of-everything/sbd-toe/formacao-onboarding/canon/checklist-revisao"
+            },
+            {
+              "id": "formacao-onboarding/canon/maturidade",
+              "path": "/sbd-theory-of-everything/sbd-toe/formacao-onboarding/canon/maturidade"
+            },
+            {
+              "id": "formacao-onboarding/canon/policies-relevantes",
+              "path": "/sbd-theory-of-everything/sbd-toe/formacao-onboarding/canon/policies-relevantes"
+            },
+            {
+              "id": "formacao-onboarding/canon/recomendacoes-avancadas",
+              "path": "/sbd-theory-of-everything/sbd-toe/formacao-onboarding/canon/recomendacoes-avancadas"
+            },
+            {
+              "id": "formacao-onboarding/intro",
+              "path": "/sbd-theory-of-everything/sbd-toe/formacao-onboarding/intro",
+              "sidebar": "sbdToeSidebar"
+            },
+            {
+              "id": "gaps-por-framework",
+              "path": "/sbd-theory-of-everything/sbd-toe/gaps-por-framework",
+              "sidebar": "sbdToeSidebar"
+            },
+            {
+              "id": "governanca-contratacao/addon/controlos-praticas-sbd",
+              "path": "/sbd-theory-of-everything/sbd-toe/governanca-contratacao/addon/controlos-praticas-sbd",
+              "sidebar": "sbdToeSidebar"
+            },
+            {
+              "id": "governanca-contratacao/addon/diagramas-governanca",
+              "path": "/sbd-theory-of-everything/sbd-toe/governanca-contratacao/addon/diagramas-governanca",
+              "sidebar": "sbdToeSidebar"
+            },
+            {
+              "id": "governanca-contratacao/addon/exemplos-aplicacao-governanca",
+              "path": "/sbd-theory-of-everything/sbd-toe/governanca-contratacao/addon/exemplos-aplicacao-governanca",
+              "sidebar": "sbdToeSidebar"
+            },
+            {
+              "id": "governanca-contratacao/addon/governanca-legada",
+              "path": "/sbd-theory-of-everything/sbd-toe/governanca-contratacao/addon/governanca-legada",
+              "sidebar": "sbdToeSidebar"
+            },
+            {
+              "id": "governanca-contratacao/addon/governancao-maturidade",
+              "path": "/sbd-theory-of-everything/sbd-toe/governanca-contratacao/addon/governancao-maturidade",
+              "sidebar": "sbdToeSidebar"
+            },
+            {
+              "id": "governanca-contratacao/addon/modelo-governancao",
+              "path": "/sbd-theory-of-everything/sbd-toe/governanca-contratacao/addon/modelo-governancao",
+              "sidebar": "sbdToeSidebar"
+            },
+            {
+              "id": "governanca-contratacao/addon/modelo-validacao-fornecedores",
+              "path": "/sbd-theory-of-everything/sbd-toe/governanca-contratacao/addon/modelo-validacao-fornecedores",
+              "sidebar": "sbdToeSidebar"
+            },
+            {
+              "id": "governanca-contratacao/addon/modelo-validacao-fornecedores",
+              "path": "/sbd-theory-of-everything/sbd-toe/governanca-contratacao/addon/modelo-validacao-fornecedores",
+              "sidebar": "sbdToeSidebar"
+            },
+            {
+              "id": "governanca-contratacao/addon/rastreabilidade-organizacional",
+              "path": "/sbd-theory-of-everything/sbd-toe/governanca-contratacao/addon/rastreabilidade-organizacional",
+              "sidebar": "sbdToeSidebar"
+            },
+            {
+              "id": "governanca-contratacao/addon/validacao-continuada",
+              "path": "/sbd-theory-of-everything/sbd-toe/governanca-contratacao/addon/validacao-continuada",
+              "sidebar": "sbdToeSidebar"
+            },
+            {
+              "id": "governanca-contratacao/canon/ameacas-mitigadas",
+              "path": "/sbd-theory-of-everything/sbd-toe/governanca-contratacao/canon/ameacas-mitigadas"
+            },
+            {
+              "id": "governanca-contratacao/canon/aplicacao-lifecycle",
+              "path": "/sbd-theory-of-everything/sbd-toe/governanca-contratacao/canon/aplicacao-lifecycle",
+              "sidebar": "sbdToeSidebar"
+            },
+            {
+              "id": "governanca-contratacao/canon/checklist-revisao",
+              "path": "/sbd-theory-of-everything/sbd-toe/governanca-contratacao/canon/checklist-revisao"
+            },
+            {
+              "id": "governanca-contratacao/canon/kpis-governanca",
+              "path": "/sbd-theory-of-everything/sbd-toe/governanca-contratacao/canon/kpis-governanca"
+            },
+            {
+              "id": "governanca-contratacao/canon/maturidade",
+              "path": "/sbd-theory-of-everything/sbd-toe/governanca-contratacao/canon/maturidade"
+            },
+            {
+              "id": "governanca-contratacao/canon/policies-relevantes",
+              "path": "/sbd-theory-of-everything/sbd-toe/governanca-contratacao/canon/policies-relevantes"
+            },
+            {
+              "id": "governanca-contratacao/canon/rastreabilidade",
+              "path": "/sbd-theory-of-everything/sbd-toe/governanca-contratacao/canon/rastreabilidade"
+            },
+            {
+              "id": "governanca-contratacao/canon/recomendacoes-avancadas",
+              "path": "/sbd-theory-of-everything/sbd-toe/governanca-contratacao/canon/recomendacoes-avancadas"
+            },
+            {
+              "id": "governanca-contratacao/intro",
+              "path": "/sbd-theory-of-everything/sbd-toe/governanca-contratacao/intro",
+              "sidebar": "sbdToeSidebar"
+            },
+            {
+              "id": "iac-infraestrutura/addon/case-study-inception-apply-sbd-iac",
+              "path": "/sbd-theory-of-everything/sbd-toe/iac-infraestrutura/addon/case-study-inception-apply-sbd-iac",
+              "sidebar": "sbdToeSidebar"
+            },
+            {
+              "id": "iac-infraestrutura/addon/controle-enforcement",
+              "path": "/sbd-theory-of-everything/sbd-toe/iac-infraestrutura/addon/controle-enforcement",
+              "sidebar": "sbdToeSidebar"
+            },
+            {
+              "id": "iac-infraestrutura/addon/exemplos-praticas-boas",
+              "path": "/sbd-theory-of-everything/sbd-toe/iac-infraestrutura/addon/exemplos-praticas-boas",
+              "sidebar": "sbdToeSidebar"
+            },
+            {
+              "id": "iac-infraestrutura/addon/gestao-excecoes",
+              "path": "/sbd-theory-of-everything/sbd-toe/iac-infraestrutura/addon/gestao-excecoes",
+              "sidebar": "sbdToeSidebar"
+            },
+            {
+              "id": "iac-infraestrutura/addon/governanca-modulos",
+              "path": "/sbd-theory-of-everything/sbd-toe/iac-infraestrutura/addon/governanca-modulos",
+              "sidebar": "sbdToeSidebar"
+            },
+            {
+              "id": "iac-infraestrutura/addon/matriz-requisitos-iac",
+              "path": "/sbd-theory-of-everything/sbd-toe/iac-infraestrutura/addon/matriz-requisitos-iac",
+              "sidebar": "sbdToeSidebar"
+            },
+            {
+              "id": "iac-infraestrutura/addon/planeamento-e-controle",
+              "path": "/sbd-theory-of-everything/sbd-toe/iac-infraestrutura/addon/planeamento-e-controle",
+              "sidebar": "sbdToeSidebar"
+            },
+            {
+              "id": "iac-infraestrutura/addon/planeamento-e-controle",
+              "path": "/sbd-theory-of-everything/sbd-toe/iac-infraestrutura/addon/planeamento-e-controle",
+              "sidebar": "sbdToeSidebar"
+            },
+            {
+              "id": "iac-infraestrutura/addon/principios-sbd-iac",
+              "path": "/sbd-theory-of-everything/sbd-toe/iac-infraestrutura/addon/principios-sbd-iac",
+              "sidebar": "sbdToeSidebar"
+            },
+            {
+              "id": "iac-infraestrutura/addon/rastreabilidade-e-tags",
+              "path": "/sbd-theory-of-everything/sbd-toe/iac-infraestrutura/addon/rastreabilidade-e-tags",
+              "sidebar": "sbdToeSidebar"
+            },
+            {
+              "id": "iac-infraestrutura/canon/ameacas-mitigadas",
+              "path": "/sbd-theory-of-everything/sbd-toe/iac-infraestrutura/canon/ameacas-mitigadas"
+            },
+            {
+              "id": "iac-infraestrutura/canon/aplicacao-lifecycle",
+              "path": "/sbd-theory-of-everything/sbd-toe/iac-infraestrutura/canon/aplicacao-lifecycle",
+              "sidebar": "sbdToeSidebar"
+            },
+            {
+              "id": "iac-infraestrutura/canon/checklist-revisao",
+              "path": "/sbd-theory-of-everything/sbd-toe/iac-infraestrutura/canon/checklist-revisao"
+            },
+            {
+              "id": "iac-infraestrutura/canon/maturidade",
+              "path": "/sbd-theory-of-everything/sbd-toe/iac-infraestrutura/canon/maturidade"
+            },
+            {
+              "id": "iac-infraestrutura/canon/policies-iac",
+              "path": "/sbd-theory-of-everything/sbd-toe/iac-infraestrutura/canon/policies-iac"
+            },
+            {
+              "id": "iac-infraestrutura/canon/rastreabilidade",
+              "path": "/sbd-theory-of-everything/sbd-toe/iac-infraestrutura/canon/rastreabilidade"
+            },
+            {
+              "id": "iac-infraestrutura/canon/recomendacoes-avancadas-iac",
+              "path": "/sbd-theory-of-everything/sbd-toe/iac-infraestrutura/canon/recomendacoes-avancadas-iac"
+            },
+            {
+              "id": "iac-infraestrutura/intro",
+              "path": "/sbd-theory-of-everything/sbd-toe/iac-infraestrutura/intro",
+              "sidebar": "sbdToeSidebar"
+            },
+            {
+              "id": "iac-infraestrutura/README",
+              "path": "/sbd-theory-of-everything/sbd-toe/iac-infraestrutura/"
+            },
+            {
+              "id": "index",
+              "path": "/sbd-theory-of-everything/sbd-toe/",
+              "sidebar": "sbdToeSidebar"
+            },
+            {
+              "id": "matriz-frameworks",
+              "path": "/sbd-theory-of-everything/sbd-toe/matriz-frameworks",
+              "sidebar": "sbdToeSidebar"
+            },
+            {
+              "id": "monitorizacao-operacoes/addon/alertas-eventos-criticos",
+              "path": "/sbd-theory-of-everything/sbd-toe/monitorizacao-operacoes/addon/alertas-eventos-criticos",
+              "sidebar": "sbdToeSidebar"
+            },
+            {
+              "id": "monitorizacao-operacoes/addon/controles-logging-centralizado",
+              "path": "/sbd-theory-of-everything/sbd-toe/monitorizacao-operacoes/addon/controles-logging-centralizado",
+              "sidebar": "sbdToeSidebar"
+            },
+            {
+              "id": "monitorizacao-operacoes/addon/correlacao-anomalias",
+              "path": "/sbd-theory-of-everything/sbd-toe/monitorizacao-operacoes/addon/correlacao-anomalias",
+              "sidebar": "sbdToeSidebar"
+            },
+            {
+              "id": "monitorizacao-operacoes/addon/dominios-monitorizacao",
+              "path": "/sbd-theory-of-everything/sbd-toe/monitorizacao-operacoes/addon/dominios-monitorizacao",
+              "sidebar": "sbdToeSidebar"
+            },
+            {
+              "id": "monitorizacao-operacoes/addon/exemplos-eventos",
+              "path": "/sbd-theory-of-everything/sbd-toe/monitorizacao-operacoes/addon/exemplos-eventos",
+              "sidebar": "sbdToeSidebar"
+            },
+            {
+              "id": "monitorizacao-operacoes/addon/integracao-siem",
+              "path": "/sbd-theory-of-everything/sbd-toe/monitorizacao-operacoes/addon/integracao-siem",
+              "sidebar": "sbdToeSidebar"
+            },
+            {
+              "id": "monitorizacao-operacoes/addon/matriz-controles-por-risco",
+              "path": "/sbd-theory-of-everything/sbd-toe/monitorizacao-operacoes/addon/matriz-controles-por-risco",
+              "sidebar": "sbdToeSidebar"
+            },
+            {
+              "id": "monitorizacao-operacoes/addon/metricas-indicadores",
+              "path": "/sbd-theory-of-everything/sbd-toe/monitorizacao-operacoes/addon/metricas-indicadores",
+              "sidebar": "sbdToeSidebar"
+            },
+            {
+              "id": "monitorizacao-operacoes/addon/monitorizacao-resposta",
+              "path": "/sbd-theory-of-everything/sbd-toe/monitorizacao-operacoes/addon/monitorizacao-resposta",
+              "sidebar": "sbdToeSidebar"
+            },
+            {
+              "id": "monitorizacao-operacoes/canon/ameacas-mitigadas",
+              "path": "/sbd-theory-of-everything/sbd-toe/monitorizacao-operacoes/canon/ameacas-mitigadas"
+            },
+            {
+              "id": "monitorizacao-operacoes/canon/aplicacao-lifecycle",
+              "path": "/sbd-theory-of-everything/sbd-toe/monitorizacao-operacoes/canon/aplicacao-lifecycle",
+              "sidebar": "sbdToeSidebar"
+            },
+            {
+              "id": "monitorizacao-operacoes/canon/casos-praticos-monitorizacao",
+              "path": "/sbd-theory-of-everything/sbd-toe/monitorizacao-operacoes/canon/casos-praticos-monitorizacao"
+            },
+            {
+              "id": "monitorizacao-operacoes/canon/checklist-revisao",
+              "path": "/sbd-theory-of-everything/sbd-toe/monitorizacao-operacoes/canon/checklist-revisao"
+            },
+            {
+              "id": "monitorizacao-operacoes/canon/maturidade",
+              "path": "/sbd-theory-of-everything/sbd-toe/monitorizacao-operacoes/canon/maturidade"
+            },
+            {
+              "id": "monitorizacao-operacoes/canon/policies-monitorizacao-operacoes",
+              "path": "/sbd-theory-of-everything/sbd-toe/monitorizacao-operacoes/canon/policies-monitorizacao-operacoes"
+            },
+            {
+              "id": "monitorizacao-operacoes/canon/rastreabilidade",
+              "path": "/sbd-theory-of-everything/sbd-toe/monitorizacao-operacoes/canon/rastreabilidade"
+            },
+            {
+              "id": "monitorizacao-operacoes/canon/recomendacoes-avancadas",
+              "path": "/sbd-theory-of-everything/sbd-toe/monitorizacao-operacoes/canon/recomendacoes-avancadas"
+            },
+            {
+              "id": "monitorizacao-operacoes/intro",
+              "path": "/sbd-theory-of-everything/sbd-toe/monitorizacao-operacoes/intro",
+              "sidebar": "sbdToeSidebar"
+            },
+            {
+              "id": "monitorizacao-operacoes/README",
+              "path": "/sbd-theory-of-everything/sbd-toe/monitorizacao-operacoes/"
+            },
+            {
+              "id": "rastreabilidade_global",
+              "path": "/sbd-theory-of-everything/sbd-toe/rastreabilidade_global"
+            },
+            {
+              "id": "requisitos-seguranca/addon/catalogo-requisitos",
+              "path": "/sbd-theory-of-everything/sbd-toe/requisitos-seguranca/addon/catalogo-requisitos",
+              "sidebar": "sbdToeSidebar"
+            },
+            {
+              "id": "requisitos-seguranca/addon/catalogo-requisitos",
+              "path": "/sbd-theory-of-everything/sbd-toe/requisitos-seguranca/addon/catalogo-requisitos",
+              "sidebar": "sbdToeSidebar"
+            },
+            {
+              "id": "requisitos-seguranca/addon/criterios-aceitacao",
+              "path": "/sbd-theory-of-everything/sbd-toe/requisitos-seguranca/addon/criterios-aceitacao",
+              "sidebar": "sbdToeSidebar"
+            },
+            {
+              "id": "requisitos-seguranca/addon/exemplos-aplicacao",
+              "path": "/sbd-theory-of-everything/sbd-toe/requisitos-seguranca/addon/exemplos-aplicacao",
+              "sidebar": "sbdToeSidebar"
+            },
+            {
+              "id": "requisitos-seguranca/addon/gestao-excecoes",
+              "path": "/sbd-theory-of-everything/sbd-toe/requisitos-seguranca/addon/gestao-excecoes",
+              "sidebar": "sbdToeSidebar"
+            },
+            {
+              "id": "requisitos-seguranca/addon/lista-requisitos-base",
+              "path": "/sbd-theory-of-everything/sbd-toe/requisitos-seguranca/addon/lista-requisitos-base",
+              "sidebar": "sbdToeSidebar"
+            },
+            {
+              "id": "requisitos-seguranca/addon/matriz-controlos-por-risco",
+              "path": "/sbd-theory-of-everything/sbd-toe/requisitos-seguranca/addon/matriz-controlos-por-risco",
+              "sidebar": "sbdToeSidebar"
+            },
+            {
+              "id": "requisitos-seguranca/addon/plano-validacao",
+              "path": "/sbd-theory-of-everything/sbd-toe/requisitos-seguranca/addon/plano-validacao",
+              "sidebar": "sbdToeSidebar"
+            },
+            {
+              "id": "requisitos-seguranca/addon/rastreabilidade-controlo",
+              "path": "/sbd-theory-of-everything/sbd-toe/requisitos-seguranca/addon/rastreabilidade-controlo",
+              "sidebar": "sbdToeSidebar"
+            },
+            {
+              "id": "requisitos-seguranca/addon/rastreabilidade-frameworks",
+              "path": "/sbd-theory-of-everything/sbd-toe/requisitos-seguranca/addon/rastreabilidade-frameworks",
+              "sidebar": "sbdToeSidebar"
+            },
+            {
+              "id": "requisitos-seguranca/addon/taxonomia-rastreabilidade",
+              "path": "/sbd-theory-of-everything/sbd-toe/requisitos-seguranca/addon/taxonomia-rastreabilidade",
+              "sidebar": "sbdToeSidebar"
+            },
+            {
+              "id": "requisitos-seguranca/addon/validacao-requisitos",
+              "path": "/sbd-theory-of-everything/sbd-toe/requisitos-seguranca/addon/validacao-requisitos",
+              "sidebar": "sbdToeSidebar"
+            },
+            {
+              "id": "requisitos-seguranca/aplicacao-lifecycle",
+              "path": "/sbd-theory-of-everything/sbd-toe/requisitos-seguranca/aplicacao-lifecycle",
+              "sidebar": "sbdToeSidebar"
+            },
+            {
+              "id": "requisitos-seguranca/canon/ameacas-mitigadas",
+              "path": "/sbd-theory-of-everything/sbd-toe/requisitos-seguranca/canon/ameacas-mitigadas"
+            },
+            {
+              "id": "requisitos-seguranca/canon/checklist-revisao",
+              "path": "/sbd-theory-of-everything/sbd-toe/requisitos-seguranca/canon/checklist-revisao"
+            },
+            {
+              "id": "requisitos-seguranca/canon/maturidade",
+              "path": "/sbd-theory-of-everything/sbd-toe/requisitos-seguranca/canon/maturidade"
+            },
+            {
+              "id": "requisitos-seguranca/canon/policies-relevantes",
+              "path": "/sbd-theory-of-everything/sbd-toe/requisitos-seguranca/canon/policies-relevantes"
+            },
+            {
+              "id": "requisitos-seguranca/canon/rastreabilidade",
+              "path": "/sbd-theory-of-everything/sbd-toe/requisitos-seguranca/canon/rastreabilidade"
+            },
+            {
+              "id": "requisitos-seguranca/canon/recomendacoes-avancadas",
+              "path": "/sbd-theory-of-everything/sbd-toe/requisitos-seguranca/canon/recomendacoes-avancadas"
+            },
+            {
+              "id": "requisitos-seguranca/intro",
+              "path": "/sbd-theory-of-everything/sbd-toe/requisitos-seguranca/intro",
+              "sidebar": "sbdToeSidebar"
+            },
+            {
+              "id": "requisitos-seguranca/rationale-catalogo",
+              "path": "/sbd-theory-of-everything/sbd-toe/requisitos-seguranca/rationale-catalogo"
+            },
+            {
+              "id": "requisitos-seguranca/README",
+              "path": "/sbd-theory-of-everything/sbd-toe/requisitos-seguranca/"
+            },
+            {
+              "id": "testes-seguranca/addon/cobertura-e-priorizacao",
+              "path": "/sbd-theory-of-everything/sbd-toe/testes-seguranca/addon/cobertura-e-priorizacao",
+              "sidebar": "sbdToeSidebar"
+            },
+            {
+              "id": "testes-seguranca/addon/dast",
+              "path": "/sbd-theory-of-everything/sbd-toe/testes-seguranca/addon/dast",
+              "sidebar": "sbdToeSidebar"
+            },
+            {
+              "id": "testes-seguranca/addon/estudo-caso",
+              "path": "/sbd-theory-of-everything/sbd-toe/testes-seguranca/addon/estudo-caso",
+              "sidebar": "sbdToeSidebar"
+            },
+            {
+              "id": "testes-seguranca/addon/feedback-equipa",
+              "path": "/sbd-theory-of-everything/sbd-toe/testes-seguranca/addon/feedback-equipa",
+              "sidebar": "sbdToeSidebar"
+            },
+            {
+              "id": "testes-seguranca/addon/fuzzing",
+              "path": "/sbd-theory-of-everything/sbd-toe/testes-seguranca/addon/fuzzing",
+              "sidebar": "sbdToeSidebar"
+            },
+            {
+              "id": "testes-seguranca/addon/gestao-findings",
+              "path": "/sbd-theory-of-everything/sbd-toe/testes-seguranca/addon/gestao-findings",
+              "sidebar": "sbdToeSidebar"
+            },
+            {
+              "id": "testes-seguranca/addon/iast",
+              "path": "/sbd-theory-of-everything/sbd-toe/testes-seguranca/addon/iast",
+              "sidebar": "sbdToeSidebar"
+            },
+            {
+              "id": "testes-seguranca/addon/integracao-pipeline",
+              "path": "/sbd-theory-of-everything/sbd-toe/testes-seguranca/addon/integracao-pipeline",
+              "sidebar": "sbdToeSidebar"
+            },
+            {
+              "id": "testes-seguranca/addon/intro",
+              "path": "/sbd-theory-of-everything/sbd-toe/testes-seguranca/addon/intro",
+              "sidebar": "sbdToeSidebar"
+            },
+            {
+              "id": "testes-seguranca/addon/pen-testing",
+              "path": "/sbd-theory-of-everything/sbd-toe/testes-seguranca/addon/pen-testing",
+              "sidebar": "sbdToeSidebar"
+            },
+            {
+              "id": "testes-seguranca/addon/sast",
+              "path": "/sbd-theory-of-everything/sbd-toe/testes-seguranca/addon/sast",
+              "sidebar": "sbdToeSidebar"
+            },
+            {
+              "id": "testes-seguranca/addon/validacao-regressao",
+              "path": "/sbd-theory-of-everything/sbd-toe/testes-seguranca/addon/validacao-regressao",
+              "sidebar": "sbdToeSidebar"
+            },
+            {
+              "id": "testes-seguranca/canon/ameacas-mitigadas",
+              "path": "/sbd-theory-of-everything/sbd-toe/testes-seguranca/canon/ameacas-mitigadas"
+            },
+            {
+              "id": "testes-seguranca/canon/aplicacao-lifecycle",
+              "path": "/sbd-theory-of-everything/sbd-toe/testes-seguranca/canon/aplicacao-lifecycle",
+              "sidebar": "sbdToeSidebar"
+            },
+            {
+              "id": "testes-seguranca/canon/checklist-revisao",
+              "path": "/sbd-theory-of-everything/sbd-toe/testes-seguranca/canon/checklist-revisao"
+            },
+            {
+              "id": "testes-seguranca/canon/maturidade",
+              "path": "/sbd-theory-of-everything/sbd-toe/testes-seguranca/canon/maturidade"
+            },
+            {
+              "id": "testes-seguranca/canon/policies-relevantes",
+              "path": "/sbd-theory-of-everything/sbd-toe/testes-seguranca/canon/policies-relevantes"
+            },
+            {
+              "id": "testes-seguranca/canon/rastreabilidade",
+              "path": "/sbd-theory-of-everything/sbd-toe/testes-seguranca/canon/rastreabilidade"
+            },
+            {
+              "id": "testes-seguranca/canon/recomendacoes-avancadas",
+              "path": "/sbd-theory-of-everything/sbd-toe/testes-seguranca/canon/recomendacoes-avancadas"
+            },
+            {
+              "id": "testes-seguranca/intro",
+              "path": "/sbd-theory-of-everything/sbd-toe/testes-seguranca/intro",
+              "sidebar": "sbdToeSidebar"
+            },
+            {
+              "id": "testes-seguranca/README",
+              "path": "/sbd-theory-of-everything/sbd-toe/testes-seguranca/"
+            },
+            {
+              "id": "threat-modeling/addon/exemplo-privacidade",
+              "path": "/sbd-theory-of-everything/sbd-toe/threat-modeling/addon/exemplo-privacidade",
+              "sidebar": "sbdToeSidebar"
+            },
+            {
+              "id": "threat-modeling/addon/exemplos-aplicacao",
+              "path": "/sbd-theory-of-everything/sbd-toe/threat-modeling/addon/exemplos-aplicacao",
+              "sidebar": "sbdToeSidebar"
+            },
+            {
+              "id": "threat-modeling/addon/integracao-iriusrisk",
+              "path": "/sbd-theory-of-everything/sbd-toe/threat-modeling/addon/integracao-iriusrisk",
+              "sidebar": "sbdToeSidebar"
+            },
+            {
+              "id": "threat-modeling/addon/mapeamento-threats-requisitos",
+              "path": "/sbd-theory-of-everything/sbd-toe/threat-modeling/addon/mapeamento-threats-requisitos",
+              "sidebar": "sbdToeSidebar"
+            },
+            {
+              "id": "threat-modeling/addon/metodologias-e-ferramentas",
+              "path": "/sbd-theory-of-everything/sbd-toe/threat-modeling/addon/metodologias-e-ferramentas",
+              "sidebar": "sbdToeSidebar"
+            },
+            {
+              "id": "threat-modeling/addon/threat-modeling-ci",
+              "path": "/sbd-theory-of-everything/sbd-toe/threat-modeling/addon/threat-modeling-ci",
+              "sidebar": "sbdToeSidebar"
+            },
+            {
+              "id": "threat-modeling/addon/validacao-arquitetura",
+              "path": "/sbd-theory-of-everything/sbd-toe/threat-modeling/addon/validacao-arquitetura",
+              "sidebar": "sbdToeSidebar"
+            },
+            {
+              "id": "threat-modeling/canon/ameacas-mitigadas",
+              "path": "/sbd-theory-of-everything/sbd-toe/threat-modeling/canon/ameacas-mitigadas"
+            },
+            {
+              "id": "threat-modeling/canon/aplicacao-lifecycle",
+              "path": "/sbd-theory-of-everything/sbd-toe/threat-modeling/canon/aplicacao-lifecycle",
+              "sidebar": "sbdToeSidebar"
+            },
+            {
+              "id": "threat-modeling/canon/checklist-revisao",
+              "path": "/sbd-theory-of-everything/sbd-toe/threat-modeling/canon/checklist-revisao"
+            },
+            {
+              "id": "threat-modeling/canon/maturidade",
+              "path": "/sbd-theory-of-everything/sbd-toe/threat-modeling/canon/maturidade"
+            },
+            {
+              "id": "threat-modeling/canon/policies-relevantes",
+              "path": "/sbd-theory-of-everything/sbd-toe/threat-modeling/canon/policies-relevantes"
+            },
+            {
+              "id": "threat-modeling/canon/rastreabilidade",
+              "path": "/sbd-theory-of-everything/sbd-toe/threat-modeling/canon/rastreabilidade"
+            },
+            {
+              "id": "threat-modeling/canon/rastreabilidade",
+              "path": "/sbd-theory-of-everything/sbd-toe/threat-modeling/canon/rastreabilidade"
+            },
+            {
+              "id": "threat-modeling/intro",
+              "path": "/sbd-theory-of-everything/sbd-toe/threat-modeling/intro",
+              "sidebar": "sbdToeSidebar"
+            }
+          ],
+          "draftIds": [],
+          "sidebars": {
+            "sbdToeSidebar": {
+              "link": {
+                "path": "/sbd-theory-of-everything/sbd-toe/",
+                "label": "index"
+              }
+            }
+          }
+        }
+      ],
+      "breadcrumbs": true
+    },
+    "ia": {
+      "path": "/sbd-theory-of-everything/ia",
+      "versions": [
+        {
+          "name": "current",
+          "label": "Next",
+          "isLast": true,
+          "path": "/sbd-theory-of-everything/ia",
+          "mainDocId": "intro",
+          "docs": [
+            {
+              "id": "01-0.-enquadramento-e-objetivos",
+              "path": "/sbd-theory-of-everything/ia/01-0.-enquadramento-e-objetivos",
+              "sidebar": "defaultSidebar"
+            },
+            {
+              "id": "02-1.-princípios-fundamentais",
+              "path": "/sbd-theory-of-everything/ia/02-1.-princípios-fundamentais",
+              "sidebar": "defaultSidebar"
+            },
+            {
+              "id": "03-2.-integração-transversal-por-fase-do-sdlc",
+              "path": "/sbd-theory-of-everything/ia/03-2.-integração-transversal-por-fase-do-sdlc",
+              "sidebar": "defaultSidebar"
+            },
+            {
+              "id": "04-3.-taxonomia-de-riscos-associados-a-ia",
+              "path": "/sbd-theory-of-everything/ia/04-3.-taxonomia-de-riscos-associados-a-ia",
+              "sidebar": "defaultSidebar"
+            },
+            {
+              "id": "05-4.-controles-e-checklists-por-fase-do-sdlc",
+              "path": "/sbd-theory-of-everything/ia/05-4.-controles-e-checklists-por-fase-do-sdlc",
+              "sidebar": "defaultSidebar"
+            },
+            {
+              "id": "06-5.-frameworks-de-referência-e-aderência",
+              "path": "/sbd-theory-of-everything/ia/06-5.-frameworks-de-referência-e-aderência",
+              "sidebar": "defaultSidebar"
+            },
+            {
+              "id": "07-6.-papéis,-responsabilidades-e-estrutura-organizacional",
+              "path": "/sbd-theory-of-everything/ia/07-6.-papéis,-responsabilidades-e-estrutura-organizacional",
+              "sidebar": "defaultSidebar"
+            },
+            {
+              "id": "08-7.-governação-e-programas-internos",
+              "path": "/sbd-theory-of-everything/ia/08-7.-governação-e-programas-internos",
+              "sidebar": "defaultSidebar"
+            },
+            {
+              "id": "09-8.-inventário-e-visibilidade-de-usos-de-ia",
+              "path": "/sbd-theory-of-everything/ia/09-8.-inventário-e-visibilidade-de-usos-de-ia",
+              "sidebar": "defaultSidebar"
+            },
+            {
+              "id": "10-9.-instrumentos-práticos",
+              "path": "/sbd-theory-of-everything/ia/10-9.-instrumentos-práticos",
+              "sidebar": "defaultSidebar"
+            },
+            {
+              "id": "11-10.-apêndice-técnico",
+              "path": "/sbd-theory-of-everything/ia/11-10.-apêndice-técnico",
+              "sidebar": "defaultSidebar"
+            },
+            {
+              "id": "intro",
+              "path": "/sbd-theory-of-everything/ia/intro",
+              "sidebar": "defaultSidebar"
+            }
+          ],
+          "draftIds": [],
+          "sidebars": {
+            "defaultSidebar": {
+              "link": {
+                "path": "/sbd-theory-of-everything/ia/intro",
+                "label": "intro"
+              }
+            }
+          }
+        }
+      ],
+      "breadcrumbs": true
+    },
+    "supply-chain": {
+      "path": "/sbd-theory-of-everything/supply-chain",
+      "versions": [
+        {
+          "name": "current",
+          "label": "Next",
+          "isLast": true,
+          "path": "/sbd-theory-of-everything/supply-chain",
+          "mainDocId": "intro",
+          "docs": [
+            {
+              "id": "01-1.-introdução",
+              "path": "/sbd-theory-of-everything/supply-chain/01-1.-introdução",
+              "sidebar": "defaultSidebar"
+            },
+            {
+              "id": "02-2.-enquadramento-estratégico-e-de-risco",
+              "path": "/sbd-theory-of-everything/supply-chain/02-2.-enquadramento-estratégico-e-de-risco",
+              "sidebar": "defaultSidebar"
+            },
+            {
+              "id": "03-3.-princípios-fundamentais-da-segurança-na-cadeia-de-fornecimento",
+              "path": "/sbd-theory-of-everything/supply-chain/03-3.-princípios-fundamentais-da-segurança-na-cadeia-de-fornecimento",
+              "sidebar": "defaultSidebar"
+            },
+            {
+              "id": "04-4.-mapeamento-por-fase-do-ciclo-de-vida-do-software",
+              "path": "/sbd-theory-of-everything/supply-chain/04-4.-mapeamento-por-fase-do-ciclo-de-vida-do-software",
+              "sidebar": "defaultSidebar"
+            },
+            {
+              "id": "05-5.-modelos-de-governação-e-responsabilidade",
+              "path": "/sbd-theory-of-everything/supply-chain/05-5.-modelos-de-governação-e-responsabilidade",
+              "sidebar": "defaultSidebar"
+            },
+            {
+              "id": "06-6.-automação-e-integração-com-o-pipeline",
+              "path": "/sbd-theory-of-everything/supply-chain/06-6.-automação-e-integração-com-o-pipeline",
+              "sidebar": "defaultSidebar"
+            },
+            {
+              "id": "07-7.-ferramentas-recomendadas-por-categoria",
+              "path": "/sbd-theory-of-everything/supply-chain/07-7.-ferramentas-recomendadas-por-categoria",
+              "sidebar": "defaultSidebar"
+            },
+            {
+              "id": "08-8.-casos-de-uso-e-exemplos-práticos",
+              "path": "/sbd-theory-of-everything/supply-chain/08-8.-casos-de-uso-e-exemplos-práticos",
+              "sidebar": "defaultSidebar"
+            },
+            {
+              "id": "09-9.-integração-com-o-programa-security-by-design-(sbd-toe)",
+              "path": "/sbd-theory-of-everything/supply-chain/09-9.-integração-com-o-programa-security-by-design-(sbd-toe)",
+              "sidebar": "defaultSidebar"
+            },
+            {
+              "id": "10-10.-referências-e-normativos",
+              "path": "/sbd-theory-of-everything/supply-chain/10-10.-referências-e-normativos",
+              "sidebar": "defaultSidebar"
+            },
+            {
+              "id": "apêndices-práticos",
+              "path": "/sbd-theory-of-everything/supply-chain/apêndices-práticos",
+              "sidebar": "defaultSidebar"
+            },
+            {
+              "id": "intro",
+              "path": "/sbd-theory-of-everything/supply-chain/intro",
+              "sidebar": "defaultSidebar"
+            },
+            {
+              "id": "licenciamento-e-termos-de-reutilização",
+              "path": "/sbd-theory-of-everything/supply-chain/licenciamento-e-termos-de-reutilização",
+              "sidebar": "defaultSidebar"
+            }
+          ],
+          "draftIds": [],
+          "sidebars": {
+            "defaultSidebar": {
+              "link": {
+                "path": "/sbd-theory-of-everything/supply-chain/intro",
+                "label": "intro"
+              }
+            }
+          }
+        }
+      ],
+      "breadcrumbs": true
+    },
+    "ameacas": {
+      "path": "/sbd-theory-of-everything/ameacas",
+      "versions": [
+        {
+          "name": "current",
+          "label": "Next",
+          "isLast": true,
+          "path": "/sbd-theory-of-everything/ameacas",
+          "mainDocId": "🔰-introdução-e-propósito",
+          "docs": [
+            {
+              "id": "🔰-introdução-e-propósito",
+              "path": "/sbd-theory-of-everything/ameacas/🔰-introdução-e-propósito",
+              "sidebar": "defaultSidebar"
+            },
+            {
+              "id": "🧩-anexo-a-–-dependency-confusion",
+              "path": "/sbd-theory-of-everything/ameacas/🧩-anexo-a-–-dependency-confusion",
+              "sidebar": "defaultSidebar"
+            },
+            {
+              "id": "🧩-anexo-b-–-ci-cd-poisoning",
+              "path": "/sbd-theory-of-everything/ameacas/🧩-anexo-b-–-ci-cd-poisoning",
+              "sidebar": "defaultSidebar"
+            },
+            {
+              "id": "🧩-anexo-c-–-comprometimento-de-dependências",
+              "path": "/sbd-theory-of-everything/ameacas/🧩-anexo-c-–-comprometimento-de-dependências",
+              "sidebar": "defaultSidebar"
+            },
+            {
+              "id": "🧩-anexo-d-–-roubo-de-credenciais---segredos",
+              "path": "/sbd-theory-of-everything/ameacas/🧩-anexo-d-–-roubo-de-credenciais---segredos",
+              "sidebar": "defaultSidebar"
+            },
+            {
+              "id": "🧩-anexo-f-–-maintainers-maliciosos---insiders",
+              "path": "/sbd-theory-of-everything/ameacas/🧩-anexo-f-–-maintainers-maliciosos---insiders",
+              "sidebar": "defaultSidebar"
+            },
+            {
+              "id": "🧩-anexo-g-–-má-configuração---permissões-excessivas",
+              "path": "/sbd-theory-of-everything/ameacas/🧩-anexo-g-–-má-configuração---permissões-excessivas",
+              "sidebar": "defaultSidebar"
+            },
+            {
+              "id": "🧩-anexo-h-–-execução-não-autorizada-de-código-(prs,-forks,-triggers)",
+              "path": "/sbd-theory-of-everything/ameacas/🧩-anexo-h-–-execução-não-autorizada-de-código-(prs,-forks,-triggers)",
+              "sidebar": "defaultSidebar"
+            },
+            {
+              "id": "🧩-anexo-i-–-dependências-sombra-e-transitivas-maliciosas",
+              "path": "/sbd-theory-of-everything/ameacas/🧩-anexo-i-–-dependências-sombra-e-transitivas-maliciosas",
+              "sidebar": "defaultSidebar"
+            },
+            {
+              "id": "🧩-anexo-j-–-ataques-por-engenharia-social---prs-maliciosos-disfarçados",
+              "path": "/sbd-theory-of-everything/ameacas/🧩-anexo-j-–-ataques-por-engenharia-social---prs-maliciosos-disfarçados",
+              "sidebar": "defaultSidebar"
+            },
+            {
+              "id": "🧩-anexo-k-–-manipulação-de-configurações-ou-metadados-(ex:-sbom,-labels,-tags)",
+              "path": "/sbd-theory-of-everything/ameacas/🧩-anexo-k-–-manipulação-de-configurações-ou-metadados-(ex:-sbom,-labels,-tags)",
+              "sidebar": "defaultSidebar"
+            },
+            {
+              "id": "estrutura-deste-capítulo",
+              "path": "/sbd-theory-of-everything/ameacas/estrutura-deste-capítulo",
+              "sidebar": "defaultSidebar"
+            },
+            {
+              "id": "fontes-e-referências-utilizadas-para-identificação-de-ameaças",
+              "path": "/sbd-theory-of-everything/ameacas/fontes-e-referências-utilizadas-para-identificação-de-ameaças",
+              "sidebar": "defaultSidebar"
+            },
+            {
+              "id": "intro",
+              "path": "/sbd-theory-of-everything/ameacas/intro",
+              "sidebar": "defaultSidebar"
+            },
+            {
+              "id": "mapa-consolidado-de-ameaças-e-mitigações",
+              "path": "/sbd-theory-of-everything/ameacas/mapa-consolidado-de-ameaças-e-mitigações",
+              "sidebar": "defaultSidebar"
+            }
+          ],
+          "draftIds": [],
+          "sidebars": {
+            "defaultSidebar": {
+              "link": {
+                "path": "/sbd-theory-of-everything/ameacas/🔰-introdução-e-propósito",
+                "label": "🔰-introdução-e-propósito"
+              }
+            }
+          }
+        }
+      ],
+      "breadcrumbs": true
+    }
+  }
+}

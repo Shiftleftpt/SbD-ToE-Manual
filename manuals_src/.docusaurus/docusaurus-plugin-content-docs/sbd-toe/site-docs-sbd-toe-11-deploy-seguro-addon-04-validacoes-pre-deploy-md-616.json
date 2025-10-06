@@ -1,0 +1,61 @@
+{
+  "id": "deploy-seguro/addon/04-validacoes-pre-deploy",
+  "title": "Validações Técnicas e Funcionais Pré-Deploy",
+  "description": "Verificações obrigatórias antes da promoção de código para produção, incluindo segurança, funcionalidade e readiness.",
+  "source": "@site/docs/sbd-toe/11-deploy-seguro/addon/04-validacoes-pre-deploy.md",
+  "sourceDirName": "11-deploy-seguro/addon",
+  "slug": "/deploy-seguro/addon/04-validacoes-pre-deploy",
+  "permalink": "/sbd-theory-of-everything/sbd-toe/deploy-seguro/addon/04-validacoes-pre-deploy",
+  "draft": false,
+  "unlisted": false,
+  "tags": [
+    {
+      "inline": true,
+      "label": "tipo:anexo",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/tipo-anexo"
+    },
+    {
+      "inline": true,
+      "label": "grupo:execucao",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/grupo-execucao"
+    },
+    {
+      "inline": true,
+      "label": "tema:validacao",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/tema-validacao"
+    },
+    {
+      "inline": true,
+      "label": "pre-deploy",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/pre-deploy"
+    },
+    {
+      "inline": true,
+      "label": "segurança",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/seguranca"
+    }
+  ],
+  "version": "current",
+  "sidebarPosition": 4,
+  "frontMatter": {
+    "id": "04-validacoes-pre-deploy",
+    "title": "Validações Técnicas e Funcionais Pré-Deploy",
+    "description": "Verificações obrigatórias antes da promoção de código para produção, incluindo segurança, funcionalidade e readiness.",
+    "tags": [
+      "tipo:anexo",
+      "grupo:execucao",
+      "tema:validacao",
+      "pre-deploy",
+      "segurança"
+    ]
+  },
+  "sidebar": "sbdToeSidebar",
+  "previous": {
+    "title": "Controlo de Funcionalidades com Feature Flags",
+    "permalink": "/sbd-theory-of-everything/sbd-toe/deploy-seguro/addon/03-feature-flags-e-toggle"
+  },
+  "next": {
+    "title": "Monitorização Pós-Deploy e Ações de Reação",
+    "permalink": "/sbd-theory-of-everything/sbd-toe/deploy-seguro/addon/05-monitorizacao-e-reacao"
+  }
+}

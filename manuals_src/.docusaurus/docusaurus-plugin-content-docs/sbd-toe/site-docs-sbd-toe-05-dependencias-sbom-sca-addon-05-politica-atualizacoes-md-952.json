@@ -1,0 +1,61 @@
+{
+  "id": "dependencias-sbom-sca/addon/politica-atualizacoes",
+  "title": "Políticas de Atualização de Dependências",
+  "description": "Práticas de atualização proativa, TTL, locking e gestão de versões seguras",
+  "source": "@site/docs/sbd-toe/05-dependencias-sbom-sca/addon/05-politica-atualizacoes.md",
+  "sourceDirName": "05-dependencias-sbom-sca/addon",
+  "slug": "/dependencias-sbom-sca/addon/politica-atualizacoes",
+  "permalink": "/sbd-theory-of-everything/sbd-toe/dependencias-sbom-sca/addon/politica-atualizacoes",
+  "draft": false,
+  "unlisted": false,
+  "tags": [
+    {
+      "inline": true,
+      "label": "dependencias",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/dependencias"
+    },
+    {
+      "inline": true,
+      "label": "sbom",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/sbom"
+    },
+    {
+      "inline": true,
+      "label": "sca",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/sca"
+    },
+    {
+      "inline": true,
+      "label": "supply-chain",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/supply-chain"
+    },
+    {
+      "inline": true,
+      "label": "policies",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/policies"
+    }
+  ],
+  "version": "current",
+  "sidebarPosition": 5,
+  "frontMatter": {
+    "id": "politica-atualizacoes",
+    "title": "Políticas de Atualização de Dependências",
+    "description": "Práticas de atualização proativa, TTL, locking e gestão de versões seguras",
+    "tags": [
+      "dependencias",
+      "sbom",
+      "sca",
+      "supply-chain",
+      "policies"
+    ]
+  },
+  "sidebar": "sbdToeSidebar",
+  "previous": {
+    "title": "Integração com Pipelines CI/CD",
+    "permalink": "/sbd-theory-of-everything/sbd-toe/dependencias-sbom-sca/addon/integracao-ci-cd"
+  },
+  "next": {
+    "title": "Ameaças à Cadeia de Fornecimento (Supply Chain)",
+    "permalink": "/sbd-theory-of-everything/sbd-toe/dependencias-sbom-sca/addon/risco-supply-chain"
+  }
+}

@@ -1,0 +1,68 @@
+{
+  "id": "formacao-onboarding/canon/aplicacao-lifecycle",
+  "title": "Aplicação de Formação e Onboarding ao Longo do Ciclo de Vida",
+  "description": "Integração prática e validável das práticas de formação, onboarding e capacitação de terceiros ao longo do ciclo de vida.",
+  "source": "@site/docs/sbd-toe/13-formacao-onboarding/canon/15-aplicacao-lifecycle.md",
+  "sourceDirName": "13-formacao-onboarding/canon",
+  "slug": "/formacao-onboarding/canon/aplicacao-lifecycle",
+  "permalink": "/sbd-theory-of-everything/sbd-toe/formacao-onboarding/canon/aplicacao-lifecycle",
+  "draft": false,
+  "unlisted": false,
+  "tags": [
+    {
+      "inline": true,
+      "label": "formacao",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/formacao"
+    },
+    {
+      "inline": true,
+      "label": "onboarding",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/onboarding"
+    },
+    {
+      "inline": true,
+      "label": "ciclo de vida",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/ciclo-de-vida"
+    },
+    {
+      "inline": true,
+      "label": "champions",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/champions"
+    },
+    {
+      "inline": true,
+      "label": "terceiros",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/terceiros"
+    },
+    {
+      "inline": true,
+      "label": "risco",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/risco"
+    }
+  ],
+  "version": "current",
+  "sidebarPosition": 15,
+  "frontMatter": {
+    "id": "aplicacao-lifecycle",
+    "title": "Aplicação de Formação e Onboarding ao Longo do Ciclo de Vida",
+    "description": "Integração prática e validável das práticas de formação, onboarding e capacitação de terceiros ao longo do ciclo de vida.",
+    "tags": [
+      "formacao",
+      "onboarding",
+      "ciclo de vida",
+      "champions",
+      "terceiros",
+      "risco"
+    ],
+    "sidebar_position": 15
+  },
+  "sidebar": "sbdToeSidebar",
+  "previous": {
+    "title": "Indicadores e Métricas de Formação em Segurança",
+    "permalink": "/sbd-theory-of-everything/sbd-toe/formacao-onboarding/addon/indicadores-metricas"
+  },
+  "next": {
+    "title": "Governança e Contratação",
+    "permalink": "/sbd-theory-of-everything/sbd-toe/governanca-contratacao/intro"
+  }
+}

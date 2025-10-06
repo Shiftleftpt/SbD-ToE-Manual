@@ -1,0 +1,56 @@
+{
+  "id": "governanca-contratacao/addon/governanca-legada",
+  "title": "Governação em Sistemas Legados",
+  "description": "Estratégias para aplicar governação formal de segurança em sistemas e contratos legados",
+  "source": "@site/docs/sbd-toe/14-governanca-contratacao/addon/10-governanca-legada.md",
+  "sourceDirName": "14-governanca-contratacao/addon",
+  "slug": "/governanca-contratacao/addon/governanca-legada",
+  "permalink": "/sbd-theory-of-everything/sbd-toe/governanca-contratacao/addon/governanca-legada",
+  "draft": false,
+  "unlisted": false,
+  "tags": [
+    {
+      "inline": true,
+      "label": "legado",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/legado"
+    },
+    {
+      "inline": true,
+      "label": "governanca",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/governanca"
+    },
+    {
+      "inline": true,
+      "label": "excecoes",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/excecoes"
+    },
+    {
+      "inline": true,
+      "label": "migração",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/migracao"
+    }
+  ],
+  "version": "current",
+  "sidebarPosition": 10,
+  "frontMatter": {
+    "id": "governanca-legada",
+    "title": "Governação em Sistemas Legados",
+    "sidebar_position": 10,
+    "description": "Estratégias para aplicar governação formal de segurança em sistemas e contratos legados",
+    "tags": [
+      "legado",
+      "governanca",
+      "excecoes",
+      "migração"
+    ]
+  },
+  "sidebar": "sbdToeSidebar",
+  "previous": {
+    "title": "Diagramas de Governação de Segurança",
+    "permalink": "/sbd-theory-of-everything/sbd-toe/governanca-contratacao/addon/diagramas-governanca"
+  },
+  "next": {
+    "title": "Controlos de Governança sobre as Práticas do SbD-ToE",
+    "permalink": "/sbd-theory-of-everything/sbd-toe/governanca-contratacao/addon/controlos-praticas-sbd"
+  }
+}

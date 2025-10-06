@@ -1,0 +1,61 @@
+{
+  "id": "requisitos-seguranca/addon/plano-validacao",
+  "title": "Plano de Validação de Requisitos de Segurança",
+  "description": "Orientações de verificação por requisito do catálogo",
+  "source": "@site/docs/sbd-toe/02-requisitos-seguranca/addon/10-validacao-requisitos.md",
+  "sourceDirName": "02-requisitos-seguranca/addon",
+  "slug": "/requisitos-seguranca/addon/plano-validacao",
+  "permalink": "/sbd-theory-of-everything/sbd-toe/requisitos-seguranca/addon/plano-validacao",
+  "draft": false,
+  "unlisted": false,
+  "tags": [
+    {
+      "inline": true,
+      "label": "validação",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/validacao"
+    },
+    {
+      "inline": true,
+      "label": "requisitos",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/requisitos"
+    },
+    {
+      "inline": true,
+      "label": "teste",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/teste"
+    },
+    {
+      "inline": true,
+      "label": "evidência",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/evidencia"
+    },
+    {
+      "inline": true,
+      "label": "rastreabilidade",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/rastreabilidade"
+    }
+  ],
+  "version": "current",
+  "sidebarPosition": 10,
+  "frontMatter": {
+    "id": "plano-validacao",
+    "title": "Plano de Validação de Requisitos de Segurança",
+    "description": "Orientações de verificação por requisito do catálogo",
+    "tags": [
+      "validação",
+      "requisitos",
+      "teste",
+      "evidência",
+      "rastreabilidade"
+    ]
+  },
+  "sidebar": "sbdToeSidebar",
+  "previous": {
+    "title": "Taxonomia de Rastreabilidade de Requisitos",
+    "permalink": "/sbd-theory-of-everything/sbd-toe/requisitos-seguranca/addon/taxonomia-rastreabilidade"
+  },
+  "next": {
+    "title": "Catálogo Base de Requisitos de Segurança",
+    "permalink": "/sbd-theory-of-everything/sbd-toe/requisitos-seguranca/addon/lista-requisitos-base"
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "id": "mapa-consolidado-de-ameaças-e-mitigações",
+  "title": "Mapa Consolidado de Ameaças e Mitigações",
+  "description": "O quadro seguinte consolida as ameaças identificadas nas fontes analisadas e mostra como o manual SbD-ToE as mitiga, através de práticas específicas, secções dedicadas e anexos temáticos. Cada ameaça está associada às suas fontes, ao anexo correspondente e às secções do manual onde se descrevem os mecanismos de mitigação recomendados.",
+  "source": "@site/docs/ameacas/04-mapa-consolidado-de-ameaças-e-mitigações.md",
+  "sourceDirName": ".",
+  "slug": "/mapa-consolidado-de-ameaças-e-mitigações",
+  "permalink": "/sbd-theory-of-everything/ameacas/mapa-consolidado-de-ameaças-e-mitigações",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 4,
+  "frontMatter": {},
+  "sidebar": "defaultSidebar",
+  "previous": {
+    "title": "Fontes e Referências Utilizadas para Identificação de Ameaças",
+    "permalink": "/sbd-theory-of-everything/ameacas/fontes-e-referências-utilizadas-para-identificação-de-ameaças"
+  },
+  "next": {
+    "title": "🧩 Anexo A – Dependency Confusion",
+    "permalink": "/sbd-theory-of-everything/ameacas/🧩-anexo-a-–-dependency-confusion"
+  }
+}

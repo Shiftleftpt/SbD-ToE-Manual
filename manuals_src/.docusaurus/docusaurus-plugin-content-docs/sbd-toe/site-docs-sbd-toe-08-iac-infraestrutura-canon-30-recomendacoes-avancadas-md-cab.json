@@ -1,0 +1,53 @@
+{
+  "id": "iac-infraestrutura/canon/recomendacoes-avancadas-iac",
+  "title": "Recomendações Avançadas para Segurança em Infraestrutura como Código (IaC)",
+  "description": "Práticas reforçadas para contextos de maior maturidade ou requisitos regulatórios em projetos de IaC.",
+  "source": "@site/docs/sbd-toe/08-iac-infraestrutura/canon/30-recomendacoes-avancadas.md",
+  "sourceDirName": "08-iac-infraestrutura/canon",
+  "slug": "/iac-infraestrutura/canon/recomendacoes-avancadas-iac",
+  "permalink": "/sbd-theory-of-everything/sbd-toe/iac-infraestrutura/canon/recomendacoes-avancadas-iac",
+  "draft": false,
+  "unlisted": false,
+  "tags": [
+    {
+      "inline": true,
+      "label": "tipo:anexo",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/tipo-anexo"
+    },
+    {
+      "inline": true,
+      "label": "grupo:avancado",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/grupo-avancado"
+    },
+    {
+      "inline": true,
+      "label": "tema:iac",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/tema-iac"
+    },
+    {
+      "inline": true,
+      "label": "maturidade",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/maturidade"
+    },
+    {
+      "inline": true,
+      "label": "reforço",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/reforco"
+    }
+  ],
+  "version": "current",
+  "sidebarPosition": 30,
+  "frontMatter": {
+    "id": "recomendacoes-avancadas-iac",
+    "title": "Recomendações Avançadas para Segurança em Infraestrutura como Código (IaC)",
+    "sidebar_position": 30,
+    "description": "Práticas reforçadas para contextos de maior maturidade ou requisitos regulatórios em projetos de IaC.",
+    "tags": [
+      "tipo:anexo",
+      "grupo:avancado",
+      "tema:iac",
+      "maturidade",
+      "reforço"
+    ]
+  }
+}

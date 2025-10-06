@@ -1,0 +1,24 @@
+{
+  "id": "estrutura-deste-capítulo",
+  "title": "Estrutura deste capítulo",
+  "description": "Este capítulo encontra-se estruturado em três partes:",
+  "source": "@site/docs/ameacas/02-estrutura-deste-capítulo.md",
+  "sourceDirName": ".",
+  "slug": "/estrutura-deste-capítulo",
+  "permalink": "/sbd-theory-of-everything/ameacas/estrutura-deste-capítulo",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 2,
+  "frontMatter": {},
+  "sidebar": "defaultSidebar",
+  "previous": {
+    "title": "Introdução às Ameaças",
+    "permalink": "/sbd-theory-of-everything/ameacas/intro"
+  },
+  "next": {
+    "title": "Fontes e Referências Utilizadas para Identificação de Ameaças",
+    "permalink": "/sbd-theory-of-everything/ameacas/fontes-e-referências-utilizadas-para-identificação-de-ameaças"
+  }
+}

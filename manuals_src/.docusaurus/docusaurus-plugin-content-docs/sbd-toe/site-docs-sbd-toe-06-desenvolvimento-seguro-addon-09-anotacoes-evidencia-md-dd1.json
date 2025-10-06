@@ -1,0 +1,62 @@
+{
+  "id": "desenvolvimento-seguro/addon/anotacoes-evidencia",
+  "title": "Anotações e Evidência de Validações",
+  "description": "Estratégias para anotar decisões e evidências de validação de segurança no próprio código ou ciclo de desenvolvimento",
+  "source": "@site/docs/sbd-toe/06-desenvolvimento-seguro/addon/09-anotacoes-evidencia.md",
+  "sourceDirName": "06-desenvolvimento-seguro/addon",
+  "slug": "/desenvolvimento-seguro/addon/anotacoes-evidencia",
+  "permalink": "/sbd-theory-of-everything/sbd-toe/desenvolvimento-seguro/addon/anotacoes-evidencia",
+  "draft": false,
+  "unlisted": false,
+  "tags": [
+    {
+      "inline": true,
+      "label": "evidência",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/evidencia"
+    },
+    {
+      "inline": true,
+      "label": "anotação",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/anotacao"
+    },
+    {
+      "inline": true,
+      "label": "validação",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/validacao"
+    },
+    {
+      "inline": true,
+      "label": "rastreabilidade",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/rastreabilidade"
+    },
+    {
+      "inline": true,
+      "label": "SDLC",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/sdlc"
+    }
+  ],
+  "version": "current",
+  "sidebarPosition": 9,
+  "frontMatter": {
+    "id": "anotacoes-evidencia",
+    "title": "Anotações e Evidência de Validações",
+    "sidebar_position": 9,
+    "description": "Estratégias para anotar decisões e evidências de validação de segurança no próprio código ou ciclo de desenvolvimento",
+    "tags": [
+      "evidência",
+      "anotação",
+      "validação",
+      "rastreabilidade",
+      "SDLC"
+    ]
+  },
+  "sidebar": "sbdToeSidebar",
+  "previous": {
+    "title": "Validações de Segurança no Código",
+    "permalink": "/sbd-theory-of-everything/sbd-toe/desenvolvimento-seguro/addon/validacoes-codigo"
+  },
+  "next": {
+    "title": "Uso de GenIA no Desenvolvimento Seguro",
+    "permalink": "/sbd-theory-of-everything/sbd-toe/desenvolvimento-seguro/addon/genia-e-seguranca"
+  }
+}

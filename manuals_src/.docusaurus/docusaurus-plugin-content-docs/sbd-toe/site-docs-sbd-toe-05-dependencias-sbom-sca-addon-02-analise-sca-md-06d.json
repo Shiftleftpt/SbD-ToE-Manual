@@ -1,0 +1,55 @@
+{
+  "id": "dependencias-sbom-sca/addon/analise-sca",
+  "title": "Análise de Vulnerabilidades em Dependências (SCA)",
+  "description": "Práticas de Software Composition Analysis para detetar, priorizar e mitigar vulnerabilidades conhecidas",
+  "source": "@site/docs/sbd-toe/05-dependencias-sbom-sca/addon/02-analise-sca.md",
+  "sourceDirName": "05-dependencias-sbom-sca/addon",
+  "slug": "/dependencias-sbom-sca/addon/analise-sca",
+  "permalink": "/sbd-theory-of-everything/sbd-toe/dependencias-sbom-sca/addon/analise-sca",
+  "draft": false,
+  "unlisted": false,
+  "tags": [
+    {
+      "inline": true,
+      "label": "dependencias",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/dependencias"
+    },
+    {
+      "inline": true,
+      "label": "sbom",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/sbom"
+    },
+    {
+      "inline": true,
+      "label": "sca",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/sca"
+    },
+    {
+      "inline": true,
+      "label": "supply-chain",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/supply-chain"
+    }
+  ],
+  "version": "current",
+  "sidebarPosition": 2,
+  "frontMatter": {
+    "id": "analise-sca",
+    "title": "Análise de Vulnerabilidades em Dependências (SCA)",
+    "description": "Práticas de Software Composition Analysis para detetar, priorizar e mitigar vulnerabilidades conhecidas",
+    "tags": [
+      "dependencias",
+      "sbom",
+      "sca",
+      "supply-chain"
+    ]
+  },
+  "sidebar": "sbdToeSidebar",
+  "previous": {
+    "title": "Inventário de Dependências e SBOM",
+    "permalink": "/sbd-theory-of-everything/sbd-toe/dependencias-sbom-sca/addon/inventario-sbom"
+  },
+  "next": {
+    "title": "Governaça de Bibliotecas e Componentes de Terceiros",
+    "permalink": "/sbd-theory-of-everything/sbd-toe/dependencias-sbom-sca/addon/governanca-libs-terceiros"
+  }
+}

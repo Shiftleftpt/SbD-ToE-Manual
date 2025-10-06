@@ -1,0 +1,83 @@
+{
+  "id": "requisitos-seguranca/canon/ameacas-mitigadas",
+  "title": "Ameaças Mitigadas",
+  "description": "Ameaças mitigadas pela definição e validação estruturada de requisitos de segurança",
+  "source": "@site/docs/sbd-toe/02-requisitos-seguranca/canon/50-ameacas-mitigadas.md",
+  "sourceDirName": "02-requisitos-seguranca/canon",
+  "slug": "/requisitos-seguranca/canon/ameacas-mitigadas",
+  "permalink": "/sbd-theory-of-everything/sbd-toe/requisitos-seguranca/canon/ameacas-mitigadas",
+  "draft": false,
+  "unlisted": false,
+  "tags": [
+    {
+      "inline": true,
+      "label": "ameaças",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/ameacas"
+    },
+    {
+      "inline": true,
+      "label": "mitigação",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/mitigacao"
+    },
+    {
+      "inline": true,
+      "label": "requisitos",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/requisitos"
+    },
+    {
+      "inline": true,
+      "label": "rastreabilidade",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/rastreabilidade"
+    },
+    {
+      "inline": true,
+      "label": "exceções",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/excecoes"
+    },
+    {
+      "inline": true,
+      "label": "validação",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/validacao"
+    },
+    {
+      "inline": true,
+      "label": "SSDF",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/ssdf"
+    },
+    {
+      "inline": true,
+      "label": "DSOMM",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/dsomm"
+    },
+    {
+      "inline": true,
+      "label": "OSC&R",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/osc-r"
+    },
+    {
+      "inline": true,
+      "label": "CAPEC",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/capec"
+    }
+  ],
+  "version": "current",
+  "sidebarPosition": 50,
+  "frontMatter": {
+    "id": "ameacas-mitigadas",
+    "title": "Ameaças Mitigadas",
+    "description": "Ameaças mitigadas pela definição e validação estruturada de requisitos de segurança",
+    "tags": [
+      "ameaças",
+      "mitigação",
+      "requisitos",
+      "rastreabilidade",
+      "exceções",
+      "validação",
+      "SSDF",
+      "DSOMM",
+      "OSC&R",
+      "CAPEC"
+    ],
+    "sidebar_position": 50
+  }
+}

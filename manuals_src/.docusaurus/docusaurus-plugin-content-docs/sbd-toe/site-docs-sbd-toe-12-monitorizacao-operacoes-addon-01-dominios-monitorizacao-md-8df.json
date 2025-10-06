@@ -1,0 +1,68 @@
+{
+  "id": "monitorizacao-operacoes/addon/dominios-monitorizacao",
+  "title": "Domínios de Monitorização e Observabilidade",
+  "description": "Identificação e definição dos domínios técnicos e operacionais a monitorizar em sistemas modernos.",
+  "source": "@site/docs/sbd-toe/12-monitorizacao-operacoes/addon/01-dominios-monitorizacao.md",
+  "sourceDirName": "12-monitorizacao-operacoes/addon",
+  "slug": "/monitorizacao-operacoes/addon/dominios-monitorizacao",
+  "permalink": "/sbd-theory-of-everything/sbd-toe/monitorizacao-operacoes/addon/dominios-monitorizacao",
+  "draft": false,
+  "unlisted": false,
+  "tags": [
+    {
+      "inline": true,
+      "label": "monitorização",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/monitorizacao"
+    },
+    {
+      "inline": true,
+      "label": "observabilidade",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/observabilidade"
+    },
+    {
+      "inline": true,
+      "label": "logging",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/logging"
+    },
+    {
+      "inline": true,
+      "label": "segurança",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/seguranca"
+    },
+    {
+      "inline": true,
+      "label": "runtime",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/runtime"
+    },
+    {
+      "inline": true,
+      "label": "infraestrutura",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/infraestrutura"
+    }
+  ],
+  "version": "current",
+  "sidebarPosition": 1,
+  "frontMatter": {
+    "id": "dominios-monitorizacao",
+    "title": "Domínios de Monitorização e Observabilidade",
+    "sidebar_position": 1,
+    "description": "Identificação e definição dos domínios técnicos e operacionais a monitorizar em sistemas modernos.",
+    "tags": [
+      "monitorização",
+      "observabilidade",
+      "logging",
+      "segurança",
+      "runtime",
+      "infraestrutura"
+    ]
+  },
+  "sidebar": "sbdToeSidebar",
+  "previous": {
+    "title": "Introdução — Monitorização e Operações",
+    "permalink": "/sbd-theory-of-everything/sbd-toe/monitorizacao-operacoes/intro"
+  },
+  "next": {
+    "title": "Controles de Logging Estruturado e Centralizado",
+    "permalink": "/sbd-theory-of-everything/sbd-toe/monitorizacao-operacoes/addon/controles-logging-centralizado"
+  }
+}

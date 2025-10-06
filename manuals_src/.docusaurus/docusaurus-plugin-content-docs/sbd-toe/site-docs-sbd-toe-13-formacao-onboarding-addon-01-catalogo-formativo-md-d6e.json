@@ -1,0 +1,61 @@
+{
+  "id": "formacao-onboarding/addon/catalogo-formativo",
+  "title": "Catálogo de Formação por Perfil Técnico",
+  "description": "Listagem de conteúdos formativos mínimos por perfil técnico para onboarding e capacitação contínua.",
+  "source": "@site/docs/sbd-toe/13-formacao-onboarding/addon/01-catalogo-formativo.md",
+  "sourceDirName": "13-formacao-onboarding/addon",
+  "slug": "/formacao-onboarding/addon/catalogo-formativo",
+  "permalink": "/sbd-theory-of-everything/sbd-toe/formacao-onboarding/addon/catalogo-formativo",
+  "draft": false,
+  "unlisted": false,
+  "tags": [
+    {
+      "inline": true,
+      "label": "formacao",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/formacao"
+    },
+    {
+      "inline": true,
+      "label": "perfis",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/perfis"
+    },
+    {
+      "inline": true,
+      "label": "conteudos",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/conteudos"
+    },
+    {
+      "inline": true,
+      "label": "catalogo",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/catalogo"
+    },
+    {
+      "inline": true,
+      "label": "onboarding",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/onboarding"
+    }
+  ],
+  "version": "current",
+  "sidebarPosition": 1,
+  "frontMatter": {
+    "id": "catalogo-formativo",
+    "title": "Catálogo de Formação por Perfil Técnico",
+    "description": "Listagem de conteúdos formativos mínimos por perfil técnico para onboarding e capacitação contínua.",
+    "tags": [
+      "formacao",
+      "perfis",
+      "conteudos",
+      "catalogo",
+      "onboarding"
+    ]
+  },
+  "sidebar": "sbdToeSidebar",
+  "previous": {
+    "title": "Capítulo 13 — Formação e Onboarding Seguro",
+    "permalink": "/sbd-theory-of-everything/sbd-toe/formacao-onboarding/intro"
+  },
+  "next": {
+    "title": "Trilho de Formação por Nível de Risco",
+    "permalink": "/sbd-theory-of-everything/sbd-toe/formacao-onboarding/addon/trilho-formativo"
+  }
+}

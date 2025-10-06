@@ -1,0 +1,68 @@
+{
+  "id": "cicd-seguro/addon/politicas-gates-pipeline",
+  "title": "Políticas e Gates por Nível de Aplicação",
+  "description": "Definição de políticas automáticas no pipeline com gates de segurança que variam segundo o nível de risco da aplicação.",
+  "source": "@site/docs/sbd-toe/07-cicd-seguro/addon/06-politicas-gates-pipeline.md",
+  "sourceDirName": "07-cicd-seguro/addon",
+  "slug": "/cicd-seguro/addon/politicas-gates-pipeline",
+  "permalink": "/sbd-theory-of-everything/sbd-toe/cicd-seguro/addon/politicas-gates-pipeline",
+  "draft": false,
+  "unlisted": false,
+  "tags": [
+    {
+      "inline": true,
+      "label": "cicd",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/cicd"
+    },
+    {
+      "inline": true,
+      "label": "gates",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/gates"
+    },
+    {
+      "inline": true,
+      "label": "políticas",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/politicas"
+    },
+    {
+      "inline": true,
+      "label": "risco",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/risco"
+    },
+    {
+      "inline": true,
+      "label": "segurança",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/seguranca"
+    },
+    {
+      "inline": true,
+      "label": "validações",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/validacoes"
+    }
+  ],
+  "version": "current",
+  "sidebarPosition": 6,
+  "frontMatter": {
+    "id": "politicas-gates-pipeline",
+    "title": "Políticas e Gates por Nível de Aplicação",
+    "sidebar_position": 6,
+    "description": "Definição de políticas automáticas no pipeline com gates de segurança que variam segundo o nível de risco da aplicação.",
+    "tags": [
+      "cicd",
+      "gates",
+      "políticas",
+      "risco",
+      "segurança",
+      "validações"
+    ]
+  },
+  "sidebar": "sbdToeSidebar",
+  "previous": {
+    "title": "Integridade e Proveniência de Artefactos",
+    "permalink": "/sbd-theory-of-everything/sbd-toe/cicd-seguro/addon/integridade-proveniencia"
+  },
+  "next": {
+    "title": "Validações de Segurança Integradas no Pipeline",
+    "permalink": "/sbd-theory-of-everything/sbd-toe/cicd-seguro/addon/validacoes-seguranca-integradas"
+  }
+}

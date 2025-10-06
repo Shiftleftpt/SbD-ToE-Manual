@@ -1,0 +1,28 @@
+{
+  "id": "intro",
+  "title": "Introdução às Ameaças",
+  "description": "Este módulo usa a framework OSC&R para mapear ameaças e mostrar como o SbD as mitiga.",
+  "source": "@site/docs/ameacas/intro.md",
+  "sourceDirName": ".",
+  "slug": "/intro",
+  "permalink": "/sbd-theory-of-everything/ameacas/intro",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 1,
+  "frontMatter": {
+    "id": "intro",
+    "title": "Introdução às Ameaças",
+    "sidebar_position": 1
+  },
+  "sidebar": "defaultSidebar",
+  "previous": {
+    "title": "🔰 Introdução e propósito",
+    "permalink": "/sbd-theory-of-everything/ameacas/🔰-introdução-e-propósito"
+  },
+  "next": {
+    "title": "Estrutura deste capítulo",
+    "permalink": "/sbd-theory-of-everything/ameacas/estrutura-deste-capítulo"
+  }
+}

@@ -1,0 +1,67 @@
+{
+  "id": "containers-imagens/addon/runners-isolamento",
+  "title": "Runners, Execução Isolada e Ambientes Controlados",
+  "description": "Garantia de execução segura e controlada de *containers* em pipelines e ambientes partilhados",
+  "source": "@site/docs/sbd-toe/09-containers-imagens/addon/02-runners-isolamento.md",
+  "sourceDirName": "09-containers-imagens/addon",
+  "slug": "/containers-imagens/addon/runners-isolamento",
+  "permalink": "/sbd-theory-of-everything/sbd-toe/containers-imagens/addon/runners-isolamento",
+  "draft": false,
+  "unlisted": false,
+  "tags": [
+    {
+      "inline": true,
+      "label": "runners",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/runners"
+    },
+    {
+      "inline": true,
+      "label": "isolamento",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/isolamento"
+    },
+    {
+      "inline": true,
+      "label": "pipelines",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/pipelines"
+    },
+    {
+      "inline": true,
+      "label": "execucao",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/execucao"
+    },
+    {
+      "inline": true,
+      "label": "segurança",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/seguranca"
+    },
+    {
+      "inline": true,
+      "label": "ci-cd",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/ci-cd"
+    }
+  ],
+  "version": "current",
+  "sidebarPosition": 2,
+  "frontMatter": {
+    "id": "runners-isolamento",
+    "title": "Runners, Execução Isolada e Ambientes Controlados",
+    "description": "Garantia de execução segura e controlada de *containers* em pipelines e ambientes partilhados",
+    "tags": [
+      "runners",
+      "isolamento",
+      "pipelines",
+      "execucao",
+      "segurança",
+      "ci-cd"
+    ]
+  },
+  "sidebar": "sbdToeSidebar",
+  "previous": {
+    "title": "Imagens Base Seguras e Minimalistas",
+    "permalink": "/sbd-theory-of-everything/sbd-toe/containers-imagens/addon/imagens-base"
+  },
+  "next": {
+    "title": "Assinatura de Imagens e Cadeia de Confiança",
+    "permalink": "/sbd-theory-of-everything/sbd-toe/containers-imagens/addon/assinatura-cadeia-trust"
+  }
+}

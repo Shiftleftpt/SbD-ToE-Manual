@@ -1,0 +1,55 @@
+{
+  "id": "classificacao-aplicacoes/addon/risco-residual",
+  "title": "Análise de Risco Residual e Decisão de Aceitação",
+  "description": "O conceito de risco residual é essencial para a tomada de decisão consciente e justificada sobre a segurança de uma aplicação ou sistema. Representa o risco que permanece após a aplicação de controlos, e deve ser sempre comparado com os limites de tolerância da organização.",
+  "source": "@site/docs/sbd-toe/01-classificacao-aplicacoes/addon/06-risco-residual.md",
+  "sourceDirName": "01-classificacao-aplicacoes/addon",
+  "slug": "/classificacao-aplicacoes/addon/risco-residual",
+  "permalink": "/sbd-theory-of-everything/sbd-toe/classificacao-aplicacoes/addon/risco-residual",
+  "draft": false,
+  "unlisted": false,
+  "tags": [
+    {
+      "inline": true,
+      "label": "tipo:analise",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/tipo-analise"
+    },
+    {
+      "inline": true,
+      "label": "risco-residual",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/risco-residual"
+    },
+    {
+      "inline": true,
+      "label": "aceitacao",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/aceitacao"
+    },
+    {
+      "inline": true,
+      "label": "excecao",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/excecao"
+    }
+  ],
+  "version": "current",
+  "sidebarPosition": 6,
+  "frontMatter": {
+    "id": "risco-residual",
+    "title": "Análise de Risco Residual e Decisão de Aceitação",
+    "sidebar_position": 6,
+    "tags": [
+      "tipo:analise",
+      "risco-residual",
+      "aceitacao",
+      "excecao"
+    ]
+  },
+  "sidebar": "sbdToeSidebar",
+  "previous": {
+    "title": "Avaliação Semiquantitativa do Risco",
+    "permalink": "/sbd-theory-of-everything/sbd-toe/classificacao-aplicacoes/addon/avaliacao-semiquantitativa"
+  },
+  "next": {
+    "title": "Ciclo de Vida da Classificação de Risco",
+    "permalink": "/sbd-theory-of-everything/sbd-toe/classificacao-aplicacoes/addon/ciclo-vida-risco"
+  }
+}

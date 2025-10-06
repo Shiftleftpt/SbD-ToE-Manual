@@ -1,0 +1,62 @@
+{
+  "id": "monitorizacao-operacoes/addon/exemplos-eventos",
+  "title": "Exemplos de Eventos Relevantes para Monitorização",
+  "description": "Catálogo de eventos típicos a monitorizar para fins operacionais e de segurança.",
+  "source": "@site/docs/sbd-toe/12-monitorizacao-operacoes/addon/09-exemplos-eventos.md",
+  "sourceDirName": "12-monitorizacao-operacoes/addon",
+  "slug": "/monitorizacao-operacoes/addon/exemplos-eventos",
+  "permalink": "/sbd-theory-of-everything/sbd-toe/monitorizacao-operacoes/addon/exemplos-eventos",
+  "draft": false,
+  "unlisted": false,
+  "tags": [
+    {
+      "inline": true,
+      "label": "eventos",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/eventos"
+    },
+    {
+      "inline": true,
+      "label": "logging",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/logging"
+    },
+    {
+      "inline": true,
+      "label": "segurança",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/seguranca"
+    },
+    {
+      "inline": true,
+      "label": "observabilidade",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/observabilidade"
+    },
+    {
+      "inline": true,
+      "label": "catálogo",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/catalogo"
+    }
+  ],
+  "version": "current",
+  "sidebarPosition": 9,
+  "frontMatter": {
+    "id": "exemplos-eventos",
+    "title": "Exemplos de Eventos Relevantes para Monitorização",
+    "sidebar_position": 9,
+    "description": "Catálogo de eventos típicos a monitorizar para fins operacionais e de segurança.",
+    "tags": [
+      "eventos",
+      "logging",
+      "segurança",
+      "observabilidade",
+      "catálogo"
+    ]
+  },
+  "sidebar": "sbdToeSidebar",
+  "previous": {
+    "title": "Matriz de Controles por Nível de Risco",
+    "permalink": "/sbd-theory-of-everything/sbd-toe/monitorizacao-operacoes/addon/matriz-controles-por-risco"
+  },
+  "next": {
+    "title": "Aplicação de Monitorização no Ciclo de Vida",
+    "permalink": "/sbd-theory-of-everything/sbd-toe/monitorizacao-operacoes/canon/aplicacao-lifecycle"
+  }
+}

@@ -1,0 +1,53 @@
+{
+  "id": "testes-seguranca/canon/recomendacoes-avancadas",
+  "title": "Recomendações Avançadas para Validação Contínua de Segurança",
+  "description": "Práticas reforçadas para ambientes com elevado nível de criticidade, exposição ou requisitos regulatórios.",
+  "source": "@site/docs/sbd-toe/10-testes-seguranca/canon/30-recomendacoes-avancadas.md",
+  "sourceDirName": "10-testes-seguranca/canon",
+  "slug": "/testes-seguranca/canon/recomendacoes-avancadas",
+  "permalink": "/sbd-theory-of-everything/sbd-toe/testes-seguranca/canon/recomendacoes-avancadas",
+  "draft": false,
+  "unlisted": false,
+  "tags": [
+    {
+      "inline": true,
+      "label": "recomendações",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/recomendacoes"
+    },
+    {
+      "inline": true,
+      "label": "avançadas",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/avancadas"
+    },
+    {
+      "inline": true,
+      "label": "testes",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/testes"
+    },
+    {
+      "inline": true,
+      "label": "segurança",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/seguranca"
+    },
+    {
+      "inline": true,
+      "label": "validação contínua",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/validacao-continua"
+    }
+  ],
+  "version": "current",
+  "sidebarPosition": 30,
+  "frontMatter": {
+    "id": "recomendacoes-avancadas",
+    "title": "Recomendações Avançadas para Validação Contínua de Segurança",
+    "description": "Práticas reforçadas para ambientes com elevado nível de criticidade, exposição ou requisitos regulatórios.",
+    "tags": [
+      "recomendações",
+      "avançadas",
+      "testes",
+      "segurança",
+      "validação contínua"
+    ],
+    "sidebar_position": 30
+  }
+}

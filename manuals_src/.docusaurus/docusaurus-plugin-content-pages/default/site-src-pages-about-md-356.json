@@ -1,0 +1,12 @@
+{
+  "type": "mdx",
+  "permalink": "/sbd-theory-of-everything/about",
+  "source": "@site/src/pages/about.md",
+  "title": "Sobre o Manual SbD-ToE",
+  "description": "Introdução institucional ao manual Security by Design – Theory of Everything",
+  "frontMatter": {
+    "title": "Sobre o Manual SbD-ToE",
+    "description": "Introdução institucional ao manual Security by Design – Theory of Everything"
+  },
+  "unlisted": false
+}

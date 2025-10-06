@@ -1,0 +1,24 @@
+{
+  "id": "🧩-anexo-g-–-má-configuração---permissões-excessivas",
+  "title": "🧩 Anexo G – Má Configuração / Permissões Excessivas",
+  "description": "1. Descrição da Ameaça",
+  "source": "@site/docs/ameacas/10-🧩-anexo-g-–-má-configuração---permissões-excessivas.md",
+  "sourceDirName": ".",
+  "slug": "/🧩-anexo-g-–-má-configuração---permissões-excessivas",
+  "permalink": "/sbd-theory-of-everything/ameacas/🧩-anexo-g-–-má-configuração---permissões-excessivas",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 10,
+  "frontMatter": {},
+  "sidebar": "defaultSidebar",
+  "previous": {
+    "title": "🧩 Anexo F – Maintainers Maliciosos / Insiders",
+    "permalink": "/sbd-theory-of-everything/ameacas/🧩-anexo-f-–-maintainers-maliciosos---insiders"
+  },
+  "next": {
+    "title": "🧩 Anexo H – Execução Não Autorizada de Código (PRs, Forks, Triggers)",
+    "permalink": "/sbd-theory-of-everything/ameacas/🧩-anexo-h-–-execução-não-autorizada-de-código-(prs,-forks,-triggers)"
+  }
+}

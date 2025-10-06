@@ -1,0 +1,98 @@
+###############################################################################
+# Makefile – Build Automático Multi-Livro SbD-ToE (Web + Print)
+# (… descrição igual …)
+###############################################################################
+
+copy ?= true
+
+GIT_ROOT     ?= $(shell git rev-parse --show-toplevel)
+
+## ----------- SBD MANUAL -----------
+
+SBD_SRC           := $(GIT_ROOT)/manuals_src
+SBD_PRINT         := $(GIT_ROOT)/build/print/sbd-manual
+SBD_BOOKYML_PRINT := $(SBD_PRINT)/docs/sbd-toe/book.yml
+SBD_PDF_OUT       := $(GIT_ROOT)/BOOK/pdf/sbd_manual
+
+print_sbd_copy:
+	mkdir -p $(SBD_PRINT)
+	rsync -a --delete --exclude 'node_modules' --exclude '.git' $(SBD_SRC)/ $(SBD_PRINT)/
+	@ls -l $(SBD_PRINT)/docs/
+
+print_sbd_main:
+	cd $(GIT_ROOT)/src/publish && python3 main_filter.py --inputdir $(SBD_PRINT) --bookyml $(SBD_BOOKYML_PRINT)
+	cd $(GIT_ROOT)/src/publish && python3 parse_book_yaml_eisvogel.py --book $(SBD_BOOKYML_PRINT) --outdir $(SBD_PDF_OUT)
+	cd $(SBD_PDF_OUT) && pandoc manual-sbd-toe.md --from markdown --template eisvogel --lua-filter=$(GIT_ROOT)/src/publish/small_font_tables.lua --pdf-engine=xelatex -o manual-sbd-toe.pdf
+
+ifeq ($(copy),true)
+print_sbd: print_sbd_copy print_sbd_main
+else
+print_sbd: print_sbd_main
+endif
+
+clean_print_sbd:
+	rm -rf $(SBD_PRINT) $(SBD_PDF_OUT)
+
+## ----------- SUPPLY CHAIN -----------
+
+SUPPLY_SRC           := $(GIT_ROOT)/manuals_src/
+SUPPLY_PRINT         := $(GIT_ROOT)/build/print/supply_chain
+SUPPLY_BOOKYML_PRINT := $(SUPPLY_SRC)/docs/supply-chain/book.yml
+SUPPLY_PDF_OUT       := $(GIT_ROOT)/BOOK/pdf/supply_chain
+
+print_supply_copy:
+	mkdir -p $(SUPPLY_PRINT)
+	rsync -a --delete --exclude 'node_modules' --exclude '.git' $(SUPPLY_SRC)/ $(SUPPLY_PRINT)/
+	@ls -l $(SUPPLY_PRINT)/docs/
+
+print_supply_main:
+	cd $(GIT_ROOT)/src/publish && python3 src/publish/main_filter.py --inputdir $(SUPPLY_PRINT) --bookyml $(SUPPLY_BOOKYML_PRINT)
+	cd $(GIT_ROOT)/src/publish && python3 parse_book_yaml_eisvogel.py --book $(SUPPLY_BOOKYML_PRINT) --outdir $(SUPPLY_PDF_OUT)
+	cd $(SUPPLY_PDF_OUT) && pandoc manual-supply-chain.md --from markdown --template eisvogel --lua-filter=$(GIT_ROOT)/src/publish/small_font_tables.lua --pdf-engine=xelatex -o manual-supply-chain.pdf
+
+ifeq ($(copy),true)
+print_supply: print_supply_copy print_supply_main
+else
+print_supply: print_supply_main
+endif
+
+clean_print_supply:
+	rm -rf $(SUPPLY_PRINT) $(SUPPLY_PDF_OUT)
+
+## ----------- WEB GLOBAL (único site Docusaurus) -----------
+
+WEB_SRC        := $(GIT_ROOT)/manuals_src
+WEB_BUILD      := $(GIT_ROOT)/build/web
+WEB_BOOKYML    := $(WEB_BUILD)/site-filters.yml     # Pode ser global, ou apontar para o site
+WEB_DOCUSAURUS := $(WEB_BUILD)                # Ajusta se usares subpasta
+
+web_copy:
+	mkdir -p $(WEB_BUILD)
+	rsync -a --delete --exclude 'node_modules' --exclude '.git' $(WEB_SRC)/ $(WEB_BUILD)/
+	@ls -l $(WEB_BUILD)/docs/
+
+web_main:
+	cd $(GIT_ROOT)/src/publish && python3 main_filter.py --inputdir $(WEB_BUILD) --bookyml $(WEB_BOOKYML)
+	cd $(WEB_BUILD) && npm install && npm run build
+
+ifeq ($(copy),true)
+web: web_copy web_main
+else
+web: web_main
+endif
+
+clean_web:
+	rm -rf $(WEB_BUILD)
+
+## ----------- TARGETS GLOBAIS -----------
+
+print_all: print_sbd print_supply
+all: print_all web
+
+clean_print: clean_print_sbd clean_print_supply
+clean: clean_print clean_web
+
+.PHONY: print_sbd print_supply web \
+		clean_print_sbd clean_print_supply clean_web \
+		print_all all clean_print clean
+# EOF

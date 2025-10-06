@@ -1,0 +1,242 @@
+# Prefácio
+
+Este manual nasce da necessidade de tornar a segurança aplicacional acessível, prática e exequível para qualquer organização, independentemente da sua dimensão, orçamento ou contexto tecnológico.  
+A sua elaboração resultou de uma análise aprofundada das principais frameworks internacionais, como OWASP SAMM, BSIMM, DSOMM, SLSA, NIST SSDF, CIS Controls, ISO/IEC 27001/27034, bem como dos normativos europeus mais recentes, incluindo NIS2 e DORA.
+
+A equipa responsável analisou criticamente estas referências, identificando pontos comuns, lacunas e oportunidades de simplificação.  
+O resultado é uma compilação de práticas prescritivas, concebidas para serem:
+
+- Executáveis com baixo investimento inicial.  
+- Automatizáveis e integráveis em pipelines modernos.  
+- Adaptáveis a diferentes níveis de maturidade organizacional.  
+- Suportadas por ferramentas open source ou de fácil acesso.  
+
+Cada recomendação foi desenhada para ser clara, auditável e orientada à ação, promovendo a adoção consistente por equipas técnicas, gestão e fornecedores externos.  
+A aplicação destas práticas posiciona a organização em níveis de maturidade reconhecidos por frameworks como SAMM, BSIMM e ISO, garantindo simultaneamente o alinhamento com requisitos legais e regulatórios.
+
+---
+
+## Porque “Theory of Everything” no contexto da segurança
+
+O nome *Theory of Everything* é usado por analogia com o conceito da física que procura descrever, de forma unificada, todos os fenómenos conhecidos.  
+No contexto da segurança no desenvolvimento, o SbD-ToE integra **três eixos complementares** que, combinados, permitem cobrir todas as dimensões necessárias para aplicar *Security by Design* de forma consistente e proporcional:
+
+1. **Visão top-down — modelos de maturidade e normas**  
+   Parte de modelos de maturidade (SAMM, BSIMM, DSOMM) e normas reconhecidas (ISO/IEC 27001, ISO/IEC 27034, CIS Controls, NIS2, DORA).  
+   - Define **o que** deve ser feito, **quando** e **a que nível** de exigência.  
+   - Fornece enquadramento objetivo para medir evolução, definir metas e comprovar conformidade.  
+   - Funciona como plano diretor para alinhar requisitos técnicos, organizacionais e regulamentares.
+
+2. **Perspetiva bottom-up — catálogos de ameaças e vulnerabilidades**  
+   Usa taxonomias como MITRE ATT&CK, CAPEC e CWE para caracterizar riscos concretos.  
+   - Responde **para quê** existe cada prática, ligando-a a ameaças reais.  
+   - Mantém a relevância face ao panorama de ataques.  
+   - Prioriza controlos pelo impacto e probabilidade.
+
+3. **Experiência prática — aplicação em contextos diversos**  
+   Resulta de mais de uma década de aplicação direta em múltiplas organizações.  
+   - Define **quem** executa e **como** aplicar com realismo operacional.  
+   - Fornece artefactos reutilizáveis e ajustamentos pragmáticos.  
+   - Transforma requisitos e controlos em procedimentos exequíveis e sustentáveis.
+
+---
+
+## Papel unificador e normalização de âmbito
+
+Modelos, normas e catálogos distintos abordam frequentemente **o mesmo conceito com nomes diferentes** ou com variações no seu âmbito.  
+Para evitar ambiguidade e facilitar a aplicação prática, o SbD-ToE consolidou esses pontos em comum numa **terminologia única e consistente**:
+
+- **Agrupamento semântico** – conceitos equivalentes foram alinhados sob o mesmo termo no manual.  
+- **Normalização de âmbito** – práticas com delimitações diferentes foram harmonizadas para um formato coerente e aplicável.  
+- **Mapeamento cruzado** – cada prática consolidada mantém ligação explícita às referências que a originaram, garantindo rastreabilidade.
+
+---
+
+# Introdução ao SbD-ToE
+
+O *Security by Design – Theory of Everything* oferece um quadro prático e proporcional para integrar segurança no desenvolvimento de software, ajustado ao risco real de cada aplicação.
+
+---
+
+## Precedência lógica entre capítulos
+
+Existe uma ordem lógica:  
+**análise de risco e classificação** são o ponto de partida; só depois se definem **requisitos**, se faz **threat modeling** e se desenha a **arquitetura**.  
+Esta sequência assegura proporcionalidade e relevância.
+
+---
+
+## Natureza prescritiva e adaptável
+
+O SbD-ToE define **o que fazer, quando, como e com que meios**.  
+É **modular** (adoção progressiva), **extensível** (evolução gradual) e **pragmático** (aplicável no dia a dia).
+
+---
+
+## Aplicabilidade universal
+
+Pode ser usado para:
+
+- Avaliar e melhorar maturidade de segurança.  
+- Tomar decisões com base no risco.  
+- Alinhar desenvolvimento, segurança e operação.  
+- Implementar melhorias incrementais e sustentáveis.
+
+---
+
+## Abrangência temática
+
+Cobre **14 áreas técnicas** estruturadas segundo o ciclo de vida do desenvolvimento:
+
+1. Gestão de Risco e Classificação de Aplicações  
+2. Requisitos de Segurança  
+3. *Threat Modeling*  
+4. Arquitetura Segura  
+5. Controlo de Dependências (SBOM, SCA)  
+6. Desenvolvimento Seguro  
+7. CI/CD Seguro  
+8. Infraestrutura como Código  
+9. *Containers* e Imagens  
+10. Testes de Segurança  
+11. *Deploy* Seguro  
+12. Monitorização e Operações  
+13. Formação e *Onboarding*  
+14. Governação e Contratação  
+
+---
+
+## Porque estas 14 áreas — e como se aplicam na prática
+
+Estas 14 áreas foram escolhidas para garantir cobertura, no seu conjunto, de:  
+**(i)** todo o ciclo de vida do software; **(ii)** as classes de risco técnicas, organizacionais, de *supply chain* e humanas; **(iii)** o mapeamento integral para normas e modelos de maturidade reconhecidos.
+
+São o **esqueleto mínimo** de um programa de *Security by Design*. Sem todas, o modelo perde coerência e cobertura — mas isso **não** implica que todas tenham de estar maduras desde o início.
+
+Na prática, a adoção é **progressiva** e, por vezes, parte de simplificações temporárias:
+
+- **Classificação única para todas as aplicações**: acelera o arranque, mas perde proporcionalidade ao risco e pode gerar esforço excessivo em apps de baixo risco ou lacunas nas de alto risco.  
+- **Mesmos testes para todas as aplicações**: assegura cobertura mínima, mas não otimiza recursos nem foca o que é crítico.  
+- **Sem requisitos de segurança formais**: permite avançar, mas dificulta rastreabilidade e medição objetiva da cobertura.  
+- **Sem testes específicos para requisitos**: reduz custo inicial, mas compromete a deteção precoce de falhas sistemáticas.
+
+Estas opções são aceitáveis **temporariamente**, desde que exista um plano para evoluir até à **cobertura plena**.
+
+**Consequências de lacunas**:  
+- Sem *Threat Modeling*, os controlos podem ser genéricos e desajustados às ameaças reais.  
+- Sem *Requisitos de Segurança*, falta base objetiva para verificação e aceitação.  
+- Sem *Formação e Onboarding*, a taxa de erros humanos permanece elevada.  
+- Sem *Governação e Contratação*, a continuidade das práticas degrada-se com mudanças de equipa ou fornecedor.
+
+**Resultados emergentes (não capítulos autónomos)**:  
+- **Resiliência Operacional** ← Monitorização e Operações + Governação + Gestão de Risco.  
+- **Supply Chain Security** ← Controlo de Dependências + CI/CD Seguro + IaC + *Containers* & Imagens.  
+- **DevSecOps** ← Desenvolvimento Seguro + Testes de Segurança + CI/CD Seguro + Formação.
+
+---
+
+## Posicionamento em frameworks
+
+| Framework | Maturidade esperada |
+|-----------|---------------------|
+| OWASP SAMM | Nível 2–3 |
+| BSIMM | Domínio 2–3 |
+| ISO/IEC 27001/27034 | Implementação e melhoria contínua de controlos |
+| SLSA | Nível 3 ou superior |
+| NIST SSDF | Alinhamento com Prepare, Protect, Produce, Respond |
+| CIS Controls | Cumprimento de controlos aplicáveis ao SDLC |
+
+---
+
+## Enquadramento das principais referências usadas no SbD-ToE
+
+As referências externas estão agrupadas em quatro categorias. Cada categoria tem função distinta no processo científico e técnico do SbD‑ToE.
+
+### 1) Modelos de maturidade
+
+**O que são**  
+Estruturas que avaliam a capacidade organizacional para executar práticas de segurança com consistência, medindo níveis de formalização e melhoria contínua.
+
+**Quais usamos**  
+- **OWASP SAMM** — maturidade no SDLC, organizada em domínios, fluxos e níveis (1–3).  
+- **BSIMM** — observação de programas reais de segurança (12 domínios, atividades mensuráveis).  
+- **OWASP DSOMM** — maturidade DevSecOps (integração e automação de controlos no ciclo CI/CD/Operações).
+
+**O que cobrem**  
+Não apenas *o que* fazer, mas *quão bem* e *com que consistência* a organização executa as práticas (governação, construção, verificação, implantação/operação).
+
+**Como contribuíram para a ToE**  
+- Deram a **espinha dorsal de mensurabilidade**: cada prática do SbD‑ToE foi mapeada a níveis específicos (ex.: SAMM Nível 2; DSOMM “Advanced”).  
+- Suportaram a **priorização** e o **planeamento de evolução** por marcos de maturidade.  
+- Permitiram **comparação externa** com o estado da arte do setor (benchmarking).
+
+---
+
+### 2) Normas e conformidade
+
+**O que são**  
+Conjuntos de requisitos formais passíveis de auditoria/certificação, alinhados com exigências legais e regulamentares.
+
+**Quais usamos**  
+- **ISO/IEC 27001** — sistema de gestão de segurança da informação.  
+- **ISO/IEC 27034** — segurança de aplicações (complementa a 27001 no SDLC).  
+- **CIS Controls** — controlos priorizados (técnicos e organizacionais).  
+- **ENISA / NIS2 / DORA** — orientações e obrigações europeias.  
+- **PCI DSS** — proteção de dados de pagamento (exemplo setorial).
+
+**O que cobrem**  
+Critérios auditáveis e objetivos para governação, gestão de riscos, proteção, deteção, resposta e melhoria.
+
+**Como contribuíram para a ToE**  
+- Garantiram **auditabilidade**: cada prática prescrita tem evidências rastreáveis.  
+- Asseguraram **conformidade**: mapeamentos diretos entre controlos do SbD‑ToE e requisitos de normas/regulamentos.  
+- Reforçaram a **sustentação organizacional** (políticas, contratos, responsabilidades).
+
+---
+
+### 3) Referenciais técnicos de práticas
+
+**O que são**  
+Guias que definem controlos e salvaguardas técnicos para desenvolvimento seguro e integridade da *supply chain*.
+
+**Quais usamos**  
+- **NIST SSDF** — práticas agrupadas em Prepare, Protect, Produce, Respond.  
+- **SLSA** — integridade da cadeia de fornecimento (níveis 1–4).  
+- **OWASP ASVS** — requisitos de verificação de segurança aplicacional (níveis 1–3).
+
+**O que cobrem**  
+Controlo de dependências (SBOM/SCA), hardening de pipelines, assinaturas e proveniência, verificação sistemática de requisitos, testes técnicos e critérios de aceitação.
+
+**Como contribuíram para a ToE**  
+- Forneceram a **matriz de controlos operacionais** por área (CI/CD Seguro, Controlo de Dependências, Testes de Segurança, *Deploy* Seguro).  
+- Permitem **traçar cada prática** a um conjunto concreto de medidas técnicas (ex.: SLSA nível 3 → assinaturas, reprodutibilidade; ASVS nível 2 → requisitos de autenticação/gestão de sessão).  
+- Serviram de **fonte para templates e checklists** do manual.
+
+---
+
+### 4) Catálogos de ameaças e vulnerabilidades
+
+**O que são**  
+Taxonomias estruturadas de ataques, padrões e fraquezas técnicas.
+
+**Quais usamos**  
+- **MITRE ATT&CK** — táticas/técnicas/procedimentos de adversários.  
+- **CAPEC** — padrões de ataque.  
+- **CWE** — fraquezas de software.
+
+**O que cobrem**  
+Vocabulário comum e estrutura para identificar, classificar e comunicar ameaças e vulnerabilidades; permitem ligar controlos a **riscos concretos**.
+
+**Como contribuíram para a ToE**  
+- Deram base às secções **“ameaças mitigadas”** em cada capítulo, estabelecendo **rastreabilidade** entre prática ↔ ameaça/fraqueza.  
+- Suportaram a **priorização** de controlos pelo impacto/probabilidade de técnicas em ATT&CK.  
+- Ajudaram a **validar a relevância** de cada prática face a falhas conhecidas (CWE) e padrões de ataque (CAPEC).
+
+---
+
+## Nota de Agradecimento
+
+Este manual resulta do trabalho coletivo de comunidades, autores e equipas técnicas ao longo de décadas.  
+A sua origem está na prática, consolidada por mais de dez anos de aplicação real em projetos diversos.  
+Desde a primeira “ShiftLeft Framework for Security by Design & by Default” até ao modelo atual, manteve-se o foco em soluções simples, exequíveis e adaptáveis.
+
+A todos os que partilham conhecimento e desafiam a evolução da segurança aplicacional, o nosso agradecimento.

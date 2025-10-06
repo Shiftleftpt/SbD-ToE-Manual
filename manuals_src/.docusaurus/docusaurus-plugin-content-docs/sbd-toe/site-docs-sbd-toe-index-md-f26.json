@@ -1,0 +1,24 @@
+{
+  "id": "index",
+  "title": "Security by Design – Teoria de Tudo",
+  "description": "O manual Security by Design – Theory of Everything (SbD-ToE) foi criado com um propósito claro:",
+  "source": "@site/docs/sbd-toe/index.md",
+  "sourceDirName": ".",
+  "slug": "/",
+  "permalink": "/sbd-theory-of-everything/sbd-toe/",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "id": "index",
+    "title": "Security by Design – Teoria de Tudo",
+    "hide_title": false,
+    "hide_table_of_contents": false
+  },
+  "sidebar": "sbdToeSidebar",
+  "next": {
+    "title": "Como Usar Este Manual",
+    "permalink": "/sbd-theory-of-everything/sbd-toe/como-usar-este-manual"
+  }
+}

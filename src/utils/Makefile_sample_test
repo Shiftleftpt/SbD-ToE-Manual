@@ -1,0 +1,33 @@
+.PHONY: web print clean
+
+SRC := src
+WEB_DIR := web
+PRINT_DIR := print
+SCRIPTS := scripts
+BOOK := book.yaml
+
+web:
+	@echo "📘 Preparar build para Docusaurus..."
+	mkdir -p $(WEB_DIR) docusaurus/docs
+	cp -a $(SRC)/* $(WEB_DIR)/
+	python3 $(SCRIPTS)/xref_to_path_docusaurus.py $(WEB_DIR)
+	cp -a $(WEB_DIR)/* docusaurus/docs/
+	@echo "✅ Web build concluído em $(WEB_DIR)/"
+	cd docusaurus/ && \
+		npm run build && \
+		npm run serve
+	@echo "🌐 Docusaurus está rodando. Acesse http://localhost:3000/"
+
+PANDOC_FILES := $(shell python3 ./scripts/parse_book_yaml.py ./book.yaml | tr '\n' ' ')
+
+print:
+	@echo "📕 Preparar build para LaTeX..."
+	mkdir -p $(PRINT_DIR)
+	cp -a $(SRC)/* $(PRINT_DIR)/
+	python3 $(SCRIPTS)/xref_to_href_pandoc.py $(PRINT_DIR)
+	cd $(PRINT_DIR) && pandoc --toc $(PANDOC_FILES) -o ../manual.pdf
+	@echo "✅ PDF gerado: manual.pdf"
+
+clean:
+	rm -rf $(WEB_DIR) $(PRINT_DIR) manual.pdf
+	@echo "🧼 Limpeza concluída. Diretórios removidos."

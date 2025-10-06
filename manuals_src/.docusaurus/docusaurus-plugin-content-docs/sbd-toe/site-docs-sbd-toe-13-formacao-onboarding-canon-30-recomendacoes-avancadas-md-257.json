@@ -1,0 +1,65 @@
+{
+  "id": "formacao-onboarding/canon/recomendacoes-avancadas",
+  "title": "Recomendações Avançadas — Formação e Onboarding Seguro",
+  "description": "Recomendações para organizações com maior maturidade em formação contínua, automação e segurança comportamental.",
+  "source": "@site/docs/sbd-toe/13-formacao-onboarding/canon/30-recomendacoes-avancadas.md",
+  "sourceDirName": "13-formacao-onboarding/canon",
+  "slug": "/formacao-onboarding/canon/recomendacoes-avancadas",
+  "permalink": "/sbd-theory-of-everything/sbd-toe/formacao-onboarding/canon/recomendacoes-avancadas",
+  "draft": false,
+  "unlisted": false,
+  "tags": [
+    {
+      "inline": true,
+      "label": "formacao",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/formacao"
+    },
+    {
+      "inline": true,
+      "label": "maturidade",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/maturidade"
+    },
+    {
+      "inline": true,
+      "label": "lms",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/lms"
+    },
+    {
+      "inline": true,
+      "label": "cicd",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/cicd"
+    },
+    {
+      "inline": true,
+      "label": "feedback",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/feedback"
+    },
+    {
+      "inline": true,
+      "label": "gamificacao",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/gamificacao"
+    },
+    {
+      "inline": true,
+      "label": "terceiros",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/terceiros"
+    }
+  ],
+  "version": "current",
+  "sidebarPosition": 30,
+  "frontMatter": {
+    "id": "recomendacoes-avancadas",
+    "title": "Recomendações Avançadas — Formação e Onboarding Seguro",
+    "description": "Recomendações para organizações com maior maturidade em formação contínua, automação e segurança comportamental.",
+    "tags": [
+      "formacao",
+      "maturidade",
+      "lms",
+      "cicd",
+      "feedback",
+      "gamificacao",
+      "terceiros"
+    ],
+    "sidebar_position": 30
+  }
+}

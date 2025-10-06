@@ -1,0 +1,53 @@
+{
+  "id": "requisitos-seguranca/canon/recomendacoes-avancadas",
+  "title": "Práticas Avançadas em Requisitos de Segurança",
+  "description": "Recomendações reforçadas para ambientes com maior exigência regulatória ou maturidade",
+  "source": "@site/docs/sbd-toe/02-requisitos-seguranca/canon/30-recomendacoes-avancadas.md",
+  "sourceDirName": "02-requisitos-seguranca/canon",
+  "slug": "/requisitos-seguranca/canon/recomendacoes-avancadas",
+  "permalink": "/sbd-theory-of-everything/sbd-toe/requisitos-seguranca/canon/recomendacoes-avancadas",
+  "draft": false,
+  "unlisted": false,
+  "tags": [
+    {
+      "inline": true,
+      "label": "avançado",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/avancado"
+    },
+    {
+      "inline": true,
+      "label": "requisitos",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/requisitos"
+    },
+    {
+      "inline": true,
+      "label": "rastreabilidade",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/rastreabilidade"
+    },
+    {
+      "inline": true,
+      "label": "validação",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/validacao"
+    },
+    {
+      "inline": true,
+      "label": "políticas",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/politicas"
+    }
+  ],
+  "version": "current",
+  "sidebarPosition": 30,
+  "frontMatter": {
+    "id": "recomendacoes-avancadas",
+    "title": "Práticas Avançadas em Requisitos de Segurança",
+    "description": "Recomendações reforçadas para ambientes com maior exigência regulatória ou maturidade",
+    "tags": [
+      "avançado",
+      "requisitos",
+      "rastreabilidade",
+      "validação",
+      "políticas"
+    ],
+    "sidebar_position": 30
+  }
+}

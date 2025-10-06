@@ -1,0 +1,19 @@
+{
+  "id": "containers-imagens/canon/ameacas-mitigadas",
+  "title": "Ameaças Mitigadas",
+  "description": "Este capítulo define práticas de segurança para todo o ciclo de vida de containers e imagens, incluindo construção segura, isolamento, assinatura, runtime controlado e rastreabilidade em Kubernetes.",
+  "source": "@site/docs/sbd-toe/09-containers-imagens/canon/50-ameacas-mitigadas.md",
+  "sourceDirName": "09-containers-imagens/canon",
+  "slug": "/containers-imagens/canon/ameacas-mitigadas",
+  "permalink": "/sbd-theory-of-everything/sbd-toe/containers-imagens/canon/ameacas-mitigadas",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 50,
+  "frontMatter": {
+    "id": "ameacas-mitigadas",
+    "title": "Ameaças Mitigadas",
+    "sidebar_position": 50
+  }
+}

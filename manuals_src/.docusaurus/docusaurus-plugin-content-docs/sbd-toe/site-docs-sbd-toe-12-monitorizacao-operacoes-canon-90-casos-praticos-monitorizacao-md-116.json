@@ -1,0 +1,71 @@
+{
+  "id": "monitorizacao-operacoes/canon/casos-praticos-monitorizacao",
+  "title": "Casos Práticos de Monitorização e Deteção",
+  "description": "Exemplos aplicados de logging, alertas e correlação em contextos reais",
+  "source": "@site/docs/sbd-toe/12-monitorizacao-operacoes/canon/90-casos-praticos-monitorizacao.md",
+  "sourceDirName": "12-monitorizacao-operacoes/canon",
+  "slug": "/monitorizacao-operacoes/canon/casos-praticos-monitorizacao",
+  "permalink": "/sbd-theory-of-everything/sbd-toe/monitorizacao-operacoes/canon/casos-praticos-monitorizacao",
+  "draft": false,
+  "unlisted": false,
+  "tags": [
+    {
+      "inline": true,
+      "label": "caso de estudo",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/caso-de-estudo"
+    },
+    {
+      "inline": true,
+      "label": "exemplos",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/exemplos"
+    },
+    {
+      "inline": true,
+      "label": "logging",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/logging"
+    },
+    {
+      "inline": true,
+      "label": "alertas",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/alertas"
+    },
+    {
+      "inline": true,
+      "label": "deteção",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/detecao"
+    },
+    {
+      "inline": true,
+      "label": "correlação",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/correlacao"
+    },
+    {
+      "inline": true,
+      "label": "telemetria",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/telemetria"
+    },
+    {
+      "inline": true,
+      "label": "sbd-toe",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/sbd-toe"
+    }
+  ],
+  "version": "current",
+  "sidebarPosition": 11,
+  "frontMatter": {
+    "id": "casos-praticos-monitorizacao",
+    "title": "Casos Práticos de Monitorização e Deteção",
+    "description": "Exemplos aplicados de logging, alertas e correlação em contextos reais",
+    "sidebar_position": 11,
+    "tags": [
+      "caso de estudo",
+      "exemplos",
+      "logging",
+      "alertas",
+      "deteção",
+      "correlação",
+      "telemetria",
+      "sbd-toe"
+    ]
+  }
+}

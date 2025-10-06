@@ -1,0 +1,55 @@
+{
+  "id": "classificacao-aplicacoes/addon/avaliacao-semiquantitativa",
+  "title": "Avaliação Semiquantitativa do Risco",
+  "description": "A avaliação de risco semiquantitativa permite ultrapassar as limitações da abordagem meramente qualitativa, ao fornecer um modelo mais estruturado, mensurável e comparável — sem exigir dados estatísticos completos como nos modelos puramente quantitativos.",
+  "source": "@site/docs/sbd-toe/01-classificacao-aplicacoes/addon/05-avaliacao-semiquantitativa.md",
+  "sourceDirName": "01-classificacao-aplicacoes/addon",
+  "slug": "/classificacao-aplicacoes/addon/avaliacao-semiquantitativa",
+  "permalink": "/sbd-theory-of-everything/sbd-toe/classificacao-aplicacoes/addon/avaliacao-semiquantitativa",
+  "draft": false,
+  "unlisted": false,
+  "tags": [
+    {
+      "inline": true,
+      "label": "tipo:avaliacao",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/tipo-avaliacao"
+    },
+    {
+      "inline": true,
+      "label": "tema:risco",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/tema-risco"
+    },
+    {
+      "inline": true,
+      "label": "metodologia",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/metodologia"
+    },
+    {
+      "inline": true,
+      "label": "criticidade",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/criticidade"
+    }
+  ],
+  "version": "current",
+  "sidebarPosition": 5,
+  "frontMatter": {
+    "id": "avaliacao-semiquantitativa",
+    "title": "Avaliação Semiquantitativa do Risco",
+    "sidebar_position": 5,
+    "tags": [
+      "tipo:avaliacao",
+      "tema:risco",
+      "metodologia",
+      "criticidade"
+    ]
+  },
+  "sidebar": "sbdToeSidebar",
+  "previous": {
+    "title": "Matriz de Controlos por Nível de Risco",
+    "permalink": "/sbd-theory-of-everything/sbd-toe/classificacao-aplicacoes/addon/matriz-controlos-por-risco"
+  },
+  "next": {
+    "title": "Análise de Risco Residual e Decisão de Aceitação",
+    "permalink": "/sbd-theory-of-everything/sbd-toe/classificacao-aplicacoes/addon/risco-residual"
+  }
+}

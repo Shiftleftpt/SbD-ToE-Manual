@@ -1,0 +1,28 @@
+{
+  "id": "coverage-frameworks",
+  "title": "Cobertura por Framework",
+  "description": "Este documento apresenta a cobertura global oferecida pelo manual Security by Design – Teoria de Tudo (SbD-ToE) em relação a quatro das principais frameworks internacionais:",
+  "source": "@site/docs/sbd-toe/coverage-frameworks.md",
+  "sourceDirName": ".",
+  "slug": "/coverage-frameworks",
+  "permalink": "/sbd-theory-of-everything/sbd-toe/coverage-frameworks",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "id": "coverage-frameworks",
+    "title": "Cobertura por Framework",
+    "hide_title": false,
+    "hide_table_of_contents": false
+  },
+  "sidebar": "sbdToeSidebar",
+  "previous": {
+    "title": "Mapeamento com Frameworks de Maturidade",
+    "permalink": "/sbd-theory-of-everything/sbd-toe/matriz-frameworks"
+  },
+  "next": {
+    "title": "Gaps e Delimitações",
+    "permalink": "/sbd-theory-of-everything/sbd-toe/gaps-por-framework"
+  }
+}

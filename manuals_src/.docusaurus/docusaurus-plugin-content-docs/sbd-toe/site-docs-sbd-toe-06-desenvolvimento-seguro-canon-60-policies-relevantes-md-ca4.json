@@ -1,0 +1,59 @@
+{
+  "id": "desenvolvimento-seguro/canon/desenvolvimento-seguro-policies",
+  "title": "Políticas Organizacionais — Desenvolvimento Seguro",
+  "description": "Políticas necessárias para enquadrar e reforçar as práticas de desenvolvimento seguro definidas neste capítulo",
+  "source": "@site/docs/sbd-toe/06-desenvolvimento-seguro/canon/60-policies-relevantes.md",
+  "sourceDirName": "06-desenvolvimento-seguro/canon",
+  "slug": "/desenvolvimento-seguro/canon/desenvolvimento-seguro-policies",
+  "permalink": "/sbd-theory-of-everything/sbd-toe/desenvolvimento-seguro/canon/desenvolvimento-seguro-policies",
+  "draft": false,
+  "unlisted": false,
+  "tags": [
+    {
+      "inline": true,
+      "label": "políticas",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/politicas"
+    },
+    {
+      "inline": true,
+      "label": "desenvolvimento",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/desenvolvimento"
+    },
+    {
+      "inline": true,
+      "label": "validação",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/validacao"
+    },
+    {
+      "inline": true,
+      "label": "codificação segura",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/codificacao-segura"
+    },
+    {
+      "inline": true,
+      "label": "GenAI",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/gen-ai"
+    },
+    {
+      "inline": true,
+      "label": "exceções",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/excecoes"
+    }
+  ],
+  "version": "current",
+  "sidebarPosition": 60,
+  "frontMatter": {
+    "id": "desenvolvimento-seguro-policies",
+    "title": "Políticas Organizacionais — Desenvolvimento Seguro",
+    "description": "Políticas necessárias para enquadrar e reforçar as práticas de desenvolvimento seguro definidas neste capítulo",
+    "tags": [
+      "políticas",
+      "desenvolvimento",
+      "validação",
+      "codificação segura",
+      "GenAI",
+      "exceções"
+    ],
+    "sidebar_position": 60
+  }
+}

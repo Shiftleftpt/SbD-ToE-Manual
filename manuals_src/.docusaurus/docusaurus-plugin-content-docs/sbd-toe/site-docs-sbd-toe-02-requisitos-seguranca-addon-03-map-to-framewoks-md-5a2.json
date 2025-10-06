@@ -1,0 +1,86 @@
+{
+  "id": "requisitos-seguranca/addon/rastreabilidade-frameworks",
+  "title": "Rastreabilidade com Frameworks de Segurança",
+  "description": "Mapeamento dos temas de requisitos do catálogo com frameworks normativas e de maturidade",
+  "source": "@site/docs/sbd-toe/02-requisitos-seguranca/addon/03-map-to-framewoks.md",
+  "sourceDirName": "02-requisitos-seguranca/addon",
+  "slug": "/requisitos-seguranca/addon/rastreabilidade-frameworks",
+  "permalink": "/sbd-theory-of-everything/sbd-toe/requisitos-seguranca/addon/rastreabilidade-frameworks",
+  "draft": false,
+  "unlisted": false,
+  "tags": [
+    {
+      "inline": true,
+      "label": "rastreabilidade",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/rastreabilidade"
+    },
+    {
+      "inline": true,
+      "label": "frameworks",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/frameworks"
+    },
+    {
+      "inline": true,
+      "label": "asvs",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/asvs"
+    },
+    {
+      "inline": true,
+      "label": "samm",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/samm"
+    },
+    {
+      "inline": true,
+      "label": "bsimm",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/bsimm"
+    },
+    {
+      "inline": true,
+      "label": "nist",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/nist"
+    },
+    {
+      "inline": true,
+      "label": "cis",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/cis"
+    },
+    {
+      "inline": true,
+      "label": "slsa",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/slsa"
+    },
+    {
+      "inline": true,
+      "label": "dsomm",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/dsomm"
+    }
+  ],
+  "version": "current",
+  "sidebarPosition": 3,
+  "frontMatter": {
+    "id": "rastreabilidade-frameworks",
+    "title": "Rastreabilidade com Frameworks de Segurança",
+    "description": "Mapeamento dos temas de requisitos do catálogo com frameworks normativas e de maturidade",
+    "tags": [
+      "rastreabilidade",
+      "frameworks",
+      "asvs",
+      "samm",
+      "bsimm",
+      "nist",
+      "cis",
+      "slsa",
+      "dsomm"
+    ],
+    "sidebar_position": 3
+  },
+  "sidebar": "sbdToeSidebar",
+  "previous": {
+    "title": "Requisitos de Segurança",
+    "permalink": "/sbd-theory-of-everything/sbd-toe/requisitos-seguranca/intro"
+  },
+  "next": {
+    "title": "Rastreabilidade entre Requisitos e Controlos Técnicos",
+    "permalink": "/sbd-theory-of-everything/sbd-toe/requisitos-seguranca/addon/rastreabilidade-controlo"
+  }
+}

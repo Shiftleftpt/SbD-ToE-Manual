@@ -1,0 +1,54 @@
+{
+  "id": "cicd-seguro/canon/checklist-revisao",
+  "title": "Checklist – CI/CD Seguro",
+  "description": "Lista de verificação objetiva da adoção das práticas de segurança em pipelines CI/CD",
+  "source": "@site/docs/sbd-toe/07-cicd-seguro/canon/20-checklist-revisao.md",
+  "sourceDirName": "07-cicd-seguro/canon",
+  "slug": "/cicd-seguro/canon/checklist-revisao",
+  "permalink": "/sbd-theory-of-everything/sbd-toe/cicd-seguro/canon/checklist-revisao",
+  "draft": false,
+  "unlisted": false,
+  "tags": [
+    {
+      "inline": true,
+      "label": "checklist",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/checklist"
+    },
+    {
+      "inline": true,
+      "label": "auditoria",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/auditoria"
+    },
+    {
+      "inline": true,
+      "label": "cicd",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/cicd"
+    },
+    {
+      "inline": true,
+      "label": "devsecops",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/devsecops"
+    },
+    {
+      "inline": true,
+      "label": "pipelines",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/pipelines"
+    }
+  ],
+  "version": "current",
+  "sidebarPosition": 20,
+  "frontMatter": {
+    "id": "checklist-revisao",
+    "title": "Checklist – CI/CD Seguro",
+    "sidebar_label": "Checklist de Revisão",
+    "description": "Lista de verificação objetiva da adoção das práticas de segurança em pipelines CI/CD",
+    "tags": [
+      "checklist",
+      "auditoria",
+      "cicd",
+      "devsecops",
+      "pipelines"
+    ],
+    "sidebar_position": 20
+  }
+}

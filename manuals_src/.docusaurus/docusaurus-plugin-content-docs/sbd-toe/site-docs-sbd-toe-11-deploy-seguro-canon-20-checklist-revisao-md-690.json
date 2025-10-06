@@ -1,0 +1,54 @@
+{
+  "id": "deploy-seguro/canon/checklist-revisao",
+  "title": "Checklist – Deploy Seguro",
+  "description": "Verificação objetiva e binária da aplicação das práticas de deploy seguro num projeto específico.",
+  "source": "@site/docs/sbd-toe/11-deploy-seguro/canon/20-checklist-revisao.md",
+  "sourceDirName": "11-deploy-seguro/canon",
+  "slug": "/deploy-seguro/canon/checklist-revisao",
+  "permalink": "/sbd-theory-of-everything/sbd-toe/deploy-seguro/canon/checklist-revisao",
+  "draft": false,
+  "unlisted": false,
+  "tags": [
+    {
+      "inline": true,
+      "label": "checklist",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/checklist"
+    },
+    {
+      "inline": true,
+      "label": "controlo",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/controlo"
+    },
+    {
+      "inline": true,
+      "label": "deploy",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/deploy"
+    },
+    {
+      "inline": true,
+      "label": "rollback",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/rollback"
+    },
+    {
+      "inline": true,
+      "label": "validação",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/validacao"
+    }
+  ],
+  "version": "current",
+  "sidebarPosition": 20,
+  "frontMatter": {
+    "id": "checklist-revisao",
+    "title": "Checklist – Deploy Seguro",
+    "sidebar_label": "Checklist de Revisão",
+    "description": "Verificação objetiva e binária da aplicação das práticas de deploy seguro num projeto específico.",
+    "tags": [
+      "checklist",
+      "controlo",
+      "deploy",
+      "rollback",
+      "validação"
+    ],
+    "sidebar_position": 20
+  }
+}

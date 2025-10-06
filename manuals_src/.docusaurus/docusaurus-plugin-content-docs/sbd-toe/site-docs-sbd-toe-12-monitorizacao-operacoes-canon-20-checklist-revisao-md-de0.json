@@ -1,0 +1,60 @@
+{
+  "id": "monitorizacao-operacoes/canon/checklist-revisao",
+  "title": "Checklist – Monitorização e Operações",
+  "description": "Checklist de controlo binário da adoção das práticas de monitorização, alerta e resposta a incidentes.",
+  "source": "@site/docs/sbd-toe/12-monitorizacao-operacoes/canon/20-checklist-revisao.md",
+  "sourceDirName": "12-monitorizacao-operacoes/canon",
+  "slug": "/monitorizacao-operacoes/canon/checklist-revisao",
+  "permalink": "/sbd-theory-of-everything/sbd-toe/monitorizacao-operacoes/canon/checklist-revisao",
+  "draft": false,
+  "unlisted": false,
+  "tags": [
+    {
+      "inline": true,
+      "label": "checklist",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/checklist"
+    },
+    {
+      "inline": true,
+      "label": "controlo",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/controlo"
+    },
+    {
+      "inline": true,
+      "label": "validacao",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/validacao"
+    },
+    {
+      "inline": true,
+      "label": "monitorizacao",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/monitorizacao"
+    },
+    {
+      "inline": true,
+      "label": "deteccao",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/deteccao"
+    },
+    {
+      "inline": true,
+      "label": "resposta",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/resposta"
+    }
+  ],
+  "version": "current",
+  "sidebarPosition": 20,
+  "frontMatter": {
+    "id": "checklist-revisao",
+    "title": "Checklist – Monitorização e Operações",
+    "sidebar_label": "Checklist de Revisão",
+    "sidebar_position": 20,
+    "description": "Checklist de controlo binário da adoção das práticas de monitorização, alerta e resposta a incidentes.",
+    "tags": [
+      "checklist",
+      "controlo",
+      "validacao",
+      "monitorizacao",
+      "deteccao",
+      "resposta"
+    ]
+  }
+}

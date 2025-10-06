@@ -1,0 +1,71 @@
+{
+  "id": "testes-seguranca/canon/ameacas-mitigadas",
+  "title": "Ameaças Mitigadas — Testes de Segurança",
+  "description": "Visão bottom-up das ameaças mitigadas pelas práticas de testes de segurança deste capítulo.",
+  "source": "@site/docs/sbd-toe/10-testes-seguranca/canon/50-ameacas-mitigadas.md",
+  "sourceDirName": "10-testes-seguranca/canon",
+  "slug": "/testes-seguranca/canon/ameacas-mitigadas",
+  "permalink": "/sbd-theory-of-everything/sbd-toe/testes-seguranca/canon/ameacas-mitigadas",
+  "draft": false,
+  "unlisted": false,
+  "tags": [
+    {
+      "inline": true,
+      "label": "ameaças",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/ameacas"
+    },
+    {
+      "inline": true,
+      "label": "mitigação",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/mitigacao"
+    },
+    {
+      "inline": true,
+      "label": "segurança",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/seguranca"
+    },
+    {
+      "inline": true,
+      "label": "testes",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/testes"
+    },
+    {
+      "inline": true,
+      "label": "osc&r",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/osc-r"
+    },
+    {
+      "inline": true,
+      "label": "stride",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/stride"
+    },
+    {
+      "inline": true,
+      "label": "capec",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/capec"
+    },
+    {
+      "inline": true,
+      "label": "ssdf",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/ssdf"
+    }
+  ],
+  "version": "current",
+  "sidebarPosition": 50,
+  "frontMatter": {
+    "id": "ameacas-mitigadas",
+    "title": "Ameaças Mitigadas — Testes de Segurança",
+    "description": "Visão bottom-up das ameaças mitigadas pelas práticas de testes de segurança deste capítulo.",
+    "tags": [
+      "ameaças",
+      "mitigação",
+      "segurança",
+      "testes",
+      "osc&r",
+      "stride",
+      "capec",
+      "ssdf"
+    ],
+    "sidebar_position": 50
+  }
+}

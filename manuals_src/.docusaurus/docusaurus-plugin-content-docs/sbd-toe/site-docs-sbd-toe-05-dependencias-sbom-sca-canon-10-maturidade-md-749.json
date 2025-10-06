@@ -1,0 +1,64 @@
+{
+  "id": "dependencias-sbom-sca/canon/maturidade",
+  "title": "Mapeamento de Maturidade – Capítulo 05",
+  "description": "Este documento apresenta o mapeamento entre as práticas descritas no Capítulo 05 do SbD-ToE — Gestão de Dependências, SBOM e SCA — e os principais frameworks de segurança e maturidade:",
+  "source": "@site/docs/sbd-toe/05-dependencias-sbom-sca/canon/10-maturidade.md",
+  "sourceDirName": "05-dependencias-sbom-sca/canon",
+  "slug": "/dependencias-sbom-sca/canon/maturidade",
+  "permalink": "/sbd-theory-of-everything/sbd-toe/dependencias-sbom-sca/canon/maturidade",
+  "draft": false,
+  "unlisted": false,
+  "tags": [
+    {
+      "inline": true,
+      "label": "canon",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/canon"
+    },
+    {
+      "inline": true,
+      "label": "maturidade",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/maturidade"
+    },
+    {
+      "inline": true,
+      "label": "SAMM",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/samm"
+    },
+    {
+      "inline": true,
+      "label": "BSIMM",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/bsimm"
+    },
+    {
+      "inline": true,
+      "label": "SSDF",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/ssdf"
+    },
+    {
+      "inline": true,
+      "label": "SLSA",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/slsa"
+    },
+    {
+      "inline": true,
+      "label": "DSOMM",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/dsomm"
+    }
+  ],
+  "version": "current",
+  "sidebarPosition": 10,
+  "frontMatter": {
+    "id": "maturidade",
+    "title": "Mapeamento de Maturidade – Capítulo 05",
+    "sidebar_position": 10,
+    "tags": [
+      "canon",
+      "maturidade",
+      "SAMM",
+      "BSIMM",
+      "SSDF",
+      "SLSA",
+      "DSOMM"
+    ]
+  }
+}

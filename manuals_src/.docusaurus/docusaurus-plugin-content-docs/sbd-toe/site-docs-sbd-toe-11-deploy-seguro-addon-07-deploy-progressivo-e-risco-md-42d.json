@@ -1,0 +1,61 @@
+{
+  "id": "deploy-seguro/addon/07-deploy-progressivo-e-risco",
+  "title": "Deploy Progressivo e Controlo de Risco",
+  "description": "Práticas como canary releases, blue/green e staged rollout para mitigar risco em deploys críticos.",
+  "source": "@site/docs/sbd-toe/11-deploy-seguro/addon/07-deploy-progressivo-e-risco.md",
+  "sourceDirName": "11-deploy-seguro/addon",
+  "slug": "/deploy-seguro/addon/07-deploy-progressivo-e-risco",
+  "permalink": "/sbd-theory-of-everything/sbd-toe/deploy-seguro/addon/07-deploy-progressivo-e-risco",
+  "draft": false,
+  "unlisted": false,
+  "tags": [
+    {
+      "inline": true,
+      "label": "tipo:anexo",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/tipo-anexo"
+    },
+    {
+      "inline": true,
+      "label": "grupo:execucao",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/grupo-execucao"
+    },
+    {
+      "inline": true,
+      "label": "tema:deploy-progressivo",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/tema-deploy-progressivo"
+    },
+    {
+      "inline": true,
+      "label": "risco",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/risco"
+    },
+    {
+      "inline": true,
+      "label": "staging",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/staging"
+    }
+  ],
+  "version": "current",
+  "sidebarPosition": 7,
+  "frontMatter": {
+    "id": "07-deploy-progressivo-e-risco",
+    "title": "Deploy Progressivo e Controlo de Risco",
+    "description": "Práticas como canary releases, blue/green e staged rollout para mitigar risco em deploys críticos.",
+    "tags": [
+      "tipo:anexo",
+      "grupo:execucao",
+      "tema:deploy-progressivo",
+      "risco",
+      "staging"
+    ]
+  },
+  "sidebar": "sbdToeSidebar",
+  "previous": {
+    "title": "Controlo de Versão e Estratégias de Rollback",
+    "permalink": "/sbd-theory-of-everything/sbd-toe/deploy-seguro/addon/06-controle-versao-e-rollback"
+  },
+  "next": {
+    "title": "Validação Operacional com Ambientes Segregados",
+    "permalink": "/sbd-theory-of-everything/sbd-toe/deploy-seguro/addon/08-segregacao-e-validacao-operacional"
+  }
+}

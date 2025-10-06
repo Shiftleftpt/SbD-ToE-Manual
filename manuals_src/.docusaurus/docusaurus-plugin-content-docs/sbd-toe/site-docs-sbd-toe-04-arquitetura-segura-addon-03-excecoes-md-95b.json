@@ -1,0 +1,29 @@
+{
+  "id": "arquitetura-segura/addon/excecoes",
+  "title": "📌 Exceções Justificadas aos Requisitos Arquiteturais",
+  "description": "Processo formal para submissão, avaliação e controlo de exceções a requisitos de arquitetura segura",
+  "source": "@site/docs/sbd-toe/04-arquitetura-segura/addon/03-excecoes.md",
+  "sourceDirName": "04-arquitetura-segura/addon",
+  "slug": "/arquitetura-segura/addon/excecoes",
+  "permalink": "/sbd-theory-of-everything/sbd-toe/arquitetura-segura/addon/excecoes",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 3,
+  "frontMatter": {
+    "id": "excecoes",
+    "sidebar_position": 3,
+    "title": "📌 Exceções Justificadas aos Requisitos Arquiteturais",
+    "description": "Processo formal para submissão, avaliação e controlo de exceções a requisitos de arquitetura segura"
+  },
+  "sidebar": "sbdToeSidebar",
+  "previous": {
+    "title": "Casos Práticos",
+    "permalink": "/sbd-theory-of-everything/sbd-toe/arquitetura-segura/addon/casos-praticos"
+  },
+  "next": {
+    "title": "🧹 Modelos de Arquitetura Segura Reutilizáveis",
+    "permalink": "/sbd-theory-of-everything/sbd-toe/arquitetura-segura/addon/diagramas-referencia"
+  }
+}

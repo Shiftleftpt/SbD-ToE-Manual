@@ -1,0 +1,59 @@
+{
+  "id": "iac-infraestrutura/canon/policies-iac",
+  "title": "Políticas Organizacionais sobre Infraestrutura como Código (IaC)",
+  "description": "Políticas organizacionais formais que legitimam, reforçam e auditam a aplicação das práticas de segurança em projetos de IaC.",
+  "source": "@site/docs/sbd-toe/08-iac-infraestrutura/canon/60-iac-policy-template.md",
+  "sourceDirName": "08-iac-infraestrutura/canon",
+  "slug": "/iac-infraestrutura/canon/policies-iac",
+  "permalink": "/sbd-theory-of-everything/sbd-toe/iac-infraestrutura/canon/policies-iac",
+  "draft": false,
+  "unlisted": false,
+  "tags": [
+    {
+      "inline": true,
+      "label": "políticas",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/politicas"
+    },
+    {
+      "inline": true,
+      "label": "iac",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/iac"
+    },
+    {
+      "inline": true,
+      "label": "infraestrutura como código",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/infraestrutura-como-codigo"
+    },
+    {
+      "inline": true,
+      "label": "controlo organizacional",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/controlo-organizacional"
+    },
+    {
+      "inline": true,
+      "label": "ssdf",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/ssdf"
+    },
+    {
+      "inline": true,
+      "label": "slsa",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/slsa"
+    }
+  ],
+  "version": "current",
+  "sidebarPosition": 60,
+  "frontMatter": {
+    "id": "policies-iac",
+    "title": "Políticas Organizacionais sobre Infraestrutura como Código (IaC)",
+    "sidebar_position": 60,
+    "description": "Políticas organizacionais formais que legitimam, reforçam e auditam a aplicação das práticas de segurança em projetos de IaC.",
+    "tags": [
+      "políticas",
+      "iac",
+      "infraestrutura como código",
+      "controlo organizacional",
+      "ssdf",
+      "slsa"
+    ]
+  }
+}

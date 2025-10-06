@@ -1,0 +1,62 @@
+{
+  "id": "desenvolvimento-seguro/addon/seguranca-dependencias",
+  "title": "Segurança de Dependências",
+  "description": "Práticas de gestão e validação de dependências externas para garantir integridade, atualização e segurança no código",
+  "source": "@site/docs/sbd-toe/06-desenvolvimento-seguro/addon/03-seguranca-dependencias.md",
+  "sourceDirName": "06-desenvolvimento-seguro/addon",
+  "slug": "/desenvolvimento-seguro/addon/seguranca-dependencias",
+  "permalink": "/sbd-theory-of-everything/sbd-toe/desenvolvimento-seguro/addon/seguranca-dependencias",
+  "draft": false,
+  "unlisted": false,
+  "tags": [
+    {
+      "inline": true,
+      "label": "dependências",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/dependencias"
+    },
+    {
+      "inline": true,
+      "label": "segurança",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/seguranca"
+    },
+    {
+      "inline": true,
+      "label": "sbom",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/sbom"
+    },
+    {
+      "inline": true,
+      "label": "gestão",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/gestao"
+    },
+    {
+      "inline": true,
+      "label": "validação",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/validacao"
+    }
+  ],
+  "version": "current",
+  "sidebarPosition": 3,
+  "frontMatter": {
+    "id": "seguranca-dependencias",
+    "title": "Segurança de Dependências",
+    "sidebar_position": 3,
+    "description": "Práticas de gestão e validação de dependências externas para garantir integridade, atualização e segurança no código",
+    "tags": [
+      "dependências",
+      "segurança",
+      "sbom",
+      "gestão",
+      "validação"
+    ]
+  },
+  "sidebar": "sbdToeSidebar",
+  "previous": {
+    "title": "Linters e Validações Locais de Segurança",
+    "permalink": "/sbd-theory-of-everything/sbd-toe/desenvolvimento-seguro/addon/linters-validacoes"
+  },
+  "next": {
+    "title": "Justificação Formal de Exceções",
+    "permalink": "/sbd-theory-of-everything/sbd-toe/desenvolvimento-seguro/addon/excecoes-e-justificacoes"
+  }
+}

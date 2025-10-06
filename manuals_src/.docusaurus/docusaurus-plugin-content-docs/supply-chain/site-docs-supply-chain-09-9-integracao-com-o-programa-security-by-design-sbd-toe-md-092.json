@@ -1,0 +1,23 @@
+{
+  "id": "09-9.-integração-com-o-programa-security-by-design-(sbd-toe)",
+  "title": "9. Integração com o Programa Security by Design (SbD-ToE)",
+  "description": "9.1 Supply Chain Security como Estrutura de Verificação do ToE",
+  "source": "@site/docs/supply-chain/09-9.-integração-com-o-programa-security-by-design-(sbd-toe).md",
+  "sourceDirName": ".",
+  "slug": "/09-9.-integração-com-o-programa-security-by-design-(sbd-toe)",
+  "permalink": "/sbd-theory-of-everything/supply-chain/09-9.-integração-com-o-programa-security-by-design-(sbd-toe)",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "defaultSidebar",
+  "previous": {
+    "title": "8. Casos de Uso e Exemplos Práticos",
+    "permalink": "/sbd-theory-of-everything/supply-chain/08-8.-casos-de-uso-e-exemplos-práticos"
+  },
+  "next": {
+    "title": "10. Referências e Normativos",
+    "permalink": "/sbd-theory-of-everything/supply-chain/10-10.-referências-e-normativos"
+  }
+}

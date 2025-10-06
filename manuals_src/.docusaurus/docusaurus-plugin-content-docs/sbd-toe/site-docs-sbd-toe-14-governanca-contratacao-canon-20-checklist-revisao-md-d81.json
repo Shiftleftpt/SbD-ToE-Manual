@@ -1,0 +1,65 @@
+{
+  "id": "governanca-contratacao/canon/checklist-revisao",
+  "title": "✅ Checklist SbD-ToE — Governança e Contratação",
+  "description": "Checklist binário de controlo da aplicação das práticas de governação por projeto",
+  "source": "@site/docs/sbd-toe/14-governanca-contratacao/canon/20-checklist-revisao.md",
+  "sourceDirName": "14-governanca-contratacao/canon",
+  "slug": "/governanca-contratacao/canon/checklist-revisao",
+  "permalink": "/sbd-theory-of-everything/sbd-toe/governanca-contratacao/canon/checklist-revisao",
+  "draft": false,
+  "unlisted": false,
+  "tags": [
+    {
+      "inline": true,
+      "label": "checklist",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/checklist"
+    },
+    {
+      "inline": true,
+      "label": "revisao",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/revisao"
+    },
+    {
+      "inline": true,
+      "label": "controlo",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/controlo"
+    },
+    {
+      "inline": true,
+      "label": "projeto",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/projeto"
+    },
+    {
+      "inline": true,
+      "label": "excecoes",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/excecoes"
+    },
+    {
+      "inline": true,
+      "label": "aprovacao",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/aprovacao"
+    },
+    {
+      "inline": true,
+      "label": "contratacao",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/contratacao"
+    }
+  ],
+  "version": "current",
+  "sidebarPosition": 20,
+  "frontMatter": {
+    "id": "checklist-revisao",
+    "title": "✅ Checklist SbD-ToE — Governança e Contratação",
+    "sidebar_position": 20,
+    "description": "Checklist binário de controlo da aplicação das práticas de governação por projeto",
+    "tags": [
+      "checklist",
+      "revisao",
+      "controlo",
+      "projeto",
+      "excecoes",
+      "aprovacao",
+      "contratacao"
+    ]
+  }
+}

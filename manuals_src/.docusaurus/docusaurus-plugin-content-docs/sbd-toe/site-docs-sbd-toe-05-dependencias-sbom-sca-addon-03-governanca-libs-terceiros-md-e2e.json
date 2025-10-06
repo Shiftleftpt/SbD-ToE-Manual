@@ -1,0 +1,61 @@
+{
+  "id": "dependencias-sbom-sca/addon/governanca-libs-terceiros",
+  "title": "Governaça de Bibliotecas e Componentes de Terceiros",
+  "description": "Práticas de controlo, aprovação e rastreabilidade de bibliotecas externas e pacotes de terceiros",
+  "source": "@site/docs/sbd-toe/05-dependencias-sbom-sca/addon/03-governanca-libs-terceiros.md",
+  "sourceDirName": "05-dependencias-sbom-sca/addon",
+  "slug": "/dependencias-sbom-sca/addon/governanca-libs-terceiros",
+  "permalink": "/sbd-theory-of-everything/sbd-toe/dependencias-sbom-sca/addon/governanca-libs-terceiros",
+  "draft": false,
+  "unlisted": false,
+  "tags": [
+    {
+      "inline": true,
+      "label": "dependencias",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/dependencias"
+    },
+    {
+      "inline": true,
+      "label": "sbom",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/sbom"
+    },
+    {
+      "inline": true,
+      "label": "sca",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/sca"
+    },
+    {
+      "inline": true,
+      "label": "supply-chain",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/supply-chain"
+    },
+    {
+      "inline": true,
+      "label": "governance",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/governance"
+    }
+  ],
+  "version": "current",
+  "sidebarPosition": 3,
+  "frontMatter": {
+    "id": "governanca-libs-terceiros",
+    "title": "Governaça de Bibliotecas e Componentes de Terceiros",
+    "description": "Práticas de controlo, aprovação e rastreabilidade de bibliotecas externas e pacotes de terceiros",
+    "tags": [
+      "dependencias",
+      "sbom",
+      "sca",
+      "supply-chain",
+      "governance"
+    ]
+  },
+  "sidebar": "sbdToeSidebar",
+  "previous": {
+    "title": "Análise de Vulnerabilidades em Dependências (SCA)",
+    "permalink": "/sbd-theory-of-everything/sbd-toe/dependencias-sbom-sca/addon/analise-sca"
+  },
+  "next": {
+    "title": "Integração com Pipelines CI/CD",
+    "permalink": "/sbd-theory-of-everything/sbd-toe/dependencias-sbom-sca/addon/integracao-ci-cd"
+  }
+}

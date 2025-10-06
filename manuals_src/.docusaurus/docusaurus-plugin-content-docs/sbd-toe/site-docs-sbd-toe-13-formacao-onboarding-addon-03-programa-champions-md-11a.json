@@ -1,0 +1,61 @@
+{
+  "id": "formacao-onboarding/addon/programa-champions",
+  "title": "Programa de Security Champions",
+  "description": "Estrutura e responsabilidades do programa de Security Champions para reforço da cultura de segurança aplicada.",
+  "source": "@site/docs/sbd-toe/13-formacao-onboarding/addon/03-programa-champions.md",
+  "sourceDirName": "13-formacao-onboarding/addon",
+  "slug": "/formacao-onboarding/addon/programa-champions",
+  "permalink": "/sbd-theory-of-everything/sbd-toe/formacao-onboarding/addon/programa-champions",
+  "draft": false,
+  "unlisted": false,
+  "tags": [
+    {
+      "inline": true,
+      "label": "champions",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/champions"
+    },
+    {
+      "inline": true,
+      "label": "cultura",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/cultura"
+    },
+    {
+      "inline": true,
+      "label": "formacao",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/formacao"
+    },
+    {
+      "inline": true,
+      "label": "responsabilidade",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/responsabilidade"
+    },
+    {
+      "inline": true,
+      "label": "apoio",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/apoio"
+    }
+  ],
+  "version": "current",
+  "sidebarPosition": 3,
+  "frontMatter": {
+    "id": "programa-champions",
+    "title": "Programa de Security Champions",
+    "description": "Estrutura e responsabilidades do programa de Security Champions para reforço da cultura de segurança aplicada.",
+    "tags": [
+      "champions",
+      "cultura",
+      "formacao",
+      "responsabilidade",
+      "apoio"
+    ]
+  },
+  "sidebar": "sbdToeSidebar",
+  "previous": {
+    "title": "Trilho de Formação por Nível de Risco",
+    "permalink": "/sbd-theory-of-everything/sbd-toe/formacao-onboarding/addon/trilho-formativo"
+  },
+  "next": {
+    "title": "Técnicas Formativas Adaptadas à Realidade Técnica",
+    "permalink": "/sbd-theory-of-everything/sbd-toe/formacao-onboarding/addon/tecnicas-formativas"
+  }
+}

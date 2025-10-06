@@ -1,0 +1,62 @@
+{
+  "id": "monitorizacao-operacoes/addon/controles-logging-centralizado",
+  "title": "Controles de Logging Estruturado e Centralizado",
+  "description": "Práticas para garantir logging estruturado, transporte seguro e centralização de eventos operacionais.",
+  "source": "@site/docs/sbd-toe/12-monitorizacao-operacoes/addon/02-controles-logging-centralizado.md",
+  "sourceDirName": "12-monitorizacao-operacoes/addon",
+  "slug": "/monitorizacao-operacoes/addon/controles-logging-centralizado",
+  "permalink": "/sbd-theory-of-everything/sbd-toe/monitorizacao-operacoes/addon/controles-logging-centralizado",
+  "draft": false,
+  "unlisted": false,
+  "tags": [
+    {
+      "inline": true,
+      "label": "logging",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/logging"
+    },
+    {
+      "inline": true,
+      "label": "estruturação",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/estruturacao"
+    },
+    {
+      "inline": true,
+      "label": "centralização",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/centralizacao"
+    },
+    {
+      "inline": true,
+      "label": "ECS",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/ecs"
+    },
+    {
+      "inline": true,
+      "label": "transporte seguro",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/transporte-seguro"
+    }
+  ],
+  "version": "current",
+  "sidebarPosition": 2,
+  "frontMatter": {
+    "id": "controles-logging-centralizado",
+    "title": "Controles de Logging Estruturado e Centralizado",
+    "sidebar_position": 2,
+    "description": "Práticas para garantir logging estruturado, transporte seguro e centralização de eventos operacionais.",
+    "tags": [
+      "logging",
+      "estruturação",
+      "centralização",
+      "ECS",
+      "transporte seguro"
+    ]
+  },
+  "sidebar": "sbdToeSidebar",
+  "previous": {
+    "title": "Domínios de Monitorização e Observabilidade",
+    "permalink": "/sbd-theory-of-everything/sbd-toe/monitorizacao-operacoes/addon/dominios-monitorizacao"
+  },
+  "next": {
+    "title": "Geração e Gestão de Alertas para Eventos Críticos",
+    "permalink": "/sbd-theory-of-everything/sbd-toe/monitorizacao-operacoes/addon/alertas-eventos-criticos"
+  }
+}

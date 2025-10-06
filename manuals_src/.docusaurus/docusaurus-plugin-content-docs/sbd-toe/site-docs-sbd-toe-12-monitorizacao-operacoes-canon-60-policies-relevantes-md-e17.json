@@ -1,0 +1,59 @@
+{
+  "id": "monitorizacao-operacoes/canon/policies-monitorizacao-operacoes",
+  "title": "Políticas Organizacionais sobre Monitorização e Operações",
+  "description": "Políticas necessárias para suportar práticas de logging, deteção e resposta contínua.",
+  "source": "@site/docs/sbd-toe/12-monitorizacao-operacoes/canon/60-policies-relevantes.md",
+  "sourceDirName": "12-monitorizacao-operacoes/canon",
+  "slug": "/monitorizacao-operacoes/canon/policies-monitorizacao-operacoes",
+  "permalink": "/sbd-theory-of-everything/sbd-toe/monitorizacao-operacoes/canon/policies-monitorizacao-operacoes",
+  "draft": false,
+  "unlisted": false,
+  "tags": [
+    {
+      "inline": true,
+      "label": "policy",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/policy"
+    },
+    {
+      "inline": true,
+      "label": "organizacional",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/organizacional"
+    },
+    {
+      "inline": true,
+      "label": "monitorizacao",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/monitorizacao"
+    },
+    {
+      "inline": true,
+      "label": "deteccao",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/deteccao"
+    },
+    {
+      "inline": true,
+      "label": "resposta",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/resposta"
+    },
+    {
+      "inline": true,
+      "label": "operacoes",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/operacoes"
+    }
+  ],
+  "version": "current",
+  "sidebarPosition": 60,
+  "frontMatter": {
+    "id": "policies-monitorizacao-operacoes",
+    "title": "Políticas Organizacionais sobre Monitorização e Operações",
+    "sidebar_position": 60,
+    "description": "Políticas necessárias para suportar práticas de logging, deteção e resposta contínua.",
+    "tags": [
+      "policy",
+      "organizacional",
+      "monitorizacao",
+      "deteccao",
+      "resposta",
+      "operacoes"
+    ]
+  }
+}

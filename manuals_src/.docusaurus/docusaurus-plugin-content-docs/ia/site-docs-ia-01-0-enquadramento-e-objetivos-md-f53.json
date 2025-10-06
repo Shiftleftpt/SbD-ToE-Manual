@@ -1,0 +1,23 @@
+{
+  "id": "01-0.-enquadramento-e-objetivos",
+  "title": "0. Enquadramento e Objetivos",
+  "description": "0.1. Visão Estratégica",
+  "source": "@site/docs/ia/01-0.-enquadramento-e-objetivos.md",
+  "sourceDirName": ".",
+  "slug": "/01-0.-enquadramento-e-objetivos",
+  "permalink": "/sbd-theory-of-everything/ia/01-0.-enquadramento-e-objetivos",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "defaultSidebar",
+  "previous": {
+    "title": "Introdução à Segurança em IA",
+    "permalink": "/sbd-theory-of-everything/ia/intro"
+  },
+  "next": {
+    "title": "1. Princípios Fundamentais",
+    "permalink": "/sbd-theory-of-everything/ia/02-1.-princípios-fundamentais"
+  }
+}

@@ -1,0 +1,58 @@
+{
+  "id": "formacao-onboarding/canon/maturidade",
+  "title": "Mapeamento de Maturidade – Capítulo 13",
+  "description": "Este documento apresenta o mapeamento de maturidade das práticas descritas no Capítulo 13 — Formação e Onboarding Seguro, com base nos principais frameworks de referência:",
+  "source": "@site/docs/sbd-toe/13-formacao-onboarding/canon/10-maturidade.md",
+  "sourceDirName": "13-formacao-onboarding/canon",
+  "slug": "/formacao-onboarding/canon/maturidade",
+  "permalink": "/sbd-theory-of-everything/sbd-toe/formacao-onboarding/canon/maturidade",
+  "draft": false,
+  "unlisted": false,
+  "tags": [
+    {
+      "inline": true,
+      "label": "canon",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/canon"
+    },
+    {
+      "inline": true,
+      "label": "maturidade",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/maturidade"
+    },
+    {
+      "inline": true,
+      "label": "SAMM",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/samm"
+    },
+    {
+      "inline": true,
+      "label": "BSIMM",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/bsimm"
+    },
+    {
+      "inline": true,
+      "label": "SSDF",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/ssdf"
+    },
+    {
+      "inline": true,
+      "label": "DSOMM",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/dsomm"
+    }
+  ],
+  "version": "current",
+  "sidebarPosition": 10,
+  "frontMatter": {
+    "id": "maturidade",
+    "title": "Mapeamento de Maturidade – Capítulo 13",
+    "sidebar_position": 10,
+    "tags": [
+      "canon",
+      "maturidade",
+      "SAMM",
+      "BSIMM",
+      "SSDF",
+      "DSOMM"
+    ]
+  }
+}

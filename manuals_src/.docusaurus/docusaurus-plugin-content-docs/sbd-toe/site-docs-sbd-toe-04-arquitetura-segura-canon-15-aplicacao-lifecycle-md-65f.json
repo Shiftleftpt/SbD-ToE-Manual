@@ -1,0 +1,56 @@
+{
+  "id": "arquitetura-segura/canon/aplicacao-lifecycle",
+  "title": "Ciclo de Vida de Aplicação — Arquitetura Segura",
+  "description": "Como aplicar os requisitos e práticas de arquitetura segura ao longo do ciclo de vida de software",
+  "source": "@site/docs/sbd-toe/04-arquitetura-segura/canon/15-aplicacao-lifecycle.md",
+  "sourceDirName": "04-arquitetura-segura/canon",
+  "slug": "/arquitetura-segura/canon/aplicacao-lifecycle",
+  "permalink": "/sbd-theory-of-everything/sbd-toe/arquitetura-segura/canon/aplicacao-lifecycle",
+  "draft": false,
+  "unlisted": false,
+  "tags": [
+    {
+      "inline": true,
+      "label": "ciclo de vida",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/ciclo-de-vida"
+    },
+    {
+      "inline": true,
+      "label": "arquitetura",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/arquitetura"
+    },
+    {
+      "inline": true,
+      "label": "requisitos",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/requisitos"
+    },
+    {
+      "inline": true,
+      "label": "rastreabilidade",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/rastreabilidade"
+    }
+  ],
+  "version": "current",
+  "sidebarPosition": 15,
+  "frontMatter": {
+    "id": "aplicacao-lifecycle",
+    "title": "Ciclo de Vida de Aplicação — Arquitetura Segura",
+    "description": "Como aplicar os requisitos e práticas de arquitetura segura ao longo do ciclo de vida de software",
+    "tags": [
+      "ciclo de vida",
+      "arquitetura",
+      "requisitos",
+      "rastreabilidade"
+    ],
+    "sidebar_position": 15
+  },
+  "sidebar": "sbdToeSidebar",
+  "previous": {
+    "title": "Matriz de Requisitos Técnicos para Projetos IaC",
+    "permalink": "/sbd-theory-of-everything/sbd-toe/arquitetura-segura/addon/matriz-requisitos-iac"
+  },
+  "next": {
+    "title": "Dependências, SBOM e SCA",
+    "permalink": "/sbd-theory-of-everything/sbd-toe/dependencias-sbom-sca/intro"
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "id": "🧩-anexo-i-–-dependências-sombra-e-transitivas-maliciosas",
+  "title": "🧩 Anexo I – Dependências Sombra e Transitivas Maliciosas",
+  "description": "1. Descrição da Ameaça",
+  "source": "@site/docs/ameacas/12-🧩-anexo-i-–-dependências-sombra-e-transitivas-maliciosas.md",
+  "sourceDirName": ".",
+  "slug": "/🧩-anexo-i-–-dependências-sombra-e-transitivas-maliciosas",
+  "permalink": "/sbd-theory-of-everything/ameacas/🧩-anexo-i-–-dependências-sombra-e-transitivas-maliciosas",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 12,
+  "frontMatter": {},
+  "sidebar": "defaultSidebar",
+  "previous": {
+    "title": "🧩 Anexo H – Execução Não Autorizada de Código (PRs, Forks, Triggers)",
+    "permalink": "/sbd-theory-of-everything/ameacas/🧩-anexo-h-–-execução-não-autorizada-de-código-(prs,-forks,-triggers)"
+  },
+  "next": {
+    "title": "🧩 Anexo J – Ataques por Engenharia Social / PRs Maliciosos Disfarçados",
+    "permalink": "/sbd-theory-of-everything/ameacas/🧩-anexo-j-–-ataques-por-engenharia-social---prs-maliciosos-disfarçados"
+  }
+}

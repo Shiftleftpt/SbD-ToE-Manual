@@ -1,0 +1,61 @@
+{
+  "id": "requisitos-seguranca/addon/gestao-excecoes",
+  "title": "Gestão de Exceções a Requisitos de Segurança",
+  "description": "Processo formal de exceção e aceitação de risco associado a requisitos",
+  "source": "@site/docs/sbd-toe/02-requisitos-seguranca/addon/08-gestao-excecoes.md",
+  "sourceDirName": "02-requisitos-seguranca/addon",
+  "slug": "/requisitos-seguranca/addon/gestao-excecoes",
+  "permalink": "/sbd-theory-of-everything/sbd-toe/requisitos-seguranca/addon/gestao-excecoes",
+  "draft": false,
+  "unlisted": false,
+  "tags": [
+    {
+      "inline": true,
+      "label": "exceções",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/excecoes"
+    },
+    {
+      "inline": true,
+      "label": "requisitos",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/requisitos"
+    },
+    {
+      "inline": true,
+      "label": "risco",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/risco"
+    },
+    {
+      "inline": true,
+      "label": "validação",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/validacao"
+    },
+    {
+      "inline": true,
+      "label": "políticas",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/politicas"
+    }
+  ],
+  "version": "current",
+  "sidebarPosition": 8,
+  "frontMatter": {
+    "id": "gestao-excecoes",
+    "title": "Gestão de Exceções a Requisitos de Segurança",
+    "description": "Processo formal de exceção e aceitação de risco associado a requisitos",
+    "tags": [
+      "exceções",
+      "requisitos",
+      "risco",
+      "validação",
+      "políticas"
+    ]
+  },
+  "sidebar": "sbdToeSidebar",
+  "previous": {
+    "title": "Estratégias de Validação de Requisitos de Segurança",
+    "permalink": "/sbd-theory-of-everything/sbd-toe/requisitos-seguranca/addon/validacao-requisitos"
+  },
+  "next": {
+    "title": "Taxonomia de Rastreabilidade de Requisitos",
+    "permalink": "/sbd-theory-of-everything/sbd-toe/requisitos-seguranca/addon/taxonomia-rastreabilidade"
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "id": "containers-imagens/canon/rastreabilidade",
+  "title": "Rastreabilidade Top-Down – Capítulo 09",
+  "description": "Este ficheiro estabelece a rastreabilidade entre as práticas prescritas neste capítulo e os requisitos dos principais frameworks e normas de segurança associados à construção, validação, execução e publicação segura de containers e imagens.",
+  "source": "@site/docs/sbd-toe/09-containers-imagens/canon/25-rastreabilidade.md",
+  "sourceDirName": "09-containers-imagens/canon",
+  "slug": "/containers-imagens/canon/rastreabilidade",
+  "permalink": "/sbd-theory-of-everything/sbd-toe/containers-imagens/canon/rastreabilidade",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 25,
+  "frontMatter": {
+    "id": "rastreabilidade",
+    "title": "Rastreabilidade Top-Down – Capítulo 09",
+    "sidebar_position": 25
+  }
+}

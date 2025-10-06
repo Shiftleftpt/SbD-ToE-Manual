@@ -1,0 +1,53 @@
+{
+  "id": "requisitos-seguranca/canon/policies-relevantes",
+  "title": "Políticas Organizacionais sobre Requisitos de Segurança",
+  "description": "Políticas que sustentam a definição, exceção e validação de requisitos",
+  "source": "@site/docs/sbd-toe/02-requisitos-seguranca/canon/60-policies-relevantes.md",
+  "sourceDirName": "02-requisitos-seguranca/canon",
+  "slug": "/requisitos-seguranca/canon/policies-relevantes",
+  "permalink": "/sbd-theory-of-everything/sbd-toe/requisitos-seguranca/canon/policies-relevantes",
+  "draft": false,
+  "unlisted": false,
+  "tags": [
+    {
+      "inline": true,
+      "label": "políticas",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/politicas"
+    },
+    {
+      "inline": true,
+      "label": "requisitos",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/requisitos"
+    },
+    {
+      "inline": true,
+      "label": "exceções",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/excecoes"
+    },
+    {
+      "inline": true,
+      "label": "validação",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/validacao"
+    },
+    {
+      "inline": true,
+      "label": "rastreabilidade",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/rastreabilidade"
+    }
+  ],
+  "version": "current",
+  "sidebarPosition": 60,
+  "frontMatter": {
+    "id": "policies-relevantes",
+    "title": "Políticas Organizacionais sobre Requisitos de Segurança",
+    "description": "Políticas que sustentam a definição, exceção e validação de requisitos",
+    "tags": [
+      "políticas",
+      "requisitos",
+      "exceções",
+      "validação",
+      "rastreabilidade"
+    ],
+    "sidebar_position": 60
+  }
+}

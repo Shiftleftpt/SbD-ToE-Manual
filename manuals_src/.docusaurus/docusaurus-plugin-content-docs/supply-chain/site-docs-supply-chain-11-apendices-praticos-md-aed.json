@@ -1,0 +1,24 @@
+{
+  "id": "apêndices-práticos",
+  "title": "Apêndices Práticos",
+  "description": "A.1 – Checklist por Fase do SDLC",
+  "source": "@site/docs/supply-chain/11-apêndices-práticos.md",
+  "sourceDirName": ".",
+  "slug": "/apêndices-práticos",
+  "permalink": "/sbd-theory-of-everything/supply-chain/apêndices-práticos",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 11,
+  "frontMatter": {},
+  "sidebar": "defaultSidebar",
+  "previous": {
+    "title": "Introdução à Segurança na Supply Chain",
+    "permalink": "/sbd-theory-of-everything/supply-chain/intro"
+  },
+  "next": {
+    "title": "Licenciamento e Termos de Reutilização",
+    "permalink": "/sbd-theory-of-everything/supply-chain/licenciamento-e-termos-de-reutilização"
+  }
+}

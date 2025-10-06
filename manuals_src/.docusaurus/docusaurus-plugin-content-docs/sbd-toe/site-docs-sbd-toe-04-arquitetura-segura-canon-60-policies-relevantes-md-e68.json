@@ -1,0 +1,41 @@
+{
+  "id": "arquitetura-segura/canon/policies-relevantes",
+  "title": "Políticas Relevantes — Arquitetura Segura",
+  "description": "Políticas organizacionais que suportam a adoção das práticas de arquitetura segura",
+  "source": "@site/docs/sbd-toe/04-arquitetura-segura/canon/60-policies-relevantes.md",
+  "sourceDirName": "04-arquitetura-segura/canon",
+  "slug": "/arquitetura-segura/canon/policies-relevantes",
+  "permalink": "/sbd-theory-of-everything/sbd-toe/arquitetura-segura/canon/policies-relevantes",
+  "draft": false,
+  "unlisted": false,
+  "tags": [
+    {
+      "inline": true,
+      "label": "politicas",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/politicas"
+    },
+    {
+      "inline": true,
+      "label": "arquitetura",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/arquitetura"
+    },
+    {
+      "inline": true,
+      "label": "governanca",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/governanca"
+    }
+  ],
+  "version": "current",
+  "sidebarPosition": 60,
+  "frontMatter": {
+    "id": "policies-relevantes",
+    "title": "Políticas Relevantes — Arquitetura Segura",
+    "description": "Políticas organizacionais que suportam a adoção das práticas de arquitetura segura",
+    "tags": [
+      "politicas",
+      "arquitetura",
+      "governanca"
+    ],
+    "sidebar_position": 60
+  }
+}

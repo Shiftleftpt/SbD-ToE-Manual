@@ -1,0 +1,68 @@
+{
+  "id": "monitorizacao-operacoes/addon/metricas-indicadores",
+  "title": "Métricas, Indicadores e KPIs de Deteção e Resposta",
+  "description": "Definição e cálculo de indicadores como MTTD e MTTR, e sua aplicação em dashboards operacionais.",
+  "source": "@site/docs/sbd-toe/12-monitorizacao-operacoes/addon/07-metricas-indicadores.md",
+  "sourceDirName": "12-monitorizacao-operacoes/addon",
+  "slug": "/monitorizacao-operacoes/addon/metricas-indicadores",
+  "permalink": "/sbd-theory-of-everything/sbd-toe/monitorizacao-operacoes/addon/metricas-indicadores",
+  "draft": false,
+  "unlisted": false,
+  "tags": [
+    {
+      "inline": true,
+      "label": "métricas",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/metricas"
+    },
+    {
+      "inline": true,
+      "label": "indicadores",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/indicadores"
+    },
+    {
+      "inline": true,
+      "label": "mttd",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/mttd"
+    },
+    {
+      "inline": true,
+      "label": "mttr",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/mttr"
+    },
+    {
+      "inline": true,
+      "label": "dashboards",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/dashboards"
+    },
+    {
+      "inline": true,
+      "label": "kpi",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/kpi"
+    }
+  ],
+  "version": "current",
+  "sidebarPosition": 7,
+  "frontMatter": {
+    "id": "metricas-indicadores",
+    "title": "Métricas, Indicadores e KPIs de Deteção e Resposta",
+    "sidebar_position": 7,
+    "description": "Definição e cálculo de indicadores como MTTD e MTTR, e sua aplicação em dashboards operacionais.",
+    "tags": [
+      "métricas",
+      "indicadores",
+      "mttd",
+      "mttr",
+      "dashboards",
+      "kpi"
+    ]
+  },
+  "sidebar": "sbdToeSidebar",
+  "previous": {
+    "title": "Correlação de Eventos e Deteção de Anomalias",
+    "permalink": "/sbd-theory-of-everything/sbd-toe/monitorizacao-operacoes/addon/correlacao-anomalias"
+  },
+  "next": {
+    "title": "Matriz de Controles por Nível de Risco",
+    "permalink": "/sbd-theory-of-everything/sbd-toe/monitorizacao-operacoes/addon/matriz-controles-por-risco"
+  }
+}

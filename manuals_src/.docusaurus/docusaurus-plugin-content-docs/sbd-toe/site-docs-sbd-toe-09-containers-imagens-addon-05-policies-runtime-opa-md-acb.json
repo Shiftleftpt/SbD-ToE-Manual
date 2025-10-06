@@ -1,0 +1,73 @@
+{
+  "id": "containers-imagens/addon/policies-runtime-opa",
+  "title": "Enforcement de Políticas no Runtime com OPA e Kyverno",
+  "description": "Aplicação de políticas formais e automáticas para validar *containers* e execuções em tempo real",
+  "source": "@site/docs/sbd-toe/09-containers-imagens/addon/05-policies-runtime-opa.md",
+  "sourceDirName": "09-containers-imagens/addon",
+  "slug": "/containers-imagens/addon/policies-runtime-opa",
+  "permalink": "/sbd-theory-of-everything/sbd-toe/containers-imagens/addon/policies-runtime-opa",
+  "draft": false,
+  "unlisted": false,
+  "tags": [
+    {
+      "inline": true,
+      "label": "opa",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/opa"
+    },
+    {
+      "inline": true,
+      "label": "kyverno",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/kyverno"
+    },
+    {
+      "inline": true,
+      "label": "policies",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/policies"
+    },
+    {
+      "inline": true,
+      "label": "enforcement",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/enforcement"
+    },
+    {
+      "inline": true,
+      "label": "kubernetes",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/kubernetes"
+    },
+    {
+      "inline": true,
+      "label": "runtime",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/runtime"
+    },
+    {
+      "inline": true,
+      "label": "containers",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/containers"
+    }
+  ],
+  "version": "current",
+  "sidebarPosition": 5,
+  "frontMatter": {
+    "id": "policies-runtime-opa",
+    "title": "Enforcement de Políticas no Runtime com OPA e Kyverno",
+    "description": "Aplicação de políticas formais e automáticas para validar *containers* e execuções em tempo real",
+    "tags": [
+      "opa",
+      "kyverno",
+      "policies",
+      "enforcement",
+      "kubernetes",
+      "runtime",
+      "containers"
+    ]
+  },
+  "sidebar": "sbdToeSidebar",
+  "previous": {
+    "title": "Hardening e Restrições de Execução em *containers*",
+    "permalink": "/sbd-theory-of-everything/sbd-toe/containers-imagens/addon/hardening-containers"
+  },
+  "next": {
+    "title": "SBOM de *containers* e Rastreabilidade de Runtime",
+    "permalink": "/sbd-theory-of-everything/sbd-toe/containers-imagens/addon/sbom-containers"
+  }
+}

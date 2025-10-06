@@ -1,0 +1,62 @@
+{
+  "id": "monitorizacao-operacoes/addon/correlacao-anomalias",
+  "title": "Correlação de Eventos e Deteção de Anomalias",
+  "description": "Estratégias para correlação de logs entre fontes e deteção de comportamentos suspeitos.",
+  "source": "@site/docs/sbd-toe/12-monitorizacao-operacoes/addon/06-correlacao-anomalias.md",
+  "sourceDirName": "12-monitorizacao-operacoes/addon",
+  "slug": "/monitorizacao-operacoes/addon/correlacao-anomalias",
+  "permalink": "/sbd-theory-of-everything/sbd-toe/monitorizacao-operacoes/addon/correlacao-anomalias",
+  "draft": false,
+  "unlisted": false,
+  "tags": [
+    {
+      "inline": true,
+      "label": "correlação",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/correlacao"
+    },
+    {
+      "inline": true,
+      "label": "anomalias",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/anomalias"
+    },
+    {
+      "inline": true,
+      "label": "eventos",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/eventos"
+    },
+    {
+      "inline": true,
+      "label": "deteção",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/detecao"
+    },
+    {
+      "inline": true,
+      "label": "multi-sistema",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/multi-sistema"
+    }
+  ],
+  "version": "current",
+  "sidebarPosition": 6,
+  "frontMatter": {
+    "id": "correlacao-anomalias",
+    "title": "Correlação de Eventos e Deteção de Anomalias",
+    "sidebar_position": 6,
+    "description": "Estratégias para correlação de logs entre fontes e deteção de comportamentos suspeitos.",
+    "tags": [
+      "correlação",
+      "anomalias",
+      "eventos",
+      "deteção",
+      "multi-sistema"
+    ]
+  },
+  "sidebar": "sbdToeSidebar",
+  "previous": {
+    "title": "Integração da Monitorização com Resposta a Incidentes",
+    "permalink": "/sbd-theory-of-everything/sbd-toe/monitorizacao-operacoes/addon/monitorizacao-resposta"
+  },
+  "next": {
+    "title": "Métricas, Indicadores e KPIs de Deteção e Resposta",
+    "permalink": "/sbd-theory-of-everything/sbd-toe/monitorizacao-operacoes/addon/metricas-indicadores"
+  }
+}

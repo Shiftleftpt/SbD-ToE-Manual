@@ -1,0 +1,61 @@
+{
+  "id": "deploy-seguro/addon/06-controle-versao-e-rollback",
+  "title": "Controlo de Versão e Estratégias de Rollback",
+  "description": "Técnicas para garantir versões rastreáveis e reversíveis com rollback automático, testado e documentado.",
+  "source": "@site/docs/sbd-toe/11-deploy-seguro/addon/06-controle-versao-e-rollback.md",
+  "sourceDirName": "11-deploy-seguro/addon",
+  "slug": "/deploy-seguro/addon/06-controle-versao-e-rollback",
+  "permalink": "/sbd-theory-of-everything/sbd-toe/deploy-seguro/addon/06-controle-versao-e-rollback",
+  "draft": false,
+  "unlisted": false,
+  "tags": [
+    {
+      "inline": true,
+      "label": "tipo:anexo",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/tipo-anexo"
+    },
+    {
+      "inline": true,
+      "label": "grupo:execucao",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/grupo-execucao"
+    },
+    {
+      "inline": true,
+      "label": "tema:rollback",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/tema-rollback"
+    },
+    {
+      "inline": true,
+      "label": "versionamento",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/versionamento"
+    },
+    {
+      "inline": true,
+      "label": "reversibilidade",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/reversibilidade"
+    }
+  ],
+  "version": "current",
+  "sidebarPosition": 6,
+  "frontMatter": {
+    "id": "06-controle-versao-e-rollback",
+    "title": "Controlo de Versão e Estratégias de Rollback",
+    "description": "Técnicas para garantir versões rastreáveis e reversíveis com rollback automático, testado e documentado.",
+    "tags": [
+      "tipo:anexo",
+      "grupo:execucao",
+      "tema:rollback",
+      "versionamento",
+      "reversibilidade"
+    ]
+  },
+  "sidebar": "sbdToeSidebar",
+  "previous": {
+    "title": "Monitorização Pós-Deploy e Ações de Reação",
+    "permalink": "/sbd-theory-of-everything/sbd-toe/deploy-seguro/addon/05-monitorizacao-e-reacao"
+  },
+  "next": {
+    "title": "Deploy Progressivo e Controlo de Risco",
+    "permalink": "/sbd-theory-of-everything/sbd-toe/deploy-seguro/addon/07-deploy-progressivo-e-risco"
+  }
+}

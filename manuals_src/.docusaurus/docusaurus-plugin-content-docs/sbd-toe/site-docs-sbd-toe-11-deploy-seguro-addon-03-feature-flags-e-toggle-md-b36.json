@@ -1,0 +1,67 @@
+{
+  "id": "deploy-seguro/addon/03-feature-flags-e-toggle",
+  "title": "Controlo de Funcionalidades com Feature Flags",
+  "description": "Uso de feature toggles com segurança, rastreabilidade e capacidade de reversão em produção.",
+  "source": "@site/docs/sbd-toe/11-deploy-seguro/addon/03-feature-flags-e-toggle.md",
+  "sourceDirName": "11-deploy-seguro/addon",
+  "slug": "/deploy-seguro/addon/03-feature-flags-e-toggle",
+  "permalink": "/sbd-theory-of-everything/sbd-toe/deploy-seguro/addon/03-feature-flags-e-toggle",
+  "draft": false,
+  "unlisted": false,
+  "tags": [
+    {
+      "inline": true,
+      "label": "tipo:anexo",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/tipo-anexo"
+    },
+    {
+      "inline": true,
+      "label": "grupo:execucao",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/grupo-execucao"
+    },
+    {
+      "inline": true,
+      "label": "tema:feature-flags",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/tema-feature-flags"
+    },
+    {
+      "inline": true,
+      "label": "toggles",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/toggles"
+    },
+    {
+      "inline": true,
+      "label": "deploy",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/deploy"
+    },
+    {
+      "inline": true,
+      "label": "rastreabilidade",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/rastreabilidade"
+    }
+  ],
+  "version": "current",
+  "sidebarPosition": 3,
+  "frontMatter": {
+    "id": "03-feature-flags-e-toggle",
+    "title": "Controlo de Funcionalidades com Feature Flags",
+    "description": "Uso de feature toggles com segurança, rastreabilidade e capacidade de reversão em produção.",
+    "tags": [
+      "tipo:anexo",
+      "grupo:execucao",
+      "tema:feature-flags",
+      "toggles",
+      "deploy",
+      "rastreabilidade"
+    ]
+  },
+  "sidebar": "sbdToeSidebar",
+  "previous": {
+    "title": "Práticas de Release Management",
+    "permalink": "/sbd-theory-of-everything/sbd-toe/deploy-seguro/addon/02-praticas-release-management"
+  },
+  "next": {
+    "title": "Validações Técnicas e Funcionais Pré-Deploy",
+    "permalink": "/sbd-theory-of-everything/sbd-toe/deploy-seguro/addon/04-validacoes-pre-deploy"
+  }
+}

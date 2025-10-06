@@ -1,0 +1,55 @@
+{
+  "id": "classificacao-aplicacoes/addon/ciclo-vida-risco",
+  "title": "Ciclo de Vida da Classificação de Risco",
+  "description": "A gestão de risco em software não deve ser encarada como um evento pontual, mas sim como um processo iterativo e evolutivo ao longo do ciclo de vida da aplicação. A capacidade de identificar, reavaliar e tratar riscos de forma contextual é determinante para garantir a relevância e atualidade dos controlos aplicados.",
+  "source": "@site/docs/sbd-toe/01-classificacao-aplicacoes/addon/07-ciclo-vida-risco.md",
+  "sourceDirName": "01-classificacao-aplicacoes/addon",
+  "slug": "/classificacao-aplicacoes/addon/ciclo-vida-risco",
+  "permalink": "/sbd-theory-of-everything/sbd-toe/classificacao-aplicacoes/addon/ciclo-vida-risco",
+  "draft": false,
+  "unlisted": false,
+  "tags": [
+    {
+      "inline": true,
+      "label": "tipo:ciclo",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/tipo-ciclo"
+    },
+    {
+      "inline": true,
+      "label": "tema:revisao",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/tema-revisao"
+    },
+    {
+      "inline": true,
+      "label": "classificacao",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/classificacao"
+    },
+    {
+      "inline": true,
+      "label": "eventos",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/eventos"
+    }
+  ],
+  "version": "current",
+  "sidebarPosition": 7,
+  "frontMatter": {
+    "id": "ciclo-vida-risco",
+    "title": "Ciclo de Vida da Classificação de Risco",
+    "sidebar_position": 7,
+    "tags": [
+      "tipo:ciclo",
+      "tema:revisao",
+      "classificacao",
+      "eventos"
+    ]
+  },
+  "sidebar": "sbdToeSidebar",
+  "previous": {
+    "title": "Análise de Risco Residual e Decisão de Aceitação",
+    "permalink": "/sbd-theory-of-everything/sbd-toe/classificacao-aplicacoes/addon/risco-residual"
+  },
+  "next": {
+    "title": "Mapeamento de Ameaças por Nível de Risco",
+    "permalink": "/sbd-theory-of-everything/sbd-toe/classificacao-aplicacoes/addon/mapeamento-ameacas-risco"
+  }
+}

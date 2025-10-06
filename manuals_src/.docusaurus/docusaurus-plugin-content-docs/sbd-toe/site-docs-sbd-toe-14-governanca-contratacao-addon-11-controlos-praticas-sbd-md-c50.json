@@ -1,0 +1,56 @@
+{
+  "id": "governanca-contratacao/addon/controlos-praticas-sbd",
+  "title": "Controlos de Governança sobre as Práticas do SbD-ToE",
+  "description": "Formas de validar, reforçar e governar a aplicação dos controlos definidos noutros capítulos do SbD-ToE",
+  "source": "@site/docs/sbd-toe/14-governanca-contratacao/addon/11-controlos-praticas-sbd.md",
+  "sourceDirName": "14-governanca-contratacao/addon",
+  "slug": "/governanca-contratacao/addon/controlos-praticas-sbd",
+  "permalink": "/sbd-theory-of-everything/sbd-toe/governanca-contratacao/addon/controlos-praticas-sbd",
+  "draft": false,
+  "unlisted": false,
+  "tags": [
+    {
+      "inline": true,
+      "label": "governanca",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/governanca"
+    },
+    {
+      "inline": true,
+      "label": "controlo",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/controlo"
+    },
+    {
+      "inline": true,
+      "label": "validacao",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/validacao"
+    },
+    {
+      "inline": true,
+      "label": "enforcement",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/enforcement"
+    }
+  ],
+  "version": "current",
+  "sidebarPosition": 11,
+  "frontMatter": {
+    "id": "controlos-praticas-sbd",
+    "title": "Controlos de Governança sobre as Práticas do SbD-ToE",
+    "sidebar_position": 11,
+    "description": "Formas de validar, reforçar e governar a aplicação dos controlos definidos noutros capítulos do SbD-ToE",
+    "tags": [
+      "governanca",
+      "controlo",
+      "validacao",
+      "enforcement"
+    ]
+  },
+  "sidebar": "sbdToeSidebar",
+  "previous": {
+    "title": "Governação em Sistemas Legados",
+    "permalink": "/sbd-theory-of-everything/sbd-toe/governanca-contratacao/addon/governanca-legada"
+  },
+  "next": {
+    "title": "Aplicação das Práticas de Governança no Ciclo de Vida",
+    "permalink": "/sbd-theory-of-everything/sbd-toe/governanca-contratacao/canon/aplicacao-lifecycle"
+  }
+}

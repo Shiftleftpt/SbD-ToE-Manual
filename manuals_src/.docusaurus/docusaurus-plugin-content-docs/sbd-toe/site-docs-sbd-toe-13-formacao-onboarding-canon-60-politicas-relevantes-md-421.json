@@ -1,0 +1,19 @@
+{
+  "id": "formacao-onboarding/canon/policies-relevantes",
+  "title": "Políticas Organizacionais — Formação e Onboarding Seguro",
+  "description": "A aplicação eficaz do Capítulo 13 — Formação e Onboarding Seguro — depende da existência de políticas formais organizacionais que sustentem:",
+  "source": "@site/docs/sbd-toe/13-formacao-onboarding/canon/60-politicas-relevantes.md",
+  "sourceDirName": "13-formacao-onboarding/canon",
+  "slug": "/formacao-onboarding/canon/policies-relevantes",
+  "permalink": "/sbd-theory-of-everything/sbd-toe/formacao-onboarding/canon/policies-relevantes",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 60,
+  "frontMatter": {
+    "id": "policies-relevantes",
+    "title": "Políticas Organizacionais — Formação e Onboarding Seguro",
+    "sidebar_position": 60
+  }
+}

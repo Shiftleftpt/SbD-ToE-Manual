@@ -1,0 +1,23 @@
+{
+  "id": "09-8.-inventário-e-visibilidade-de-usos-de-ia",
+  "title": "8. Inventário e Visibilidade de Usos de IA",
+  "description": "Inventário contínuo e visível.",
+  "source": "@site/docs/ia/09-8.-inventário-e-visibilidade-de-usos-de-ia.md",
+  "sourceDirName": ".",
+  "slug": "/09-8.-inventário-e-visibilidade-de-usos-de-ia",
+  "permalink": "/sbd-theory-of-everything/ia/09-8.-inventário-e-visibilidade-de-usos-de-ia",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "defaultSidebar",
+  "previous": {
+    "title": "7. Governação e Programas Internos",
+    "permalink": "/sbd-theory-of-everything/ia/08-7.-governação-e-programas-internos"
+  },
+  "next": {
+    "title": "9. Instrumentos Práticos",
+    "permalink": "/sbd-theory-of-everything/ia/10-9.-instrumentos-práticos"
+  }
+}

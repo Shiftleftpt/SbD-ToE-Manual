@@ -1,0 +1,59 @@
+{
+  "id": "deploy-seguro/canon/recomendacoes-avancadas-deploy",
+  "title": "Recomendações Avançadas para Deploy Seguro",
+  "description": "Práticas avançadas para reforçar a segurança, rastreabilidade e auditabilidade de deploys críticos.",
+  "source": "@site/docs/sbd-toe/11-deploy-seguro/canon/30-recomendacoes-avancadas.md",
+  "sourceDirName": "11-deploy-seguro/canon",
+  "slug": "/deploy-seguro/canon/recomendacoes-avancadas-deploy",
+  "permalink": "/sbd-theory-of-everything/sbd-toe/deploy-seguro/canon/recomendacoes-avancadas-deploy",
+  "draft": false,
+  "unlisted": false,
+  "tags": [
+    {
+      "inline": true,
+      "label": "tipo:avancado",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/tipo-avancado"
+    },
+    {
+      "inline": true,
+      "label": "grupo:execucao",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/grupo-execucao"
+    },
+    {
+      "inline": true,
+      "label": "tema:deploy",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/tema-deploy"
+    },
+    {
+      "inline": true,
+      "label": "validação",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/validacao"
+    },
+    {
+      "inline": true,
+      "label": "reversibilidade",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/reversibilidade"
+    },
+    {
+      "inline": true,
+      "label": "maturidade",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/maturidade"
+    }
+  ],
+  "version": "current",
+  "sidebarPosition": 30,
+  "frontMatter": {
+    "id": "recomendacoes-avancadas-deploy",
+    "title": "Recomendações Avançadas para Deploy Seguro",
+    "description": "Práticas avançadas para reforçar a segurança, rastreabilidade e auditabilidade de deploys críticos.",
+    "tags": [
+      "tipo:avancado",
+      "grupo:execucao",
+      "tema:deploy",
+      "validação",
+      "reversibilidade",
+      "maturidade"
+    ],
+    "sidebar_position": 30
+  }
+}

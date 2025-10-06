@@ -1,0 +1,68 @@
+{
+  "id": "cicd-seguro/addon/gestao-segredos-pipeline",
+  "title": "Gestão e Injeção Segura de Segredos",
+  "description": "Estratégias para proteger segredos em pipelines, evitar hardcoded e garantir injeção segura via vaults ou variáveis.",
+  "source": "@site/docs/sbd-toe/07-cicd-seguro/addon/03-gestao-segredos-pipeline.md",
+  "sourceDirName": "07-cicd-seguro/addon",
+  "slug": "/cicd-seguro/addon/gestao-segredos-pipeline",
+  "permalink": "/sbd-theory-of-everything/sbd-toe/cicd-seguro/addon/gestao-segredos-pipeline",
+  "draft": false,
+  "unlisted": false,
+  "tags": [
+    {
+      "inline": true,
+      "label": "segredos",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/segredos"
+    },
+    {
+      "inline": true,
+      "label": "cicd",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/cicd"
+    },
+    {
+      "inline": true,
+      "label": "vault",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/vault"
+    },
+    {
+      "inline": true,
+      "label": "pipelines",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/pipelines"
+    },
+    {
+      "inline": true,
+      "label": "segurança",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/seguranca"
+    },
+    {
+      "inline": true,
+      "label": "variáveis",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/variaveis"
+    }
+  ],
+  "version": "current",
+  "sidebarPosition": 3,
+  "frontMatter": {
+    "id": "gestao-segredos-pipeline",
+    "title": "Gestão e Injeção Segura de Segredos",
+    "sidebar_position": 3,
+    "description": "Estratégias para proteger segredos em pipelines, evitar hardcoded e garantir injeção segura via vaults ou variáveis.",
+    "tags": [
+      "segredos",
+      "cicd",
+      "vault",
+      "pipelines",
+      "segurança",
+      "variáveis"
+    ]
+  },
+  "sidebar": "sbdToeSidebar",
+  "previous": {
+    "title": "Segurança do Código dentro do Pipeline",
+    "permalink": "/sbd-theory-of-everything/sbd-toe/cicd-seguro/addon/seguranca-codigo-pipeline"
+  },
+  "next": {
+    "title": "Isolamento e Proteção de Runners",
+    "permalink": "/sbd-theory-of-everything/sbd-toe/cicd-seguro/addon/isolamento-runners"
+  }
+}

@@ -1,0 +1,62 @@
+{
+  "id": "monitorizacao-operacoes/addon/integracao-siem",
+  "title": "Integração com SIEM e Plataformas de Correlação",
+  "description": "Integração com sistemas SIEM para parsing, visualização e correlação de eventos.",
+  "source": "@site/docs/sbd-toe/12-monitorizacao-operacoes/addon/04-integracao-siem.md",
+  "sourceDirName": "12-monitorizacao-operacoes/addon",
+  "slug": "/monitorizacao-operacoes/addon/integracao-siem",
+  "permalink": "/sbd-theory-of-everything/sbd-toe/monitorizacao-operacoes/addon/integracao-siem",
+  "draft": false,
+  "unlisted": false,
+  "tags": [
+    {
+      "inline": true,
+      "label": "siem",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/siem"
+    },
+    {
+      "inline": true,
+      "label": "integração",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/integracao"
+    },
+    {
+      "inline": true,
+      "label": "parsing",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/parsing"
+    },
+    {
+      "inline": true,
+      "label": "dashboards",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/dashboards"
+    },
+    {
+      "inline": true,
+      "label": "correlação",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/correlacao"
+    }
+  ],
+  "version": "current",
+  "sidebarPosition": 4,
+  "frontMatter": {
+    "id": "integracao-siem",
+    "title": "Integração com SIEM e Plataformas de Correlação",
+    "sidebar_position": 4,
+    "description": "Integração com sistemas SIEM para parsing, visualização e correlação de eventos.",
+    "tags": [
+      "siem",
+      "integração",
+      "parsing",
+      "dashboards",
+      "correlação"
+    ]
+  },
+  "sidebar": "sbdToeSidebar",
+  "previous": {
+    "title": "Geração e Gestão de Alertas para Eventos Críticos",
+    "permalink": "/sbd-theory-of-everything/sbd-toe/monitorizacao-operacoes/addon/alertas-eventos-criticos"
+  },
+  "next": {
+    "title": "Integração da Monitorização com Resposta a Incidentes",
+    "permalink": "/sbd-theory-of-everything/sbd-toe/monitorizacao-operacoes/addon/monitorizacao-resposta"
+  }
+}

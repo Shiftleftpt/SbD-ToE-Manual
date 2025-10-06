@@ -1,0 +1,62 @@
+{
+  "id": "monitorizacao-operacoes/addon/monitorizacao-resposta",
+  "title": "Integração da Monitorização com Resposta a Incidentes",
+  "description": "Ligação entre mecanismos de deteção e os processos de resposta operacionais e automatizados.",
+  "source": "@site/docs/sbd-toe/12-monitorizacao-operacoes/addon/05-monitorizacao-resposta.md",
+  "sourceDirName": "12-monitorizacao-operacoes/addon",
+  "slug": "/monitorizacao-operacoes/addon/monitorizacao-resposta",
+  "permalink": "/sbd-theory-of-everything/sbd-toe/monitorizacao-operacoes/addon/monitorizacao-resposta",
+  "draft": false,
+  "unlisted": false,
+  "tags": [
+    {
+      "inline": true,
+      "label": "resposta a incidentes",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/resposta-a-incidentes"
+    },
+    {
+      "inline": true,
+      "label": "IRP",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/irp"
+    },
+    {
+      "inline": true,
+      "label": "SOAR",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/soar"
+    },
+    {
+      "inline": true,
+      "label": "integração",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/integracao"
+    },
+    {
+      "inline": true,
+      "label": "playbooks",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/playbooks"
+    }
+  ],
+  "version": "current",
+  "sidebarPosition": 5,
+  "frontMatter": {
+    "id": "monitorizacao-resposta",
+    "title": "Integração da Monitorização com Resposta a Incidentes",
+    "sidebar_position": 5,
+    "description": "Ligação entre mecanismos de deteção e os processos de resposta operacionais e automatizados.",
+    "tags": [
+      "resposta a incidentes",
+      "IRP",
+      "SOAR",
+      "integração",
+      "playbooks"
+    ]
+  },
+  "sidebar": "sbdToeSidebar",
+  "previous": {
+    "title": "Integração com SIEM e Plataformas de Correlação",
+    "permalink": "/sbd-theory-of-everything/sbd-toe/monitorizacao-operacoes/addon/integracao-siem"
+  },
+  "next": {
+    "title": "Correlação de Eventos e Deteção de Anomalias",
+    "permalink": "/sbd-theory-of-everything/sbd-toe/monitorizacao-operacoes/addon/correlacao-anomalias"
+  }
+}

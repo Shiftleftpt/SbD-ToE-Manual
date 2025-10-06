@@ -1,0 +1,56 @@
+{
+  "id": "governanca-contratacao/addon/modelo-validacao-fornecedores",
+  "title": "Modelo de Validação de Fornecedores",
+  "description": "Processo para validação de segurança em fornecedores, contratados e terceiros técnicos",
+  "source": "@site/docs/sbd-toe/14-governanca-contratacao/addon/03-modelo-validacao-fornecedores.md",
+  "sourceDirName": "14-governanca-contratacao/addon",
+  "slug": "/governanca-contratacao/addon/modelo-validacao-fornecedores",
+  "permalink": "/sbd-theory-of-everything/sbd-toe/governanca-contratacao/addon/modelo-validacao-fornecedores",
+  "draft": false,
+  "unlisted": false,
+  "tags": [
+    {
+      "inline": true,
+      "label": "fornecedores",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/fornecedores"
+    },
+    {
+      "inline": true,
+      "label": "validacao",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/validacao"
+    },
+    {
+      "inline": true,
+      "label": "terceiros",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/terceiros"
+    },
+    {
+      "inline": true,
+      "label": "contratacao",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/contratacao"
+    }
+  ],
+  "version": "current",
+  "sidebarPosition": 3,
+  "frontMatter": {
+    "id": "modelo-validacao-fornecedores",
+    "title": "Modelo de Validação de Fornecedores",
+    "sidebar_position": 3,
+    "description": "Processo para validação de segurança em fornecedores, contratados e terceiros técnicos",
+    "tags": [
+      "fornecedores",
+      "validacao",
+      "terceiros",
+      "contratacao"
+    ]
+  },
+  "sidebar": "sbdToeSidebar",
+  "previous": {
+    "title": "Modelo de Governação para Segurança Aplicacional",
+    "permalink": "/sbd-theory-of-everything/sbd-toe/governanca-contratacao/addon/modelo-governancao"
+  },
+  "next": {
+    "title": "Modelo de Validação de Fornecedores",
+    "permalink": "/sbd-theory-of-everything/sbd-toe/governanca-contratacao/addon/modelo-validacao-fornecedores"
+  }
+}

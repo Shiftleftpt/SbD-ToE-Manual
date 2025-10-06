@@ -1,0 +1,65 @@
+{
+  "id": "requisitos-seguranca/canon/rastreabilidade",
+  "title": "Rastreabilidade Normativa — Requisitos de Segurança",
+  "description": "Correspondência entre as práticas de requisitos e frameworks como SSDF, SAMM, ISO, BSIMM, DSOMM",
+  "source": "@site/docs/sbd-toe/02-requisitos-seguranca/canon/25-rastreabilidade.md",
+  "sourceDirName": "02-requisitos-seguranca/canon",
+  "slug": "/requisitos-seguranca/canon/rastreabilidade",
+  "permalink": "/sbd-theory-of-everything/sbd-toe/requisitos-seguranca/canon/rastreabilidade",
+  "draft": false,
+  "unlisted": false,
+  "tags": [
+    {
+      "inline": true,
+      "label": "rastreabilidade",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/rastreabilidade"
+    },
+    {
+      "inline": true,
+      "label": "frameworks",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/frameworks"
+    },
+    {
+      "inline": true,
+      "label": "SSDF",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/ssdf"
+    },
+    {
+      "inline": true,
+      "label": "SAMM",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/samm"
+    },
+    {
+      "inline": true,
+      "label": "DSOMM",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/dsomm"
+    },
+    {
+      "inline": true,
+      "label": "BSIMM",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/bsimm"
+    },
+    {
+      "inline": true,
+      "label": "ISO",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/iso"
+    }
+  ],
+  "version": "current",
+  "sidebarPosition": 25,
+  "frontMatter": {
+    "id": "rastreabilidade",
+    "title": "Rastreabilidade Normativa — Requisitos de Segurança",
+    "description": "Correspondência entre as práticas de requisitos e frameworks como SSDF, SAMM, ISO, BSIMM, DSOMM",
+    "tags": [
+      "rastreabilidade",
+      "frameworks",
+      "SSDF",
+      "SAMM",
+      "DSOMM",
+      "BSIMM",
+      "ISO"
+    ],
+    "sidebar_position": 25
+  }
+}

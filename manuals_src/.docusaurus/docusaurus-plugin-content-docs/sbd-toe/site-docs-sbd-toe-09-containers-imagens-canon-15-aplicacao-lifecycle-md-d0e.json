@@ -1,0 +1,80 @@
+{
+  "id": "containers-imagens/canon/aplicacao-lifecycle",
+  "title": "Aplicação de Segurança de Containers ao Ciclo de Vida",
+  "description": "Integração prática das práticas de execução segura, validação, assinatura e rastreabilidade de containers no ciclo de desenvolvimento",
+  "source": "@site/docs/sbd-toe/09-containers-imagens/canon/15-aplicacao-lifecycle.md",
+  "sourceDirName": "09-containers-imagens/canon",
+  "slug": "/containers-imagens/canon/aplicacao-lifecycle",
+  "permalink": "/sbd-theory-of-everything/sbd-toe/containers-imagens/canon/aplicacao-lifecycle",
+  "draft": false,
+  "unlisted": false,
+  "tags": [
+    {
+      "inline": true,
+      "label": "lifecycle",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/lifecycle"
+    },
+    {
+      "inline": true,
+      "label": "containers",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/containers"
+    },
+    {
+      "inline": true,
+      "label": "isolamento",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/isolamento"
+    },
+    {
+      "inline": true,
+      "label": "assinatura",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/assinatura"
+    },
+    {
+      "inline": true,
+      "label": "sbom",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/sbom"
+    },
+    {
+      "inline": true,
+      "label": "cicd",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/cicd"
+    },
+    {
+      "inline": true,
+      "label": "dsomm",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/dsomm"
+    },
+    {
+      "inline": true,
+      "label": "kubernetes",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/kubernetes"
+    }
+  ],
+  "version": "current",
+  "sidebarPosition": 15,
+  "frontMatter": {
+    "id": "aplicacao-lifecycle",
+    "title": "Aplicação de Segurança de Containers ao Ciclo de Vida",
+    "description": "Integração prática das práticas de execução segura, validação, assinatura e rastreabilidade de containers no ciclo de desenvolvimento",
+    "tags": [
+      "lifecycle",
+      "containers",
+      "isolamento",
+      "assinatura",
+      "sbom",
+      "cicd",
+      "dsomm",
+      "kubernetes"
+    ],
+    "sidebar_position": 15
+  },
+  "sidebar": "sbdToeSidebar",
+  "previous": {
+    "title": "Caso Prático – Pipeline Containerizado com Execução Segura",
+    "permalink": "/sbd-theory-of-everything/sbd-toe/containers-imagens/addon/exemplo-pipeline-container"
+  },
+  "next": {
+    "title": "Validação Contínua de Segurança",
+    "permalink": "/sbd-theory-of-everything/sbd-toe/testes-seguranca/intro"
+  }
+}

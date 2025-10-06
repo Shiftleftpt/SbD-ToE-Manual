@@ -1,0 +1,60 @@
+{
+  "id": "classificacao-aplicacoes/intro",
+  "title": "Classificação da Criticidade Aplicacional",
+  "description": "Determinação da criticidade de aplicações para aplicar proporcionalidade nos controlos de segurança",
+  "source": "@site/docs/sbd-toe/01-classificacao-aplicacoes/intro.md",
+  "sourceDirName": "01-classificacao-aplicacoes",
+  "slug": "/classificacao-aplicacoes/intro",
+  "permalink": "/sbd-theory-of-everything/sbd-toe/classificacao-aplicacoes/intro",
+  "draft": false,
+  "unlisted": false,
+  "tags": [
+    {
+      "inline": true,
+      "label": "base",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/base"
+    },
+    {
+      "inline": true,
+      "label": "classificacao",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/classificacao"
+    },
+    {
+      "inline": true,
+      "label": "risco",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/risco"
+    },
+    {
+      "inline": true,
+      "label": "proporcionalidade",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/proporcionalidade"
+    },
+    {
+      "inline": true,
+      "label": "ciclo-vida",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/ciclo-vida"
+    }
+  ],
+  "version": "current",
+  "frontMatter": {
+    "id": "intro",
+    "title": "Classificação da Criticidade Aplicacional",
+    "description": "Determinação da criticidade de aplicações para aplicar proporcionalidade nos controlos de segurança",
+    "tags": [
+      "base",
+      "classificacao",
+      "risco",
+      "proporcionalidade",
+      "ciclo-vida"
+    ]
+  },
+  "sidebar": "sbdToeSidebar",
+  "previous": {
+    "title": "Como Usar Este Manual",
+    "permalink": "/sbd-theory-of-everything/sbd-toe/como-usar-este-manual"
+  },
+  "next": {
+    "title": "Aplicação da Classificação no Ciclo de Vida",
+    "permalink": "/sbd-theory-of-everything/sbd-toe/classificacao-aplicacoes/aplicacao-lifecycle"
+  }
+}

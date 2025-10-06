@@ -1,0 +1,61 @@
+{
+  "id": "formacao-onboarding/addon/manual-formacao-capitulos",
+  "title": "Manual de Formação por Capítulo do SbD-ToE",
+  "description": "Guia técnico de formação contínua com ligação direta a cada capítulo do manual.",
+  "source": "@site/docs/sbd-toe/13-formacao-onboarding/addon/06-manual-formação-por-capitulo.md",
+  "sourceDirName": "13-formacao-onboarding/addon",
+  "slug": "/formacao-onboarding/addon/manual-formacao-capitulos",
+  "permalink": "/sbd-theory-of-everything/sbd-toe/formacao-onboarding/addon/manual-formacao-capitulos",
+  "draft": false,
+  "unlisted": false,
+  "tags": [
+    {
+      "inline": true,
+      "label": "formacao",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/formacao"
+    },
+    {
+      "inline": true,
+      "label": "manual",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/manual"
+    },
+    {
+      "inline": true,
+      "label": "por capitulo",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/por-capitulo"
+    },
+    {
+      "inline": true,
+      "label": "sbdtoe",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/sbdtoe"
+    },
+    {
+      "inline": true,
+      "label": "referencia cruzada",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/referencia-cruzada"
+    }
+  ],
+  "version": "current",
+  "sidebarPosition": 6,
+  "frontMatter": {
+    "id": "manual-formacao-capitulos",
+    "title": "Manual de Formação por Capítulo do SbD-ToE",
+    "description": "Guia técnico de formação contínua com ligação direta a cada capítulo do manual.",
+    "tags": [
+      "formacao",
+      "manual",
+      "por capitulo",
+      "sbdtoe",
+      "referencia cruzada"
+    ]
+  },
+  "sidebar": "sbdToeSidebar",
+  "previous": {
+    "title": "Integração da Formação com os Capítulos Técnicos",
+    "permalink": "/sbd-theory-of-everything/sbd-toe/formacao-onboarding/addon/integracao-transversal"
+  },
+  "next": {
+    "title": "Exemplo de Manual de Formação — Pull Request Seguro",
+    "permalink": "/sbd-theory-of-everything/sbd-toe/formacao-onboarding/addon/exemplo-manual-dev-pr"
+  }
+}

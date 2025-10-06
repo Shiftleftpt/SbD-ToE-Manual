@@ -1,0 +1,56 @@
+{
+  "id": "testes-seguranca/addon/iast",
+  "title": "Validação Interativa com Instrumentação (IAST)",
+  "description": "Instrumentação da aplicação para observação em tempo real de vulnerabilidades durante a execução.",
+  "source": "@site/docs/sbd-toe/10-testes-seguranca/addon/03-iast.md",
+  "sourceDirName": "10-testes-seguranca/addon",
+  "slug": "/testes-seguranca/addon/iast",
+  "permalink": "/sbd-theory-of-everything/sbd-toe/testes-seguranca/addon/iast",
+  "draft": false,
+  "unlisted": false,
+  "tags": [
+    {
+      "inline": true,
+      "label": "iast",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/iast"
+    },
+    {
+      "inline": true,
+      "label": "testes interativos",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/testes-interativos"
+    },
+    {
+      "inline": true,
+      "label": "instrumentação",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/instrumentacao"
+    },
+    {
+      "inline": true,
+      "label": "runtime",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/runtime"
+    }
+  ],
+  "version": "current",
+  "sidebarPosition": 4,
+  "frontMatter": {
+    "id": "iast",
+    "title": "Validação Interativa com Instrumentação (IAST)",
+    "description": "Instrumentação da aplicação para observação em tempo real de vulnerabilidades durante a execução.",
+    "tags": [
+      "iast",
+      "testes interativos",
+      "instrumentação",
+      "runtime"
+    ],
+    "sidebar_position": 4
+  },
+  "sidebar": "sbdToeSidebar",
+  "previous": {
+    "title": "Validação Dinâmica de Aplicações (DAST)",
+    "permalink": "/sbd-theory-of-everything/sbd-toe/testes-seguranca/addon/dast"
+  },
+  "next": {
+    "title": "Fuzzing Direcionado e Aleatório",
+    "permalink": "/sbd-theory-of-everything/sbd-toe/testes-seguranca/addon/fuzzing"
+  }
+}

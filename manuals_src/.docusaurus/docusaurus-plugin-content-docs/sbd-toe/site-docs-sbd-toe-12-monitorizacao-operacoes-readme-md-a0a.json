@@ -1,0 +1,14 @@
+{
+  "id": "monitorizacao-operacoes/README",
+  "title": "Monitorização e Operações",
+  "description": "Este diretório contém o conteúdo do capítulo Monitorização e Operações do manual Security by Design – Teoria de Tudo.",
+  "source": "@site/docs/sbd-toe/12-monitorizacao-operacoes/README.md",
+  "sourceDirName": "12-monitorizacao-operacoes",
+  "slug": "/monitorizacao-operacoes/",
+  "permalink": "/sbd-theory-of-everything/sbd-toe/monitorizacao-operacoes/",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "frontMatter": {}
+}

@@ -1,0 +1,61 @@
+{
+  "id": "requisitos-seguranca/addon/matriz-controlos-por-risco",
+  "title": "Matriz de Aplicação de Requisitos por Nível de Risco",
+  "description": "Requisitos mínimos obrigatórios por classificação de criticidade da aplicação",
+  "source": "@site/docs/sbd-toe/02-requisitos-seguranca/addon/06-matriz-controlos-por-risco.md",
+  "sourceDirName": "02-requisitos-seguranca/addon",
+  "slug": "/requisitos-seguranca/addon/matriz-controlos-por-risco",
+  "permalink": "/sbd-theory-of-everything/sbd-toe/requisitos-seguranca/addon/matriz-controlos-por-risco",
+  "draft": false,
+  "unlisted": false,
+  "tags": [
+    {
+      "inline": true,
+      "label": "proporcionalidade",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/proporcionalidade"
+    },
+    {
+      "inline": true,
+      "label": "risco",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/risco"
+    },
+    {
+      "inline": true,
+      "label": "requisitos",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/requisitos"
+    },
+    {
+      "inline": true,
+      "label": "matriz",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/matriz"
+    },
+    {
+      "inline": true,
+      "label": "controlo",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/controlo"
+    }
+  ],
+  "version": "current",
+  "sidebarPosition": 6,
+  "frontMatter": {
+    "id": "matriz-controlos-por-risco",
+    "title": "Matriz de Aplicação de Requisitos por Nível de Risco",
+    "description": "Requisitos mínimos obrigatórios por classificação de criticidade da aplicação",
+    "tags": [
+      "proporcionalidade",
+      "risco",
+      "requisitos",
+      "matriz",
+      "controlo"
+    ]
+  },
+  "sidebar": "sbdToeSidebar",
+  "previous": {
+    "title": "Exemplo Prático de Aplicação de Requisitos",
+    "permalink": "/sbd-theory-of-everything/sbd-toe/requisitos-seguranca/addon/exemplos-aplicacao"
+  },
+  "next": {
+    "title": "Estratégias de Validação de Requisitos de Segurança",
+    "permalink": "/sbd-theory-of-everything/sbd-toe/requisitos-seguranca/addon/validacao-requisitos"
+  }
+}

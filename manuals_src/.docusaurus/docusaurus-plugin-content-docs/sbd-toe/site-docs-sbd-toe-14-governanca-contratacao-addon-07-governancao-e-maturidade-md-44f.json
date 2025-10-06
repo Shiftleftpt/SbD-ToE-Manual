@@ -1,0 +1,56 @@
+{
+  "id": "governanca-contratacao/addon/governancao-maturidade",
+  "title": "Governança de Segurança e Maturidade",
+  "description": "Como o modelo de governação contribui para evolução da maturidade de segurança",
+  "source": "@site/docs/sbd-toe/14-governanca-contratacao/addon/07-governancao-e-maturidade.md",
+  "sourceDirName": "14-governanca-contratacao/addon",
+  "slug": "/governanca-contratacao/addon/governancao-maturidade",
+  "permalink": "/sbd-theory-of-everything/sbd-toe/governanca-contratacao/addon/governancao-maturidade",
+  "draft": false,
+  "unlisted": false,
+  "tags": [
+    {
+      "inline": true,
+      "label": "maturidade",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/maturidade"
+    },
+    {
+      "inline": true,
+      "label": "governanca",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/governanca"
+    },
+    {
+      "inline": true,
+      "label": "compliance",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/compliance"
+    },
+    {
+      "inline": true,
+      "label": "evolucao",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/evolucao"
+    }
+  ],
+  "version": "current",
+  "sidebarPosition": 7,
+  "frontMatter": {
+    "id": "governancao-maturidade",
+    "title": "Governança de Segurança e Maturidade",
+    "sidebar_position": 7,
+    "description": "Como o modelo de governação contribui para evolução da maturidade de segurança",
+    "tags": [
+      "maturidade",
+      "governanca",
+      "compliance",
+      "evolucao"
+    ]
+  },
+  "sidebar": "sbdToeSidebar",
+  "previous": {
+    "title": "Validação Contínua de Governação",
+    "permalink": "/sbd-theory-of-everything/sbd-toe/governanca-contratacao/addon/validacao-continuada"
+  },
+  "next": {
+    "title": "Diagramas de Governação de Segurança",
+    "permalink": "/sbd-theory-of-everything/sbd-toe/governanca-contratacao/addon/diagramas-governanca"
+  }
+}

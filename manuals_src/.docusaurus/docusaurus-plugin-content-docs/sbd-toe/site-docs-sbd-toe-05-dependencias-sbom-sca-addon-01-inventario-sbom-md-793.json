@@ -1,0 +1,55 @@
+{
+  "id": "dependencias-sbom-sca/addon/inventario-sbom",
+  "title": "Inventário de Dependências e SBOM",
+  "description": "Geração e gestão de Software Bill of Materials (SBOM) com rastreabilidade no ciclo de vida",
+  "source": "@site/docs/sbd-toe/05-dependencias-sbom-sca/addon/01-inventario-sbom.md",
+  "sourceDirName": "05-dependencias-sbom-sca/addon",
+  "slug": "/dependencias-sbom-sca/addon/inventario-sbom",
+  "permalink": "/sbd-theory-of-everything/sbd-toe/dependencias-sbom-sca/addon/inventario-sbom",
+  "draft": false,
+  "unlisted": false,
+  "tags": [
+    {
+      "inline": true,
+      "label": "dependencias",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/dependencias"
+    },
+    {
+      "inline": true,
+      "label": "sbom",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/sbom"
+    },
+    {
+      "inline": true,
+      "label": "sca",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/sca"
+    },
+    {
+      "inline": true,
+      "label": "supply-chain",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/supply-chain"
+    }
+  ],
+  "version": "current",
+  "sidebarPosition": 1,
+  "frontMatter": {
+    "id": "inventario-sbom",
+    "title": "Inventário de Dependências e SBOM",
+    "description": "Geração e gestão de Software Bill of Materials (SBOM) com rastreabilidade no ciclo de vida",
+    "tags": [
+      "dependencias",
+      "sbom",
+      "sca",
+      "supply-chain"
+    ]
+  },
+  "sidebar": "sbdToeSidebar",
+  "previous": {
+    "title": "Dependências, SBOM e SCA",
+    "permalink": "/sbd-theory-of-everything/sbd-toe/dependencias-sbom-sca/intro"
+  },
+  "next": {
+    "title": "Análise de Vulnerabilidades em Dependências (SCA)",
+    "permalink": "/sbd-theory-of-everything/sbd-toe/dependencias-sbom-sca/addon/analise-sca"
+  }
+}

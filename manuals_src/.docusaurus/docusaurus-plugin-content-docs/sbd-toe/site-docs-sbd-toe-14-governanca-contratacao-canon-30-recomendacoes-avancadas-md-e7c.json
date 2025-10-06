@@ -1,0 +1,59 @@
+{
+  "id": "governanca-contratacao/canon/recomendacoes-avancadas",
+  "title": "Recomendações Avançadas — Governança e Contratação",
+  "description": "Práticas avançadas de governação aplicáveis a contextos de elevada maturidade ou requisitos regulatórios",
+  "source": "@site/docs/sbd-toe/14-governanca-contratacao/canon/30-recomendacoes-avancadas.md",
+  "sourceDirName": "14-governanca-contratacao/canon",
+  "slug": "/governanca-contratacao/canon/recomendacoes-avancadas",
+  "permalink": "/sbd-theory-of-everything/sbd-toe/governanca-contratacao/canon/recomendacoes-avancadas",
+  "draft": false,
+  "unlisted": false,
+  "tags": [
+    {
+      "inline": true,
+      "label": "avancado",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/avancado"
+    },
+    {
+      "inline": true,
+      "label": "governance",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/governance"
+    },
+    {
+      "inline": true,
+      "label": "excecoes",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/excecoes"
+    },
+    {
+      "inline": true,
+      "label": "contratos",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/contratos"
+    },
+    {
+      "inline": true,
+      "label": "auditoria",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/auditoria"
+    },
+    {
+      "inline": true,
+      "label": "rastreabilidade",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/rastreabilidade"
+    }
+  ],
+  "version": "current",
+  "sidebarPosition": 30,
+  "frontMatter": {
+    "id": "recomendacoes-avancadas",
+    "title": "Recomendações Avançadas — Governança e Contratação",
+    "sidebar_position": 30,
+    "description": "Práticas avançadas de governação aplicáveis a contextos de elevada maturidade ou requisitos regulatórios",
+    "tags": [
+      "avancado",
+      "governance",
+      "excecoes",
+      "contratos",
+      "auditoria",
+      "rastreabilidade"
+    ]
+  }
+}

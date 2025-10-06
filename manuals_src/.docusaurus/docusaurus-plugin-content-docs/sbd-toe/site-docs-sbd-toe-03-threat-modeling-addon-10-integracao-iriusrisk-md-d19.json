@@ -1,0 +1,67 @@
+{
+  "id": "threat-modeling/addon/integracao-iriusrisk",
+  "title": "Integração com IriusRisk e Ferramentas Automatizadas",
+  "description": "Como substituir o mapeamento manual threat → requisito usando plataformas como IriusRisk, mantendo a rastreabilidade com o Capítulo 2",
+  "source": "@site/docs/sbd-toe/03-threat-modeling/addon/10-integracao-iriusrisk.md",
+  "sourceDirName": "03-threat-modeling/addon",
+  "slug": "/threat-modeling/addon/integracao-iriusrisk",
+  "permalink": "/sbd-theory-of-everything/sbd-toe/threat-modeling/addon/integracao-iriusrisk",
+  "draft": false,
+  "unlisted": false,
+  "tags": [
+    {
+      "inline": true,
+      "label": "iriusrisk",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/iriusrisk"
+    },
+    {
+      "inline": true,
+      "label": "integração",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/integracao"
+    },
+    {
+      "inline": true,
+      "label": "ameaças",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/ameacas"
+    },
+    {
+      "inline": true,
+      "label": "requisitos",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/requisitos"
+    },
+    {
+      "inline": true,
+      "label": "rastreabilidade",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/rastreabilidade"
+    },
+    {
+      "inline": true,
+      "label": "capitulo2",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/capitulo-2"
+    }
+  ],
+  "version": "current",
+  "sidebarPosition": 10,
+  "frontMatter": {
+    "id": "integracao-iriusrisk",
+    "title": "Integração com IriusRisk e Ferramentas Automatizadas",
+    "description": "Como substituir o mapeamento manual threat → requisito usando plataformas como IriusRisk, mantendo a rastreabilidade com o Capítulo 2",
+    "tags": [
+      "iriusrisk",
+      "integração",
+      "ameaças",
+      "requisitos",
+      "rastreabilidade",
+      "capitulo2"
+    ]
+  },
+  "sidebar": "sbdToeSidebar",
+  "previous": {
+    "title": "Integração do Threat Modeling na Validação de Arquitetura",
+    "permalink": "/sbd-theory-of-everything/sbd-toe/threat-modeling/addon/validacao-arquitetura"
+  },
+  "next": {
+    "title": "Aplicação de Threat Modeling no Ciclo de Vida",
+    "permalink": "/sbd-theory-of-everything/sbd-toe/threat-modeling/canon/aplicacao-lifecycle"
+  }
+}

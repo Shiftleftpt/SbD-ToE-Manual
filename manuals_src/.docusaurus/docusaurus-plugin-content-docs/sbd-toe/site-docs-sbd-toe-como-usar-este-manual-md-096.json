@@ -1,0 +1,28 @@
+{
+  "id": "como-usar-este-manual",
+  "title": "Como Usar Este Manual",
+  "description": "Este manual foi concebido para apoiar equipas técnicas, gestores e decisores na implementação prática de Security by Design no desenvolvimento de software.",
+  "source": "@site/docs/sbd-toe/como-usar-este-manual.md",
+  "sourceDirName": ".",
+  "slug": "/como-usar-este-manual",
+  "permalink": "/sbd-theory-of-everything/sbd-toe/como-usar-este-manual",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "id": "como-usar-este-manual",
+    "title": "Como Usar Este Manual",
+    "hide_title": false,
+    "hide_table_of_contents": false
+  },
+  "sidebar": "sbdToeSidebar",
+  "previous": {
+    "title": "Security by Design – Teoria de Tudo",
+    "permalink": "/sbd-theory-of-everything/sbd-toe/"
+  },
+  "next": {
+    "title": "Classificação da Criticidade Aplicacional",
+    "permalink": "/sbd-theory-of-everything/sbd-toe/classificacao-aplicacoes/intro"
+  }
+}

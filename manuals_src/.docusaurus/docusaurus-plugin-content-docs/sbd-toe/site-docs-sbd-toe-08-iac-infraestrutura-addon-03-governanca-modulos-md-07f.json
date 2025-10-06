@@ -1,0 +1,68 @@
+{
+  "id": "iac-infraestrutura/addon/governanca-modulos",
+  "title": "Governação de Módulos e Reutilização Segura",
+  "description": "Práticas de gestão e aprovação de módulos reutilizáveis em projetos IaC, garantindo rastreabilidade e segurança.",
+  "source": "@site/docs/sbd-toe/08-iac-infraestrutura/addon/03-governanca-modulos.md",
+  "sourceDirName": "08-iac-infraestrutura/addon",
+  "slug": "/iac-infraestrutura/addon/governanca-modulos",
+  "permalink": "/sbd-theory-of-everything/sbd-toe/iac-infraestrutura/addon/governanca-modulos",
+  "draft": false,
+  "unlisted": false,
+  "tags": [
+    {
+      "inline": true,
+      "label": "governação",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/governacao"
+    },
+    {
+      "inline": true,
+      "label": "módulos",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/modulos"
+    },
+    {
+      "inline": true,
+      "label": "iac",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/iac"
+    },
+    {
+      "inline": true,
+      "label": "reutilização",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/reutilizacao"
+    },
+    {
+      "inline": true,
+      "label": "segurança",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/seguranca"
+    },
+    {
+      "inline": true,
+      "label": "rastreabilidade",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/rastreabilidade"
+    }
+  ],
+  "version": "current",
+  "sidebarPosition": 3,
+  "frontMatter": {
+    "id": "governanca-modulos",
+    "title": "Governação de Módulos e Reutilização Segura",
+    "sidebar_position": 3,
+    "description": "Práticas de gestão e aprovação de módulos reutilizáveis em projetos IaC, garantindo rastreabilidade e segurança.",
+    "tags": [
+      "governação",
+      "módulos",
+      "iac",
+      "reutilização",
+      "segurança",
+      "rastreabilidade"
+    ]
+  },
+  "sidebar": "sbdToeSidebar",
+  "previous": {
+    "title": "Planeamento e Controlo da Aplicação de IaC Seguro",
+    "permalink": "/sbd-theory-of-everything/sbd-toe/iac-infraestrutura/addon/planeamento-e-controle"
+  },
+  "next": {
+    "title": "Princípios de Security by Design aplicados a IaC",
+    "permalink": "/sbd-theory-of-everything/sbd-toe/iac-infraestrutura/addon/principios-sbd-iac"
+  }
+}

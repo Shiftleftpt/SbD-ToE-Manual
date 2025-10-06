@@ -1,0 +1,61 @@
+{
+  "id": "requisitos-seguranca/addon/catalogo-requisitos",
+  "title": "Catálogo de Requisitos Aplicacionais",
+  "description": "Lista essencial de requisitos de segurança organizados por categoria e nível de risco",
+  "source": "@site/docs/sbd-toe/02-requisitos-seguranca/addon/01-catalogo-requisitos.md",
+  "sourceDirName": "02-requisitos-seguranca/addon",
+  "slug": "/requisitos-seguranca/addon/catalogo-requisitos",
+  "permalink": "/sbd-theory-of-everything/sbd-toe/requisitos-seguranca/addon/catalogo-requisitos",
+  "draft": false,
+  "unlisted": false,
+  "tags": [
+    {
+      "inline": true,
+      "label": "tipo:catalogo",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/tipo-catalogo"
+    },
+    {
+      "inline": true,
+      "label": "tema:requisitos",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/tema-requisitos"
+    },
+    {
+      "inline": true,
+      "label": "rastreabilidade",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/rastreabilidade"
+    },
+    {
+      "inline": true,
+      "label": "criticidade",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/criticidade"
+    },
+    {
+      "inline": true,
+      "label": "ASVS",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/asvs"
+    }
+  ],
+  "version": "current",
+  "sidebarPosition": 1,
+  "frontMatter": {
+    "id": "catalogo-requisitos",
+    "title": "Catálogo de Requisitos Aplicacionais",
+    "description": "Lista essencial de requisitos de segurança organizados por categoria e nível de risco",
+    "tags": [
+      "tipo:catalogo",
+      "tema:requisitos",
+      "rastreabilidade",
+      "criticidade",
+      "ASVS"
+    ]
+  },
+  "sidebar": "sbdToeSidebar",
+  "previous": {
+    "title": "Catálogo Base de Requisitos de Segurança",
+    "permalink": "/sbd-theory-of-everything/sbd-toe/requisitos-seguranca/addon/lista-requisitos-base"
+  },
+  "next": {
+    "title": "Catálogo de Requisitos Aplicacionais",
+    "permalink": "/sbd-theory-of-everything/sbd-toe/requisitos-seguranca/addon/catalogo-requisitos"
+  }
+}

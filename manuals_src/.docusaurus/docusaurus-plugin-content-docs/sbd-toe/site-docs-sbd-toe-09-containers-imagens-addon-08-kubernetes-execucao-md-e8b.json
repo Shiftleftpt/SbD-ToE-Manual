@@ -1,0 +1,67 @@
+{
+  "id": "containers-imagens/addon/kubernetes-execucao",
+  "title": "Execução Segura de *containers* em Clusters Kubernetes",
+  "description": "Aplicação de práticas de segurança, isolamento e validação para workloads containerizados em Kubernetes",
+  "source": "@site/docs/sbd-toe/09-containers-imagens/addon/08-kubernetes-execucao.md",
+  "sourceDirName": "09-containers-imagens/addon",
+  "slug": "/containers-imagens/addon/kubernetes-execucao",
+  "permalink": "/sbd-theory-of-everything/sbd-toe/containers-imagens/addon/kubernetes-execucao",
+  "draft": false,
+  "unlisted": false,
+  "tags": [
+    {
+      "inline": true,
+      "label": "kubernetes",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/kubernetes"
+    },
+    {
+      "inline": true,
+      "label": "containers",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/containers"
+    },
+    {
+      "inline": true,
+      "label": "execução segura",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/execucao-segura"
+    },
+    {
+      "inline": true,
+      "label": "isolation",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/isolation"
+    },
+    {
+      "inline": true,
+      "label": "runtime",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/runtime"
+    },
+    {
+      "inline": true,
+      "label": "segurança",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/seguranca"
+    }
+  ],
+  "version": "current",
+  "sidebarPosition": 8,
+  "frontMatter": {
+    "id": "kubernetes-execucao",
+    "title": "Execução Segura de *containers* em Clusters Kubernetes",
+    "description": "Aplicação de práticas de segurança, isolamento e validação para workloads containerizados em Kubernetes",
+    "tags": [
+      "kubernetes",
+      "containers",
+      "execução segura",
+      "isolation",
+      "runtime",
+      "segurança"
+    ]
+  },
+  "sidebar": "sbdToeSidebar",
+  "previous": {
+    "title": "Deteção e Tratamento de Vulnerabilidades em Imagens",
+    "permalink": "/sbd-theory-of-everything/sbd-toe/containers-imagens/addon/vulnerabilidades-imagens"
+  },
+  "next": {
+    "title": "Caso Prático – Pipeline Containerizado com Execução Segura",
+    "permalink": "/sbd-theory-of-everything/sbd-toe/containers-imagens/addon/exemplo-pipeline-container"
+  }
+}

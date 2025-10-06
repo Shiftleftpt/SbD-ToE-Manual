@@ -1,0 +1,62 @@
+{
+  "id": "testes-seguranca/addon/cobertura-e-priorizacao",
+  "title": "Cobertura e Priorização de Testes de Segurança",
+  "description": "Estratégias para priorizar testes com base no risco e assegurar cobertura eficaz dos requisitos.",
+  "source": "@site/docs/sbd-toe/10-testes-seguranca/addon/06-cobertura-e-priorizacao.md",
+  "sourceDirName": "10-testes-seguranca/addon",
+  "slug": "/testes-seguranca/addon/cobertura-e-priorizacao",
+  "permalink": "/sbd-theory-of-everything/sbd-toe/testes-seguranca/addon/cobertura-e-priorizacao",
+  "draft": false,
+  "unlisted": false,
+  "tags": [
+    {
+      "inline": true,
+      "label": "cobertura",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/cobertura"
+    },
+    {
+      "inline": true,
+      "label": "testes",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/testes"
+    },
+    {
+      "inline": true,
+      "label": "segurança",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/seguranca"
+    },
+    {
+      "inline": true,
+      "label": "priorização",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/priorizacao"
+    },
+    {
+      "inline": true,
+      "label": "risco",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/risco"
+    }
+  ],
+  "version": "current",
+  "sidebarPosition": 7,
+  "frontMatter": {
+    "id": "cobertura-e-priorizacao",
+    "title": "Cobertura e Priorização de Testes de Segurança",
+    "description": "Estratégias para priorizar testes com base no risco e assegurar cobertura eficaz dos requisitos.",
+    "tags": [
+      "cobertura",
+      "testes",
+      "segurança",
+      "priorização",
+      "risco"
+    ],
+    "sidebar_position": 7
+  },
+  "sidebar": "sbdToeSidebar",
+  "previous": {
+    "title": "Testes de Regressão de Segurança",
+    "permalink": "/sbd-theory-of-everything/sbd-toe/testes-seguranca/addon/validacao-regressao"
+  },
+  "next": {
+    "title": "Integração de Testes no Pipeline",
+    "permalink": "/sbd-theory-of-everything/sbd-toe/testes-seguranca/addon/integracao-pipeline"
+  }
+}

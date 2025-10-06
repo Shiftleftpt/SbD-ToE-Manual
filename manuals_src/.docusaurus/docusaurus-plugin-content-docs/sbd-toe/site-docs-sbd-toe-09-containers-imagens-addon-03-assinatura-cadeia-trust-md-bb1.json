@@ -1,0 +1,73 @@
+{
+  "id": "containers-imagens/addon/assinatura-cadeia-trust",
+  "title": "Assinatura de Imagens e Cadeia de Confiança",
+  "description": "Validação da proveniência, integridade e autenticidade de imagens de *containers*",
+  "source": "@site/docs/sbd-toe/09-containers-imagens/addon/03-assinatura-cadeia-trust.md",
+  "sourceDirName": "09-containers-imagens/addon",
+  "slug": "/containers-imagens/addon/assinatura-cadeia-trust",
+  "permalink": "/sbd-theory-of-everything/sbd-toe/containers-imagens/addon/assinatura-cadeia-trust",
+  "draft": false,
+  "unlisted": false,
+  "tags": [
+    {
+      "inline": true,
+      "label": "containers",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/containers"
+    },
+    {
+      "inline": true,
+      "label": "assinatura",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/assinatura"
+    },
+    {
+      "inline": true,
+      "label": "trust",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/trust"
+    },
+    {
+      "inline": true,
+      "label": "notary",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/notary"
+    },
+    {
+      "inline": true,
+      "label": "cosign",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/cosign"
+    },
+    {
+      "inline": true,
+      "label": "rekor",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/rekor"
+    },
+    {
+      "inline": true,
+      "label": "supply chain",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/supply-chain"
+    }
+  ],
+  "version": "current",
+  "sidebarPosition": 3,
+  "frontMatter": {
+    "id": "assinatura-cadeia-trust",
+    "title": "Assinatura de Imagens e Cadeia de Confiança",
+    "description": "Validação da proveniência, integridade e autenticidade de imagens de *containers*",
+    "tags": [
+      "containers",
+      "assinatura",
+      "trust",
+      "notary",
+      "cosign",
+      "rekor",
+      "supply chain"
+    ]
+  },
+  "sidebar": "sbdToeSidebar",
+  "previous": {
+    "title": "Runners, Execução Isolada e Ambientes Controlados",
+    "permalink": "/sbd-theory-of-everything/sbd-toe/containers-imagens/addon/runners-isolamento"
+  },
+  "next": {
+    "title": "Hardening e Restrições de Execução em *containers*",
+    "permalink": "/sbd-theory-of-everything/sbd-toe/containers-imagens/addon/hardening-containers"
+  }
+}

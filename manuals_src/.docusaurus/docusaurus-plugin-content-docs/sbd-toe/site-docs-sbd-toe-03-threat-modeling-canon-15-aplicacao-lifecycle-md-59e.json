@@ -1,0 +1,48 @@
+{
+  "id": "threat-modeling/canon/aplicacao-lifecycle",
+  "title": "Aplicação de Threat Modeling no Ciclo de Vida",
+  "description": "Este anexo define como aplicar de forma sistemática as práticas de Threat Modeling ao longo do ciclo de vida do software.",
+  "source": "@site/docs/sbd-toe/03-threat-modeling/canon/15-aplicacao-lifecycle.md",
+  "sourceDirName": "03-threat-modeling/canon",
+  "slug": "/threat-modeling/canon/aplicacao-lifecycle",
+  "permalink": "/sbd-theory-of-everything/sbd-toe/threat-modeling/canon/aplicacao-lifecycle",
+  "draft": false,
+  "unlisted": false,
+  "tags": [
+    {
+      "inline": true,
+      "label": "tipo:anexo",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/tipo-anexo"
+    },
+    {
+      "inline": true,
+      "label": "grupo:execucao",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/grupo-execucao"
+    },
+    {
+      "inline": true,
+      "label": "tema:threat-modeling",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/tema-threat-modeling"
+    }
+  ],
+  "version": "current",
+  "sidebarPosition": 15,
+  "frontMatter": {
+    "id": "aplicacao-lifecycle",
+    "title": "Aplicação de Threat Modeling no Ciclo de Vida",
+    "tags": [
+      "tipo:anexo",
+      "grupo:execucao",
+      "tema:threat-modeling"
+    ]
+  },
+  "sidebar": "sbdToeSidebar",
+  "previous": {
+    "title": "Integração com IriusRisk e Ferramentas Automatizadas",
+    "permalink": "/sbd-theory-of-everything/sbd-toe/threat-modeling/addon/integracao-iriusrisk"
+  },
+  "next": {
+    "title": "Introdução — Arquitetura Segura",
+    "permalink": "/sbd-theory-of-everything/sbd-toe/arquitetura-segura/intro"
+  }
+}

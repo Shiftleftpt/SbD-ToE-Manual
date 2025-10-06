@@ -1,0 +1,52 @@
+{
+  "id": "classificacao-aplicacoes/canon/ameacas-mitigadas",
+  "title": "Ameaças Mitigadas por Práticas do Capítulo 01",
+  "description": "Este capítulo não define controlos técnicos diretos, mas estabelece a estrutura de decisão que governa a aplicação proporcional e justificada de segurança em software. A ausência desta estrutura gera múltiplas ameaças — técnicas, organizacionais e processuais.",
+  "source": "@site/docs/sbd-toe/01-classificacao-aplicacoes/canon/50-ameacas-mitigadas.md",
+  "sourceDirName": "01-classificacao-aplicacoes/canon",
+  "slug": "/classificacao-aplicacoes/canon/ameacas-mitigadas",
+  "permalink": "/sbd-theory-of-everything/sbd-toe/classificacao-aplicacoes/canon/ameacas-mitigadas",
+  "draft": false,
+  "unlisted": false,
+  "tags": [
+    {
+      "inline": true,
+      "label": "canon",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/canon"
+    },
+    {
+      "inline": true,
+      "label": "ameaças",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/ameacas"
+    },
+    {
+      "inline": true,
+      "label": "mitigação",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/mitigacao"
+    },
+    {
+      "inline": true,
+      "label": "risco",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/risco"
+    },
+    {
+      "inline": true,
+      "label": "controlo",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/controlo"
+    }
+  ],
+  "version": "current",
+  "sidebarPosition": 50,
+  "frontMatter": {
+    "id": "ameacas-mitigadas",
+    "title": "Ameaças Mitigadas por Práticas do Capítulo 01",
+    "sidebar_position": 50,
+    "tags": [
+      "canon",
+      "ameaças",
+      "mitigação",
+      "risco",
+      "controlo"
+    ]
+  }
+}

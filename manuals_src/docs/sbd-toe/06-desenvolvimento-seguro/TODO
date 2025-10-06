@@ -1,0 +1,12 @@
+TODO — Capítulo 06-desenvolvimento-seguro
+
+Este ficheiro documenta próximos passos técnicos e editoriais. Não deve ser incluído na documentação final.
+
+1. recomendações de arquiteturas de desenvolvimento seguro:
+    - registries
+    - pipelines reutilizáveis
+    - templates de pipelines
+    - templates de aplicações
+    - templates de testes
+2. recuperar 05-casos praticos.md
+3. recuperar 09-ameacas-mitigadas.md

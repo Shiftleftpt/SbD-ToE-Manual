@@ -1,0 +1,61 @@
+{
+  "id": "dependencias-sbom-sca/addon/risco-supply-chain",
+  "title": "Ameaças à Cadeia de Fornecimento (Supply Chain)",
+  "description": "Tipos de ataque via dependências e práticas para deteção e mitigação",
+  "source": "@site/docs/sbd-toe/05-dependencias-sbom-sca/addon/06-risco-supply-chain.md",
+  "sourceDirName": "05-dependencias-sbom-sca/addon",
+  "slug": "/dependencias-sbom-sca/addon/risco-supply-chain",
+  "permalink": "/sbd-theory-of-everything/sbd-toe/dependencias-sbom-sca/addon/risco-supply-chain",
+  "draft": false,
+  "unlisted": false,
+  "tags": [
+    {
+      "inline": true,
+      "label": "dependencias",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/dependencias"
+    },
+    {
+      "inline": true,
+      "label": "sbom",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/sbom"
+    },
+    {
+      "inline": true,
+      "label": "sca",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/sca"
+    },
+    {
+      "inline": true,
+      "label": "supply-chain",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/supply-chain"
+    },
+    {
+      "inline": true,
+      "label": "risks",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/risks"
+    }
+  ],
+  "version": "current",
+  "sidebarPosition": 6,
+  "frontMatter": {
+    "id": "risco-supply-chain",
+    "title": "Ameaças à Cadeia de Fornecimento (Supply Chain)",
+    "description": "Tipos de ataque via dependências e práticas para deteção e mitigação",
+    "tags": [
+      "dependencias",
+      "sbom",
+      "sca",
+      "supply-chain",
+      "risks"
+    ]
+  },
+  "sidebar": "sbdToeSidebar",
+  "previous": {
+    "title": "Políticas de Atualização de Dependências",
+    "permalink": "/sbd-theory-of-everything/sbd-toe/dependencias-sbom-sca/addon/politica-atualizacoes"
+  },
+  "next": {
+    "title": "Controlo de Registos e Origem de Pacotes",
+    "permalink": "/sbd-theory-of-everything/sbd-toe/dependencias-sbom-sca/addon/controle-registos-origem"
+  }
+}

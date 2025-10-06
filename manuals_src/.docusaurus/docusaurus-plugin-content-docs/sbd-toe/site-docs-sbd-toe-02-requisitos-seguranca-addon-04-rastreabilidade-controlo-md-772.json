@@ -1,0 +1,61 @@
+{
+  "id": "requisitos-seguranca/addon/rastreabilidade-controlo",
+  "title": "Rastreabilidade entre Requisitos e Controlos Técnicos",
+  "description": "Ligação entre requisitos definidos, testes aplicáveis e controlos implementados",
+  "source": "@site/docs/sbd-toe/02-requisitos-seguranca/addon/04-rastreabilidade-controlo.md",
+  "sourceDirName": "02-requisitos-seguranca/addon",
+  "slug": "/requisitos-seguranca/addon/rastreabilidade-controlo",
+  "permalink": "/sbd-theory-of-everything/sbd-toe/requisitos-seguranca/addon/rastreabilidade-controlo",
+  "draft": false,
+  "unlisted": false,
+  "tags": [
+    {
+      "inline": true,
+      "label": "rastreabilidade",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/rastreabilidade"
+    },
+    {
+      "inline": true,
+      "label": "requisitos",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/requisitos"
+    },
+    {
+      "inline": true,
+      "label": "controlos",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/controlos"
+    },
+    {
+      "inline": true,
+      "label": "testes",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/testes"
+    },
+    {
+      "inline": true,
+      "label": "cobertura",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/cobertura"
+    }
+  ],
+  "version": "current",
+  "sidebarPosition": 4,
+  "frontMatter": {
+    "id": "rastreabilidade-controlo",
+    "title": "Rastreabilidade entre Requisitos e Controlos Técnicos",
+    "description": "Ligação entre requisitos definidos, testes aplicáveis e controlos implementados",
+    "tags": [
+      "rastreabilidade",
+      "requisitos",
+      "controlos",
+      "testes",
+      "cobertura"
+    ]
+  },
+  "sidebar": "sbdToeSidebar",
+  "previous": {
+    "title": "Rastreabilidade com Frameworks de Segurança",
+    "permalink": "/sbd-theory-of-everything/sbd-toe/requisitos-seguranca/addon/rastreabilidade-frameworks"
+  },
+  "next": {
+    "title": "Exemplo Prático de Aplicação de Requisitos",
+    "permalink": "/sbd-theory-of-everything/sbd-toe/requisitos-seguranca/addon/exemplos-aplicacao"
+  }
+}

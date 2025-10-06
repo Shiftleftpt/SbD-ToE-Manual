@@ -1,0 +1,84 @@
+{
+  "id": "containers-imagens/intro",
+  "title": "containers e Execução Isolada",
+  "description": "Princípios, práticas e controlos para garantir execução segura, validada e rastreável em ambientes containerizados",
+  "source": "@site/docs/sbd-toe/09-containers-imagens/intro.md",
+  "sourceDirName": "09-containers-imagens",
+  "slug": "/containers-imagens/intro",
+  "permalink": "/sbd-theory-of-everything/sbd-toe/containers-imagens/intro",
+  "draft": false,
+  "unlisted": false,
+  "tags": [
+    {
+      "inline": true,
+      "label": "containers",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/containers"
+    },
+    {
+      "inline": true,
+      "label": "isolamento",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/isolamento"
+    },
+    {
+      "inline": true,
+      "label": "execução",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/execucao"
+    },
+    {
+      "inline": true,
+      "label": "imagens",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/imagens"
+    },
+    {
+      "inline": true,
+      "label": "cicd",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/cicd"
+    },
+    {
+      "inline": true,
+      "label": "opa",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/opa"
+    },
+    {
+      "inline": true,
+      "label": "kubernetes",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/kubernetes"
+    },
+    {
+      "inline": true,
+      "label": "trust",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/trust"
+    },
+    {
+      "inline": true,
+      "label": "DSOMM",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/dsomm"
+    }
+  ],
+  "version": "current",
+  "frontMatter": {
+    "id": "intro",
+    "title": "containers e Execução Isolada",
+    "description": "Princípios, práticas e controlos para garantir execução segura, validada e rastreável em ambientes containerizados",
+    "tags": [
+      "containers",
+      "isolamento",
+      "execução",
+      "imagens",
+      "cicd",
+      "opa",
+      "kubernetes",
+      "trust",
+      "DSOMM"
+    ]
+  },
+  "sidebar": "sbdToeSidebar",
+  "previous": {
+    "title": "Aplicação no Ciclo de Vida — Infraestrutura como Código (IaC)",
+    "permalink": "/sbd-theory-of-everything/sbd-toe/iac-infraestrutura/canon/aplicacao-lifecycle"
+  },
+  "next": {
+    "title": "Imagens Base Seguras e Minimalistas",
+    "permalink": "/sbd-theory-of-everything/sbd-toe/containers-imagens/addon/imagens-base"
+  }
+}

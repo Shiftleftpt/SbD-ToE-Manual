@@ -1,0 +1,61 @@
+{
+  "id": "containers-imagens/addon/imagens-base",
+  "title": "Imagens Base Seguras e Minimalistas",
+  "description": "Seleção, reforço e validação de imagens base seguras para *containers*",
+  "source": "@site/docs/sbd-toe/09-containers-imagens/addon/01-imagens-base.md",
+  "sourceDirName": "09-containers-imagens/addon",
+  "slug": "/containers-imagens/addon/imagens-base",
+  "permalink": "/sbd-theory-of-everything/sbd-toe/containers-imagens/addon/imagens-base",
+  "draft": false,
+  "unlisted": false,
+  "tags": [
+    {
+      "inline": true,
+      "label": "containers",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/containers"
+    },
+    {
+      "inline": true,
+      "label": "imagens base",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/imagens-base"
+    },
+    {
+      "inline": true,
+      "label": "hardening",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/hardening"
+    },
+    {
+      "inline": true,
+      "label": "runtime",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/runtime"
+    },
+    {
+      "inline": true,
+      "label": "supply chain",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/supply-chain"
+    }
+  ],
+  "version": "current",
+  "sidebarPosition": 1,
+  "frontMatter": {
+    "id": "imagens-base",
+    "title": "Imagens Base Seguras e Minimalistas",
+    "description": "Seleção, reforço e validação de imagens base seguras para *containers*",
+    "tags": [
+      "containers",
+      "imagens base",
+      "hardening",
+      "runtime",
+      "supply chain"
+    ]
+  },
+  "sidebar": "sbdToeSidebar",
+  "previous": {
+    "title": "containers e Execução Isolada",
+    "permalink": "/sbd-theory-of-everything/sbd-toe/containers-imagens/intro"
+  },
+  "next": {
+    "title": "Runners, Execução Isolada e Ambientes Controlados",
+    "permalink": "/sbd-theory-of-everything/sbd-toe/containers-imagens/addon/runners-isolamento"
+  }
+}

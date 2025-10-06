@@ -1,0 +1,101 @@
+---
+id: controle-excecoes-visibilidade
+title: Controlo de Exceções e Visibilidade Organizacional
+sidebar_position: 9
+description: Regras formais para permitir exceções no pipeline, com registo, aprovação, prazo de validade e visibilidade por função.
+tags: [exceções, visibilidade, cicd, governação, auditoria, segurança]
+---
+
+
+# 🧭 Controlo de exceções e visibilidade organizacional {cicd-seguro:addon:controle-excecoes-visibilidade}
+
+Mesmo com pipelines bem definidos, é inevitável que ocorram exceções — falhas temporárias, necessidades urgentes, aplicações legadas ou contextos específicos.
+
+Esta prática define como gerir **exceções de forma controlada, rastreável e aprovada**, e como garantir **visibilidade organizacional sobre conformidade, desvios e evolução das práticas** no CI/CD.
+
+> Exceções inevitáveis não podem ser invisíveis nem permanentes.
+
+---
+
+## 🎯 Objetivos {cicd-seguro:addon:controle-excecoes-visibilidade#objetivos}
+
+- Permitir exceções justificadas, com controlo e responsabilização;
+- Detetar incumprimentos sistemáticos ou acidentais das políticas de pipeline;
+- Fornecer visibilidade técnica e executiva sobre o estado de segurança e maturidade CI/CD.
+
+---
+
+## 🛠️ Práticas {cicd-seguro:addon:controle-excecoes-visibilidade#praticas}
+
+1. **Gestão formal de exceções**  
+   - Toda exceção deve ser registada com motivo, impacto, responsável e prazo de validade;
+   - A aprovação deve ser formal (ex: ticket, comentário com reviewer, label `bypass-*`).
+
+2. **Exceções visíveis no pipeline e nos relatórios**  
+   - Devem ser **explicitamente assinaladas** em logs, artefactos ou metadados de execução;
+   - Exceções devem ter expiração e estar sujeitas a revisão.
+
+3. **Métricas agregadas de conformidade e exceções**  
+   - Exemplos de indicadores:  
+     - % de pipelines com SAST ativo;  
+     - Nº de exceções por categoria;  
+     - Aplicações L3 sem enforcement ativo.
+
+4. **Alertas de desvios críticos ou repetidos**  
+   - Detetar e sinalizar situações como:  
+     - Uso recorrente de `--force`;  
+     - Deploys sem gates;  
+     - Builds sem proveniência ou sem validações.
+
+5. **Reporting técnico e executivo**  
+   - Relatórios e dashboards periódicos com:  
+     - Ações corretivas para equipas técnicas;  
+     - Indicadores de risco e maturidade para gestão.
+
+---
+
+## ⚖️ Aplicação proporcional por nível de risco {cicd-seguro:addon:controle-excecoes-visibilidade#aplicacao_proporcional_por_nivel_de_risco}
+
+| Nível | Exceções permitidas                         | Controlo esperado                                           |
+|-------|----------------------------------------------|-------------------------------------------------------------|
+| **L1** | Exceções técnicas justificadas               | Registo simples (ex: label, comentário)                     |
+| **L2** | Aprovadas por lead técnico ou segurança      | Registo + data de expiração + plano de revisão              |
+| **L3** | Exceções mínimas e temporárias               | Aprovadas formalmente; obrigam mitigação paralela ou compensatória |
+
+---
+
+## 📌 Exemplos práticos {cicd-seguro:addon:controle-excecoes-visibilidade#exemplos_praticos}
+
+- **GitHub Actions**  
+  - Labels como `bypass-security-gate`; aprovação visível no PR;  
+  - Métricas com GitHub Insights + Scorecard.
+
+- **GitLab CI**  
+  - Ficheiro `exception.yaml` no MR; revisão por `Security Approval`;  
+  - Dashboards com % de políticas aplicadas por projeto.
+
+- **Azure DevOps**  
+  - Exceções em `release override`, associadas a Work Items;  
+  - Dashboards (nativos ou Power BI) com KPIs por pipeline.
+
+- **Jenkins**  
+  - Comentários manuais no `Jenkinsfile`; uso de flags `bypass=true`;  
+  - Integração com Jira ou ServiceNow para controlo formal.
+
+---
+
+## 📉 Riscos mitigados {cicd-seguro:addon:controle-excecoes-visibilidade#riscos_mitigados}
+
+- Bypass silencioso de políticas de segurança (OSC&R: CI0002);
+- Ausência de rastreabilidade em falhas intencionais ou técnicas;
+- Incapacidade de avaliar a maturidade global de CI/CD;
+- Repetição sistemática de exceções sem ação corretiva.
+
+---
+
+## 🧭 Referências {cicd-seguro:addon:controle-excecoes-visibilidade#referencias}
+
+- [NIST SSDF – GV.3: Accept Risk with Exceptions](https://csrc.nist.gov/publications/detail/sp/800-218/final)
+- [OWASP CI/CD Security – 8. Compliance and Governance](https://owasp.org/www-project-cicd-security/#8-compliance-and-governance)
+- [BSIMM – CR1.5, SM1.3]
+- [SAMM – Governance – Exception Management]

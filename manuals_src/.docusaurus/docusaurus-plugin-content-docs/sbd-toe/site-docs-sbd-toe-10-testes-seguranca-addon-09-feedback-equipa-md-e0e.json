@@ -1,0 +1,62 @@
+{
+  "id": "testes-seguranca/addon/feedback-equipa",
+  "title": "Integração de Findings com as Equipas",
+  "description": "Mecanismos de feedback contínuo dos resultados dos testes de segurança às equipas de desenvolvimento e produto.",
+  "source": "@site/docs/sbd-toe/10-testes-seguranca/addon/09-feedback-equipa.md",
+  "sourceDirName": "10-testes-seguranca/addon",
+  "slug": "/testes-seguranca/addon/feedback-equipa",
+  "permalink": "/sbd-theory-of-everything/sbd-toe/testes-seguranca/addon/feedback-equipa",
+  "draft": false,
+  "unlisted": false,
+  "tags": [
+    {
+      "inline": true,
+      "label": "feedback",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/feedback"
+    },
+    {
+      "inline": true,
+      "label": "findings",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/findings"
+    },
+    {
+      "inline": true,
+      "label": "comunicação",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/comunicacao"
+    },
+    {
+      "inline": true,
+      "label": "equipas",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/equipas"
+    },
+    {
+      "inline": true,
+      "label": "segurança",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/seguranca"
+    }
+  ],
+  "version": "current",
+  "sidebarPosition": 10,
+  "frontMatter": {
+    "id": "feedback-equipa",
+    "title": "Integração de Findings com as Equipas",
+    "description": "Mecanismos de feedback contínuo dos resultados dos testes de segurança às equipas de desenvolvimento e produto.",
+    "tags": [
+      "feedback",
+      "findings",
+      "comunicação",
+      "equipas",
+      "segurança"
+    ],
+    "sidebar_position": 10
+  },
+  "sidebar": "sbdToeSidebar",
+  "previous": {
+    "title": "Gestão de Findings de Segurança",
+    "permalink": "/sbd-theory-of-everything/sbd-toe/testes-seguranca/addon/gestao-findings"
+  },
+  "next": {
+    "title": "Testes Ofensivos (PenTesting)",
+    "permalink": "/sbd-theory-of-everything/sbd-toe/testes-seguranca/addon/pen-testing"
+  }
+}

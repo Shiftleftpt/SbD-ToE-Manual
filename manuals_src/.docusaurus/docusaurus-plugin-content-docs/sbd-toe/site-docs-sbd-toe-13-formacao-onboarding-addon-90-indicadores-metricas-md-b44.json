@@ -1,0 +1,67 @@
+{
+  "id": "formacao-onboarding/addon/indicadores-metricas",
+  "title": "Indicadores e Métricas de Formação em Segurança",
+  "description": "Métricas operacionais e institucionais que permitem avaliar a eficácia da formação e onboarding.",
+  "source": "@site/docs/sbd-toe/13-formacao-onboarding/addon/90-indicadores-metricas.md",
+  "sourceDirName": "13-formacao-onboarding/addon",
+  "slug": "/formacao-onboarding/addon/indicadores-metricas",
+  "permalink": "/sbd-theory-of-everything/sbd-toe/formacao-onboarding/addon/indicadores-metricas",
+  "draft": false,
+  "unlisted": false,
+  "tags": [
+    {
+      "inline": true,
+      "label": "kpi",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/kpi"
+    },
+    {
+      "inline": true,
+      "label": "metricas",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/metricas"
+    },
+    {
+      "inline": true,
+      "label": "formacao",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/formacao"
+    },
+    {
+      "inline": true,
+      "label": "onboarding",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/onboarding"
+    },
+    {
+      "inline": true,
+      "label": "dashboards",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/dashboards"
+    },
+    {
+      "inline": true,
+      "label": "rastreabilidade",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/rastreabilidade"
+    }
+  ],
+  "version": "current",
+  "sidebarPosition": 90,
+  "frontMatter": {
+    "id": "indicadores-metricas",
+    "title": "Indicadores e Métricas de Formação em Segurança",
+    "description": "Métricas operacionais e institucionais que permitem avaliar a eficácia da formação e onboarding.",
+    "tags": [
+      "kpi",
+      "metricas",
+      "formacao",
+      "onboarding",
+      "dashboards",
+      "rastreabilidade"
+    ]
+  },
+  "sidebar": "sbdToeSidebar",
+  "previous": {
+    "title": "Quiz de Validação — Formação para Terceiros",
+    "permalink": "/sbd-theory-of-everything/sbd-toe/formacao-onboarding/addon/22-quiz-terceiros"
+  },
+  "next": {
+    "title": "Aplicação de Formação e Onboarding ao Longo do Ciclo de Vida",
+    "permalink": "/sbd-theory-of-everything/sbd-toe/formacao-onboarding/canon/aplicacao-lifecycle"
+  }
+}

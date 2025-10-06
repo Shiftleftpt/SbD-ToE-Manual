@@ -1,0 +1,74 @@
+{
+  "id": "formacao-onboarding/addon/22-quiz-terceiros",
+  "title": "Quiz de Validação — Formação para Terceiros",
+  "description": "Questionário mínimo para validar conhecimento de colaboradores externos com permissões técnicas",
+  "source": "@site/docs/sbd-toe/13-formacao-onboarding/addon/22-template-quiz-terceiros.md",
+  "sourceDirName": "13-formacao-onboarding/addon",
+  "slug": "/formacao-onboarding/addon/22-quiz-terceiros",
+  "permalink": "/sbd-theory-of-everything/sbd-toe/formacao-onboarding/addon/22-quiz-terceiros",
+  "draft": false,
+  "unlisted": false,
+  "tags": [
+    {
+      "inline": true,
+      "label": "formacao",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/formacao"
+    },
+    {
+      "inline": true,
+      "label": "terceiros",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/terceiros"
+    },
+    {
+      "inline": true,
+      "label": "quiz",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/quiz"
+    },
+    {
+      "inline": true,
+      "label": "validacao",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/validacao"
+    },
+    {
+      "inline": true,
+      "label": "onboarding",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/onboarding"
+    },
+    {
+      "inline": true,
+      "label": "contratados",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/contratados"
+    },
+    {
+      "inline": true,
+      "label": "segurança",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/seguranca"
+    }
+  ],
+  "version": "current",
+  "sidebarPosition": 22,
+  "frontMatter": {
+    "id": "22-quiz-terceiros",
+    "title": "Quiz de Validação — Formação para Terceiros",
+    "sidebar_position": 22,
+    "description": "Questionário mínimo para validar conhecimento de colaboradores externos com permissões técnicas",
+    "tags": [
+      "formacao",
+      "terceiros",
+      "quiz",
+      "validacao",
+      "onboarding",
+      "contratados",
+      "segurança"
+    ]
+  },
+  "sidebar": "sbdToeSidebar",
+  "previous": {
+    "title": "Plano de Formação para Terceiros",
+    "permalink": "/sbd-theory-of-everything/sbd-toe/formacao-onboarding/addon/plano-formacao-terceiros"
+  },
+  "next": {
+    "title": "Indicadores e Métricas de Formação em Segurança",
+    "permalink": "/sbd-theory-of-everything/sbd-toe/formacao-onboarding/addon/indicadores-metricas"
+  }
+}

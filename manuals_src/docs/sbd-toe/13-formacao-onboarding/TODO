@@ -1,0 +1,41 @@
+TODO — Melhorias ao Capítulo 13 — Formação e Consciencialização
+📝 intro.md
+ Adicionar tabela de proporcionalidade por risco (L1, L2, L3 → tipo de formação obrigatória).
+
+ Incluir perfis técnicos (AppSec, DevSecOps, Product Security) com exemplos de necessidades formativas específicas.
+
+ Incluir secção "O que pode correr mal", com exemplos de falhas por falta de formação e como a prática resolve.
+
+ Referenciar possíveis integrações com LMS (ex: Moodle, Viva Learning) para registo e rastreabilidade.
+
+📈 10-maturidade.md
+ Adicionar exemplos de KPIs práticos para medir eficácia da formação:
+
+% de colaboradores com formação inicial em 30 dias
+
+% de findings resolvidos corretamente após awareness
+
+Melhoria de score em testes pós-formação
+
+ Adicionar distinção de maturidade para perfis técnicos (ex: capacidade de interpretar findings, usar ferramentas de AppSec)
+
+🔁 15-aplicacao-lifecycle.md
+ Adicionar exemplos de onboarding técnico com ferramentas de segurança (ZAP, Semgrep, Git leaks, etc.)
+
+ Incluir user story/tarefa específica para validação da eficácia da formação/aprendizagem.
+
+☑️ 20-checklist-revisao.md
+ Adicionar item: “A formação aplicada está alinhada com o nível de risco da aplicação?”
+
+ Adicionar item: “Existe evidência de avaliação pós-formação ou reciclagem?”
+
+ Adicionar item: “Os perfis técnicos receberam formação específica (segurança, ferramentas)?”
+
+📁 Ficheiro novo (opcional)
+ Criar um ficheiro 30-kpis-metricas.md (ou 25-mecanismos-validacao.md) com:
+
+Métricas operacionais (quantitativas)
+
+Métricas qualitativas (feedback, acerto de decisões)
+
+Sugestão de dashboards ou relatórios

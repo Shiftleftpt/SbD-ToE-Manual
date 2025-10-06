@@ -1,0 +1,77 @@
+{
+  "id": "arquitetura-segura/canon/rastreabilidade",
+  "title": "Rastreabilidade Top-Down — Capítulo 04",
+  "description": "Mapeamento das práticas deste capítulo face a frameworks normativos e requisitos de segurança reconhecidos",
+  "source": "@site/docs/sbd-toe/04-arquitetura-segura/canon/25-rastreabilidade.md",
+  "sourceDirName": "04-arquitetura-segura/canon",
+  "slug": "/arquitetura-segura/canon/rastreabilidade",
+  "permalink": "/sbd-theory-of-everything/sbd-toe/arquitetura-segura/canon/rastreabilidade",
+  "draft": false,
+  "unlisted": false,
+  "tags": [
+    {
+      "inline": true,
+      "label": "rastreabilidade",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/rastreabilidade"
+    },
+    {
+      "inline": true,
+      "label": "arquitetura",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/arquitetura"
+    },
+    {
+      "inline": true,
+      "label": "frameworks",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/frameworks"
+    },
+    {
+      "inline": true,
+      "label": "ssdf",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/ssdf"
+    },
+    {
+      "inline": true,
+      "label": "samm",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/samm"
+    },
+    {
+      "inline": true,
+      "label": "bsimm",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/bsimm"
+    },
+    {
+      "inline": true,
+      "label": "slsa",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/slsa"
+    },
+    {
+      "inline": true,
+      "label": "iso",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/iso"
+    },
+    {
+      "inline": true,
+      "label": "dsomm",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/dsomm"
+    }
+  ],
+  "version": "current",
+  "sidebarPosition": 25,
+  "frontMatter": {
+    "id": "rastreabilidade",
+    "title": "Rastreabilidade Top-Down — Capítulo 04",
+    "description": "Mapeamento das práticas deste capítulo face a frameworks normativos e requisitos de segurança reconhecidos",
+    "tags": [
+      "rastreabilidade",
+      "arquitetura",
+      "frameworks",
+      "ssdf",
+      "samm",
+      "bsimm",
+      "slsa",
+      "iso",
+      "dsomm"
+    ],
+    "sidebar_position": 25
+  }
+}

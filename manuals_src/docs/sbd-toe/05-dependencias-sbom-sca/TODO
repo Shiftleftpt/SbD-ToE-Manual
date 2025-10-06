@@ -1,0 +1,11 @@
+TODO — Capítulo 05-dependencias-sbom-sca
+
+Este ficheiro documenta próximos passos técnicos e editoriais. Não deve ser incluído na documentação final.
+
+1. Adoçao de register e feeds internos com proxy e processo de inclusão de "packages"
+2. complexidade pela abrangencia de temas e com elevada volatilidade. Ideal a adopão de ferramentas que integrem com o ciclo de vida e façam a cobertura de todas as vulnerabilidades e se mantenham atualizadas. exemplos de tools e criterios para seleçao de tools
+3. tb relacionado com monitorizaçao, a manutençao de um inventário de usos de componentes e a identificaçao automatica de "degradaçao" desses componentes e impacto nas aplicaçoes/projetos
+
+rever nos capitulso 1, 2, 3:
+Intro refere o que está em addon. O que está em addon está incluido em intro. (o qu^, como, porquê, para quê)
+15-lifecycle engloba tudo o que está em intro (quem quando), com user stories .

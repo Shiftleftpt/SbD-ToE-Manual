@@ -1,0 +1,61 @@
+{
+  "id": "formacao-onboarding/addon/inclusao-terceiros",
+  "title": "Modelo de Inclusão de Terceiros e Fornecedores",
+  "description": "Procedimento padronizado para onboarding seguro de terceiros, com formação mínima exigida.",
+  "source": "@site/docs/sbd-toe/13-formacao-onboarding/addon/20-modelo-inclusao-terceiros.md",
+  "sourceDirName": "13-formacao-onboarding/addon",
+  "slug": "/formacao-onboarding/addon/inclusao-terceiros",
+  "permalink": "/sbd-theory-of-everything/sbd-toe/formacao-onboarding/addon/inclusao-terceiros",
+  "draft": false,
+  "unlisted": false,
+  "tags": [
+    {
+      "inline": true,
+      "label": "terceiros",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/terceiros"
+    },
+    {
+      "inline": true,
+      "label": "onboarding",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/onboarding"
+    },
+    {
+      "inline": true,
+      "label": "formacao",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/formacao"
+    },
+    {
+      "inline": true,
+      "label": "rastreabilidade",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/rastreabilidade"
+    },
+    {
+      "inline": true,
+      "label": "inclusao",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/inclusao"
+    }
+  ],
+  "version": "current",
+  "sidebarPosition": 20,
+  "frontMatter": {
+    "id": "inclusao-terceiros",
+    "title": "Modelo de Inclusão de Terceiros e Fornecedores",
+    "description": "Procedimento padronizado para onboarding seguro de terceiros, com formação mínima exigida.",
+    "tags": [
+      "terceiros",
+      "onboarding",
+      "formacao",
+      "rastreabilidade",
+      "inclusao"
+    ]
+  },
+  "sidebar": "sbdToeSidebar",
+  "previous": {
+    "title": "Template de Quiz para Validação de Onboarding",
+    "permalink": "/sbd-theory-of-everything/sbd-toe/formacao-onboarding/addon/quiz-onboarding"
+  },
+  "next": {
+    "title": "Plano de Formação para Terceiros",
+    "permalink": "/sbd-theory-of-everything/sbd-toe/formacao-onboarding/addon/plano-formacao-terceiros"
+  }
+}

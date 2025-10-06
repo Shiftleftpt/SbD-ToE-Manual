@@ -1,0 +1,23 @@
+{
+  "id": "02-2.-enquadramento-estratégico-e-de-risco",
+  "title": "2. Enquadramento Estratégico e de Risco",
+  "description": "2.1 Porque a Cadeia de Fornecimento é Crítica",
+  "source": "@site/docs/supply-chain/02-2.-enquadramento-estratégico-e-de-risco.md",
+  "sourceDirName": ".",
+  "slug": "/02-2.-enquadramento-estratégico-e-de-risco",
+  "permalink": "/sbd-theory-of-everything/supply-chain/02-2.-enquadramento-estratégico-e-de-risco",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "defaultSidebar",
+  "previous": {
+    "title": "1. Introdução",
+    "permalink": "/sbd-theory-of-everything/supply-chain/01-1.-introdução"
+  },
+  "next": {
+    "title": "3. Princípios Fundamentais da Segurança na Cadeia de Fornecimento",
+    "permalink": "/sbd-theory-of-everything/supply-chain/03-3.-princípios-fundamentais-da-segurança-na-cadeia-de-fornecimento"
+  }
+}

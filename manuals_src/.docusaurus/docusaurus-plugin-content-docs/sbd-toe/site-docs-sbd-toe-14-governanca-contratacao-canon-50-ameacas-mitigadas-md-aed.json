@@ -1,0 +1,65 @@
+{
+  "id": "governanca-contratacao/canon/ameacas-mitigadas",
+  "title": "Ameaças Mitigadas — Governança e Contratação",
+  "description": "Tabela de ameaças mitigadas pelas práticas de exceções, rastreabilidade, onboarding e validação formal descritas neste capítulo",
+  "source": "@site/docs/sbd-toe/14-governanca-contratacao/canon/50-ameacas-mitigadas.md",
+  "sourceDirName": "14-governanca-contratacao/canon",
+  "slug": "/governanca-contratacao/canon/ameacas-mitigadas",
+  "permalink": "/sbd-theory-of-everything/sbd-toe/governanca-contratacao/canon/ameacas-mitigadas",
+  "draft": false,
+  "unlisted": false,
+  "tags": [
+    {
+      "inline": true,
+      "label": "ameacas",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/ameacas"
+    },
+    {
+      "inline": true,
+      "label": "governance",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/governance"
+    },
+    {
+      "inline": true,
+      "label": "rastreabilidade",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/rastreabilidade"
+    },
+    {
+      "inline": true,
+      "label": "excecoes",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/excecoes"
+    },
+    {
+      "inline": true,
+      "label": "contratos",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/contratos"
+    },
+    {
+      "inline": true,
+      "label": "osc&r",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/osc-r"
+    },
+    {
+      "inline": true,
+      "label": "dsomm",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/dsomm"
+    }
+  ],
+  "version": "current",
+  "sidebarPosition": 50,
+  "frontMatter": {
+    "id": "ameacas-mitigadas",
+    "title": "Ameaças Mitigadas — Governança e Contratação",
+    "sidebar_position": 50,
+    "description": "Tabela de ameaças mitigadas pelas práticas de exceções, rastreabilidade, onboarding e validação formal descritas neste capítulo",
+    "tags": [
+      "ameacas",
+      "governance",
+      "rastreabilidade",
+      "excecoes",
+      "contratos",
+      "osc&r",
+      "dsomm"
+    ]
+  }
+}

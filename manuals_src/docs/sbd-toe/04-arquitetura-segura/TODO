@@ -1,0 +1,14 @@
+TODO — Capítulo 04: Arquitetura Segura
+
+Este ficheiro documenta próximos passos técnicos e editoriais. Não deve ser incluído na documentação final.
+
+1. Criar checklist por tipo de arquitetura (monólito, microserviços, serverless, etc.)
+2. Introduzir template ADR com dimensão de risco e rastreabilidade
+3. Adicionar matriz de dependência entre capítulos técnicos e arquitetura
+4. Aplicar badges visuais normalizados (STRIDE, ATT&CK, Maturidade)
+5. (Opcional) Criar ficheiro `11-checklist-arquitetura-por-padrao.md`
+6. Avaliar geração de ficheiro `50-ameacas-mitigadas.md` (como no Cap. 08)
+
+Notas:
+- Todos os tópicos acima são complementares às práticas já implementadas.
+- Devem ser considerados apenas em fases de reforço do capítulo, não no bootstrap inicial.

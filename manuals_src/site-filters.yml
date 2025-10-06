@@ -1,0 +1,8 @@
+filters:
+  remove_print_only: true     # Remove tudo o que é só para print
+  remove_web_only: false      # Mantém blocos web-only
+  to_pdf: false               # Não ativa filtros LaTeX/PDF
+  to_web: true                # Ativa parsing para anchors/links web
+  remove_emojis: false        # Mantém emojis (útil para badges, icons, etc)
+  remove_separadores: true    # Remove separadores visuais (---)
+  

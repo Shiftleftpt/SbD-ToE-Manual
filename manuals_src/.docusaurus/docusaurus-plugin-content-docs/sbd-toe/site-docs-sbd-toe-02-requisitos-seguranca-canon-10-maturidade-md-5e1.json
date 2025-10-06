@@ -1,0 +1,64 @@
+{
+  "id": "requisitos-seguranca/canon/maturidade",
+  "title": "Mapeamento de Maturidade – Capítulo 02",
+  "description": "Este documento estabelece o grau de alinhamento entre as práticas descritas no Capítulo 02 do manual SbD-ToE e os requisitos de frameworks reconhecidas: OWASP SAMM, BSIMM, NIST SSDF, SLSA e OWASP DSOMM.",
+  "source": "@site/docs/sbd-toe/02-requisitos-seguranca/canon/10-maturidade.md",
+  "sourceDirName": "02-requisitos-seguranca/canon",
+  "slug": "/requisitos-seguranca/canon/maturidade",
+  "permalink": "/sbd-theory-of-everything/sbd-toe/requisitos-seguranca/canon/maturidade",
+  "draft": false,
+  "unlisted": false,
+  "tags": [
+    {
+      "inline": true,
+      "label": "canon",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/canon"
+    },
+    {
+      "inline": true,
+      "label": "maturidade",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/maturidade"
+    },
+    {
+      "inline": true,
+      "label": "SAMM",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/samm"
+    },
+    {
+      "inline": true,
+      "label": "SSDF",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/ssdf"
+    },
+    {
+      "inline": true,
+      "label": "BSIMM",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/bsimm"
+    },
+    {
+      "inline": true,
+      "label": "DSOMM",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/dsomm"
+    },
+    {
+      "inline": true,
+      "label": "SLSA",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/slsa"
+    }
+  ],
+  "version": "current",
+  "sidebarPosition": 10,
+  "frontMatter": {
+    "id": "maturidade",
+    "title": "Mapeamento de Maturidade – Capítulo 02",
+    "sidebar_position": 10,
+    "tags": [
+      "canon",
+      "maturidade",
+      "SAMM",
+      "SSDF",
+      "BSIMM",
+      "DSOMM",
+      "SLSA"
+    ]
+  }
+}

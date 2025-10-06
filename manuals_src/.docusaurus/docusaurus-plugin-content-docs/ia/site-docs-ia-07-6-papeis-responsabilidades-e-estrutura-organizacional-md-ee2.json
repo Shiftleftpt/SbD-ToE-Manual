@@ -1,0 +1,23 @@
+{
+  "id": "07-6.-papéis,-responsabilidades-e-estrutura-organizacional",
+  "title": "6. Papéis, Responsabilidades e Estrutura Organizacional",
+  "description": "AI Security Lead",
+  "source": "@site/docs/ia/07-6.-papéis,-responsabilidades-e-estrutura-organizacional.md",
+  "sourceDirName": ".",
+  "slug": "/07-6.-papéis,-responsabilidades-e-estrutura-organizacional",
+  "permalink": "/sbd-theory-of-everything/ia/07-6.-papéis,-responsabilidades-e-estrutura-organizacional",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "defaultSidebar",
+  "previous": {
+    "title": "5. Frameworks de Referência e Aderência",
+    "permalink": "/sbd-theory-of-everything/ia/06-5.-frameworks-de-referência-e-aderência"
+  },
+  "next": {
+    "title": "7. Governação e Programas Internos",
+    "permalink": "/sbd-theory-of-everything/ia/08-7.-governação-e-programas-internos"
+  }
+}

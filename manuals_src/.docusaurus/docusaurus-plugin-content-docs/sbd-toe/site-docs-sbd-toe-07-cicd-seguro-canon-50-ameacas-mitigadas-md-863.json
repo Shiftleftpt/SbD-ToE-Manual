@@ -1,0 +1,65 @@
+{
+  "id": "cicd-seguro/canon/ameacas-mitigadas",
+  "title": "Ameaças Mitigadas",
+  "description": "Ameaças mitigadas pelas práticas de segurança de CI/CD descritas neste capítulo",
+  "source": "@site/docs/sbd-toe/07-cicd-seguro/canon/50-ameacas-mitigadas.md",
+  "sourceDirName": "07-cicd-seguro/canon",
+  "slug": "/cicd-seguro/canon/ameacas-mitigadas",
+  "permalink": "/sbd-theory-of-everything/sbd-toe/cicd-seguro/canon/ameacas-mitigadas",
+  "draft": false,
+  "unlisted": false,
+  "tags": [
+    {
+      "inline": true,
+      "label": "ameaças",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/ameacas"
+    },
+    {
+      "inline": true,
+      "label": "mitigação",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/mitigacao"
+    },
+    {
+      "inline": true,
+      "label": "cicd",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/cicd"
+    },
+    {
+      "inline": true,
+      "label": "supply chain",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/supply-chain"
+    },
+    {
+      "inline": true,
+      "label": "osc&r",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/osc-r"
+    },
+    {
+      "inline": true,
+      "label": "stride",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/stride"
+    },
+    {
+      "inline": true,
+      "label": "dsomm",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/dsomm"
+    }
+  ],
+  "version": "current",
+  "sidebarPosition": 50,
+  "frontMatter": {
+    "id": "ameacas-mitigadas",
+    "title": "Ameaças Mitigadas",
+    "description": "Ameaças mitigadas pelas práticas de segurança de CI/CD descritas neste capítulo",
+    "tags": [
+      "ameaças",
+      "mitigação",
+      "cicd",
+      "supply chain",
+      "osc&r",
+      "stride",
+      "dsomm"
+    ],
+    "sidebar_position": 50
+  }
+}

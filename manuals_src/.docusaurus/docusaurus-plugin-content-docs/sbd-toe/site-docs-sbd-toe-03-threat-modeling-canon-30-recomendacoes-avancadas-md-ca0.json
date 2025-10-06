@@ -1,0 +1,58 @@
+{
+  "id": "threat-modeling/canon/rastreabilidade",
+  "title": "Rastreabilidade — Threat Modeling",
+  "description": "Mapeamento das práticas de threat modeling com requisitos normativos e capítulos fundacionais",
+  "source": "@site/docs/sbd-toe/03-threat-modeling/canon/30-recomendacoes-avancadas.md",
+  "sourceDirName": "03-threat-modeling/canon",
+  "slug": "/threat-modeling/canon/rastreabilidade",
+  "permalink": "/sbd-theory-of-everything/sbd-toe/threat-modeling/canon/rastreabilidade",
+  "draft": false,
+  "unlisted": false,
+  "tags": [
+    {
+      "inline": true,
+      "label": "rastreabilidade",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/rastreabilidade"
+    },
+    {
+      "inline": true,
+      "label": "ssdf",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/ssdf"
+    },
+    {
+      "inline": true,
+      "label": "samm",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/samm"
+    },
+    {
+      "inline": true,
+      "label": "requisitos",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/requisitos"
+    },
+    {
+      "inline": true,
+      "label": "controlo",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/controlo"
+    },
+    {
+      "inline": true,
+      "label": "normativo",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/normativo"
+    }
+  ],
+  "version": "current",
+  "sidebarPosition": 30,
+  "frontMatter": {
+    "id": "rastreabilidade",
+    "title": "Rastreabilidade — Threat Modeling",
+    "description": "Mapeamento das práticas de threat modeling com requisitos normativos e capítulos fundacionais",
+    "tags": [
+      "rastreabilidade",
+      "ssdf",
+      "samm",
+      "requisitos",
+      "controlo",
+      "normativo"
+    ]
+  }
+}

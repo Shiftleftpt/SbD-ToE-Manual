@@ -1,0 +1,19 @@
+{
+  "id": "containers-imagens/canon/recomendacoes-avancadas",
+  "title": "Recomendações Avançadas para Execução Segura de *containers*",
+  "description": "Práticas avançadas para ambientes de maior criticidade e maturidade organizacional",
+  "source": "@site/docs/sbd-toe/09-containers-imagens/canon/30-recomendacoes-avancadas.md",
+  "sourceDirName": "09-containers-imagens/canon",
+  "slug": "/containers-imagens/canon/recomendacoes-avancadas",
+  "permalink": "/sbd-theory-of-everything/sbd-toe/containers-imagens/canon/recomendacoes-avancadas",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 30,
+  "frontMatter": {
+    "id": "recomendacoes-avancadas",
+    "title": "Recomendações Avançadas para Execução Segura de *containers*",
+    "description": "Práticas avançadas para ambientes de maior criticidade e maturidade organizacional"
+  }
+}

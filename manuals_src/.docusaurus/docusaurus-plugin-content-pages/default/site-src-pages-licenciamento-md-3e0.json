@@ -1,0 +1,12 @@
+{
+  "type": "mdx",
+  "permalink": "/sbd-theory-of-everything/licenciamento",
+  "source": "@site/src/pages/licenciamento.md",
+  "title": "Licenciamento e Termos de Reutilização",
+  "description": "Condições de uso e partilha do manual SbD-ToE",
+  "frontMatter": {
+    "title": "Licenciamento e Termos de Reutilização",
+    "description": "Condições de uso e partilha do manual SbD-ToE"
+  },
+  "unlisted": false
+}

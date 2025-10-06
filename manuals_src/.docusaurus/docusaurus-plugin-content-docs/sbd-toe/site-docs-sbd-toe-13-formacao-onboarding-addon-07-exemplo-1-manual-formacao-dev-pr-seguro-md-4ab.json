@@ -1,0 +1,61 @@
+{
+  "id": "formacao-onboarding/addon/exemplo-manual-dev-pr",
+  "title": "Exemplo de Manual de Formação — Pull Request Seguro",
+  "description": "Exemplo concreto de manual formativo para desenvolvedores sobre práticas seguras em PRs.",
+  "source": "@site/docs/sbd-toe/13-formacao-onboarding/addon/07-exemplo1-manual-formacao-dev-pr-seguro.md",
+  "sourceDirName": "13-formacao-onboarding/addon",
+  "slug": "/formacao-onboarding/addon/exemplo-manual-dev-pr",
+  "permalink": "/sbd-theory-of-everything/sbd-toe/formacao-onboarding/addon/exemplo-manual-dev-pr",
+  "draft": false,
+  "unlisted": false,
+  "tags": [
+    {
+      "inline": true,
+      "label": "exemplo",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/exemplo"
+    },
+    {
+      "inline": true,
+      "label": "formacao",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/formacao"
+    },
+    {
+      "inline": true,
+      "label": "pull request",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/pull-request"
+    },
+    {
+      "inline": true,
+      "label": "dev",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/dev"
+    },
+    {
+      "inline": true,
+      "label": "aplicacao",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/aplicacao"
+    }
+  ],
+  "version": "current",
+  "sidebarPosition": 7,
+  "frontMatter": {
+    "id": "exemplo-manual-dev-pr",
+    "title": "Exemplo de Manual de Formação — Pull Request Seguro",
+    "description": "Exemplo concreto de manual formativo para desenvolvedores sobre práticas seguras em PRs.",
+    "tags": [
+      "exemplo",
+      "formacao",
+      "pull request",
+      "dev",
+      "aplicacao"
+    ]
+  },
+  "sidebar": "sbdToeSidebar",
+  "previous": {
+    "title": "Manual de Formação por Capítulo do SbD-ToE",
+    "permalink": "/sbd-theory-of-everything/sbd-toe/formacao-onboarding/addon/manual-formacao-capitulos"
+  },
+  "next": {
+    "title": "Módulo Formativo — Infraestrutura como Código (IaC) Seguro",
+    "permalink": "/sbd-theory-of-everything/sbd-toe/formacao-onboarding/addon/formacao-iac"
+  }
+}

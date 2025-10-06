@@ -1,0 +1,55 @@
+{
+  "id": "classificacao-aplicacoes/addon/mapeamento-ameacas-risco",
+  "title": "Mapeamento de Ameaças por Nível de Risco",
+  "description": "A integração de modelos de ameaças estruturados na análise de risco é fundamental para garantir que os riscos considerados representam efetivamente a realidade técnica e operativa. Este ficheiro estabelece um modelo de referência para mapear ameaças conhecidas (como STRIDE ou MITRE ATT\\&CK) aos riscos analisados no contexto de aplicações.",
+  "source": "@site/docs/sbd-toe/01-classificacao-aplicacoes/addon/08-mapeamento-ameacas-risco.md",
+  "sourceDirName": "01-classificacao-aplicacoes/addon",
+  "slug": "/classificacao-aplicacoes/addon/mapeamento-ameacas-risco",
+  "permalink": "/sbd-theory-of-everything/sbd-toe/classificacao-aplicacoes/addon/mapeamento-ameacas-risco",
+  "draft": false,
+  "unlisted": false,
+  "tags": [
+    {
+      "inline": true,
+      "label": "tipo:mapeamento",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/tipo-mapeamento"
+    },
+    {
+      "inline": true,
+      "label": "ameaças",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/ameacas"
+    },
+    {
+      "inline": true,
+      "label": "risco",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/risco"
+    },
+    {
+      "inline": true,
+      "label": "controlo",
+      "permalink": "/sbd-theory-of-everything/sbd-toe/tags/controlo"
+    }
+  ],
+  "version": "current",
+  "sidebarPosition": 8,
+  "frontMatter": {
+    "id": "mapeamento-ameacas-risco",
+    "title": "Mapeamento de Ameaças por Nível de Risco",
+    "sidebar_position": 8,
+    "tags": [
+      "tipo:mapeamento",
+      "ameaças",
+      "risco",
+      "controlo"
+    ]
+  },
+  "sidebar": "sbdToeSidebar",
+  "previous": {
+    "title": "Ciclo de Vida da Classificação de Risco",
+    "permalink": "/sbd-theory-of-everything/sbd-toe/classificacao-aplicacoes/addon/ciclo-vida-risco"
+  },
+  "next": {
+    "title": "Critérios para Aceitação de Risco",
+    "permalink": "/sbd-theory-of-everything/sbd-toe/classificacao-aplicacoes/addon/criterios-aceitacao-risco"
+  }
+}

@@ -1,0 +1,157 @@
+---
+id: index
+title: Índice do Manual SbD-ToE
+description: Entrada do Manual com acesso rápido a todos os capítulos técnicos.
+sidebar_position: 0
+---
+
+import Link from '@docusaurus/Link';
+
+export const GROUPS = [
+  { id: 'fund', emoji: '🧭', title: 'Fundamentos e Contexto Organizacional' },
+  { id: 'eng',  emoji: '🛠️', title: 'Engenharia Segura' },
+  { id: 'impl', emoji: '⚙️', title: 'Implementação & Automação' },
+  { id: 'ops',  emoji: '🛰️', title: 'Operação & Melhoria Contínua' },
+];
+
+export const CHAPTERS = [
+  // FUNDAMENTOS (exclui 00)
+  { n: '1',  group:'fund', title:'Classificação das Aplicações', basilar:true,
+    desc:'Critérios de criticidade (exposição, dados, impacto) para controlos proporcionais e rastreabilidade.',
+    href:'/sbd-toe/sbd-manual/classificacao-aplicacoes/intro' },
+  { n: '14', group:'fund', title:'Governança e Contratação', basilar:false,
+    desc:'Modelos de governação, cláusulas contratuais e validação de fornecedores.',
+    href:'/sbd-toe/sbd-manual/governanca-contratacao/intro' },
+  { n: '13', group:'fund', title:'Formação e Capacitação', basilar:false,
+    desc:'Capacitação por papéis, secure coding dojos e integração contínua.',
+    href:'/sbd-toe/sbd-manual/formacao-capacitacao/intro' },
+
+  // ENGENHARIA SEGURA
+  { n: '2',  group:'eng',  title:'Requisitos de Segurança', basilar:true,
+    desc:'Catálogo prescritivo e validações por nível de risco, alinhado com DSOMM/SSDF/SAMM.',
+    href:'/sbd-toe/sbd-manual/requisitos-seguranca/intro' },
+  { n: '3',  group:'eng',  title:'Threat Modeling', basilar:true,
+    desc:'Identificação de ameaças e cenários de abuso, com ligação a requisitos e testes.',
+    href:'/sbd-toe/sbd-manual/threat-modeling/intro' },
+  { n: '4',  group:'eng',  title:'Arquitetura Segura', basilar:true,
+    desc:'Padrões e decisões de arquitetura alinhadas a riscos e requisitos.',
+    href:'/sbd-toe/sbd-manual/arquitetura-segura/intro' },
+  { n: '5',  group:'eng',  title:'Dependências, SBOM e SCA', basilar:false,
+    desc:'Gestão de componentes, SBOM e SCA com exceções governadas e rastreáveis.',
+    href:'/sbd-toe/sbd-manual/dependencias-sbom-sca/intro' },
+
+  // IMPLEMENTAÇÃO & AUTOMAÇÃO
+  { n: '6',  group:'impl', title:'Desenvolvimento Seguro', basilar:true,
+    desc:'Práticas de codificação segura, revisões e validações no fluxo de trabalho.',
+    href:'/sbd-toe/sbd-manual/desenvolvimento-seguro/intro' },
+  { n: '7',  group:'impl', title:'CI/CD Seguro', basilar:false,
+    desc:'Pipeline como produto: isolamento, assinaturas, promoções e integridade.',
+    href:'/sbd-toe/sbd-manual/cicd-seguro/intro' },
+  { n: '8',  group:'impl', title:'Infraestrutura como Código (IaC)', basilar:false,
+    desc:'Aplicação do SbD a infraestrutura e ambientes com automação rastreável.',
+    href:'/sbd-toe/sbd-manual/iac-infraestrutura/intro' },
+  { n: '9',  group:'impl', title:'Containers e Imagens', basilar:false,
+    desc:'Endurecimento, registos confiáveis, política de publicação e execução.',
+    href:'/sbd-toe/sbd-manual/containers-imagens/intro' },
+  { n: '10', group:'impl', title:'Testes de Segurança', basilar:false,
+    desc:'Estratégia de verificação L1–L3: estático, dinâmico, IAST, fuzzing, CodeQL, etc.',
+    href:'/sbd-toe/sbd-manual/testes-seguranca/intro' },
+
+  // OPERAÇÃO & MELHORIA CONTÍNUA
+  { n: '11', group:'ops',  title:'Deploy Seguro', basilar:false,
+    desc:'Lançamentos, reversibilidade, feature flags e evidências de segurança.',
+    href:'/sbd-toe/sbd-manual/deploy-seguro/intro' },
+  { n: '12', group:'ops',  title:'Monitorização e Resposta', basilar:false,
+    desc:'Observabilidade, deteção/alerta, playbooks e cobertura pós-deploy.',
+    href:'/sbd-toe/sbd-manual/monitorizacao-resposta/intro' },
+];
+
+<style>{`
+  .sectionHeader {
+    display:flex; align-items:center; gap:.6rem;
+    margin: 1.75rem 0 .75rem;
+    color: var(--ifm-color-emphasis-900);
+  }
+  .sectionHeader .emoji { font-size:1.4rem; line-height:1; }
+  .grid { display:grid; gap:1rem; }
+  @media (min-width: 768px) { .grid { grid-template-columns: repeat(2, minmax(0,1fr)); } }
+
+  .legend { display:flex; gap:.6rem; flex-wrap:wrap; margin:.25rem 0 1rem; }
+  .badgeType {
+    display:inline-flex; align-items:center; gap:.35rem;
+    padding:.25rem .55rem; border-radius:999px; font-size:.85rem;
+    background: var(--ifm-background-surface-color);
+    border: 1px solid var(--ifm-color-emphasis-200);
+  }
+
+  .cardX {
+    background: var(--ifm-background-surface-color);
+    border: 1px solid var(--ifm-color-emphasis-200);
+    border-radius: 14px;
+    box-shadow: var(--ifm-global-shadow-lw);
+    height: 100%;
+    display:flex; flex-direction:column;
+  }
+  .cardX__body { padding: 1rem; }
+  .cardX h3 { margin: .1rem 0 .35rem; font-size: 1.05rem; color: var(--ifm-color-emphasis-900); }
+  .cardX p  { margin: 0 .1rem .8rem; color: var(--ifm-color-emphasis-700); }
+  .typePill { display:inline-flex; align-items:center; gap:.35rem; font-size:.9rem; margin-bottom:.5rem; }
+`}</style>
+
+<div className="container margin-vert--lg">
+
+  <p style={{textAlign:'center', color:'var(--ifm-color-emphasis-700)'}}>
+    Identificação por categoria:
+    <span className="badgeType" style={{marginLeft:'.5rem'}}>🧱 Capítulos Basilares</span>
+    <span className="badgeType">⚙️ Capítulos Operacionais</span>
+    <span className="badgeType">🏛️ Capítulos Organizacionais</span>
+  </p>
+
+  {GROUPS.map(g => (
+    <section key={g.id}>
+      <h2 className="sectionHeader">
+        <span className="emoji" aria-hidden="true">{g.emoji}</span>
+        <span>{g.title}</span>
+      </h2>
+
+      <div className="grid">
+        {CHAPTERS.filter(c => c.group === g.id).map(c => (
+          <div key={c.n} className="cardX">
+            <div className="cardX__body">
+
+              {/* Etiqueta de categoria sem variáveis adicionais */}
+              <div className="typePill" title={
+                c.basilar
+                  ? 'Capítulos Basilares'
+                  : (c.group === 'fund' && (c.n === '13' || c.n === '14'))
+                    ? 'Capítulos Organizacionais'
+                    : 'Capítulos Operacionais'
+              }>
+                <span>{
+                  c.basilar
+                    ? '🧱'
+                    : (c.group === 'fund' && (c.n === '13' || c.n === '14'))
+                      ? '🏛️'
+                      : '⚙️'
+                }</span>
+                <span style={{opacity:.85}}>{
+                  c.basilar
+                    ? 'Capítulos Basilares'
+                    : (c.group === 'fund' && (c.n === '13' || c.n === '14'))
+                      ? 'Capítulos Organizacionais'
+                      : 'Capítulos Operacionais'
+                }</span>
+              </div>
+
+              <h3>{c.n} — {c.title}</h3>
+              <p>{c.desc}</p>
+              <Link className="button button--primary button--sm" to={c.href}>
+                Abrir capítulo
+              </Link>
+            </div>
+          </div>
+        ))}
+      </div>
+    </section>
+  ))}
+</div>

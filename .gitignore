@@ -1,0 +1,136 @@
+# ---- Docusaurus ----
+# Diretório interno e build de produção
+.docusaurus/
+build/
+
+# Pré-visualização/saídas de deploy
+.out/
+out/
+.vercel/
+.netlify/
+dist/
+
+# Imagens otimizadas/transformadas (se usados plugins)
+.cache/
+.cache-loader/
+.image-cache/
+
+# ---- Node / JS toolchain ----
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+package-lock.json
+pnpm-lock.yaml
+yarn.lock
+
+# Turbo / Nx / TS build caches (se aplicável)
+.turbo/
+nx-cache/
+*.tsbuildinfo
+
+# Coverage & relatórios
+coverage/
+reports/
+playwright-report/
+test-results/
+
+# Storybook (se usado)
+storybook-static/
+
+# ---- Ambiente / segredos ----
+.env
+.env.*
+!.env.example
+
+# ---- SO & IDEs ----
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Linux
+*~
+
+# VS Code / JetBrains / outros
+.vscode/
+.history/
+.idea/
+*.iml
+
+# ---- Várias ferramentas ----
+# Parcel/Vite caches (se algum pacote usar)
+.parcel-cache/
+vite.config.timestamp-*.mjs
+
+# ESLint / Prettier / TypeScript caches
+.eslintcache
+.prettier-cache/
+tsconfig.tsbuildinfo
+
+# ---- Artifacts temporários diversos ----
+*.log
+*.tmp
+*.temp
+*.swp
+*.swo
+
+# ---- Gerados por scripts locais (ajusta conforme necessário) ----
+_out/
+_publish/
+
+# Docusaurus
+.docusaurus/
+build/
+out/
+dist/
+
+# Node
+node_modules/
+*.log
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+.Spotlight-V100
+.Trashes
+# Ficheiros de recurso em volumes externos
+._*
+# ---- Python / tooling local ----
+.venv/
+venv/
+.env/
+.envrc
+.python-version
+
+__pycache__/
+*.py[cod]
+*.pyo
+
+# Linters/test/caches
+.mypy_cache/
+.pytest_cache/
+.ruff_cache/
+.tox/
+.coverage*
+htmlcov/
+.ipynb_checkpoints/
+
+# Docusaurus
+.docusaurus/
+build/
+.cache/
+.cache-loader/
+
+# Node
+node_modules/
+npm-debug.log*
+yarn-error.log*
+pnpm-debug.log*

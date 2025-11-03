@@ -1,0 +1,245 @@
+/* =========================
+   Branding ShiftLeft (base)
+   ========================= */
+:root {
+  /* Marca */
+  --ifm-color-primary: #f00041;            /* Pink */
+  --ifm-link-color: var(--ifm-color-primary);
+  --ifm-navbar-background-color: #00283c;  /* Navy */
+  --ifm-navbar-link-color: #fff;
+  --ifm-navbar-link-hover-color: var(--ifm-color-primary);
+
+  /* Tipografia/layout */
+  --sl-maxw: 72ch;          /* largura ideal de leitura */
+  --sl-leading: 1.6;        /* line-height base */
+
+  /* Cards (light fallback) */
+  --sl-card-bg: #ffffff;
+  --sl-card-br: #e9eaee;
+  --sl-card-shadow: 0 6px 24px rgba(0,0,0,.06);
+
+  /* CTA */
+  --sl-cta: #ff1f57;
+  --sl-cta-hover: #e3184a;
+
+  --sl-radius: 16px;
+}
+
+/* =========================
+   Tema Dark (tokens fortes)
+   ========================= */
+html[data-theme='dark'] {
+  --ifm-font-color-base: #f5f6f8;             /* texto principal */
+  --ifm-color-emphasis-700: #d8d9df;          /* texto secundário */
+
+  --ifm-background-color: #0f1014;            /* fundo página */
+  --ifm-background-surface-color: #161821;    /* superfícies */
+  --ifm-card-background-color: #1b1e28;
+
+  /* Escalas de primário para botões/links */
+  --ifm-color-primary: #ff3a6e;
+  --ifm-color-primary-dark: #e82e60;
+  --ifm-color-primary-darker: #d8295a;
+  --ifm-color-primary-light: #ff4b7d;
+
+  /* Cards (dark) */
+  --sl-card-bg: var(--ifm-card-background-color);
+  --sl-card-br: #2a2b35;
+  --sl-card-shadow: 0 10px 28px rgba(0,0,0,.28);
+
+  /* CTA em dark (mantém coerência com primário) */
+  --sl-cta: var(--ifm-color-primary);
+  --sl-cta-hover: var(--ifm-color-primary-dark);
+}
+
+/* =========================
+   Hero (imagens responsivas)
+   ========================= */
+.sl-hero {
+  background: url('/img/brand/hero-desktop.png') center/cover no-repeat;
+  color: #fff;
+  padding: 4rem 0 3rem;
+}
+@media (max-width: 996px) {
+  .sl-hero {
+    background-image: url('/img/brand/hero-mobile.png');
+    padding: 3rem 0 2rem;
+  }
+}
+
+/* Títulos/subtítulos do hero (legibilidade + largura de leitura) */
+.hero__title {
+  color: var(--ifm-font-color-base);
+  letter-spacing: -0.015em;
+  line-height: 1.2;
+  max-width: 22ch;
+  margin-inline: auto;
+}
+.hero__subtitle {
+  color: var(--ifm-color-emphasis-700);
+  line-height: 1.6;
+  max-width: 70ch;
+  margin-inline: auto;
+}
+
+/* Espaçamento vertical do hero (mantém responsivo) */
+.hero--primary,
+.heroBanner_src-theme-ClassicLayout-styles-module {
+  padding-block: clamp(3.5rem, 6vw, 6rem);
+}
+
+/* CTA principal do hero */
+.hero .button.button--primary {
+  background: var(--sl-cta);
+  border: none;
+  font-weight: 700;
+  padding: .9rem 1.25rem;
+  border-radius: calc(var(--sl-radius) - 4px);
+  transition: transform .15s ease, background .15s ease;
+}
+.hero .button.button--primary:hover,
+.hero .button.button--primary:focus-visible {
+  background: var(--sl-cta-hover);
+  transform: translateY(-1px);
+  outline: none;
+}
+
+/* =========================
+   Secção “Capítulos e temas”
+   ========================= */
+.cardsSection { padding: 2rem 0 0; }
+.cardsTitle { margin-bottom: 1rem; }
+.cardsGrid { align-items: stretch; }
+.card     { height: 100%; }
+.buttons  { margin-top: 1.25rem; }
+
+.sl-section-title {
+  text-align: center;
+  font-size: clamp(1.25rem, 2vw, 1.5rem);
+  letter-spacing: .005em;
+  color: var(--ifm-color-emphasis-700);
+  margin: clamp(1.5rem, 3vw, 2rem) 0;
+}
+
+/* =========================
+   Cards (estilo único; usa tokens por tema)
+   ========================= */
+.card {
+  background: var(--sl-card-bg);
+  border: 1px solid var(--sl-card-br);
+  border-radius: var(--sl-radius);
+  box-shadow: var(--sl-card-shadow);
+  transition: transform .15s ease, box-shadow .2s ease, border-color .2s ease;
+}
+.card:hover,
+.card:focus-within {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 32px rgba(0,0,0,.08);
+  border-color: color-mix(in oklab, var(--sl-card-br) 70%, var(--sl-cta) 30%);
+}
+.card .card__body { padding: 1.1rem 1.1rem 0.9rem; }
+.card h3 {
+  margin: 0 0 .25rem 0;
+  font-size: 1rem;
+  letter-spacing: .005em;
+  color: var(--ifm-font-color-base);
+}
+.card p {
+  color: var(--ifm-color-emphasis-700);
+  line-height: 1.55;
+  margin: .25rem 0 .75rem;
+  max-width: 60ch;
+}
+.card .button {
+  border-radius: 12px;
+  padding: .5rem .75rem;
+  font-weight: 600;
+}
+
+/* =========================
+   Grid + contenção
+   ========================= */
+.container { max-width: 1200px; }
+.row { row-gap: 1rem; }
+.margin-vert--lg { margin-block: clamp(1.5rem, 4vw, 3rem); }
+
+/* =========================
+   Acessibilidade: foco visível
+   ========================= */
+:focus-visible {
+  outline: 2px solid var(--sl-cta);
+  outline-offset: 2px;
+  border-radius: 8px;
+}
+
+/* =========================
+   Botões (fora do hero)
+   ========================= */
+.button.button--primary {
+  background: var(--ifm-color-primary);
+  border: none;
+  font-weight: 700;
+}
+.button.button--primary:hover,
+.button.button--primary:focus-visible {
+  background: var(--ifm-color-primary-dark);
+}
+/* Badge de capítulo basilar (estrela discreta) */
+.sl-star {
+  margin-left: .5rem;
+  font-size: .95em;
+  vertical-align: middle;
+  filter: drop-shadow(0 0 2px rgba(0,0,0,.25));
+}
+/* ===== Admonition personalizada: userstory ===== */
+:root {
+  --sl-us-bg: #fff6bf;   /* light post-it */
+  --sl-us-fg: #3a2a00;
+  --sl-us-br: color-mix(in oklab, #3a2a00 20%, transparent);
+}
+html[data-theme='dark'] {
+  --sl-us-bg: #3a2a00;   /* dark amber */
+  --sl-us-fg: #ffef9c;
+  --sl-us-br: color-mix(in oklab, #ffef9c 35%, transparent);
+}
+
+.admonition.admonition--userstory {
+  background: var(--sl-us-bg);
+  color: var(--sl-us-fg);
+  border: 1px solid var(--sl-us-br);
+  border-radius: 12px;
+  box-shadow: 0 6px 16px rgba(0,0,0,.06);
+}
+
+/* Cabeçalho com ícone e sem barra pesada */
+.admonition--userstory .admonition-heading {
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+  font-weight: 700;
+  background: transparent;
+  border-bottom: 0;
+  padding-top: .6rem;
+}
+
+/* Substitui o ícone padrão por um emoji "📝" */
+.admonition--userstory .admonition-icon {
+  display: none;
+}
+.admonition--userstory .admonition-heading::before {
+  content: "📝";
+  font-size: 1.1em;
+  line-height: 1;
+}
+
+/* Espaçamentos do conteúdo */
+.admonition--userstory .admonition-content {
+  padding-top: .25rem;
+}
+.admonition--userstory p,
+.admonition--userstory li { margin: .25rem 0; }
+
+/* Checkboxes visíveis sobre o fundo */
+.admonition--userstory input[type="checkbox"] {
+  accent-color: var(--sl-us-fg);
+}

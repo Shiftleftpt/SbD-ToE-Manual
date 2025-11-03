@@ -1,0 +1,340 @@
+---
+id: about
+title: Prefácio e Enquadramento
+description: Contexto, objetivos e referências principais do SbD-ToE.
+sidebar_position: 0
+---
+
+<style>{`
+  /* Grids e cartões reutilizáveis para as secções seguintes (mantidos) */
+  .grid { display:grid; gap:1rem; }
+  @media (min-width: 768px){ .grid{ grid-template-columns: repeat(2, minmax(0,1fr)); } }
+  @media (min-width: 1200px){ .grid{ grid-template-columns: repeat(3, minmax(0,1fr)); } }
+
+  .card {
+    background: var(--ifm-background-surface-color);
+    border: 1px solid var(--ifm-color-emphasis-200);
+    border-radius: 14px;
+    box-shadow: var(--ifm-global-shadow-lw);
+    height: 100%;
+    display:flex; flex-direction:column;
+  }
+  .card__head {
+    display:flex; align-items:center; gap:.6rem;
+    padding: .85rem 1rem .5rem;
+    border-bottom: 1px solid var(--ifm-color-emphasis-200);
+  }
+  .card__emoji { font-size: 1.2rem; }
+  .card__title { margin:0; font-size:1.02rem; color: var(--ifm-color-emphasis-900); }
+  .card__body { padding: .75rem 1rem 1rem; }
+  .card__body p { margin:.35rem 0; color: var(--ifm-color-emphasis-800); }
+
+  .sectionTitle {
+    display:flex; align-items:center; gap:.6rem;
+    margin: 1.6rem 0 .8rem; color: var(--ifm-color-emphasis-900);
+  }
+  .sectionTitle .emoji { font-size:1.3rem; line-height:1; }
+
+  /* Nota/pontos relevantes (blockquote) */
+  .prefacio .muted { color: var(--ifm-color-emphasis-800); }
+  .prefacio blockquote {
+    margin: .75rem 0 0;
+    padding: .75rem 1rem;
+    border-left: 4px solid var(--ifm-color-primary);
+    background: var(--ifm-background-surface-color);
+    border-radius: 8px;
+  }
+  .prefacio blockquote p { margin: .25rem 0; }
+`}</style>
+
+## Prefácio
+
+<div className="prefacio">
+  <p className="muted">
+    O <strong>Security by Design — Theory of Everything (SbD-ToE)</strong> resulta de uma década de experiências acumuladas em organizações de diferentes setores, de incidentes que revelaram falhas estruturais e de uma necessidade crescente: <strong>unificar o que estava disperso</strong>.
+  </p>
+
+  <p className="muted">
+    Este manual nasce da necessidade de tornar a segurança aplicacional acessível, prática e exequível para qualquer organização, independentemente da sua dimensão, orçamento ou contexto tecnológico. Durante muito tempo, havia poucos referenciais estruturados de <em>security by design</em>; hoje há abundância de frameworks, normas e regulamentos — e essa riqueza, por vezes, gera dispersão. O essencial perde-se entre catálogos extensos, sobreposições e abordagens divergentes.
+  </p>
+
+  <p className="muted">
+    O SbD-ToE surge como resposta a essa fragmentação: não substitui normas ou frameworks; <strong>dá-lhes coerência</strong> e torna-as <strong>exequíveis no terreno</strong>. Seleciona práticas críticas por evidência empírica, organiza-as por capítulos que cobrem o ciclo de vida do software e aplica proporcionalidade ao risco (L1–L3), oferecendo um guião claro, auditável e adaptável — sem perder rigor técnico-científico.
+  </p>
+
+  <p className="muted">
+    Resulta de análise crítica de referenciais internacionais (SAMM, BSIMM, DSOMM, SLSA, NIST SSDF, CIS, ISO/IEC 27001/27034, NIS2, DORA), consolidando práticas prescritivas que são:
+  </p>
+  <ul>
+    <li>Executáveis com baixo investimento inicial;</li>
+    <li>Automatizáveis e integráveis em pipelines modernos;</li>
+    <li>Adaptáveis a diferentes níveis de maturidade organizacional;</li>
+    <li>Suportadas por ferramentas open source ou de fácil acesso.</li>
+  </ul>
+
+  <blockquote>
+    <p><strong>📌 Pontos relevantes</strong></p>
+    <p>• Foco em <strong>aplicabilidade</strong> e <strong>auditabilidade</strong> prática.</p>
+    <p>• <strong>Proporcionalidade ao risco</strong> (L1–L3) como princípio operativo.</p>
+    <p>• <strong>Integração</strong> de modelos, normas e catálogos para reduzir dispersão.</p>
+    <p>• <strong>Artefactos e checklists</strong> para adoção consistente por equipas e fornecedores.</p>
+  </blockquote>
+</div>
+
+## Porquê  “Theory of Everything”
+
+O nome é metafórico: tal como a física procura uma formulação unificadora, o SbD-ToE procura integrar referenciais de segurança (organizacionais e técnicos) num quadro único e coerente — sem simplificações indevidas, mas com <strong>estrutura de integração</strong> e aplicação concreta.
+
+<div className="grid">
+  <div className="card">
+    <div className="card__head">
+      <span className="card__emoji" aria-hidden="true">🧭</span>
+      <h3 className="card__title">Visão top-down — modelos e normas</h3>
+    </div>
+    <div className="card__body">
+      <p>Modelos de maturidade (SAMM, BSIMM, DSOMM) e normas (ISO/IEC 27001/27034, CIS, NIS2, DORA).</p>
+      <ul>
+        <li>Define <strong>o que</strong> fazer, <strong>quando</strong> e <strong>a que nível</strong>.</li>
+        <li>Base objetiva para medir evolução e comprovar conformidade.</li>
+        <li>Alinhamento entre requisitos técnicos, organizacionais e regulamentares.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div className="card">
+    <div className="card__head">
+      <span className="card__emoji" aria-hidden="true">🧩</span>
+      <h3 className="card__title">Perspetiva bottom-up — ameaças & fraquezas</h3>
+    </div>
+    <div className="card__body">
+      <p>Taxonomias como MITRE ATT&CK, CAPEC e CWE para caracterizar riscos concretos.</p>
+      <ul>
+        <li>Explica <strong>para quê</strong> existe cada prática (ligação a ameaças reais).</li>
+        <li>Relevância face ao panorama de ataques.</li>
+        <li>Prioridade por impacto e probabilidade.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div className="card">
+    <div className="card__head">
+      <span className="card__emoji" aria-hidden="true">🧪</span>
+      <h3 className="card__title">Experiência prática — aplicação real</h3>
+    </div>
+    <div className="card__body">
+      <p>Mais de uma década em contextos diversos transforma teoria em execução sustentada.</p>
+      <ul>
+        <li>Quem faz e como aplicar com realismo operacional.</li>
+        <li>Artefactos reutilizáveis e ajustamentos pragmáticos.</li>
+        <li>Controlos convertidos em procedimentos exequíveis e auditáveis.</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+## Papel unificador e normalização
+
+<div className="grid">
+  <div className="card">
+    <div className="card__head">
+      <span className="card__emoji" aria-hidden="true">🧠</span>
+      <h3 className="card__title">Agrupamento semântico</h3>
+    </div>
+    <div className="card__body">
+      <p>Conceitos equivalentes de referências distintas são consolidados sob terminologia única.</p>
+    </div>
+  </div>
+  <div className="card">
+    <div className="card__head">
+      <span className="card__emoji" aria-hidden="true">🧭</span>
+      <h3 className="card__title">Normalização de âmbito</h3>
+    </div>
+    <div className="card__body">
+      <p>Delimitações variadas são harmonizadas para um formato coerente e aplicável.</p>
+    </div>
+  </div>
+  <div className="card">
+    <div className="card__head">
+      <span className="card__emoji" aria-hidden="true">🔎</span>
+      <h3 className="card__title">Mapeamento cruzado</h3>
+    </div>
+    <div className="card__body">
+      <p>Cada prática mantém ligação explícita às referências de origem, garantindo rastreabilidade.</p>
+    </div>
+  </div>
+</div>
+
+## Introdução ao SbD-ToE
+
+O SbD-ToE oferece um quadro <strong>prático</strong> e <strong>proporcional</strong> para integrar segurança no desenvolvimento, ajustado ao risco real de cada aplicação.
+
+### Precedência lógica entre capítulos
+Análise de risco e <strong>classificação</strong> são o ponto de partida; depois <strong>requisitos</strong>, <strong>threat modeling</strong> e <strong>arquitetura</strong> — assegurando proporcionalidade.
+
+### Natureza prescritiva e adaptável
+Define <strong>o que</strong>, <strong>quando</strong>, <strong>como</strong> e <strong>com que meios</strong>.  
+É <strong>modular</strong>, <strong>extensível</strong> e <strong>pragmático</strong> para aplicação diária.
+
+### Aplicabilidade universal
+Usa-se para avaliar maturidade, decidir com base no risco, alinhar desenvolvimento/segurança/operação e implementar melhorias incrementais.
+
+## Abrangência temática (14 áreas)
+O manual está dividido em 14 capítulos, com aplicação independente, mas que por conveniência são agrupados em 4 grupos de organização:
+
+<style>{`
+  .groups { display:grid; gap:1.25rem; }
+  @media (min-width: 768px) { .groups { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+
+  .groupCard{
+    border:1px solid var(--ifm-color-emphasis-200);
+    background:var(--ifm-background-surface-color);
+    border-radius:14px; padding:1rem; box-shadow:var(--ifm-global-shadow-lw);
+  }
+  .groupCard h3{ margin:.2rem 0 .4rem; font-size:1.05rem; color:var(--ifm-color-emphasis-900); }
+  .groupDesc{ color: var(--ifm-color-emphasis-700); margin-bottom:.5rem; }
+
+  .legend { display:flex; flex-wrap:wrap; gap:.5rem; margin:.75rem 0 1rem; }
+  .legend .pill { opacity:.9; }
+
+  .pills{ display:flex; flex-wrap:wrap; gap:.5rem; }
+  .pill{
+    display:inline-flex; align-items:center; gap:.4rem;
+    padding:.4rem .6rem; border-radius:999px;
+    background:var(--ifm-background-color);
+    border:1px solid var(--ifm-color-emphasis-200);
+    font-size:.9rem;
+  }
+  .pill strong{ color:var(--ifm-color-emphasis-900); }
+  .pill small{ color:var(--ifm-color-emphasis-700); }
+`}</style>
+
+<div className="legend">
+  <span className="pill">⭐ <strong>Basilar</strong></span>
+  <span className="pill">⚙️ <strong>Operacional</strong></span>
+  <span className="pill">🏛️ <strong>Organizacional</strong></span>
+</div>
+
+<div className="groups">
+
+  <div className="groupCard">
+    <h3>Ⅰ — Fundamentos e Contexto Organizacional</h3>
+    <p className="groupDesc">Princípios, governação, risco e capacitação.</p>
+    <div className="pills">
+      <span className="pill">⭐ <strong>Cap. 01</strong> <small>Classificação das Aplicações</small></span>
+      <span className="pill">🏛️ <strong>Cap. 14</strong> <small>Governação e Contratação</small></span>
+      <span className="pill">🏛️ <strong>Cap. 13</strong> <small>Formação e Onboarding</small></span>
+    </div>
+  </div>
+
+  <div className="groupCard">
+    <h3>Ⅱ — Engenharia Segura</h3>
+    <p className="groupDesc">Do requisito ao desenho testável.</p>
+    <div className="pills">
+      <span className="pill">⭐ <strong>Cap. 02</strong> <small>Requisitos de Segurança</small></span>
+      <span className="pill">⭐ <strong>Cap. 03</strong> <small>Threat Modeling</small></span>
+      <span className="pill">⭐ <strong>Cap. 04</strong> <small>Arquitetura Segura</small></span>
+      <span className="pill">⚙️ <strong>Cap. 05</strong> <small>Dependências · SBOM · SCA</small></span>
+    </div>
+  </div>
+
+  <div className="groupCard">
+    <h3>Ⅲ — Implementação e Automação</h3>
+    <p className="groupDesc">Pipelines, IaC, containers e testes.</p>
+    <div className="pills">
+      <span className="pill">⭐ <strong>Cap. 06</strong> <small>Desenvolvimento Seguro</small></span>
+      <span className="pill">⚙️ <strong>Cap. 07</strong> <small>CI/CD Seguro</small></span>
+      <span className="pill">⚙️ <strong>Cap. 08</strong> <small>Infraestrutura como Código (IaC)</small></span>
+      <span className="pill">⚙️ <strong>Cap. 09</strong> <small>Containers e Imagens</small></span>
+      <span className="pill">⚙️ <strong>Cap. 10</strong> <small>Testes de Segurança</small></span>
+    </div>
+  </div>
+
+  <div className="groupCard">
+    <h3>Ⅳ — Operação e Melhoria Contínua</h3>
+    <p className="groupDesc">Execução, observabilidade e resposta.</p>
+    <div className="pills">
+      <span className="pill">⚙️ <strong>Cap. 11</strong> <small>Deploy Seguro</small></span>
+      <span className="pill">⚙️ <strong>Cap. 12</strong> <small>Monitorização e Resposta</small></span>
+    </div>
+  </div>
+
+</div>
+
+## Porquê estas 14 áreas — e como adotar
+
+São o <strong>esqueleto mínimo</strong> de um programa de <em>Security by Design</em>.  
+A adoção é <strong>progressiva</strong> e pode começar com simplificações, desde que exista plano para cobertura plena.
+
+- Classificação única → arranque rápido, mas perde proporcionalidade.  
+- Testes iguais para todas as apps → cobertura mínima, mas pouco eficiente.  
+- Sem requisitos formais → dificulta rastreabilidade e medição.  
+- Sem testes para requisitos → falhas sistemáticas passam despercebidas.
+
+<strong>Lacunas típicas e impacto</strong>  
+• Sem Threat Modeling → controlos genéricos e desalinhados com ameaças reais.  
+• Sem Requisitos → verificação sem base objetiva.  
+• Sem Formação → erro humano permanece elevado.  
+• Sem Governação → práticas degradam com rotatividade ou mudança de fornecedores.
+
+<strong>Resultados emergentes</strong>  
+• Resiliência Operacional ← Monitorização + Governação + Risco.  
+• Supply Chain Security ← Dependências + CI/CD + IaC + Containers.  
+• DevSecOps ← Desenvolvimento + Testes + CI/CD + Formação.
+
+## Enquadramento das principais referências
+
+<div className="sectionTitle"><span className="emoji" aria-hidden="true">🧭</span><span>1) Modelos de maturidade</span></div>
+<div className="grid">
+  <div className="card"><div className="card__body">
+    <p><strong>O que são</strong><br/>Estruturas para medir capacidade e consistência de práticas.</p>
+  </div></div>
+  <div className="card"><div className="card__body">
+    <p><strong>Quais usamos</strong><br/>OWASP SAMM, BSIMM, OWASP DSOMM.</p>
+  </div></div>
+  <div className="card"><div className="card__body">
+    <p><strong>Como contribuíram</strong><br/>Mensurabilidade, priorização por marcos e comparação externa.</p>
+  </div></div>
+</div>
+
+<div className="sectionTitle"><span className="emoji" aria-hidden="true">📜</span><span>2) Normas e conformidade</span></div>
+<div className="grid">
+  <div className="card"><div className="card__body">
+    <p><strong>O que são</strong><br/>Requisitos formais auditáveis (organizacionais e técnicos).</p>
+  </div></div>
+  <div className="card"><div className="card__body">
+    <p><strong>Quais usamos</strong><br/>ISO/IEC 27001/27034, CIS Controls, ENISA/NIS2/DORA, PCI DSS.</p>
+  </div></div>
+  <div className="card"><div className="card__body">
+    <p><strong>Como contribuíram</strong><br/>Auditabilidade, conformidade e sustentação organizacional.</p>
+  </div></div>
+</div>
+
+<div className="sectionTitle"><span className="emoji" aria-hidden="true">🛠️</span><span>3) Referenciais técnicos de práticas</span></div>
+<div className="grid">
+  <div className="card"><div className="card__body">
+    <p><strong>O que são</strong><br/>Guias de controlos técnicos e supply chain.</p>
+  </div></div>
+  <div className="card"><div className="card__body">
+    <p><strong>Quais usamos</strong><br/>NIST SSDF, SLSA, OWASP ASVS.</p>
+  </div></div>
+  <div className="card"><div className="card__body">
+    <p><strong>Como contribuíram</strong><br/>Matriz de controlos operacionais e templates/checklists.</p>
+  </div></div>
+</div>
+
+<div className="sectionTitle"><span className="emoji" aria-hidden="true">🧩</span><span>4) Catálogos de ameaças e vulnerabilidades</span></div>
+<div className="grid">
+  <div className="card"><div className="card__body">
+    <p><strong>O que são</strong><br/>Taxonomias de ataques, padrões e fraquezas.</p>
+  </div></div>
+  <div className="card"><div className="card__body">
+    <p><strong>Quais usamos</strong><br/>MITRE ATT&CK, CAPEC, CWE.</p>
+  </div></div>
+  <div className="card"><div className="card__body">
+    <p><strong>Como contribuíram</strong><br/>Rastreabilidade prática↔ameaça e priorização por impacto/probabilidade.</p>
+  </div></div>
+</div>
+
+## Nota de Agradecimento
+
+Este manual resulta do trabalho coletivo de comunidades, autores e equipas técnicas ao longo de décadas, consolidado por prática real e evolução contínua.

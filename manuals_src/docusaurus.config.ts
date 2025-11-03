@@ -1,74 +1,55 @@
-import {themes as prismThemes} from 'prism-react-renderer';
 import type {Config} from '@docusaurus/types';
+import {themes as prismThemes} from 'prism-react-renderer';
 
 const config: Config = {
-  title: 'Security by Design – Theory of Everything',
-  tagline: 'Framework prática e aberta para desenvolver software seguro',
-  favicon: 'img/favicon.ico',
+  
+  title: 'Security by Design',
+  tagline: 'Theory of Everything',
 
-  future: {
-    v4: true,
-  },
+  favicon: 'img/brand/favicon-32.png', 
 
+  // Ativa comportamento compatível com v4 (quebra a posição do onBrokenMarkdownLinks)
+  future: { v4: true },
+
+  // Deploy em GitHub Pages
   url: 'https://shiftleftpt.github.io',
-  baseUrl: '/sbd-theory-of-everything/',
-
+  baseUrl: '/SbD-ToE-Manual/',
   organizationName: 'shiftleftpt',
   projectName: 'sbd-theory-of-everything',
 
+  // Continua válido no topo
   onBrokenLinks: 'warn',
-  onBrokenMarkdownLinks: 'warn',
 
+  // i18n (apenas PT por agora)
   i18n: {
     defaultLocale: 'pt',
     locales: ['pt'],
   },
+  
+  // Markdown / Mermaid
+  markdown: {
+    mermaid: true,
+    // Quando future.v4=true, o onBrokenMarkdownLinks move-se para hooks
+    hooks: {
+      onBrokenMarkdownLinks: 'warn',
+    },
+  },
 
-  plugins: [
-  [
-    '@docusaurus/plugin-content-docs',
+  // Tags extra no <head> (manifest + apple-touch-icon)
+  headTags: [
     {
-      id: 'sbd-toe',
-      path: 'docs/sbd-toe',
-      routeBasePath: 'sbd-toe',
-      sidebarPath: require.resolve('./sidebars-sbd-toe.ts'),
+      tagName: 'link',
+      attributes: { rel: 'manifest', href: '/img/brand/site.webmanifest' },
+    },
+    {
+      tagName: 'link',
+      attributes: { rel: 'apple-touch-icon', href: '/img/brand/favicon-180.png' },
     },
   ],
-  [
-    '@docusaurus/plugin-content-docs',
-    {
-      id: 'ia',
-      path: 'docs/ia',
-      routeBasePath: 'ia',
-      sidebarPath: undefined,
-    },
-  ],
-  [
-    '@docusaurus/plugin-content-docs',
-    {
-      id: 'supply-chain',
-      path: 'docs/supply-chain',
-      routeBasePath: 'supply-chain',
-      sidebarPath: undefined,
-    },
-  ],
-  [
-    '@docusaurus/plugin-content-docs',
-    {
-      id: 'ameacas',
-      path: 'docs/ameacas',
-      routeBasePath: 'ameacas',
-      sidebarPath: undefined,
-    },
-  ],
-  [
-    '@docusaurus/plugin-content-pages',
-    {
-      path: 'src/pages',
-    },
-  ],
-],
+
+  // Temas (usar theme-classic aqui é OK) + Mermaid
   themes: [
+    '@docusaurus/theme-mermaid',
     [
       '@docusaurus/theme-classic',
       {
@@ -77,95 +58,144 @@ const config: Config = {
     ],
   ],
 
+  // Plugins
+  plugins: [
+    [
+      '@docusaurus/plugin-content-docs',
+      {
+        id: 'sbd-toe',
+        path: 'docs/sbd-toe',
+        routeBasePath: 'sbd-toe',
+        sidebarPath: require.resolve('./sidebars-sbd-toe.ts'),
+        numberPrefixParser: true,
+        showLastUpdateTime: false,
+        showLastUpdateAuthor: false,
+        admonitions: {
+          keywords: ['userstory'],
+          extendDefaults: true, // mantém note|tip|info|warning|danger
+        },
+      },
+    ],
+    [
+      '@docusaurus/plugin-content-pages',
+      { path: 'src/pages' },
+    ],
+  ],
+
   themeConfig: {
     image: 'img/docusaurus-social-card.jpg',
-    mermaid: {
-      theme: { light: 'default', dark: 'dark' } // ✅ Tema para Mermaid
-    },
-    // Configuração do navbar
+
+    // ⇣⇣ BRAND ⇣⇣
     navbar: {
-      title: 'Security by Design – Theory of Everything',
+      title: 'SbD–ToE',
+      hideOnScroll: false,
       logo: {
         alt: 'Security by Design – Theory of Everything',
-        src: 'img/logo.svg',
+        src: 'img/brand/Shiftleft_LogoHorizontal_V5.png',   
+        srcDark: 'img/brand/Shiftleft_LogoHorizontal_V5.png' 
       },
       items: [
         {
           type: 'docSidebar',
-          sidebarId: 'sbdToeSidebar',
           docsPluginId: 'sbd-toe',
-          docId: 'intro',
+          sidebarId: 'manualAtual',
+          docId: 'index', 
           position: 'left',
-          label: 'SbD-ToE',
+          label: 'Manual',
         },
         {
           type: 'docSidebar',
-          sidebarId: 'defaultSidebar',
-          docsPluginId: 'ia',
-          docId: 'intro',
+          docsPluginId: 'sbd-toe',
+          sidebarId: 'toeOverview',
+          docId: '000-teory-of-everything/intro',
           position: 'left',
-          label: 'IA',
+          label: 'ToE',
         },
         {
           type: 'docSidebar',
-          sidebarId: 'defaultSidebar',
-          docsPluginId: 'supply-chain',
-          docId: 'intro',
+          docsPluginId: 'sbd-toe',
+          sidebarId: 'toeHowTo',
+          docId: '001-how-to-manual/intro',
           position: 'left',
-          label: 'Supply Chain',
+          label: 'Como usar',
         },
         {
           type: 'docSidebar',
-          sidebarId: 'defaultSidebar',
-          docsPluginId: 'ameacas',
-          docId: 'intro',
+          docsPluginId: 'sbd-toe',
+          sidebarId: 'toeCrossCheck',
+          docId: '002-cross-check-normativo/intro',
           position: 'left',
-          label: 'Ameaças',
+          label: 'Cross-check',
         },
+
+        /* {
+          type: 'docSidebar',
+          docsPluginId: 'sbd-toe',
+          sidebarId: 'toePolicies',
+          docId: '003-policies-globals/intro',
+          position: 'left',
+          label: 'Políticas',
+        }, */
+
+        { to: '/licenciamento', label: 'Licença', position: 'right' },
+        { to: '/about', label: 'Sobre', position: 'right' },
         {
-          to: '/licenciamento',
-          label: 'Licença',
-          position: 'right'
-        },
-        {
-          to: '/about', //  página estática em src/pages/about.md
-          label: 'Sobre',
-          position: 'right'
-        },
-        {
-          href: 'https://github.com/Shiftleftpt/sbd-theory-of-everything',
+          href: 'https://github.com/Shiftleftpt/SbD-ToE-Manual',
           label: 'GitHub',
           position: 'right',
         },
-      ]
+      ],
     },
-    // Configuração do rodapé
+
+    // Footer
     footer: {
       style: 'dark',
       links: [
         {
           title: 'Manuais',
           items: [
-            {label: 'SbD-ToE', to: '/sbd-toe/intro'},
-            {label: 'IA', to: '/ia/intro'},
-            {label: 'Supply Chain', to: '/supply-chain/intro'},
-            {label: 'Ameaças', to: '/ameacas/intro'},
+            { label: 'SbD-ToE', to: '/sbd-toe/' },
           ],
         },
         {
           title: 'Mais',
           items: [
-            {label: 'GitHub', href: 'https://github.com/facebook/docusaurus'},
+            { label: 'GitHub', href: 'https://github.com/Shiftleftpt/sbd-theory-of-everything' },
           ],
         },
       ],
-      copyright: `Copyright © ${new Date().getFullYear()} Shiftleft - Secure Software Engineering, Lda. Built with Docusaurus.`,
+      copyright: `© ${new Date().getFullYear()} Shiftleft – Secure Software Engineering, Lda. Construído com Docusaurus.`,
     },
 
+    // UX/tema
+    colorMode: {
+      respectPrefersColorScheme: true,
+      defaultMode: 'dark', // mantive como tinhas; posso trocar para 'light' se preferires
+    },
+    docs: {
+      sidebar: {
+        autoCollapseCategories: true,
+        hideable: true,
+      },
+    },
+
+    // Prism
     prism: {
       theme: prismThemes.github,
       darkTheme: prismThemes.dracula,
+      additionalLanguages: ['bash', 'powershell', 'java', 'json', 'yaml', 'docker', 'diff'],
     },
+
+    // Mermaid tema
+    mermaid: {
+      theme: { light: 'default', dark: 'dark' },
+    },
+
+    // SEO simples
+    metadata: [
+      { name: 'keywords', content: 'Security by Design, SbD, DevSecOps, SAMM, SSDF, SLSA, DSOMM' },
+      { name: 'og:type', content: 'website' },
+    ],
   },
 };
 

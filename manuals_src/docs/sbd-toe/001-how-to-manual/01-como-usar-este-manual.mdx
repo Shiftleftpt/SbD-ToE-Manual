@@ -1,0 +1,195 @@
+---
+id: como-usar-este-manual
+title: Como Usar Este Manual
+hide_title: false
+hide_table_of_contents: false
+---
+
+import Link from '@docusaurus/Link';
+
+export const CH = {
+  cap00: '/sbd-toe/sbd-manual/theory-of-everything/intro',
+  cap01: '/sbd-toe/sbd-manual/classificacao-aplicacoes/intro',
+  cap02: '/sbd-toe/sbd-manual/requisitos-seguranca/intro',
+  cap03: '/sbd-toe/sbd-manual/threat-modeling/intro',
+  cap04: '/sbd-toe/sbd-manual/arquitetura-segura/intro',
+  cap05: '/sbd-toe/sbd-manual/dependencias-sbom-sca/intro',
+  cap06: '/sbd-toe/sbd-manual/desenvolvimento-seguro/intro',
+  cap07: '/sbd-toe/sbd-manual/cicd-seguro/intro',
+  cap08: '/sbd-toe/sbd-manual/iac-infraestrutura/intro',
+  cap09: '/sbd-toe/sbd-manual/containers-imagens/intro',
+  cap10: '/sbd-toe/sbd-manual/testes-seguranca/intro',
+  cap11: '/sbd-toe/sbd-manual/deploy-seguro/intro',
+  cap12: '/sbd-toe/sbd-manual/monitorizacao-operacao/intro',
+  cap13: '/sbd-toe/sbd-manual/formacao-onboarding/intro',
+  cap14: '/sbd-toe/sbd-manual/governanca-contratacao/intro',
+};
+
+# Como Usar Este Manual
+
+Este manual foi concebido para apoiar **equipas técnicas, gestores e decisores** na implementação prática de **Security by Design** no desenvolvimento de software.  
+O seu objetivo é transformar **boas intenções em ações concretas e sustentáveis**, adaptadas ao risco real e à maturidade de cada organização, desmistificando qualquer ideia de complexidade e dificuldade associada.
+O Security by Design é um caminho, "faz-se andando", e este manual ensina os passos a seguir para que todos possam aplicar as práticas. 
+
+---
+
+## 🎯 A quem se destina
+
+Este manual é útil para:
+
+- Equipas de desenvolvimento e DevOps
+- Arquitetos de software e solução
+- Equipa de segurança (AppSec, GRC, CISO)
+- Gestores de produto, projeto e qualidade
+- Equipa de operações, cloud e infraestrutura
+
+---
+
+## 🧱 Estrutura do manual
+
+O manual está dividido em 14 capítulos, com aplicação independente, mas que por conveniência são agrupados em 4 grupos de organização:
+
+<style>{`
+  .groups { display:grid; gap:1.25rem; }
+  @media (min-width: 768px) { .groups { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+
+  .groupCard{
+    border:1px solid var(--ifm-color-emphasis-200);
+    background:var(--ifm-background-surface-color);
+    border-radius:14px; padding:1rem; box-shadow:var(--ifm-global-shadow-lw);
+  }
+  .groupCard h3{ margin:.2rem 0 .4rem; font-size:1.05rem; color:var(--ifm-color-emphasis-900); }
+  .groupDesc{ color: var(--ifm-color-emphasis-700); margin-bottom:.5rem; }
+
+  .legend { display:flex; flex-wrap:wrap; gap:.5rem; margin:.75rem 0 1rem; }
+  .legend .pill { opacity:.9; }
+
+  .pills{ display:flex; flex-wrap:wrap; gap:.5rem; }
+  .pill{
+    display:inline-flex; align-items:center; gap:.4rem;
+    padding:.4rem .6rem; border-radius:999px;
+    background:var(--ifm-background-color);
+    border:1px solid var(--ifm-color-emphasis-200);
+    font-size:.9rem;
+  }
+  .pill strong{ color:var(--ifm-color-emphasis-900); }
+  .pill small{ color:var(--ifm-color-emphasis-700); }
+`}</style>
+
+<div className="legend">
+  <span className="pill">⭐ <strong>Basilar</strong></span>
+  <span className="pill">⚙️ <strong>Operacional</strong></span>
+  <span className="pill">🏛️ <strong>Organizacional</strong></span>
+</div>
+
+<div className="groups">
+
+  <div className="groupCard">
+    <h3>Ⅰ — Fundamentos e Contexto Organizacional</h3>
+    <p className="groupDesc">Princípios, governação, risco e capacitação.</p>
+    <div className="pills">
+      <span className="pill">⭐ <strong>Cap. 01</strong> <small>Classificação das Aplicações</small></span>
+      <span className="pill">🏛️ <strong>Cap. 14</strong> <small>Governação e Contratação</small></span>
+      <span className="pill">🏛️ <strong>Cap. 13</strong> <small>Formação e Onboarding</small></span>
+    </div>
+  </div>
+
+  <div className="groupCard">
+    <h3>Ⅱ — Engenharia Segura</h3>
+    <p className="groupDesc">Do requisito ao desenho testável.</p>
+    <div className="pills">
+      <span className="pill">⭐ <strong>Cap. 02</strong> <small>Requisitos de Segurança</small></span>
+      <span className="pill">⭐ <strong>Cap. 03</strong> <small>Threat Modeling</small></span>
+      <span className="pill">⭐ <strong>Cap. 04</strong> <small>Arquitetura Segura</small></span>
+      <span className="pill">⚙️ <strong>Cap. 05</strong> <small>Dependências · SBOM · SCA</small></span>
+    </div>
+  </div>
+
+  <div className="groupCard">
+    <h3>Ⅲ — Implementação e Automação</h3>
+    <p className="groupDesc">Pipelines, IaC, containers e testes.</p>
+    <div className="pills">
+      <span className="pill">⭐ <strong>Cap. 06</strong> <small>Desenvolvimento Seguro</small></span>
+      <span className="pill">⚙️ <strong>Cap. 07</strong> <small>CI/CD Seguro</small></span>
+      <span className="pill">⚙️ <strong>Cap. 08</strong> <small>Infraestrutura como Código (IaC)</small></span>
+      <span className="pill">⚙️ <strong>Cap. 09</strong> <small>Containers e Imagens</small></span>
+      <span className="pill">⚙️ <strong>Cap. 10</strong> <small>Testes de Segurança</small></span>
+    </div>
+  </div>
+
+  <div className="groupCard">
+    <h3>Ⅳ — Operação e Melhoria Contínua</h3>
+    <p className="groupDesc">Execução, observabilidade e resposta.</p>
+    <div className="pills">
+      <span className="pill">⚙️ <strong>Cap. 11</strong> <small>Deploy Seguro</small></span>
+      <span className="pill">⚙️ <strong>Cap. 12</strong> <small>Monitorização e Resposta</small></span>
+    </div>
+  </div>
+
+</div>
+---
+
+## 🧭 Como navegar
+Cada capitulo é composto por três partes principais:
+- **Introdução** : resume os aspetos importantes "o quê, como, quem, quando e porquê", o sumário do capitulo. 
+- Aplicação no ciclo de vida: User stories para aplicação, detalhe de quem faz o quê quando.
+- detalhe técnico: explicação sobre cada um dos aspetos suportando por exemplos, sugestões alternativas, entre outros.
+
+Depois para cada capitulo existe mais informação, como checklists, rastreabilidade das praticas com as frameworks de referencia, que vulnerabilidades são mitigadas com a aplicação das práticas recomendadas, etc. Esta informação aparece no manual de forma agrupada, fora do manual prescritivo, sendo mais util para processos de auditoria ou priorização da aplicação.
+
+---
+
+## 🛠️ Como aplicar na prática
+
+### 📘 Leitura linear
+
+Recomendada para equipas a estruturar processos ou auditorias:  
+Segue a ordem natural dos capítulos (1 a 14), começando pela gestão de risco.
+
+### 🧩 Leitura modular
+
+Recomendada para iniciativas específicas (ex: foco em CI/CD seguro):  
+Permite leitura capítulo a capítulo, com aplicação independente.
+
+---
+
+## ✅ Em contexto de auditoria
+
+- Cada capítulo tem um **checklist verificável** com critérios objetivos
+- Os itens são binários: **sim / não**
+- A ausência de **capítulos basilares** invalida a avaliação de maturidade
+
+---
+
+## 📊 Em avaliação de maturidade
+
+Os conteúdos estão alinhados com frameworks reconhecidas:
+
+- **OWASP SAMM** – Domínios de Design, Implementation, Verification
+- **BSIMM** – Práticas como SAST, architecture, touchpoints
+- **NIST SSDF** – PO.x, RV.x e PP.x
+- **SLSA** – Níveis 2 a 3 de segurança na cadeia de fornecimento
+
+---
+
+## 🧠 Em onboarding de equipas
+
+Este manual pode ser usado como:
+
+- Introdução estruturada à segurança por domínio técnico
+- Base de boas práticas nos pipelines e operações
+- Material de formação para programas de Champions e mentoring
+
+---
+
+## 🔗 Capítulos basilares
+
+Consulta a [Tabela da estrutura contextual dos capitulos](/sbd-toe/how-to-manual/estrutura-capitulos) para saber quais os domínios que **devem ser tratados e com que prioridade**.
+
+---
+
+## 💬 Feedback e evolução
+
+Este manual é **vivo e aberto** à evolução contínua.
+
+Sugestões, melhorias ou contributos podem ser submetidos via GitHub, pull request, ou contacto com a equipa editorial da ShiftLeft.

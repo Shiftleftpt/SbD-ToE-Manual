@@ -1,74 +1,61 @@
-.heroBanner {
-  padding: 4rem 2rem;
-  text-align: center;
+/* HERO – respeita o tema claro/escuro */
+.slHero {
+  /* NÃO usar #fff; usar as vars do tema */
+  background: var(--ifm-background-color);
+  color: var(--ifm-font-color-base);
+  padding: 4rem 0 2.5rem;
+  border-bottom: 1px solid var(--ifm-color-emphasis-200);
 }
 
-.buttons {
-  margin-top: 2rem;
+/* Título + tagline centrados e com contraste controlado pelo tema */
+.heroTitle {
+  font-size: clamp(2.25rem, 2.5vw + 1.5rem, 3rem);
+  margin: 0 0 .25rem;
+  color: var(--ifm-color-emphasis-900);
+  line-height: 1.1;
 }
 
-.cardsSection {
-  padding: 4rem 0;
-  border-top: 1px solid #ddd;
-  background-color: #f9f9f9;
+.heroTagline {
+  margin: 0 0 1.25rem;
+  font-size: 1.1rem;
+  color: var(--ifm-color-emphasis-700);
 }
 
-.cardsTitle {
-  font-size: 2rem;
-  margin-bottom: 2rem;
-  text-align: center;
-  font-weight: 600;
-}
-
-.cardsGrid {
+.ctaWrap {
   display: flex;
-  flex-wrap: wrap;
   justify-content: center;
 }
 
-.card {
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
-  border: 1px solid #eaeaea;
-  border-radius: 12px;
-  padding: 1rem;
-  background: white;
-  height: 100%;
-  transition: box-shadow 0.2s ease;
-}
-
-.card:hover {
-  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.1);
-}
-
-.card__header h3 {
-  margin-bottom: 0.5rem;
-  font-size: 1.25rem;
-}
-
-.card__body p {
-  margin-bottom: 1rem;
-  color: #444;
-}
-
-.card__footer {
-  text-align: right;
-}
-
+/* Secção das 3 indicações (baixo do herói) */
 .features {
-  padding: 4rem 0;
-  background-color: #fff;
+  background: var(--ifm-background-color);
+  padding: 1.25rem 0;              /* menos espaço vertical */
 }
 
-.features .row {
-  justify-content: center;
+.featureItem {
+  color: var(--ifm-color-emphasis-900);    /* letras mais “escuras” */
+}
+.featureItem small,
+.featureItem .sub {
+  color: var(--ifm-color-emphasis-700);    /* subtítulos/descrições */
 }
 
-.features h3 {
-  font-size: 1.25rem;
-  font-weight: 600;
-  margin-bottom: 1rem;
+/* Cards dos capítulos: menos “white space” e contraste correto */
+.cardsSection {
+  padding: 1.5rem 0;                /* menos espaço */
+}
+.card {
+  background: var(--ifm-background-surface-color);
+  border: 1px solid var(--ifm-color-emphasis-200);
+  box-shadow: var(--ifm-global-shadow-lw);
 }
 
-.features p {
-  color: #444;
+/* Caso tenhas usado algo como .hero, .section com #fff, neutraliza já: */
+:where(.hero, .section, .strip, .band) {
+  background: var(--ifm-background-color);
+}
+
+/* Opcional: pequenos ajustes só em dark */
+html[data-theme='dark'] .card {
+  border-color: var(--ifm-color-emphasis-300);
 }

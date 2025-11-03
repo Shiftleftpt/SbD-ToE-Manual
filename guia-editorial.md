@@ -101,7 +101,7 @@ tags: [estilo, linguagem, tratamento, norma editorial, curadoria]
 
 ## 🧩 8. Aplicação prática
 
-- Este guia aplica-se a todos os ficheiros `intro.md`, `canon/`, `addon/` — exceto onde explicitamente justificado (ex: `addon/05-exemplos.md` pode usar estilo mais narrativo).
+- Este guia aplica-se a todos os ficheiros `intro.md`, ``, `addon/` — exceto onde explicitamente justificado (ex: `addon/05-exemplos.md` pode usar estilo mais narrativo).
 - O mesmo guia será usado para:
   - Revisão manual capítulo a capítulo;
   - Integração em scripts de validação editorial futuros;

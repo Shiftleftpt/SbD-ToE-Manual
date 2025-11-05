@@ -13,9 +13,9 @@ const config: Config = {
 
   // Deploy em GitHub Pages
   url: 'https://shiftleftpt.github.io',
-  baseUrl: '/SbD-ToE-Manual/',
+  baseUrl: '/',
   organizationName: 'shiftleftpt',
-  projectName: 'sbd-theory-of-everything',
+  projectName: 'SbD-ToE-Manual',
 
   // Continua válido no topo
   onBrokenLinks: 'warn',

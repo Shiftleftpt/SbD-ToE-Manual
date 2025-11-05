@@ -1,0 +1,21 @@
+name: Revisão Editorial ou Documentação
+description: Corrigir ortografia, estilo ou formatação
+labels: ["tipo:documentação", "editorial"]
+body:
+  - type: textarea
+    id: descricao
+    attributes:
+      label: Descrição da revisão
+      description: O que deve ser revisto?
+  - type: input
+    id: localizacao
+    attributes:
+      label: Localização
+      placeholder: "ex: cap02/canon/20-checklist-revisao.md"
+  - type: dropdown
+    id: prioridade
+    attributes:
+      label: Prioridade
+      options:
+        - Normal
+        - Alta

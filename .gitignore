@@ -21,9 +21,6 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 pnpm-debug.log*
-package-lock.json
-pnpm-lock.yaml
-yarn.lock
 
 # Turbo / Nx / TS build caches (se aplicável)
 .turbo/

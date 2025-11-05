@@ -62,7 +62,7 @@ Asseguram que as práticas se tornam parte da cultura e governação da organiza
 
 | Nº | Capítulo | Função principal |
 |----|-----------|------------------|
-| 13 | [Formação e Capacitação](/sbd-toe/sbd-manual/formacao-capacitacao/intro) | Promove a literacia, competências e cultura de *Security by Design*. |
+| 13 | [Formação e Capacitação](/sbd-toe/sbd-manual/formacao-onboarding/intro) | Promove a literacia, competências e cultura de *Security by Design*. |
 | 14 | [Governança e Contratação](/sbd-toe/sbd-manual/governanca-contratacao/intro) | Garante o controlo executivo, rastreabilidade e alinhamento com políticas e contratos. |
 
 > Estes capítulos asseguram que o SbD-ToE **é adotado, mantido e auditado** como parte integrante da gestão organizacional e não apenas como prática técnica.

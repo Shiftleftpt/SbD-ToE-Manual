@@ -13,7 +13,7 @@ const config: Config = {
 
   // Deploy em GitHub Pages
   url: 'https://shiftleftpt.github.io',
-  baseUrl: '/SbD-ToE-Manual/',
+  baseUrl: '/',
   organizationName: 'shiftleftpt',
   projectName: 'SbD-ToE-Manual',
 

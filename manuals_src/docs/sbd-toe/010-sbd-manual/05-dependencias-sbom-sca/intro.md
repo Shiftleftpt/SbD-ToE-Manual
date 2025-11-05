@@ -17,10 +17,12 @@ import Badge from '@site/src/components/Badge';
   <a href="./achievable-maturity" style={{ marginLeft: 'auto', fontSize: '0.9rem' }}>📄 Ver análise de maturidade</a>
 </div>
 
-:::caution Capítulo Basilar
-Este capítulo é considerado **basilar** no modelo SbD-ToE.  
-A sua não aplicação **inviabiliza a confiança na cadeia de fornecimento de software**.  
-Sem SBOM e governação de dependências, não há rastreabilidade nem segurança real.
+
+:::tip Capítulo Operacional
+Este capítulo é considerado **operacional** no modelo *Security by Design – Theory of Everything (SbD-ToE)*.  
+A sua função é **aplicar, automatizar e validar** as práticas definidas nos capítulos basilares, garantindo a sua execução contínua e mensurável.  
+
+Os capítulos operacionais implementam o SbD-ToE em contextos técnicos específicos. Estes capítulos traduzem as prescrições basilares em práticas de **execução verificável**, promovendo a **integração contínua da segurança** ao longo do ciclo de vida do software.
 :::
 
 # Dependências, SBOM e SCA

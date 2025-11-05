@@ -21,10 +21,7 @@ import Badge from '@site/src/components/Badge';
 Este capítulo é considerado **organizacional** no modelo *Security by Design – Theory of Everything (SbD-ToE)*.  
 A sua função é **assegurar a adoção, governação e evolução sustentável** das práticas de segurança definidas nos capítulos basilares e operacionais.  
 
-Os capítulos organizacionais estabelecem a estrutura humana e processual que permite consolidar o SbD-ToE na organização, incluindo:
-- **Formação, sensibilização e capacitação contínua** (Cap. 13)  
-- **Governança, contratação e controlo executivo** (Cap. 14)  
-
+Os capítulos organizacionais estabelecem a estrutura humana e processual que permite consolidar o SbD-ToE na organização.
 Sem estes elementos, a segurança por design torna-se pontual e dependente de indivíduos, perdendo a **consistência e resiliência organizacional** necessárias à maturidade de longo prazo.
 :::
 

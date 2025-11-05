@@ -23,14 +23,7 @@ import Badge from '@site/src/components/Badge';
 Este capítulo é considerado **basilar** no modelo *Security by Design – Theory of Everything (SbD-ToE)*.  
 A sua aplicação é **obrigatória** para garantir a coerência, rastreabilidade e eficácia das restantes práticas de segurança.  
 
-Os capítulos basilares constituem a **fundação técnica e metodológica** do modelo, cobrindo:
-- **Classificação de risco e proporcionalidade** (Cap. 01)  
-- **Definição estruturada de requisitos de segurança** (Cap. 02)  
-- **Modelação de ameaças e priorização de controlos** (Cap. 03)  
-- **Desenho e validação de arquitetura segura** (Cap. 04)  
-- **Implementação disciplinada e revisão de código seguro** (Cap. 06)  
-
-A ausência ou aplicação parcial de qualquer um destes compromete a **integridade global** do SbD-ToE, tornando inviável a adoção coerente das práticas operacionais e de governação.
+Os capítulos basilares constituem a **fundação técnica e metodológica** do modelo, a ausência ou aplicação parcial de qualquer um destes compromete a **integridade global** do SbD-ToE, tornando inviável a adoção coerente das práticas operacionais e de governação.
 :::
 
 

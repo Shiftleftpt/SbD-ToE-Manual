@@ -12,9 +12,17 @@ O manual *Security by Design – Theory of Everything (SbD-ToE)* organiza os seu
 
 Cada agrupamento representa um **nível distinto de responsabilidade** no ciclo de vida e governação da segurança de software:
 
-- **🧱 Capítulos Basilares** - fundação técnica e metodológica  
+:::caution
+- **🧱 Capítulos Basilares** - fundação técnica e metodológica 
+:::
+
+:::tip
 - **⚙️ Capítulos Operacionais** - execução e automatização das práticas  
+:::
+
+:::note
 - **🏛️ Capítulos Organizacionais** - governação, capacitação e sustentabilidade
+:::
 
 ---
 

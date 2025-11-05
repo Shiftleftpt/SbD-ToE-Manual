@@ -17,12 +17,12 @@ Este capítulo detalha, de forma operacional e prescritiva, **quando e como impl
 
 | Fase / Evento                      | Ação esperada                                                  | Documento de apoio                                                        |
 |------------------------------------|----------------------------------------------------------------|----------------------------------------------------------------------------|
-| 🚧 Início de projeto               | Classificar aplicação segundo modelo E+D+I                     | [Modelo de Classificação](/sbd-toe/sbd-manual/classificacao-aplicacoes/addon/modelo-classificacao-eixos) |
-| 🔄 Nova release ou integração      | Rever classificação com base em alterações relevantes          | [Ciclo de Vida do Risco](/sbd-toe/sbd-manual/classificacao-aplicacoes/addon/ciclo-vida-risco) |
-| 🛠️ Mudança nos dados ou exposição  | Reclassificar eixo D ou E, avaliar risco residual              | [Risco Residual](/sbd-toe/sbd-manual/classificacao-aplicacoes/risco-residual) |
-| 🧪 Revisão de arquitetura          | Aplicar avaliação semiquantitativa e validar controlo aplicado | [Avaliação Semiquantitativa](/sbd-toe/sbd-manual/classificacao-aplicacoes/addon/avaliacao-semiquantitativa) |
-| 🚀 Go-live                         | Validar conformidade com matriz de controlos por risco         | [Matriz de Controlos por Risco](/sbd-toe/sbd-manual/classificacao-aplicacoes/matriz-controlos-por-risco) |
-| ⚠️ Ameaça emergente ou nova CVE    | Reavaliar criticidade e cobertura de ameaças                   | [Mapeamento de Ameaças](/sbd-toe/sbd-manual/classificacao-aplicacoes/addon/mapeamento-ameacas-risco) |
+| 🚧 Início de projeto               | Classificar aplicação segundo modelo E+D+I                     | [Modelo de Classificação](./addon/modelo-classificacao-eixos) |
+| 🔄 Nova release ou integração      | Rever classificação com base em alterações relevantes          | [Ciclo de Vida do Risco](./addon/ciclo-vida-risco) |
+| 🛠️ Mudança nos dados ou exposição  | Reclassificar eixo D ou E, avaliar risco residual              | [Risco Residual](./addon/risco-residual) |
+| 🧪 Revisão de arquitetura          | Aplicar avaliação semiquantitativa e validar controlo aplicado | [Avaliação Semiquantitativa](./addon/avaliacao-semiquantitativa) |
+| 🚀 Go-live                         | Validar conformidade com matriz de controlos por risco         | [Matriz de Controlos por Risco](./addon/matriz-controlos-por-risco) |
+| ⚠️ Ameaça emergente ou nova CVE    | Reavaliar criticidade e cobertura de ameaças                   | [Mapeamento de Ameaças](./addon/mapeamento-ameacas-risco) |
 
 ---
 

@@ -1,5 +1,5 @@
 ---
-id: 01-catalogo-requisitos-aplicacionais
+id: catalogo-requisitos
 title: Catálogo de Requisitos Técnicos de Arquitetura Segura
 description: Requisitos específicos aplicáveis ao design e revisão de arquiteturas seguras
 tags: [requisitos, arquitetura, segurança, rastreabilidade, threat-modeling]
@@ -78,4 +78,4 @@ Este catálogo fornece os **requisitos específicos de segurança arquitetural**
 > 🔗 Estes requisitos devem ser lidos em conjunto com:
 > - [Capítulo 1 – Classificação de Risco](/sbd-toe/sbd-manual/classificacao-aplicacoes/intro)
 <!-- > - [Capítulo 2 – Requisitos de Segurança Globais](/sbd-toe/sbd-manual/requisitos-seguranca/intro) -->
-> - [Capítulo 3 – Threat Modeling](/sbd-toe/threat-modeling/intro)
+> - [Capítulo 3 – Threat Modeling](/sbd-toe/sbd-manual/threat-modeling/intro)

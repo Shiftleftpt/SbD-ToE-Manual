@@ -7,7 +7,7 @@ import styles from './index.module.css';
 
 function HomepageHeader() {
   const {siteConfig} = useDocusaurusContext();
-  const introUrl = 'sbd-toe/sbd-manual/';
+  const introUrl = 'sbd-toe/sbd-manual/intro';
 
   return (
     <header className={clsx('hero', 'hero--primary', styles.slHero)}>

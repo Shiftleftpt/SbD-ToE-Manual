@@ -197,4 +197,4 @@ Este anexo apresenta, para cada requisito do Catálogo Base, o critério mínimo
 
 Os critérios de aceitação devem ser integrados nos processos de validação e auditoria dos projetos, podendo ser complementados por testes automáticos, revisões manuais ou artefactos de evidência documental.
 
-> Para ligação direta ao requisito correspondente, consultar o [Catálogo Base de Requisitos](/sbd-toe/sbd-manual/requisitos-seguranca/lista-requisitos-base).
+> Para ligação direta ao requisito correspondente, consultar o [Catálogo Base de Requisitos](lista-requisitos-base).

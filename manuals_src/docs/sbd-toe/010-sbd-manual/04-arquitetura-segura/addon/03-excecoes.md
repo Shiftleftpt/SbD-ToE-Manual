@@ -53,7 +53,7 @@ Este documento define o processo para **submeter, aprovar, documentar e controla
 
 ## 🌐 Integração com rastreabilidade e auditoria
 
-- Todas as exceções devem ser incluídas na matriz de rastreabilidade ([`addon/06-rastreabilidade.md`](/sbd-toe/sbd-manual/classificacao-aplicacoes/rastreabilidade))
+- Todas as exceções devem ser incluídas na matriz de rastreabilidade
 - Devem ser mantidas como **artefactos formais** no repositório do projeto
 - A aprovação deve ser atribuída a um perfil com autoridade formal (ex: AppSec, Arquitetura)
 

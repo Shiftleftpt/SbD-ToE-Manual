@@ -348,7 +348,7 @@ Como **QA / AppSec / Arquiteto**, quero validar a arquitetura antes do go-live, 
 | Release / Go-live | Preparação de release | QA + AppSec + Arquiteto | Antes da entrada em produção |
 
 **Ligações úteis.**
-- 🔗 [Cap. 4 – Critérios de Validação Arquitetural](/sbd-toe//sbd-manual/arquitetura-segura/validacao)
+- 🔗 [Cap. 4 – Critérios de Validação Arquitetural](/sbd-toe//sbd-manual/arquitetura-segura/addon/validacao)
 
 ---
 

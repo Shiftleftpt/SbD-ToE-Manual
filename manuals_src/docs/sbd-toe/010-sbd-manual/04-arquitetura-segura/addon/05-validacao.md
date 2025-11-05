@@ -49,7 +49,7 @@ Este documento define como validar os requisitos de arquitetura segura (ARC-001 
 
 - Estes critérios devem ser integrados nos eventos de entrega técnica e ciclos de planeamento de arquitetura.
 - Validações podem ser incluídas em workflows de pull requests, aprovações de infraestrutura ou documentação técnica.
-- Os requisitos e validações estão alinhados com [`addon/01-catalogo-requisitos.md`](/sbd-toe/sbd-manual/requisitos-seguranca/catalogo-requisitos).
+- Os requisitos e validações estão alinhados com [`addon/01-catalogo-requisitos.md`](/sbd-toe/sbd-manual/requisitos-seguranca/addon/catalogo-requisitos).
 
 > A validação não é um ato pontual: é uma **atividade contínua que acompanha a arquitetura ao longo da vida da aplicação**.
 

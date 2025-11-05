@@ -91,7 +91,7 @@ Alertas mal calibrados causam ruído e descredibilizam o sistema. Práticas reco
 | ---------------------------------- | ------------------------------------------------ |
 | `02-logging-centralizado.md`       | Define eventos de origem para geração de alertas |
 | `06-correlacao-anomalias.md`       | Correlação de múltiplos eventos e domínios       |
-| `05-monitorizacao-resposta.md`     | Utiliza alertas como gatilho de resposta         |
+| `05-monitorizacao-operacoes.md`     | Utiliza alertas como gatilho de resposta         |
 | `08-matriz-controles-por-risco.md` | Aponta requisitos de alerta por criticidade      |
 
 ---

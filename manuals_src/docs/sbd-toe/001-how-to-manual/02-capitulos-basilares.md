@@ -48,7 +48,7 @@ Os capítulos **operacionais** **implementam e automatizam** as práticas defini
 | 09 | [Containers e Imagens](/sbd-toe/sbd-manual/containers-imagens/intro) | Estende as práticas de segurança à execução e ao runtime. |
 | 10 | [Testes de Segurança](/sbd-toe/sbd-manual/testes-seguranca/intro) | Verifica e mede a eficácia das práticas implementadas. |
 | 11 | [Deploy Seguro](/sbd-toe/sbd-manual/deploy-seguro/intro) | Garante que a entrega mantém as propriedades de segurança definidas. |
-| 12 | [Monitorização e Resposta](/sbd-toe/sbd-manual/monitorizacao-resposta/intro) | Fecha o ciclo de feedback, assegurando deteção e melhoria contínua. |
+| 12 | [Monitorização e Resposta](/sbd-toe/sbd-manual/monitorizacao-operacoes/intro) | Fecha o ciclo de feedback, assegurando deteção e melhoria contínua. |
 
 > Estes capítulos traduzem o *Security by Design* em **execução prática**.  
 > Dependem dos basilares para definir o que controlar e dos organizacionais para garantir que o processo é sustentado.

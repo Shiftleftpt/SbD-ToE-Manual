@@ -47,7 +47,7 @@ Serve como instrumento de verificação binária e auditável da **adoção prá
 
 - Este checklist pode ser usado em **auditorias técnicas, gates de release ou revisões de segurança**;
 - Cada resposta afirmativa deve ser suportada por **evidência objetiva**: regras, dashboards, tickets, configs, capturas de teste;
-- A proporcionalidade deve seguir a [matriz de controlo por risco](/sbd-toe/sbd-manual/monitorizacao-operacoes/matriz-controles-por-risco).
+- A proporcionalidade deve seguir a [matriz de controlo por risco](/sbd-toe/sbd-manual/monitorizacao-operacoes/addon/matriz-controles-por-risco).
 
 > ⚠️ **Respostas negativas exigem exceção formal aprovada e justificada.**
 

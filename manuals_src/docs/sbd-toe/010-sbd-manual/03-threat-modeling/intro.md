@@ -94,13 +94,7 @@ Este capítulo cobre:
 
 ---
 
-## 3. 🧭 Mapeamento para frameworks de maturidade
-
-Ver [Maturidade](maturidade) para alinhamento detalhado com SAMM, BSIMM, SSDF e SLSA.
-
----
-
-## 4. ⚠️ Caveats ou limitações da prescrição
+## 3. ⚠️ Caveats ou limitações da prescrição
 
 - Sessões mal facilitadas podem ser vagas ou não acionáveis
 - Documentação dispersa pode dificultar reutilização
@@ -111,8 +105,8 @@ Ver [Maturidade](maturidade) para alinhamento detalhado com SAMM, BSIMM, SSDF e 
 
 ## 5. 💡 Exemplos de aplicação
 
-- Ver [exemplo de aplicação de requisitos por nivel](/sbd-toe/sbd-manual/requisitos-seguranca/addon/exemplos-aplicacao)
-- Ver [exemplo de aplicação de privacidade](/sbd-toe/sbd-manual/threat-modeling/addon/exemplo-privacidade)
+- Ver [exemplo de aplicação de requisitos por nivel](exemplos-aplicacao-stride)
+- Ver [exemplo de aplicação de privacidade](exemplo-privacidade-lindunn)
 - Ver [exemplo uso de ferramentas, e.g., IriusRisk](/sbd-toe/sbd-manual/threat-modeling/addon/integracao-iriusrisk)
 
 ---

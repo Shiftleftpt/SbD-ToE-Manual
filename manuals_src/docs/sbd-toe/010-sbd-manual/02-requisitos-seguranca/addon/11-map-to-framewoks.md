@@ -1,5 +1,5 @@
 ---
-id: rastreabilidade-frameworks
+id: map-to-framewoks
 title: Rastreabilidade do Catalogo com Frameworks de Segurança
 description: Mapeamento dos temas de requisitos do catálogo com frameworks normativas e de maturidade
 tags: [rastreabilidade, frameworks, asvs, samm, bsimm, nist, cis, slsa, dsomm]
@@ -72,7 +72,7 @@ O mapeamento feito neste anexo mostra como cada uma das nossas 20 categorias de 
 
 Para saber **quais destas categorias são obrigatórias consoante o nível de risco de uma aplicação**, consulta o anexo seguinte:
 
-👉 [06-matriz-controlos-por-risco.md](/sbd-toe/sbd-manual/classificacao-aplicacoes/matriz-controlos-por-risco)
+👉 [06-matriz-controlos-por-risco.md](matriz-controlos-por-risco)
 
 Este cruzamento permite à organização aplicar requisitos de forma proporcional e fundamentada, alinhada com as suas necessidades, contexto e maturidade.
 

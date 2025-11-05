@@ -41,9 +41,9 @@ A referência principal é o modelo **OWASP OSC&R** (Open Software Supply Chain 
 
 | Ameaça                         | Fonte                              | Como surge                                | Como a prática mitiga                                                   | Controlos associados                    |
 |--------------------------------|-------------------------------------|-------------------------------------------|--------------------------------------------------------------------------|-----------------------------------------|
-| Incidentes sem owner definido  | SSDF RM.3 / ISO 27001 A.16         | Sem responsáveis definidos                | Tabelas de owners e canais de escalamento automatizado                   | `addon/05-monitorizacao-resposta.md`   |
-| Reação ad-hoc ou tardia        | ENISA DevSecOps / BSIMM Ops        | Falta de processo de resposta             | Integração com IRP, uso de playbooks e simulações regulares              | `addon/05-monitorizacao-resposta.md`   |
-| Eventos sem acionamento de ação| MITRE / OSC&R                      | Logs ignorados após deteção               | Integração com workflows e mecanismos de correção (chatops, SOAR)        | `addon/05-monitorizacao-resposta.md`   |
+| Incidentes sem owner definido  | SSDF RM.3 / ISO 27001 A.16         | Sem responsáveis definidos                | Tabelas de owners e canais de escalamento automatizado                   | `addon/05-monitorizacao-operacoes.md`   |
+| Reação ad-hoc ou tardia        | ENISA DevSecOps / BSIMM Ops        | Falta de processo de resposta             | Integração com IRP, uso de playbooks e simulações regulares              | `addon/05-monitorizacao-operacoes.md`   |
+| Eventos sem acionamento de ação| MITRE / OSC&R                      | Logs ignorados após deteção               | Integração com workflows e mecanismos de correção (chatops, SOAR)        | `addon/05-monitorizacao-operacoes.md`   |
 
 ---
 
@@ -62,7 +62,7 @@ A referência principal é o modelo **OWASP OSC&R** (Open Software Supply Chain 
 | Ameaça                                  | Fonte                            | Como surge                              | Como a prática mitiga                                                   | Controlos associados                    |
 |-----------------------------------------|-----------------------------------|-----------------------------------------|--------------------------------------------------------------------------|-----------------------------------------|
 | Novos sistemas sem monitorização        | SSDF PW.1 / ISO 27001 A.14       | Ciclo de vida sem requisitos de logging | Inclusão formal nos critérios de aceitação e Definition of Done          | `15-aplicacao-lifecycle.md`      |
-| Equipas ignoram alertas operacionais    | OWASP / BSIMM Ops                | Alertas fora dos canais de decisão      | Integração com ferramentas operacionais e turnos on-call                 | `addon/05-monitorizacao-resposta.md`   |
+| Equipas ignoram alertas operacionais    | OWASP / BSIMM Ops                | Alertas fora dos canais de decisão      | Integração com ferramentas operacionais e turnos on-call                 | `addon/05-monitorizacao-operacoes.md`   |
 | Dados não usados para melhoria contínua | DSOMM / SSDF RM.2                | Logs não geram ações corretivas         | Integração com KPIs, backlog de segurança, validação contínua           | `addon/07-metricas-indicadores.md`, `20-checklist-revisao.md` |
 
 ---

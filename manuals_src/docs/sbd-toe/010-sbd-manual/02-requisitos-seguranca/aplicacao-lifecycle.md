@@ -326,7 +326,7 @@ Como **QA / Test Engineer**, quero garantir que todos os requisitos têm valida�
 | Sprint review | Execução de testes | QA | Por sprint |
 
 **Ligações úteis.**
-- 🔗 [Validação de requisitos](/sbd-toe/sbd-manual/requisitos-seguranca/validacao-requisitos)
+- 🔗 [Validação de requisitos](./addon/validacao-requisitos)
 
 ---
 

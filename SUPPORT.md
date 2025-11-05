@@ -6,7 +6,7 @@ O projeto **Security by Design – Theory of Everything (SbD-ToE)** é mantido p
 
 | Tipo | Canal |
 |------|-------|
-| 📖 Dúvidas sobre conteúdo | [GitHub Discussions](https://github.com/shiftleftpt/sbd-theory-of-everything/discussions) |
+| 📖 Dúvidas sobre conteúdo | [GitHub Discussions](https://github.com/shiftleftpt/SbD-ToE-Manual/discussions) |
 | 🐞 Erros ou falhas | Abrir issue em [Issues → Bug](../../issues/new?template=bug_report.yml) |
 | ✍️ Melhorias editoriais | Abrir issue em [Issues → Documentação](../../issues/new?template=documentation.yml) |
 | 🔒 Segurança | **security@shiftleft.pt** (privado e confidencial) |

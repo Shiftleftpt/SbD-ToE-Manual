@@ -154,13 +154,13 @@ const config: Config = {
         {
           title: 'Manuais',
           items: [
-            { label: 'SbD-ToE', to: '/sbd-toe/' },
+            { label: 'SbD-ToE', to: '/sbd-toe/sbd-manual/' },
           ],
         },
         {
           title: 'Mais',
           items: [
-            { label: 'GitHub', href: 'https://github.com/Shiftleftpt/sbd-theory-of-everything' },
+            { label: 'GitHub', href: 'https://github.com/Shiftleftpt/SbD-ToE-Manual' },
           ],
         },
       ],

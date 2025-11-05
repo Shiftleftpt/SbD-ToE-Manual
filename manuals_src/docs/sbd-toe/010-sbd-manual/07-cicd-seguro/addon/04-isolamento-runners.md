@@ -8,7 +8,7 @@ tags: [cicd, runners, isolamento, segurança, execução, infraestrutura]
 
 # 🖥️ Isolamento e proteção de runners
 
-Os runners (ou agentes de execução) são os ambientes onde os pipelines CI/CD são realmente processados. Se um runner for comprometido, toda a cadeia de build e entrega pode ser manipulada — desde a introdução de backdoors, à exfiltração de segredos ou sabotagem de artefactos.
+Os runners (ou agentes de execução) são os ambientes onde os pipelines CI/CD são realmente processados. Se um runner for comprometido, toda a cadeia de build e entrega pode ser manipulada - desde a introdução de backdoors, à exfiltração de segredos ou sabotagem de artefactos.
 
 > A segurança dos runners define os limites de confiança da execução automatizada.
 
@@ -50,7 +50,7 @@ Os runners (ou agentes de execução) são os ambientes onde os pipelines CI/CD 
 
 | Nível | Requisitos obrigatórios                                   | Requisitos reforçados                                       |
 |-------|------------------------------------------------------------|--------------------------------------------------------------|
-| **L1** | Runners atualizados; isolamento básico por job             | —                                                            |
+| **L1** | Runners atualizados; isolamento básico por job             | -                                                            |
 | **L2** | Runners dedicados por projeto; imagem hardened             | Verificação periódica de integridade                         |
 | **L3** | Runners efémeros, segregados por criticidade; imagens assinadas | Hardening formal; sem root; auditoria contínua         |
 

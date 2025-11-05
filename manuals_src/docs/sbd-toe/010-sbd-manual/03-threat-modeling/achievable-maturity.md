@@ -1,11 +1,11 @@
 ---
 id: achievable-maturity
-title: Mapeamento de Maturidade — Threat Modeling
+title: Mapeamento de Maturidade - Threat Modeling
 description: Alinhamento entre as práticas deste capítulo e os principais frameworks de segurança
 tags: [maturidade, threat-modeling, SAMM, BSIMM, SSDF, SLSA, DSOMM]
 ---
 
-# 📈 Maturidade — Threat Modeling
+# 📈 Maturidade - Threat Modeling
 
 Este documento estabelece o **grau de alinhamento entre as práticas descritas no Capítulo 03** do manual SbD-ToE e os requisitos de frameworks reconhecidas: **OWASP SAMM**, **BSIMM**, **NIST SSDF**, **SLSA** e **OWASP DSOMM**.
 

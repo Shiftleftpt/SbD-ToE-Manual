@@ -52,7 +52,7 @@ A segurança da entrega contínua depende da capacidade de **detetar automaticam
 
 | Nível | Requisitos obrigatórios                              | Requisitos reforçados                                     |
 |-------|--------------------------------------------------------|------------------------------------------------------------|
-| **L1** | SAST e secrets scanning básicos integrados             | —                                                          |
+| **L1** | SAST e secrets scanning básicos integrados             | -                                                          |
 | **L2** | Falha da build se critérios mínimos forem violados     | Linters IaC; análise de containers e dependências          |
 | **L3** | Política formal de findings; rastreabilidade por commit| Cobertura total; validação formal com gates de segurança   |
 

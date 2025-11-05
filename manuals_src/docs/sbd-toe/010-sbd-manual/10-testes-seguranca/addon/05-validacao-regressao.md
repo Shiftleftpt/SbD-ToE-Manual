@@ -18,7 +18,7 @@ Assegurar que **vulnerabilidades previamente corrigidas não voltam a ser introd
 - Integração no ciclo de qualidade contínua (regressão funcional + segurança);
 - Rastreabilidade entre findings históricos e builds futuros.
 
-> ⚠️ Uma regressão de segurança representa um **retrocesso evitável** — normalmente por falta de memória organizacional ou automação.
+> ⚠️ Uma regressão de segurança representa um **retrocesso evitável** - normalmente por falta de memória organizacional ou automação.
 
 ---
 
@@ -42,7 +42,7 @@ Formas comuns:
 3. **Criar testes específicos de segurança** para falhas relevantes (ex: payloads de bypass anteriores);
 4. **Integrar regressões de segurança na matriz de regressão funcional da equipa QA**;
 5. **Usar tags ou anotações nos testes** para identificar quais são regressivos e de segurança;
-6. **Reportar sempre que uma falha reaparece — com alerta explícito ao owner do módulo**.
+6. **Reportar sempre que uma falha reaparece - com alerta explícito ao owner do módulo**.
 
 > 💡 Sugestão: manter pasta `/tests/security-regression/` no repositório com casos de teste versionados.
 
@@ -63,12 +63,12 @@ Formas comuns:
 
 | Documento                         | Relevância estratégica                        |
 |----------------------------------|------------------------------------------------|
-| Capítulo 02 — Requisitos         | Valida requisitos com histórico de findings    |
+| Capítulo 02 - Requisitos         | Valida requisitos com histórico de findings    |
 | `01-sast.md`                     | Findings do SAST podem ser base para regressão |
 | `08-gestao-findings.md`          | Mantém histórico e estado das vulnerabilidades |
 | `06-cobertura-e-priorizacao.md` | Ajuda a priorizar áreas com maior risco de regressão |
-| Capítulo 07 — CI/CD Seguro       | Integração de regressões como jobs do pipeline |
+| Capítulo 07 - CI/CD Seguro       | Integração de regressões como jobs do pipeline |
 
 ---
 
-> 📉 A validação regressiva protege o investimento feito na correção de falhas — e impede que vulnerabilidades antigas voltem a assombrar a segurança de novas versões.
+> 📉 A validação regressiva protege o investimento feito na correção de falhas - e impede que vulnerabilidades antigas voltem a assombrar a segurança de novas versões.

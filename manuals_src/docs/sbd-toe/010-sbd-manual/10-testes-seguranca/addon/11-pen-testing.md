@@ -7,7 +7,7 @@ sidebar_position: 12
 ---
 
 
-# 🕵️ PenTesting — Validação de Segurança Ofensiva
+# 🕵️ PenTesting - Validação de Segurança Ofensiva
 
 Este documento estabelece o enquadramento técnico e processual para a realização de **testes de penetração (PenTesting)**, como prática complementar à validação contínua descrita no Capítulo 10.
 
@@ -75,7 +75,7 @@ Existem duas formas principais de conduzir um PenTest:
 
 ## 🔁 Integração com o Capítulo 10
 
-O PenTest **não substitui** testes contínuos — é um **complemento estratégico** para:
+O PenTest **não substitui** testes contínuos - é um **complemento estratégico** para:
 
 - Validar a eficácia das defesas já aplicadas;
 - Confirmar a cobertura de testes automatizados;
@@ -149,4 +149,4 @@ Para ser útil, deve:
 - Ser rastreável, documentado e comparável a findings anteriores;
 - Alimentar melhorias no ciclo de vida de segurança, arquitetura e requisitos.
 
-> 📌 O PenTest valida a aplicação **e também a maturidade da organização** em gerir, corrigir e aprender com falhas detetadas — sendo parte fundamental do ciclo de melhoria contínua do modelo SbD-ToE.
+> 📌 O PenTest valida a aplicação **e também a maturidade da organização** em gerir, corrigir e aprender com falhas detetadas - sendo parte fundamental do ciclo de melhoria contínua do modelo SbD-ToE.

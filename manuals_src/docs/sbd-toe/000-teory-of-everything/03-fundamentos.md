@@ -43,7 +43,7 @@ A aplicação do SbD-ToE exige a execução sistemática de certos passos fundam
    Trata-se da materialização prática de princípios como *security by design* (SSDF) e *privacy by design* (GDPR).
 
 3. **Aplicação de práticas específicas por domínio**  
-   Cada capítulo prescreve práticas concretas — da arquitetura (Cap. 04) ao deployment (Cap. 11) — de acordo com o risco identificado.  
+   Cada capítulo prescreve práticas concretas - da arquitetura (Cap. 04) ao deployment (Cap. 11) - de acordo com o risco identificado.  
    Aqui alinham-se também exigências regulatórias como as do **DORA**, que requerem controlos explícitos em operações críticas.
 
 4. **Revisão prática por checklist**  
@@ -77,7 +77,7 @@ Este modelo está alinhado com **NIS2**, que exige governação executiva sobre 
 ## 📊 Autoavaliação por Capítulo
 
 Cada capítulo técnico inclui uma secção de autoavaliação.  
-Nela, o grau de cumprimento é mapeado em relação a referenciais externos — **SAMM, BSIMM, SSDF, DSOMM, SLSA** — e também em relação a **obrigações regulatórias**.  
+Nela, o grau de cumprimento é mapeado em relação a referenciais externos - **SAMM, BSIMM, SSDF, DSOMM, SLSA** - e também em relação a **obrigações regulatórias**.  
 
 Três pontos fundamentais:  
 - Nem todos os referenciais são mensuráveis em níveis. Alguns são normativos (ISO), outros regulatórios (NIS2, DORA), outros descritivos (BSIMM).  

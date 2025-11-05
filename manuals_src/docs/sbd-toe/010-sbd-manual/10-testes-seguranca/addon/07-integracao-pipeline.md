@@ -18,7 +18,7 @@ Assegurar que os testes de segurança são **executados automaticamente e com cr
 - Reforço da cultura de segurança como parte do processo de entrega;
 - Cumprimento de requisitos regulatórios e internos sem depender de ações manuais.
 
-> A segurança que não está integrada no pipeline é invisível — e portanto, ineficaz.
+> A segurança que não está integrada no pipeline é invisível - e portanto, ineficaz.
 
 ---
 
@@ -65,12 +65,12 @@ Integrar testes no pipeline significa **automatizar a execução dos testes de s
 
 | Documento                       | Relevância estratégica                          |
 |--------------------------------|--------------------------------------------------|
-| Capítulo 07 — CI/CD Seguro     | Condições de execução segura e segregação       |
+| Capítulo 07 - CI/CD Seguro     | Condições de execução segura e segregação       |
 | `01-sast.md`, `02-dast.md`     | Tipos de teste que devem ser automatizados       |
 | `06-cobertura-e-priorizacao.md`| Define o quê, quando e como testar no pipeline   |
 | `08-gestao-findings.md`        | Garante tratamento eficaz dos resultados         |
-| Capítulo 12 — Monitorização    | Rastreio de falhas de segurança em runtime       |
+| Capítulo 12 - Monitorização    | Rastreio de falhas de segurança em runtime       |
 
 ---
 
-> 📦 A integração dos testes no pipeline transforma segurança numa **atividade contínua, auditável e verificável** — em vez de uma checklist pontual antes da entrega.
+> 📦 A integração dos testes no pipeline transforma segurança numa **atividade contínua, auditável e verificável** - em vez de uma checklist pontual antes da entrega.

@@ -10,7 +10,7 @@ sidebar_position: 15
 
 ## 🧭 Quando aplicar
 
-Os testes de segurança acompanham a aplicação em todas as fases — não são uma etapa final, mas um **ritmo contínuo** de validação.  
+Os testes de segurança acompanham a aplicação em todas as fases - não são uma etapa final, mas um **ritmo contínuo** de validação.  
 Desde a definição inicial de requisitos até à auditoria final, cada momento do ciclo de vida deve gerar **evidência objetiva** de que a aplicação está protegida contra falhas conhecidas e ameaças emergentes.  
 
 | Fase SDLC / Evento | Ação de testes | Artefacto/Evidência |
@@ -49,7 +49,7 @@ Cada US representa um **controlo essencial**, pensado para ser integrado diretam
 
 ---
 
-### US-01 — Estratégia formal de testes por aplicação
+### US-01 - Estratégia formal de testes por aplicação
 
 A validação começa com planeamento.  
 Sem uma estratégia clara, a cobertura torna-se desigual e impossível de auditar.  
@@ -94,7 +94,7 @@ Como **AppSec**, quero **definir uma estratégia de testes de segurança por apl
 
 ---
 
-### US-02 — SAST obrigatório em Pull Request
+### US-02 - SAST obrigatório em Pull Request
 
 Detetar cedo é sempre mais barato.  
 Executar SAST no momento do PR garante que vulnerabilidades nunca chegam à *branch* principal.  
@@ -139,7 +139,7 @@ Como **Dev**, quero **executar SAST automático no PR com comentários inline**,
 
 ---
 
-### US-03 — DAST autenticado em Staging
+### US-03 - DAST autenticado em Staging
 
 Muitas falhas críticas só se revelam após login.  
 Executar DAST autenticado em staging é o passo natural antes de promover uma release.  
@@ -184,7 +184,7 @@ Como **QA**, quero **executar DAST autenticado em staging**, para **detetar vuln
 
 ---
 
-### US-04 — Gates de segurança no CI/CD
+### US-04 - Gates de segurança no CI/CD
 
 Sem gates, findings tornam-se meros relatórios ignorados.  
 Gates automáticos são a barreira que impede regressões graves de avançar.  
@@ -230,9 +230,9 @@ Como **DevOps**, quero **integrar gates automáticos no pipeline (SAST/SCA/IAST)
 
 ---
 
-### US-05 — Regressões de segurança automatizadas
+### US-05 - Regressões de segurança automatizadas
 
-Corrigir não chega — é preciso garantir que a mesma falha não regressa.  
+Corrigir não chega - é preciso garantir que a mesma falha não regressa.  
 Testes de regressão automatizados transformam cada correção numa proteção futura.  
 
 **Contexto.**  
@@ -275,7 +275,7 @@ Como **Dev**, quero **criar testes de regressão para findings corrigidos**, par
 
 ---
 
-### US-06 — Fuzzing dirigido a APIs críticas
+### US-06 - Fuzzing dirigido a APIs críticas
 
 Testes convencionais não capturam todas as falhas.  
 O fuzzing, ao explorar entradas inesperadas, revela vulnerabilidades invisíveis a olho nu.  
@@ -320,7 +320,7 @@ Como **QA**, quero **aplicar fuzzing a endpoints críticos**, para **detectar fa
 
 ---
 
-### US-07 — Critérios de release e aceitação de risco
+### US-07 - Critérios de release e aceitação de risco
 
 Cada release é também uma decisão de risco.  
 Formalizar critérios e aceitar explicitamente o risco residual é parte da governação.  
@@ -365,7 +365,7 @@ Como **Gestão de Produto**, quero **estabelecer critérios de aceitação de se
 
 ---
 
-### US-08 — PenTesting ofensivo baseado em risco
+### US-08 - PenTesting ofensivo baseado em risco
 
 Automação é fundamental, mas não suficiente.  
 O olhar humano ofensivo identifica cadeias de ataque que scanners nunca simulam.  

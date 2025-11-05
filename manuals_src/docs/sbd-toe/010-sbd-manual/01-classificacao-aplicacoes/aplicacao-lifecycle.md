@@ -9,7 +9,7 @@ tags: [aplicacao, ciclo-vida, user-story, backlog]
 
 A correta aplicação da classificação de criticidade (L1–L3) ao longo de todo o ciclo de desenvolvimento é essencial para garantir que os controlos de segurança são sempre proporcionais ao risco real, efetivamente rastreáveis e revistos de acordo com os eventos e alterações relevantes.
 
-Este capítulo detalha, de forma operacional e prescritiva, **quando e como implementar a classificação de criticidade na prática**, descrevendo as ações esperadas por cada papel, os artefactos produzidos, e apresentando exemplos de user stories reutilizáveis — sempre de acordo com o nível de risco da aplicação.
+Este capítulo detalha, de forma operacional e prescritiva, **quando e como implementar a classificação de criticidade na prática**, descrevendo as ações esperadas por cada papel, os artefactos produzidos, e apresentando exemplos de user stories reutilizáveis - sempre de acordo com o nível de risco da aplicação.
 
 ---
 
@@ -69,8 +69,8 @@ Como **Dev / Tech Lead** quero classificar a aplicação com base nos eixos Expo
 :::
 
 **Artefactos & evidências.**
-- Artefacto: `classificacao-aplicacao.yaml` — Evidência: repositório `security/` versionado  
-- Artefacto: `matriz-controlos.md` — Evidência: anexo ao PR inicial ou ao repositório de documentação  
+- Artefacto: `classificacao-aplicacao.yaml` - Evidência: repositório `security/` versionado  
+- Artefacto: `matriz-controlos.md` - Evidência: anexo ao PR inicial ou ao repositório de documentação  
 
 **Proporcionalidade por risco.**
 | Nível | Obrigatório? | Ajustes |
@@ -118,7 +118,7 @@ Como **Dev / Tech Lead** quero aplicar a matriz de controlos para garantir que a
 :::
 
 **Artefactos & evidências.**
-- Artefacto: `matriz-controlos.md` — Evidência: issue tracking/backlog  
+- Artefacto: `matriz-controlos.md` - Evidência: issue tracking/backlog  
 
 **Proporcionalidade por risco.**
 | Nível | Obrigatório? | Ajustes |
@@ -164,7 +164,7 @@ Como **AppSec / Segurança** quero rever a classificação de criticidade sempre
 :::
 
 **Artefactos & evidências.**
-- Artefacto: `classificacao-revisao.md` — Evidência: commit em repositório ou issue  
+- Artefacto: `classificacao-revisao.md` - Evidência: commit em repositório ou issue  
 
 **Proporcionalidade por risco.**
 | Nível | Obrigatório? | Ajustes |
@@ -209,7 +209,7 @@ Como **GRC / Compliance** quero registar o risco residual após aplicar os contr
 :::
 
 **Artefactos & evidências.**
-- Artefacto: `risco-residual.md` — Evidência: aprovado em repositório ou ferramenta GRC  
+- Artefacto: `risco-residual.md` - Evidência: aprovado em repositório ou ferramenta GRC  
 
 **Proporcionalidade por risco.**
 | Nível | Obrigatório? | Ajustes |
@@ -255,7 +255,7 @@ Como **QA / Testes** quero validar que os requisitos aplicáveis por nível de r
 :::
 
 **Artefactos & evidências.**
-- Artefacto: `checklist-go-live.md` — Evidência: anexo ao PR final ou pipeline CI/CD  
+- Artefacto: `checklist-go-live.md` - Evidência: anexo ao PR final ou pipeline CI/CD  
 
 **Proporcionalidade por risco.**
 | Nível | Obrigatório? | Ajustes |
@@ -301,7 +301,7 @@ Como **AppSec / Segurança** quero verificar se as ameaças esperadas para o ní
 :::
 
 **Artefactos & evidências.**
-- Artefacto: `mapeamento-ameacas.md` — Evidência: anexo ao PR de revisão  
+- Artefacto: `mapeamento-ameacas.md` - Evidência: anexo ao PR de revisão  
 
 **Proporcionalidade por risco.**
 | Nível | Obrigatório? | Ajustes |

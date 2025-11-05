@@ -1,12 +1,12 @@
 ---
 id: recomendacoes-avancadas
-title: Recomendações Avançadas — Arquitetura Segura
+title: Recomendações Avançadas - Arquitetura Segura
 description: Práticas avançadas para contextos de elevada maturidade em arquitetura segura
 tags: [avancado, arquitetura, maturidade, zero-trust, sbomm]
 sidebar_position: 30
 ---
 
-# 🧠 Recomendações Avançadas — Arquitetura Segura
+# 🧠 Recomendações Avançadas - Arquitetura Segura
 
 Este documento complementa as práticas fundamentais do capítulo com recomendações orientadas a contextos de **elevada maturidade organizacional**, sistemas críticos ou ambientes regulamentados.
 
@@ -35,7 +35,7 @@ Este documento complementa as práticas fundamentais do capítulo com recomenda�
 - **Modelos de Zoneamento Baseado em Risco**
 - **Threat Modeling como parte da Definition of Done**
 - **Frameworks**: SABSA, ISO/IEC 42010, NIST SP 800-160 Vol 1
-- **SBOMM** (Security BOM Maturity Model) — integração entre arquitetura e composição de software
+- **SBOMM** (Security BOM Maturity Model) - integração entre arquitetura e composição de software
 
 ---
 

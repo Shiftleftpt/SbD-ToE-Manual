@@ -15,7 +15,7 @@ Nem todas as organizações têm os mesmos recursos, contexto ou requisitos regu
 
 Por isso, este manual parte de um princípio fundamental:
 
-> **A segurança deve ser aplicada com base numa análise de risco — e não de forma cega ou uniforme.**
+> **A segurança deve ser aplicada com base numa análise de risco - e não de forma cega ou uniforme.**
 
 ---
 
@@ -24,7 +24,7 @@ Por isso, este manual parte de um princípio fundamental:
 Há uma ordem lógica na leitura e aplicação dos capítulos:  
 a **análise de risco e a classificação de aplicações** são sempre o ponto de partida. Só depois se definem requisitos, modelam ameaças e desenha a arquitetura.
 
-Esta precedência é intencional — garante que todas as práticas seguintes são **proporcionais, relevantes e ajustadas ao contexto real** de cada aplicação.
+Esta precedência é intencional - garante que todas as práticas seguintes são **proporcionais, relevantes e ajustadas ao contexto real** de cada aplicação.
 
 ---
 
@@ -36,7 +36,7 @@ Inspirado nos princípios do [NIS2](https://eur-lex.europa.eu/legal-content/PT/T
 - Cada nível determina **quais os controlos mandatórios, recomendados ou opcionais**.
 - A matriz de risco assegura **proporcionalidade e foco nos riscos reais**.
 
-> Este modelo canaliza esforço para onde ele é mais necessário — nem tudo precisa de tudo.
+> Este modelo canaliza esforço para onde ele é mais necessário - nem tudo precisa de tudo.
 
 ---
 
@@ -47,9 +47,9 @@ diz-te **o que fazer, quando, como e com que ferramentas**.
 
 Mas é também:
 
-- **Modular** — podes adotar os domínios mais críticos primeiro (ex: "Controlo de Dependências", "CI/CD Seguro")
-- **Extensível** — suporta evolução progressiva com frameworks como SAMM, ASVS ou roadmaps internos
-- **Pragmático** — recomendações orientadas à prática, compatíveis com equipas reais em funcionamento
+- **Modular** - podes adotar os domínios mais críticos primeiro (ex: "Controlo de Dependências", "CI/CD Seguro")
+- **Extensível** - suporta evolução progressiva com frameworks como SAMM, ASVS ou roadmaps internos
+- **Pragmático** - recomendações orientadas à prática, compatíveis com equipas reais em funcionamento
 
 O objetivo **não é "cumprir um checklist"**, mas sim:
 
@@ -61,7 +61,7 @@ O objetivo **não é "cumprir um checklist"**, mas sim:
 
 ## 🧩 Um manual para todas as organizações
 
-Qualquer organização — independentemente da sua dimensão, orçamento ou contexto — pode usar este manual como base para:
+Qualquer organização - independentemente da sua dimensão, orçamento ou contexto - pode usar este manual como base para:
 
 - Avaliar e melhorar a sua maturidade de segurança
 - Tomar decisões informadas com base no risco
@@ -80,9 +80,9 @@ Este manual foi construído para:
 ## 🧠 Aplicar com inteligência, não por obrigação
 
 > No limite, aplica-se o bom senso.  
-> A segurança é para servir a organização — **não para a atrapalhar**.
+> A segurança é para servir a organização - **não para a atrapalhar**.
 
-Este manual **não impõe — propõe**:  
+Este manual **não impõe - propõe**:  
 fornece um caminho claro, estruturado e aplicável, deixando sempre espaço para **adaptação, maturidade e contexto**.
 
 É uma **ferramenta de capacitação, não de controlo**.
@@ -99,7 +99,7 @@ O SbD-ToE é a fundação onde assentam todos os conteúdos especializados da Sh
 - **Mitigação de Ameaças (OSC&R)**
 
 Todos partem deste núcleo comum:  
-um ciclo de vida de desenvolvimento **seguro, proporcional, auditável — e humano**.
+um ciclo de vida de desenvolvimento **seguro, proporcional, auditável - e humano**.
 
 ---
 
@@ -159,7 +159,7 @@ Estas secções complementam o SbD-ToE e podem ser adotadas **progressivamente**
 > *"We stand on the shoulders of giants."*
 
 Este manual é fruto do trabalho coletivo de comunidades, autores e equipas técnicas ao longo de décadas.  
-A sua origem está na prática — não na teoria — com mais de 10 anos de experiência real aplicada.
+A sua origem está na prática - não na teoria - com mais de 10 anos de experiência real aplicada.
 
 Desde a primeira “ShiftLeft Framework for Security by Design & by Default” até hoje, procurámos sempre **soluções simples, exequíveis e adaptáveis**.
 

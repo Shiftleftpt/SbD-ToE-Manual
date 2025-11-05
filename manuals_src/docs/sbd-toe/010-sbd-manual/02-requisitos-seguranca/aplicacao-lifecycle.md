@@ -48,7 +48,7 @@ A seleção inicial de requisitos deve ser proporcional ao risco da aplicação 
 
 **📖 Rationale científico.**  
 Alinhado com **OWASP SAMM Governance/Strategy & Metrics**, **BSIMM SR1.1**, **NIST SSDF RM.1** e **ISO/IEC 27005** (gestão de risco).  
-Mitiga riscos de desajuste entre controlos e risco real, reduzindo **CWE-693 (Protection Mechanism Failure)**, **CWE-1039 (Automated Discovery—Incorrect Assumptions)** e lacunas de **OSC&R – Requirements Coverage Gaps**.  
+Mitiga riscos de desajuste entre controlos e risco real, reduzindo **CWE-693 (Protection Mechanism Failure)**, **CWE-1039 (Automated Discovery-Incorrect Assumptions)** e lacunas de **OSC&R – Requirements Coverage Gaps**.  
 Valor empírico: o **Verizon DBIR** e estudos **BSIMM** mostram que uma seleção proporcional reduz custos de implementação e diminui “janela de exposição” para classes de falhas recorrentes (p.ex., **OWASP Top 10**), mantendo a eficácia operacional.
 
 :::userstory

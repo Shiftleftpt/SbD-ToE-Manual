@@ -6,7 +6,7 @@ description: Aplicação proporcional dos controlos de monitorização e respost
 tags: [proporcionalidade, risco, matriz, controles, L1, L2, L3]
 ---
 
-# 📈 Matriz de Controlos por Nível de Risco — Monitorização e Operações
+# 📈 Matriz de Controlos por Nível de Risco - Monitorização e Operações
 
 Esta matriz define os **requisitos mínimos obrigatórios de monitorização** para aplicações, consoante o seu nível de risco (L1 a L3). Serve como base para avaliação de conformidade e planeamento de controlos ao longo do ciclo de vida.
 

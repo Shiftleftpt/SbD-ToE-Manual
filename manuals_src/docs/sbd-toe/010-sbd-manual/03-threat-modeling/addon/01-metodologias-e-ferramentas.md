@@ -88,7 +88,7 @@ Sugestão de estrutura para manter os modelos reutilizáveis e versionados:
 └── decisions.md         # Decisões tomadas e justificações (aceitação de risco, exceções)
 ```
 
-Sempre que possível, os requisitos derivados das ameaças devem ser rastreáveis ao catálogo definido no Capítulo 2 — Requisitos de Segurança.
+Sempre que possível, os requisitos derivados das ameaças devem ser rastreáveis ao catálogo definido no Capítulo 2 - Requisitos de Segurança.
 
 ---
 

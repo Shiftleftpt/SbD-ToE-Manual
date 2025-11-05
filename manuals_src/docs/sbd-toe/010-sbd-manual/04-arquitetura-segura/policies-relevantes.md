@@ -6,9 +6,9 @@ tags: [politicas, arquitetura, governanca]
 sidebar_position: 60
 ---
 
-# 🏛️ Políticas Organizacionais — Arquitetura Segura
+# 🏛️ Políticas Organizacionais - Arquitetura Segura
 
-A adoção eficaz do Capítulo 04 — Arquitetura Segura — exige a existência de **políticas organizacionais formais** que sustentem, legitimem e tornem auditável a aplicação das práticas aqui descritas.
+A adoção eficaz do Capítulo 04 - Arquitetura Segura - exige a existência de **políticas organizacionais formais** que sustentem, legitimem e tornem auditável a aplicação das práticas aqui descritas.
 
 ---
 
@@ -23,7 +23,7 @@ Estas políticas:
 - Permitem auditoria objetiva de decisões e exceções arquitetónicas;
 - Suportam a rastreabilidade entre requisitos, arquitetura e evidência técnica.
 
-> 🧩 Este capítulo operacionaliza decisões formais sobre arquitetura — a política define, o capítulo executa.
+> 🧩 Este capítulo operacionaliza decisões formais sobre arquitetura - a política define, o capítulo executa.
 
 ---
 
@@ -70,4 +70,4 @@ Cada política organizacional deve conter:
 - A sua aplicação deve estar **integrada no ciclo de vida** via templates, gates e práticas de CI/CD;
 - A existência destas políticas **viabiliza a arquitetura segura como prática auditável e transversal**, garantindo rastreabilidade e consistência.
 
-> 📌 A sua ausência compromete a coerência das decisões técnicas, a validação de exceções e a auditabilidade da arquitetura — tanto em projetos internos como em contextos regulados.
+> 📌 A sua ausência compromete a coerência das decisões técnicas, a validação de exceções e a auditabilidade da arquitetura - tanto em projetos internos como em contextos regulados.

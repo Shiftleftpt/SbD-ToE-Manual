@@ -81,4 +81,4 @@ Uma exceção pode ser considerada se **todos os seguintes critérios forem anal
 
 ---
 
-> ✅ Aceitar risco não é abdicar da segurança — é uma decisão informada, documentada e revista. Deve ser visível, auditável e limitada no tempo.
+> ✅ Aceitar risco não é abdicar da segurança - é uma decisão informada, documentada e revista. Deve ser visível, auditável e limitada no tempo.

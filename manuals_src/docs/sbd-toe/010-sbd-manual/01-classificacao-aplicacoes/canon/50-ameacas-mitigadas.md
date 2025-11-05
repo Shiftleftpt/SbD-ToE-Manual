@@ -5,9 +5,9 @@ sidebar_position: 50
 tags: [canon, ameaças, mitigação, risco, controlo]
 ---
 
-# 🔐 Ameaças Mitigadas — Capítulo 01: Classificação da Criticidade Aplicacional
+# 🔐 Ameaças Mitigadas - Capítulo 01: Classificação da Criticidade Aplicacional
 
-Este capítulo **não define controlos técnicos diretos**, mas estabelece a **estrutura de decisão que governa a aplicação proporcional e justificada de segurança em software**. A ausência desta estrutura gera múltiplas ameaças — técnicas, organizacionais e processuais.
+Este capítulo **não define controlos técnicos diretos**, mas estabelece a **estrutura de decisão que governa a aplicação proporcional e justificada de segurança em software**. A ausência desta estrutura gera múltiplas ameaças - técnicas, organizacionais e processuais.
 
 > A correta classificação do risco é **pré-condição de todos os controlos eficazes**. A sua ausência compromete por completo o modelo SbD-ToE.
 
@@ -78,5 +78,5 @@ A aplicação rigorosa deste capítulo garante que:
 
 > 📌 Este capítulo **mitiga diretamente pelo menos 15 ameaças únicas** que não são tratadas em mais nenhum ponto do manual.
 
-> ⚠️ A ausência desta prática **põe em causa a aplicabilidade proporcional** de todo o modelo SbD-ToE — comprometendo desde a definição de requisitos até à rastreabilidade de exceções.
+> ⚠️ A ausência desta prática **põe em causa a aplicabilidade proporcional** de todo o modelo SbD-ToE - comprometendo desde a definição de requisitos até à rastreabilidade de exceções.
 

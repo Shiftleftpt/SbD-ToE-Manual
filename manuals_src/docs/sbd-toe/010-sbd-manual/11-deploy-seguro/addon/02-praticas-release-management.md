@@ -139,5 +139,5 @@ Release Management é o processo de **preparação, aprovação, distribuição 
 
 ---
 
-> 🎯 A gestão de releases deve ser tratada como um processo formal e seguro — **não como simples deploy técnico**.  
+> 🎯 A gestão de releases deve ser tratada como um processo formal e seguro - **não como simples deploy técnico**.  
 > Um bom processo de release é essencial para sustentar práticas avançadas de segurança e garantir confiança nas alterações entregues.

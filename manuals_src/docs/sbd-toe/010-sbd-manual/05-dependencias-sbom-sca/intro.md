@@ -44,10 +44,10 @@ Focam-se em assegurar que:
 - nenhuma biblioteca entra “por cópia manual” fora do *package manager*.
 
 Ligação a outros capítulos:
-- **Cap. 02 — Requisitos de Segurança** (REQ-DEP-xxx),
-- **Cap. 07 — CI/CD Seguro** (pipelines e gates),
-- **Cap. 09 — Containers** (imagens como artefactos de supply chain),
-- **Cap. 14 — Governança** (exigências a fornecedores).
+- **Cap. 02 - Requisitos de Segurança** (REQ-DEP-xxx),
+- **Cap. 07 - CI/CD Seguro** (pipelines e gates),
+- **Cap. 09 - Containers** (imagens como artefactos de supply chain),
+- **Cap. 14 - Governança** (exigências a fornecedores).
 
 ---
 

@@ -7,7 +7,7 @@ sidebar_position: 25
 ---
 
 
-# 📎 Rastreabilidade contra Frameworks — Capítulo 07: CI/CD Seguro
+# 📎 Rastreabilidade contra Frameworks - Capítulo 07: CI/CD Seguro
 
 Este ficheiro estabelece a **rastreabilidade entre as práticas prescritas neste capítulo** e os requisitos dos principais frameworks e normas de segurança para cadeias de integração e entrega contínua (CI/CD), proteção de pipelines e validação automatizada.
 
@@ -64,7 +64,7 @@ Cobertura de:
 
 ---
 
-### 🧪 DSOMM — DevSecOps Maturity Model
+### 🧪 DSOMM - DevSecOps Maturity Model
 
 Cobertura nos domínios principais:
 
@@ -110,9 +110,9 @@ Cobertura total:
 
 O Capítulo 07 está diretamente interligado com:
 
-- **Capítulo 01** — classificação de risco determina exigência de validações no CI/CD;
-- **Capítulo 02 / 06** — requisitos REQ-XXX e práticas de desenvolvimento são validados aqui;
-- **Capítulo 09** — execução segura de containers depende do pipeline;
-- **Capítulo 10** — testes de segurança automáticos acionados no pipeline.
+- **Capítulo 01** - classificação de risco determina exigência de validações no CI/CD;
+- **Capítulo 02 / 06** - requisitos REQ-XXX e práticas de desenvolvimento são validados aqui;
+- **Capítulo 09** - execução segura de containers depende do pipeline;
+- **Capítulo 10** - testes de segurança automáticos acionados no pipeline.
 
 > 📌 Esta rastreabilidade comprova que o Capítulo 07 fornece um modelo técnico e auditável de proteção da cadeia de desenvolvimento, com validações contínuas e rastreabilidade de execução.

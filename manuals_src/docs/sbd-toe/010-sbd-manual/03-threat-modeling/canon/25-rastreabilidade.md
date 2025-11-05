@@ -4,7 +4,7 @@ title: Rastreabilidade Top-Down – Capítulo 03
 sidebar_position: 25
 ---
 
-# 📎 Rastreabilidade contra Frameworks — Capítulo 03: Threat Modeling
+# 📎 Rastreabilidade contra Frameworks - Capítulo 03: Threat Modeling
 
 Este ficheiro estabelece a **rastreabilidade entre as práticas prescritas neste capítulo** e os requisitos dos principais frameworks de segurança relacionados com threat modeling e avaliação de ameaças aplicacionais.
 

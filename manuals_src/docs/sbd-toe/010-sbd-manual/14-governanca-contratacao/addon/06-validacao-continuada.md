@@ -78,10 +78,10 @@ Este anexo descreve os mecanismos de **validação recorrente** das aplicações
 
 ## 🔗 Ligações cruzadas
 
-* Cap. 1 — Revisão da classificação de risco (`addon/15-aplicacao-lifecycle.md`)
-* Cap. 2 — Checklist de requisitos por projeto
-* Cap. 14.3 — Onboarding e validação de fornecedores
-* Cap. 14.4 — Rastreabilidade organizacional
-* Cap. 14.5 — Exemplos de decisões e exceções
+* Cap. 1 - Revisão da classificação de risco (`addon/15-aplicacao-lifecycle.md`)
+* Cap. 2 - Checklist de requisitos por projeto
+* Cap. 14.3 - Onboarding e validação de fornecedores
+* Cap. 14.4 - Rastreabilidade organizacional
+* Cap. 14.5 - Exemplos de decisões e exceções
 
 ---

@@ -50,9 +50,9 @@ Isto implica olhar tanto para imagens de pipeline (builders, runners) como para 
 👉 O objetivo não é apenas “assegurar que corre”, mas garantir que **corre de forma confiável, validada e auditável**.  
 
 Este capítulo está intimamente ligado a:  
-- **Cap. 05 — Dependências, SBOM e SCA**, porque containers são também *supply chain artifacts*, exigindo inventário e rastreabilidade.  
-- **Cap. 07 — CI/CD Seguro**, que trata a segurança global do pipeline.  
-- **Cap. 12 — Monitorização & Operações**, que reforça a deteção e resposta em runtime.  
+- **Cap. 05 - Dependências, SBOM e SCA**, porque containers são também *supply chain artifacts*, exigindo inventário e rastreabilidade.  
+- **Cap. 07 - CI/CD Seguro**, que trata a segurança global do pipeline.  
+- **Cap. 12 - Monitorização & Operações**, que reforça a deteção e resposta em runtime.  
 
 ---
 
@@ -81,7 +81,7 @@ Sem governação, os controlos técnicos degradam-se e perdem eficácia.
 👉 Pensa nestes pilares como a **espinha dorsal** do programa de segurança de containers: mesmo que outros controlos falhem, são eles que mantêm a organização de pé.
 
 1. **Allowlist de registries e digest-only** para bloquear fontes não confiáveis.  
-2. **Gestão de segredos** — fora da imagem, com credenciais efémeras e auditadas.  
+2. **Gestão de segredos** - fora da imagem, com credenciais efémeras e auditadas.  
 3. **RBAC mínimo e ServiceAccounts dedicadas**, nunca o *default SA* em L2/L3.  
 4. **NetworkPolicies** com egress controlado, reduzindo o “blast radius”.  
 5. **Golden Base Images** por stack, com SLA de patching e depreciação.  
@@ -104,7 +104,7 @@ Não basta “confiar nos developers” ou “escolher imagens oficiais”: é n
 - Gerar SBOM em cada build, rastrear alterações e ligá-las ao pipeline.  
 - Rastrear execuções de forma auditável, do commit ao runtime.  
 
-Estes passos não são opcionais — são a base da confiança operacional.
+Estes passos não são opcionais - são a base da confiança operacional.
 
 ---
 
@@ -136,7 +136,7 @@ A sua proteção depende de uma **colaboração transversal**:
 | **Infraestrutura**      | Garante isolamento (cgroups, namespaces, policies) em Kubernetes            |
 | **GRC / Conformidade**  | Mantém rastreabilidade, políticas formais e evidências para auditoria       |
 
-Sem esta distribuição de papéis, a segurança degrada-se — e um elo fraco compromete toda a cadeia.
+Sem esta distribuição de papéis, a segurança degrada-se - e um elo fraco compromete toda a cadeia.
 
 ---
 
@@ -151,7 +151,7 @@ A resposta é simples: porque **containers inseguros comprometem diretamente a i
 - Cumprir normativos como NIS2, SSDF e SLSA.  
 - Permitir resposta rápida e eficaz a incidentes em runtime.  
 
-Exemplos como o **Equifax (2017)** — em que logs e controlos deficientes atrasaram a deteção — ou fugas via segredos mal geridos em Docker Hub mostram que o custo de não aplicar estas práticas é sempre superior ao de as adotar.  
+Exemplos como o **Equifax (2017)** - em que logs e controlos deficientes atrasaram a deteção - ou fugas via segredos mal geridos em Docker Hub mostram que o custo de não aplicar estas práticas é sempre superior ao de as adotar.  
 
 Em última análise, trata-se de transformar agilidade em **agilidade com confiança**.
 
@@ -172,8 +172,8 @@ A proporcionalidade permite balancear custo, risco e complexidade:
 | NetworkPolicy egress      | Ingress básico | Ingress + egress crítico | Ingress + egress total + auditoria |
 | Golden base + SLA patch   | Recomendado| Obrigatório| Obrigatório + rollout acelerado |
 | Builders ephemerais       | Recomendado| Obrigatório| Obrigatório + segmentação rede |
-| Sandboxes (gVisor/Kata)   | —          | —          | Recomendado p/ dados sensíveis |
-| Drift & promoção estágios | —          | —          | Obrigatório em ambientes regulados |
+| Sandboxes (gVisor/Kata)   | -          | -          | Recomendado p/ dados sensíveis |
+| Drift & promoção estágios | -          | -          | Obrigatório em ambientes regulados |
 
 ---
 

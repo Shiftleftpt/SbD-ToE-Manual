@@ -104,4 +104,4 @@ Garantir que todas as alterações em projetos de Infraestrutura como Código (I
 
 ---
 
-> ⚠️ A ausência de validações automáticas abre a porta a más práticas, riscos de segurança, configurações perigosas e erros difíceis de rastrear — comprometendo todo o ciclo de vida da infraestrutura como código.
+> ⚠️ A ausência de validações automáticas abre a porta a más práticas, riscos de segurança, configurações perigosas e erros difíceis de rastrear - comprometendo todo o ciclo de vida da infraestrutura como código.

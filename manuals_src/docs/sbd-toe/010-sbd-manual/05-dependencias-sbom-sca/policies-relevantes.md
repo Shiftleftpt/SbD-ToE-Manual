@@ -7,9 +7,9 @@ sidebar_position: 60
 
 ---
 
-# 🏛️ Políticas Organizacionais — Dependências, SBOM e SCA
+# 🏛️ Políticas Organizacionais - Dependências, SBOM e SCA
 
-A adoção eficaz do Capítulo 05 — Dependências, SBOM e SCA — exige a existência de **políticas organizacionais formais** que **regulem e sustentem a gestão segura de bibliotecas de terceiros, análise de composição de software e uso de SBOMs**.
+A adoção eficaz do Capítulo 05 - Dependências, SBOM e SCA - exige a existência de **políticas organizacionais formais** que **regulem e sustentem a gestão segura de bibliotecas de terceiros, análise de composição de software e uso de SBOMs**.
 
 ---
 

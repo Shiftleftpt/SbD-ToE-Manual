@@ -1,13 +1,13 @@
 ---
 id: ameacas-mitigadas
-title: Ameaças Mitigadas — Deploy Seguro
+title: Ameaças Mitigadas - Deploy Seguro
 description: Visão bottom-up das ameaças mitigadas pelas práticas de deploy seguro descritas neste capítulo.
 tags: [ameaças, mitigação, deploy, execução, rollback, toggle, runtime, ssdf, stride, capec, osc&r]
 sidebar_position: 50
 ---
 
 
-# 🔐 Ameaças Mitigadas — Capítulo 11: Deploy e Controlo de Execução
+# 🔐 Ameaças Mitigadas - Capítulo 11: Deploy e Controlo de Execução
 
 Este capítulo define práticas para **entrega segura, validação formal, ativação controlada e execução reversível** de funcionalidades em produção.  
 As ameaças mitigadas surgem no momento mais sensível do SDLC: **a passagem real para runtime**.

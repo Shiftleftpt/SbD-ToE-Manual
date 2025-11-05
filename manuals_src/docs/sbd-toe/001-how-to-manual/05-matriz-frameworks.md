@@ -24,20 +24,20 @@ A tabela abaixo mostra a correspondência entre os **14 capítulos técnicos do 
 
 | Nº | Capítulo                                | OWASP SAMM               | BSIMM                    | NIST SSDF      | SLSA     | CIS Controls | ISO 27001/27034 |
 |----|------------------------------------------|---------------------------|---------------------------|----------------|----------|----------------|------------------|
-| 1  | Gestão de Risco e Classificação         | Governance > Risk Mgmt    | Strategy & Metrics        | PO.1, PO.2      | —        | 2, 4, 14        | A.5, A.6, A.8     |
-| 2  | Requisitos de Segurança                 | Design > Requirements     | Requirements              | PO.3            | —        | 3, 5, 16        | A.14.2, A.18      |
-| 3  | Threat Modeling                         | Design > Threat Assessment| Architecture Analysis     | PO.3, RV.1      | —        | 12              | A.6.1.2, A.18     |
-| 4  | Arquitetura Segura                      | Design > Architecture     | Architecture & Design     | PO.3, RV.1      | —        | 12, 16          | A.14.2, A.18      |
+| 1  | Gestão de Risco e Classificação         | Governance > Risk Mgmt    | Strategy & Metrics        | PO.1, PO.2      | -        | 2, 4, 14        | A.5, A.6, A.8     |
+| 2  | Requisitos de Segurança                 | Design > Requirements     | Requirements              | PO.3            | -        | 3, 5, 16        | A.14.2, A.18      |
+| 3  | Threat Modeling                         | Design > Threat Assessment| Architecture Analysis     | PO.3, RV.1      | -        | 12              | A.6.1.2, A.18     |
+| 4  | Arquitetura Segura                      | Design > Architecture     | Architecture & Design     | PO.3, RV.1      | -        | 12, 16          | A.14.2, A.18      |
 | 5  | Controlo de Dependências (SBOM, SCA)    | Implementation > Construction | Software Composition | RV.3, RV.4      | L2+      | 2, 5, 10         | A.14.2.8, A.12.1  |
-| 6  | Desenvolvimento Seguro                  | Implementation > Coding   | Code Review, SAST         | RV.1, RV.2      | —        | 3, 5, 16        | A.14.2, A.18      |
+| 6  | Desenvolvimento Seguro                  | Implementation > Coding   | Code Review, SAST         | RV.1, RV.2      | -        | 3, 5, 16        | A.14.2, A.18      |
 | 7  | CI/CD Seguro                            | Implementation > Deployment| Deployment                | RV.5, RV.6      | L3+      | 6, 10, 16        | A.14.2.1          |
 | 8  | Infraestrutura como Código (IaC)        | Operations > Environment  | Environment Hardening     | PO.5, RV.5      | L3+      | 11, 13, 14       | A.12.1, A.14.2    |
 | 9  | *containers* & Imagens                   | Operations > Environment  | Environment Hardening     | PO.5, RV.4      | L3+      | 11, 12           | A.14.2.5          |
-| 10 | Testes de Segurança                     | Verification > Testing    | Pen Testing, DAST         | RV.2            | —        | 17              | A.18, A.14.2.9    |
+| 10 | Testes de Segurança                     | Verification > Testing    | Pen Testing, DAST         | RV.2            | -        | 17              | A.18, A.14.2.9    |
 | 11 | Deploy Seguro                           | Implementation > Deployment| Release Management        | RV.5            | L3+      | 6, 16            | A.12.1.2, A.14.2  |
-| 12 | Monitorização e Operações               | Operations > Incident Mgmt| Operations                | PO.6, RV.6      | —        | 8, 13, 16        | A.16.1, A.12.4    |
-| 13 | Formação e Onboarding                   | Governance > Education    | Training                  | PO.4            | —        | 14               | A.7.2.2, A.18     |
-| 14 | Governança e Contratação                | Governance > Strategy     | Governance                | PO.1, PO.7      | —        | 1, 2, 17         | A.5.1, A.15, A.18 |
+| 12 | Monitorização e Operações               | Operations > Incident Mgmt| Operations                | PO.6, RV.6      | -        | 8, 13, 16        | A.16.1, A.12.4    |
+| 13 | Formação e Onboarding                   | Governance > Education    | Training                  | PO.4            | -        | 14               | A.7.2.2, A.18     |
+| 14 | Governança e Contratação                | Governance > Strategy     | Governance                | PO.1, PO.7      | -        | 1, 2, 17         | A.5.1, A.15, A.18 |
 
 ---
 

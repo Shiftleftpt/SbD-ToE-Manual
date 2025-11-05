@@ -7,9 +7,9 @@ sidebar_position: 60
 ---
 
 
-# 🏛️ Políticas Organizacionais — Testes de Segurança
+# 🏛️ Políticas Organizacionais - Testes de Segurança
 
-A aplicação eficaz do **Capítulo 10 — Testes de Segurança** exige que existam **políticas organizacionais formais** que definam:
+A aplicação eficaz do **Capítulo 10 - Testes de Segurança** exige que existam **políticas organizacionais formais** que definam:
 
 - O **que testar**, **quando testar** e **como validar** a segurança das aplicações;
 - Os **níveis mínimos exigidos** de cobertura e proporcionalidade por criticidade (L1–L2–L3);
@@ -20,7 +20,7 @@ A aplicação eficaz do **Capítulo 10 — Testes de Segurança** exige que exis
 
 ## 📌 Nota fundamental
 
-> ⚠️ A validação de segurança eficaz não depende apenas de ferramentas — depende de **políticas claras que estabeleçam critérios, responsabilidades e controlo contínuo**.
+> ⚠️ A validação de segurança eficaz não depende apenas de ferramentas - depende de **políticas claras que estabeleçam critérios, responsabilidades e controlo contínuo**.
 
 Estas políticas:
 
@@ -84,4 +84,4 @@ Cada política deve incluir, pelo menos:
 - A sua aplicação deve ser **auditável, baseada em evidência objetiva e alinhada com pipelines automatizados e testes ofensivos planeados**;
 - A maturidade da organização em validação de segurança depende **não apenas da execução dos testes, mas da existência de critérios formais e consistentes**.
 
-> 📌 Políticas bem definidas são a **garantia de que os testes — automáticos ou manuais — têm impacto real, visível e contínuo na segurança da organização**.
+> 📌 Políticas bem definidas são a **garantia de que os testes - automáticos ou manuais - têm impacto real, visível e contínuo na segurança da organização**.

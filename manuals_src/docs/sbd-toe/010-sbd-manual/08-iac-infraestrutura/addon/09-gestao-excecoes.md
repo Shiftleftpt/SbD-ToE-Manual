@@ -13,7 +13,7 @@ tags: [exceções, governação, iac, controlo, segurança, auditoria]
 
 Definir uma abordagem formal para gerir **exceções a políticas, requisitos ou controlos de segurança** em projetos de Infraestrutura como Código (IaC), garantindo rastreabilidade, justificação e mitigação de riscos associados.
 
-> A existência de exceções é legítima — a sua gestão deficiente é que compromete a segurança.
+> A existência de exceções é legítima - a sua gestão deficiente é que compromete a segurança.
 
 ---
 

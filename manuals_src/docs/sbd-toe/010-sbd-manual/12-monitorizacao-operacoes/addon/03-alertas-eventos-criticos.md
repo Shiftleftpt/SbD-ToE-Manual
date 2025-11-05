@@ -16,7 +16,7 @@ Prescrever práticas para a definição, ativação e validação de **alertas a
 
 ## 🧬 O que são alertas críticos
 
-Alertas críticos são **notificações geradas automaticamente** com base em padrões de eventos que indicam anomalias, falhas de segurança ou comportamentos indesejados — exigindo validação humana ou resposta imediata.
+Alertas críticos são **notificações geradas automaticamente** com base em padrões de eventos que indicam anomalias, falhas de segurança ou comportamentos indesejados - exigindo validação humana ou resposta imediata.
 
 > 🌟 Um bom alerta é oportuno, acionável, e baseado em eventos rastreáveis e estruturados.
 
@@ -43,7 +43,7 @@ Cada regra de alerta deve conter:
 
 * **Condição**: ex. 5 falhas de login num intervalo de 3 minutos;
 * **Fonte de dados**: ficheiro de log ou índice no SIEM (ex: `auth.log`);
-* **Severidade**: Alta, Média, Baixa — de acordo com o impacto e urgência;
+* **Severidade**: Alta, Média, Baixa - de acordo com o impacto e urgência;
 * **Canal de notificação**: e-mail, Slack, webhook, PagerDuty, etc.;
 * **Runbook (opcional)**: link para resposta padronizada.
 

@@ -1,6 +1,6 @@
 ---
 id: intro
-title: Introdução — Desenvolvimento Seguro
+title: Introdução - Desenvolvimento Seguro
 description: Práticas de codificação segura, curadoria e seleção de guidelines, validação automatizada e governação durante o desenvolvimento
 tags: [desenvolvimento, segurança, guidelines de código, linters, SAST, governação]
 sidebar_position: 0
@@ -42,7 +42,7 @@ O desenvolvimento é o **coração do ciclo de vida do software**.
 Por isso, este capítulo é considerado **basilar**: sem práticas consistentes de codificação segura, todos os controlos posteriores (CI/CD, testes, IaC ou containers) tornam-se apenas paliativos.
 
 A evidência é clara: o **Verizon DBIR** e vários estudos académicos mostram que mais de um quarto das falhas exploradas têm origem em más práticas de programação.  
-A boa notícia é que estas falhas podem ser prevenidas com medidas sistemáticas e auditáveis — desde guidelines claras e linters automatizados até revisões formais, governação de exceções e, mais recentemente, o **uso validado de GenIA**.  
+A boa notícia é que estas falhas podem ser prevenidas com medidas sistemáticas e auditáveis - desde guidelines claras e linters automatizados até revisões formais, governação de exceções e, mais recentemente, o **uso validado de GenIA**.  
 O objetivo não é burocracia, mas criar um ambiente onde cada decisão de desenvolvimento deixa **evidência objetiva** de segurança aplicada.
 
 ---

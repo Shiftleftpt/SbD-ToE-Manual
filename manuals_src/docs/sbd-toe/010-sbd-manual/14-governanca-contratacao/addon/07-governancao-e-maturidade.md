@@ -72,7 +72,7 @@ A evolução do modelo SbD-ToE pode ser guiada por:
 ## 🔗 Ligações cruzadas
 
 * Cap. achievable-maturity de cada capítulo
-* Cap. 14.1 a 14.6 — componentes de suporte à maturidade
-* Cap. 14.30 — KPIs de governaça
+* Cap. 14.1 a 14.6 - componentes de suporte à maturidade
+* Cap. 14.30 - KPIs de governaça
 
 ---

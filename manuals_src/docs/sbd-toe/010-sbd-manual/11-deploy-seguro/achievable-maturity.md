@@ -5,9 +5,9 @@ sidebar_position: 10
 tags: [canon, maturidade, SAMM, BSIMM, SSDF, SLSA, DSOMM]
 ---
 
-# 📈 Maturidade — Deploy Seguro
+# 📈 Maturidade - Deploy Seguro
 
-Este documento apresenta o **mapeamento de maturidade das práticas descritas no Capítulo 11 — Deploy Seguro**, com base nos principais frameworks de referência:
+Este documento apresenta o **mapeamento de maturidade das práticas descritas no Capítulo 11 - Deploy Seguro**, com base nos principais frameworks de referência:
 
 - **OWASP SAMM**
 - **BSIMM**
@@ -91,7 +91,7 @@ Este mapeamento avalia o **grau de completude e sofisticação prática** face a
 |-------|------------------------------------------------------------|--------------------------------------------------------|
 | 1     | Deploy controlado manualmente                              | ✅ Pré-condições e triggers definidos                  |
 | 2     | Controlo de promoção e validação de artefactos             | ✅ Validação de release e rollback rastreável          |
-| 3     | Validação de proveniência e runtime                        | ❌ Parcial — depende de integração com Cap. 07 e 12    |
+| 3     | Validação de proveniência e runtime                        | ❌ Parcial - depende de integração com Cap. 07 e 12    |
 | 4     | Controlo externo e sandboxing                              | ❌ Não abordado                                         |
 
 **🔐 Nível máximo suportado por este capítulo: SLSA 2 / 4**

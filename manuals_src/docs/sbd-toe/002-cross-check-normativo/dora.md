@@ -1,6 +1,6 @@
 ---
 id: dora
-title: DORA — Cross-check normativo
+title: DORA - Cross-check normativo
 description: Como o SbD-ToE cobre, deixa em aberto de forma deliberada, e pode ser ajustado para alinhar-se com o Regulamento DORA (UE 2022/2554)
 tags: [cross-check, dora, regulamentacao, ict-risk, resiliencia, finanças]
 sidebar_position: 1
@@ -8,11 +8,11 @@ sidebar_position: 1
 
 
 
-# Cross-check normativo — DORA
+# Cross-check normativo - DORA
 
 ## Enquadramento geral
 
-O **Digital Operational Resilience Act (DORA)** — Regulamento (UE) 2022/2554 — representa uma viragem histórica na forma como a União Europeia encara a **resiliência digital** no setor financeiro.  
+O **Digital Operational Resilience Act (DORA)** - Regulamento (UE) 2022/2554 - representa uma viragem histórica na forma como a União Europeia encara a **resiliência digital** no setor financeiro.  
 A partir de janeiro de 2025, não basta às entidades financeiras protegerem dados ou cumprirem boas práticas gerais: exige-se que demonstrem, com evidências e mecanismos consistentes, que **sabem identificar, prevenir, detetar, responder e aprender com riscos tecnológicos**.
 
 O DORA é abrangente, mas pragmático. Divide-se em cinco blocos centrais: gestão de risco TIC, gestão de incidentes e reporte, testes de resiliência, gestão de terceiros críticos e partilha de informação.  
@@ -34,7 +34,7 @@ Aqui, o SbD-ToE já fornece uma base sólida:
 
 O que não aparece, e não por falha mas por escolha metodológica, é a definição de **quem aprova** essas políticas. O SbD-ToE exige que sejam aprovadas e monitorizadas, mas não fixa se a assinatura deve ser técnica (equipa) ou institucional (board). Esta abertura é intencional: permite que uma start-up use o modelo para reforçar o seu ciclo de desenvolvimento, mas que uma entidade financeira, sujeita ao DORA, alinhe a aprovação ao board e registe formalmente a decisão.  
 
-Do mesmo modo, o manual prescreve planos de comunicação de crise (Cap. 12), mas não congela um template único — sabendo que o DORA e outras normas têm formatos específicos.  
+Do mesmo modo, o manual prescreve planos de comunicação de crise (Cap. 12), mas não congela um template único - sabendo que o DORA e outras normas têm formatos específicos.  
 A proporcionalidade, também exigida pela DORA, já existe no SbD-ToE (classificação L1–L3), mas sem thresholds normativos fixos, para não se tornar dependente de uma só regulação.
 
 Na prática: **o SbD-ToE entrega os mecanismos**; cabe à organização adaptá-los ao nível formal exigido. Para cumprir DORA, basta mapear as políticas já prescritas → aprová-las em board meeting → registar a decisão.  
@@ -70,7 +70,7 @@ Aqui, o SbD-ToE brilha naturalmente:
 - O **Capítulo 10** fornece um catálogo completo de testes técnicos (automatizados, manuais, fuzzing, etc.).  
 - O **Capítulo 11** reforça a validação de segurança em pré-produção.  
 
-O que fica de fora — de forma deliberada — são os aspetos formais: o manual não diz quem decide a elegibilidade para TLPT (porque depende do supervisor), não descreve o processo de attestation (porque é regulatório) e não lista os requisitos administrativos para testers externos (que variam entre reguladores).  
+O que fica de fora - de forma deliberada - são os aspetos formais: o manual não diz quem decide a elegibilidade para TLPT (porque depende do supervisor), não descreve o processo de attestation (porque é regulatório) e não lista os requisitos administrativos para testers externos (que variam entre reguladores).  
 
 A integração, mais uma vez, é simples:  
 - O Cap. 10 pode incluir uma secção de “Readiness TLPT”, com critérios de escopo, uso de threat intel e gestão de achados.  
@@ -106,7 +106,7 @@ O SbD-ToE cobre isto de forma natural:
 - O **Capítulo 12** prevê a integração de threat intelligence (STIX/TAXII).  
 - O **Capítulo 14** contempla políticas de cooperação.  
 
-O que não define — propositadamente — são os **acordos institucionais de adesão**, as **regras de governação das comunidades** e o processo de **notificação ao supervisor**. Esses elementos não são universais: mudam entre setores e países.  
+O que não define - propositadamente - são os **acordos institucionais de adesão**, as **regras de governação das comunidades** e o processo de **notificação ao supervisor**. Esses elementos não são universais: mudam entre setores e países.  
 
 Na prática, para cumprir DORA, basta às organizações:  
 - Usar os mecanismos de threat intel já prescritos pelo SbD-ToE.  
@@ -118,7 +118,7 @@ Na prática, para cumprir DORA, basta às organizações:
 ## Conclusão
 
 O **SbD-ToE cobre o coração técnico da DORA**.  
-Tudo aquilo que é universal — inventários, políticas, requisitos, testes, incidentes, governação — já está prescrito.  
+Tudo aquilo que é universal - inventários, políticas, requisitos, testes, incidentes, governação - já está prescrito.  
 As lacunas que se observam não são falhas, mas sim **abstenções deliberadas**: detalhes específicos de uma norma, que variam entre regulamentos, foram deixados em aberto para que o manual seja **universal**.  
 
 Isto significa que, ao aplicar o SbD-ToE, uma organização já tem **a estrutura e os processos nucleares**.  

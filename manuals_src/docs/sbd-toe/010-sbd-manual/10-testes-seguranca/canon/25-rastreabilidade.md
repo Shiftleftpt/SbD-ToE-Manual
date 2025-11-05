@@ -1,13 +1,13 @@
 ---
 id: rastreabilidade
-title: Rastreabilidade Normativa e Frameworks — Testes de Segurança
+title: Rastreabilidade Normativa e Frameworks - Testes de Segurança
 description: Mapeamento entre as práticas deste capítulo e os requisitos normativos e frameworks de segurança.
 tags: [rastreabilidade, frameworks, ssdf, samm, bsimm, slsa, dsoom]
 sidebar_position: 25
 ---
 
 
-# 📎 Rastreabilidade contra Frameworks — Capítulo 10: Testes de Segurança
+# 📎 Rastreabilidade contra Frameworks - Capítulo 10: Testes de Segurança
 
 Este ficheiro estabelece a **rastreabilidade entre as práticas prescritas neste capítulo** e os requisitos dos principais frameworks e normas de segurança associados à validação, cobertura e integração de testes de segurança no ciclo de vida de software.
 
@@ -114,13 +114,13 @@ Cobertura sólida dos domínios **Testing** e **Design & Development**, incluind
 
 Este capítulo integra-se diretamente com:
 
-- **Capítulo 01** — define a estratégia de testes proporcional ao risco;
-- **Capítulo 02** — requisitos validados diretamente com cobertura rastreável;
-- **Capítulo 06** — testes complementam validações em desenvolvimento;
-- **Capítulo 07** — integração com pipeline CI/CD;
-- **Capítulo 14** — findings e falhas ligam-se a processos de exceção e auditoria;
-- **Capítulo 13** — práticas avançadas ampliam a cobertura para métricas e observabilidade;
-- **Capítulo 03** — threat modeling como origem de casos de teste e vetores ofensivos;
-- **Capítulo 08** — aplicação das práticas a pipelines e projetos IaC.
+- **Capítulo 01** - define a estratégia de testes proporcional ao risco;
+- **Capítulo 02** - requisitos validados diretamente com cobertura rastreável;
+- **Capítulo 06** - testes complementam validações em desenvolvimento;
+- **Capítulo 07** - integração com pipeline CI/CD;
+- **Capítulo 14** - findings e falhas ligam-se a processos de exceção e auditoria;
+- **Capítulo 13** - práticas avançadas ampliam a cobertura para métricas e observabilidade;
+- **Capítulo 03** - threat modeling como origem de casos de teste e vetores ofensivos;
+- **Capítulo 08** - aplicação das práticas a pipelines e projetos IaC.
 
 > 📌 Esta rastreabilidade comprova que os testes de segurança no SbD-ToE são estruturados, rastreáveis, proporcionais ao risco e operacionalmente sustentáveis.

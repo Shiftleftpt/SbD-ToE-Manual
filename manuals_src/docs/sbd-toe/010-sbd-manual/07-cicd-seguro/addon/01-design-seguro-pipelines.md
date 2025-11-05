@@ -52,7 +52,7 @@ O design seguro dos pipelines CI/CD é um controlo fundamental para garantir que
 
 | Nível | Requisitos obrigatórios                         | Requisitos reforçados                                 |
 |-------|--------------------------------------------------|--------------------------------------------------------|
-| **L1** | Pipelines versionados; triggers controlados      | —                                                      |
+| **L1** | Pipelines versionados; triggers controlados      | -                                                      |
 | **L2** | Revisão obrigatória; CI/CD separados             | Templates reutilizáveis; validação automática          |
 | **L3** | Revisão por segurança; pipelines isolados        | Aprovação formal de alterações ao pipeline             |
 

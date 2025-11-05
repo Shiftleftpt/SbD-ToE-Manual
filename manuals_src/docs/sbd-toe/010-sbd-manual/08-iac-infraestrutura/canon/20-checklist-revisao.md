@@ -1,6 +1,6 @@
 ---
 id: checklist-revisao
-title: Checklist de Revisão — Infraestrutura como Código (IaC)
+title: Checklist de Revisão - Infraestrutura como Código (IaC)
 sidebar_position: 20
 sidebar_label: Checklist de Revisão
 description: Checklist binário e auditável para verificar a aplicação prática das prescrições de segurança para IaC.
@@ -51,7 +51,7 @@ Este checklist aplica-se a todos os projetos de **Infraestrutura como Código (I
 
 ## 📊 Conformidade e KPI
 
-* A validação deste checklist permite declarar **conformidade com o Capítulo 08 — Infraestrutura como Código**.
+* A validação deste checklist permite declarar **conformidade com o Capítulo 08 - Infraestrutura como Código**.
 * A contagem de itens verificados pode ser usada para **KPIs operacionais de adoção e maturidade**.
 * Pode ser incluído como evidência em auditorias, processos de exceção ou gates de release.
 

@@ -5,7 +5,7 @@ description: Validação por requisito (ARC-001 a ARC-011) com foco em risco, ci
 sidebar_position: 5
 ---
 
-# 📋 Validação Arquitetural — Critérios por Requisito
+# 📋 Validação Arquitetural - Critérios por Requisito
 
 Este documento define como validar os requisitos de arquitetura segura (ARC-001 a ARC-011), com base no:
 

@@ -59,7 +59,7 @@ Organizações com ambição de **atingir o nível máximo** em qualquer destas 
 - Complementar o manual com artefactos próprios
 - Reforçar práticas de validação, monitorização e resposta
 
-> O SbD-ToE é compatível com maturidade avançada — mas é propositalmente pragmático, centrado no essencial e aplicável em contextos reais.
+> O SbD-ToE é compatível com maturidade avançada - mas é propositalmente pragmático, centrado no essencial e aplicável em contextos reais.
 
 ---
 

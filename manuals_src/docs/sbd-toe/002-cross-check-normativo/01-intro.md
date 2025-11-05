@@ -1,6 +1,6 @@
 ---
 id: intro
-title: Introdução — Cross-Check Normativo
+title: Introdução - Cross-Check Normativo
 description: Enquadramento do capítulo de análise normativa, que demonstra como o SbD-ToE se cruza com diferentes normativos e regulações
 tags: [cross-check, normativos, compliance, dora, nis2, hipaa, iso27001, pci-dss, gdpr, soc2]
 sidebar_position: 0
@@ -8,13 +8,13 @@ sidebar_position: 0
 
 
 
-# Introdução — Cross-Check Normativo
+# Introdução - Cross-Check Normativo
 
 A segurança do software não acontece num vácuo técnico.  
 Organizações de diferentes setores estão sujeitas a **regulações, normas e frameworks** que estabelecem requisitos explícitos para garantir proteção adequada de sistemas, dados e operações.  
 Neste contexto, o **Security by Design – Theory of Everything (SbD-ToE)** não é apenas um manual prescritivo de boas práticas: é também um **instrumento de convergência normativa**, permitindo alinhar práticas de desenvolvimento e operação segura com as múltiplas exigências externas.
 
-O **Capítulo 15 — Cross-Check Normativo** tem precisamente este papel:  
+O **Capítulo 15 - Cross-Check Normativo** tem precisamente este papel:  
 - Demonstrar, de forma clara e verificável, **como o SbD-ToE responde a requisitos regulatórios e normativos**.  
 - Identificar onde o modelo garante **compliance “por construção”**, e onde existem **lacunas** que exigem complementaridade com processos legais, organizacionais ou contratuais.  
 - Apoiar **equipas de GRC, auditores, equipas técnicas e de gestão** na tarefa de articular segurança operacional com conformidade formal.
@@ -92,7 +92,7 @@ Cada ficheiro é autónomo, mas segue a mesma estrutura, permitindo comparação
 
 ## Leitura recomendada
 
-- Este capítulo deve ser lido **em articulação com o Capítulo 00 — Theory of Everything**, que explica a filosofia global do manual.  
+- Este capítulo deve ser lido **em articulação com o Capítulo 00 - Theory of Everything**, que explica a filosofia global do manual.  
 - Pode também ser utilizado como **documento autónomo**, servindo de guia de referência rápida para quem procura verificar alinhamento do SbD-ToE com exigências específicas.  
 
 ---

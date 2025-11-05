@@ -100,9 +100,9 @@ Cada decisão deve incluir:
 
 | Documento / Capítulo         | Relação com este modelo                             |
 |------------------------------|-----------------------------------------------------|
-| Capítulo 01 — Gestão de Risco | Ponto de partida: classificação de risco           |
-| Capítulo 02 — Requisitos     | Define os requisitos aplicáveis por nível           |
-| Capítulo 06 — Desenvolvimento Seguro | Implica validações formais                     |
+| Capítulo 01 - Gestão de Risco | Ponto de partida: classificação de risco           |
+| Capítulo 02 - Requisitos     | Define os requisitos aplicáveis por nível           |
+| Capítulo 06 - Desenvolvimento Seguro | Implica validações formais                     |
 | addon/06-validacao-continuada.md | Aplica a lógica de reavaliação e exceções        |
 | canon/20-checklist-revisao.md | Verifica aplicação real da governação              |
 

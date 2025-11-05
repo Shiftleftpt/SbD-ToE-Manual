@@ -63,7 +63,7 @@ Estas validações devem ser proporcionais ao nível de risco da aplicação, ma
 
 | Nível | Validações obrigatórias             | Validações reforçadas                                |
 |-------|--------------------------------------|------------------------------------------------------|
-| **L1** | SAST + secrets detection             | —                                                    |
+| **L1** | SAST + secrets detection             | -                                                    |
 | **L2** | IaC scanning, SBOM, análise CVEs     | Container scanning                                   |
 | **L3** | DAST, enforcement de findings, políticas automatizadas | Fuzzing, análise semântica, revisão manual assistida |
 

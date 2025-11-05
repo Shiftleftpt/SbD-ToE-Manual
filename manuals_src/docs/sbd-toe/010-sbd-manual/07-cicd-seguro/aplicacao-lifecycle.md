@@ -6,7 +6,7 @@ tags: [cicd, devsecops, pipelines, segurança, proveniência, risco, rastreabili
 sidebar_position: 15
 ---
 
-# 📅 Aplicação no Ciclo de Vida — CI/CD Seguro
+# 📅 Aplicação no Ciclo de Vida - CI/CD Seguro
 
 Enquanto o `intro.md` explica **porque os pipelines são críticos** e que práticas devem ser aplicadas, este documento mostra **como transformar essas prescrições em ações concretas** dentro do ciclo de vida de desenvolvimento e entrega.  
 A lógica é simples mas poderosa: cada controlo deve ter um momento certo, um responsável definido, uma user story clara e uma evidência verificável.  
@@ -16,7 +16,7 @@ Só assim a segurança em CI/CD deixa de ser teórica e passa a ser **prática o
 
 ## 🧭 Quando aplicar
 
-A segurança em pipelines não acontece apenas quando algo corre mal — ela é parte do seu ADN desde o primeiro commit.  
+A segurança em pipelines não acontece apenas quando algo corre mal - ela é parte do seu ADN desde o primeiro commit.  
 Cada vez que se cria, altera ou promove um pipeline, existem gatilhos que exigem controlos específicos:
 
 | Momento gatilho                                   | Objetivo de segurança                                | Papéis principais        |
@@ -400,11 +400,11 @@ A matriz assegura que **o esforço é proporcional ao risco**:
 A segurança de pipelines não é opcional: é **o coração da segurança por design**.  
 Um CI/CD seguro multiplica a confiança em todo o ciclo de vida, permitindo releases rápidas e auditáveis.
 
-- **Prefere OIDC a segredos estáticos** — elimina chaves long-lived.  
-- **Usa runners ephemerais e segregados** — reduz persistência de ataque.  
-- **Assina artefactos e regista proveniência** — cada release deve ser verificável.  
-- **Aplica gates proporcionais ao risco** — evita tanto o excesso como a negligência.  
-- **Controla exceções** — com prazo, dono e compensações, nunca em aberto.  
-- **Investe em rastreabilidade total** — commit→pipeline→release como linha de confiança.
+- **Prefere OIDC a segredos estáticos** - elimina chaves long-lived.  
+- **Usa runners ephemerais e segregados** - reduz persistência de ataque.  
+- **Assina artefactos e regista proveniência** - cada release deve ser verificável.  
+- **Aplica gates proporcionais ao risco** - evita tanto o excesso como a negligência.  
+- **Controla exceções** - com prazo, dono e compensações, nunca em aberto.  
+- **Investe em rastreabilidade total** - commit→pipeline→release como linha de confiança.
 
 Em suma: um pipeline seguro é **o garante silencioso** de que todo o trabalho de desenvolvimento chega a produção de forma íntegra, confiável e auditável.

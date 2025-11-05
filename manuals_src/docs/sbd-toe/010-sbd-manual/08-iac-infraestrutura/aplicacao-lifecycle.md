@@ -6,7 +6,7 @@ tags: [iac, infraestrutura, segurança, ciclo de vida, user stories, pipelines]
 sidebar_position: 15
 ---
 
-# 📅 Aplicação no Ciclo de Vida — Infraestrutura como Código (IaC)
+# 📅 Aplicação no Ciclo de Vida - Infraestrutura como Código (IaC)
 
 Este documento operacionaliza as práticas prescritas para **Infraestrutura como Código (IaC)**.  
 Enquanto o `intro.md` define o “quê” e o “porquê”, aqui mostramos o “como”: em que fases do ciclo de vida cada requisito se aplica, quem é responsável por executá-lo, como traduzi-lo em user stories reutilizáveis e quais as evidências que asseguram rastreabilidade e auditabilidade.  
@@ -90,7 +90,7 @@ Como **DevOps/Infra**, quero configurar o backend remoto com locking, para garan
 - L2: Obrigatório  
 - L3: Obrigatório + monitorização  
 
-**Integração SDLC.** Início do projeto — **Responsável:** DevOps/Infra  
+**Integração SDLC.** Início do projeto - **Responsável:** DevOps/Infra  
 
 **Ligações úteis.**  
 xref:sbd-toe:cap02:intro  
@@ -130,7 +130,7 @@ Como **Arquitetura**, quero ambientes definidos e versionados separadamente, par
 - L2: Obrigatório  
 - L3: Obrigatório + auditoria  
 
-**Integração SDLC.** Configuração inicial — **Responsável:** DevOps/Infra  
+**Integração SDLC.** Configuração inicial - **Responsável:** DevOps/Infra  
 
 **Ligações úteis.**  
 xref:sbd-toe:cap14:intro  
@@ -170,7 +170,7 @@ Como **DevOps/Infra**, quero que todas as alterações passem por validações a
 - L2: Bloqueio falhas severas  
 - L3: Bloqueio total  
 
-**Integração SDLC.** Pull request — **Responsável:** DevOps/Infra + AppSec  
+**Integração SDLC.** Pull request - **Responsável:** DevOps/Infra + AppSec  
 
 **Ligações úteis.**  
 xref:sbd-toe:cap07:intro  
@@ -210,7 +210,7 @@ Como **AppSec**, quero garantir que apenas módulos confiáveis são utilizados,
 - L2: Obrigatório  
 - L3: Obrigatório + proveniência  
 
-**Integração SDLC.** Adoção de módulos — **Responsável:** DevOps/Infra + AppSec  
+**Integração SDLC.** Adoção de módulos - **Responsável:** DevOps/Infra + AppSec  
 
 **Ligações úteis.**  
 xref:sbd-toe:cap05:intro  
@@ -250,7 +250,7 @@ Como **DevOps/Infra**, quero garantir que todas as alterações têm histórico 
 - L2: Obrigatório  
 - L3: Obrigatório + validação externa  
 
-**Integração SDLC.** Release — **Responsável:** DevOps/Infra  
+**Integração SDLC.** Release - **Responsável:** DevOps/Infra  
 
 **Ligações úteis.**  
 xref:sbd-toe:cap14:intro  
@@ -290,7 +290,7 @@ Como **Arquitetura**, quero aplicar convenções de naming e diretórios, para g
 - L2: Obrigatório  
 - L3: Obrigatório + enforcement  
 
-**Integração SDLC.** Setup inicial — **Responsável:** Arquitetura  
+**Integração SDLC.** Setup inicial - **Responsável:** Arquitetura  
 
 **Ligações úteis.**  
 xref:sbd-toe:cap06:intro  
@@ -330,7 +330,7 @@ Como **AppSec**, quero rever o `plan` antes de `apply`, para garantir impactos c
 - L2: Obrigatório  
 - L3: Obrigatório + dupla aprovação  
 
-**Integração SDLC.** Antes do deploy — **Responsável:** AppSec + DevOps/Infra  
+**Integração SDLC.** Antes do deploy - **Responsável:** AppSec + DevOps/Infra  
 
 **Ligações úteis.**  
 xref:sbd-toe:cap14:intro  
@@ -370,7 +370,7 @@ Como **GRC**, quero rastrear ficheiro→recurso→ambiente, para suportar accoun
 - L2: Obrigatório  
 - L3: Obrigatório + auditoria externa  
 
-**Integração SDLC.** Auditoria — **Responsável:** GRC  
+**Integração SDLC.** Auditoria - **Responsável:** GRC  
 
 **Ligações úteis.**  
 xref:sbd-toe:cap12:intro  
@@ -410,7 +410,7 @@ Como **AppSec**, quero enforcement automático de policies no pipeline, para evi
 - L2: Bloqueio falhas severas  
 - L3: Bloqueio total  
 
-**Integração SDLC.** CI/CD — **Responsável:** AppSec + DevOps/Infra  
+**Integração SDLC.** CI/CD - **Responsável:** AppSec + DevOps/Infra  
 
 **Ligações úteis.**  
 xref:sbd-toe:cap07:intro  
@@ -451,7 +451,7 @@ Como **DevOps/Infra**, quero assinar e gerar proveniência para artefactos IaC, 
 - L2: Obrigatório  
 - L3: Obrigatório + rejeição automática  
 
-**Integração SDLC.** Release — **Responsável:** DevOps/Infra + AppSec  
+**Integração SDLC.** Release - **Responsável:** DevOps/Infra + AppSec  
 
 **Ligações úteis.**  
 xref:sbd-toe:cap05:intro  
@@ -511,4 +511,4 @@ Não basta aplicar controlos isolados: é preciso garantir que todos se reforça
 - **Medir conformidade** com métricas (drift, bloqueios, exceções) e reportar por L1–L3.  
 - **Rever exceções periodicamente**, garantindo que não se eternizam como riscos ocultos.  
 
-Em síntese, **IaC é software** — e deve ser tratado com o mesmo rigor, visibilidade e proporcionalidade que qualquer outra peça crítica do ciclo de vida.
+Em síntese, **IaC é software** - e deve ser tratado com o mesmo rigor, visibilidade e proporcionalidade que qualquer outra peça crítica do ciclo de vida.

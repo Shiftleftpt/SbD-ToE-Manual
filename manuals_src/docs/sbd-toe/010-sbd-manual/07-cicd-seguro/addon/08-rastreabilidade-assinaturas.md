@@ -53,7 +53,7 @@ Esta prática define os mecanismos necessários para assegurar que **cada execu�
 
 | Nível | Registos obrigatórios                                 | Requisitos reforçados                                      |
 |-------|--------------------------------------------------------|-------------------------------------------------------------|
-| **L1** | Logs de execução e hash de build                      | —                                                           |
+| **L1** | Logs de execução e hash de build                      | -                                                           |
 | **L2** | Registo de pipeline, artefacto e deploy               | Proveniência simples; assinatura de release                 |
 | **L3** | Proveniência SLSA completa; deploy auditável          | Cadeia ponta-a-ponta; logs invioláveis; verificação periódica |
 

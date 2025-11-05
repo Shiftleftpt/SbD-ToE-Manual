@@ -40,7 +40,7 @@ Através deles flui código, são construídos artefactos, aplicadas validaçõe
 Se um pipeline for comprometido, o impacto é devastador: **todas as aplicações e serviços que dele dependem herdam esse risco**.
 
 Este capítulo parte de uma constatação inequívoca: **a segurança do pipeline é a segurança do produto**.  
-Não basta proteger o código-fonte ou o runtime da aplicação — é o pipeline que garante que tudo o resto chega a produção de forma íntegra, auditável e confiável.
+Não basta proteger o código-fonte ou o runtime da aplicação - é o pipeline que garante que tudo o resto chega a produção de forma íntegra, auditável e confiável.
 
 Por isso, o SbD-ToE estabelece aqui um corpo prescritivo para pipelines: **como devem ser concebidos, governados e auditados para resistirem a ataques, prevenirem falhas e suportarem a confiança organizacional**.
 

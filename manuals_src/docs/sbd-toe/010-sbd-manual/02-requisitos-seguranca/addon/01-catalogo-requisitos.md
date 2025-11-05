@@ -43,18 +43,18 @@ Neste capitulo inclui-se um catálogo que foi consolidado a partir de múltiplas
 Consulte a aplicação proporcional dos requisitos por domínio técnico no  
 [Catálogo Base de Requisitos (anexo deste capítulo)](/sbd-toe/sbd-manual/requisitos-seguranca/addon/lista-requisitos-base):
 
-- [AUT — Autenticação e Identidade](lista-requisitos-base#aut) 
-- [ACC — Controlo de Acesso](lista-requisitos-base#acc) 
-- [LOG — Registo e Monitorização](lista-requisitos-base#log)
-- [SES — Sessões e Estado](lista-requisitos-base#ses) 
-- [VAL — Validação de Dados](lista-requisitos-base#val)
-- [ERR — Gestão de Erros](lista-requisitos-base#err)
-- [CFG — Configuração Segura](lista-requisitos-base#cfg)
-- [API — Segurança de APIs](lista-requisitos-base#api)
-- [INT — Mensagens e Integrações](lista-requisitos-base#int)
-- [REQ — Definição de Requisitos](lista-requisitos-base#req)
-- [DST — Distribuição de Artefactos](lista-requisitos-base#dst)
-- [IDE — Ferramentas de Desenvolvimento](lista-requisitos-base#ide)
+- [AUT - Autenticação e Identidade](lista-requisitos-base#aut) 
+- [ACC - Controlo de Acesso](lista-requisitos-base#acc) 
+- [LOG - Registo e Monitorização](lista-requisitos-base#log)
+- [SES - Sessões e Estado](lista-requisitos-base#ses) 
+- [VAL - Validação de Dados](lista-requisitos-base#val)
+- [ERR - Gestão de Erros](lista-requisitos-base#err)
+- [CFG - Configuração Segura](lista-requisitos-base#cfg)
+- [API - Segurança de APIs](lista-requisitos-base#api)
+- [INT - Mensagens e Integrações](lista-requisitos-base#int)
+- [REQ - Definição de Requisitos](lista-requisitos-base#req)
+- [DST - Distribuição de Artefactos](lista-requisitos-base#dst)
+- [IDE - Ferramentas de Desenvolvimento](lista-requisitos-base#ide)
 
 Para consulta rápida da aplicação proporcional dos requisitos por nível de risco, ver o anexo “Catálogo Base de Requisitos” no final deste capítulo.
 ---
@@ -65,14 +65,14 @@ Para consulta rápida da aplicação proporcional dos requisitos por nível de r
 - [OWASP Mobile Security Testing Guide (MSTG)](https://owasp.org/www-project-mobile-security-testing-guide/) <!-- Precisa revisão manual -->
 - [NIST Secure Software Development Framework (SSDF)](https://csrc.nist.gov/publications/detail/sp/800-218/final) <!-- Precisa revisão manual -->
 - [ISO/IEC 27001:2022](https://www.iso.org/standard/27001) <!-- Precisa revisão manual -->
-- [IEC 62443 — Segurança em Sistemas Industriais](https://webstore.iec.ch/publication/7033) <!-- Precisa revisão manual -->
-- [BSIMM — Building Security In Maturity Model](https://www.bsimm.com/) <!-- Precisa revisão manual -->
+- [IEC 62443 - Segurança em Sistemas Industriais](https://webstore.iec.ch/publication/7033) <!-- Precisa revisão manual -->
+- [BSIMM - Building Security In Maturity Model](https://www.bsimm.com/) <!-- Precisa revisão manual -->
 - [OWASP Internet of Things Project](https://owasp.org/www-project-internet-of-things/) <!-- Precisa revisão manual -->
 
 ---
 
 ## 📌 Nota Final
 
-O catálogo deve ser entendido como **referência viva e adaptável** — ponto de partida para a definição dos requisitos concretos de cada organização ou projeto, e para a integração efetiva da segurança em todo o ciclo de vida do software.
+O catálogo deve ser entendido como **referência viva e adaptável** - ponto de partida para a definição dos requisitos concretos de cada organização ou projeto, e para a integração efetiva da segurança em todo o ciclo de vida do software.
 
 > Para validação, critérios de aceitação e evidências, consultar a secção de [validação de requisitos](./validacao-requisitos).

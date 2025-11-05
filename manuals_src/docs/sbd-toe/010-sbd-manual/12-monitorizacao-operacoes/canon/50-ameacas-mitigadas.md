@@ -9,7 +9,7 @@ tags: [ameacas, deteccao, resposta, logging, osc&r, ameaças, mitigação, visib
 
 # ⚡️ Ameaças Mitigadas pelas Práticas de Monitorização e Operações
 
-Este documento apresenta uma visão consolidada das **ameaças técnicas e operacionais mitigadas pelas práticas descritas no Capítulo 12 — Monitorização, Logging e Resposta a Incidentes**.
+Este documento apresenta uma visão consolidada das **ameaças técnicas e operacionais mitigadas pelas práticas descritas no Capítulo 12 - Monitorização, Logging e Resposta a Incidentes**.
 
 A referência principal é o modelo **OWASP OSC&R** (Open Software Supply Chain Attack Reference), complementado com taxonomias como **MITRE ATT&CK**, **STRIDE**, **CAPEC**, **SSDF**, **BSIMM**, **CIS Controls** e o **OWASP DSOMM** (*Operations*).
 

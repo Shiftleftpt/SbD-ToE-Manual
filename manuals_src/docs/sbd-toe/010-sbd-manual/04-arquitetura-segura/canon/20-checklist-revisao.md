@@ -1,12 +1,12 @@
 ---
 id: checklist-revisao
-title: Checklist de Revisão — Arquitetura Segura
+title: Checklist de Revisão - Arquitetura Segura
 description: Lista de verificação binária e auditável para controlo da aplicação dos requisitos de arquitetura segura
 tags: [checklist, arquitetura, validação, requisitos]
 sidebar_position: 20
 ---
 
-# ✅ Checklist de Revisão — Arquitetura Segura
+# ✅ Checklist de Revisão - Arquitetura Segura
 
 Este checklist aplica-se a todas as aplicações avaliadas segundo os critérios definidos neste capítulo.  
 Serve como instrumento de verificação binária e auditável da **adoção prática das prescrições de arquitetura segura**, permitindo:
@@ -51,7 +51,7 @@ Serve como instrumento de verificação binária e auditável da **adoção prá
 
 ## 📊 Conformidade e KPI
 
-- A validação deste checklist permite declarar **conformidade com o Capítulo 04 — Arquitetura Segura**.
+- A validação deste checklist permite declarar **conformidade com o Capítulo 04 - Arquitetura Segura**.
 - Os resultados por projeto podem ser **agregados para efeitos de medição de maturidade e rastreabilidade organizacional**.
 - Este mecanismo pode ser integrado em **dashboards, métricas de equipa e processos de auditoria contínua**.
 

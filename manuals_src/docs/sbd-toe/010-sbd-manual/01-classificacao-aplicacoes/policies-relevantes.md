@@ -4,9 +4,9 @@ title: Policies Relevantes
 tags: [canon, politicas, risco, classificacao, excecao]
 ---
 
-# 🏛️ Políticas Organizacionais — Gestão de Risco
+# 🏛️ Políticas Organizacionais - Gestão de Risco
 
-A adoção eficaz do Capítulo 01 — Gestão de Risco — exige a existência de **políticas organizacionais formais** que **enquadrem, legitimem e sustentem a aplicação das práticas descritas neste capítulo**.
+A adoção eficaz do Capítulo 01 - Gestão de Risco - exige a existência de **políticas organizacionais formais** que **enquadrem, legitimem e sustentem a aplicação das práticas descritas neste capítulo**.
 
 ---
 
@@ -22,7 +22,7 @@ Estas políticas:
 
 > 📎 A exigência de políticas formais de classificação e aceitação de risco é uma **expectativa explícita** em normas como **ISO/IEC 27005**, **ENISA Risk Management**, **NIST SSDF** e **CIS Controls v8**.
 
-> 🧩 Este capítulo **implementa, na prática, o que as políticas definem** — a política aprova, o capítulo operacionaliza.
+> 🧩 Este capítulo **implementa, na prática, o que as políticas definem** - a política aprova, o capítulo operacionaliza.
 
 ---
 
@@ -44,8 +44,8 @@ Estas políticas:
 | **ISO/IEC 27005**      | Identificação (8.2), Avaliação (8.3), Aceitação (8.5)                            |
 | **NIST SP 800-30**     | Etapas 1–4 (Caracterização, Ameaças, Vulnerabilidades, Impacto)                 |
 | **NIST SSDF**          | RM.1 (Categorize SW), RM.2 (Assess Risk), RM.3 (Manage Risk)                    |
-| **ENISA Risk Management** | Sec. 2.3, 3.1 — definição formal de políticas de avaliação e aceitação de risco |
-| **CIS Controls v8**    | Control 2, 4 — políticas para inventário, avaliação e aceitação de risco         |
+| **ENISA Risk Management** | Sec. 2.3, 3.1 - definição formal de políticas de avaliação e aceitação de risco |
+| **CIS Controls v8**    | Control 2, 4 - políticas para inventário, avaliação e aceitação de risco         |
 | **OWASP SAMM**         | Governance > Risk Management (níveis 1 e 2)                                      |
 | **BSIMM13**            | Strategy and Metrics (SR1.1, SR1.5)                                              |
 

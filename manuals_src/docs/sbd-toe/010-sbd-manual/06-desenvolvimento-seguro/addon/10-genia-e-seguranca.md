@@ -9,7 +9,7 @@ tags: [genia, ai, código gerado, validação, segurança, revisão]
 
 # 🤖 Uso de GenIA no Desenvolvimento Seguro
 
-A integração de ferramentas de inteligência artificial generativa (GenIA) como **GitHub Copilot**, **ChatGPT**, **Claude**, **CodeWhisperer**, entre outras, tornou-se uma realidade no dia a dia do desenvolvimento — independentemente da existência de políticas formais.
+A integração de ferramentas de inteligência artificial generativa (GenIA) como **GitHub Copilot**, **ChatGPT**, **Claude**, **CodeWhisperer**, entre outras, tornou-se uma realidade no dia a dia do desenvolvimento - independentemente da existência de políticas formais.
 
 Estas ferramentas passaram a atuar como **assistentes contínuos**, não apenas de produtividade, mas também de qualidade e segurança. Mesmo sem instruções explícitas, a sua presença **influencia a forma como código é escrito, estruturado e comentado**.
 
@@ -22,7 +22,7 @@ Estas ferramentas passaram a atuar como **assistentes contínuos**, não apenas 
 - Permite **acelerar revisões**, gerar comentários explicativos, detectar padrões comuns de falha.
 - Pode ser usada para **prototipar melhorias**, refatorar código inseguro ou gerar testes a partir de código real.
 
-> 💡 Em muitos casos, a qualidade do código gerado com apoio de GenIA é **superior à média do código legado existente** — não por ser perfeita, mas por aplicar boas práticas por omissão.
+> 💡 Em muitos casos, a qualidade do código gerado com apoio de GenIA é **superior à média do código legado existente** - não por ser perfeita, mas por aplicar boas práticas por omissão.
 
 ---
 
@@ -42,9 +42,9 @@ Estas ferramentas passaram a atuar como **assistentes contínuos**, não apenas 
 
 Sem ser uma ameaça, o uso de GenIA levanta pontos que devem ser acompanhados com discernimento técnico:
 
-- **Nem todas as sugestões estão corretas ou seguras** — exigem validação humana.
+- **Nem todas as sugestões estão corretas ou seguras** - exigem validação humana.
 - **Pode reforçar maus hábitos** se usada passivamente (ex: copiar sem pensar).
-- **A origem das sugestões nem sempre é clara** — contexto e licenciamento devem ser tidos em conta.
+- **A origem das sugestões nem sempre é clara** - contexto e licenciamento devem ser tidos em conta.
 - **Promove aceleração técnica** que precisa de ser acompanhada por controlo e revisão.
 
 ---
@@ -82,4 +82,4 @@ O tema “IA aplicada ao Security by Design” será explorado de forma mais est
 
 ---
 
-> 📌 A GenIA não é um linter, mas **complementa-o** — com contexto, linguagem natural e capacidade adaptativa. Quando usada com consciência, **eleva o patamar de qualidade e segurança do código** produzido por qualquer equipa.
+> 📌 A GenIA não é um linter, mas **complementa-o** - com contexto, linguagem natural e capacidade adaptativa. Quando usada com consciência, **eleva o patamar de qualidade e segurança do código** produzido por qualquer equipa.

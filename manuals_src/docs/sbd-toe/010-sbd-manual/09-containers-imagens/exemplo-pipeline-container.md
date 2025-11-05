@@ -7,7 +7,7 @@ tags: [exemplo, pipeline, containers, cicd, segurança, execucao]
 
 # 💪 Caso Prático – Pipeline Containerizado com Execução Segura
 
-Este exemplo ilustra a aplicação prática das prescrições do Capítulo 09 — desde a construção segura da imagem base, até à sua execução controlada num pipeline CI/CD e em Kubernetes.
+Este exemplo ilustra a aplicação prática das prescrições do Capítulo 09 - desde a construção segura da imagem base, até à sua execução controlada num pipeline CI/CD e em Kubernetes.
 
 O pipeline em causa é responsável por **compilar, testar, assinar e publicar um microserviço Node.js**, com execução **100% containerizada** e alinhada com as práticas do SbD-ToE.
 
@@ -99,7 +99,7 @@ spec:
 
 - A utilização de *containers* exige disciplina e automatização contínua;
 - O enforcement no runtime é tão importante quanto o build seguro;
-- A validação da origem da imagem e do seu conteúdo deve ser feita *antes* da execução — não depois;
+- A validação da origem da imagem e do seu conteúdo deve ser feita *antes* da execução - não depois;
 - A separação clara entre build, validação e execução reduz significativamente a superfície de ataque.
 
 ---

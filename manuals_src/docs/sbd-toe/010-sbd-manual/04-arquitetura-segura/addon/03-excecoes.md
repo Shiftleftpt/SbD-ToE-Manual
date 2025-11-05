@@ -41,7 +41,7 @@ Este documento define o processo para **submeter, aprovar, documentar e controla
 
 | Campo                     | Exemplo                                                   |
 |--------------------------|-----------------------------------------------------------|
-| Requisito afetado        | ARC-002 — Fronteiras técnicas entre zonas de confiança     |
+| Requisito afetado        | ARC-002 - Fronteiras técnicas entre zonas de confiança     |
 | Aplicação / componente     | API Publica - Integração Parceiros                    |
 | Justificação            | Gateway externo ainda não integrado no ambiente interno   |
 | Mitigação alternativa    | ACLs temporárias + monitorização + logging reforçado     |
@@ -63,8 +63,8 @@ Este documento define o processo para **submeter, aprovar, documentar e controla
 
 ## 🏛️ Alinhamento normativo
 
-- **ISO/IEC 27001 A.18.1.4** — Aceitação formal de riscos residuais
-- **SSDF GV.3** — Aprovar exceções e desviações de processos de segurança
-- **OWASP SAMM Governance** — Registo e ciclo de vida de decisões excecionais
+- **ISO/IEC 27001 A.18.1.4** - Aceitação formal de riscos residuais
+- **SSDF GV.3** - Aprovar exceções e desviações de processos de segurança
+- **OWASP SAMM Governance** - Registo e ciclo de vida de decisões excecionais
 
 ---

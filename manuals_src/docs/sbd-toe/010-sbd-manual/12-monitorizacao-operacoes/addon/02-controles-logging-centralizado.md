@@ -65,7 +65,7 @@ Adotar uma convenção como o Elastic Common Schema (ECS) ou formato próprio ba
 | **Assinatura ou hash**            | Verificação de integridade por lote ou ficheiro                  |
 | **Isolamento de função**          | Logging separado da aplicação (ex: forwarder, sidecar, service)  |
 
-> ⚠️ Logs apenas locais são aceitáveis apenas para aplicações L1 — com recolha periódica e justificação documentada.
+> ⚠️ Logs apenas locais são aceitáveis apenas para aplicações L1 - com recolha periódica e justificação documentada.
 
 ---
 

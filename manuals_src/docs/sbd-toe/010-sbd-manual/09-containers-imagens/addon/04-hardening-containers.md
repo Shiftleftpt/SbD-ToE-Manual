@@ -26,7 +26,7 @@ Estas medidas complementam a escolha de imagens seguras e a verificação da sua
 - **Aplicam diretivas de imutabilidade** ao sistema de ficheiros;
 - **Desativam interfaces perigosas** como `/proc`, `/sys`, Docker socket.
 
-> 🧱 Um *container* seguro **não é apenas uma imagem segura** — o contexto de execução é igualmente crítico.
+> 🧱 Um *container* seguro **não é apenas uma imagem segura** - o contexto de execução é igualmente crítico.
 
 ---
 

@@ -5,7 +5,7 @@ description: Exemplo completo com DFD, STRIDE e mitigação num serviço de aute
 tags: [exemplos, threat-modeling, stride, dfd, mitigação]
 ---
 
-# 🧪 Exemplo prático — Threat Modeling de um serviço de autenticação com JWT
+# 🧪 Exemplo prático - Threat Modeling de um serviço de autenticação com JWT
 
 ## 🎯 Contexto técnico
 
@@ -28,7 +28,7 @@ Durante a fase de concepção de um novo serviço de autenticação (`auth-servi
 
 ## 🔁 Modelação com OWASP Threat Dragon
 
-### 🔷 Threat Model — auth-service (DFD em Mermaid)
+### 🔷 Threat Model - auth-service (DFD em Mermaid)
 
 ```mermaid
 flowchart TD
@@ -93,7 +93,7 @@ flowchart TD
 | JWT Gen → Browser      | JWT (`Authorization: Bearer <token>`)                   |
 | Browser → Backend APIs | Pedido autenticado com JWT                              |
 | Browser → Admin Config | Acesso com JWT a `/admin/config`                        |
-| auth API → SIEM        | (Ausente) — sem logs estruturados                       |
+| auth API → SIEM        | (Ausente) - sem logs estruturados                       |
 
 ---
 

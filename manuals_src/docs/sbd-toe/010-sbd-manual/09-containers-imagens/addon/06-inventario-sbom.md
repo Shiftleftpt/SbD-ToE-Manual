@@ -9,7 +9,7 @@ tags: [sbom, containers, rastreabilidade, supply chain, assinatura]
 
 ## 🌟 Objetivo
 
-Garantir que todas as **imagens de *container* utilizadas em pipelines ou produção** possuem um **SBOM (Software Bill of Materials)** completo, versionado e validado — permitindo:
+Garantir que todas as **imagens de *container* utilizadas em pipelines ou produção** possuem um **SBOM (Software Bill of Materials)** completo, versionado e validado - permitindo:
 
 - Rastreabilidade de componentes, bibliotecas e camadas;
 - Análise de vulnerabilidades com base no conteúdo real da imagem;
@@ -28,7 +28,7 @@ Um **SBOM de *container*** é uma representação estruturada de todos os compon
 - Hashes, localizações e metadados;
 - Ligações a CVEs e vulnerabilidades conhecidas.
 
-> 🧱 É diferente de um `Dockerfile` ou de um lockfile — representa o **estado real da imagem**, após build, e pode incluir alterações que não estão no repositório.
+> 🧱 É diferente de um `Dockerfile` ou de um lockfile - representa o **estado real da imagem**, após build, e pode incluir alterações que não estão no repositório.
 
 ---
 
@@ -69,7 +69,7 @@ Um **SBOM de *container*** é uma representação estruturada de todos os compon
 - Gerar SBOM **automaticamente após build da imagem**;
 - Reter SBOM junto ao artefacto e referenciar na release;
 - Incluir dependências transitivas e componentes de base;
-- Validar o SBOM antes do deploy — rejeitar imagens com CVEs conhecidos;
+- Validar o SBOM antes do deploy - rejeitar imagens com CVEs conhecidos;
 - Integrar o SBOM com scanners SCA e com sistemas de alerta contínuo;
 - Ligar SBOM à assinatura da imagem (`03-assinatura-cadeia-trust.md`).
 
@@ -85,4 +85,4 @@ Um **SBOM de *container*** é uma representação estruturada de todos os compon
 | `09-exemplo-pipeline-container.md` | Exemplo de integração prática do SBOM          |
 | `achievable-maturity`              | Geração e uso de SBOM são critério de maturidade|
 
-> 🔍 O SBOM é a única forma de saber **o que realmente está dentro de um *container*** — e, por isso, é um pré-requisito para validação, auditoria e resposta a incidentes.
+> 🔍 O SBOM é a única forma de saber **o que realmente está dentro de um *container*** - e, por isso, é um pré-requisito para validação, auditoria e resposta a incidentes.

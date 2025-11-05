@@ -93,7 +93,7 @@ O alvo `web` executa internamente:
 * ✅ Branch protegida contra eliminação
 * ✅ Apenas *Squash Merge* permitido
 
-**Aprovações — política escalável com a equipa**
+**Aprovações - política escalável com a equipa**
 
 * Enquanto existir apenas um mantenedor: **0 approvals** (checks obrigatórios mantêm-se).
 * Quando existirem dois ou mais contribuidores ativos:

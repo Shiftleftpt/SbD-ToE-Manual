@@ -1,13 +1,13 @@
 ---
 id: recomendacoes-avancadas
-title: Recomendações Avançadas — Formação e Onboarding Seguro
+title: Recomendações Avançadas - Formação e Onboarding Seguro
 description: Recomendações para organizações com maior maturidade em formação contínua, automação e segurança comportamental.
 tags: [formacao, maturidade, lms, cicd, feedback, gamificacao, terceiros]
 sidebar_position: 30
 ---
 
 
-# 🎓 Recomendações Avançadas — Formação e Onboarding Seguro
+# 🎓 Recomendações Avançadas - Formação e Onboarding Seguro
 
 Este documento apresenta recomendações avançadas que **complementam as práticas mínimas descritas no Capítulo 13**, aplicáveis a organizações com maior maturidade em segurança, cultura DevSecOps consolidada e foco na **escala, automação e melhoria contínua** da formação técnica em segurança.
 
@@ -79,7 +79,7 @@ Este documento apresenta recomendações avançadas que **complementam as práti
 ### 📘 NIST SSDF v1.1 – `PO.4`
 
 - **PO.4.1 / PO.4.2**: Definem que a formação deve ser atualizada com base em incidentes e centrada em papéis.
-- **PO.4.3 / PO.4.4**: Apoiam a medição e revisão contínua — tal como recomendado com os dashboards e KPIs.
+- **PO.4.3 / PO.4.4**: Apoiam a medição e revisão contínua - tal como recomendado com os dashboards e KPIs.
 
 ---
 

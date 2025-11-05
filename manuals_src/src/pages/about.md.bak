@@ -21,19 +21,19 @@ A aplicação destas práticas posiciona a organização em níveis de maturidad
 O nome *Theory of Everything* é usado por analogia com o conceito da física que procura descrever, de forma unificada, todos os fenómenos conhecidos.  
 No contexto da segurança no desenvolvimento, o SbD-ToE integra **três eixos complementares** que, combinados, permitem cobrir todas as dimensões necessárias para aplicar *Security by Design* de forma consistente e proporcional:
 
-1. **Visão top-down — modelos de maturidade e normas**  
+1. **Visão top-down - modelos de maturidade e normas**  
    Parte de modelos de maturidade (SAMM, BSIMM, DSOMM) e normas reconhecidas (ISO/IEC 27001, ISO/IEC 27034, CIS Controls, NIS2, DORA).  
    - Define **o que** deve ser feito, **quando** e **a que nível** de exigência.  
    - Fornece enquadramento objetivo para medir evolução, definir metas e comprovar conformidade.  
    - Funciona como plano diretor para alinhar requisitos técnicos, organizacionais e regulamentares.
 
-2. **Perspetiva bottom-up — catálogos de ameaças e vulnerabilidades**  
+2. **Perspetiva bottom-up - catálogos de ameaças e vulnerabilidades**  
    Usa taxonomias como MITRE ATT&CK, CAPEC e CWE para caracterizar riscos concretos.  
    - Responde **para quê** existe cada prática, ligando-a a ameaças reais.  
    - Mantém a relevância face ao panorama de ataques.  
    - Prioriza controlos pelo impacto e probabilidade.
 
-3. **Experiência prática — aplicação em contextos diversos**  
+3. **Experiência prática - aplicação em contextos diversos**  
    Resulta de mais de uma década de aplicação direta em múltiplas organizações.  
    - Define **quem** executa e **como** aplicar com realismo operacional.  
    - Fornece artefactos reutilizáveis e ajustamentos pragmáticos.  
@@ -105,12 +105,12 @@ Cobre **14 áreas técnicas** estruturadas segundo o ciclo de vida do desenvolvi
 
 ---
 
-## Porque estas 14 áreas — e como se aplicam na prática
+## Porque estas 14 áreas - e como se aplicam na prática
 
 Estas 14 áreas foram escolhidas para garantir cobertura, no seu conjunto, de:  
 **(i)** todo o ciclo de vida do software; **(ii)** as classes de risco técnicas, organizacionais, de *supply chain* e humanas; **(iii)** o mapeamento integral para normas e modelos de maturidade reconhecidos.
 
-São o **esqueleto mínimo** de um programa de *Security by Design*. Sem todas, o modelo perde coerência e cobertura — mas isso **não** implica que todas tenham de estar maduras desde o início.
+São o **esqueleto mínimo** de um programa de *Security by Design*. Sem todas, o modelo perde coerência e cobertura - mas isso **não** implica que todas tenham de estar maduras desde o início.
 
 Na prática, a adoção é **progressiva** e, por vezes, parte de simplificações temporárias:
 
@@ -157,9 +157,9 @@ As referências externas estão agrupadas em quatro categorias. Cada categoria t
 Estruturas que avaliam a capacidade organizacional para executar práticas de segurança com consistência, medindo níveis de formalização e melhoria contínua.
 
 **Quais usamos**  
-- **OWASP SAMM** — maturidade no SDLC, organizada em domínios, fluxos e níveis (1–3).  
-- **BSIMM** — observação de programas reais de segurança (12 domínios, atividades mensuráveis).  
-- **OWASP DSOMM** — maturidade DevSecOps (integração e automação de controlos no ciclo CI/CD/Operações).
+- **OWASP SAMM** - maturidade no SDLC, organizada em domínios, fluxos e níveis (1–3).  
+- **BSIMM** - observação de programas reais de segurança (12 domínios, atividades mensuráveis).  
+- **OWASP DSOMM** - maturidade DevSecOps (integração e automação de controlos no ciclo CI/CD/Operações).
 
 **O que cobrem**  
 Não apenas *o que* fazer, mas *quão bem* e *com que consistência* a organização executa as práticas (governação, construção, verificação, implantação/operação).
@@ -177,11 +177,11 @@ Não apenas *o que* fazer, mas *quão bem* e *com que consistência* a organiza�
 Conjuntos de requisitos formais passíveis de auditoria/certificação, alinhados com exigências legais e regulamentares.
 
 **Quais usamos**  
-- **ISO/IEC 27001** — sistema de gestão de segurança da informação.  
-- **ISO/IEC 27034** — segurança de aplicações (complementa a 27001 no SDLC).  
-- **CIS Controls** — controlos priorizados (técnicos e organizacionais).  
-- **ENISA / NIS2 / DORA** — orientações e obrigações europeias.  
-- **PCI DSS** — proteção de dados de pagamento (exemplo setorial).
+- **ISO/IEC 27001** - sistema de gestão de segurança da informação.  
+- **ISO/IEC 27034** - segurança de aplicações (complementa a 27001 no SDLC).  
+- **CIS Controls** - controlos priorizados (técnicos e organizacionais).  
+- **ENISA / NIS2 / DORA** - orientações e obrigações europeias.  
+- **PCI DSS** - proteção de dados de pagamento (exemplo setorial).
 
 **O que cobrem**  
 Critérios auditáveis e objetivos para governação, gestão de riscos, proteção, deteção, resposta e melhoria.
@@ -199,9 +199,9 @@ Critérios auditáveis e objetivos para governação, gestão de riscos, proteç
 Guias que definem controlos e salvaguardas técnicos para desenvolvimento seguro e integridade da *supply chain*.
 
 **Quais usamos**  
-- **NIST SSDF** — práticas agrupadas em Prepare, Protect, Produce, Respond.  
-- **SLSA** — integridade da cadeia de fornecimento (níveis 1–4).  
-- **OWASP ASVS** — requisitos de verificação de segurança aplicacional (níveis 1–3).
+- **NIST SSDF** - práticas agrupadas em Prepare, Protect, Produce, Respond.  
+- **SLSA** - integridade da cadeia de fornecimento (níveis 1–4).  
+- **OWASP ASVS** - requisitos de verificação de segurança aplicacional (níveis 1–3).
 
 **O que cobrem**  
 Controlo de dependências (SBOM/SCA), hardening de pipelines, assinaturas e proveniência, verificação sistemática de requisitos, testes técnicos e critérios de aceitação.
@@ -219,9 +219,9 @@ Controlo de dependências (SBOM/SCA), hardening de pipelines, assinaturas e prov
 Taxonomias estruturadas de ataques, padrões e fraquezas técnicas.
 
 **Quais usamos**  
-- **MITRE ATT&CK** — táticas/técnicas/procedimentos de adversários.  
-- **CAPEC** — padrões de ataque.  
-- **CWE** — fraquezas de software.
+- **MITRE ATT&CK** - táticas/técnicas/procedimentos de adversários.  
+- **CAPEC** - padrões de ataque.  
+- **CWE** - fraquezas de software.
 
 **O que cobrem**  
 Vocabulário comum e estrutura para identificar, classificar e comunicar ameaças e vulnerabilidades; permitem ligar controlos a **riscos concretos**.

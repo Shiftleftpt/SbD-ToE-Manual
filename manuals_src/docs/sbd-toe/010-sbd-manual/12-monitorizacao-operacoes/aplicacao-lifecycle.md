@@ -47,7 +47,7 @@ Não basta que uma equipa “tenha logs”: cada papel deve assumir uma função
 As histórias de utilizador seguintes traduzem os princípios do capítulo em práticas concretas.  
 Cada uma reflete situações reais de risco e as medidas necessárias para garantir visibilidade, deteção e resposta.
 
-### US-01 — Logging estruturado e centralizado
+### US-01 - Logging estruturado e centralizado
 
 O primeiro passo para uma operação segura é **garantir visibilidade**.  
 Sem logs consistentes e centralizados, qualquer investigação começa às cegas.  
@@ -91,7 +91,7 @@ Como **Dev**, quero **gerar logs estruturados e centralizados**, para **assegura
 
 ---
 
-### US-02 — Definição de eventos e métricas críticas
+### US-02 - Definição de eventos e métricas críticas
 
 Visibilidade sem contexto gera apenas ruído.  
 É fundamental decidir **o que merece ser observado** e quais eventos devem acionar alertas.  
@@ -135,7 +135,7 @@ Como **AppSec**, quero **definir eventos e métricas críticas de segurança**, 
 
 ---
 
-### US-03 — Alertas com SLAs definidos
+### US-03 - Alertas com SLAs definidos
 
 Um alerta sem prazo de resposta é apenas ruído.  
 Para que a monitorização tenha impacto, é preciso ligar cada alerta a um **compromisso temporal**.  
@@ -179,7 +179,7 @@ Como **IR**, quero **configurar alertas críticos com SLAs definidos**, para **a
 
 ---
 
-### US-04 — Integração com processos de resposta a incidentes
+### US-04 - Integração com processos de resposta a incidentes
 
 A deteção só cria valor quando conduz a uma resposta.  
 Alertas isolados não resolvem nada: precisam de estar ligados a **playbooks claros e testados**.  
@@ -223,7 +223,7 @@ Como **IR**, quero **integrar alertas com playbooks de resposta a incidentes**, 
 
 ---
 
-### US-05 — Métricas de eficácia (MTTD/MTTR)
+### US-05 - Métricas de eficácia (MTTD/MTTR)
 
 Só é possível melhorar aquilo que se mede.  
 Sem métricas de eficácia, qualquer esforço de monitorização corre o risco de se tornar estático e complacente.  

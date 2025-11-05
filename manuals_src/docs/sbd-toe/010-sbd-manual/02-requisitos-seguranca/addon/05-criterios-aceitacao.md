@@ -15,7 +15,7 @@ Este anexo apresenta, para cada requisito do Catálogo Base, o critério mínimo
 
 ---
 
-## 🔐 AUT — Autenticação e Identidade
+## 🔐 AUT - Autenticação e Identidade
 
 | ID      | Nome resumido            | Critério de aceitação                                  |
 |---------|--------------------------|--------------------------------------------------------|
@@ -32,7 +32,7 @@ Este anexo apresenta, para cada requisito do Catálogo Base, o critério mínimo
 
 ---
 
-## 🔓 ACC — Controlo de Acesso
+## 🔓 ACC - Controlo de Acesso
 
 | ID      | Nome resumido            | Critério de aceitação                                   |
 |---------|--------------------------|---------------------------------------------------------|
@@ -49,7 +49,7 @@ Este anexo apresenta, para cada requisito do Catálogo Base, o critério mínimo
 
 ---
 
-## 📈 LOG — Registo e Monitorização
+## 📈 LOG - Registo e Monitorização
 
 | ID      | Nome resumido            | Critério de aceitação                                   |
 |---------|--------------------------|---------------------------------------------------------|
@@ -66,7 +66,7 @@ Este anexo apresenta, para cada requisito do Catálogo Base, o critério mínimo
 
 ---
 
-## 🕒 SES — Sessões e Estado
+## 🕒 SES - Sessões e Estado
 
 | ID      | Nome resumido            | Critério de aceitação                                   |
 |---------|--------------------------|---------------------------------------------------------|
@@ -81,7 +81,7 @@ Este anexo apresenta, para cada requisito do Catálogo Base, o critério mínimo
 
 ---
 
-## 🧹 VAL — Validação de Dados
+## 🧹 VAL - Validação de Dados
 
 | ID      | Nome resumido            | Critério de aceitação                                   |
 |---------|--------------------------|---------------------------------------------------------|
@@ -95,7 +95,7 @@ Este anexo apresenta, para cada requisito do Catálogo Base, o critério mínimo
 
 ---
 
-## ❗ ERR — Gestão de Erros
+## ❗ ERR - Gestão de Erros
 
 | ID      | Nome resumido            | Critério de aceitação                                   |
 |---------|--------------------------|---------------------------------------------------------|
@@ -109,7 +109,7 @@ Este anexo apresenta, para cada requisito do Catálogo Base, o critério mínimo
 
 ---
 
-## ⚙️ CFG — Configuração Segura
+## ⚙️ CFG - Configuração Segura
 
 | ID      | Nome resumido            | Critério de aceitação                                   |
 |---------|--------------------------|---------------------------------------------------------|
@@ -123,7 +123,7 @@ Este anexo apresenta, para cada requisito do Catálogo Base, o critério mínimo
 
 ---
 
-## 🌐 API — Segurança de APIs
+## 🌐 API - Segurança de APIs
 
 | ID      | Nome resumido            | Critério de aceitação                                   |
 |---------|--------------------------|---------------------------------------------------------|
@@ -137,7 +137,7 @@ Este anexo apresenta, para cada requisito do Catálogo Base, o critério mínimo
 
 ---
 
-## 📨 INT — Mensagens e Integrações
+## 📨 INT - Mensagens e Integrações
 
 | ID      | Nome resumido            | Critério de aceitação                                   |
 |---------|--------------------------|---------------------------------------------------------|
@@ -152,7 +152,7 @@ Este anexo apresenta, para cada requisito do Catálogo Base, o critério mínimo
 
 ---
 
-## 📄 REQ — Definição de Requisitos
+## 📄 REQ - Definição de Requisitos
 
 | ID      | Nome resumido            | Critério de aceitação                                   |
 |---------|--------------------------|---------------------------------------------------------|
@@ -166,7 +166,7 @@ Este anexo apresenta, para cada requisito do Catálogo Base, o critério mínimo
 
 ---
 
-## 🛠️ DST — Distribuição de Artefactos
+## 🛠️ DST - Distribuição de Artefactos
 
 | ID      | Nome resumido            | Critério de aceitação                                   |
 |---------|--------------------------|---------------------------------------------------------|
@@ -180,7 +180,7 @@ Este anexo apresenta, para cada requisito do Catálogo Base, o critério mínimo
 
 ---
 
-## 💻 IDE — Ferramentas de Desenvolvimento
+## 💻 IDE - Ferramentas de Desenvolvimento
 
 | ID      | Nome resumido            | Critério de aceitação                                   |
 |---------|--------------------------|---------------------------------------------------------|

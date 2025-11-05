@@ -16,7 +16,7 @@ Cruzar os **14 capítulos técnicos do manual SbD-ToE** com os **conteúdos de f
 - A atribuição proporcional de conteúdos a **níveis de risco (L1–L3)**;
 - A escolha de **formatos pedagógicos adequados** por perfil e contexto.
 
-Este catálogo serve de base para programas de formação, onboarding, labs e CTFs internos — e pode ser instanciado como estrutura curricular num LMS.
+Este catálogo serve de base para programas de formação, onboarding, labs e CTFs internos - e pode ser instanciado como estrutura curricular num LMS.
 
 ---
 
@@ -104,4 +104,4 @@ A matriz define, por capítulo técnico do manual:
 
 ---
 
-> 📚 Este catálogo pode evoluir para o **Volume II — Manual de Formação SbD-ToE**, com conteúdos, exercícios e labs por capítulo, função e nível de risco.
+> 📚 Este catálogo pode evoluir para o **Volume II - Manual de Formação SbD-ToE**, com conteúdos, exercícios e labs por capítulo, função e nível de risco.

@@ -46,7 +46,7 @@ O quadro seguinte clarifica esta divisão:
 As histórias seguintes descrevem **cenários típicos de risco no deploy** e como devem ser tratados de forma consistente.  
 Ao formalizá-las em backlog, a organização consegue alinhar papéis, práticas e evidências de forma auditável.
 
-### US-01 — Deploy apenas de artefactos assinados
+### US-01 - Deploy apenas de artefactos assinados
 
 A integridade começa pela proveniência: se não controlarmos a origem, todo o processo é vulnerável.  
 
@@ -89,7 +89,7 @@ Como **DevOps/SRE**, quero **executar deploy apenas de artefactos assinados e ve
 
 ---
 
-### US-02 — Validação em staging antes da promoção
+### US-02 - Validação em staging antes da promoção
 
 Staging é o “ensaio geral”: sem ele, a produção torna-se campo de teste.  
 
@@ -132,7 +132,7 @@ Como **QA/Testes**, quero **validar releases em staging com testes funcionais e 
 
 ---
 
-### US-03 — Gates de aprovação no deploy
+### US-03 - Gates de aprovação no deploy
 
 Sem gates, a promoção a produção torna-se uma aposta: e a segurança não pode ser um jogo de sorte.  
 
@@ -175,7 +175,7 @@ Como **AppSec**, quero **definir gates automáticos e thresholds no deploy**, pa
 
 ---
 
-### US-04 — Rollback rápido e testado
+### US-04 - Rollback rápido e testado
 
 Falhas acontecem. A diferença entre crise e resiliência está em quão rápido conseguimos voltar atrás.  
 
@@ -218,7 +218,7 @@ Como **DevOps/SRE**, quero **rollback rápido e testado periodicamente**, para *
 
 ---
 
-### US-05 — Rastreabilidade end-to-end
+### US-05 - Rastreabilidade end-to-end
 
 Se não for possível reconstituir o caminho desde o commit até ao deploy, não existe governação real.  
 
@@ -261,7 +261,7 @@ Como **Gestão de Produto**, quero **garantir rastreabilidade entre commit → b
 
 ---
 
-### US-06 — Monitorização pós-deploy
+### US-06 - Monitorização pós-deploy
 
 Um deploy não termina no *merge*: só se considera concluído quando a versão está estável e visível em produção.  
 

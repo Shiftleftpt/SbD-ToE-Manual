@@ -5,9 +5,9 @@ sidebar_position: 10
 tags: [canon, maturidade, SAMM, BSIMM, SSDF, SLSA, DSOMM]
 ---
 
-# 📈 Maturidade — Dependências, SBOM e SCA
+# 📈 Maturidade - Dependências, SBOM e SCA
 
-Este documento apresenta o mapeamento entre as práticas descritas no Capítulo 05 do SbD-ToE — *Gestão de Dependências, SBOM e SCA* — e os principais frameworks de segurança e maturidade:
+Este documento apresenta o mapeamento entre as práticas descritas no Capítulo 05 do SbD-ToE - *Gestão de Dependências, SBOM e SCA* - e os principais frameworks de segurança e maturidade:
 
 - **OWASP SAMM**
 - **BSIMM**

@@ -9,7 +9,7 @@ tags: [kubernetes, containers, execução segura, isolation, runtime, segurança
 
 ## 🌟 Objetivo
 
-Assegurar que a **execução de *containers* em ambientes Kubernetes** — seja para aplicações, pipelines, sidecars ou agentes — é feita com **controlo total de permissões, políticas e rastreabilidade**, evitando riscos como:
+Assegurar que a **execução de *containers* em ambientes Kubernetes** - seja para aplicações, pipelines, sidecars ou agentes - é feita com **controlo total de permissões, políticas e rastreabilidade**, evitando riscos como:
 
 - Execução de workloads com permissões excessivas;
 - Comprometimento de outros pods ou do próprio nó;

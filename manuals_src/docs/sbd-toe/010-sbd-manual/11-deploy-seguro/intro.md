@@ -41,11 +41,11 @@ O momento de *deploy* é, por natureza, o mais delicado de todo o ciclo de vida.
 Estudos de incidentes (BSIMM, ENISA Threat Landscape, relatórios de falhas DevOps) mostram que mais de 40% dos compromissos de segurança associados ao software ocorrem na **fase de release e operação inicial**, seja por falhas de rastreabilidade, ausência de rollback ou uso de artefactos não confiáveis.  
 
 Este capítulo não se limita a “executar o pipeline”. Procura sim **estabelecer práticas que tornem cada deploy auditável, reversível e proporcional ao risco da aplicação**.  
-A segurança do deploy não é apenas uma questão técnica: é também uma forma de governação — traduz-se na capacidade de explicar, perante uma auditoria ou incidente, *quem decidiu*, *o que foi aprovado* e *como se garantiu a integridade do que chegou a produção*.  
+A segurança do deploy não é apenas uma questão técnica: é também uma forma de governação - traduz-se na capacidade de explicar, perante uma auditoria ou incidente, *quem decidiu*, *o que foi aprovado* e *como se garantiu a integridade do que chegou a produção*.  
 
 👉 Este capítulo complementa:  
-- **Cap. 07 — CI/CD Seguro**, onde se garante a integridade do build e pipelines.  
-- **Cap. 12 — Monitorização e Operações**, que cobre a deteção de anomalias e resposta a incidentes no runtime.  
+- **Cap. 07 - CI/CD Seguro**, onde se garante a integridade do build e pipelines.  
+- **Cap. 12 - Monitorização e Operações**, que cobre a deteção de anomalias e resposta a incidentes no runtime.  
 
 ---
 

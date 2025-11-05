@@ -15,8 +15,8 @@ Este documento apresenta a matriz consolidada dos requisitos de segurança defin
 - [OWASP Mobile Security Testing Guide (MSTG)](https://owasp.org/www-project-mobile-security-testing-guide/) <!-- Precisa revisão manual -->
 - [NIST Secure Software Development Framework (SSDF)](https://csrc.nist.gov/publications/detail/sp/800-218/final) <!-- Precisa revisão manual -->
 - [ISO/IEC 27001:2022](https://www.iso.org/standard/27001) <!-- Precisa revisão manual -->
-- [IEC 62443 — Segurança em Sistemas Industriais](https://webstore.iec.ch/publication/7033) <!-- Precisa revisão manual -->
-- [BSIMM — Building Security In Maturity Model](https://www.bsimm.com/) <!-- Precisa revisão manual -->
+- [IEC 62443 - Segurança em Sistemas Industriais](https://webstore.iec.ch/publication/7033) <!-- Precisa revisão manual -->
+- [BSIMM - Building Security In Maturity Model](https://www.bsimm.com/) <!-- Precisa revisão manual -->
 - [OWASP Internet of Things Project](https://owasp.org/www-project-internet-of-things/) <!-- Precisa revisão manual -->
 
 > Importante:
@@ -29,7 +29,7 @@ Este documento apresenta a matriz consolidada dos requisitos de segurança defin
 
 ---
 
-## 🔐 AUT — Autenticação e Identidade
+## 🔐 AUT - Autenticação e Identidade
 
 | ID      | Nome resumido                          | L1 | L2 | L3 |
 |---------|----------------------------------------|----|----|----|
@@ -46,7 +46,7 @@ Este documento apresenta a matriz consolidada dos requisitos de segurança defin
 
 ---
 
-## 🔓 ACC — Controlo de Acesso
+## 🔓 ACC - Controlo de Acesso
 
 | ID      | Nome resumido                          | L1 | L2 | L3 |
 |---------|----------------------------------------|----|----|----|
@@ -63,7 +63,7 @@ Este documento apresenta a matriz consolidada dos requisitos de segurança defin
 
 ---
 
-## 📈 LOG — Registo e Monitorização
+## 📈 LOG - Registo e Monitorização
 
 | ID      | Nome resumido                          | L1 | L2 | L3 |
 |---------|----------------------------------------|----|----|----|
@@ -80,7 +80,7 @@ Este documento apresenta a matriz consolidada dos requisitos de segurança defin
 
 ---
 
-## 🕒 SES — Sessões e Estado
+## 🕒 SES - Sessões e Estado
 
 | ID      | Nome resumido                                 | L1 | L2 | L3 |
 |---------|-----------------------------------------------|----|----|----|
@@ -95,7 +95,7 @@ Este documento apresenta a matriz consolidada dos requisitos de segurança defin
 
 ---
 
-## 🧹 VAL — Validação de Dados
+## 🧹 VAL - Validação de Dados
 
 | ID      | Nome resumido                                 | L1 | L2 | L3 |
 |---------|-----------------------------------------------|----|----|----|
@@ -109,7 +109,7 @@ Este documento apresenta a matriz consolidada dos requisitos de segurança defin
 
 ---
 
-## ❗ ERR — Gestão de Erros
+## ❗ ERR - Gestão de Erros
 
 | ID      | Nome resumido                                 | L1 | L2 | L3 |
 |---------|-----------------------------------------------|----|----|----|
@@ -123,7 +123,7 @@ Este documento apresenta a matriz consolidada dos requisitos de segurança defin
 
 ---
 
-## ⚙️ CFG — Configuração Segura
+## ⚙️ CFG - Configuração Segura
 
 | ID      | Nome resumido                                 | L1 | L2 | L3 |
 |---------|-----------------------------------------------|----|----|----|
@@ -137,7 +137,7 @@ Este documento apresenta a matriz consolidada dos requisitos de segurança defin
 
 ---
 
-## 🌐 API — Segurança de APIs
+## 🌐 API - Segurança de APIs
 
 | ID      | Nome resumido                                 | L1 | L2 | L3 |
 |---------|-----------------------------------------------|----|----|----|
@@ -151,7 +151,7 @@ Este documento apresenta a matriz consolidada dos requisitos de segurança defin
 
 ---
 
-## 📨 INT — Mensagens e Integrações
+## 📨 INT - Mensagens e Integrações
 
 | ID      | Nome resumido                                 | L1 | L2 | L3 |
 |---------|-----------------------------------------------|----|----|----|
@@ -166,7 +166,7 @@ Este documento apresenta a matriz consolidada dos requisitos de segurança defin
 
 ---
 
-## 📄 REQ — Definição de Requisitos
+## 📄 REQ - Definição de Requisitos
 
 | ID      | Nome resumido                                 | L1 | L2 | L3 |
 |---------|-----------------------------------------------|----|----|----|
@@ -180,7 +180,7 @@ Este documento apresenta a matriz consolidada dos requisitos de segurança defin
 
 ---
 
-## 🛠️ DST — Distribuição de Artefactos
+## 🛠️ DST - Distribuição de Artefactos
 
 | ID      | Nome resumido                                 | L1 | L2 | L3 |
 |---------|-----------------------------------------------|----|----|----|
@@ -194,7 +194,7 @@ Este documento apresenta a matriz consolidada dos requisitos de segurança defin
 
 ---
 
-## 💻 IDE — Ferramentas de Desenvolvimento
+## 💻 IDE - Ferramentas de Desenvolvimento
 
 | ID      | Nome resumido                                 | L1 | L2 | L3 |
 |---------|-----------------------------------------------|----|----|----|

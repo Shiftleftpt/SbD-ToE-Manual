@@ -1,17 +1,17 @@
 ---
 id: ameacas-mitigadas
-title: Ameaças Mitigadas — Capítulo 05
+title: Ameaças Mitigadas - Capítulo 05
 description: Análise das ameaças mitigadas pelas práticas deste capítulo, com base em OSC&R, CAPEC, STRIDE, DSOMM e outros modelos
 tags: [ameaças, mitigação, sbom, sca, supply-chain, dsomm, capec, oscar, bsimm]
 sidebar_position: 50
 
 ---
 
-# 🔐 Ameaças Mitigadas — Capítulo 05: Dependências, SBOM e SCA
+# 🔐 Ameaças Mitigadas - Capítulo 05: Dependências, SBOM e SCA
 
 Este capítulo estabelece práticas de **inventário, validação, rastreabilidade e governação de bibliotecas e artefactos de terceiros**, com base em SBOMs, SCA, políticas de origem e integração com CI/CD.
 
-> ⚠️ A ausência destas práticas representa risco direto e crítico — evidenciado por falhas de cadeia de fornecimento como SolarWinds, log4j e event-stream.
+> ⚠️ A ausência destas práticas representa risco direto e crítico - evidenciado por falhas de cadeia de fornecimento como SolarWinds, log4j e event-stream.
 
 As ameaças identificadas foram analisadas com base em **OSC&R**, **CAPEC**, **BSIMM**, **OWASP Top 10**, **SSDF**, **SLSA** e **OWASP DSOMM**, com foco em práticas de mitigação concretas e controlos auditáveis.
 

@@ -34,7 +34,7 @@ tags: [ciclo de vida, governanca, contratacao, excecoes, fornecedores, rastreabi
 
 ## 📖 User Stories normalizadas
 
-### US-01 — Processo formal de exceções
+### US-01 - Processo formal de exceções
 **Contexto.** Sem exceções formais, práticas são ignoradas sem transparência.  
 
 **📖 Rationale.**  
@@ -69,7 +69,7 @@ Como **Dev**, quero **submeter exceções de segurança em fluxo formal**, para 
 
 ---
 
-### US-02 — Cláusulas contratuais de segurança
+### US-02 - Cláusulas contratuais de segurança
 **Contexto.** Fornecedores sem cláusulas podem comprometer toda a cadeia.  
 
 **📖 Rationale.**  
@@ -104,7 +104,7 @@ Como **Jurídico/Procurement**, quero **incluir cláusulas SbD-ToE em contratos*
 
 ---
 
-### US-03 — Validação contínua de fornecedores
+### US-03 - Validação contínua de fornecedores
 **Contexto.** Fornecedores comprometidos propagam risco.  
 
 **📖 Rationale.**  
@@ -139,7 +139,7 @@ Como **GRC**, quero **validar fornecedores de forma contínua**, para **assegura
 
 ---
 
-### US-04 — Rastreabilidade organizacional
+### US-04 - Rastreabilidade organizacional
 **Contexto.** Sem rastreabilidade, a gestão não tem visibilidade real.  
 
 **📖 Rationale.**  
@@ -174,7 +174,7 @@ Como **AppSec**, quero **agregar práticas de segurança por projeto em dashboar
 
 ---
 
-### US-05 — KPIs de governação
+### US-05 - KPIs de governação
 **Contexto.** Sem métricas, não há melhoria contínua.  
 
 **📖 Rationale.**  

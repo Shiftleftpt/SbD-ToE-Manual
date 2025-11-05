@@ -6,12 +6,12 @@ tags: [ameaças, arquitetura, risco, stride, oscar, dsomm]
 sidebar_position: 50
 ---
 
-# 🔐 Ameaças Mitigadas — Capítulo 04: Arquitetura Segura
+# 🔐 Ameaças Mitigadas - Capítulo 04: Arquitetura Segura
 
 Este capítulo define práticas formais de **design, validação e documentação de arquitetura segura**, incluindo o uso de zonas de confiança, diagramas técnicos, requisitos arquiteturais e validação por risco.  
 As ameaças mitigadas dizem respeito à **ausência de controlo sobre fronteiras técnicas, decisões de design e validação formal do modelo arquitetural**.
 
-> 📌 Arquitetura segura é o ponto de articulação entre **risco, ameaça, requisitos e execução segura** — e um dos principais fundamentos do SbD-ToE.
+> 📌 Arquitetura segura é o ponto de articulação entre **risco, ameaça, requisitos e execução segura** - e um dos principais fundamentos do SbD-ToE.
 
 ---
 
@@ -72,7 +72,7 @@ As ameaças mitigadas dizem respeito à **ausência de controlo sobre fronteiras
 
 O Capítulo 04 mitiga um conjunto de ameaças **essenciais e de difícil visibilidade**, relacionadas com **fronteiras técnicas, validação estrutural e coerência entre intenção e execução**.
 
-> ⚠️ Muitas destas ameaças não emergem em testes — apenas no comportamento agregado de sistemas, escalabilidade, exposição, ou bypass lógico.
+> ⚠️ Muitas destas ameaças não emergem em testes - apenas no comportamento agregado de sistemas, escalabilidade, exposição, ou bypass lógico.
 
 > ✅ Pelo menos **10 ameaças são mitigadas exclusivamente** por este capítulo, demonstrando o seu papel único na garantia de segurança por design.
 

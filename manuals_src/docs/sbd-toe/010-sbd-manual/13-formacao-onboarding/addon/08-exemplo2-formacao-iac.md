@@ -1,6 +1,6 @@
 ---
 id: formacao-iac
-title: Módulo Formativo — Infraestrutura como Código (IaC) Seguro
+title: Módulo Formativo - Infraestrutura como Código (IaC) Seguro
 sidebar_position: 8
 description: Capacitação prática para equipas técnicas que desenvolvem, revêm ou operam projetos IaC de forma segura
 tags: [formacao, iac, terraform, tfsec, checkov, pipelines, devops, validacao, requisitos]
@@ -91,4 +91,4 @@ Capacitar as equipas técnicas para:
 
 ---
 
-> 📌 Este módulo é essencial para qualquer equipa que atue sobre infraestrutura como código — seja em contexto de provisionamento, pipelines ou operações. A sua aplicação reduz riscos sistémicos e aumenta a maturidade da organização na gestão de ambientes e permissões.
+> 📌 Este módulo é essencial para qualquer equipa que atue sobre infraestrutura como código - seja em contexto de provisionamento, pipelines ou operações. A sua aplicação reduz riscos sistémicos e aumenta a maturidade da organização na gestão de ambientes e permissões.

@@ -5,9 +5,9 @@ sidebar_position: 10
 tags: [canon, maturidade, SAMM, BSIMM, SSDF, DSOMM]
 ---
 
-# 📈 Maturidade — Formação e Onboarding Seguro
+# 📈 Maturidade - Formação e Onboarding Seguro
 
-Este documento apresenta o **mapeamento de maturidade das práticas descritas no Capítulo 13 — Formação e Onboarding Seguro**, com base nos principais frameworks de referência:
+Este documento apresenta o **mapeamento de maturidade das práticas descritas no Capítulo 13 - Formação e Onboarding Seguro**, com base nos principais frameworks de referência:
 
 - **OWASP SAMM**
 - **BSIMM**
@@ -42,13 +42,13 @@ Este mapeamento avalia a completude, rastreabilidade e sofisticação das práti
 
 ---
 
-## 🧱 OWASP SAMM — Governance → Education & Guidance
+## 🧱 OWASP SAMM - Governance → Education & Guidance
 
 | Nível | Descrição SAMM                                             | Implementação no Cap. 13                               |
 |-------|-------------------------------------------------------------|--------------------------------------------------------|
 | 1     | Formação básica disponível                                   | ✅ Formação de awareness para todos os perfis           |
 | 2     | Formação direcionada e rastreável                            | ✅ Trilhos por função e nível de risco, KPIs            |
-| 3     | Integração com governance e melhoria contínua               | ❌ Parcial — não é ainda integrada com ciclos de gestão |
+| 3     | Integração com governance e melhoria contínua               | ❌ Parcial - não é ainda integrada com ciclos de gestão |
 
 **🧮 Maturidade atingida: 2 / 3**
 

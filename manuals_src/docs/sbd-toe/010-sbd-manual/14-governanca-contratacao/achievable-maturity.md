@@ -5,9 +5,9 @@ sidebar_position: 10
 tags: [canon, maturidade, SAMM, BSIMM, SSDF, SLSA, DSOMM]
 ---
 
-# 📈 Maturidade — Governança e Contratação
+# 📈 Maturidade - Governança e Contratação
 
-Este documento apresenta o **mapeamento de maturidade das práticas descritas no Capítulo 14 — Governança e Contratação**, com base nos principais frameworks de referência:
+Este documento apresenta o **mapeamento de maturidade das práticas descritas no Capítulo 14 - Governança e Contratação**, com base nos principais frameworks de referência:
 
 - **OWASP SAMM**
 - **BSIMM**
@@ -49,7 +49,7 @@ As práticas cobrem papéis críticos, exceções, contratos, rastreabilidade or
 |-----------------------|-------|----------------------------------------------------------|
 | Governance            | 2 / 3 | Papéis definidos, exceções formais, contratos seguros    |
 | Education & Guidance  | 2 / 3 | Formação de fornecedores e rastreio organizacional       |
-| Incident Management   | 1 / 3 | Parciais — rastreabilidade e canais de reporte definidos |
+| Incident Management   | 1 / 3 | Parciais - rastreabilidade e canais de reporte definidos |
 
 ---
 

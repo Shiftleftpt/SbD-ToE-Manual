@@ -5,7 +5,7 @@ sidebar_position: 10
 tags: [canon, maturidade, SAMM, SSDF, BSIMM, DSOMM, SLSA]
 ---
 
-# 📈 Maturidade — Requisitos de Segurança
+# 📈 Maturidade - Requisitos de Segurança
 
 Este documento estabelece o **grau de alinhamento entre as práticas descritas no Capítulo 02** do manual SbD-ToE e os requisitos de frameworks reconhecidas: **OWASP SAMM**, **BSIMM**, **NIST SSDF**, **SLSA** e **OWASP DSOMM**.
 

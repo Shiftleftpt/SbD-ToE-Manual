@@ -8,11 +8,11 @@ tags: [tipo:avaliacao, tema:risco, metodologia, criticidade]
 
 # 🛠️ Modelo Alternativo : Avaliação Semiquantitativa
 
-A avaliação de risco semiquantitativa permite ultrapassar as limitações da abordagem meramente qualitativa, ao fornecer um modelo mais estruturado, mensurável e comparável — sem exigir dados estatísticos completos como nos modelos puramente quantitativos.
+A avaliação de risco semiquantitativa permite ultrapassar as limitações da abordagem meramente qualitativa, ao fornecer um modelo mais estruturado, mensurável e comparável - sem exigir dados estatísticos completos como nos modelos puramente quantitativos.
 
 Este modelo é recomendado como alternativa ligeiramente mais avançada, mas acessível, ao modelo qualitativo descrito nos restantes ficheiros deste capítulo.
 
-## 📌 Nota Técnica — Comparação com a Metodologia OWASP Risk Rating
+## 📌 Nota Técnica - Comparação com a Metodologia OWASP Risk Rating
 
 A abordagem semiquantitativa aqui descrita visa fornecer uma alternativa prática ao modelo qualitativo baseado em eixos (ver `01-modelo-classificacao-eixos.md`), mantendo um nível de estruturação suficiente para justificar decisões técnicas, sem exigir dados estatísticos nem competências avançadas de análise de risco.
 
@@ -30,7 +30,7 @@ Contudo, existem metodologias mais completas e rigorosas, como a **OWASP Risk Ra
 
 A metodologia OWASP Risk Rating pode e deve ser adotada quando a organização possuir maturidade suficiente, ferramentas de suporte, e necessidade de avaliação mais fina.
 
-O modelo semiquantitativo aqui apresentado não pretende substituir modelos mais detalhados, mas sim servir como base mínima estruturada e compatível com os restantes elementos do SbD-ToE — nomeadamente na definição de proporcionalidade de controlos, testes, requisitos e validações em função do risco.
+O modelo semiquantitativo aqui apresentado não pretende substituir modelos mais detalhados, mas sim servir como base mínima estruturada e compatível com os restantes elementos do SbD-ToE - nomeadamente na definição de proporcionalidade de controlos, testes, requisitos e validações em função do risco.
 
 A decisão entre modelos deve considerar a maturidade da organização, a capacidade de adoção prática e o objetivo da análise de risco (macroclassificação vs. triagem granular de vulnerabilidades).
 

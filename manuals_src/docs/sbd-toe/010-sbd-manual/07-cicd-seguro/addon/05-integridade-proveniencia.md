@@ -9,7 +9,7 @@ tags: [proveniência, artefactos, cicd, assinatura, rastreabilidade, build]
 
 # 📦 Integridade e proveniência de artefactos
 
-A segurança de uma aplicação depende da **confiança nos artefactos** que são produzidos e distribuídos. Se um artefacto (ex: binário, imagem, pacote) for manipulado em qualquer fase — build, armazenamento ou publicação — o software resultante deixa de ser fiável.
+A segurança de uma aplicação depende da **confiança nos artefactos** que são produzidos e distribuídos. Se um artefacto (ex: binário, imagem, pacote) for manipulado em qualquer fase - build, armazenamento ou publicação - o software resultante deixa de ser fiável.
 
 Esta prática define os controlos necessários para garantir a **integridade, autenticidade e proveniência verificável** dos artefactos gerados por pipelines CI/CD.
 
@@ -53,7 +53,7 @@ Esta prática define os controlos necessários para garantir a **integridade, au
 
 | Nível | Requisitos obrigatórios                              | Requisitos reforçados                                 |
 |-------|--------------------------------------------------------|--------------------------------------------------------|
-| **L1** | Hashes e logs de origem do build                      | —                                                      |
+| **L1** | Hashes e logs de origem do build                      | -                                                      |
 | **L2** | Proveniência automatizada; controlo de publicação     | Assinaturas digitais formais                           |
 | **L3** | Proveniência SLSA completa; políticas de validação    | Builds reproduzíveis; cadeia de confiança completa     |
 

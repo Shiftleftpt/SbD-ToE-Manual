@@ -1,16 +1,16 @@
 ---
 id: nis2
-title: NIS2 — Cross-check normativo
+title: NIS2 - Cross-check normativo
 description: Como o SbD-ToE cobre, deixa em aberto deliberadamente e pode integrar rapidamente os requisitos da Diretiva NIS2 (UE 2022/2555)
 tags: [cross-check, nis2, diretiva, ciberseguranca, incident-reporting, governance]
 sidebar_position: 3
 ---
 
-# Cross-check normativo — NIS2
+# Cross-check normativo - NIS2
 
 ## Enquadramento geral
 
-A **Diretiva (UE) 2022/2555 — NIS2** atualiza o quadro europeu de cibersegurança para **entidades essenciais e importantes** em 18 setores, reforçando **governação**, **medidas de gestão de risco**, e **obrigação de reporte de incidentes**. Os Estados-Membros tinham até **17 de outubro de 2024** para transpor a NIS2 e a NIS1 foi revogada a **18 de outubro de 2024**. [^1]
+A **Diretiva (UE) 2022/2555 - NIS2** atualiza o quadro europeu de cibersegurança para **entidades essenciais e importantes** em 18 setores, reforçando **governação**, **medidas de gestão de risco**, e **obrigação de reporte de incidentes**. Os Estados-Membros tinham até **17 de outubro de 2024** para transpor a NIS2 e a NIS1 foi revogada a **18 de outubro de 2024**. [^1]
 
 No espírito da NIS2, não chega “ter controlos”; é preciso demonstrar **capacidade operacional** e **responsabilização da gestão**. O SbD-ToE, construído **top-down** e atento a múltiplas referências, encaixa naturalmente neste ethos: entrega **processos, políticas e artefactos técnicos** reutilizáveis, deixando propositadamente algumas variáveis em aberto para preservar a **universalidade** do manual.
 
@@ -21,7 +21,7 @@ No espírito da NIS2, não chega “ter controlos”; é preciso demonstrar **ca
 A NIS2 coloca o **órgão de gestão** no centro: ele **aprova** as medidas de gestão de risco de cibersegurança, **supervisiona a execução** e **pode ser responsabilizado** por incumprimentos. Exige ainda **formação** regular para a gestão. [^2]
 
 **O que o SbD-ToE já cobre por omissão**  
-- Prescreve **políticas** e **papéis** (Cap. 02 — Requisitos; Cap. 14 — Governança e Contratação).  
+- Prescreve **políticas** e **papéis** (Cap. 02 - Requisitos; Cap. 14 - Governança e Contratação).  
 - Define **ciclos de aprovação** e **monitorização** (com métricas e evidências operacionais).  
 
 **O que deixa em aberto (deliberadamente)**  
@@ -36,7 +36,7 @@ A NIS2 coloca o **órgão de gestão** no centro: ele **aprova** as medidas de g
 
 O Art. 21 pede um conjunto **mínimo** de medidas, num **all-hazards approach**: políticas de análise de risco e segurança, **gestão de incidentes**, **continuidade/crise** (backups, DR), **segurança da cadeia de fornecimento**, **segurança em aquisição/desenvolvimento/manutenção**, **avaliação da eficácia dos controlos**, **higiene cibernética/treino**, **IAM**, **criptografia**, **gestão de vulnerabilidades/patching**, **logging e monitorização**, entre outras. [^5]
 
-Em 2024/2025, a Comissão e a ENISA publicaram **orientações técnicas** e mapeamentos práticos com **exemplos de evidência** para implementar estas medidas — utilíssimos para auditoria. [^6]
+Em 2024/2025, a Comissão e a ENISA publicaram **orientações técnicas** e mapeamentos práticos com **exemplos de evidência** para implementar estas medidas - utilíssimos para auditoria. [^6]
 
 **O que o SbD-ToE já cobre por omissão**  
 - **Políticas e controlos técnicos** (Cap. 02).  
@@ -122,38 +122,38 @@ Em termos sancionatórios, a Diretiva estabelece patamares que os Estados-Membro
 
 ---
 
-## Conclusão — calor, rigor e pragmatismo
+## Conclusão - calor, rigor e pragmatismo
 
 A NIS2 pede **gestão** com responsabilidade, **medidas** com substância e **reportes** com prazos. O SbD-ToE oferece o **coração técnico-operacional**: políticas, processos, testes, inventários, automação e evidências.  
-As aparentes lacunas do manual — **quem aprova** políticas, **campos** rígidos de logs/incidentes, **templates** e **formatos** de submissão, **pormenores jurídicos** de contratos — são **lacunas deliberadas**: **detalhes específicos** que mudam entre normas e países e que, por isso, o SbD-ToE deixa **configuráveis**.
+As aparentes lacunas do manual - **quem aprova** políticas, **campos** rígidos de logs/incidentes, **templates** e **formatos** de submissão, **pormenores jurídicos** de contratos - são **lacunas deliberadas**: **detalhes específicos** que mudam entre normas e países e que, por isso, o SbD-ToE deixa **configuráveis**.
 
 O resultado é elegante:  
 - **Hoje**, o SbD-ToE permite a qualquer equipa **praticar segurança por desenho** com qualidade.  
-- **Amanhã**, quando a organização quiser **cumprir NIS2**, basta **ligar** os detalhes — aprovação pelo board (Art. 20), campos e prazos de incidente (Art. 23), mapeamento das medidas (Art. 21) e, quando necessário, requisitos nacionais. [^20]
+- **Amanhã**, quando a organização quiser **cumprir NIS2**, basta **ligar** os detalhes - aprovação pelo board (Art. 20), campos e prazos de incidente (Art. 23), mapeamento das medidas (Art. 21) e, quando necessário, requisitos nacionais. [^20]
 
-Assim, o SbD-ToE mantém-se **universal e quente na prática diária**, e a NIS2 acrescenta a **camada de formalidade e supervisão**. Juntos, constroem uma **conformidade sustentável** — não por check-box, mas **por construção**.
+Assim, o SbD-ToE mantém-se **universal e quente na prática diária**, e a NIS2 acrescenta a **camada de formalidade e supervisão**. Juntos, constroem uma **conformidade sustentável** - não por check-box, mas **por construção**.
 
 ---
 
 ## Referências
 
-[^1]: Diretiva (UE) 2022/2555 (“NIS2”), prazos de transposição e revogação da NIS1 (Art. 41 e 44). Texto oficial: EUR-Lex — *eli/dir/2022/2555/oj*.  
-[^2]: NIS2, Art. 20 — Responsabilidade do órgão de gestão e obrigação de formação.  
-[^3]: NIS2, Art. 20 — Aprovação ao nível do órgão de gestão.  
-[^4]: NIS2, Art. 20(2) — Formação periódica da gestão.  
-[^5]: NIS2, Art. 21 — Medidas mínimas de gestão de risco (abordagem “all-hazards”).  
-[^6]: ENISA & Comissão Europeia (2024/2025) — Orientações técnicas e mapeamentos práticos com exemplos de evidência para Art. 21.  
-[^7]: ENISA — Notas de implementação: variação setorial/nacional de taxonomias e formatos.  
-[^8]: ENISA — *Technical implementation guidance for NIS2 risk-management measures* (exemplos de evidência e mapeamentos).  
-[^9]: NIS2, Art. 23 — Prazos de reporte de incidentes (24h/72h/1 mês) e relatórios intermédios.  
-[^10]: NIS2, Art. 23 — Conteúdos mínimos; especificação final por autoridade nacional/sectorial.  
-[^11]: ENISA — Campos recomendados para registo de incidentes e exemplos de evidência (schema parametrizável).  
-[^12]: NIS2, Art. 23 — Cumprimento de prazos operacionais com exportadores SIEM/ITSM.  
-[^13]: NIS2, Art. 21 — Segurança da cadeia de fornecimento; requisitos em aquisição/desenvolvimento/manutenção.  
-[^14]: Autoridades nacionais NIS2 — Guias/portais de registo e requisitos locais (exemplos: NCSC nacionais).  
-[^15]: NIS2, Art. 21 — Continuidade/gestão de crise, backups/DR, logging/monitorização.  
-[^16]: ENISA — Alinhamento de retenções e conteúdos de log com regimes NIS2/DORA/setoriais.  
-[^17]: ENISA — Matriz de fontes de log/observabilidade e *examples of evidence*.  
-[^18]: NIS2 — Âmbito setorial (Anexos I/II) e distinção entre “essenciais” e “importantes”.  
-[^19]: NIS2, Art. 34 — Sanções administrativas máximas (10 M€ ou 2%; 7 M€ ou 1,4%).  
+[^1]: Diretiva (UE) 2022/2555 (“NIS2”), prazos de transposição e revogação da NIS1 (Art. 41 e 44). Texto oficial: EUR-Lex - *eli/dir/2022/2555/oj*.  
+[^2]: NIS2, Art. 20 - Responsabilidade do órgão de gestão e obrigação de formação.  
+[^3]: NIS2, Art. 20 - Aprovação ao nível do órgão de gestão.  
+[^4]: NIS2, Art. 20(2) - Formação periódica da gestão.  
+[^5]: NIS2, Art. 21 - Medidas mínimas de gestão de risco (abordagem “all-hazards”).  
+[^6]: ENISA & Comissão Europeia (2024/2025) - Orientações técnicas e mapeamentos práticos com exemplos de evidência para Art. 21.  
+[^7]: ENISA - Notas de implementação: variação setorial/nacional de taxonomias e formatos.  
+[^8]: ENISA - *Technical implementation guidance for NIS2 risk-management measures* (exemplos de evidência e mapeamentos).  
+[^9]: NIS2, Art. 23 - Prazos de reporte de incidentes (24h/72h/1 mês) e relatórios intermédios.  
+[^10]: NIS2, Art. 23 - Conteúdos mínimos; especificação final por autoridade nacional/sectorial.  
+[^11]: ENISA - Campos recomendados para registo de incidentes e exemplos de evidência (schema parametrizável).  
+[^12]: NIS2, Art. 23 - Cumprimento de prazos operacionais com exportadores SIEM/ITSM.  
+[^13]: NIS2, Art. 21 - Segurança da cadeia de fornecimento; requisitos em aquisição/desenvolvimento/manutenção.  
+[^14]: Autoridades nacionais NIS2 - Guias/portais de registo e requisitos locais (exemplos: NCSC nacionais).  
+[^15]: NIS2, Art. 21 - Continuidade/gestão de crise, backups/DR, logging/monitorização.  
+[^16]: ENISA - Alinhamento de retenções e conteúdos de log com regimes NIS2/DORA/setoriais.  
+[^17]: ENISA - Matriz de fontes de log/observabilidade e *examples of evidence*.  
+[^18]: NIS2 - Âmbito setorial (Anexos I/II) e distinção entre “essenciais” e “importantes”.  
+[^19]: NIS2, Art. 34 - Sanções administrativas máximas (10 M€ ou 2%; 7 M€ ou 1,4%).  
 [^20]: Síntese de governação (Art. 20), medidas (Art. 21) e reporte (Art. 23) com apoio das orientações ENISA.

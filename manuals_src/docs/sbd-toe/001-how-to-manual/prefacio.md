@@ -1,6 +1,6 @@
 # Prefácio
 
-Este manual nasce da necessidade de tornar a segurança aplicacional acessível, prática e exequível para qualquer organização — independentemente da sua dimensão, orçamento ou contexto tecnológico. O seu desenvolvimento baseou-se numa análise aprofundada das principais frameworks internacionais, como OWASP SAMM, BSIMM, SLSA, NIST SSDF, CIS Controls, ISO/IEC 27001/27034, entre outras, bem como dos normativos europeus mais recentes (NIS2, DORA).
+Este manual nasce da necessidade de tornar a segurança aplicacional acessível, prática e exequível para qualquer organização - independentemente da sua dimensão, orçamento ou contexto tecnológico. O seu desenvolvimento baseou-se numa análise aprofundada das principais frameworks internacionais, como OWASP SAMM, BSIMM, SLSA, NIST SSDF, CIS Controls, ISO/IEC 27001/27034, entre outras, bem como dos normativos europeus mais recentes (NIS2, DORA).
 
 A equipa responsável analisou criticamente estas referências, identificando pontos comuns, lacunas e oportunidades de simplificação. O resultado é uma compilação de “receitas” e práticas prescritivas, pensadas para serem:
 

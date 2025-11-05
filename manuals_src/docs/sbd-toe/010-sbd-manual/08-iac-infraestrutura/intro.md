@@ -38,7 +38,7 @@ Estes capítulos traduzem as prescrições basilares em práticas de **execuçã
 A definição de infraestruturas através de código (Terraform, Pulumi, CloudFormation, etc.) tornou-se prática comum.  
 Esta abordagem trouxe ganhos claros de rapidez, consistência e escalabilidade. Mas, como qualquer tecnologia transformadora, trouxe também **novos riscos**: erros de configuração, permissões excessivas, uso de módulos maliciosos ou ambientes mal segregados.  
 
-Este capítulo prescreve como **tratar o IaC como software crítico** — com requisitos, testes, ciclo de vida e auditoria.  
+Este capítulo prescreve como **tratar o IaC como software crítico** - com requisitos, testes, ciclo de vida e auditoria.  
 A ideia central é simples: se o IaC define a base onde o software corre, então **a sua segurança determina a segurança de tudo o resto**.
 
 ---
@@ -76,7 +76,7 @@ Para transformar recomendações em práticas de engenharia aplicáveis, a organ
 ## ⚙️ Como deve ser feito
 
 A execução depende de ferramentas práticas e da sua integração disciplinada em pipelines.  
-Não basta confiar na experiência da equipa — é preciso **automatizar e auditar**:
+Não basta confiar na experiência da equipa - é preciso **automatizar e auditar**:
 
 - Ferramentas de scanning: `tfsec`, `checkov`, `kics`, `terrascan`  
 - Enforcement: `OPA`, `Sentinel`, `Conftest`  

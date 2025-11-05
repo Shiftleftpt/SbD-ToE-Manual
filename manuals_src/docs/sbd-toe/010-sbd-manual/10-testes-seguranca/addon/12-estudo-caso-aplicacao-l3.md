@@ -1,6 +1,6 @@
 ---
 id: estudo-caso
-title: Caso de Estudo — Validação Contínua de Segurança numa Aplicação Crítica
+title: Caso de Estudo - Validação Contínua de Segurança numa Aplicação Crítica
 description: Exemplo prático da aplicação das práticas de testes de segurança a uma aplicação classificada como L3, com integração completa no pipeline e gestão de findings.
 tags: [estudo de caso, testes, segurança, integração, devsecops, aplicação crítica]
 sidebar_position: 12
@@ -19,8 +19,8 @@ Durante o desenvolvimento, os programadores utilizaram:
 
 * **GenIA copilotos com regras personalizadas de segurança**;
 * **Linters e SAST locais (ex: Semgrep customizado)** diretamente integrados no IDE;
-* **Templates de stories e critérios de aceitação com segurança embutida** (ver Cap. 02 — Requisitos de Segurança);
-* **Ambiente isolado com DevContainers e scanners preventivos** (ver Cap. 09 — *containers* e Execução Isolada).
+* **Templates de stories e critérios de aceitação com segurança embutida** (ver Cap. 02 - Requisitos de Segurança);
+* **Ambiente isolado com DevContainers e scanners preventivos** (ver Cap. 09 - *containers* e Execução Isolada).
 
 Resultado: ao submeter um Pull Request, a maior parte dos problemas triviais já tinha sido eliminada.
 
@@ -32,7 +32,7 @@ No momento do PR, são ativados:
 
 * **SAST completo via Checkmarx**;
 * **Linters de conformidade (YAML, JSON, infra)**;
-* **Verificação de dependências com Xygeni e SBOMs geradas** (ver Cap. 05 — SBOM e SCA);
+* **Verificação de dependências com Xygeni e SBOMs geradas** (ver Cap. 05 - SBOM e SCA);
 * **Integração de feedback automático no PR** (via GitHub + comentários inline).
 
 Critérios de bloqueio configurados (Cap. 10 `addon/01`, `addon/02`, `addon/04`):
@@ -124,4 +124,4 @@ Esta narrativa demonstra a **aplicação prática do modelo SbD-ToE de forma int
 * Integração de ferramentas líderes (Checkmarx, Xygeni, DefectDojo);
 * Cultura de segurança sustentada por processos, políticas e automatização.
 
-> 📌 Cada passo da história corresponde a uma ou mais prescrições explícitas do manual, validando que o SbD-ToE é exequível, auditável e eficaz — mesmo em contextos de elevada exigência.
+> 📌 Cada passo da história corresponde a uma ou mais prescrições explícitas do manual, validando que o SbD-ToE é exequível, auditável e eficaz - mesmo em contextos de elevada exigência.

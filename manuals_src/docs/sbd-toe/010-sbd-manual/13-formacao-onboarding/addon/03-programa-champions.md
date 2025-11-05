@@ -23,7 +23,7 @@ Estabelecer um programa estruturado de **Security Champions** para:
 
 Um **Security Champion** é um elemento técnico da equipa que atua como **multiplicador local da segurança**, com tempo alocado e apoio da liderança. É referência prática, facilitador de boas decisões e ligação entre o ideal e o contexto real.
 
-> 🎯 São o elo entre os princípios e a prática — com impacto técnico e cultural visível.
+> 🎯 São o elo entre os princípios e a prática - com impacto técnico e cultural visível.
 
 ---
 

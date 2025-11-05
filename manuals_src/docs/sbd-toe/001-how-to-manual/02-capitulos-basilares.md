@@ -12,9 +12,9 @@ O manual *Security by Design – Theory of Everything (SbD-ToE)* organiza os seu
 
 Cada agrupamento representa um **nível distinto de responsabilidade** no ciclo de vida e governação da segurança de software:
 
-- **🧱 Capítulos Basilares** — fundação técnica e metodológica  
-- **⚙️ Capítulos Operacionais** — execução e automatização das práticas  
-- **🏛️ Capítulos Organizacionais** — governação, capacitação e sustentabilidade
+- **🧱 Capítulos Basilares** - fundação técnica e metodológica  
+- **⚙️ Capítulos Operacionais** - execução e automatização das práticas  
+- **🏛️ Capítulos Organizacionais** - governação, capacitação e sustentabilidade
 
 ---
 
@@ -73,7 +73,7 @@ Asseguram que as práticas se tornam parte da cultura e governação da organiza
 
 | Tipo | Função | Dependência | Resultado |
 |------|---------|--------------|------------|
-| 🧱 **Basilares** | Definem o *quê* e o *porquê* da segurança | — | Fundamento técnico e metodológico |
+| 🧱 **Basilares** | Definem o *quê* e o *porquê* da segurança | - | Fundamento técnico e metodológico |
 | ⚙️ **Operacionais** | Definem o *como fazer* | Dependem dos basilares | Execução verificável e automatizada |
 | 🏛️ **Organizacionais** | Definem o *quem* e o *como governar* | Dependem dos dois anteriores | Sustentação e melhoria contínua |
 
@@ -92,8 +92,8 @@ Asseguram que as práticas se tornam parte da cultura e governação da organiza
 
 A aplicação bem-sucedida do SbD-ToE requer equilíbrio entre os três níveis:
 
-> 🧱 **Basilares** — criam o alicerce  
-> ⚙️ **Operacionais** — executam o ciclo de segurança  
-> 🏛️ **Organizacionais** — garantem continuidade e governação  
+> 🧱 **Basilares** - criam o alicerce  
+> ⚙️ **Operacionais** - executam o ciclo de segurança  
+> 🏛️ **Organizacionais** - garantem continuidade e governação  
 
 Juntos, formam a estrutura completa do *Security by Design – Theory of Everything*, onde **a segurança é construída por design e sustentada por cultura**.

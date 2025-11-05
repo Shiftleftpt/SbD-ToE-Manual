@@ -33,7 +33,7 @@ A estrutura dos 20 temas foi desenvolvida com base nas seguintes motivações:
 - **Clareza funcional**: os temas são nomeados para que qualquer equipa técnica consiga perceber rapidamente a que se referem;
 - **Proporcionalidade ao risco**: todos os requisitos são classificáveis por níveis de risco da aplicação (L1, L2, L3), o que permite a sua aplicação proporcional;
 - **Alinhamento com práticas reais**: os agrupamentos refletem a forma como as organizações estruturam equipas, processos e ferramentas;
-- **Cobertura de lacunas identificadas**: áreas como *Threat Modeling*, *SBOM/SCA*, *CI/CD seguro*, *Testes de segurança* e *Governança* são pouco ou mal cobertas em frameworks como o ASVS, mas essenciais na prática — por isso, são tratadas como temas autónomos.
+- **Cobertura de lacunas identificadas**: áreas como *Threat Modeling*, *SBOM/SCA*, *CI/CD seguro*, *Testes de segurança* e *Governança* são pouco ou mal cobertas em frameworks como o ASVS, mas essenciais na prática - por isso, são tratadas como temas autónomos.
 
 ### 🧷 Ligação aos Capítulos do Manual
 

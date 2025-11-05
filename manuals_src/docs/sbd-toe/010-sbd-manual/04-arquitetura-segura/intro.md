@@ -106,7 +106,7 @@ Cobre diferentes estilos arquiteturais:
 
 ## ⚠️ 3. Caveats ou limitações da prescrição
 
-- Nem todos os controlos podem ser aplicados a todas as arquiteturas — o modelo deve ser adaptado.
+- Nem todos os controlos podem ser aplicados a todas as arquiteturas - o modelo deve ser adaptado.
 - Modelos inconsistentes, incompletos ou desatualizados **geram risco não rastreável**.
 - Threat modeling sem arquitetura clara **é ineficaz**.
 - Exceções não documentadas **invalidam a rastreabilidade e o controlo de risco residual**.

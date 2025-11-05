@@ -5,7 +5,7 @@ sidebar_position: 10
 tags: [canon, maturidade, SAMM, BSIMM, SSDF, SLSA, DSOMM]
 ---
 
-# 📈 Maturidade — Arquitetura Segura
+# 📈 Maturidade - Arquitetura Segura
 
 Este documento estabelece o **grau de alinhamento entre as práticas descritas no Capítulo 04** do manual SbD-ToE e os requisitos das principais frameworks de segurança e maturidade:
 

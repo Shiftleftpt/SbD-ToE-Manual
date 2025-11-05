@@ -5,7 +5,7 @@ sidebar_position: 25
 tags: [canon, rastreabilidade, frameworks, alinhamento]
 ---
 
-# 📎 Rastreabilidade contra Frameworks — Capítulo 01: Classificação do Risco
+# 📎 Rastreabilidade contra Frameworks - Capítulo 01: Classificação do Risco
 
 Este ficheiro estabelece a **rastreabilidade entre as práticas de classificação do risco prescritas neste capítulo** e os requisitos dos principais frameworks de segurança, governação e gestão do ciclo de vida aplicacional.
 
@@ -99,9 +99,9 @@ Cobre integralmente:
 
 O Capítulo 01 é a base de aplicação proporcional dos restantes:
 
-- Capítulo 02 — seleção de requisitos baseada no nível de risco;
-- Capítulo 03 — exigência de threat modeling consoante criticidade;
-- Capítulo 05 a 14 — aplicação seletiva de práticas com base em L1–L3;
-- Capítulo 13 / 14 — exceções, aceitação formal e rastreabilidade organizacional.
+- Capítulo 02 - seleção de requisitos baseada no nível de risco;
+- Capítulo 03 - exigência de threat modeling consoante criticidade;
+- Capítulo 05 a 14 - aplicação seletiva de práticas com base em L1–L3;
+- Capítulo 13 / 14 - exceções, aceitação formal e rastreabilidade organizacional.
 
 > 📌 Esta rastreabilidade comprova que a classificação do risco no SbD-ToE é **o mecanismo central de governação e proporcionalidade**, assegurando segurança com eficiência operacional e cobertura normativa.

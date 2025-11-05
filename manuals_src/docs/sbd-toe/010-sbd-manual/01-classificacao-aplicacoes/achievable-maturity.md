@@ -4,7 +4,7 @@ title: Mapeamento de Maturidade – Capítulo 01
 tags: [canon, maturidade, SAMM, SSDF, BSIMM, DSOMM]
 ---
 
-# 📈 Maturidade — Classificação da Criticidade Aplicacional
+# 📈 Maturidade - Classificação da Criticidade Aplicacional
 
 Este documento estabelece o **grau de alinhamento entre as práticas descritas no Capítulo 01** do manual SbD-ToE e os requisitos de frameworks reconhecidas: **OWASP SAMM**, **BSIMM**, **NIST SSDF**, **SLSA** e **OWASP DSOMM**.
 

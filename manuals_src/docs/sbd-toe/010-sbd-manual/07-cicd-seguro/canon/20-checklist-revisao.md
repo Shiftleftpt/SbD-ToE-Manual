@@ -10,7 +10,7 @@ sidebar_position: 20
 
 # ✅ Checklist de Revisão Periódica de CI/CD Seguro
 
-Este checklist aplica-se a todas as aplicações com pipelines de integração e entrega contínua, avaliadas segundo os critérios do **Capítulo 07 — CI/CD Seguro**.  
+Este checklist aplica-se a todas as aplicações com pipelines de integração e entrega contínua, avaliadas segundo os critérios do **Capítulo 07 - CI/CD Seguro**.  
 Serve como instrumento de verificação e auditoria da **conformidade com os controlos mínimos prescritos para segurança de pipelines, artefactos, segredos e ambientes de execução**.
 
 Pode ser usado:

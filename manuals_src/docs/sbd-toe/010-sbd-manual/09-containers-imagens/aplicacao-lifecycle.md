@@ -5,7 +5,7 @@ description: Como aplicar as práticas prescritas de segurança em containers ao
 tags: [containers, imagens, segurança, isolamento, ciclo-de-vida, sbom, supply-chain]
 ---
 
-# ⚙️ Aplicação ao Ciclo de Vida — Containers e Execução Isolada
+# ⚙️ Aplicação ao Ciclo de Vida - Containers e Execução Isolada
 
 Garantir a segurança de *containers* não é apenas uma preocupação de runtime: envolve decisões desde a seleção da imagem base até ao modo como estas imagens são executadas, monitorizadas e auditadas.  
 Este capítulo mostra, de forma prescritiva e integrada, como aplicar controlos técnicos e de governação em cada fase do ciclo de vida.
@@ -556,7 +556,7 @@ Como **DevOps**, quero que builders e runners sejam mínimos, ephemerais e assin
 
 ## 📦 Artefactos esperados
 
-Cada prática deixa uma pegada verificável — os artefactos.  
+Cada prática deixa uma pegada verificável - os artefactos.  
 Sem eles, não há como provar conformidade nem realizar auditorias eficazes.  
 A tabela seguinte consolida os principais outputs que devem estar presentes em qualquer projeto containerizado.
 
@@ -608,7 +608,7 @@ Mais importante do que aplicar controlos dispersos é garantir que estão integr
 
 - Containers devem ser tratados como **artefactos de software completos**, com SBOM, proveniência e políticas de execução.  
 - A integração de scanners e linters em CI/CD é **não-negociável** em ambientes modernos.  
-- A assinatura e proveniência (SLSA, Sigstore) são práticas em rápida adoção — devem ser incluídas já em novos projetos.  
+- A assinatura e proveniência (SLSA, Sigstore) são práticas em rápida adoção - devem ser incluídas já em novos projetos.  
 - Monitorização de runtime não substitui políticas preventivas: **prevenção + deteção** devem coexistir.  
 - A governação deve incluir métricas claras: % imagens assinadas, % pipelines com scanners ativos, % incidentes detetados/resolvidos.  
 - **Padroniza a segurança** com *golden base images* e **allowlist**; reforça pipeline com **builders ephemerais** e assinados.  

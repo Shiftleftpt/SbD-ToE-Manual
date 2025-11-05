@@ -7,9 +7,9 @@ tags: [policy, organizacional, governance, excecoes, fornecedores, contratacao]
 ---
 
 
-# 🏩️ Políticas Organizacionais — Governança e Contratação
+# 🏩️ Políticas Organizacionais - Governança e Contratação
 
-A adoção eficaz do Capítulo 14 — Governança e Contratação — exige a existência de **políticas organizacionais formais** que **legitimem decisões de risco, exceções, onboarding de terceiros e exigências contratuais de segurança**.
+A adoção eficaz do Capítulo 14 - Governança e Contratação - exige a existência de **políticas organizacionais formais** que **legitimem decisões de risco, exceções, onboarding de terceiros e exigências contratuais de segurança**.
 
 ---
 

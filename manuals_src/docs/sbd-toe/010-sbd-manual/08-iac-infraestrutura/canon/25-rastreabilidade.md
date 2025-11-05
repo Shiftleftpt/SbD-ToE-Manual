@@ -1,12 +1,12 @@
 ---
 id: rastreabilidade
-title: Rastreabilidade — Infraestrutura como Código (IaC)
+title: Rastreabilidade - Infraestrutura como Código (IaC)
 sidebar_position: 25
 description: Mapeamento entre as práticas de segurança prescritas no capítulo e os requisitos de frameworks e normas reconhecidas.
 tags: [rastreabilidade, normas, frameworks, iac, infraestrutura como código]
 ---
 
-# 📎 Rastreabilidade contra Frameworks — Capítulo 08: IaC e Infraestrutura como Código
+# 📎 Rastreabilidade contra Frameworks - Capítulo 08: IaC e Infraestrutura como Código
 
 Este ficheiro estabelece a **rastreabilidade entre as práticas prescritas neste capítulo** e os requisitos dos principais frameworks e normas de segurança associados à definição, controlo e governação segura de infraestrutura como código (IaC).
 
@@ -116,10 +116,10 @@ O Capítulo 08 cobre diretamente os subdomínios de **Design & Development** e *
 
 Este capítulo complementa e depende de:
 
-- **Capítulo 01 — Classificação de Risco**: define a exigência proporcional de validação para ambientes e infraestrutura;
-- **Capítulo 02 — Requisitos de Segurança**: define os requisitos `IAC-XXX`, validados pelas práticas deste capítulo;
-- **Capítulo 07 — Pipelines CI/CD**: onde os controlos deste capítulo são aplicados e orquestrados;
-- **Capítulo 09 — Containers**: que dependem diretamente da infraestrutura provisionada para garantir isolamento e segurança;
-- **Capítulo 14 — Governação e Exceções Técnicas**: que legitima as práticas de aceitação e rastreabilidade descritas em `addon/09`.
+- **Capítulo 01 - Classificação de Risco**: define a exigência proporcional de validação para ambientes e infraestrutura;
+- **Capítulo 02 - Requisitos de Segurança**: define os requisitos `IAC-XXX`, validados pelas práticas deste capítulo;
+- **Capítulo 07 - Pipelines CI/CD**: onde os controlos deste capítulo são aplicados e orquestrados;
+- **Capítulo 09 - Containers**: que dependem diretamente da infraestrutura provisionada para garantir isolamento e segurança;
+- **Capítulo 14 - Governação e Exceções Técnicas**: que legitima as práticas de aceitação e rastreabilidade descritas em `addon/09`.
 
 > 📌 Esta rastreabilidade comprova que o Capítulo 08 **opera como camada crítica de enforcement de segurança no ciclo de vida da infraestrutura**, garantindo que ambientes são definidos, auditados, testados e aplicados com controlo técnico e organizacional.

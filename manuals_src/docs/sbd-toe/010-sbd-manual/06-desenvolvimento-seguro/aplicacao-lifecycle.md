@@ -6,7 +6,7 @@ tags: [desenvolvimento, ciclo-de-vida, codificação-segura, validação, user-s
 sidebar_position: 15
 ---
 
-# ⚙️ Aplicação no Ciclo de Vida — Desenvolvimento Seguro
+# ⚙️ Aplicação no Ciclo de Vida - Desenvolvimento Seguro
 
 O desenvolvimento seguro não é um exercício teórico ou uma “boa prática” vaga: exige aplicação consistente em cada fase do ciclo de vida do software.  
 Neste documento mostramos **como transformar as prescrições do capítulo em prática diária**, detalhando quando aplicar, quem executa, que user stories devem entrar no backlog e quais as evidências que permitem auditoria e governação.  
@@ -46,7 +46,7 @@ A tabela seguinte explicita estas responsabilidades.
 ---
 
 ## 📖 User Stories reutilizáveis
-### US-01 — Guidelines de Desenvolvimento Seguro
+### US-01 - Guidelines de Desenvolvimento Seguro
 
 **Contexto.**  
 Guidelines claras e versionadas por *stack* evitam decisões ad-hoc e asseguram consistência. Mais do que um documento estático, são um **mecanismo vivo** de governação: atualizadas, revistas e aplicadas diariamente. A existência de *rulesets* derivadas de linters e analisadores automáticos, com *tailoring* documentado, reduz significativamente riscos de interpretação subjetiva.
@@ -97,7 +97,7 @@ xref:sbd-toe:cap06:intro
 
 ---
 
-### US-02 — Revisão de Código Segura
+### US-02 - Revisão de Código Segura
 
 **Contexto.**  
 Revisões de código não são apenas uma prática de qualidade, mas um **ponto de controlo de segurança**. Quando sistematizadas com checklist, previnem vulnerabilidades, promovem partilha de conhecimento e criam registo formal de conformidade.
@@ -145,7 +145,7 @@ xref:sbd-toe:cap06:intro
 
 ---
 
-### US-03 — Gestão de Dependências no Código
+### US-03 - Gestão de Dependências no Código
 
 **Contexto.**  
 Cada dependência externa adicionada ao projeto é uma potencial porta de entrada para riscos de cadeia de fornecimento. A gestão rigorosa destas dependências garante que não se introduz software obsoleto, vulnerável ou malicioso.
@@ -153,7 +153,7 @@ Cada dependência externa adicionada ao projeto é uma potencial porta de entrad
 **📖 Rationale científico.**  
 Relacionada com **SSDF PW.4**, **SAMM Implementation**, e **BSIMM CMVM1.1**.  
 Mitiga riscos como **CWE-829 (Use of Untrusted Components)** e ataques de *dependency confusion*.  
-Segundo o **Sonatype 2023 Supply Chain Report**, 1 em cada 10 pacotes descarregados contém uma vulnerabilidade crítica — prova da necessidade de validação formal e contínua.
+Segundo o **Sonatype 2023 Supply Chain Report**, 1 em cada 10 pacotes descarregados contém uma vulnerabilidade crítica - prova da necessidade de validação formal e contínua.
 
 :::userstory
 **História.**   
@@ -193,7 +193,7 @@ xref:sbd-toe:cap05:intro
 
 ---
 
-### US-04 — Automatização em CI/CD (Linters & SAST)
+### US-04 - Automatização em CI/CD (Linters & SAST)
 
 **Contexto.**  
 A automatização de validações em pipelines CI/CD garante consistência, acelera a deteção de falhas e cria evidência contínua. Automatizar significa **remover o fator humano de distração ou esquecimento** em controlos repetitivos.
@@ -240,10 +240,10 @@ Como **DevSecOps**, quero integrar linters e SAST no pipeline, para detetar falh
 xref:sbd-toe:cap07:intro
 
 ---
-### US-05 — Gestão de Exceções Técnicas
+### US-05 - Gestão de Exceções Técnicas
 
 **Contexto.**  
-Nem sempre todos os controlos podem ser aplicados em tempo útil. É inevitável lidar com exceções técnicas — mas se estas não forem **formalmente registadas, aprovadas e temporárias**, tornam-se dívida de risco e criam vulnerabilidades persistentes.
+Nem sempre todos os controlos podem ser aplicados em tempo útil. É inevitável lidar com exceções técnicas - mas se estas não forem **formalmente registadas, aprovadas e temporárias**, tornam-se dívida de risco e criam vulnerabilidades persistentes.
 
 **📖 Rationale científico.**  
 Baseado em **SSDF RV.1** (gestão de exceções), **SAMM Governance/Policy**, e **BSIMM CP1.2**.  
@@ -288,7 +288,7 @@ xref:sbd-toe:cap02:intro
 
 ---
 
-### US-06 — Uso Validado de GenIA
+### US-06 - Uso Validado de GenIA
 
 **Contexto.**  
 Ferramentas de IA generativa (GenIA) aceleram a escrita de código, mas podem introduzir **vulnerabilidades ou violações de licença**. O seu uso deve ser rastreável, validado e sempre sujeito a revisão técnica humana.
@@ -336,7 +336,7 @@ xref:sbd-toe:cap06:intro
 
 ---
 
-### US-07 — Governação e Curadoria de Guidelines
+### US-07 - Governação e Curadoria de Guidelines
 
 **Contexto.**  
 Sem governação ativa, guidelines estagnam e perdem relevância. A curadoria regular e a delegação de validação a linters com *rulesets* curados garantem adoção prática e atualizada.
@@ -385,7 +385,7 @@ xref:sbd-toe:cap06:intro
 
 ---
 
-### US-08 — Rastreabilidade com Anotações de Segurança
+### US-08 - Rastreabilidade com Anotações de Segurança
 
 **Contexto.**  
 Validações de segurança devem ser rastreáveis até aos requisitos originais. Anotações padronizadas (`@sec:*`) no código e nos testes permitem **ligar implementação, requisitos e evidência de auditoria** de forma inequívoca.
@@ -434,7 +434,7 @@ xref:sbd-toe:cap06:intro
 ---
 ## 📦 Artefactos esperados
 
-A aplicação prática do desenvolvimento seguro deixa sempre **pegadas objetivas** — ficheiros, relatórios e registos que podem ser auditados.  
+A aplicação prática do desenvolvimento seguro deixa sempre **pegadas objetivas** - ficheiros, relatórios e registos que podem ser auditados.  
 Sem evidência, não existe conformidade. Esta tabela resume os principais artefactos esperados:
 
 | Artefacto               | Evidência auditável                                                |
@@ -473,11 +473,11 @@ O desenvolvimento seguro deve ser visto como **um hábito quotidiano**, não com
 As práticas tornam-se naturais quando estão integradas no fluxo de trabalho e apoiadas por governação clara.  
 
 - **Versionar e publicar guidelines** como artefactos formais (com releases e changelogs), não como “notas avulsas”.  
-- **Automatizar ao máximo** — linters, SAST e scanners eliminam variações manuais e produzem evidência contínua.  
+- **Automatizar ao máximo** - linters, SAST e scanners eliminam variações manuais e produzem evidência contínua.  
 - **Exceções são a exceção**: devem ser raras, temporárias e sempre justificadas.  
 - **GenIA pode ser usada**, mas sob registo e revisão técnica, nunca como substituto de disciplina humana.  
 - **KPIs de adoção** devem ser medidos: % de PRs com checklist aplicada, % de dependências validadas, % de findings resolvidos no SLA.  
 - **Revisão periódica** das práticas garante que regras não se tornam obsoletas.  
 
 Em síntese: o capítulo demonstra que **desenvolvimento seguro é a fundação sobre a qual o resto do ciclo de vida assenta**.  
-Sem ele, nenhuma prática subsequente — seja CI/CD, IaC ou runtime — consegue oferecer confiança total.
+Sem ele, nenhuma prática subsequente - seja CI/CD, IaC ou runtime - consegue oferecer confiança total.

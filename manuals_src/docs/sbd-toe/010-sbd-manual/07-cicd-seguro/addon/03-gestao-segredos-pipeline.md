@@ -55,7 +55,7 @@ Esta prática define os controlos obrigatórios para garantir a **confidencialid
 
 | Nível | Requisitos obrigatórios                              | Requisitos reforçados                                  |
 |-------|--------------------------------------------------------|---------------------------------------------------------|
-| **L1** | Segredos como variáveis seguras; logs protegidos       | —                                                       |
+| **L1** | Segredos como variáveis seguras; logs protegidos       | -                                                       |
 | **L2** | Segregação por ambiente e job; injeção em runtime      | Revogação centralizada; desativação de roaming          |
 | **L3** | Vault externo; rotação automática; segregação fina     | Auditoria de uso; alertas de acesso indevido            |
 

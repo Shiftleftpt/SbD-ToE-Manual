@@ -9,7 +9,7 @@ tags: [ci, cd, devsecops, threat modeling, automação, validação, iriusrisk]
 
 ## 🌟 Objetivo
 
-Definir como garantir — de forma testável e automatizável — que a atividade de *threat modeling*:
+Definir como garantir - de forma testável e automatizável - que a atividade de *threat modeling*:
 
 - Foi realizada e está atualizada;
 - Produziu artefactos rastreáveis e úteis para o projeto;

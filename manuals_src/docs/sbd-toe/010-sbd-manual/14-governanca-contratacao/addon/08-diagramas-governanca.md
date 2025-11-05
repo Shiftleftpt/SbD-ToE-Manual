@@ -9,7 +9,7 @@ tags: [diagramas, excecoes, fluxo, validacao]
 
 # 🗾️ Diagramas de Apoio à Governança
 
-Este anexo inclui diagramas que representam os principais fluxos de decisão, rastreabilidade e validação descritos no Capítulo 14 — Governança e Contratação.
+Este anexo inclui diagramas que representam os principais fluxos de decisão, rastreabilidade e validação descritos no Capítulo 14 - Governança e Contratação.
 
 ---
 
@@ -107,7 +107,7 @@ flowchart TD
   C -- Não --> E[Formação obrigatória antes de validação]
 ```
 
-> 📚 Este fluxo aplica-se a qualquer capítulo que requeira owners, validadores ou aprovadores formais, e deve ser integrado com o Cap. 13 — Formação e Onboarding.
+> 📚 Este fluxo aplica-se a qualquer capítulo que requeira owners, validadores ou aprovadores formais, e deve ser integrado com o Cap. 13 - Formação e Onboarding.
 
 ---
 

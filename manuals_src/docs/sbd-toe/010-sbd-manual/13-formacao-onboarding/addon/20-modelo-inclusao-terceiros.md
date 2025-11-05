@@ -65,6 +65,6 @@ Cada terceiro (indivíduo ou organização) deve cumprir os seguintes pontos **a
 
 ---
 
-> 🔐 Garantir que terceiros estão formados **não é uma cortesia — é uma obrigação de segurança organizacional.**
+> 🔐 Garantir que terceiros estão formados **não é uma cortesia - é uma obrigação de segurança organizacional.**
 >  
 > A aplicação deste modelo contribui diretamente para a redução de riscos de supply chain e exposição por má prática externa.

@@ -9,7 +9,7 @@ tags: [exceções, visibilidade, cicd, governação, auditoria, segurança]
 
 # 🧭 Controlo de exceções e visibilidade organizacional
 
-Mesmo com pipelines bem definidos, é inevitável que ocorram exceções — falhas temporárias, necessidades urgentes, aplicações legadas ou contextos específicos.
+Mesmo com pipelines bem definidos, é inevitável que ocorram exceções - falhas temporárias, necessidades urgentes, aplicações legadas ou contextos específicos.
 
 Esta prática define como gerir **exceções de forma controlada, rastreável e aprovada**, e como garantir **visibilidade organizacional sobre conformidade, desvios e evolução das práticas** no CI/CD.
 

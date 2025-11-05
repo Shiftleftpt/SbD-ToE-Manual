@@ -24,7 +24,7 @@ Definir **quais componentes, funcionalidades e interfaces devem ser testadas**, 
 
 ## 🔍 O que é cobertura e priorização em segurança
 
-**Cobertura** refere-se à percentagem do sistema que é abrangida pelos testes de segurança — incluindo:
+**Cobertura** refere-se à percentagem do sistema que é abrangida pelos testes de segurança - incluindo:
 
 - Código-fonte;
 - APIs e endpoints;
@@ -68,12 +68,12 @@ Definir **quais componentes, funcionalidades e interfaces devem ser testadas**, 
 
 | Documento                       | Relevância estratégica                          |
 |--------------------------------|--------------------------------------------------|
-| Capítulo 01 — Gestão de Risco  | Define critérios de classificação e criticidade |
-| Capítulo 02 — Requisitos       | Define o que deve ser validado e porquê         |
+| Capítulo 01 - Gestão de Risco  | Define critérios de classificação e criticidade |
+| Capítulo 02 - Requisitos       | Define o que deve ser validado e porquê         |
 | `01-sast.md` a `04-fuzzing.md` | Tipos de teste aplicáveis a zonas priorizadas   |
 | `05-validacao-regressao.md`    | Ajuda a definir targets persistentes            |
 | `08-gestao-findings.md`        | Relaciona findings com zonas testadas ou não    |
 
 ---
 
-> 🧩 A cobertura de testes de segurança não é binária — deve ser **contextual, proporcional e orientada ao risco real**. Cobrir o que importa é tão vital quanto testar bem.
+> 🧩 A cobertura de testes de segurança não é binária - deve ser **contextual, proporcional e orientada ao risco real**. Cobrir o que importa é tão vital quanto testar bem.

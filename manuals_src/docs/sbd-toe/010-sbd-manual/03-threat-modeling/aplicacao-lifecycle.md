@@ -269,7 +269,7 @@ Como **DevSecOps**, quero integrar validações de threat modeling no pipeline, 
 **Proporcionalidade por risco.**
 | Nível | Obrigatório? | Ajustes |
 |---|---|---|
-| L1 | Não aplicável | — |
+| L1 | Não aplicável | - |
 | L2 | Sim | Revisão periódica em pipeline |
 | L3 | Sim | Automação obrigatória e bloqueante |
 

@@ -12,7 +12,7 @@ O SbD-ToE fornece **cobertura quase total** das práticas do NIST SSDF. As lacun
 
 A ISO/IEC 27001 define requisitos para Sistemas de Gestão de Segurança da Informação (ISMS), com foco organizacional e baseado em risco. A ISO/IEC 27034 complementa com orientações específicas para segurança de aplicações, incluindo frameworks normativos e controlos reutilizáveis (ONF/ANF).
 
-### 📊 Mapeamento — ISO 27001/27034 vs. SbD-ToE
+### 📊 Mapeamento - ISO 27001/27034 vs. SbD-ToE
 
 *As Tabelas 4 e 5 mantêm-se inalteradas.*
 
@@ -33,7 +33,7 @@ O SbD-ToE oferece **cobertura completa dos requisitos ISO/IEC 27034** e **cobert
 
 O SLSA define níveis (0–3) de integridade da cadeia de fornecimento de software, centrados em proveniência, build seguro, verificação e distribuição confiável.
 
-### 📊 Mapeamento — SLSA vs. SbD-ToE
+### 📊 Mapeamento - SLSA vs. SbD-ToE
 
 *A Tabela 6 mantém-se inalterada.*
 
@@ -55,7 +55,7 @@ O SbD-ToE suporta **conformidade robusta com SLSA níveis 1 e 2**, com fundament
 
 Os CIS Controls são 18 controlos críticos para proteger ativos, dados e software. O Controlo 16 é dedicado à segurança de software aplicacional. Os controlos são organizados por grupos de implementação (IG1–IG3).
 
-### 📊 Mapeamento — CIS Controls vs. SbD-ToE
+### 📊 Mapeamento - CIS Controls vs. SbD-ToE
 
 *A Tabela 7 mantém-se inalterada.*
 
@@ -73,13 +73,13 @@ O SbD-ToE fornece **cobertura completa de todos os controlos CIS relacionados co
 
 ---
 
-## 🔹 ENISA — SDLC & DevSecOps Guidelines
+## 🔹 ENISA - SDLC & DevSecOps Guidelines
 
 ### 🧾 Síntese Técnica
 
 As diretrizes da ENISA descrevem práticas para integrar segurança no ciclo de vida de desenvolvimento e DevOps, incluindo governação, supply chain, automação, testes e operações.
 
-### 📊 Mapeamento — ENISA vs. SbD-ToE
+### 📊 Mapeamento - ENISA vs. SbD-ToE
 
 *A Tabela 8 mantém-se inalterada.*
 

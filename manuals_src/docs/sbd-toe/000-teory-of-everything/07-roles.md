@@ -93,7 +93,7 @@ Atuam como ponto de ligação entre equipas técnicas e governação, assegurand
 - Garantem que a segurança não é ignorada em sprint planning.  
 
 **Contexto regulatório:**  
-Facilitam a criação de uma **cultura de segurança** — elemento previsto tanto em **NIS2** como em **DORA**, que pedem demonstração de formação e sensibilização.
+Facilitam a criação de uma **cultura de segurança** - elemento previsto tanto em **NIS2** como em **DORA**, que pedem demonstração de formação e sensibilização.
 
 ---
 

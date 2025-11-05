@@ -106,4 +106,4 @@ Não obstante permite de forma extremamente rápida, e assente no conhecimento i
 ## 🔗 Ligações úteis
 
 - Modelo alternativo: [Ver adoção de classificações existentes (DRP/BIA)](/sbd-toe/sbd-manual/classificacao-aplicacoes/addon/adopcao-drp-bia) <!-- Precisa revisão manual -->
-- [Ver Capítulo 1 — Gestão de Risco](/sbd-toe/sbd-manual/classificacao-aplicacoes/intro)
+- [Ver Capítulo 1 - Gestão de Risco](/sbd-toe/sbd-manual/classificacao-aplicacoes/intro)

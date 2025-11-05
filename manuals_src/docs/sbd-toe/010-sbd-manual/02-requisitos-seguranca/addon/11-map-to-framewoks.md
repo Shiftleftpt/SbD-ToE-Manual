@@ -38,26 +38,26 @@ Cada célula inclui o(s) identificador(es) do(s) controlo(s), prática(s) ou dom
 
 | # | Tema de Requisito Aplicacional                            | ASVS v5.0 | SAMM v2.1 | BSIMM13 | NIST 800-53 Rev.5 | SLSA v1.0 | CIS v8 |
 |---|------------------------------------------------------------|-----------|-----------|---------|--------------------|-----------|--------|
-| 1 | 🔐 Autenticação e Gestão de Identidade                    | V2        | AA2.1     | AA1.1   | IA-2, IA-5         | —         | 6.2    |
-| 2 | 🧾 Controlo de Acesso                                      | V4        | AA1.2     | AA2.1   | AC-2, AC-3         | —         | 6.1    |
-| 3 | 📈 Registo, Auditoria e Monitorização                      | V10       | OM2.2     | CR2.2   | AU-2, AU-6, AU-12  | —         | 8.2    |
-| 4 | 🧠 Gestão de Sessões                                       | V3        | AA2.2     | AA2.3   | SC-23, AC-12       | —         | 6.3    |
-| 5 | 🔒 Proteção de Dados em Trânsito                          | V9        | CM1.1     | DR3.1   | SC-12, SC-13       | —         | 13.1   |
-| 6 | 🗃️ Proteção de Dados em Repouso                           | V9        | CM1.2     | DR2.1   | SC-28, SC-28(1)    | —         | 3.4    |
-| 7 | 🧾 Validação e Saneamento de Dados                         | V5, V6    | AA1.3     | SR2.3   | SI-10, SI-11       | —         | 10.4   |
-| 8 | 🔍 Tratamento de Erros e Segurança na Comunicação          | V10       | OM1.1     | CR3.2   | SC-7, SI-11        | —         | 8.7    |
-| 9 | 🔐 Criação e Gestão de Credenciais                        | V2, V15   | AA2.1     | AA1.2   | IA-5, IA-6         | —         | 5.1    |
-|10 | 🧰 Configuração Segura                                     | V1, V18   | CM2.2     | CM1.1   | CM-2, CM-6         | —         | 4.3    |
-|11 | 🐞 Tratamento de Vulnerabilidades                          | V1        | PO3.1     | VT1.1   | SI-2, RA-5         | —         | 7.1    |
+| 1 | 🔐 Autenticação e Gestão de Identidade                    | V2        | AA2.1     | AA1.1   | IA-2, IA-5         | -         | 6.2    |
+| 2 | 🧾 Controlo de Acesso                                      | V4        | AA1.2     | AA2.1   | AC-2, AC-3         | -         | 6.1    |
+| 3 | 📈 Registo, Auditoria e Monitorização                      | V10       | OM2.2     | CR2.2   | AU-2, AU-6, AU-12  | -         | 8.2    |
+| 4 | 🧠 Gestão de Sessões                                       | V3        | AA2.2     | AA2.3   | SC-23, AC-12       | -         | 6.3    |
+| 5 | 🔒 Proteção de Dados em Trânsito                          | V9        | CM1.1     | DR3.1   | SC-12, SC-13       | -         | 13.1   |
+| 6 | 🗃️ Proteção de Dados em Repouso                           | V9        | CM1.2     | DR2.1   | SC-28, SC-28(1)    | -         | 3.4    |
+| 7 | 🧾 Validação e Saneamento de Dados                         | V5, V6    | AA1.3     | SR2.3   | SI-10, SI-11       | -         | 10.4   |
+| 8 | 🔍 Tratamento de Erros e Segurança na Comunicação          | V10       | OM1.1     | CR3.2   | SC-7, SI-11        | -         | 8.7    |
+| 9 | 🔐 Criação e Gestão de Credenciais                        | V2, V15   | AA2.1     | AA1.2   | IA-5, IA-6         | -         | 5.1    |
+|10 | 🧰 Configuração Segura                                     | V1, V18   | CM2.2     | CM1.1   | CM-2, CM-6         | -         | 4.3    |
+|11 | 🐞 Tratamento de Vulnerabilidades                          | V1        | PO3.1     | VT1.1   | SI-2, RA-5         | -         | 7.1    |
 |12 | 📦 Gestão de Dependências e SBOM                           | V11       | CM2.1     | SR1.2   | CM-8, CM-8(2)      | L1–L4     | 2.3    |
 |13 | 🔄 CI/CD Seguro                                            | V13       | OE2.3     | CM1.4   | CM-5, AC-19        | L2–L4     | 4.6    |
 |14 | ⚙️ Segurança da Infraestrutura como Código                | V13       | OE2.2     | CM1.3   | CM-6, SC-15        | L2–L4     | 11.4   |
 |15 | 🐳 *containers* e Execução Isolada                          | V14       | OE2.2     | SR1.4   | SC-39, SC-38       | L3–L4     | 5.2    |
-|16 | 🧪 Testes de Segurança (DAST, fuzzing, etc.)               | V7        | TE2.1     | PT1.2   | CA-8, RA-5         | —         | 18.2   |
+|16 | 🧪 Testes de Segurança (DAST, fuzzing, etc.)               | V7        | TE2.1     | PT1.2   | CA-8, RA-5         | -         | 18.2   |
 |17 | 🚀 Deploy Seguro                                           | V1, V15   | OE3.1     | CM1.5   | CM-6, SA-10        | L4        | 4.7    |
-|18 | 📊 Monitorização e Alertas Operacionais                    | V10       | OM2.3     | CR3.3   | AU-6, IR-5         | —         | 8.1    |
-|19 | 👥 Formação, Onboarding e Sensibilização                   | V1        | EDU1.1    | T1.1    | AT-2, AT-3         | —         | 14.2   |
-|20 | 📋 Governança, Revisões e Contratação                      | V1        | PO1.1     | SM1.1   | PM-1, SA-4         | —         | 17.1   |
+|18 | 📊 Monitorização e Alertas Operacionais                    | V10       | OM2.3     | CR3.3   | AU-6, IR-5         | -         | 8.1    |
+|19 | 👥 Formação, Onboarding e Sensibilização                   | V1        | EDU1.1    | T1.1    | AT-2, AT-3         | -         | 14.2   |
+|20 | 📋 Governança, Revisões e Contratação                      | V1        | PO1.1     | SM1.1   | PM-1, SA-4         | -         | 17.1   |
 
 > **Notas**:
 > - Quando aplicável, os níveis do SLSA (L1–L4) são indicados em faixas, pois não existe mapeamento direto 1:1.

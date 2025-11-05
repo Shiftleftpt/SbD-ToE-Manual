@@ -35,7 +35,7 @@ tags: [ciclo de vida, formacao, capacitacao, champions, onboarding, segurança]
 
 ## 📖 User Stories normalizadas
 
-### US-01 — Onboarding seguro obrigatório
+### US-01 - Onboarding seguro obrigatório
 **Contexto.** Novos elementos sem formação introduzem riscos básicos.  
 
 **📖 Rationale.**  
@@ -70,7 +70,7 @@ Como **RH/PeopleOps**, quero **garantir formação obrigatória de onboarding em
 
 ---
 
-### US-02 — Formação contínua por perfil
+### US-02 - Formação contínua por perfil
 **Contexto.** Sem atualização contínua, práticas ficam obsoletas.  
 
 **📖 Rationale.**  
@@ -105,7 +105,7 @@ Como **AppSec**, quero **fornecer formação contínua por perfil (Dev, QA, DevO
 
 ---
 
-### US-03 — Programa de Security Champions
+### US-03 - Programa de Security Champions
 **Contexto.** Sem champions, equipas carecem de liderança interna.  
 
 **📖 Rationale.**  
@@ -140,7 +140,7 @@ Como **Champion**, quero **mentorar e evangelizar a equipa**, para **assegurar a
 
 ---
 
-### US-04 — Exercícios práticos e simulações
+### US-04 - Exercícios práticos e simulações
 **Contexto.** Formação teórica sem prática tem baixa retenção.  
 
 **📖 Rationale.**  
@@ -175,7 +175,7 @@ Como **QA/Testes**, quero **realizar exercícios práticos (labs, CTFs, simulaç
 
 ---
 
-### US-05 — Medição de eficácia da formação
+### US-05 - Medição de eficácia da formação
 **Contexto.** Sem medir eficácia, não há melhoria contínua.  
 
 **📖 Rationale.**  

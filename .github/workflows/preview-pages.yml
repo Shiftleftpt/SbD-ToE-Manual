@@ -1,4 +1,4 @@
-name: Preview (PR) — SbD-ToE
+name: Preview (PR) - SbD-ToE
 
 on:
   pull_request:

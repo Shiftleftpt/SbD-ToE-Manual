@@ -7,9 +7,9 @@ sidebar_position: 60
 ---
 
 
-# 🏠 Políticas Organizacionais — Deploy Seguro
+# 🏠 Políticas Organizacionais - Deploy Seguro
 
-A aplicação consistente e eficaz do Capítulo 11 — **Deploy Seguro** — exige a existência de **políticas organizacionais formais** que regulem as condições técnicas e operacionais para execução de código em produção, com foco em:
+A aplicação consistente e eficaz do Capítulo 11 - **Deploy Seguro** - exige a existência de **políticas organizacionais formais** que regulem as condições técnicas e operacionais para execução de código em produção, com foco em:
 
 - Validação pré-deploy (readiness);
 - Gating e aprovação formal;

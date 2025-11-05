@@ -17,13 +17,13 @@ Detetar vulnerabilidades de segurança no **código fonte** antes da execução 
 - Integração automatizada com o ciclo de desenvolvimento e CI/CD;
 - Redução de risco sem impacto na produtividade.
 
-> O SAST é a base da validação shift-left — deteta falhas sem necessidade de executar a aplicação.
+> O SAST é a base da validação shift-left - deteta falhas sem necessidade de executar a aplicação.
 
 ---
 
 ## 🔍 O que é SAST
 
-O SAST (Static Application Security Testing) analisa o **código-fonte ou bytecode** para identificar padrões perigosos, más práticas, falhas lógicas e potenciais vulnerabilidades — sem executar a aplicação.
+O SAST (Static Application Security Testing) analisa o **código-fonte ou bytecode** para identificar padrões perigosos, más práticas, falhas lógicas e potenciais vulnerabilidades - sem executar a aplicação.
 
 Pode ser realizado por:
 
@@ -31,7 +31,7 @@ Pode ser realizado por:
 - Scanners genéricos (ex: ferramentas de mercado);
 - Motores semânticos configuráveis (ex: com regras personalizadas).
 
-> ⚠️ O SAST é complementar a testes dinâmicos e manuais — não substitui validações em tempo de execução.
+> ⚠️ O SAST é complementar a testes dinâmicos e manuais - não substitui validações em tempo de execução.
 
 ---
 
@@ -63,13 +63,13 @@ Pode ser realizado por:
 
 | Documento                       | Relação com o SAST                            |
 |--------------------------------|-----------------------------------------------|
-| Capítulo 02 — Requisitos       | Valida `REQ-203`, `REQ-205`, `REQ-303`        |
-| Capítulo 06 — Desenvolvimento  | Reforça práticas de secure coding             |
-| Capítulo 07 — CI/CD Seguro     | Ver `07-integracao-validacoes.md`             |
+| Capítulo 02 - Requisitos       | Valida `REQ-203`, `REQ-205`, `REQ-303`        |
+| Capítulo 06 - Desenvolvimento  | Reforça práticas de secure coding             |
+| Capítulo 07 - CI/CD Seguro     | Ver `07-integracao-validacoes.md`             |
 | `06-cobertura-e-priorizacao.md`| Define targets e prioridades de análise       |
 | `08-gestao-findings.md`        | Garante tratamento eficaz dos resultados      |
 | `09-feedback-equipa.md`        | Envolvimento das equipas na validação         |
 
 ---
 
-> 🔒 O SAST permite reduzir o custo de correção de vulnerabilidades ao agir antes da execução — mas só é eficaz quando configurado com critério, mantido atualizado e gerido em conjunto com os developers.
+> 🔒 O SAST permite reduzir o custo de correção de vulnerabilidades ao agir antes da execução - mas só é eficaz quando configurado com critério, mantido atualizado e gerido em conjunto com os developers.

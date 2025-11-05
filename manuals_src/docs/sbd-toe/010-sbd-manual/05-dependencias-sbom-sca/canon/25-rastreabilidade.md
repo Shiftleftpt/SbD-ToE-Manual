@@ -7,7 +7,7 @@ sidebar_position: 25
 
 ---
 
-# 📎 Rastreabilidade contra Frameworks — Capítulo 05: Dependências, SBOM e SCA
+# 📎 Rastreabilidade contra Frameworks - Capítulo 05: Dependências, SBOM e SCA
 
 Este ficheiro estabelece a **rastreabilidade entre as práticas prescritas neste capítulo** e os requisitos dos principais frameworks relacionados com gestão segura de dependências, SBOM (Software Bill of Materials) e análise de composição de software (SCA).
 

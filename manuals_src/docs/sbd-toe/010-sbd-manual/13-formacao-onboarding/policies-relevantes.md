@@ -3,9 +3,9 @@ id: policies-relevantes
 title: Policies
 ---
 
-# 🏛️ Políticas Organizacionais — Formação e Onboarding Seguro
+# 🏛️ Políticas Organizacionais - Formação e Onboarding Seguro
 
-A aplicação eficaz do Capítulo 13 — Formação e Onboarding Seguro — depende da existência de **políticas formais organizacionais** que sustentem:
+A aplicação eficaz do Capítulo 13 - Formação e Onboarding Seguro - depende da existência de **políticas formais organizacionais** que sustentem:
 
 - A obrigatoriedade da formação mínima por função e por acesso;
 - A validação objetiva de conhecimento antes da atribuição de permissões;

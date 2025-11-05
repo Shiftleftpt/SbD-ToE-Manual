@@ -35,7 +35,7 @@ Este ficheiro complementa os controlos principais definidos neste capítulo com 
 
 ## 🔒 Aplicação de princípios de Zero Trust no pipeline
 
-- **Confiança nula entre repositórios, runners, artefactos e ambientes** — cada elemento deve ser autenticado, validado e isolado;
+- **Confiança nula entre repositórios, runners, artefactos e ambientes** - cada elemento deve ser autenticado, validado e isolado;
 - Todos os comandos do pipeline devem partir do princípio que o runner pode ser malicioso, e vice-versa;
 - Integração com serviços de autorização externa (ex: Rego/OPA, ZTA gateways).
 

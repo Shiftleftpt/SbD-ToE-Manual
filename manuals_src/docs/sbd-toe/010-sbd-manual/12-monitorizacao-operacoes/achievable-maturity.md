@@ -5,9 +5,9 @@ sidebar_position: 10
 tags: [canon, maturidade, SAMM, BSIMM, SSDF, SLSA, DSOMM]
 ---
 
-# 📈 Maturidade — Monitorização e Operações
+# 📈 Maturidade - Monitorização e Operações
 
-Este documento apresenta o **mapeamento de maturidade das práticas descritas no Capítulo 12 — Monitorização e Operações**, com base nos principais frameworks de referência:
+Este documento apresenta o **mapeamento de maturidade das práticas descritas no Capítulo 12 - Monitorização e Operações**, com base nos principais frameworks de referência:
 
 - **OWASP SAMM**
 - **BSIMM**
@@ -91,7 +91,7 @@ Este mapeamento avalia o **grau de completude e sofisticação** das práticas p
 |-------|------------------------------------------------------|----------------------------------------------------|
 | 1     | Logging básico de build/test                         | ✅ Logging mínimo em pipelines                     |
 | 2     | Logging com métricas e alertas                       | ✅ KPIs operacionais e deteção automatizada        |
-| 3     | Observabilidade com integridade garantida            | ❌ Parcial — não aborda verificação criptográfica  |
+| 3     | Observabilidade com integridade garantida            | ❌ Parcial - não aborda verificação criptográfica  |
 | 4     | Telemetria auditável e controlada externamente       | ❌ Não aplicável neste contexto                    |
 
 **🔐 Nível máximo suportado por este capítulo: SLSA 2 / 4**

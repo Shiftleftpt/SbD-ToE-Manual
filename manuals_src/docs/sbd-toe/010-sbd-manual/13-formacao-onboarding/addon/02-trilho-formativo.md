@@ -10,7 +10,7 @@ tags: [formacao, trilho, risco, perfis, onboarding]
 
 ## 🌟 Objetivo
 
-Definir os **conteúdos mínimos obrigatórios** a incluir na formação inicial (onboarding) e contínua, por perfil funcional e **nível de risco da aplicação**, em alinhamento com o Capítulo 01 — Gestão de Risco.
+Definir os **conteúdos mínimos obrigatórios** a incluir na formação inicial (onboarding) e contínua, por perfil funcional e **nível de risco da aplicação**, em alinhamento com o Capítulo 01 - Gestão de Risco.
 
 > 📌 Esta matriz permite configurar trilhos formativos coerentes em plataformas como LMS, portais internos, backlog técnico ou pipelines de permissões.
 
@@ -30,7 +30,7 @@ Um **trilho formativo** é um conjunto de conteúdos obrigatórios ou recomendad
 | **QA**         | Testes de segurança básicos                   | Critérios de aceitação, fuzzing leve                        | Fuzzing avançado, validação de exceções, SAST/DAST                    |
 | **PO**         | Requisitos mínimos, backlog seguro            | Classificação de risco, exceções justificadas               | Processo formal de aceitação, revisão com AppSec                      |
 | **DevOps**     | Gestão de segredos, configuração de ambientes | Integração segura no CI/CD, pipelines com scanners          | SLSA, proveniência, alertas contínuos, hardening                      |
-| **AppSec**     | —                                             | Ferramentas base, políticas internas                        | Aprofundamento técnico, coaching a equipas, threat modeling avançado |
+| **AppSec**     | -                                             | Ferramentas base, políticas internas                        | Aprofundamento técnico, coaching a equipas, threat modeling avançado |
 | **Terceiros**  | Política da organização, canais de apoio      | Requisitos mínimos, PR template seguro                      | Formação customizada, acesso condicionado, registo formal             |
 
 ---

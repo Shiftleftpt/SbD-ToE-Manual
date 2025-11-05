@@ -66,8 +66,8 @@ Pode incluir:
 
 | Documento                       | Relevância estratégica                     |
 |--------------------------------|--------------------------------------------|
-| Capítulo 02 — Requisitos       | Valida `REQ-208`, `REQ-310`, `REQ-405`     |
-| Capítulo 07 — CI/CD Seguro     | Integração com pipelines paralelos         |
+| Capítulo 02 - Requisitos       | Valida `REQ-208`, `REQ-310`, `REQ-405`     |
+| Capítulo 07 - CI/CD Seguro     | Integração com pipelines paralelos         |
 | `04-fuzzing.md`                | Complementa validação dinâmica com aleatoriedade |
 | `06-cobertura-e-priorizacao.md`| Define criticidade de endpoints a testar   |
 | `08-gestao-findings.md`        | Gestão dos resultados e follow-up          |

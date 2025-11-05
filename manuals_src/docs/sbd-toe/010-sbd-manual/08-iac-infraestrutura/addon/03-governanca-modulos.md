@@ -11,7 +11,7 @@ tags: [governação, módulos, iac, reutilização, segurança, rastreabilidade]
 
 ## 🌟 Objetivo
 
-Assegurar que os módulos reutilizados em projetos de Infraestrutura como Código (IaC) — sejam internos ou externos — são:
+Assegurar que os módulos reutilizados em projetos de Infraestrutura como Código (IaC) - sejam internos ou externos - são:
 
 * Provenientes de fontes confiáveis;
 * Versionados e rastreáveis;
@@ -27,7 +27,7 @@ Assegurar que os módulos reutilizados em projetos de Infraestrutura como Códig
 1. Catalogar os módulos internos com informação sobre origem, responsável e versão;
 2. Verificar a proveniência e integridade de módulos externos antes da adoção;
 3. Impedir o uso de módulos não validados em ambientes críticos (ex: produção);
-4. Controlar versões e reforçar imutabilidade — evitar `main`, `latest` ou referências flutuantes;
+4. Controlar versões e reforçar imutabilidade - evitar `main`, `latest` ou referências flutuantes;
 5. Documentar uso, parâmetros, dependências e outputs esperados por módulo;
 6. Aplicar validações automáticas a módulos internos antes de os disponibilizar publicamente;
 7. Rever e atualizar periodicamente os módulos críticos em uso ativo.
@@ -114,4 +114,4 @@ Assegurar que os módulos reutilizados em projetos de Infraestrutura como Códig
 
 ---
 
-> 📌 A governação de módulos é um **elemento crítico de segurança em IaC**. Módulos inseguros, obsoletos ou mal mantidos podem comprometer múltiplos ambientes de forma transversal — exigindo políticas claras, validação contínua e rastreabilidade.
+> 📌 A governação de módulos é um **elemento crítico de segurança em IaC**. Módulos inseguros, obsoletos ou mal mantidos podem comprometer múltiplos ambientes de forma transversal - exigindo políticas claras, validação contínua e rastreabilidade.

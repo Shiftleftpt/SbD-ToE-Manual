@@ -1,17 +1,17 @@
 ---
 id: ameacas-mitigadas
-title: Ameaças Mitigadas — Testes de Segurança
+title: Ameaças Mitigadas - Testes de Segurança
 description: Visão bottom-up das ameaças mitigadas pelas práticas de testes de segurança deste capítulo.
 tags: [ameaças, mitigação, segurança, testes, osc&r, stride, capec, ssdf]
 sidebar_position: 50
 ---
 
 
-# 🔐 Ameaças Mitigadas — Capítulo 10: Testes de Segurança
+# 🔐 Ameaças Mitigadas - Capítulo 10: Testes de Segurança
 
 Este capítulo define a estratégia, técnicas e ferramentas de **validação contínua da segurança da aplicação**, incluindo testes estáticos, dinâmicos, interativos, fuzzing, validação de regressão e pentesting.
 
-> ⚠️ As ameaças mitigadas por este capítulo são **técnicas e contextuais**, surgem na implementação e execução do software — e requerem **validação ativa e contínua para serem detetadas e corrigidas**.
+> ⚠️ As ameaças mitigadas por este capítulo são **técnicas e contextuais**, surgem na implementação e execução do software - e requerem **validação ativa e contínua para serem detetadas e corrigidas**.
 
 ---
 

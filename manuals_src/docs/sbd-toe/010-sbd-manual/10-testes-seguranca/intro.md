@@ -40,7 +40,7 @@ Requisitos podem ser bem definidos e controlos bem desenhados, mas só com teste
 Este capítulo diferencia-se por fornecer **evidência objetiva e auditável**: mostra se as medidas prescritas nos capítulos anteriores são eficazes e se resistem à pressão do uso em produção.  
 Inclui desde ferramentas automatizadas (*linters*, SAST, DAST, fuzzing) até exercícios manuais/ofensivos (PenTesting), criando uma rede complementar de garantias.  
 
-👉 Em síntese, os testes de segurança não são uma “fase” opcional — são o **ritmo de batimento cardíaco do ciclo de vida**, que confirma em cada commit, em cada build e em cada release que a aplicação continua segura.
+👉 Em síntese, os testes de segurança não são uma “fase” opcional - são o **ritmo de batimento cardíaco do ciclo de vida**, que confirma em cada commit, em cada build e em cada release que a aplicação continua segura.
 
 ---
 
@@ -129,6 +129,6 @@ Na versão impressa, consultar o **Anexo de Políticas Organizacionais do manual
 
 Testar é o que distingue boas intenções de segurança de evidência real.  
 É o processo que confirma se requisitos foram implementados, se gates estão a funcionar e se a aplicação resiste a ataques credíveis.  
-Mais do que uma fase, os testes são um **ritual contínuo de validação** — o que transforma o SbD-ToE num programa vivo, mensurável e auditável.
+Mais do que uma fase, os testes são um **ritual contínuo de validação** - o que transforma o SbD-ToE num programa vivo, mensurável e auditável.
 
 ---

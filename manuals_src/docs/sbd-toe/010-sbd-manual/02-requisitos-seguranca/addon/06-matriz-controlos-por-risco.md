@@ -9,7 +9,7 @@ tags: [proporcionalidade, risco, requisitos, matriz, controlo]
 
 Esta matriz resume, por **tema técnico de segurança**, quais os domínios onde existem **requisitos obrigatórios** para cada nível de risco (L1, L2, L3).
 
-> ⚠️ **Importante:** A marcação ✔ indica que **existem requisitos obrigatórios dentro desse tema para o nível de risco em causa** — **não implica que todos os requisitos do tema se apliquem** a todos os níveis.  
+> ⚠️ **Importante:** A marcação ✔ indica que **existem requisitos obrigatórios dentro desse tema para o nível de risco em causa** - **não implica que todos os requisitos do tema se apliquem** a todos os níveis.  
 > Consulte o [catálogo completo de requisitos aplicacionais](./catalogo-requisitos) para ver os detalhes por requisito e nível.
 
 ---

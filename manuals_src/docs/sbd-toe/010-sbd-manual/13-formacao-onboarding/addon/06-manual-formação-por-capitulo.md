@@ -17,7 +17,7 @@ Este documento serve de base para:
 - **Onboarding técnico estruturado**
 - Planos de **retenção e rotação de conhecimento**
 
-> 📌 Alinhado com o Capítulo 01 — Gestão de Risco, a aplicação proporcional por nível de risco deve modular a profundidade dos conteúdos.
+> 📌 Alinhado com o Capítulo 01 - Gestão de Risco, a aplicação proporcional por nível de risco deve modular a profundidade dos conteúdos.
 
 ---
 

@@ -1,12 +1,12 @@
 ---
 id: rastreabilidade
-title: Rastreabilidade Top-Down — Capítulo 04
+title: Rastreabilidade Top-Down - Capítulo 04
 description: Mapeamento das práticas deste capítulo face a frameworks normativos e requisitos de segurança reconhecidos
 tags: [rastreabilidade, arquitetura, frameworks, ssdf, samm, bsimm, slsa, iso, dsomm]
 sidebar_position: 25
 ---
 
-# 📎 Rastreabilidade contra Frameworks — Capítulo 04: Arquitetura Segura
+# 📎 Rastreabilidade contra Frameworks - Capítulo 04: Arquitetura Segura
 
 Este documento estabelece a **rastreabilidade entre as práticas prescritas neste capítulo** e os requisitos dos principais frameworks e normas de segurança aplicacional no que diz respeito à conceção, validação e governação arquitetural.
 
@@ -98,7 +98,7 @@ Cobertura dos domínios:
 
 ---
 
-### 🧩 OWASP DSOMM — Design & Development
+### 🧩 OWASP DSOMM - Design & Development
 
 - Definição formal da arquitetura, zonas de confiança e fronteiras
 - Validações arquiteturais proporcionais ao risco 
@@ -112,11 +112,11 @@ Cobertura dos domínios:
 
 Este capítulo articula-se diretamente com:
 
-- **Capítulo 01 — Gestão de Risco**: as zonas de confiança e validações são proporcionais ao risco.
-- **Capítulo 02 — Requisitos de Segurança**: os requisitos `REQ-XXX` são rastreados até `ARC-XXX`.
-- **Capítulo 03 — Threat Modeling**: a arquitetura segura é a base para identificação de ameaças.
-- **Capítulo 09 — Containers e Zonas**: a arquitetura lógica sustenta o modelo de segmentação.
-- **Capítulo 10 — Testes de Validação**: a arquitetura é a entrada principal dos testes estruturais.
+- **Capítulo 01 - Gestão de Risco**: as zonas de confiança e validações são proporcionais ao risco.
+- **Capítulo 02 - Requisitos de Segurança**: os requisitos `REQ-XXX` são rastreados até `ARC-XXX`.
+- **Capítulo 03 - Threat Modeling**: a arquitetura segura é a base para identificação de ameaças.
+- **Capítulo 09 - Containers e Zonas**: a arquitetura lógica sustenta o modelo de segmentação.
+- **Capítulo 10 - Testes de Validação**: a arquitetura é a entrada principal dos testes estruturais.
 
 ---
 

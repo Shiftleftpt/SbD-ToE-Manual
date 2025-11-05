@@ -53,7 +53,7 @@ Dar feedback à equipa envolve:
 ## ✅ Boas práticas
 
 - Utilizar **comentários inline em PRs** para findings de SAST com contexto claro;
-- Evitar relatórios PDF ou exportações manuais — usar canais vivos e integrados;
+- Evitar relatórios PDF ou exportações manuais - usar canais vivos e integrados;
 - Incorporar segurança em reuniões de sprint review ou refinement;
 - Estabelecer convenções de tagging no backlog (ex: `#security`, `#review-required`);
 - Medir tempo médio de reação e resolução (lead time) por equipa ou tipo de finding;
@@ -66,9 +66,9 @@ Dar feedback à equipa envolve:
 | Documento                       | Relevância estratégica                           |
 |--------------------------------|---------------------------------------------------|
 | `08-gestao-findings.md`        | Garante ciclo de vida dos findings com contexto técnico |
-| Capítulo 06 — Desenvolvimento  | Aproxima segurança dos ciclos ágeis e ownership do código |
-| Capítulo 07 — CI/CD Seguro     | Entrega de feedback integrada no pipeline         |
-| Capítulo 14 — Governança       | KPIs de gestão e maturidade                      |
+| Capítulo 06 - Desenvolvimento  | Aproxima segurança dos ciclos ágeis e ownership do código |
+| Capítulo 07 - CI/CD Seguro     | Entrega de feedback integrada no pipeline         |
+| Capítulo 14 - Governança       | KPIs de gestão e maturidade                      |
 
 ---
 

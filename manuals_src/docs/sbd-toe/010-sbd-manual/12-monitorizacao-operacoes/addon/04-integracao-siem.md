@@ -23,7 +23,7 @@ Trata-se da cadeia de **coleta, transporte, transformação e ingestão** dos ev
 * Latência reduzida e resiliência a falhas;
 * Capacidade de correlação eficaz entre fontes.
 
-> 🧑‍💻 A aplicação nunca deve comunicar diretamente com o SIEM — usar sempre um forwarder como camada de isolamento.
+> 🧑‍💻 A aplicação nunca deve comunicar diretamente com o SIEM - usar sempre um forwarder como camada de isolamento.
 
 ---
 

@@ -6,7 +6,7 @@ tags: [dependencias, sbom, sca, supply-chain, cicd, excecoes, governance, update
 sidebar_position: 15
 ---
 
-# 🔄 Aplicação no Ciclo de Vida — Dependências, SBOM e SCA
+# 🔄 Aplicação no Ciclo de Vida - Dependências, SBOM e SCA
 
 ## 🧭 Quando aplicar
 
@@ -26,7 +26,7 @@ Cada evento é um **gatilho** que deve produzir evidências objetivas.
 
 ## 👥 Quem executa cada ação
 
-A governação é **coletiva** — papéis e responsabilidades consistentes com o intro.md.
+A governação é **coletiva** - papéis e responsabilidades consistentes com o intro.md.
 
 | Papel | Responsabilidade |
 |------|-------------------|
@@ -45,7 +45,7 @@ Cada US transforma a prescrição em backlog acionável, com **contexto, rationa
 
 ---
 
-### US-01 — Gestão de dependências seguras
+### US-01 - Gestão de dependências seguras
 
 **Contexto.**  
 Dependências externas sem validação introduzem risco invisível (componentes abandonados, origem duvidosa, licenças incompatíveis).
@@ -53,7 +53,7 @@ Dependências externas sem validação introduzem risco invisível (componentes 
 **📖 Rationale científico.**  
 Frameworks como **SSDF PW.4**, **SAMM Implementation** e **BSIMM CMVM1.1** exigem políticas explícitas de dependências.  
 Relatórios da **Sonatype** mostram que mais de 90% das vulnerabilidades em bibliotecas usadas em incidentes poderiam ter sido evitadas escolhendo versões mantidas e auditadas.  
-Casos como o *LeftPad incident* (npm, 2016) lembram-nos de como um único pacote pode parar milhares de builds — a disciplina aqui não é opcional, é sobrevivência organizacional.
+Casos como o *LeftPad incident* (npm, 2016) lembram-nos de como um único pacote pode parar milhares de builds - a disciplina aqui não é opcional, é sobrevivência organizacional.
 
 :::userstory
 **História.**   
@@ -93,12 +93,12 @@ Como **Developer**, quero **usar apenas dependências aprovadas**, para **reduzi
 
 ---
 
-### US-02 — SBOM em cada build
+### US-02 - SBOM em cada build
 
 **Contexto.**  
 Sem SBOM atualizado não é possível determinar rapidamente exposição a CVEs e cumprir requisitos de auditoria.
 
-### US-02 — SBOM em cada build
+### US-02 - SBOM em cada build
 
 **📖 Rationale científico.**  
 Um SBOM não é “papelada extra”: é o mapa que permite saber onde estamos quando surge um CVE crítico.  
@@ -136,13 +136,13 @@ Como **DevOps**, quero **gerar SBOM em cada build**, para **rastreabilidade comp
 
 ---
 
-### US-03 — SCA automático com *gates*
+### US-03 - SCA automático com *gates*
 
 **Contexto.**  
 SCA identifica vulnerabilidades conhecidas em dependências (diretas e transitivas) e deve bloquear risco inaceitável.
 
 **📖 Rationale científico.**  
-Executar SCA não é luxo — é o alarme de incêndio no pipeline.  
+Executar SCA não é luxo - é o alarme de incêndio no pipeline.  
 **SSDF RV.2**, **SAMM Verification** e **BSIMM CMVM3.1** destacam-no como essencial.  
 Dados do **Verizon DBIR** confirmam: 40% das vulnerabilidades exploradas em 2023 estavam em bibliotecas de terceiros não atualizadas.  
 Sem gates, relatórios de SCA viram “ruído de fundo” e não mudam comportamentos; com gates, transformam-se em barreiras objetivas que previnem regressões.
@@ -184,7 +184,7 @@ Como **AppSec**, quero **executar SCA automático nos pipelines**, para **deteta
 
 ---
 
-### US-04 — Exceções a CVEs formais e temporárias
+### US-04 - Exceções a CVEs formais e temporárias
 
 **Contexto.**  
 Nem todos os findings podem ser resolvidos de imediato; exceções devem ser **formais, justificadas e temporárias**.
@@ -224,11 +224,11 @@ Como **AppSec**, quero **formalizar exceções a CVEs**, para **manter governaç
 | Release | Findings pendentes | AppSec + Product Owner
 
 **Ligações úteis.**  
-- Template de exceções (Cap. 05 — anexos)
+- Template de exceções (Cap. 05 - anexos)
 
 ---
 
-### US-05 — Validação de release (*go/no-go*)
+### US-05 - Validação de release (*go/no-go*)
 
 **Contexto.**  
 Cada release é uma decisão de risco que deve ser **explícita e rastreável**.
@@ -271,16 +271,16 @@ Como **Product Owner**, quero **validar findings e exceções antes do go‑live
 | Pré‑release | RC pronta | Product Owner + QA + AppSec
 
 **Ligações úteis.**  
-- Checklist de release segura (Cap. 05 — anexos)
+- Checklist de release segura (Cap. 05 - anexos)
 
 ---
 
-### US-06 — Repositórios internos como fonte única
+### US-06 - Repositórios internos como fonte única
 
 **Contexto.**  
 Sem repositórios internos, dependências podem ser resolvidas de fontes não controladas (*typosquatting*, *confusion*, malícia).
 
-### US-06 — Repositórios internos como fonte única
+### US-06 - Repositórios internos como fonte única
 
 **📖 Rationale científico.**  
 Usar apenas repositórios internos é um dos controlos mais eficazes contra ataques de cadeia de fornecimento.  
@@ -325,7 +325,7 @@ Como **DevOps**, quero **forçar repositórios internos aprovados**, para **gara
 
 ---
 
-### US-07 — Proibir bibliotecas copiadas manualmente
+### US-07 - Proibir bibliotecas copiadas manualmente
 
 **Contexto.**  
 JS, PHP, DLLs, JARs copiados diretamente para o repo escapam ao SBOM e ao SCA, criando *shadow dependencies*.
@@ -373,7 +373,7 @@ Como **Developer**, quero **usar apenas *package managers*/repositórios interno
 
 ---
 
-### US-08 — Automação da atualização com avaliação de impacto
+### US-08 - Automação da atualização com avaliação de impacto
 
 **Contexto.**  
 Dependências degradam com o tempo; é necessário atualizar **com segurança e rapidez**.  

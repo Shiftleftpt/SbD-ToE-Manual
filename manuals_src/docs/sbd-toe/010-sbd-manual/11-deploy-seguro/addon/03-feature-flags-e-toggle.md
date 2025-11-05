@@ -46,7 +46,7 @@ Feature flags são mecanismos que permitem ativar ou desativar funcionalidades *
 ### 🔐 Segurança e isolamento
 
 - Nunca usar toggles como substituto de controlo de acesso;
-- Avaliar toggles no **backend** — não apenas no frontend;
+- Avaliar toggles no **backend** - não apenas no frontend;
 - Evitar **toggles client-side** para lógica sensível;
 - Garantir que todos os caminhos lógicos associados são testáveis.
 
@@ -127,5 +127,5 @@ justification: Necessário para investigação de comportamento anómalo
 
 ---
 
-> 🌟 Toggles são poderosos — mas só quando usados com disciplina, controlo e rastreabilidade.  
+> 🌟 Toggles são poderosos - mas só quando usados com disciplina, controlo e rastreabilidade.  
 > Devem ser tratados como **ativos críticos de runtime**, com implicações diretas na segurança e no risco operacional.

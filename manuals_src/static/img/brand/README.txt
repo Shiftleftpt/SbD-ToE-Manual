@@ -1,4 +1,4 @@
-ShiftLeft brand asset pack — 2025-10-23
+ShiftLeft brand asset pack - 2025-10-23
 
 Colors:
 - Pink: #f00041

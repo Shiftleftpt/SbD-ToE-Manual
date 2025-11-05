@@ -35,9 +35,9 @@ Este ficheiro estabelece a **rastreabilidade entre as práticas de definição, 
 
 Cobertura total dos objetivos **PW.1** (definição sistemática de requisitos por risco) e **PW.4** (validação técnica e formal), suportada por:
 
-- [Catálogo de Requisitos](./addon/catalogo-requisitos)
-- [Matriz por Risco](./addon/matriz-controlos-por-risco)
-- [Validação Testável](./addon/validacao-requisitos)
+- [Catálogo de Requisitos](../addon/catalogo-requisitos)
+- [Matriz por Risco](../addon/matriz-controlos-por-risco)
+- [Validação Testável](../addon/validacao-requisitos)
 
 ---
 

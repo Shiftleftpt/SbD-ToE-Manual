@@ -14,7 +14,9 @@ function HomepageHeader() {
       <div className="container">
         <div className="text--center">
           <h1 className={styles.heroTitle}>Security by Design</h1>
-          <p className={styles.heroTagline}>Theory of Everything</p>
+           <p className={styles.heroTagline} role="doc-subtitle" aria-describedby="hero-cta">
+            Theory of <strong>Everything</strong>
+          </p>
           <div className={styles.ctaWrap}>
             <Link className="button button--lg button--secondary" to={introUrl}>
               Explorar o Manual →

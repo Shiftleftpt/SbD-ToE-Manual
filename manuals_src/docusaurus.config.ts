@@ -34,7 +34,7 @@ const config: Config = {
       onBrokenMarkdownLinks: 'warn',
     },
   },
-
+  
   // Tags extra no <head> (manifest + apple-touch-icon)
   headTags: [
     {
@@ -44,6 +44,14 @@ const config: Config = {
     {
       tagName: 'link',
       attributes: { rel: 'apple-touch-icon', href: '/img/brand/favicon-180.png' },
+    },
+  ],
+  
+  // ⤵️ injeta o script do Plausible em todas as páginas
+  scripts: [
+    {
+      src: 'https://plausible.io/js/pa-vrvyYynlF73FkPELUrY4w.js',
+      async: true,
     },
   ],
 

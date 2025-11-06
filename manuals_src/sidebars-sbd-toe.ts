@@ -119,6 +119,7 @@ const sidebars: SidebarsConfig = {
           items: [
             'sbd-manual/iac-infraestrutura/pre-intro',
             'sbd-manual/iac-infraestrutura/aplicacao-lifecycle',
+            'sbd-manual/iac-infraestrutura/policies-relevantes',
             {
               type: 'category',
               label: '📚 Complemento Técnico',
@@ -133,6 +134,7 @@ const sidebars: SidebarsConfig = {
           link: { type: 'doc', id: 'sbd-manual/containers-imagens/intro' },
           items: [
             'sbd-manual/containers-imagens/aplicacao-lifecycle',
+            'sbd-manual/containers-imagens/policies-relevantes',
             {
               type: 'category',
               label: '📚 Complemento Técnico',

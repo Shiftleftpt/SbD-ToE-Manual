@@ -1,22 +1,22 @@
 ---
 id: intro
 title: Containers e Execução Isolada
-description: Princípios, práticas e controlos para garantir execução segura, validada e rastreável em ambientes containerizados
-tags: [containers, isolamento, execução, imagens, cicd, opa, kubernetes, trust, DSOMM]
+description: Princípios, práticas e controlos para construir, assinar, validar e executar imagens de forma segura e rastreável
+tags:
+  [containers, imagens, supply-chain, proveniencia, assinatura, slsa, ssdf,
+   registry, runtime-hardening, admission-control, kubernetes, cicd, dSOMM]
 sidebar_position: 0
 ---
 import Badge from '@site/src/components/Badge';
 
 <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.5rem', marginBottom: '1rem' }}>
-  
-  <Badge color="info">SAMM: 2 / 3</Badge>
-  <Badge color="info">BSIMM: SE2.1, SE2.5, CMVM2.4</Badge>
-  <Badge color="info">SSDF: PW.6, RV.1, RV.4</Badge>
-  <Badge color="info">SLSA: Nível 4 / 4</Badge>
+  <Badge color="info">SAMM: 3 / 3</Badge>
+  <Badge color="info">BSIMM: CMVM 1.3, SE 2.2, ST 1.1–1.4</Badge>
+  <Badge color="info">SSDF: PW.5, RV.1, RV.2, PS.1</Badge>
+  <Badge color="info">SLSA: Nível 3 / 4</Badge>
   <Badge color="info">DSOMM: 3 / 4 (média)</Badge>
   <a href="./achievable-maturity" style={{ marginLeft: 'auto', fontSize: '0.9rem' }}>📄 Ver análise de maturidade</a>
 </div>
-
 
 :::tip Capítulo Operacional
 Este capítulo é considerado **operacional** no modelo *Security by Design – Theory of Everything (SbD-ToE)*.  

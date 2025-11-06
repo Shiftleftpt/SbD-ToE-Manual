@@ -378,6 +378,102 @@ Como **Equipa de Segurança / AppSec**, quero validar a aplicação dos requisit
 
 ---
 
+### US-08 – Catálogo de requisitos do projeto (criação e manutenção)
+
+**Contexto.**  
+No arranque do projeto e sempre que existam alterações de âmbito, deve existir um **catálogo versionado de requisitos (REQ-XXX)**, derivado da baseline organizacional e filtrado pela criticidade.
+
+**📖 Rationale científico.**  
+Recomendado por **NIST SSDF RV.1/RV.2** (documentação e rastreabilidade), **BSIMM SR1.5** (associar requisitos a artefactos) e **OWASP SAMM Governance/Policy & Compliance** (gestão de políticas/requirements).  
+Mitiga **OSC&R – Requirements Coverage Gaps** e **CWE-693**, garantindo consistência, governança e auditabilidade.
+
+:::userstory
+**História.**  
+Como **AppSec/PO/TL**, quero estabelecer e manter um catálogo de requisitos de segurança do projeto (REQ-XXX), para assegurar aplicação consistente, versionada e auditável ao longo do SDLC.
+
+**Critérios de aceitação (BDD).**
+- Dado que a aplicação tem criticidade L1–L3 definida  
+- Quando gero o catálogo a partir da baseline e filtro por nível  
+- Então o catálogo fica versionado, com owner definido e ligação a critérios de validação
+
+**Checklist.**
+- [ ] Catálogo `REQ-XXX` criado/atualizado e versionado  
+- [ ] Owner e periodicidade de revisão definidos  
+- [ ] Mapeamento para critérios de validação e tags de backlog  
+- [ ] Localização e link persistentes no repositório
+
+:::
+
+**Artefactos & evidências.**
+- Artefacto: `catalogo-requisitos.md` (ou pasta `catalogo/`) + CHANGELOG do catálogo  
+- Evidência: MR/PR de criação/atualização e aprovação por AppSec
+
+**Proporcionalidade por risco.**
+| Nível | Obrigatório? | Ajustes |
+|---|---|---|
+| L1 | Sim | Subconjunto essencial pré-aprovado |
+| L2 | Sim | Catálogo completo L2 |
+| L3 | Sim | Catálogo L3 + reforços (p.ex., supply-chain, hardening) |
+
+**Integração no SDLC.**
+| Fase | Gatilho | Responsável | SLA |
+|---|---|---|---|
+| Início | Kick-off / nova release major | AppSec + PO + TL | Antes do backlog inicial / antes da release |
+
+**Ligações úteis.**
+- 🔗 [Catálogo de requisitos](./addon/catalogo-requisitos)  
+- 🔗 [Critérios de aceitação](./addon/criterios-aceitacao)
+
+---
+
+### US-09 – Validação por requisito/domínio (REQ-XXX → evidência)
+
+**Contexto.**  
+Cada requisito ativo **deve** ter uma forma de validação associada (teste, revisão, scanner, evidência manual), com **resultado e prova** ligados ao requisito.
+
+**📖 Rationale científico.**  
+Apoiado por **NIST SSDF RV.3** (definir/verificar critérios), **OWASP SAMM Verification/Testing**, **BSIMM PT3.x** e **DSOMM** (design & development validation).  
+Mitiga **CWE-20**, **CWE-285**, **CWE-522** (conforme domínio), reforçando a eficácia dos controlos através de evidência objetiva.
+
+:::userstory
+**História.**  
+Como **QA/AppSec/TL**, quero validar cada requisito REQ-XXX segundo os critérios definidos, para assegurar que existe evidência objetiva e rastreável do seu cumprimento.
+
+**Critérios de aceitação (BDD).**
+- Dado um requisito REQ-XXX com critérios definidos  
+- Quando executo a validação associada (teste/revisão/scan)  
+- Então registo o resultado “pass/fail” e anexo a evidência ao requisito
+
+**Checklist.**
+- [ ] Método de validação definido por requisito  
+- [ ] Execução registada por sprint/release  
+- [ ] Resultado e evidência ligados ao REQ-XXX  
+- [ ] Revisão e aprovação por AppSec quando aplicável
+
+:::
+
+**Artefactos & evidências.**
+- Artefacto: plano de validação por requisito (p.ex., `validacoes/REQ-XXX.md`)  
+- Evidência: logs de CI/CD, relatórios (SAST/DAST/IAST), reviews, screenshots
+
+**Proporcionalidade por risco.**
+| Nível | Obrigatório? | Ajustes |
+|---|---|---|
+| L1 | Sim | Amostragem mínima de requisitos críticos |
+| L2 | Sim | Cobertura integral dos requisitos selecionados |
+| L3 | Sim | Cobertura integral + revisão independente e gates automáticos |
+
+**Integração no SDLC.**
+| Fase | Gatilho | Responsável | SLA |
+|---|---|---|---|
+| Testes/Code Review | Execução de pipelines ou checkpoints de qualidade | QA + AppSec + TL | Por sprint e antes de release |
+
+**Ligações úteis.**
+- 🔗 [Validação de requisitos](./addon/validacao-requisitos)  
+- 🔗 [Controlos por requisito](./addon/controlos-requisitos)
+
+---
+
 ## ⚖️ Aplicação proporcional por nível de risco (L1–L2–L3)
 
 | Prática                    | L1 (baixo risco)          | L2 (médio risco)                     | L3 (alto risco)                                  |

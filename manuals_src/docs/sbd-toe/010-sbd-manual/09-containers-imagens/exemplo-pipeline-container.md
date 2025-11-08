@@ -104,7 +104,7 @@ spec:
 
 ---
 
-## 📌 Referências cruzadas
+## 📎 Referências cruzadas
 
 - Capítulo 07 – `addon/10-sbd-no-proprio-pipeline.md`
 - Capítulo 05 – `06-validacao-dependencias.md`

@@ -86,11 +86,3 @@ O design seguro dos pipelines CI/CD é um controlo fundamental para garantir que
 - Abuso de triggers automáticos (OSC&R: CI0006, CI0015).
 
 ---
-
-## 🧭 Referências
-
-- [SLSA – Build Script is Versioned](https://slsa.dev/spec/v1.0/build)
-- [OWASP CI/CD Security – 1. Pipeline Configuration](https://owasp.org/www-project-cicd-security/#1-pipeline-configuration)
-- [NIST SSDF – PW.4: Manage Code Changes](https://csrc.nist.gov/publications/detail/sp/800-218/final)
-- [BSIMM – SM1.2, SE2.2]
-- [SAMM – Build & Deployment Automation – Threat Assessment]

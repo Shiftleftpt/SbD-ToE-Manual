@@ -54,7 +54,7 @@ O objetivo é garantir que a aprendizagem **não é paralela à execução real*
 
 ### 4. Arquitetura Segura
 
-- Revisão coletiva de decisões arquiteturais (mensal ou por épico)
+- Revisão coletiva de decisões de arquitetura (mensal ou por épico)
 - Oficinas comparativas entre abordagens (ex: API vs eventos)
 - Repositório de arquiteturas "antes/depois" com anotações
 

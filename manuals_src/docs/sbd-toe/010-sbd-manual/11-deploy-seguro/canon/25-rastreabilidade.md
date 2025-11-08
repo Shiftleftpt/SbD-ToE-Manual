@@ -2,7 +2,7 @@
 id: rastreabilidade
 title: Rastreabilidade - Deploy Seguro
 description: Mapeamento top-down entre frameworks normativas e as práticas de segurança na entrega de código em produção.
-tags: [rastreabilidade, deploy, frameworks, ssdf, samm, bsimm]
+tags: [rastreabilidade, deploy, frameworks, ssdf, samm, ]
 sidebar_position: 25
 ---
 

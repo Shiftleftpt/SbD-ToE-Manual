@@ -46,11 +46,6 @@ Inclui modelos reutilizáveis de user stories, ações por papel, artefactos esp
 **Contexto.**  
 A seleção inicial de requisitos deve ser proporcional ao risco da aplicação (L1–L3).
 
-**📖 Rationale científico.**  
-Alinhado com **OWASP SAMM Governance/Strategy & Metrics**, **BSIMM SR1.1**, **NIST SSDF RM.1** e **ISO/IEC 27005** (gestão de risco).  
-Mitiga riscos de desajuste entre controlos e risco real, reduzindo **CWE-693 (Protection Mechanism Failure)**, **CWE-1039 (Automated Discovery-Incorrect Assumptions)** e lacunas de **OSC&R – Requirements Coverage Gaps**.  
-Valor empírico: o **Verizon DBIR** e estudos **BSIMM** mostram que uma seleção proporcional reduz custos de implementação e diminui “janela de exposição” para classes de falhas recorrentes (p.ex., **OWASP Top 10**), mantendo a eficácia operacional.
-
 :::userstory
 **História.**   
 Como **Product Owner**, quero selecionar os requisitos aplicáveis ao projeto, para garantir que a segurança é proporcional ao nível de risco.
@@ -80,12 +75,9 @@ Como **Product Owner**, quero selecionar os requisitos aplicáveis ao projeto, p
 | L3 | Sim | Catálogo completo L3 + reforços |
 
 **Integração no SDLC.**
-| Fase | Gatilho | Responsável | SLA |
+| Fase | Trigger | Responsável | SLA |
 |---|---|---|---|
 | Início | Kick-off do projeto | Product Owner | Antes do backlog inicial |
-
-**Ligações úteis.**
-- 🔗 [Matriz de controlos por risco](./addon/matriz-controlos-por-risco)
 
 ---
 
@@ -93,11 +85,6 @@ Como **Product Owner**, quero selecionar os requisitos aplicáveis ao projeto, p
 
 **Contexto.**  
 A classificação e os requisitos aplicados devem ser revistos periodicamente e sempre que houver alterações significativas de exposição, dados, integrações ou arquitetura.
-
-**📖 Rationale científico.**  
-Baseado em **SSDF PS.3** (Review and Update Security Requirements), **SAMM Design/Threat Assessment**, **BSIMM AM2.4** (análise de arquitetura) e práticas de cadeia de fornecimento **SLSA** (gestão de mudanças).  
-Mitiga riscos de **OSC&R – Surface Expansion**, **CWE-16 (Configuration Issues)** e **CWE-710 (Improper Adherence to Coding Standards)**, frequentes após mudanças.  
-Valor empírico: o **NIST SP 800-160** e o **DBIR** correlacionam incidentes críticos a mudanças não acompanhadas por reavaliação proporcional de controlos.
 
 :::userstory
 **História.**   
@@ -125,12 +112,12 @@ Como **Arquitetura / Tech Lead / DevSecOps**, quero rever a classificação e os
 |---|---|---|
 | L1 | Opcional | Apenas em alterações críticas  |
 | L2 | Sim | Em todas as mudanças críticas    |
-| L3 | Sim | Em qualquer alteração arquitetural |
+| L3 | Sim | Em qualquer alteração da arquitetura |
 
 **Integração no SDLC.**
-| Fase | Gatilho | Responsável | SLA |
+| Fase | Trigger | Responsável | SLA |
 |---|---|---|---|
-| Refactor/Design | Alteração arquitetural ou de dados | Tech Lead | Antes da release |
+| Refactor/Design | Alteração da arquitetura ou de dados | Tech Lead | Antes da release |
 
 **Ligações úteis.**
 - 🔗 [Validação e revisão de requisitos](./addon/validacao-requisitos)
@@ -141,11 +128,6 @@ Como **Arquitetura / Tech Lead / DevSecOps**, quero rever a classificação e os
 
 **Contexto.**  
 Nem todos os requisitos são aplicáveis; exceções devem ser formalmente documentadas, justificadas e aprovadas.
-
-**📖 Rationale científico.**  
-Processo descrito em **OWASP SAMM Governance/Policy & Compliance**, **BSIMM CP1.2** (documentação de riscos e exceções), **NIST SSDF RV.1** e **ISO/IEC 27005** (tratamento do risco residual).  
-Mitiga riscos de **CWE-285 (Improper Authorization)**, **CWE-732 (Incorrect Permission Assignment)** e **CAPEC-220 (Disabling Security Controls)**, prevenindo bypass indevido de controlos.  
-Valor empírico: **ENISA Threat Landscape** e **DBIR** mostram que exceções ad hoc aumentam dívida de risco e dificultam auditoria.
 
 :::userstory
 **História.**   
@@ -177,7 +159,7 @@ Como **Developer**, quero registar uma exceção a um requisito não aplicável,
 | L3 | Sim | Exceção formal + mitigação definida |
 
 **Integração no SDLC.**
-| Fase | Gatilho | Responsável | SLA |
+| Fase | Trigger | Responsável | SLA |
 |---|---|---|---|
 | Planeamento | Identificação da exceção | Developer + AppSec | Antes da release |
 
@@ -190,11 +172,6 @@ Como **Developer**, quero registar uma exceção a um requisito não aplicável,
 
 **Contexto.**  
 Todos os requisitos aplicados devem ser rastreáveis no backlog e auditáveis.
-
-**📖 Rationale científico.**  
-Prescrito por **NIST SSDF RV.2** (document and maintain traceability), **OWASP SAMM Design/Threat Assessment** e **BSIMM SR1.5** (ligar requisitos à implementação), com reforço de **DSOMM** (governance & metrics) e **SLSA** (proveniência).  
-Mitiga **CWE-1079 (Inconsistent Tagging)** e lacunas de **OSC&R – Requirements Coverage Gaps**, permitindo auditoria e accountability (ver **ISO/IEC 27034**).  
-Valor empírico: dados **BSIMM** indicam que equipas com rastreabilidade fraca têm tempo médio de correção 3× superior e maior taxa de regressões.
 
 :::userstory
 **História.**   
@@ -225,7 +202,7 @@ Como **QA / Test Engineer**, quero garantir que todos os requisitos aplicados t�
 | L3 | Sim | Todos os requisitos L3 |
 
 **Integração no SDLC.**
-| Fase | Gatilho | Responsável | SLA |
+| Fase | Trigger | Responsável | SLA |
 |---|---|---|---|
 | Grooming | Revisão de backlog | QA | Por sprint |
 
@@ -239,10 +216,6 @@ Como **QA / Test Engineer**, quero garantir que todos os requisitos aplicados t�
 **Contexto.**  
 Cada requisito selecionado deve ter critérios de aceitação e validação definidos de forma explícita, para garantir verificabilidade e testes eficazes.
 
-**📖 Rationale científico.**  
-Recomendado por **NIST SSDF RV.3** (define and verify acceptance criteria), **OWASP SAMM Verification/Testing**, **BSIMM PT3.1** e **ISO/IEC 25010** (qualidade).  
-Mitiga **CWE-20 (Improper Input Validation)**, **CWE-693 (Protection Mechanism Failure)** e padrões **CAPEC-112 (Brute Force Input)**, além de reduzir ambiguidades de teste que levam a falsos negativos.  
-Valor empírico: estudos **BSIMM** e o **DBIR** indicam que critérios de validação claros reduzem defeitos escapados para produção em ~30–40% e aceleram a triagem.
 
 :::userstory
 **História.**   
@@ -273,7 +246,7 @@ Como **Product Owner/QA**, quero garantir que cada requisito selecionado no back
 | L3 | Sim | Para todos + validação reforçada |
 
 **Integração no SDLC.**
-| Fase | Gatilho | Responsável | SLA |
+| Fase | Trigger | Responsável | SLA |
 |---|---|---|---|
 | Planeamento | Criação de cartões | PO + QA | Antes da sprint |
 
@@ -286,11 +259,6 @@ Como **Product Owner/QA**, quero garantir que cada requisito selecionado no back
 
 **Contexto.**  
 Requisitos devem ter sempre cobertura de testes para garantir eficácia e prevenir regressões.
-
-**📖 Rationale científico.**  
-Prática prevista por **NIST SSDF RV.3**, **OWASP SAMM Verification/Testing**, **BSIMM PT3.x** e **DSOMM** (continuidade de validação).  
-Mitiga falhas de **CWE-693 (Protection Mechanism Failure)** e deteta padrões **CAPEC-112**, **CAPEC-66 (SQL Injection)** e **CAPEC-242 (Code Injection)** quando os requisitos mapeiam para controles do **OWASP Top 10**.  
-Valor empírico: **BSIMM** associa maior cobertura a menor taxa de incidentes em produção; o **DBIR** destaca que ausência de testes sistemáticos aumenta dwell time e impacto.
 
 :::userstory
 **História.**   
@@ -321,7 +289,7 @@ Como **QA / Test Engineer**, quero garantir que todos os requisitos têm valida�
 | L3 | Sim | Testes completos + revisão independente |
 
 **Integração no SDLC.**
-| Fase | Gatilho | Responsável | SLA |
+| Fase | Trigger | Responsável | SLA |
 |---|---|---|---|
 | Sprint review | Execução de testes | QA | Por sprint |
 
@@ -334,11 +302,6 @@ Como **QA / Test Engineer**, quero garantir que todos os requisitos têm valida�
 
 **Contexto.**  
 A Equipa de Segurança deve validar requisitos aplicados e aprovar exceções, garantindo que as decisões de risco são formalmente controladas.
-
-**📖 Rationale científico.**  
-Alinhado com **OWASP SAMM Governance/Policy & Compliance**, **BSIMM CR3.2** (auditoria de controlos), **NIST SSDF RV.4** (formal approval of residual risk) e **ISO/IEC 27005** (aceitação de risco).  
-Mitiga riscos de **CWE-1191 (Improper Restriction of Control Operations)**, abuso de privilégios **CAPEC-233** e decisões não documentadas que fragilizam accountability.  
-Valor empírico: revisões independentes (dados **ENISA** e **DBIR**) reduzem falhas não detetadas e reforçam conformidade.
 
 :::userstory
 **História.**   
@@ -369,7 +332,7 @@ Como **Equipa de Segurança / AppSec**, quero validar a aplicação dos requisit
 | L3 | Sim | Revisão formal + mitigação exigida |
 
 **Integração no SDLC.**
-| Fase | Gatilho | Responsável | SLA |
+| Fase | Trigger | Responsável | SLA |
 |---|---|---|---|
 | Release | Aprovação final | AppSec | Antes do go-live |
 
@@ -382,10 +345,6 @@ Como **Equipa de Segurança / AppSec**, quero validar a aplicação dos requisit
 
 **Contexto.**  
 No arranque do projeto e sempre que existam alterações de âmbito, deve existir um **catálogo versionado de requisitos (REQ-XXX)**, derivado da baseline organizacional e filtrado pela criticidade.
-
-**📖 Rationale científico.**  
-Recomendado por **NIST SSDF RV.1/RV.2** (documentação e rastreabilidade), **BSIMM SR1.5** (associar requisitos a artefactos) e **OWASP SAMM Governance/Policy & Compliance** (gestão de políticas/requirements).  
-Mitiga **OSC&R – Requirements Coverage Gaps** e **CWE-693**, garantindo consistência, governança e auditabilidade.
 
 :::userstory
 **História.**  
@@ -416,7 +375,7 @@ Como **AppSec/PO/TL**, quero estabelecer e manter um catálogo de requisitos de 
 | L3 | Sim | Catálogo L3 + reforços (p.ex., supply-chain, hardening) |
 
 **Integração no SDLC.**
-| Fase | Gatilho | Responsável | SLA |
+| Fase | Trigger | Responsável | SLA |
 |---|---|---|---|
 | Início | Kick-off / nova release major | AppSec + PO + TL | Antes do backlog inicial / antes da release |
 
@@ -430,10 +389,6 @@ Como **AppSec/PO/TL**, quero estabelecer e manter um catálogo de requisitos de 
 
 **Contexto.**  
 Cada requisito ativo **deve** ter uma forma de validação associada (teste, revisão, scanner, evidência manual), com **resultado e prova** ligados ao requisito.
-
-**📖 Rationale científico.**  
-Apoiado por **NIST SSDF RV.3** (definir/verificar critérios), **OWASP SAMM Verification/Testing**, **BSIMM PT3.x** e **DSOMM** (design & development validation).  
-Mitiga **CWE-20**, **CWE-285**, **CWE-522** (conforme domínio), reforçando a eficácia dos controlos através de evidência objetiva.
 
 :::userstory
 **História.**  
@@ -464,7 +419,7 @@ Como **QA/AppSec/TL**, quero validar cada requisito REQ-XXX segundo os critério
 | L3 | Sim | Cobertura integral + revisão independente e gates automáticos |
 
 **Integração no SDLC.**
-| Fase | Gatilho | Responsável | SLA |
+| Fase | Trigger | Responsável | SLA |
 |---|---|---|---|
 | Testes/Code Review | Execução de pipelines ou checkpoints de qualidade | QA + AppSec + TL | Por sprint e antes de release |
 

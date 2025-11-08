@@ -2,7 +2,7 @@
 id: achievable-maturity
 title: Mapeamento de Maturidade – Capítulo 13
 sidebar_position: 10
-tags: [canon, maturidade, SAMM, BSIMM, SSDF, DSOMM]
+tags: [canon, maturidade, SAMM, SSDF, DSOMM]
 ---
 
 # 📈 Maturidade - Formação e Onboarding Seguro

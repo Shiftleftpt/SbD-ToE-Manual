@@ -5,18 +5,6 @@ description: Princípios, práticas e controlos para garantir gestão segura de 
 tags: [dependencias, sbom, sca, supply-chain, oss, cicd, governance]
 sidebar_position: 0
 ---
-import Badge from '@site/src/components/Badge';
-
-<div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.5rem', marginBottom: '1rem' }}>
-  
-  <Badge color="info">SAMM: 2 / 3</Badge>
-  <Badge color="info">BSIMM: AA1.2, AA2.1, CMVM1.1</Badge>
-  <Badge color="info">SSDF: PW.4, PW.7</Badge>
-  <Badge color="info">SLSA: Nível 2 / 4</Badge>
-  <Badge color="info">DSOMM: 3 / 4 (média)</Badge>
-  <a href="./achievable-maturity" style={{ marginLeft: 'auto', fontSize: '0.9rem' }}>📄 Ver análise de maturidade</a>
-</div>
-
 
 :::tip Capítulo Operacional
 Este capítulo é considerado **operacional** no modelo *Security by Design – Theory of Everything (SbD-ToE)*.  

@@ -47,11 +47,6 @@ Cada papel contribui com uma parte da cadeia de confiança, e apenas a colabora�
 **Contexto.**  
 A base de uma imagem insegura compromete todo o ciclo de vida.
 
-**📖 Rationale científico.**  
-Frameworks como **SSDF PW.4/PS.3/RV.3**, **SAMM (Construction & Verification)** e **BSIMM CMVM1.1/SE2.5** prescrevem a seleção de bases confiáveis. O **SLSA** coloca a proveniência como fator de confiança obrigatório.  
-Mitiga ameaças como **CWE-829 (Inclusão de componentes não confiáveis)** e **OSC&R: Compromise Base Image**.  
-Estudos da **Sonatype** e da **Sysdig** mostram que o uso de *pinning* por digest e imagens oficiais reduz drasticamente a taxa de CVEs críticos em produção.  
-
 :::userstory
 **História.**   
 Como **Dev Team**, quero construir imagens a partir de bases confiáveis e **pinned**, para reduzir risco de vulnerabilidades e supply chain.  
@@ -78,7 +73,7 @@ Como **Dev Team**, quero construir imagens a partir de bases confiáveis e **pin
 | Imagens oficiais | Digest fixo + scanner High/Critical | Digest fixo + scanner Medium+ + SBOM |
 
 **Integração no SDLC.**  
-| Fase | Gatilho | Responsável | SLA |
+| Fase | Trigger | Responsável | SLA |
 |------|---------|-------------|-----|
 | Desenvolvimento | Construção inicial da imagem | Dev Team | Imediato |
 
@@ -90,11 +85,6 @@ xref:sbd-toe:cap07:intro
 ### US-02 – Scanning automático em CI/CD
 **Contexto.**  
 Identificar vulnerabilidades cedo reduz risco em produção.  
-
-**📖 Rationale científico.**  
-**SSDF RV.2/RV.3**, **SAMM Verification** e **BSIMM SE2.5** reforçam a necessidade de scanners integrados no pipeline.  
-Mitiga riscos como **CWE-1104** e **OSC&R: Image Vulnerabilities**.  
-Relatórios da **ENISA** mostram que pipelines com *gating* reduzem até 70% de vulnerabilidades em produção.  
 
 :::userstory
 **História.**   
@@ -122,7 +112,7 @@ Como **DevOps**, quero integrar scanners de imagens em pipelines CI/CD, para blo
 | Aviso | Bloqueio High/Critical | Bloqueio Medium+ |
 
 **Integração no SDLC.**  
-| Fase | Gatilho | Responsável | SLA |
+| Fase | Trigger | Responsável | SLA |
 |------|---------|-------------|-----|
 | CI/CD | Build da imagem | DevOps | Automático |
 
@@ -134,11 +124,6 @@ xref:sbd-toe:cap05:intro
 ### US-03 – Assinatura e proveniência de imagens
 **Contexto.**  
 Sem proveniência confiável, imagens podem ser alteradas maliciosamente.  
-
-**📖 Rationale científico.**  
-O **SLSA v1.0** exige proveniência auditável. O **SSDF RV.3** e o **BSIMM CMVM/CP1.2** reforçam atestados de integridade.  
-Mitiga **CWE-353/494**, **OSC&R: Artifact Tampering**.  
-Exemplos como SolarWinds mostram impacto devastador de ausência de assinatura.  
 
 :::userstory
 **História.**   
@@ -166,7 +151,7 @@ Como **AppSec**, quero que todas as imagens sejam assinadas e tenham proveniênc
 | Opcional | Recomendado | Obrigatório |
 
 **Integração no SDLC.**  
-| Fase | Gatilho | Responsável | SLA |
+| Fase | Trigger | Responsável | SLA |
 |------|---------|-------------|-----|
 | Pré-produção | Publicação em registry | AppSec + DevOps | Antes do deploy |
 
@@ -178,11 +163,6 @@ xref:sbd-toe:cap07:intro
 ### US-04 – Políticas de execução em runtime
 **Contexto.**  
 Um container sem restrições expande a superfície de ataque.  
-
-**📖 Rationale científico.**  
-Referências: **NIST SP 800-190**, **Kubernetes Pod Security Standards**.  
-Mitiga **CWE-250**, **OSC&R: Privileged Container**.  
-Relatórios **Sysdig** provam eficácia de `runAsNonRoot` e *capabilities drop*.  
 
 :::userstory
 **História.**   
@@ -211,7 +191,7 @@ Como **DevOps**, quero aplicar políticas de runtime (OPA/Kyverno), para garanti
 | Non-root básico | Capabilities reduzidas | Policies completas + auditoria |
 
 **Integração no SDLC.**  
-| Fase | Gatilho | Responsável | SLA |
+| Fase | Trigger | Responsável | SLA |
 |------|---------|-------------|-----|
 | Produção | Criação de pod | DevOps | Imediato |
 
@@ -223,11 +203,6 @@ xref:sbd-toe:cap12:intro
 ### US-05 – Monitorização e resposta a incidentes
 **Contexto.**  
 Ataques de runtime só são detetados com monitorização ativa.  
-
-**📖 Rationale científico.**  
-Referências: **NIST SP 800-137**, **SSDF RV.1**, **DSOMM Ops**.  
-Mitiga **CWE-778 (Insufficient Logging)**, **OSC&R: Runtime Threats**.  
-Relatórios mostram que ferramentas como **Falco** reduzem *MTTD/MTTR* drasticamente.  
 
 :::userstory
 **História.**   
@@ -255,7 +230,7 @@ Como **SecOps**, quero monitorizar containers em execução e gerar alertas, par
 | Básico | Alertas críticos configurados | Cobertura total + resposta auto |
 
 **Integração no SDLC.**  
-| Fase | Gatilho | Responsável | SLA |
+| Fase | Trigger | Responsável | SLA |
 |------|---------|-------------|-----|
 | Produção | Execução de containers | SecOps + GRC | Imediato |
 
@@ -267,11 +242,6 @@ xref:sbd-toe:cap12:intro
 ### US-06 – SBOM de imagens
 **Contexto.**  
 Sem SBOM, não há visibilidade rápida sobre CVEs presentes.  
-
-**📖 Rationale científico.**  
-**SSDF PW.4/RV.3**, **SLSA Provenance**, **BSIMM CMVM**.  
-Mitiga **CWE-1104**, **OSC&R: Inaccurate Inventory**.  
-Estudos **DBIR** e **Sonatype** provam aceleração de resposta a CVEs com SBOM CycloneDX/SPDX.  
 
 :::userstory
 **História.**   
@@ -299,7 +269,7 @@ Como **DevOps**, quero gerar SBOM a cada imagem construída, para permitir rastr
 | SBOM básico | Completo + retenção | Completo + integração SLSA |
 
 **Integração no SDLC.**  
-| Fase | Gatilho | Responsável | SLA |
+| Fase | Trigger | Responsável | SLA |
 |------|---------|-------------|-----|
 | CI/CD | Build de imagem | DevOps | Em cada build |
 
@@ -311,11 +281,6 @@ xref:sbd-toe:cap05:intro
 ### US-07 – Governação de registries
 **Contexto.**  
 Pulls de registries não confiáveis expõem a supply chain.  
-
-**📖 Rationale científico.**  
-**SSDF RV.3/GV.2**, **SLSA Provenance**, **BSIMM CMVM**.  
-Mitiga **CWE-494/353**, **OSC&R: Registry Poisoning**.  
-Estudos **OpenSSF** mostram que allowlists reduzem significativamente risco de typosquatting.  
 
 :::userstory
 **História.**   
@@ -343,7 +308,7 @@ Como **DevOps**, quero impor allowlist de registries e digest-only, para impedir
 | Aviso | Bloqueio origem | Bloqueio origem + digest-only |
 
 **Integração no SDLC.**  
-| Fase | Gatilho | Responsável | SLA |
+| Fase | Trigger | Responsável | SLA |
 |------|---------|-------------|-----|
 | Deploy | Definição de workload | DevOps | Antes do go-live |
 
@@ -352,11 +317,6 @@ Como **DevOps**, quero impor allowlist de registries e digest-only, para impedir
 ### US-08 – Segredos fora da imagem
 **Contexto.**  
 Segredos embebidos em imagens criam exposição difícil de revogar.  
-
-**📖 Rationale científico.**  
-**SSDF PW.6/PS.3**, **BSIMM SE2.x**.  
-Mitiga **CWE-798**, **OSC&R: Secret Exposure**.  
-Relatórios pós-incidente mostram que OIDC/TTL curto reduz impacto de *secret sprawl*.  
 
 :::userstory
 **História.**   
@@ -384,7 +344,7 @@ Como **DevOps**, quero proibir segredos na imagem e usar pull-secrets dinâmicos
 | Recomendado | Obrigatório | Obrigatório + rotação automática |
 
 **Integração no SDLC.**  
-| Fase | Gatilho | Responsável | SLA |
+| Fase | Trigger | Responsável | SLA |
 |------|---------|-------------|-----|
 | Build/Deploy | Build/Deploy | DevOps | Em cada execução |
 
@@ -393,11 +353,6 @@ Como **DevOps**, quero proibir segredos na imagem e usar pull-secrets dinâmicos
 ### US-09 – RBAC mínimo e ServiceAccounts
 **Contexto.**  
 Workloads com permissões excessivas ampliam impacto de compromisso.  
-
-**📖 Rationale científico.**  
-**NIST SP 800-190**, **SSDF PS.2**, **OWASP K8s Top Ten**.  
-Mitiga **CWE-269/284**, **OSC&R: Abuse of Default SA**.  
-Relatórios **Sysdig** mostram que abuso de SA por omissão é frequente.  
 
 :::userstory
 **História.**   
@@ -425,7 +380,7 @@ Como **Plataforma**, quero ServiceAccount dedicada com RBAC mínimo, para reduzi
 | Recomendado | Obrigatório | Obrigatório + revisão periódica |
 
 **Integração no SDLC.**  
-| Fase | Gatilho | Responsável | SLA |
+| Fase | Trigger | Responsável | SLA |
 |------|---------|-------------|-----|
 | Deploy | Definição de workload | Plataforma | Antes do go-live |
 
@@ -434,11 +389,6 @@ Como **Plataforma**, quero ServiceAccount dedicada com RBAC mínimo, para reduzi
 ### US-10 – NetworkPolicy
 **Contexto.**  
 Sem segmentação de rede, workloads comprometidos exfiltram dados.  
-
-**📖 Rationale científico.**  
-**NIST SP 800-190**, **CIS K8s Benchmark**.  
-Mitiga **OSC&R: Lateral Movement**, **CAPEC-601**.  
-Estudos mostram que NetworkPolicies reduzem o *blast radius*.  
 
 :::userstory
 **História.**   
@@ -466,7 +416,7 @@ Como **Plataforma**, quero aplicar NetworkPolicy com egress controlado, para lim
 | Ingress básico | Ingress + egress crítico | Ingress + egress total + auditoria |
 
 **Integração no SDLC.**  
-| Fase | Gatilho | Responsável | SLA |
+| Fase | Trigger | Responsável | SLA |
 |------|---------|-------------|-----|
 | Design/Deploy | Criação de namespaces | Plataforma | Antes da abertura de tráfego |
 
@@ -475,11 +425,6 @@ Como **Plataforma**, quero aplicar NetworkPolicy com egress controlado, para lim
 ### US-11 – Golden Base Images
 **Contexto.**  
 Bases heterogéneas aumentam custo e risco.  
-
-**📖 Rationale científico.**  
-**SSDF RV.3/PS.3**, **BSIMM CMVM**, **SLSA Baselines**.  
-Mitiga **CWE-1104**, **OSC&R: Outdated Base Images**.  
-Estudos mostram que imagens curadas + SLA (7/30 dias) reduzem MTTR.  
 
 :::userstory
 **História.**   
@@ -507,7 +452,7 @@ Como **Plataforma/AppSec**, quero manter catálogo de Golden Base Images com SLA
 | Recomendado | Obrigatório | Obrigatório + rollout acelerado |
 
 **Integração no SDLC.**  
-| Fase | Gatilho | Responsável | SLA |
+| Fase | Trigger | Responsável | SLA |
 |------|---------|-------------|-----|
 | Operação | CVE / revisão | Plataforma + AppSec | 7–30 dias |
 
@@ -516,11 +461,6 @@ Como **Plataforma/AppSec**, quero manter catálogo de Golden Base Images com SLA
 ### US-12 – Governação de builders e runners
 **Contexto.**  
 Builders comprometidos comprometem todas as releases.  
-
-**📖 Rationale científico.**  
-**SLSA Build L2–L3**, **SSDF PW.7/RV.3**, **BSIMM CMVM1.3**.  
-Mitiga **OSC&R: Poisoned Pipeline Execution**.  
-Estudos mostram que runners ephemerais e assinados reduzem persistência e adulteração.  
 
 :::userstory
 **História.**   
@@ -548,7 +488,7 @@ Como **DevOps**, quero que builders e runners sejam mínimos, ephemerais e assin
 | Recomendado | Obrigatório | Obrigatório + segmentação rede |
 
 **Integração no SDLC.**  
-| Fase | Gatilho | Responsável | SLA |
+| Fase | Trigger | Responsável | SLA |
 |------|---------|-------------|-----|
 | CI/CD | Execução de pipeline | DevOps | Em cada pipeline |
 

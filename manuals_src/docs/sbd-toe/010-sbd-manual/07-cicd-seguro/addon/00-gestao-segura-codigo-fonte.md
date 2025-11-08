@@ -88,11 +88,3 @@ A segurança do pipeline começa **antes da execução automatizada** - começa 
 - Manipulação do histórico para ocultar atividades maliciosas.
 
 ---
-
-## 🧭 Referências
-
-- [NIST SSDF – PW.4: Manage Code Changes](https://csrc.nist.gov/publications/detail/sp/800-218/final)
-- [OWASP CI/CD Security – 1. Source Control Protection](https://owasp.org/www-project-cicd-security/#1-source-control-protection)
-- [SLSA – Source Requirements](https://slsa.dev/spec/v1.0/source)
-- [BSIMM – SE1.2, SE2.1, CR1.4]
-- [SAMM – Construction – Version Control, Change Management]

@@ -115,7 +115,7 @@ justification: Necessário para investigação de comportamento anómalo
 
 ---
 
-## 📌 Referências cruzadas
+## 📎 Referências cruzadas
 
 | Documento / Capítulo              | Relação com este tema                             |
 |-----------------------------------|---------------------------------------------------|

@@ -19,7 +19,7 @@ Este capítulo prescreve práticas de **construção segura de imagens, assinatu
 | Ameaça | Fonte | Como surge | Como a prática mitiga | Controlos associados | 🧩 Mitigada apenas por este capítulo? |
 |---|---|---|---|---|---|
 | Imagens base vulneráveis/obsoletas | OWASP Top 10 A06, CAPEC-310, CWE-1104 | Uso de _base images_ com CVEs não corrigidas | _Image scanning_ no CI/CD, políticas de bloqueio por severidade, renovação periódica de _base images_ | *Checklist 3–4*, *Policies: Gestão de Vulnerabilidades*, *Rastreabilidade: SSDF RV.1* | ✅ |
-| Inclusão de dependências inseguras no build | OSC&R **E.4/T.3**, BSIMM ST 1.x | Injeção de libs ou pacotes sem validação | Inventário de componentes na imagem, _scan_ de licenças e CVEs; falha bloqueia _merge/deploy_ | Cap. 05 (SBOM/SCA), *Checklist 3–4* | ❌ (Cap. 05) |
+| Inclusão de dependências inseguras no build | OSC&R **E.4/T.3**,  ST 1.x | Injeção de libs ou pacotes sem validação | Inventário de componentes na imagem, _scan_ de licenças e CVEs; falha bloqueia _merge/deploy_ | Cap. 05 (SBOM/SCA), *Checklist 3–4* | ❌ (Cap. 05) |
 | Conteúdo inesperado no _context_ de build | CAPEC-649 | Ficheiros sensíveis entram no _build context_ | `.dockerignore` rigoroso; _lint_ de Dockerfile; _build_ hermético | *Policies: Construção Segura de Imagens* | ✅ |
 | Configurações inseguras no Dockerfile | CIS Docker 2.x | Uso de `ADD` indevido, `latest`, _layering_ frágil | Linters (Hadolint/Regole), _policy-as-code_ para Dockerfile | *Checklist 6*, *Policies: Construção Segura* | ✅ |
 
@@ -40,7 +40,7 @@ Este capítulo prescreve práticas de **construção segura de imagens, assinatu
 | Ameaça | Fonte | Como surge | Como a prática mitiga | Controlos associados | 🧩 Mitigada apenas por este capítulo? |
 |---|---|---|---|---|---|
 | Acesso indevido a registos | ISO 27001 (alto nível), ENISA | Controlo de acesso frouxo, credenciais partilhadas | Registos privados, RBAC, _scopes_ mínimos, _audit logs_ | *Policies: Governação de Repositórios*, *Checklist 9* | ✅ |
-| Proliferação de imagens obsoletas | CIS, BSIMM SE 2.2 | Ausência de retenção/limpeza | Políticas de retenção e _garbage collection_; _rebuild_ periódico | *Policies: Limpeza/Obsolescência*, *Checklist 12* | ✅ |
+| Proliferação de imagens obsoletas | CIS,  SE 2.2 | Ausência de retenção/limpeza | Políticas de retenção e _garbage collection_; _rebuild_ periódico | *Policies: Limpeza/Obsolescência*, *Checklist 12* | ✅ |
 | Upload de imagens sem controlo | SAMM GOV 1.2 | Qualquer equipa publica artefactos | _Ownership_ formal, _review_ e aprovação de publicação | *Policies: Governação de Repositórios* | ✅ |
 
 ---

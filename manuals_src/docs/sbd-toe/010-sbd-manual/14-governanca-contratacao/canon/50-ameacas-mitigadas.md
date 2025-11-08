@@ -75,6 +75,6 @@ O Capítulo 14 mitiga um conjunto vasto de **ameaças estruturais e organizacion
 - Criam **riscos invisíveis** relacionados com decisões mal documentadas ou não validadas;
 - Afetam **a cadeia de fornecimento, contratos, ownership e accountability organizacional**.
 
-> ✅ Mitiga diretamente **12+ ameaças organizacionais críticas**, com base em fontes como **OWASP DSOMM, ISO 27001, SSDF, BSIMM, ENISA, CAPEC** e outras taxonomias reconhecidas.
+> ✅ Mitiga diretamente **12+ ameaças organizacionais críticas**, com base em fontes como **OWASP DSOMM, ISO 27001, SSDF, ENISA, CAPEC** e outras taxonomias reconhecidas.
 
 > 📌 Este capítulo constitui o **principal pilar de enforcement e rastreabilidade organizacional do SbD-ToE**, garantindo que a segurança não é apenas definida - mas também validada, aplicada e sustentada por estruturas formais.

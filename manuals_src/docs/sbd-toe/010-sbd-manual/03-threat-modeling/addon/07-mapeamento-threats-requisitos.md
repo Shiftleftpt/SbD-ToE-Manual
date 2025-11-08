@@ -80,7 +80,7 @@ Durante a fase de validação de segurança de cada projeto, este mapeamento dev
 | Documento                        | Relação com este ficheiro                            |
 |----------------------------------|------------------------------------------------------|
 | [threat-modeling-ci](./threat-modeling-ci) | Validação automatizada do modelo em pipelines CI/CD |
-| [metodo base] (./addon/metodologia-base)  | Princípios gerais de threat modeling no SbD-ToE     |
+| [metodo base](./addon/metodologia-base)  | Princípios gerais de threat modeling no SbD-ToE     |
 
 ---
 

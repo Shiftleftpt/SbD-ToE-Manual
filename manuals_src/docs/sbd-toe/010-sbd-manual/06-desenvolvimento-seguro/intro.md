@@ -6,20 +6,6 @@ tags: [desenvolvimento, segurança, guidelines de código, linters, SAST, govern
 sidebar_position: 0
 ---
 
-import Badge from '@site/src/components/Badge';
-
-
-
-<div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.5rem', marginBottom: '1rem' }}>
-  
-  <Badge color="info">SAMM: 2 / 3</Badge>
-  <Badge color="info">BSIMM: SE2.3, SE2.4, CP1.1</Badge>
-  <Badge color="info">SSDF: PS.1, PS.2, RV.1, RV.2, PO.2</Badge>
-  <Badge color="info">SLSA: Nível 2 / 4</Badge>
-  <Badge color="info">DSOMM: 2 / 3 (média)</Badge>
-  <a href="./achievable-maturity" style={{ marginLeft: 'auto', fontSize: '0.9rem' }}>📄 Ver análise de maturidade</a>
-</div>
-
 :::tip Capítulo Operacional
 Este capítulo é considerado **operacional** no modelo *Security by Design – Theory of Everything (SbD-ToE)*.  
 A sua função é **aplicar, automatizar e validar** as práticas definidas nos capítulos basilares, garantindo a sua execução contínua e mensurável.  

@@ -5,17 +5,6 @@ description: Estruturas, políticas e práticas para assegurar governação orga
 tags: [governanca, contratacao, fornecedores, excecoes, rastreabilidade, conformidade, KPIs]
 sidebar_position: 0
 ---
-import Badge from '@site/src/components/Badge';
-
-<div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.5rem', marginBottom: '1rem' }}>
-  
-  <Badge color="info">SAMM: 2 / 3</Badge>
-  <Badge color="info">BSIMM: CP1.1, SM1.3, CMVM3.3</Badge>
-  <Badge color="info">SSDF: PO.1, PO.4, GV.1</Badge>
-  <Badge color="info">SLSA: Nível 3 / 4</Badge>
-  <Badge color="info">DSOMM: 3 / 3 (Governance)</Badge>
-  <a href="./achievable-maturity" style={{ marginLeft: 'auto', fontSize: '0.9rem' }}>📄 Ver análise de maturidade</a>
-</div>
 
 :::note Capítulo Organizacional
 Este capítulo é considerado **organizacional** no modelo *Security by Design – Theory of Everything (SbD-ToE)*.  

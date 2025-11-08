@@ -84,11 +84,3 @@ Os runners (ou agentes de execução) são os ambientes onde os pipelines CI/CD 
 - Compromisso da build por manipulação do ambiente (OSC&R: CI0005).
 
 ---
-
-## 🧭 Referências
-
-- [SLSA – Build Isolation Requirements](https://slsa.dev/spec/v1.0/)
-- [OWASP CI/CD Security – 4. Execution Environment](https://owasp.org/www-project-cicd-security/#4-execution-environment)
-- [NIST SSDF – PW.5: Harden Execution Environment](https://csrc.nist.gov/publications/detail/sp/800-218/final)
-- [BSIMM – SE2.2, SE2.4]
-- [SAMM – Secure Build – Environment Hardening, Deployment Isolation]

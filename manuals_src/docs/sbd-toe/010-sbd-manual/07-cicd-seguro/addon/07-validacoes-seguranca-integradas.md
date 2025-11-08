@@ -96,11 +96,3 @@ Estas validações devem ser proporcionais ao nível de risco da aplicação, ma
 - Ocultação, subvalorização ou omissão de findings críticos em produção.
 
 ---
-
-## 🧭 Referências
-
-- [OWASP CI/CD Security – 3. Validation and Testing](https://owasp.org/www-project-cicd-security/#3-validation-and-testing)
-- [NIST SSDF – PS.3, PW.7, RV.3](https://csrc.nist.gov/publications/detail/sp/800-218/final)
-- [OpenSSF Scorecard](https://github.com/ossf/scorecard)
-- [BSIMM – SE1.4, CR3.1, CMVM1.5]
-- [SAMM – Verification – Security Testing Automation]

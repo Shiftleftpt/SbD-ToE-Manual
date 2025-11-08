@@ -39,20 +39,6 @@ Estas políticas:
 
 ---
 
-## 📎 Correspondência com frameworks normativas
-
-| Framework             | Requisitos cobertos pelas políticas acima                                  |
-|----------------------|-----------------------------------------------------------------------------|
-| **OWASP ASVS v5**     | V1, V2, V5, V14 - definição, aplicação e validação de requisitos            |
-| **NIST SSDF**         | PW.1, PW.4 - definição e revisão formal de requisitos de segurança         |
-| **ISO/IEC 27001**     | A.14.1.1, A.14.2.5 - requisitos de segurança e validação em sistemas        |
-| **ENISA SDLC**        | Sec. 2.1, 2.2 - definição, aprovação e revisão formal de requisitos         |
-| **CIS Controls v8**   | Control 16 - políticas para definição, aplicação e verificação contínua     |
-| **OWASP SAMM**        | Design → Security Requirements (níveis 1 a 3)                               |
-| **BSIMM13**           | Intelligence → Requirements and Attack Models                              |
-
----
-
 ## 🧩 Estrutura sugerida de cada política
 
 Cada política organizacional deve conter, no mínimo:

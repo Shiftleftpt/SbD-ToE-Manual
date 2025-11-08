@@ -17,7 +17,7 @@ Só assim a segurança em CI/CD deixa de ser teórica e passa a ser **prática o
 ## 🧭 Quando aplicar
 
 A segurança em pipelines não acontece apenas quando algo corre mal - ela é parte do seu ADN desde o primeiro commit.  
-Cada vez que se cria, altera ou promove um pipeline, existem gatilhos que exigem controlos específicos:
+Cada vez que se cria, altera ou promove um pipeline, existem triggers que exigem controlos específicos:
 
 | Momento gatilho                                   | Objetivo de segurança                                | Papéis principais        |
 |--------------------------------------------------|------------------------------------------------------|--------------------------|
@@ -66,11 +66,6 @@ Para que a segurança não se perca em generalidades, cada prática é expressa 
 **Contexto.**  
 Sem controlo sobre o repositório, qualquer pipeline é vulnerável.
 
-**📖 Rationale científico.**  
-Alinhado com **SSDF PS.3** e **BSIMM SE2.5**.  
-Mitiga riscos de **CWE-494** e **OSC&R: Source Code Tampering**.  
-Estudos (DBIR 2023) mostram que falhas no controlo de branches estiveram na origem de 62% dos incidentes investigados.
-
 :::userstory
 **História.**   
 Como **Dev Team**, quero que todas as alterações ao repositório sejam protegidas por PR e revisão obrigatória, para garantir integridade.
@@ -97,11 +92,6 @@ Como **Dev Team**, quero que todas as alterações ao repositório sejam protegi
 **Contexto.**  
 Pipelines inseguros são alvos privilegiados de ataque.
 
-**📖 Rationale científico.**  
-Coberto por **DSOMM Build Security**, **SSDF PW.4** e **BSIMM CP1.2**.  
-Mitiga **CAPEC-438 (Pipeline Poisoning)**.  
-A **ENISA** alerta que adulteração de pipelines é vetor dominante em supply chain.
-
 :::userstory
 **História.**   
 Como **DevOps**, quero pipelines versionados e aprovados por PR, para evitar alterações não auditadas.
@@ -126,11 +116,6 @@ Como **DevOps**, quero pipelines versionados e aprovados por PR, para evitar alt
 
 **Contexto.**  
 Detetar cedo é mais barato e eficaz.
-
-**📖 Rationale científico.**  
-Referências: **SSDF RV.3**, **SAMM Verification**.  
-Mitiga **CWE-89, CWE-798, CWE-77**.  
-Estudos da **Veracode** apontam redução de 80% nos custos de correção quando deteção é feita em CI.
 
 :::userstory
 **História.**   
@@ -157,11 +142,6 @@ Como **Dev Team**, quero que o pipeline execute scanners de segurança, para imp
 **Contexto.**  
 Segredos estáticos expõem a organização.
 
-**📖 Rationale científico.**  
-Baseado em **SSDF PW.7**, **BSIMM CMVM1.3**.  
-Mitiga **CWE-798** e **OSC&R: Credential Leakage**.  
-A GitGuardian (2023) reportou >10M segredos expostos em repositórios públicos.
-
 :::userstory
 **História.**   
 Como **DevOps**, quero segredos injetados por OIDC com TTL curto, para reduzir risco de abuso.
@@ -186,11 +166,6 @@ Como **DevOps**, quero segredos injetados por OIDC com TTL curto, para reduzir r
 
 **Contexto.**  
 Runners inseguros comprometem todo o ecossistema.
-
-**📖 Rationale científico.**  
-Centrado em **SLSA Provenance** e **SSDF GV.2**.  
-Mitiga **CWE-250** e **CAPEC-664**.  
-Casos como **Codecov 2021** provam a necessidade de runners ephemerais.
 
 :::userstory
 **História.**   
@@ -217,11 +192,6 @@ Como **DevOps**, quero runners ephemerais e segregados, para reduzir persistênc
 **Contexto.**  
 Artefactos não assinados perdem legitimidade.
 
-**📖 Rationale científico.**  
-Central em **SLSA v1.0**, **SSDF RV.3**.  
-Mitiga **CWE-353** e ataques como SolarWinds.  
-A **Linux Foundation** (2022) coloca proveniência como prioridade #1.
-
 :::userstory
 **História.**   
 Como **DevOps**, quero que todos os artefactos sejam assinados e tenham proveniência validada, para garantir confiança.
@@ -246,11 +216,6 @@ Como **DevOps**, quero que todos os artefactos sejam assinados e tenham proveni�
 
 **Contexto.**  
 Nem todas as apps exigem o mesmo rigor.
-
-**📖 Rationale científico.**  
-Alinhado com **SSDF GV.2**, **SAMM Governance**.  
-Mitiga **OSC&R: Weak Enforcement**.  
-Segundo o DBIR, gates proporcionais reduzem em 50% falhas críticas.
 
 :::userstory
 **História.**   
@@ -277,11 +242,6 @@ Como **AppSec**, quero gates distintos por L1–L3, para aplicar segurança prop
 **Contexto.**  
 Cobertura limitada cria pontos cegos.
 
-**📖 Rationale científico.**  
-Referências: **SSDF PW.5**, **BSIMM SE3.5**.  
-Mitiga **CWE-1104**.  
-A **ENISA 2023** indica que 45% das organizações não monitorizam containers sem SBOM.
-
 :::userstory
 **História.**   
 Como **AppSec**, quero scanners de containers e SBOM em pipelines, para cobrir supply chain.
@@ -307,11 +267,6 @@ Como **AppSec**, quero scanners de containers e SBOM em pipelines, para cobrir s
 **Contexto.**  
 Sem rastreio, auditoria é impossível.
 
-**📖 Rationale científico.**  
-Baseado em **SSDF RV.3**, **BSIMM CMVM1.3**.  
-Mitiga **CWE-778**.  
-Organizações sem rastreabilidade têm 2x maior MTTR (DBIR).
-
 :::userstory
 **História.**   
 Como **GRC**, quero rastrear commit→pipeline→release, para suportar auditorias.
@@ -336,11 +291,6 @@ Como **GRC**, quero rastrear commit→pipeline→release, para suportar auditori
 
 **Contexto.**  
 Exceções mal geridas tornam-se risco estrutural.
-
-**📖 Rationale científico.**  
-Referências: **SSDF GV.3**, **BSIMM CP1.2**.  
-Mitiga **CAPEC-220**.  
-O DBIR 2023 reporta 35% de incidentes graves associados a bypass sem registo.
 
 :::userstory
 **História.**   

@@ -85,7 +85,7 @@ Este documento define os critérios mínimos para a utilização segura de depen
 
 - Scans automatizados em cada commit/PR (`dependency-check`, `snyk test`, etc.).
 - Aprovação manual de cada novo pacote.
-- Gatilhos de bloqueio no pipeline por vulnerabilidade severa.
+- Triggers de bloqueio no pipeline por vulnerabilidade severa.
 - Revisão do changelog e do repositório da dependência.
 
 ---

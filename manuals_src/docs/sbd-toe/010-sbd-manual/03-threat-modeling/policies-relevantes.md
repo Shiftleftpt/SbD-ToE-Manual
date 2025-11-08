@@ -39,18 +39,6 @@ Estas políticas:
 
 ---
 
-## 📎 Correspondência com frameworks normativas
-
-| Framework / Norma      | Requisitos cobertos pelas políticas acima                                                        |
-|------------------------|--------------------------------------------------------------------------------------------------|
-| **NIST SSDF (PW.3.1)** | Identificação e documentação formal de ameaças, rastreabilidade de requisitos e decisões         |
-| **OWASP SAMM**         | Design > Threat Assessment: sessões regulares e rastreáveis, aplicáveis por nível de risco       |
-| **BSIMM13**            | Architecture Analysis: AA1.1, AA2.1 - integração iterativa do threat modeling                     |
-| **ISO/IEC 27005**      | Avaliação de riscos como base para controlo - Threat Modeling como prática de análise de risco   |
-| **ENISA SDLC**         | Reforço da integração do threat modeling em fases iniciais e revisão contínua do design          |
-
----
-
 ## 📋 Estrutura sugerida de cada política
 
 Cada política organizacional deve conter, no mínimo:

@@ -57,11 +57,6 @@ Sem uma estratégia clara, a cobertura torna-se desigual e impossível de audita
 **Contexto.**  
 Sem estratégia, a cobertura é desigual e difícil de auditar.
 
-**📖 Rationale científico.**  
-Referências: SSDF **RV.1**, **PS.2**; OWASP SAMM **ST.1**; BSIMM **T1.3**; ISO/IEC **27005**; DSOMM (Testing).  
-Mitiga: OSC&R *Missing Validation*, **CWE-693**.  
-Evidência: programas BSIMM/DBIR mostram que equipas com estratégia formal detetam falhas mais cedo e com menor variabilidade.  
-
 :::userstory
 **História.**   
 Como **AppSec**, quero **definir uma estratégia de testes de segurança por aplicação**, para **assegurar cobertura proporcional ao risco e rastreabilidade com requisitos do Cap. 02**.
@@ -88,7 +83,7 @@ Como **AppSec**, quero **definir uma estratégia de testes de segurança por apl
 | L3 | Sim | + fuzzing/IAST + PenTest |
 
 **Integração no SDLC.**  
-| Fase | Gatilho | Responsável | SLA |
+| Fase | Trigger | Responsável | SLA |
 |------|---------|-------------|-----|
 | Planeamento | Classificação Lx / kick-off | AppSec | Até ao fim do 1.º sprint |
 
@@ -101,11 +96,6 @@ Executar SAST no momento do PR garante que vulnerabilidades nunca chegam à *bra
 
 **Contexto.**  
 PRs sem SAST permitem que vulnerabilidades entrem cedo no código base.
-
-**📖 Rationale científico.**  
-Referências: SSDF **PW.6**, **RV.3**; SAMM **SM.2**; BSIMM **T2.4**; OWASP Top 10.  
-Mitiga: **CWE-20**, **CWE-79**, **CWE-89**, OSC&R *Source Code Weaknesses*.  
-Evidência: NIST/SEI mostram que correções em PR custam ordens de magnitude menos que em produção.  
 
 :::userstory
 **História.**   
@@ -133,7 +123,7 @@ Como **Dev**, quero **executar SAST automático no PR com comentários inline**,
 | L3 | Bloqueio Medium+ |
 
 **Integração no SDLC.**  
-| Fase | Gatilho | Responsável | SLA |
+| Fase | Trigger | Responsável | SLA |
 |------|---------|-------------|-----|
 | Revisão de código | Abertura de PR | Dev + DevOps | Antes do merge |
 
@@ -146,11 +136,6 @@ Executar DAST autenticado em staging é o passo natural antes de promover uma re
 
 **Contexto.**  
 Muitas falhas surgem apenas autenticadas.
-
-**📖 Rationale científico.**  
-Referências: SSDF **RV.3**; SAMM **ST.2**; BSIMM **T1.3**.  
-Mitiga: **CWE-285**, **CWE-306/307**, CAPEC-115; OSC&R *Broken Access Controls*.  
-Evidência: dados de bug bounties e DBIR confirmam que vulnerabilidades críticas são maioritariamente exploráveis apenas autenticadas.  
 
 :::userstory
 **História.**   
@@ -178,7 +163,7 @@ Como **QA**, quero **executar DAST autenticado em staging**, para **detetar vuln
 | L3 | Automático + cobertura ampliada |
 
 **Integração no SDLC.**  
-| Fase | Gatilho | Responsável | SLA |
+| Fase | Trigger | Responsável | SLA |
 |------|---------|-------------|-----|
 | Staging | Build/Deploy em staging | QA | Antes da aprovação da release |
 
@@ -191,11 +176,6 @@ Gates automáticos são a barreira que impede regressões graves de avançar.
 
 **Contexto.**  
 Sem gates, findings não impedem regressões.
-
-**📖 Rationale científico.**  
-Referências: SSDF **PS.2**, **PW.7**; SLSA **L2+**; SAMM **SM.2**.  
-Mitiga: OSC&R *CI/CD Compromise*, **CWE-693**.  
-Evidência: relatórios BSIMM mostram que *release gates* reduzem em >50% a ocorrência de críticos em produção.  
 
 :::userstory
 **História.**   
@@ -224,7 +204,7 @@ Como **DevOps**, quero **integrar gates automáticos no pipeline (SAST/SCA/IAST)
 | L3 | Bloqueio Medium+ |
 
 **Integração no SDLC.**  
-| Fase | Gatilho | Responsável | SLA |
+| Fase | Trigger | Responsável | SLA |
 |------|---------|-------------|-----|
 | CI/CD | Execução pipeline | DevOps + AppSec | Em cada build |
 
@@ -237,11 +217,6 @@ Testes de regressão automatizados transformam cada correção numa proteção f
 
 **Contexto.**  
 Falhas corrigidas voltam sem regressão automatizada.
-
-**📖 Rationale científico.**  
-Referências: SSDF **RV.6**; SAMM **ST.2**.  
-Mitiga: **CWE-459**, **CWE-388**.  
-Evidência: regressões ligadas a findings reduzem reaberturas e aceleram remediação.  
 
 :::userstory
 **História.**   
@@ -269,7 +244,7 @@ Como **Dev**, quero **criar testes de regressão para findings corrigidos**, par
 | L3 | Cobertura obrigatória |
 
 **Integração no SDLC.**  
-| Fase | Gatilho | Responsável | SLA |
+| Fase | Trigger | Responsável | SLA |
 |------|---------|-------------|-----|
 | Dev/CI | Fecho de finding | Dev | No PR de correção |
 
@@ -282,11 +257,6 @@ O fuzzing, ao explorar entradas inesperadas, revela vulnerabilidades invisíveis
 
 **Contexto.**  
 Entradas complexas revelam falhas não cobertas.
-
-**📖 Rationale científico.**  
-Referências: SSDF **RV.4**; BSIMM **T2.5**; literatura DARPA sobre fuzzing.  
-Mitiga: **CWE-119**, **CWE-20**, **CWE-400**, CAPEC-28/125.  
-Evidência: fuzzing sistemático aumenta a taxa de descoberta de falhas desconhecidas.  
 
 :::userstory
 **História.**   
@@ -314,7 +284,7 @@ Como **QA**, quero **aplicar fuzzing a endpoints críticos**, para **detectar fa
 | L3 | Endpoints críticos obrigatórios |
 
 **Integração no SDLC.**  
-| Fase | Gatilho | Responsável | SLA |
+| Fase | Trigger | Responsável | SLA |
 |------|---------|-------------|-----|
 | Staging | Release candidate | QA | Antes do go-live |
 
@@ -327,11 +297,6 @@ Formalizar critérios e aceitar explicitamente o risco residual é parte da gove
 
 **Contexto.**  
 Lançamentos sem critérios claros diluem responsabilidade.
-
-**📖 Rationale científico.**  
-Referências: SSDF **PS.2**, **GV.2–3**; SAMM **GO.3**; ISO/IEC **27005**; SLSA.  
-Mitiga: **CWE-668**, risco residual não governado.  
-Evidência: releases com critérios claros reduzem incidentes pós-go-live.  
 
 :::userstory
 **História.**   
@@ -359,7 +324,7 @@ Como **Gestão de Produto**, quero **estabelecer critérios de aceitação de se
 | L3 | Nenhum crítico sem exceção formal |
 
 **Integração no SDLC.**  
-| Fase | Gatilho | Responsável | SLA |
+| Fase | Trigger | Responsável | SLA |
 |------|---------|-------------|-----|
 | Pré-release | Release candidate | Gestão + AppSec | Até D-1 do go-live |
 
@@ -372,11 +337,6 @@ O olhar humano ofensivo identifica cadeias de ataque que scanners nunca simulam.
 
 **Contexto.**  
 Validação humana complementa automação.
-
-**📖 Rationale científico.**  
-Referências: BSIMM **PT1.1**; SAMM **ST.3**; OWASP Testing Guide; ISO/IEC **27001**.  
-Mitiga: vetores avançados fora do escopo de scanners (chaining), **CWE-352**, CAPEC-35/152/170.  
-Evidência: em L3, Pentests mantêm maior *hit rate* de vulnerabilidades críticas.  
 
 :::userstory
 **História.**   
@@ -404,7 +364,7 @@ Como **PenTester**, quero **validar ofensivamente a eficácia dos controlos**, p
 | L3 | Obrigatório pré-produção |
 
 **Integração no SDLC.**  
-| Fase | Gatilho | Responsável | SLA |
+| Fase | Trigger | Responsável | SLA |
 |------|---------|-------------|-----|
 | Auditoria / Pré-produção | Janela de auditoria ou L3 crítico | PenTester + AppSec | Relatório antes do go-live |
 

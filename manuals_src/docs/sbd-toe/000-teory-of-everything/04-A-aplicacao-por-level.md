@@ -45,7 +45,7 @@ Aqui a segurança deixa de ser apenas defensiva e torna-se disciplina sistemáti
 - Classificação completa da criticidade com múltiplos eixos (Cap. 01).  
 - Requisitos reforçados alinhados com ameaças prevalentes (Cap. 02).  
 - Sessões de threat modeling documentadas (Cap. 03).  
-- Revisão arquitetural formal com padrões seguros (Cap. 04).  
+- Revisão da arquitetura formal com padrões seguros (Cap. 04).  
 - SBOM automatizado com scanners em pipeline (Cap. 05).  
 - Pipelines CI/CD com gates de aprovação obrigatórios (Cap. 07).  
 - IaC validado com linters e *policy-as-code* (Cap. 08).  
@@ -56,7 +56,7 @@ Aqui a segurança deixa de ser apenas defensiva e torna-se disciplina sistemáti
 - Formação contínua adaptada a funções (Cap. 13).  
 - Cláusulas contratuais reforçadas com fornecedores (Cap. 14).  
 
-Ao introduzir threat modeling obrigatório, revisões arquiteturais formais e automação de SBOM, este nível cria disciplina e consistência.  
+Ao introduzir threat modeling obrigatório, revisões de arquitetura formais e automação de SBOM, este nível cria disciplina e consistência.  
 Os pipelines deixam de ser apenas mecanismos de integração e tornam-se pontos de controlo que bloqueiam versões inseguras.  
 Do ponto de vista regulatório, estas práticas alinham-se com obrigações de NIS2 (gestão de risco digital, reporte de incidentes), DORA (resiliência operacional e testes periódicos), PCI-DSS (proteção de dados financeiros) e HIPAA (salvaguarda de informação clínica).  
 L2 é, em muitos casos, o nível em que organizações atingem uma zona de conformidade robusta com normas e regulamentos transversais.

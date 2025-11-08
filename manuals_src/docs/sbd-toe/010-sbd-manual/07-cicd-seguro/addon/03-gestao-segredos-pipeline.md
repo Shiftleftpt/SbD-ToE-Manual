@@ -89,11 +89,3 @@ Esta prática define os controlos obrigatórios para garantir a **confidencialid
 - Acesso lateral por pipelines não autorizados ou jobs maliciosos.
 
 ---
-
-## 🧭 Referências
-
-- [OWASP CI/CD Security – 2. Secret Management](https://owasp.org/www-project-cicd-security/#2-secret-management)
-- [NIST SSDF – PW.6: Manage Secrets](https://csrc.nist.gov/publications/detail/sp/800-218/final)
-- [SLSA – Build Isolation & Parameter Injection](https://slsa.dev/spec/v1.0/)
-- [BSIMM – SE2.5, CR2.3]
-- [SAMM – Secure Build – Environment Hardening]

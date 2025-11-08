@@ -50,19 +50,6 @@ Estas políticas:
 
 ---
 
-## 📎 Correspondência com frameworks normativas
-
-| Framework           | Requisitos cobertos pelas políticas acima                                                  |
-|--------------------|---------------------------------------------------------------------------------------------|
-| **NIST SSDF**       | RV.1 (Security Testing), RV.3 (Vulnerability Resolution), PO.2 (Validation Criteria)       |
-| **OWASP SAMM**      | Verification > Security Testing, Governance > Metrics & Feedback                          |
-| **SLSA v1.0**        | Build/test requirements for provenance and reproducibility                                 |
-| **BSIMM13**         | SE2.3 (Fix recurring bugs), SR2.1 (Track AppSec results), CMVM2 (Test result visibility)   |
-| **ENISA SDLC**      | Validation and testing phase; integration of testing in secure SDLC                        |
-| **OWASP DSOMM**     | Design & Development > Security Testing, Vulnerability Management, Release & Sign-off      |
-
----
-
 ## 📋 Estrutura sugerida de cada política
 
 Cada política deve incluir, pelo menos:

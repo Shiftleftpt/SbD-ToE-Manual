@@ -52,11 +52,6 @@ A integridade começa pela proveniência: se não controlarmos a origem, todo o 
 
 **Contexto.** Deploys de artefactos não confiáveis comprometem todo o sistema.  
 
-**📖 Rationale científico.**  
-O controlo de proveniência de artefactos é uma exigência de **SLSA L3** e de **SSDF RV.1**, que prescrevem assinaturas verificáveis e validação de integridade.  
-Sem isto, ataques como **OSC&R: Malicious Artifact Injection**, **CWE-494** ou **CAPEC-442** tornam-se viáveis.  
-Casos reais como SolarWinds ou Codecov mostram como artefactos não assinados foram vetor inicial de intrusão.  
-
 :::userstory
 **História.**   
 Como **DevOps/SRE**, quero **executar deploy apenas de artefactos assinados e versionados**, para **assegurar integridade e rastreabilidade**.  
@@ -81,7 +76,7 @@ Como **DevOps/SRE**, quero **executar deploy apenas de artefactos assinados e ve
 | Recomendado | Obrigatório | Obrigatório + rejeição automática |
 
 **Integração no SDLC.**  
-| Fase | Gatilho | Responsável | SLA |
+| Fase | Trigger | Responsável | SLA |
 |------|---------|-------------|-----|
 | Build/Release | Produção de artefacto | DevOps/SRE | Cada release |
 
@@ -94,11 +89,6 @@ Como **DevOps/SRE**, quero **executar deploy apenas de artefactos assinados e ve
 Staging é o “ensaio geral”: sem ele, a produção torna-se campo de teste.  
 
 **Contexto.** Promover diretamente à produção aumenta risco de incidentes.  
-
-**📖 Rationale científico.**  
-O **SSDF RV.4** e o **SAMM ST.2** prescrevem validações consistentes em ambientes de staging.  
-A sua ausência expõe riscos como **CWE-693** e **CAPEC-17**, em que versões não testadas chegam à produção.  
-Estudos da ENISA confirmam que pipelines com staging reduzem em 70% os incidentes pós-release.  
 
 :::userstory
 **História.**   
@@ -124,7 +114,7 @@ Como **QA/Testes**, quero **validar releases em staging com testes funcionais e 
 | Opcional | Recomendado | Obrigatório |
 
 **Integração no SDLC.**  
-| Fase | Gatilho | Responsável | SLA |
+| Fase | Trigger | Responsável | SLA |
 |------|---------|-------------|-----|
 | Pré-release | Preparação para produção | QA/Testes | Cada release |
 
@@ -137,11 +127,6 @@ Como **QA/Testes**, quero **validar releases em staging com testes funcionais e 
 Sem gates, a promoção a produção torna-se uma aposta: e a segurança não pode ser um jogo de sorte.  
 
 **Contexto.** Releases sem gates podem promover código inseguro.  
-
-**📖 Rationale científico.**  
-O **SSDF PS.2** e o **DSOMM Release Practices** exigem gates de aprovação automáticos e critérios formais.  
-Sem eles, abrem-se riscos como **OSC&R: Weak Release Gates** e falhas como **CWE-668**.  
-Dados de estudos BSIMM mostram que gates automáticos reduzem em 50% os incidentes em produção.  
 
 :::userstory
 **História.**   
@@ -167,7 +152,7 @@ Como **AppSec**, quero **definir gates automáticos e thresholds no deploy**, pa
 | Aviso | Bloqueio High/Critical | Bloqueio Medium+ |
 
 **Integração no SDLC.**  
-| Fase | Gatilho | Responsável | SLA |
+| Fase | Trigger | Responsável | SLA |
 |------|---------|-------------|-----|
 | Release | Promoção a produção | AppSec + DevOps | Cada release |
 
@@ -180,11 +165,6 @@ Como **AppSec**, quero **definir gates automáticos e thresholds no deploy**, pa
 Falhas acontecem. A diferença entre crise e resiliência está em quão rápido conseguimos voltar atrás.  
 
 **Contexto.** Sem rollback seguro, falhas em produção ampliam impacto.  
-
-**📖 Rationale científico.**  
-O **SAMM OE2** e o **BSIMM SE3.5** prescrevem rollback testado como parte de um ciclo de release robusto.  
-A ausência deste mecanismo abre espaço a **OSC&R: Failed Recovery** e falhas como **CWE-388**.  
-Estudos de confiabilidade mostram que rollback automatizado reduz MTTR em 60%.  
 
 :::userstory
 **História.**   
@@ -210,7 +190,7 @@ Como **DevOps/SRE**, quero **rollback rápido e testado periodicamente**, para *
 | Manual | Automatizado | Automatizado + testado periodicamente |
 
 **Integração no SDLC.**  
-| Fase | Gatilho | Responsável | SLA |
+| Fase | Trigger | Responsável | SLA |
 |------|---------|-------------|-----|
 | Produção | Incidente ou falha | DevOps/SRE | ≤ 1h |
 
@@ -223,11 +203,6 @@ Como **DevOps/SRE**, quero **rollback rápido e testado periodicamente**, para *
 Se não for possível reconstituir o caminho desde o commit até ao deploy, não existe governação real.  
 
 **Contexto.** Sem rastreabilidade, não é possível auditar incidentes.  
-
-**📖 Rationale científico.**  
-A rastreabilidade completa é exigida em **SLSA** (attestations) e **SSDF PO.5**.  
-Sem ela, riscos como **OSC&R: Missing Traceability** e falhas como **CWE-285** tornam-se críticos.  
-Normas como **NIS2** e **ISO 27001** tratam rastreabilidade como requisito de auditoria obrigatória.  
 
 :::userstory
 **História.**   
@@ -253,7 +228,7 @@ Como **Gestão de Produto**, quero **garantir rastreabilidade entre commit → b
 | Básica | Completa | Completa + auditoria contínua |
 
 **Integração no SDLC.**  
-| Fase | Gatilho | Responsável | SLA |
+| Fase | Trigger | Responsável | SLA |
 |------|---------|-------------|-----|
 | Auditoria | Incidente ou revisão periódica | Gestão + AppSec | Anual |
 
@@ -266,11 +241,6 @@ Como **Gestão de Produto**, quero **garantir rastreabilidade entre commit → b
 Um deploy não termina no *merge*: só se considera concluído quando a versão está estável e visível em produção.  
 
 **Contexto.** Deploys inseguros podem originar falhas não detetadas.  
-
-**📖 Rationale científico.**  
-O **DSOMM (Ops domain)** e o **SSDF RV.4** recomendam monitorização pós-deploy como garantia de integridade.  
-Sem este controlo, surgem riscos como **OSC&R: Silent Failure** e falhas como **CWE-1191**.  
-Estudos da Google SRE e CNCF mostram que monitorização pós-deploy reduz em dias o tempo de deteção de regressões.  
 
 :::userstory
 **História.**   
@@ -296,7 +266,7 @@ Como **DevOps/SRE**, quero **ativar monitorização pós-deploy**, para **deteta
 | Básica | Crítica | Completa + resposta automática |
 
 **Integração no SDLC.**  
-| Fase | Gatilho | Responsável | SLA |
+| Fase | Trigger | Responsável | SLA |
 |------|---------|-------------|-----|
 | Pós-release | Entrada em produção | DevOps/SRE | ≤ 15 min |
 

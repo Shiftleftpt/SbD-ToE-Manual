@@ -2,7 +2,7 @@
 id: map-to-framewoks
 title: Rastreabilidade do Catalogo com Frameworks de Segurança
 description: Mapeamento dos temas de requisitos do catálogo com frameworks normativas e de maturidade
-tags: [rastreabilidade, frameworks, asvs, samm, bsimm, nist, cis, slsa, dsomm]
+tags: [rastreabilidade, frameworks, asvs, samm, nist, cis, slsa, dsomm]
 sidebar_position: 3
 ---
 
@@ -68,11 +68,9 @@ Cada célula inclui o(s) identificador(es) do(s) controlo(s), prática(s) ou dom
 
 ## 🔗 Ligação à Matriz de Aplicação por Risco
 
-O mapeamento feito neste anexo mostra como cada uma das nossas 20 categorias de requisitos se relaciona com frameworks de referência como OWASP ASVS, NIST 800-53, BSIMM, SAMM, entre outras.
+O mapeamento feito neste anexo mostra como cada uma das nossas 20 categorias de requisitos se relaciona com frameworks de referência como OWASP ASVS, NIST 800-53, SAMM, entre outras.
 
-Para saber **quais destas categorias são obrigatórias consoante o nível de risco de uma aplicação**, consulta o anexo seguinte:
-
-👉 [06-matriz-controlos-por-risco.md](matriz-controlos-por-risco)
+Para saber **quais destas categorias são obrigatórias consoante o nível de risco de uma aplicação**, consultar a [matriz de controlo por risco](./addon/matriz-controlos-por-risco)
 
 Este cruzamento permite à organização aplicar requisitos de forma proporcional e fundamentada, alinhada com as suas necessidades, contexto e maturidade.
 

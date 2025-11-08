@@ -54,11 +54,6 @@ Sem logs consistentes e centralizados, qualquer investigação começa às cegas
 
 **Contexto.** Logs dispersos e não normalizados dificultam a deteção de incidentes.  
 
-**📖 Rationale científico.**  
-O **SSDF RV.4** e o **BSIMM AM2.3** prescrevem logging estruturado como requisito mínimo para observabilidade.  
-A ausência deste controlo está associada a falhas como **CWE-778 (Insufficient Logging)**, que reduzem a capacidade de deteção.  
-Relatórios forenses (ex.: Equifax, 2017) mostram que logs incompletos atrasaram em meses a identificação da intrusão. A centralização em formatos normalizados (JSON/ECS) reduz em mais de 30% o tempo de investigação.  
-
 :::userstory
 **História.**   
 Como **Dev**, quero **gerar logs estruturados e centralizados**, para **assegurar visibilidade completa em incidentes**.  
@@ -83,7 +78,7 @@ Como **Dev**, quero **gerar logs estruturados e centralizados**, para **assegura
 | Básico | Estruturado | Estruturado + correlação em SIEM |
 
 **Integração no SDLC.**  
-| Fase | Gatilho | Responsável | SLA |
+| Fase | Trigger | Responsável | SLA |
 |------|---------|-------------|-----|
 | Desenvolvimento/Deploy | Execução de código | Dev + DevOps | Contínuo |
 
@@ -97,11 +92,6 @@ Visibilidade sem contexto gera apenas ruído.
 É fundamental decidir **o que merece ser observado** e quais eventos devem acionar alertas.  
 
 **Contexto.** Sem definição clara, alertas não refletem riscos reais.  
-
-**📖 Rationale científico.**  
-O **SSDF DE.3** e o **SAMM OE2** defendem que a deteção eficaz depende da definição explícita de eventos críticos.  
-A ausência deste passo gera **OSC&R: Blind Spot Monitoring**, em que ameaças críticas não são detetadas, e aumenta falsos negativos.  
-Estudos operacionais (MITRE ATT&CK evaluations) demonstram que organizações que definem métricas críticas reduzem falsos negativos em cerca de 25%, melhorando substancialmente a capacidade de resposta.  
 
 :::userstory
 **História.**   
@@ -127,7 +117,7 @@ Como **AppSec**, quero **definir eventos e métricas críticas de segurança**, 
 | Básico | Definição parcial | Definição completa + revisão trimestral |
 
 **Integração no SDLC.**  
-| Fase | Gatilho | Responsável | SLA |
+| Fase | Trigger | Responsável | SLA |
 |------|---------|-------------|-----|
 | Planeamento/Operações | Entrada em produção | AppSec | Trimestral |
 
@@ -141,11 +131,6 @@ Um alerta sem prazo de resposta é apenas ruído.
 Para que a monitorização tenha impacto, é preciso ligar cada alerta a um **compromisso temporal**.  
 
 **Contexto.** Sem SLAs, incidentes críticos não têm resposta garantida.  
-
-**📖 Rationale científico.**  
-O **BSIMM IR1.1** e o **SSDF PO.6** exigem tempos de resposta definidos e monitorizados.  
-Sem estes, incidentes caem na categoria de **CWE-693 (Insufficient Control Flow Enforcement)**, onde a latência de resposta agrava o impacto.  
-Estudos de SRE (Google, 2022) mostram que a definição de SLAs reduz MTTR em até 40%, estabelecendo expectativas claras entre deteção e resposta.  
 
 :::userstory
 **História.**   
@@ -171,7 +156,7 @@ Como **IR**, quero **configurar alertas críticos com SLAs definidos**, para **a
 | Aviso | SLA crítico | SLA crítico + automação |
 
 **Integração no SDLC.**  
-| Fase | Gatilho | Responsável | SLA |
+| Fase | Trigger | Responsável | SLA |
 |------|---------|-------------|-----|
 | Produção | Incidente crítico | IR + AppSec | Conforme SLA |
 
@@ -185,11 +170,6 @@ A deteção só cria valor quando conduz a uma resposta.
 Alertas isolados não resolvem nada: precisam de estar ligados a **playbooks claros e testados**.  
 
 **Contexto.** Alertas isolados sem IRP tornam-se inúteis.  
-
-**📖 Rationale científico.**  
-O **SSDF DE.3** e o **NIST CSF (Respond)** estabelecem que a deteção só tem valor quando associada a planos de resposta documentados.  
-A ausência desta ligação reflete-se em **OSC&R: Incomplete IR**, em que alertas existem mas não são acionáveis.  
-Dados da Ponemon Institute mostram que a integração entre monitorização e playbooks reduz em 35% o impacto médio de incidentes, provando o valor de alinhar SIEM/SOAR com equipas IR.  
 
 :::userstory
 **História.**   
@@ -215,7 +195,7 @@ Como **IR**, quero **integrar alertas com playbooks de resposta a incidentes**, 
 | Manual | Playbooks definidos | Playbooks automatizados |
 
 **Integração no SDLC.**  
-| Fase | Gatilho | Responsável | SLA |
+| Fase | Trigger | Responsável | SLA |
 |------|---------|-------------|-----|
 | Operações | Alerta confirmado | IR | ≤ 30 min |
 
@@ -229,11 +209,6 @@ Só é possível melhorar aquilo que se mede.
 Sem métricas de eficácia, qualquer esforço de monitorização corre o risco de se tornar estático e complacente.  
 
 **Contexto.** Sem medir eficácia, não há melhoria contínua.  
-
-**📖 Rationale científico.**  
-O **SSDF PO.6** e o **SAMM OE2** determinam que equipas devem medir e reportar eficácia dos processos.  
-Sem métricas, instala-se complacência operacional e impossibilidade de evolução.  
-Estudos de maturidade DevSecOps (DORA report) mostram que organizações que medem MTTD e MTTR conseguem reduzir ambos em ciclos sucessivos, criando um ciclo virtuoso de melhoria contínua.  
 
 :::userstory
 **História.**   
@@ -259,7 +234,7 @@ Como **GRC**, quero **medir MTTD e MTTR de incidentes**, para **avaliar eficáci
 | Básico | Métricas calculadas | Métricas + metas definidas |
 
 **Integração no SDLC.**  
-| Fase | Gatilho | Responsável | SLA |
+| Fase | Trigger | Responsável | SLA |
 |------|---------|-------------|-----|
 | Auditoria | Revisão periódica | GRC | Trimestral |
 

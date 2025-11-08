@@ -79,9 +79,3 @@ Na prática, a reutilização destas classificações pode ser feita de três fo
 > Uma boa prática é incluir esta validação como um dos critérios do *checklist* de classificação.
 
 ---
-
-## 📄 Referências
-
-- [ISO 22301 - Segurança e Resiliência - Gestão da Continuidade do Negócio](https://www.iso.org/standard/75106.html)
-- [NIST SP 800-34 Rev. 1 - Contingency Planning Guide for Federal Information Systems](https://csrc.nist.gov/publications/detail/sp/800-34/rev-1/final)
-- [NIST SP 800-30 Rev. 1 - Guide for Conducting Risk Assessments](https://csrc.nist.gov/publications/detail/sp/800-30/rev-1/final)

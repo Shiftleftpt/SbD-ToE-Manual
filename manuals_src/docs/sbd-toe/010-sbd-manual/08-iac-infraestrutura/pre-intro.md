@@ -1,12 +1,10 @@
 ---
 id: pre-intro
-title: Rationale - Catálogo de Requisitos de IaC
+title: Fundamentação
 description: Porque este capítulo é excecional, que fontes suportam o catálogo IAC-XXX e como criar/adaptar o catálogo organizacional
 tags: [iac, rationale, requisitos, catálogo, segurança, pipelines, terraform, kubernetes, cloud]
 sidebar_position: -1
 ---
-
-
 
 # 📑 Rationale - Catálogo de Requisitos de IaC
 

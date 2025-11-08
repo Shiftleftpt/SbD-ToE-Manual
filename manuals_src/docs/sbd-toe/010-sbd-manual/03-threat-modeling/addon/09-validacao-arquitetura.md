@@ -12,7 +12,7 @@ tags: [arquitetura, threat modeling, validação, revisão técnica, rastreabili
 Definir como incorporar o *Threat Modeling* de forma estruturada no processo de **revisão técnica e validação de arquitetura**, garantindo que:
 
 - A análise de ameaças é etapa obrigatória na validação técnica;
-- Os artefactos arquiteturais incluem os resultados do threat modeling;
+- Os artefactos de arquitetura incluem os resultados do threat modeling;
 - Existe rastreabilidade entre arquitetura, ameaças e requisitos de segurança (Cap. 2).
 
 ---

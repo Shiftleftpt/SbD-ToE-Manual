@@ -6,7 +6,7 @@ sidebar_label: Checklist de Revisão
 
 # ✅ Checklist de Revisão Periódica - Threat Modeling
 
-Este checklist aplica-se a todas as aplicações com criticidade L2 ou L3, ou que envolvam fluxos sensíveis, exposições externas ou alterações arquiteturais relevantes.
+Este checklist aplica-se a todas as aplicações com criticidade L2 ou L3, ou que envolvam fluxos sensíveis, exposições externas ou alterações de arquitetura relevantes.
 
 Serve como instrumento de verificação binária e auditável da **adoção prática das prescrições do Capítulo 3 - Threat Modeling**, permitindo:
 

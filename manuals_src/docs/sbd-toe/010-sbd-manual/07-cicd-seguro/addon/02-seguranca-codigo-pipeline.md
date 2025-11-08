@@ -86,11 +86,3 @@ A segurança da entrega contínua depende da capacidade de **detetar automaticam
 - Vazamento de segredos hardcoded (OSC&R: CI0010).
 
 ---
-
-## 🧭 Referências
-
-- [NIST SSDF – PS.3, PW.7](https://csrc.nist.gov/publications/detail/sp/800-218/final)
-- [OWASP AppSec Pipeline](https://owasp.org/www-project-appsec-pipeline/)
-- [OpenSSF Scorecard – Static Analysis, Secrets, Binary Artifacts](https://github.com/ossf/scorecard)
-- [BSIMM – SE1.4, SE2.2, CR1.2]
-- [SAMM – Verification – Security Testing Automation]

@@ -5,7 +5,6 @@ description: Práticas de segurança para pipelines de integração e entrega co
 tags: [cicd, segurança, pipelines, automação, proveniência, devsecops, risco]
 sidebar_position: 0
 ---
-import Badge from '@site/src/components/Badge';
 
 :::tip Capítulo Operacional
 Este capítulo é considerado **operacional** no modelo *Security by Design – Theory of Everything (SbD-ToE)*.  
@@ -13,17 +12,6 @@ A sua função é **aplicar, automatizar e validar** as práticas definidas nos 
 
 Os capítulos operacionais implementam o SbD-ToE em contextos técnicos específicos. Estes capítulos traduzem as prescrições basilares em práticas de **execução verificável**, promovendo a **integração contínua da segurança** ao longo do ciclo de vida do software.
 :::
-
-
-<div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.5rem', marginBottom: '1rem' }}>
-  
-  <Badge color="info">SAMM: 2 / 3</Badge>
-  <Badge color="info">BSIMM: CMVM1.3, SE2.5, CP1.2</Badge>
-  <Badge color="info">SSDF: PW.4–7, PS.3, RV.3, GV.2–3</Badge>
-  <Badge color="info">SLSA: Nível 3 / 4</Badge>
-  <Badge color="info">DSOMM: 3 / 4 (média)</Badge>
-  <a href="./achievable-maturity" style={{ marginLeft: 'auto', fontSize: '0.9rem' }}>📄 Ver análise de maturidade</a>
-</div>
 
 # CI/CD Seguro
 

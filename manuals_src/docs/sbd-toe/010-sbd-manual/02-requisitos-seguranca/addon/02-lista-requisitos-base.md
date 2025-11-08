@@ -5,20 +5,6 @@ description: Matriz síntese dos requisitos aplicacionais por nível de risco (L
 tags: [tipo:catalogo, tema:requisitos, tema:resumo, criticidade, anexo]
 ---
 
-<!--template: sbdtoe-core -->
-
-# 🛠️ Catálogo Base de Requisitos de Segurança
-
-Este documento apresenta a matriz consolidada dos requisitos de segurança definidos neste capítulo, identificando a **aplicação proporcional por nível de risco** (L1, L2, L3).Constitui uma **proposta de requisitos essenciais de segurança** extraídos e adaptados a partir de múltiplas referências internacionais reconhecidas, incluindo:
-
-- [OWASP Application Security Verification Standard (ASVS)](https://owasp.org/w-project-application-security-verification-standard/) <!-- Precisa revisão manual -->
-- [OWASP Mobile Security Testing Guide (MSTG)](https://owasp.org/www-project-mobile-security-testing-guide/) <!-- Precisa revisão manual -->
-- [NIST Secure Software Development Framework (SSDF)](https://csrc.nist.gov/publications/detail/sp/800-218/final) <!-- Precisa revisão manual -->
-- [ISO/IEC 27001:2022](https://www.iso.org/standard/27001) <!-- Precisa revisão manual -->
-- [IEC 62443 - Segurança em Sistemas Industriais](https://webstore.iec.ch/publication/7033) <!-- Precisa revisão manual -->
-- [BSIMM - Building Security In Maturity Model](https://www.bsimm.com/) <!-- Precisa revisão manual -->
-- [OWASP Internet of Things Project](https://owasp.org/www-project-internet-of-things/) <!-- Precisa revisão manual -->
-
 > Importante:
 >
 > Recomenda-se vivamente a **curadoria e adaptação destes requisitos por cada organização e projeto**, usando as mesmas fontes como referência, para garantir relevância, proporcionalidade e alinhamento com o contexto técnico e de risco.

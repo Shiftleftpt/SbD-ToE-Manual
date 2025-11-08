@@ -170,4 +170,4 @@ repos:
 
 ---
 
-> 🔗 Todos os exemplos foram alinhados com os ficheiros anteriores deste capítulo e com as práticas de SSDF (PW\.6), SLSA (Build L2), SAMM (AA2.1), BSIMM (CMVM1.1).
+> 🔗 Todos os exemplos foram alinhados com os ficheiros anteriores deste capítulo e com as práticas de SSDF (PW\.6), SLSA (Build L2), SAMM (AA2.1),  (CMVM1.1).

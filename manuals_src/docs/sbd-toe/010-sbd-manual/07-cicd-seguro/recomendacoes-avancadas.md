@@ -80,12 +80,3 @@ Este ficheiro complementa os controlos principais definidos neste capítulo com 
 - Falhas de deteção por ausência de feedback loop (OSC&R: SC0006, CI0016).
 
 ---
-
-## 🧭 Referências adicionais
-
-- [OWASP Security Rationale for GitHub Actions](https://owasp.org/www-project-cicd-security/)
-- [SLSA – Threat Modeling](https://slsa.dev/threats)
-- [OpenSSF Best Practices for CI/CD Hardening](https://openssf.org)
-- [OPA (Open Policy Agent) – Policy as Code for CI/CD](https://www.openpolicyagent.org/)
-- [MITRE ATT&CK – T1650: Build System Compromise](https://attack.mitre.org/techniques/T1650/)
-

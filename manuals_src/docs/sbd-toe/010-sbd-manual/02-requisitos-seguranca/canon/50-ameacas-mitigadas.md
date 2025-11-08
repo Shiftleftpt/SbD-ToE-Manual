@@ -70,4 +70,4 @@ Este capítulo mitiga um conjunto vasto de ameaças estruturais associadas à **
 
 > Mitiga de forma **exclusiva pelo menos 10 ameaças críticas**, com destaque para a ausência, ambiguidade e não testabilidade de requisitos - pontos não tratados nos restantes capítulos.
 
-> As práticas aqui descritas são indispensáveis para atingir conformidade com modelos como **SSDF, ASVS, BSIMM, OWASP SAMM, ISO 27034 e SLSA**.
+> As práticas aqui descritas são indispensáveis para atingir conformidade com modelos como **SSDF, ASVS, OWASP SAMM, ISO 27034 e SLSA**.

@@ -50,7 +50,7 @@ A matriz define, por capítulo técnico do manual:
 |                            | Uso de catálogo interno de requisitos  | Dev, PO             | Médio  | Quiz + aplicação prática           |
 | 3. Threat Modeling         | Modelação por funcionalidade real      | Dev, QA, PO         | Médio  | Sessão prática + rotação de lead   |
 |                            | Uso de checklists em design            | QA, AppSec          | Baixo  | Template + explicação peer-led     |
-| 4. Arquitetura Segura      | Padrões e antipadrões arquiteturais    | Dev, Tech Leads      | Elevado| Oficina comparativa + pairing      |
+| 4. Arquitetura Segura      | Padrões e antipadrões de arquitetura    | Dev, Tech Leads      | Elevado| Oficina comparativa + pairing      |
 | 5. Controlo de Dependências| SBOM, lockfiles e controlo de SCA      | Dev, DevOps         | Médio  | PR clinic + lab com scanner        |
 |                            | Triagem de alertas                     | AppSec, Dev          | Elevado| Revisão rotativa + lab interno     |
 | 6. Desenvolvimento Seguro  | PR seguro e validação de código        | Dev, QA             | Médio  | Revisão pública + guia comentado   |

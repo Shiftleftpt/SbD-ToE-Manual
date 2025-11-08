@@ -19,11 +19,11 @@ Este documento complementa as práticas fundamentais do capítulo com recomenda�
 | Prática / Recomendação                             | Benefício direto                             | Requisitos reforçados |
 |------------------------------------------------------|------------------------------------------------|------------------------|
 | Adotar o princípio de Zero Trust entre microserviços  | Reduz risco de lateral movement                | ARC-002, ARC-006       |
-| Aplicar OPA ou rego para enforcement dinâmico        | Governa políticas de acesso arquitetural       | ARC-001, ARC-008       |
+| Aplicar OPA ou rego para enforcement dinâmico        | Governa políticas de acesso da arquitetura       | ARC-001, ARC-008       |
 | Usar sidecars para segurança e comunicação interservice | Cria controlo de rede e logging distribuído   | ARC-002, ARC-003       |
 | Aplicar segmentação em ambiente de CI/CD             | Garante que a execução reflete o desenho arquitetónico | ARC-004, ARC-007 |
 | Integrar threat modeling em stories e epics          | Deteta falhas antes do desenho detalhado       | ARC-005, ARC-010       |
-| Formalizar ADRs para todas as decisões arquiteturais  | Melhora auditabilidade e revisão futura        | ARC-004, ARC-011       |
+| Formalizar ADRs para todas as decisões de arquitetura  | Melhora auditabilidade e revisão futura        | ARC-004, ARC-011       |
 | Validar consistência entre arquitetura e SBOMs       | Garante que o SBOM reflete a arquitetura planeada | ARC-006, ARC-007       |
 
 ---
@@ -46,7 +46,7 @@ Este documento complementa as práticas fundamentais do capítulo com recomenda�
 - Plataformas com alto volume de integração externa
 - Organizações com função de arquitetura ou segurança dedicada
 
-> 🧭 Estas recomendações alinham com os níveis mais elevados de maturidade em SAMM, BSIMM, SSDF e DSOMM.
+> 🧭 Estas recomendações alinham com os níveis mais elevados de maturidade em SAMM, SSDF e DSOMM.
 
 ---
 

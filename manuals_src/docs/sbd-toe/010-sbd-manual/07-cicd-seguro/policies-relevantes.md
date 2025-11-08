@@ -42,20 +42,6 @@ Estas políticas:
 
 ---
 
-## 📎 Correspondência com frameworks normativas
-
-| Framework              | Requisitos cobertos pelas políticas acima                                                                 |
-|------------------------|------------------------------------------------------------------------------------------------------------|
-| **SLSA**               | Build Integrity, Provenance Generation, Isolation of Build Environment                                     |
-| **NIST SSDF**          | PW.4 (Protect Build Infrastructure), RV.1 (Verify Integrity of Artifacts), DE.1 (Define Build Process)     |
-| **OWASP CI/CD Project**| Secure Execution, Secrets Management, Job Isolation, Artifact Control                                     |
-| **BSIMM13**            | SE2.1 (Review CI/CD), SE3.x (Automation of Control Gates), CMVM Practices                                 |
-| **ENISA DevSecOps**    | Sec. 3.3–3.6 - validação, build seguro, segregação, gestão de segredos                                    |
-| **ISO/IEC 27001/27034**| A.12.1.2, A.14.2.1 - controlo de alterações, validação de software antes de produção                       |
-| **CIS Controls v8**    | 2.1, 4.6, 16.4 - gestão de ativos, segregação e validação de software                                      |
-
----
-
 ## 📋 Estrutura sugerida de cada política
 
 Cada política organizacional deve conter, no mínimo:

@@ -9,7 +9,7 @@ tags: [maturidade, governanca, compliance, evolucao]
 
 # 📈 Governança e Maturidade Organizacional
 
-Este anexo descreve como o Capítulo 14 contribui para a **maturidade de segurança** da organização, com base nos modelos SAMM, BSIMM, SSDF e SLSA, e como essas práticas se traduzem em controlo efetivo.
+Este anexo descreve como o Capítulo 14 contribui para a **maturidade de segurança** da organização, com base nos modelos SAMM, SSDF e SLSA, e como essas práticas se traduzem em controlo efetivo.
 
 ---
 

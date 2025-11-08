@@ -90,8 +90,8 @@ Os domínios seguem os temas definidos no catálogo de requisitos (`addon/catalo
 ## 🔍 Verificação e manutenção
 
 - As tags devem ser **validadas periodicamente** contra:
-  - O [catálogo](./addon/catalogo-requisitos);
-  - A [matriz de risco](./addon/matriz-controlos-por-risco) .
+  - O [catálogo](./catalogo-requisitos);
+  - A [matriz de risco](.matriz-controlos-por-risco).
 
 - A organização deve manter um registo com:
   - Requisitos aplicados e respetivos IDs;

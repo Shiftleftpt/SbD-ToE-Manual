@@ -1,7 +1,7 @@
 ---
 id: achievable-maturity
 title: Mapeamento de Maturidade – Capítulo 01
-tags: [canon, maturidade, SAMM, SSDF, BSIMM, DSOMM]
+tags: [canon, maturidade, SAMM, SSDF, DSOMM]
 ---
 
 # 📈 Maturidade - Classificação da Criticidade Aplicacional

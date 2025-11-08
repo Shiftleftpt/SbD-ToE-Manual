@@ -6,15 +6,6 @@ description: Mapeamento detalhado dos requisitos IAC-001 a IAC-010 com orientaç
 tags: [matriz, requisitos, iac, validação, controlo, auditoria]
 ---
 
-
-import Badge from '@site/src/components/Badge';
-
-<div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.5rem', marginBottom: '1rem' }}>
-  <Badge color="info">Complementa: Capítulo 02 – Requisitos de Segurança</Badge>
-  <Badge color="info">Requisitos específicos: IAC-001 a IAC-013</Badge>
-  <Badge color="info">Referências: SSDF, SLSA, Terraform Security Best Practices</Badge>
-</div>
-
 # 📘️ Matriz de Requisitos Técnicos para Projetos IaC
 
 Este catálogo define requisitos de segurança **específicos para projetos de Infraestrutura como Código (IaC)**, que complementam os requisitos aplicacionais definidos no Capítulo 02.
@@ -39,7 +30,7 @@ Estes requisitos são aplicáveis diretamente ao **código, estrutura e prática
 | IAC-010 | Os artefactos gerados (ex: `plan`, `apply`, manifests) devem ser armazenados com versionamento e hash   |    | X  | X  | -       | SLSA Provenance, SSDF PW\.4         | Garante integridade e auditoria de mudanças em tempo                             |
 | IAC-011 | O projeto IaC não deve conter segredos hardcoded e deve integrar mecanismo seguro de gestão de segredos | X  | X  | X  | REQ-008 | SSDF PW\.6, Terraform Sec. Guide    | Protege contra exfiltração acidental e rastreia origem e uso de credenciais      |
 | IAC-012 | Deve existir mecanismo automatizado de deteção de drift entre infraestrutura real e definição em código |    | X  | X  | -       | Terraform plan, Driftctl, SSDF CM.5 | Garante que estado real reflete intenção e permite auditoria contínua            |
-| IAC-013 | Os templates e módulos IaC devem ser alvo de revisão formal e periódica por equipa AppSec ou DevSecOps  |    |    | X  | -       | SAMM AA2.2, BSIMM SR2.2             | A revisão periódica reduz risco de propagação de práticas obsoletas ou inseguras |
+| IAC-013 | Os templates e módulos IaC devem ser alvo de revisão formal e periódica por equipa AppSec ou DevSecOps  |    |    | X  | -       | SAMM AA2.2,  SR2.2             | A revisão periódica reduz risco de propagação de práticas obsoletas ou inseguras |
 
 ---
 

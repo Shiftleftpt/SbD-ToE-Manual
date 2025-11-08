@@ -62,11 +62,6 @@ Este formato permite integração direta em backlogs, assegurando que cada requi
 **Contexto.**  
 O estado da infraestrutura deve ser protegido contra alterações concorrentes.
 
-**📖 Rationale científico.**  
-Referências: **SSDF PW.4 / PS.3**, **SAMM Implementation/Operations**, **BSIMM SE2.5**, **ISO/IEC 27005**.  
-Mitiga: **CWE-362**, **CWE-667**, **OSC&R: State Tampering**, **CAPEC-172**.  
-Evidência: relatórios **DBIR/ENISA** mostram que estados sem locking causam drift e indisponibilidade; *remote state + locking + KMS* reduz incidentes operacionais.
-
 :::userstory
 **História.**   
 Como **DevOps/Infra**, quero configurar o backend remoto com locking, para garantir consistência do estado e evitar corrupção concorrente.
@@ -101,11 +96,6 @@ xref:sbd-toe:cap02:intro
 
 **Contexto.**  
 Ambientes mal segregados aumentam risco de fuga ou alteração acidental.
-
-**📖 Rationale científico.**  
-Referências: **SSDF PS.1/PS.2**, **BSIMM SE2.3**, **ISO/IEC 27001** (segregação de ambientes).  
-Mitiga: **CWE-284**, **OSC&R: Environment Promotion Bypass**, **CAPEC-17**.  
-Evidência: **DBIR** mostra que contaminação entre ambientes é causa recorrente de incidentes.
 
 :::userstory
 **História.**   
@@ -142,11 +132,6 @@ xref:sbd-toe:cap14:intro
 **Contexto.**  
 Erros manuais em IaC são fonte comum de falhas.
 
-**📖 Rationale científico.**  
-Referências: **SSDF RV.2/RV.3**, **SAMM Verification**, **BSIMM SE3.x**, **DSOMM Automation**.  
-Mitiga: **CWE-16**, **CWE-79**, **CWE-89**, **CAPEC-175**.  
-Evidência: **ENISA** indica redução de até 80% de misconfigs quando validações ocorrem em PR.
-
 :::userstory
 **História.**   
 Como **DevOps/Infra**, quero que todas as alterações passem por validações automáticas, para evitar más práticas.
@@ -181,11 +166,6 @@ xref:sbd-toe:cap07:intro
 
 **Contexto.**  
 Módulos não verificados podem introduzir código malicioso.
-
-**📖 Rationale científico.**  
-Referências: **SLSA v1.0**, **SSDF PW.4**, **BSIMM CMVM1.1**.  
-Mitiga: **CWE-829**, **CWE-494**, **OSC&R: Dependency Confusion**.  
-Evidência: relatórios **Sonatype** mostram que pinagem reduz risco de supply chain.
 
 :::userstory
 **História.**   
@@ -222,11 +202,6 @@ xref:sbd-toe:cap05:intro
 **Contexto.**  
 Alterações não versionadas impedem auditoria.
 
-**📖 Rationale científico.**  
-Referências: **SSDF PS.3**, **ISO/IEC 27001 A.12**, **BSIMM SE2.5**.  
-Mitiga: **OSC&R: Insufficient Traceability**, **CWE-778**, **CAPEC-116**.  
-Evidência: **DBIR** mostra que tagging acelera rollback seguro.
-
 :::userstory
 **História.**   
 Como **DevOps/Infra**, quero garantir que todas as alterações têm histórico auditável, para suportar auditoria.
@@ -261,11 +236,6 @@ xref:sbd-toe:cap14:intro
 
 **Contexto.**  
 Inconsistência no naming dificulta automação.
-
-**📖 Rationale científico.**  
-Referências: **SAMM Governance**, **SSDF PS.1/PS.2**, **BSIMM SE2.3**.  
-Mitiga: **CWE-710**, **OSC&R: Misconfiguration via Layout**.  
-Evidência: padrões de naming reduzem falsos-negativos em scanners.
 
 :::userstory
 **História.**   
@@ -302,11 +272,6 @@ xref:sbd-toe:cap06:intro
 **Contexto.**  
 Aplicar sem revisão pode introduzir falhas graves.
 
-**📖 Rationale científico.**  
-Referências: **SSDF RV.3**, **SAMM Verification**, **BSIMM CP1.2**.  
-Mitiga: **CWE-284**, **CWE-732**, **OSC&R: Risky Changes**.  
-Evidência: **ENISA** relaciona incidentes críticos a `apply` sem revisão.
-
 :::userstory
 **História.**   
 Como **AppSec**, quero rever o `plan` antes de `apply`, para garantir impactos claros e validados.
@@ -341,11 +306,6 @@ xref:sbd-toe:cap14:intro
 
 **Contexto.**  
 Falta de rastreio dificulta auditoria.
-
-**📖 Rationale científico.**  
-Referências: **SSDF RV.2**, **DSOMM Evidence**, **BSIMM CMVM1.3**.  
-Mitiga: **CWE-778**, **OSC&R: Lack of Traceability**, **CAPEC-59**.  
-Evidência: dashboards de rastreio reduzem *MTTR* e melhoram análise forense.
 
 :::userstory
 **História.**   
@@ -382,11 +342,6 @@ xref:sbd-toe:cap12:intro
 **Contexto.**  
 Sem enforcement, violações podem passar despercebidas.
 
-**📖 Rationale científico.**  
-Referências: **SSDF RV.2/RV.3**, **SAMM Governance**, **BSIMM SE3.x**, **SLSA**.  
-Mitiga: **CWE-16**, **CWE-284**, **OSC&R: Policy Bypass**.  
-Evidência: *policy-as-code* (OPA/Sentinel) reduz *config drift* e erros manuais.
-
 :::userstory
 **História.**   
 Como **AppSec**, quero enforcement automático de policies no pipeline, para evitar violações manuais.
@@ -421,11 +376,6 @@ xref:sbd-toe:cap07:intro
 
 **Contexto.**  
 Artefactos IaC sem assinatura ou proveniência validada podem ser adulterados.
-
-**📖 Rationale científico.**  
-Referências: **SLSA v1.0**, **SSDF RV.3**, **SAMM Implementation**, **BSIMM CP1.2**, **ISO/IEC 27001 A.12**.  
-Mitiga: **CWE-353**, **CWE-494**, **OSC&R: Artifact Tampering**, **CAPEC-440**.  
-Evidência: casos SolarWinds e Codecov mostram a importância de assinatura/proveniência.
 
 :::userstory
 **História.**   

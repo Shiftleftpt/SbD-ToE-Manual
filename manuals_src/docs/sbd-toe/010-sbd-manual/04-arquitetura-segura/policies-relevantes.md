@@ -14,7 +14,7 @@ A adoção eficaz do Capítulo 04 - Arquitetura Segura - exige a existência de 
 
 ## 📌 Nota fundamental
 
-> ⚠️ As práticas técnicas de definição de zonas de confiança, validação arquitetural, exceções justificadas e rastreabilidade **devem estar suportadas por políticas organizacionais aprovadas e divulgadas**.
+> ⚠️ As práticas técnicas de definição de zonas de confiança, validação da arquitetura, exceções justificadas e rastreabilidade **devem estar suportadas por políticas organizacionais aprovadas e divulgadas**.
 
 Estas políticas:
 
@@ -32,22 +32,10 @@ Estas políticas:
 | Nome da Política                                 | Obrigatória? | Aplicação                                 | Conteúdo mínimo esperado                                                                 |
 |--------------------------------------------------|--------------|--------------------------------------------|--------------------------------------------------------------------------------------------|
 | Política de Arquitetura Segura                   | ✅ Sim       | Todas as equipas com responsabilidade técnica | Padrões obrigatórios, definição de zonas de confiança, segmentação, requisitos mínimos     |
-| Política de Aprovação Técnica de Design          | ✅ Sim       | Projetos com impacto arquitetural            | Processo formal de revisão, papéis e responsabilidades, critérios técnicos de aceitação    |
+| Política de Aprovação Técnica de Design          | ✅ Sim       | Projetos com impacto da arquitetura            | Processo formal de revisão, papéis e responsabilidades, critérios técnicos de aceitação    |
 | Política de Documentação e Versionamento Arquitetural | ✅ Sim   | Sistemas com criticidade L2 ou L3            | Regras de diagrama, versão controlada, atualização em alterações estruturais               |
 | Política de Rastreabilidade Arquitetónica        | ✅ Sim       | Projetos sujeitos a controlo ou auditoria    | Mapeamento de requisitos (ARC-00x) → componente → controlo técnico                         |
 | Política de Exceções Técnicas em Arquitetura     | ✅ Sim       | Sempre que um requisito não for aplicável    | Formulário formal, ciclo de revisão, plano compensatório, validade e owner técnico         |
-
----
-
-## 📎 Correspondência com frameworks normativas
-
-| Framework            | Requisitos cobertos pelas políticas acima                                                          |
-|---------------------|-----------------------------------------------------------------------------------------------------|
-| **NIST SSDF**        | PW.4 (Secure Design), RM.2 (Rastreabilidade de decisões e controlos técnicos)                      |
-| **ISO/IEC 27001**    | A.14.2.1 (Development Process), A.18.1.4 (Gestão de exceções), ISO 42010 (Architecture Description) |
-| **OWASP SAMM**       | Design & Governance: Architecture, Design Review, Governance & Metrics                             |
-| **BSIMM13**          | AA1.x, AA2.x, Governance 1.x – Formalização e revisão de arquitetura                                |
-| **CIS Controls v8**  | Control 16 (Application Software Security), Control 2 (Governança de Ativos de Software)            |
 
 ---
 

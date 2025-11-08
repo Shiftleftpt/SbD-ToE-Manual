@@ -12,7 +12,7 @@ Este manual está alinhado com diversas frameworks internacionais que definem ma
 A tabela abaixo mostra a correspondência entre os **14 capítulos técnicos do SbD-ToE** e os domínios ou controlos equivalentes das seguintes referências:
 
 - [OWASP SAMM](https://owaspsamm.org/) – Software Assurance Maturity Model
-- [BSIMM](https://www.bsimm.com/) – Building Security In Maturity Model
+- [BSIMM](https://www.bsimm.com/) – Building Security In Maturity Model (Do que se consegue inferir pela documentação publica. O modelo é proprietário e apenas se toma como referencia o que de dominio publico.)
 - [NIST SSDF](https://csrc.nist.gov/publications/detail/white-paper/2022/02/01/secure-software-development-framework-ssdf)
 - [SLSA](https://slsa.dev/) – Supply-chain Levels for Software Artifacts
 - [CIS Controls v8](https://www.cisecurity.org/controls/cis-controls-list/)

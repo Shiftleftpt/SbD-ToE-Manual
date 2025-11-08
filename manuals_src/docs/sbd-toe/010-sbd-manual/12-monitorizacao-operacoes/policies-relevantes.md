@@ -38,18 +38,6 @@ Estas políticas:
 
 ---
 
-## 📎 Correspondência com Frameworks Normativas
-
-| Framework            | Requisitos cobertos pelas políticas acima                                                             |
-|---------------------|--------------------------------------------------------------------------------------------------------|
-| **NIST SSDF**        | RV.1.2, RV.3.3, RV.4.1 - Logging estruturado, deteção ativa, resposta coordenada                      |
-| **CIS Controls v8**  | Control 8 (Audit Log Management), Control 17 (Incident Response), Control 6 (Access Control)           |
-| **OWASP SAMM**       | Operations > Incident Management; Deployment > Environment Management                                 |
-| **BSIMM13**          | SE3.2 (Security Events), IR1 (Incident Response), TCM1 (Deteção e mitigação de ataques)               |
-| **ENISA DevSecOps**  | Logging, observabilidade, deteção de anomalias, governação contínua                                   |
-
----
-
 ## 🧱 Estrutura Esperada de Cada Política
 
 Cada política organizacional deve conter:

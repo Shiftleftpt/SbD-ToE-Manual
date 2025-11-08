@@ -5,14 +5,6 @@ description: Requisitos específicos para garantir segurança em projetos de Inf
 sidebar_position: 8
 ---
 
-import Badge from '@site/src/components/Badge';
-
-<div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.5rem', marginBottom: '1rem' }}>
-  <Badge color="info">Complementa: Capítulo 02 – Requisitos de Segurança</Badge>
-  <Badge color="info">Requisitos específicos: IAC-001 a IAC-010</Badge>
-  <Badge color="info">Referências: SSDF, SLSA, Terraform Security Best Practices</Badge>
-</div>
-
 # 📘 Matriz de Requisitos Técnicos para Projetos IaC
 
 Este catálogo define requisitos de segurança **específicos para projetos de Infraestrutura como Código (IaC)**, que complementam os requisitos aplicacionais definidos no Capítulo 02.  

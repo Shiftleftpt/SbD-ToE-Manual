@@ -42,18 +42,6 @@ Estas políticas:
 
 ---
 
-## 📎 Correspondência com frameworks normativas
-
-| Framework            | Requisitos cobertos pelas políticas acima                                                                 |
-|---------------------|------------------------------------------------------------------------------------------------------------|
-| **NIST SSDF**        | PS.3 (Third-Party Components), RV.3 (Vulnerability Management), RV.5 (SBOM Generation)                     |
-| **SLSA v1.0**        | Requirements on provenance, dependency control and build integrity                                         |
-| **OWASP SAMM**       | Design > Threat Assessment, Implementation > Environment Hardening, Verification > Security Testing       |
-| **BSIMM13**          | SFD1.3 (Track open source usage), CMVM2.2 (Detect malicious packages), SE1.4 (Scan for vulnerabilities)    |
-| **CIS Controls v8**  | Control 2 (Inventory and Control of Software Assets), Control 16 (Application Software Security)           |
-
----
-
 ## 📋 Estrutura sugerida de cada política
 
 Cada política organizacional deve conter, no mínimo:

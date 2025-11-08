@@ -37,11 +37,6 @@ tags: [ciclo de vida, governanca, contratacao, excecoes, fornecedores, rastreabi
 ### US-01 - Processo formal de exceções
 **Contexto.** Sem exceções formais, práticas são ignoradas sem transparência.  
 
-**📖 Rationale.**  
-- **Referências:** SSDF PO.4, BSIMM SM1.3.  
-- **Ameaças mitigadas:** shadow IT, bypass de controlos.  
-- **Valor científico:** exceções formais reduzem risco oculto e permitem aceitação consciente.  
-
 :::userstory
 **História.**   
 Como **Dev**, quero **submeter exceções de segurança em fluxo formal**, para **assegurar transparência e aprovação de risco**.  
@@ -71,11 +66,6 @@ Como **Dev**, quero **submeter exceções de segurança em fluxo formal**, para 
 
 ### US-02 - Cláusulas contratuais de segurança
 **Contexto.** Fornecedores sem cláusulas podem comprometer toda a cadeia.  
-
-**📖 Rationale.**  
-- **Referências:** SLSA, SSDF GV.1.  
-- **Ameaças mitigadas:** supply chain compromise.  
-- **Valor científico:** cláusulas contratuais asseguram enforcement organizacional.  
 
 :::userstory
 **História.**   
@@ -107,11 +97,6 @@ Como **Jurídico/Procurement**, quero **incluir cláusulas SbD-ToE em contratos*
 ### US-03 - Validação contínua de fornecedores
 **Contexto.** Fornecedores comprometidos propagam risco.  
 
-**📖 Rationale.**  
-- **Referências:** ISO 27036, BSIMM CMVM3.3.  
-- **Ameaças mitigadas:** fornecedores inseguros, backdoors.  
-- **Valor científico:** validação contínua reduz risco de supply chain em 40%.  
-
 :::userstory
 **História.**   
 Como **GRC**, quero **validar fornecedores de forma contínua**, para **assegurar conformidade e segurança contratual**.  
@@ -142,11 +127,6 @@ Como **GRC**, quero **validar fornecedores de forma contínua**, para **assegura
 ### US-04 - Rastreabilidade organizacional
 **Contexto.** Sem rastreabilidade, a gestão não tem visibilidade real.  
 
-**📖 Rationale.**  
-- **Referências:** SSDF PO.1, SAMM Governance.  
-- **Ameaças mitigadas:** falta de accountability.  
-- **Valor científico:** dashboards centralizados aumentam transparência organizacional.  
-
 :::userstory
 **História.**   
 Como **AppSec**, quero **agregar práticas de segurança por projeto em dashboard organizacional**, para **dar visibilidade e medir adoção**.  
@@ -176,11 +156,6 @@ Como **AppSec**, quero **agregar práticas de segurança por projeto em dashboar
 
 ### US-05 - KPIs de governação
 **Contexto.** Sem métricas, não há melhoria contínua.  
-
-**📖 Rationale.**  
-- **Referências:** BSIMM SM1.3, SAMM Governance.  
-- **Ameaças mitigadas:** complacência organizacional.  
-- **Valor científico:** KPIs permitem medir eficácia e justificar investimento.  
 
 :::userstory
 **História.**   

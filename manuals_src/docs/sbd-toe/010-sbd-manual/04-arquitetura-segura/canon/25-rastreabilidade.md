@@ -2,13 +2,13 @@
 id: rastreabilidade
 title: Rastreabilidade Top-Down - Capítulo 04
 description: Mapeamento das práticas deste capítulo face a frameworks normativos e requisitos de segurança reconhecidos
-tags: [rastreabilidade, arquitetura, frameworks, ssdf, samm, bsimm, slsa, iso, dsomm]
+tags: [rastreabilidade, arquitetura, frameworks, ssdf, samm, slsa, iso, dsomm]
 sidebar_position: 25
 ---
 
 # 📎 Rastreabilidade contra Frameworks - Capítulo 04: Arquitetura Segura
 
-Este documento estabelece a **rastreabilidade entre as práticas prescritas neste capítulo** e os requisitos dos principais frameworks e normas de segurança aplicacional no que diz respeito à conceção, validação e governação arquitetural.
+Este documento estabelece a **rastreabilidade entre as práticas prescritas neste capítulo** e os requisitos dos principais frameworks e normas de segurança aplicacional no que diz respeito à conceção, validação e governação da arquitetura.
 
 > A rastreabilidade é feita de forma **top-down**, demonstrando como o SbD-ToE cobre sistematicamente os requisitos técnicos e normativos associados à arquitetura de software segura.
 
@@ -18,13 +18,13 @@ Este documento estabelece a **rastreabilidade entre as práticas prescritas nest
 
 | Requisito / Domínio (Framework)                                | Prática do Capítulo 04 que responde                              | Nível de Cobertura |
 |----------------------------------------------------------------|------------------------------------------------------------------|--------------------|
-| **NIST SSDF** – PW.1 / PW.4 / RV.1                             | Requisitos arquiteturais, validação formal e rastreabilidade     | ✅ Completo         |
+| **NIST SSDF** – PW.1 / PW.4 / RV.1                             | Requisitos de arquitetura, validação formal e rastreabilidade     | ✅ Completo         |
 | **OWASP SAMM v2.1** – Design → Architecture & Design           | Zonas de confiança, padrões, validação técnica                   | ✅ Nível 3          |
 | **BSIMM13** – Architecture Analysis (AA1–AA3)                  | Modelação, validação formal e documentação de arquitetura         | ✅ Nível 2          |
 | **ISO/IEC 27001** – A.14.2.1 / A.14.2.5                        | Definição, revisão e validação técnica da arquitetura             | ✅ Completo         |
-| **ISO/IEC 27034** – Application Security Architecture          | Referenciais, práticas e rastreabilidade de controlos arquiteturais | ✅ Completo       |
-| **SLSA v1.0** – Build Design Integrity (Nível 2–3)             | Segmentação e isolamento por design, definição arquitetural segura| ✅ Parcial          |
-| **CIS Controls v8** – Control 4.1 / 4.3 / 16.1                 | Definição arquitetural, separação de funções e controlo de execução| ✅ Completo         |
+| **ISO/IEC 27034** – Application Security Architecture          | Referenciais, práticas e rastreabilidade de controlos de arquitetura | ✅ Completo       |
+| **SLSA v1.0** – Build Design Integrity (Nível 2–3)             | Segmentação e isolamento por design, definição da arquitetura segura| ✅ Parcial          |
+| **CIS Controls v8** – Control 4.1 / 4.3 / 16.1                 | Definição da arquitetura, separação de funções e controlo de execução| ✅ Completo         |
 | **ENISA SDLC / DevSecOps** – Secure Architecture & Review      | Validação formal, zonas de risco, diagramas e documentação        | ✅ Completo         |
 | **OWASP DSOMM** – Design & Development                         | Práticas formais de arquitetura, validações, rastreabilidade      | ✅ Nível 3          |
 
@@ -34,9 +34,9 @@ Este documento estabelece a **rastreabilidade entre as práticas prescritas nest
 
 ### 🛠️ NIST SSDF
 
-- **PW.1**: Requisitos arquiteturais definidos com base na análise de risco (`ARC-001` a `ARC-011`);
+- **PW.1**: Requisitos de arquitetura definidos com base na análise de risco (`ARC-001` a `ARC-011`);
 - **PW.4**: Validação da arquitetura antes de desenvolvimento e entrega, com documentação formal;
-- **RV.1**: Existência de rastreabilidade entre os requisitos, artefactos arquiteturais e decisões técnicas.
+- **RV.1**: Existência de rastreabilidade entre os requisitos, artefactos de arquitetura e decisões técnicas.
 
 ---
 
@@ -44,7 +44,7 @@ Este documento estabelece a **rastreabilidade entre as práticas prescritas nest
 
 Permite atingir **nível 3** no domínio *Architecture & Design*:
 - Zonas de confiança bem definidas;
-- Padrões arquiteturais aprovados e reutilizados;
+- Padrões de arquitetura aprovados e reutilizados;
 - Validações formais com critérios proporcionais ao risco;
 - Rastreabilidade entre requisitos e componentes técnicos.
 
@@ -53,7 +53,7 @@ Permite atingir **nível 3** no domínio *Architecture & Design*:
 ### 📊 BSIMM13
 
 Cobertura dos domínios:
-- **AA1**: Mapeamento arquitetural com base em zonas, fluxos e ativos;
+- **AA1**: Mapeamento da arquitetura com base em zonas, fluxos e ativos;
 - **AA2**: Validações técnicas com critérios definidos, recorrência e rastreio;
 - **AA3**: Documentação formal e versionada das decisões e diagramas.
 
@@ -69,7 +69,7 @@ Cobertura dos domínios:
 ### 🔐 ISO/IEC 27034
 
 - Tratamento da arquitetura como artefacto formal e verificável;
-- Integração de controlos de segurança diretamente na estrutura arquitetural;
+- Integração de controlos de segurança diretamente na estrutura da arquitetura;
 - Rastreabilidade entre requisitos, ameaças, controlos e documentação técnica.
 
 ---
@@ -77,7 +77,7 @@ Cobertura dos domínios:
 ### 🧬 SLSA v1.0
 
 - Contribuição parcial para **Build Design Integrity**:
-  - Diagrama arquitetural claro com delimitação de zonas;
+  - Diagrama da arquitetura claro com delimitação de zonas;
   - Isolamento lógico proposto, mas dependente da camada infraestrutural;
 - Cobertura plena exige articulação com práticas do Capítulo 07 (CI/CD Seguro).
 
@@ -86,14 +86,14 @@ Cobertura dos domínios:
 ### 🧱 CIS Controls v8
 
 - **4.1 / 4.3**: Separação lógica de ativos com base na função e risco;
-- **16.1**: Estrutura arquitetural como mecanismo de controlo da superfície de ataque e configuração segura.
+- **16.1**: Estrutura da arquitetura como mecanismo de controlo da superfície de ataque e configuração segura.
 
 ---
 
 ### 🛰️ ENISA SDLC / DevSecOps
 
 - Práticas recomendadas de conceção segura formalmente representadas;
-- Revisão arquitetural com critérios de exposição, impacto e risco;
+- Revisão da arquitetura com critérios de exposição, impacto e risco;
 - Reutilização de modelos referenciais e documentação versionada.
 
 ---
@@ -101,7 +101,7 @@ Cobertura dos domínios:
 ### 🧩 OWASP DSOMM - Design & Development
 
 - Definição formal da arquitetura, zonas de confiança e fronteiras
-- Validações arquiteturais proporcionais ao risco 
+- Validações de arquitetura proporcionais ao risco 
 - Rastreabilidade entre requisitos e componentes
 - Uso da arquitetura como base para identificação de ameaças 
 - Diagramas versionados, ADRs, exceções formais 

@@ -2,7 +2,7 @@
 id: achievable-maturity
 title: Mapeamento de Maturidade – Capítulo 09
 sidebar_position: 10
-tags: [canon, maturidade, SAMM, BSIMM, SSDF, SLSA, DSOMM, CIS, ENISA]
+tags: [canon, maturidade, SAMM, SSDF, SLSA, DSOMM, CIS, ENISA]
 ---
 
 # 📈 Maturidade – Containers e Imagens

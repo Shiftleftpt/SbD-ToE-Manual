@@ -87,11 +87,3 @@ Esta prática define os mecanismos necessários para assegurar que **cada execu�
 - Publicações não rastreáveis, alteradas ou não autorizadas.
 
 ---
-
-## 🧭 Referências
-
-- [SLSA – Provenance Attestations](https://slsa.dev/spec/v1.0/provenance)
-- [NIST SSDF – RV.3: Record Retention and Traceability](https://csrc.nist.gov/publications/detail/sp/800-218/final)
-- [OWASP CI/CD Security – 7. Auditability](https://owasp.org/www-project-cicd-security/#7-auditability)
-- [BSIMM – CR1.5, SE3.2]
-- [SAMM – Secure Build – Traceability]

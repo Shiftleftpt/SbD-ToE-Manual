@@ -104,7 +104,7 @@ O papel de AppSec é ser ponte entre normas e execução técnica.
 É quem transforma obrigações abstratas em controlos concretos.  
 
 No **Cap. 01–02**, define critérios de classificação e requisitos técnicos.  
-No **Cap. 03–04**, facilita threat modeling e revisão arquitetural.  
+No **Cap. 03–04**, facilita threat modeling e revisão da arquitetura.  
 No **Cap. 05–06**, seleciona ferramentas de SCA e coding standards.  
 No **Cap. 07–10**, desenha controlos críticos de pipelines, IaC, containers e testes.  
 No **Cap. 12–14**, estabelece métricas de monitorização e apoia cláusulas contratuais de segurança.  
@@ -157,8 +157,8 @@ Fornece prova documental exigida em NIS2 (auditorias, reporting) e DORA (resili�
 
 Os arquitetos desenham soluções que resistem ao tempo e às ameaças.  
 
-No **Cap. 03–04**, definem padrões arquiteturais e revêm integrações críticas.  
-No **Cap. 07–08**, asseguram consistência arquitetural em pipelines e IaC.  
+No **Cap. 03–04**, definem padrões de arquitetura e revêm integrações críticas.  
+No **Cap. 07–08**, asseguram consistência da arquitetura em pipelines e IaC.  
 No **Cap. 11–12**, apoiam desenho resiliente de ambientes de produção.  
 
 **Enquadramento regulatório:**  

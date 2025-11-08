@@ -127,18 +127,6 @@ O PenTest **não substitui** testes contínuos - é um **complemento estratégic
 
 ---
 
-## 🔗 Referências normativas
-
-| Referência                   | Secção relevante                              |
-|-----------------------------|-----------------------------------------------|
-| **OWASP Testing Guide**     | Categorias de testes manuais ofensivos        |
-| **NIST SSDF v1.1**          | RV.6 – Third-Party Security Testing           |
-| **ISO/IEC 27001:2022**      | A.12.6.1 – Testes regulares de vulnerabilidades |
-| **ENISA Secure SDLC**       | Avaliação de segurança por terceiros          |
-| **BSIMM13**                 | SE3.5, T2.6 – PenTesting e exploração lógica  |
-
----
-
 ## ✅ Conclusão
 
 O PenTesting é um **instrumento de validação externa e independente**. A sua eficácia depende diretamente da sua **integração com os mecanismos internos de segurança**.

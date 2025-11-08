@@ -33,17 +33,6 @@ A aplicação eficaz do Capítulo 13 - Formação e Onboarding Seguro - depende 
 
 ---
 
-## 📚 Referências normativas associadas
-
-| Referência              | Ligação com políticas propostas                                               |
-|-------------------------|------------------------------------------------------------------------------|
-| OWASP SAMM EDU1         | Educação formal de stakeholders                                              |
-| BSIMM SE1, SE2, SE3     | Programas de formação contínua, verificação prática, cultura de segurança    |
-| NIST SSDF PO.3          | Formação e sensibilização por função e perfil de risco                       |
-| ISO/IEC 27001 A.6.1.2   | Formação de pessoal com responsabilidade em segurança                        |
-
----
-
 ## ✅ Recomendações finais
 
 - Estas políticas devem estar **formalmente aprovadas pela liderança de segurança** e comunicadas às áreas de onboarding, formação e contratação.

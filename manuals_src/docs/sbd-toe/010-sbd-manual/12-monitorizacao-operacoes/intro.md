@@ -5,17 +5,6 @@ description: Princípios e práticas para assegurar visibilidade, deteção e re
 tags: [monitorizacao, operacoes, deteção, resposta, logs, métricas, incidentes]
 sidebar_position: 0
 ---
-import Badge from '@site/src/components/Badge';
-
-<div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.5rem', marginBottom: '1rem' }}>
-  
-  <Badge color="info">SAMM: 2 / 3</Badge>
-  <Badge color="info">BSIMM: AM2.3, SE3.6, IR1.1</Badge>
-  <Badge color="info">SSDF: RV.4, PO.6, DE.3</Badge>
-  <Badge color="info">SLSA: Nível 2 / 4</Badge>
-  <Badge color="info">DSOMM: 2 / 3 (Operate & Detect)</Badge>
-  <a href="./achievable-maturity" style={{ marginLeft: 'auto', fontSize: '0.9rem' }}>📄 Ver análise de maturidade</a>
-</div>
 
 :::tip Capítulo Operacional
 Este capítulo é considerado **operacional** no modelo *Security by Design – Theory of Everything (SbD-ToE)*.  

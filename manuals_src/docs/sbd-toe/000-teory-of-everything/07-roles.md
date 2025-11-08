@@ -77,7 +77,7 @@ O papel responde diretamente a requisitos de **DORA** sobre gestão de dependên
 ## 🔐 AppSec Engineers
 
 - Traduzem normas e regulamentos em requisitos técnicos.  
-- Facilitam sessões de threat modeling e revisão arquitetural.  
+- Facilitam sessões de threat modeling e revisão da arquitetura.  
 - Definem guidelines de desenvolvimento seguro.  
 - Acompanham auditorias e produzem evidência de segurança.  
 
@@ -123,7 +123,7 @@ Este papel é central em **NIS2** e **DORA**, que explicitamente atribuem ao ór
 
 - Desenham soluções com padrões seguros (Cap. 04).  
 - Antecipam implicações de risco em integrações e fluxos de dados.  
-- Garantem consistência arquitetural em pipelines, IaC e deploys.  
+- Garantem consistência da arquitetura em pipelines, IaC e deploys.  
 
 **Contexto regulatório:**  
 O trabalho dos arquitetos suporta princípios de *security by design* previstos em **GDPR**, **AI Act** e também obrigações de **NIS2** relacionadas com planeamento de medidas técnicas adequadas.

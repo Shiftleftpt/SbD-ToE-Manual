@@ -20,7 +20,7 @@ Este ficheiro estabelece a **rastreabilidade entre as práticas prescritas neste
 | **NIST SSDF** – PW.4 (Revisão de requisitos)          | Ligação explícita entre ameaças e requisitos (Addon 07)      | ✅ Parcial          |
 | **OWASP SAMM v2.1** – Design → Threat Assessment      | Processo estruturado de threat modeling com integração contínua no SDLC | ✅ Nível 3          |
 | **BSIMM13** – Architecture Analysis (AA1.1–AA1.3)     | Modelação contínua, estruturada e metodologias específicas (STRIDE, OCTAVE) | ✅ Nível 3          |
-| **BSIMM13** – Architecture Analysis (AA2.1–AA2.2)     | Validação formal e documentada da segurança arquitetural (Addon 09) | ✅ Completo         |
+| **BSIMM13** – Architecture Analysis (AA2.1–AA2.2)     | Validação formal e documentada da segurança da arquitetura (Addon 09) | ✅ Completo         |
 | **ISO/IEC 27034** – Application Security Control      | Validação formal e técnica da arquitetura resultante de TM   | ✅ Parcial          |
 | **OWASP ASVS v5** – V1.1–V1.9 (Threat Modeling)       | Modelação de ameaças para derivação e validação de requisitos de segurança | ✅ Parcial          |
 | **NIST SP 800-53** – SA-11 (Security Testing)         | Validação e teste contínuo baseado em modelos de ameaça      | ✅ Completo         |
@@ -56,9 +56,9 @@ O capítulo atinge **nível 3** em *Threat Assessment*:
 
 ### 📊 BSIMM13
 
-Cobertura total das práticas de análise arquitetural contínua:
+Cobertura total das práticas de análise da arquitetura contínua:
 - AA1.1–AA1.3 (Modelação de ameaças estruturada)
-- AA2.1–AA2.2 (Validação arquitetural explícita)
+- AA2.1–AA2.2 (Validação da arquitetura explícita)
 
 Este nível corresponde ao nível mais elevado (nível 3 BSIMM), com práticas consistentes e rastreáveis documentadas no capítulo.
 
@@ -66,7 +66,7 @@ Este nível corresponde ao nível mais elevado (nível 3 BSIMM), com práticas c
 
 ### 🏛️ ISO/IEC 27034
 
-Cobertura parcial através da validação arquitetural derivada de threat modeling:
+Cobertura parcial através da validação da arquitetura derivada de threat modeling:
 - Validação explícita da arquitetura segura documentada no Addon 09
 - Necessária integração com práticas adicionais do capítulo 04 (Arquitetura Segura)
 
@@ -84,7 +84,7 @@ Cobertura parcial das práticas de threat modeling (V1.1–V1.9):
 
 Cobertura integral dos requisitos:
 - **SA-11**: validação contínua por threat modeling técnico e testes associados
-- **SA-17**: validação formal e técnica da segurança arquitetural
+- **SA-17**: validação formal e técnica da segurança da arquitetura
 
 ---
 

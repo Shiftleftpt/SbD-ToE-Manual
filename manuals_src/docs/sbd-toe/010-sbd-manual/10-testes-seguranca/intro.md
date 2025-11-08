@@ -5,17 +5,6 @@ description: Estratégias e práticas para validar continuamente a segurança de
 tags: [testes, segurança, validação contínua, SAST, DAST, fuzzing, pentesting, DSOMM, SAMM, SSDF, SLSA]
 sidebar_position: 0
 ---
-import Badge from '@site/src/components/Badge';
-
-<div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.5rem', marginBottom: '1rem' }}>
-  
-  <Badge color="info">SAMM: 2 / 3</Badge>
-  <Badge color="info">BSIMM: SFD1.2, SE1.1, T1.3, T2.4, SE3.5</Badge>
-  <Badge color="info">SSDF: RV.1, RV.3, RV.6, PS.2</Badge>
-  <Badge color="info">SLSA: Nível 2 / 4</Badge>
-  <Badge color="info">DSOMM: 2 / 3 (Testing, Dev)</Badge>
-  <a href="./achievable-maturity" style={{ marginLeft: 'auto', fontSize: '0.9rem' }}>📄 Ver análise de maturidade</a>
-</div>
 
 :::tip Capítulo Operacional
 Este capítulo é considerado **operacional** no modelo *Security by Design – Theory of Everything (SbD-ToE)*.  

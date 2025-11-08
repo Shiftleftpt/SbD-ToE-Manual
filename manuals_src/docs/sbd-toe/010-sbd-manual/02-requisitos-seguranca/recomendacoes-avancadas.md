@@ -145,6 +145,6 @@ permitir {
 
 - Mapear REQ-IDs para princípios como *Least Privilege*, *Fail Safe Defaults*
 - Criar "Design Guidelines to REQ" mappings
-- Garantir que decisões arquiteturais resultam em requisitos rastreáveis
+- Garantir que decisões de arquitetura resultam em requisitos rastreáveis
 
 > 🧐 Esta prática reforça o alinhamento com o **DSOMM – Design & Development**.

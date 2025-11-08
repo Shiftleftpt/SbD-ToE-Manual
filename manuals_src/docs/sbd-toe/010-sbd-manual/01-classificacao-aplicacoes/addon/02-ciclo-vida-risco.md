@@ -20,14 +20,14 @@ Este ficheiro descreve as práticas mínimas de integração da gestão de risco
 | Fase                     | Ações de Gestão de Risco                                                         |
 | ------------------------ | -------------------------------------------------------------------------------- |
 | Planeamento / Requisitos | Identificação de riscos iniciais com base em BIA e arquitetura prevista          |
-| Design / Arquitetura     | Avaliação preliminar de risco; mapeamento para controlos arquiteturais           |
+| Design / Arquitetura     | Avaliação preliminar de risco; mapeamento para controlos de arquitetura           |
 | Desenvolvimento          | Validação de risco residual em features novas; revisão de requisitos de controlo |
 | Testes / Validação       | Confirmação de aplicação dos controlos; reavaliação de risco pré-release         |
 | Release / Operacional    | Registo de aceitação formal de risco residual; monitorização de risco dinâmico   |
 
 ---
 
-## 📅 Gatilhos para Reavaliação de Risco
+## 📅 Triggers para Reavaliação de Risco
 
 O risco deve ser reavaliado sempre que ocorra:
 

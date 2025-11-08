@@ -38,11 +38,6 @@ tags: [ciclo de vida, formacao, capacitacao, champions, onboarding, segurança]
 ### US-01 - Onboarding seguro obrigatório
 **Contexto.** Novos elementos sem formação introduzem riscos básicos.  
 
-**📖 Rationale.**  
-- **Referências:** SSDF PO.3, SAMM PO2.  
-- **Ameaças mitigadas:** erros humanos, desconhecimento de políticas.  
-- **Valor científico:** organizações com onboarding seguro reduzem falhas de configuração iniciais em 35%.  
-
 :::userstory
 **História.**   
 Como **RH/PeopleOps**, quero **garantir formação obrigatória de onboarding em SbD**, para **assegurar que todos iniciam alinhados com as práticas**.  
@@ -72,11 +67,6 @@ Como **RH/PeopleOps**, quero **garantir formação obrigatória de onboarding em
 
 ### US-02 - Formação contínua por perfil
 **Contexto.** Sem atualização contínua, práticas ficam obsoletas.  
-
-**📖 Rationale.**  
-- **Referências:** BSIMM T1.1, SSDF PO.7.  
-- **Ameaças mitigadas:** desatualização, vulnerabilidades recorrentes.  
-- **Valor científico:** formação contínua aumenta taxa de adoção de práticas seguras em 40%.  
 
 :::userstory
 **História.**   
@@ -108,11 +98,6 @@ Como **AppSec**, quero **fornecer formação contínua por perfil (Dev, QA, DevO
 ### US-03 - Programa de Security Champions
 **Contexto.** Sem champions, equipas carecem de liderança interna.  
 
-**📖 Rationale.**  
-- **Referências:** DSOMM People & Training, SAMM PO3.  
-- **Ameaças mitigadas:** falta de cultura, falhas repetitivas.  
-- **Valor científico:** equipas com champions reduzem tempo de resposta a falhas em 25%.  
-
 :::userstory
 **História.**   
 Como **Champion**, quero **mentorar e evangelizar a equipa**, para **assegurar aplicação contínua das práticas SbD**.  
@@ -143,11 +128,6 @@ Como **Champion**, quero **mentorar e evangelizar a equipa**, para **assegurar a
 ### US-04 - Exercícios práticos e simulações
 **Contexto.** Formação teórica sem prática tem baixa retenção.  
 
-**📖 Rationale.**  
-- **Referências:** BSIMM T2.3, SAMM PO3.  
-- **Ameaças mitigadas:** baixa retenção, falta de prontidão em incidentes.  
-- **Valor científico:** exercícios práticos aumentam retenção em 60%.  
-
 :::userstory
 **História.**   
 Como **QA/Testes**, quero **realizar exercícios práticos (labs, CTFs, simulações)**, para **garantir que o conhecimento é aplicável**.  
@@ -177,11 +157,6 @@ Como **QA/Testes**, quero **realizar exercícios práticos (labs, CTFs, simulaç
 
 ### US-05 - Medição de eficácia da formação
 **Contexto.** Sem medir eficácia, não há melhoria contínua.  
-
-**📖 Rationale.**  
-- **Referências:** SSDF PO.7, SAMM PO3.  
-- **Ameaças mitigadas:** complacência, formação ineficaz.  
-- **Valor científico:** medição de KPIs permite ajustar programas e aumentar eficácia em 30%.  
 
 :::userstory
 **História.**   

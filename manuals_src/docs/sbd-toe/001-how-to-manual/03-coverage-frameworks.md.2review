@@ -10,7 +10,7 @@ hide_table_of_contents: false
 Este documento apresenta a **cobertura global** oferecida pelo manual *Security by Design – Teoria de Tudo (SbD-ToE)* em relação a quatro das principais frameworks internacionais:
 
 - [OWASP SAMM](https://owaspsamm.org/)
-- [BSIMM](https://www.bsimm.com/)
+- [BSIMM](https://www.bsimm.com/) (Do que se consegue inferir pela documentação publica. O modelo é proprietário e apenas se toma como referencia o que de dominio publico.)
 - [NIST SSDF](https://csrc.nist.gov/publications/detail/white-paper/2022/02/01/secure-software-development-framework-ssdf)
 - [SLSA](https://slsa.dev/)
 

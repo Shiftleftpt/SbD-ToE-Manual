@@ -2,20 +2,9 @@
 id: intro
 title: Formação e Capacitação
 description: Estratégias e práticas para garantir que equipas, perfis e stakeholders estão preparados para aplicar o Security by Design
-tags: [formacao, capacitacao, onboarding, champions, aprendizagem, DSOMM, SAMM, BSIMM]
+tags: [formacao, capacitacao, onboarding, champions, aprendizagem, DSOMM, SAMM, ]
 sidebar_position: 0
 ---
-import Badge from '@site/src/components/Badge';
-
-<div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.5rem', marginBottom: '1rem' }}>
-  
-  <Badge color="info">SAMM: 2 / 3</Badge>
-  <Badge color="info">BSIMM: T1.1, T2.3, SR1.2</Badge>
-  <Badge color="info">SSDF: PO.3, PO.7</Badge>
-  <Badge color="info">SLSA: Nível 1 / 4</Badge>
-  <Badge color="info">DSOMM: 2 / 3 (People & Training)</Badge>
-  <a href="./achievable-maturity" style={{ marginLeft: 'auto', fontSize: '0.9rem' }}>📄 Ver análise de maturidade</a>
-</div>
 
 :::note Capítulo Organizacional
 Este capítulo é considerado **organizacional** no modelo *Security by Design – Theory of Everything (SbD-ToE)*.  

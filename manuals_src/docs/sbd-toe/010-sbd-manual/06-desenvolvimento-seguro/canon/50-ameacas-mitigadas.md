@@ -86,4 +86,4 @@ O Capítulo 06 mitiga ameaças críticas à **qualidade e segurança do código-
 
 > 📦 Também reduz substancialmente o risco de problemas **que viriam a ser detetados por SBOM, SCA ou scanners**, ao garantir validações estruturadas, políticas de dependência e anotação de exceções desde a origem.
 
-> 📌 Este capítulo operacionaliza os princípios de **secure coding** e **continuous validation** de forma auditável e escalável - com impacto direto na conformidade com **SSDF, BSIMM, SAMM, ISO 27034, CAPEC e OWASP Top 10**.
+> 📌 Este capítulo operacionaliza os princípios de **secure coding** e **continuous validation** de forma auditável e escalável - com impacto direto na conformidade com **SSDF, SAMM, ISO 27034, CAPEC e OWASP Top 10**.

@@ -48,11 +48,6 @@ Este capítulo detalha, de forma operacional e prescritiva, **quando e como impl
 **Contexto.**  
 A classificação inicial da aplicação é o ponto de entrada para a aplicação proporcional de controlos de segurança (L1–L3). Sem este passo, não é possível garantir rastreabilidade nem proporcionalidade.
 
-**📖 Rationale.**  
-- **Referências:** ISO 27005, OWASP SAMM (Governance), SSDF PO.1.  
-- **Ameaças mitigadas:** ausência de critérios de proporcionalidade → aplicações críticas tratadas como triviais (OSC&R – Risk underestimation).  
-- **Valor científico:** estudos do NIST confirmam que a classificação inicial é determinante para calibrar investimento em segurança.
-
 :::userstory
 **História.**  
 Como **Dev / Tech Lead** quero classificar a aplicação com base nos eixos Exposição, Dados e Impacto (E+D+I) para garantir a aplicação proporcional de controlos de segurança.
@@ -81,7 +76,7 @@ Como **Dev / Tech Lead** quero classificar a aplicação com base nos eixos Expo
 | L3 | Sim | Classificação formal, validada por AppSec e aprovada por GRC |
 
 **Integração no SDLC.**
-| Fase        | Gatilho                         | Responsável       | SLA/Deadline              |
+| Fase        | Trigger                         | Responsável       | SLA/Deadline              |
 |-------------|---------------------------------|-------------------|---------------------------|
 | Início      | Kick-off / definição de projeto | Dev / Tech Lead   | Antes da primeira release |
 | Arquitetura | Revisão de design inicial       | Dev + Arquitetura | Antes da aprovação de arquitetura |
@@ -97,8 +92,6 @@ Como **Dev / Tech Lead** quero classificar a aplicação com base nos eixos Expo
 **Contexto.**  
 A matriz de controlo define quais os requisitos de segurança aplicáveis em função do nível de risco.
 
-**📖 Rationale.**  
-- **Referências:** OWASP SAMM SR1, BSIMM CP1.1.  
 - **Ameaças mitigadas:** excesso ou falta de controlos → falhas operacionais ou custos excessivos.
 
 :::userstory
@@ -128,7 +121,7 @@ Como **Dev / Tech Lead** quero aplicar a matriz de controlos para garantir que a
 | L3 | Sim | Controlos completos + reforçados |
 
 **Integração no SDLC.**
-| Fase       | Gatilho            | Responsável           | SLA                     |
+| Fase       | Trigger            | Responsável           | SLA                     |
 |------------|--------------------|-----------------------|-------------------------|
 | Planeamento| Após classificação | Dev / TL + AppSec     | Antes de implementação  |
 
@@ -141,10 +134,6 @@ Como **Dev / Tech Lead** quero aplicar a matriz de controlos para garantir que a
 
 **Contexto.**  
 A classificação deve ser revista quando existirem alterações significativas de arquitetura, dados ou exposição.
-
-**📖 Rationale.**  
-- **Referências:** ISO 27005, SSDF RV.1.  
-- **Ameaças mitigadas:** *risk drift* → nível de risco real muda sem atualização formal.
 
 :::userstory
 **História.**  
@@ -181,10 +170,6 @@ Como **AppSec / Segurança** quero rever a classificação de criticidade sempre
 **Contexto.**  
 Para além dos triggers por alteração, a classificação deve ter **cadência de revisão**.
 
-**📖 Rationale.**  
-- **Referências:** SSDF RV.1, GRC.  
-- **Valor:** garante atualização mesmo sem eventos visíveis.
-
 :::userstory
 **História.**  
 Como **GRC / AppSec** quero rever a classificação com **cadência fixa** para assegurar que a criticidade e os controlos continuam adequados.
@@ -214,9 +199,6 @@ Como **GRC / AppSec** quero rever a classificação com **cadência fixa** para 
 **Contexto.**  
 Mesmo após aplicação da matriz, podem permanecer riscos residuais que devem ser documentados e aprovados.
 
-**📖 Rationale.**  
-- **Referências:** SSDF PO.4, ISO 27005.
-
 :::userstory
 **História.**  
 Como **GRC / Compliance** quero registar o risco residual após aplicar os controlos definidos para fundamentar decisões de aceitação ou mitigação.
@@ -242,9 +224,6 @@ Como **GRC / Compliance** quero registar o risco residual após aplicar os contr
 **Contexto.**  
 Aceitações de risco **não podem ser permanentes**.
 
-**📖 Rationale.**  
-- **Referências:** SSDF PO.4; práticas GRC.
-
 :::userstory
 **História.**  
 Como **GRC / Gestão** quero que cada aceitação de risco tenha **owner, prazo de validade (TTL)**, **critérios de encerramento** e **notificação automática** antes da expiração.
@@ -268,9 +247,6 @@ Como **GRC / Gestão** quero que cada aceitação de risco tenha **owner, prazo 
 **Contexto.**  
 Antes de entrar em produção é necessário validar se todos os requisitos aplicáveis foram cumpridos.
 
-**📖 Rationale.**  
-- **Referências:** SSDF RV.3, BSIMM SE3.5.
-
 :::userstory
 **História.**  
 Como **QA / Testes** quero validar que os requisitos aplicáveis por nível de risco estão cumpridos antes da entrada em produção.
@@ -292,9 +268,6 @@ Como **QA / Testes** quero validar que os requisitos aplicáveis por nível de r
 
 **Contexto.**  
 Cada nível de criticidade deve ser confrontado com ameaças conhecidas para validar cobertura.
-
-**📖 Rationale.**  
-- **Referências:** OWASP Top 10, CAPEC, OSC&R.
 
 :::userstory
 **História.**  
@@ -321,9 +294,6 @@ Como **AppSec / Segurança** quero verificar se as ameaças esperadas para o ní
 **Contexto.**  
 Pipelines CI/CD, projetos IaC e imagens/container são **produtos** e devem ter criticidade e controlos proporcionais (Cap. 07, 08, 09).
 
-**📖 Rationale.**  
-- **Referências:** DSOMM (Tooling/Build), SSDF PW.5, Cap. 07/08/09.
-
 :::userstory
 **História.**  
 Como **Plataforma / DevOps** quero **classificar os artefactos técnicos** relacionados (pipeline, IaC, imagens) e aplicar **controlos proporcionais** nos capítulos respetivos.
@@ -345,9 +315,6 @@ Como **Plataforma / DevOps** quero **classificar os artefactos técnicos** relac
 
 **Contexto.**  
 Sem indicadores, não há governança efetiva nem melhoria contínua.
-
-**📖 Rationale.**  
-- **Referências:** SAMM Governance, DSOMM Metrics.
 
 :::userstory
 **História.**  

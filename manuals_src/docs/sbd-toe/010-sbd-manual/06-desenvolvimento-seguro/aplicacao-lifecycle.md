@@ -51,12 +51,6 @@ A tabela seguinte explicita estas responsabilidades.
 **Contexto.**  
 Guidelines claras e versionadas por *stack* evitam decisões ad-hoc e asseguram consistência. Mais do que um documento estático, são um **mecanismo vivo** de governação: atualizadas, revistas e aplicadas diariamente. A existência de *rulesets* derivadas de linters e analisadores automáticos, com *tailoring* documentado, reduz significativamente riscos de interpretação subjetiva.
 
-**📖 Rationale científico.**  
-Alinhado com **SSDF PS.1** (definição de requisitos), **SAMM Implementation** e **BSIMM SE2.3** (guidelines de codificação).  
-Mitiga falhas como **CWE-657 (Violation of Secure Design Principles)** e **CWE-20 (Improper Input Validation)**.  
-Segundo o **Verizon DBIR 2023**, cerca de 27% das falhas exploradas têm origem em práticas de codificação deficientes.  
-Estudos da Microsoft SDL e investigações independentes demonstram que *guidelines* versionadas e aplicadas com linters reduzem em 40% a reincidência de vulnerabilidades.
-
 :::userstory
 **História.**   
 Como **Desenvolvedor**, quero aplicar as guidelines de código seguro aprovadas, para garantir consistência e reduzir vulnerabilidades desde o início.
@@ -88,7 +82,7 @@ Como **Desenvolvedor**, quero aplicar as guidelines de código seguro aprovadas,
 | L3    | Sim          | Auditoria periódica e *policy-as-code* |
 
 **Integração no SDLC.**
-| Fase        | Gatilho           | Responsável              | SLA             |
+| Fase        | Trigger           | Responsável              | SLA             |
 |-------------|-------------------|--------------------------|-----------------|
 | Planeamento | Definição de stack| Gestor Técnico + Dev     | Antes do 1.º sprint |
 
@@ -101,11 +95,6 @@ xref:sbd-toe:cap06:intro
 
 **Contexto.**  
 Revisões de código não são apenas uma prática de qualidade, mas um **ponto de controlo de segurança**. Quando sistematizadas com checklist, previnem vulnerabilidades, promovem partilha de conhecimento e criam registo formal de conformidade.
-
-**📖 Rationale científico.**  
-Baseado em **SAMM Verification (Code Review)**, **BSIMM SE2.4** e **SSDF RV.1**.  
-Mitiga riscos como **CWE-22 (Path Traversal)** e **CWE-89 (SQL Injection)**.  
-Segundo o **SmartBear 2022 State of Code Review**, equipas que utilizam checklists formais reduzem em 60% a taxa de vulnerabilidades que chegam a produção.
 
 :::userstory
 **História.**   
@@ -136,7 +125,7 @@ Como **Revisor Técnico**, quero aplicar uma checklist de segurança em cada PR,
 | L3    | Sim          | Revisão dedicada com foco em segurança |
 
 **Integração no SDLC.**
-| Fase            | Gatilho   | Responsável      | SLA          |
+| Fase            | Trigger   | Responsável      | SLA          |
 |-----------------|-----------|------------------|--------------|
 | Revisão de Código| PR aberto| Revisor Técnico  | Antes do merge |
 
@@ -149,11 +138,6 @@ xref:sbd-toe:cap06:intro
 
 **Contexto.**  
 Cada dependência externa adicionada ao projeto é uma potencial porta de entrada para riscos de cadeia de fornecimento. A gestão rigorosa destas dependências garante que não se introduz software obsoleto, vulnerável ou malicioso.
-
-**📖 Rationale científico.**  
-Relacionada com **SSDF PW.4**, **SAMM Implementation**, e **BSIMM CMVM1.1**.  
-Mitiga riscos como **CWE-829 (Use of Untrusted Components)** e ataques de *dependency confusion*.  
-Segundo o **Sonatype 2023 Supply Chain Report**, 1 em cada 10 pacotes descarregados contém uma vulnerabilidade crítica - prova da necessidade de validação formal e contínua.
 
 :::userstory
 **História.**   
@@ -184,7 +168,7 @@ Como **AppSec**, quero validar e justificar dependências externas, para reduzir
 | L3    | Sim          | Política de pinning/lockfile obrigatório |
 
 **Integração no SDLC.**
-| Fase          | Gatilho             | Responsável        | SLA            |
+| Fase          | Trigger             | Responsável        | SLA            |
 |---------------|---------------------|--------------------|----------------|
 | Desenvolvimento | Inclusão dependência | Dev + AppSec       | Antes do merge |
 
@@ -197,11 +181,6 @@ xref:sbd-toe:cap05:intro
 
 **Contexto.**  
 A automatização de validações em pipelines CI/CD garante consistência, acelera a deteção de falhas e cria evidência contínua. Automatizar significa **remover o fator humano de distração ou esquecimento** em controlos repetitivos.
-
-**📖 Rationale científico.**  
-Previsto em **DSOMM – Automation**, **SSDF RV.2** e **BSIMM SE3.3**.  
-Mitiga riscos como **CWE-117 (Improper Logging)** e **CWE-693 (Protection Mechanism Failure)**.  
-Relatórios da **ENISA** e do **DBIR** demonstram que equipas que integram SAST reduzem o tempo médio de deteção em 27%.
 
 :::userstory
 **História.**   
@@ -232,7 +211,7 @@ Como **DevSecOps**, quero integrar linters e SAST no pipeline, para detetar falh
 | L3    | Sim          | SAST + validações adicionais (IaC/DAST) |
 
 **Integração no SDLC.**
-| Fase | Gatilho           | Responsável | SLA       |
+| Fase | Trigger           | Responsável | SLA       |
 |------|-------------------|-------------|-----------|
 | CI/CD| Execução pipeline | DevSecOps   | Cada build|
 
@@ -244,11 +223,6 @@ xref:sbd-toe:cap07:intro
 
 **Contexto.**  
 Nem sempre todos os controlos podem ser aplicados em tempo útil. É inevitável lidar com exceções técnicas - mas se estas não forem **formalmente registadas, aprovadas e temporárias**, tornam-se dívida de risco e criam vulnerabilidades persistentes.
-
-**📖 Rationale científico.**  
-Baseado em **SSDF RV.1** (gestão de exceções), **SAMM Governance/Policy**, e **BSIMM CP1.2**.  
-Mitiga riscos como **CAPEC-220 (Disabling Security Features)** e falhas de governação.  
-Segundo o **DBIR 2023**, exceções mal geridas estão entre as principais causas de reincidência de vulnerabilidades críticas.
 
 :::userstory
 **História.**   
@@ -279,7 +253,7 @@ Como **AppSec**, quero registar e aprovar exceções técnicas, para garantir ra
 | L3    | Sim          | Aprovação executiva + plano compensatório |
 
 **Integração no SDLC.**
-| Fase   | Gatilho          | Responsável     | SLA             |
+| Fase   | Trigger          | Responsável     | SLA             |
 |--------|------------------|-----------------|-----------------|
 | Release| Exceção solicitada| AppSec + PO     | Antes do go-live|
 
@@ -292,11 +266,6 @@ xref:sbd-toe:cap02:intro
 
 **Contexto.**  
 Ferramentas de IA generativa (GenIA) aceleram a escrita de código, mas podem introduzir **vulnerabilidades ou violações de licença**. O seu uso deve ser rastreável, validado e sempre sujeito a revisão técnica humana.
-
-**📖 Rationale científico.**  
-Emergente em **NIST AI Risk Management Framework**, alinhado com **SSDF PO.2** (gestão de ferramentas) e princípios de **OWASP Top 10 for LLMs**.  
-Mitiga riscos como **CWE-676 (Use of Potentially Dangerous Function)** e problemas de licenciamento.  
-Segundo estudos da **Stanford 2023** e relatórios da **GitHub Copilot**, até 40% do código gerado por IA contém falhas de segurança quando não revisto.
 
 :::userstory
 **História.**   
@@ -327,7 +296,7 @@ Como **Desenvolvedor**, quero usar IA generativa com revisão obrigatória, para
 | L3    | Sim          | Revisão formal + validações adicionais |
 
 **Integração no SDLC.**
-| Fase          | Gatilho  | Responsável        | SLA           |
+| Fase          | Trigger  | Responsável        | SLA           |
 |---------------|----------|--------------------|---------------|
 | Desenvolvimento| Uso GenIA| Dev + Revisor Técnico| Antes do merge|
 
@@ -340,11 +309,6 @@ xref:sbd-toe:cap06:intro
 
 **Contexto.**  
 Sem governação ativa, guidelines estagnam e perdem relevância. A curadoria regular e a delegação de validação a linters com *rulesets* curados garantem adoção prática e atualizada.
-
-**📖 Rationale científico.**  
-Alinhado com **SAMM Governance**, **SSDF PS.2** (processo de revisão de requisitos) e **BSIMM CP1.1**.  
-Mitiga riscos como **CWE-710 (Improper Adherence to Coding Standards)**.  
-Segundo o **BSIMM13**, organizações que fazem curadoria trimestral de regras aumentam em média 2 níveis de maturidade.
 
 :::userstory
 **História.**   
@@ -376,7 +340,7 @@ Como **Gestor Técnico**, quero rever e publicar guidelines curadas periodicamen
 | L3    | Sim          | *Policy-as-code* + distribuição controlada |
 
 **Integração no SDLC.**
-| Fase      | Gatilho             | Responsável           | SLA     |
+| Fase      | Trigger             | Responsável           | SLA     |
 |-----------|---------------------|-----------------------|---------|
 | Governação| Nova stack ou revisão| Gestor Técnico + AppSec| Até 2 sem.|
 
@@ -389,11 +353,6 @@ xref:sbd-toe:cap06:intro
 
 **Contexto.**  
 Validações de segurança devem ser rastreáveis até aos requisitos originais. Anotações padronizadas (`@sec:*`) no código e nos testes permitem **ligar implementação, requisitos e evidência de auditoria** de forma inequívoca.
-
-**📖 Rationale científico.**  
-Alinhado com **SSDF RV.2** (capture evidence), **BSIMM SE2.4**, e práticas de **DSOMM – Evidence**.  
-Mitiga riscos como **CWE-1059 (Incomplete Documentation of Data Flow)** e falhas em auditorias.  
-Segundo o **DBIR 2023**, a ausência de rastreabilidade aumenta em 40% o tempo médio de resposta a incidentes.
 
 :::userstory
 **História.**   
@@ -424,7 +383,7 @@ Como **Desenvolvedor**, quero anotar validações de segurança com `@sec:*`, pa
 | L3    | Sim          | Anotações + validação automática |
 
 **Integração no SDLC.**
-| Fase              | Gatilho                | Responsável | SLA        |
+| Fase              | Trigger                | Responsável | SLA        |
 |-------------------|------------------------|-------------|------------|
 | Desenvolvimento   | Implementação de requisito | Dev + QA   | Até ao merge|
 

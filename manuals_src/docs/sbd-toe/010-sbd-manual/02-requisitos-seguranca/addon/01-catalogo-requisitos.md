@@ -18,7 +18,7 @@ A existência de um catálogo formal permite:
 - Integrar os requisitos de segurança nos processos de desenvolvimento, auditoria e manutenção;
 - Servir de base comum para curadoria, evolução e adaptação organizacional.
 
-Neste capitulo inclui-se um catálogo que foi consolidado a partir de múltiplas fontes reconhecidas (ASVS, MSTG, NIST SSDF, IEC 62443, BSIMM, entre outras) e destina-se a ser **adaptado e curado por cada organização ou projeto**, de modo a garantir alinhamento com o contexto e o estado da arte. Não é imutável, é um documento vivo e deverá ser mantido regularmete e atualizado. 
+Neste capitulo inclui-se um catálogo que foi consolidado a partir de múltiplas fontes reconhecidas (ASVS, MSTG, NIST SSDF, IEC 62443, entre outras) e destina-se a ser **adaptado e curado por cada organização ou projeto**, de modo a garantir alinhamento com o contexto e o estado da arte. Não é imutável, é um documento vivo e deverá ser mantido regularmete e atualizado. 
 
 ---
 
@@ -57,18 +57,6 @@ Consulte a aplicação proporcional dos requisitos por domínio técnico no
 - [IDE - Ferramentas de Desenvolvimento](lista-requisitos-base#ide)
 
 Para consulta rápida da aplicação proporcional dos requisitos por nível de risco, ver o anexo “Catálogo Base de Requisitos” no final deste capítulo.
----
-
-## 📖 Fontes e referências principais
-
-- [OWASP Application Security Verification Standard (ASVS)](https://owasp.org/www-project-application-security-verification-standard/) <!-- Precisa revisão manual -->
-- [OWASP Mobile Security Testing Guide (MSTG)](https://owasp.org/www-project-mobile-security-testing-guide/) <!-- Precisa revisão manual -->
-- [NIST Secure Software Development Framework (SSDF)](https://csrc.nist.gov/publications/detail/sp/800-218/final) <!-- Precisa revisão manual -->
-- [ISO/IEC 27001:2022](https://www.iso.org/standard/27001) <!-- Precisa revisão manual -->
-- [IEC 62443 - Segurança em Sistemas Industriais](https://webstore.iec.ch/publication/7033) <!-- Precisa revisão manual -->
-- [BSIMM - Building Security In Maturity Model](https://www.bsimm.com/) <!-- Precisa revisão manual -->
-- [OWASP Internet of Things Project](https://owasp.org/www-project-internet-of-things/) <!-- Precisa revisão manual -->
-
 ---
 
 ## 📌 Nota Final

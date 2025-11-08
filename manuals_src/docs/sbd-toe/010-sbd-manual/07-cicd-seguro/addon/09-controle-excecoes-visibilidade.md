@@ -93,9 +93,3 @@ Esta prática define como gerir **exceções de forma controlada, rastreável e 
 
 ---
 
-## 🧭 Referências
-
-- [NIST SSDF – GV.3: Accept Risk with Exceptions](https://csrc.nist.gov/publications/detail/sp/800-218/final)
-- [OWASP CI/CD Security – 8. Compliance and Governance](https://owasp.org/www-project-cicd-security/#8-compliance-and-governance)
-- [BSIMM – CR1.5, SM1.3]
-- [SAMM – Governance – Exception Management]

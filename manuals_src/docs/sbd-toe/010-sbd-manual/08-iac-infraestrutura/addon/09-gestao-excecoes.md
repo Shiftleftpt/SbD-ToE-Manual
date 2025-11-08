@@ -77,4 +77,4 @@ validade: "2025-07-20"
 
 ---
 
-> 🔗 Este mecanismo está alinhado com os requisitos `IAC-010`, `REQ-005`, `REQ-006`, e boas práticas SSDF (RV.1), SAMM (AA2.4), BSIMM (SR2.2), SLSA (Build L3).
+> 🔗 Este mecanismo está alinhado com os requisitos `IAC-010`, `REQ-005`, `REQ-006`, e boas práticas SSDF (RV.1), SAMM (AA2.4),  (SR2.2), SLSA (Build L3).

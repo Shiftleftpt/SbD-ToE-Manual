@@ -10,403 +10,284 @@ sidebar_position: 15
 
 Este documento operacionaliza as práticas prescritas para **Infraestrutura como Código (IaC)**.  
 Enquanto o `intro.md` define o “quê” e o “porquê”, aqui mostramos o “como”: em que fases do ciclo de vida cada requisito se aplica, quem é responsável por executá-lo, como traduzi-lo em user stories reutilizáveis e quais as evidências que asseguram rastreabilidade e auditabilidade.  
-A intenção é clara: transformar prescrições em prática concreta e verificável.
+A intenção é clara: transformar prescrições em **ações verificáveis**, com proporcionalidade por risco e rastreabilidade completa.
 
 ---
 
 ## 🧭 Quando aplicar
 
-Como vimos no `pre-intro`, cada requisito `IAC-XXX` foi concebido para ter **um momento certo de aplicação** no ciclo de vida.  
-Não basta aplicar controlos no fim: é preciso integrá-los desde o arranque do projeto, acompanhando cada alteração de recursos, a adoção de módulos, a preparação de releases e até as auditorias periódicas.  
-A tabela seguinte sintetiza esse alinhamento, ajudando a equipa a saber **quando ativar cada prática e quem deve estar envolvido**.
+A segurança em IaC deve ser aplicada **desde o planeamento até à operação**, garantindo que qualquer alteração em infraestrutura é controlada, auditável e reversível.
 
-| Momento de aplicação             | Prática aplicada                 | Papéis principais         |
-|----------------------------------|----------------------------------|---------------------------|
-| Início do projeto IaC            | Backend remoto, naming conventions| DevOps/Infra, Arquitetura |
-| Configuração de ambientes        | Segregação, versionamento         | DevOps/Infra              |
-| Alteração de recursos            | PR com validações automáticas     | DevOps/Infra, AppSec      |
-| Adoção de módulos                | Origem confiável de módulos       | DevOps/Infra, AppSec      |
-| Preparação de release            | Versionamento, tagging, assinatura| DevOps/Infra              |
-| Antes do `apply`                 | Revisão de `plan`                 | DevOps/Infra, AppSec      |
-| Auditorias e revisões periódicas | Rastreabilidade, enforcement      | GRC, AppSec               |
+| Momento gatilho | Objetivo de segurança | Papéis principais |
+|------------------|-----------------------|------------------|
+| Criação de módulo IaC | Garantir origem confiável e *pinning* | ⚙️ DevOps, 🔐 AppSec |
+| Execução de `plan` | Validar alterações e simulações seguras | ⚙️ DevOps, 👨‍💻 Developers |
+| Execução de `apply` | Executar apenas alterações aprovadas e assinadas | ⚙️ DevOps, 📑 GRC |
+| Auditorias de *drift* | Detetar divergências entre IaC e ambiente real | ⚙️ DevOps, 🔐 AppSec |
+| Atualização de módulos | Rever proveniência e *attestations* | 🔐 AppSec, 📋 Auditoria |
+| Revisão de exceções | Reavaliar riscos e prazos de compensação | 📑 GRC, 🔐 AppSec |
 
 ---
 
 ## 👥 Quem executa cada ação
 
-Garantir segurança em IaC não é responsabilidade de uma única equipa.  
-Cada papel desempenha uma função específica, e só a articulação entre todos mantém a cadeia de confiança íntegra.
-
-| Ação operacional                              | Responsável   | Apoio        | Evidência/Artefactos                        |
-|-----------------------------------------------|---------------|--------------|---------------------------------------------|
-| Configurar backend remoto com locking         | DevOps/Infra  | Arquitetura  | Config `backend.tf` + logs de locking       |
-| Definir segregação/versionamento              | DevOps/Infra  | Arquitetura  | Estrutura de diretórios e branches          |
-| Ativar validações automáticas (lint/policies) | DevOps/Infra  | AppSec       | Logs de execução no pipeline                |
-| Aprovar `plan` antes de `apply`               | AppSec        | DevOps/Infra | PR com output `plan` anexado                |
-| Controlar origem de módulos                   | DevOps/Infra  | AppSec       | Lista de módulos aprovados                  |
-| Garantir rastreabilidade ficheiro→recurso     | GRC           | DevOps/Infra | Mapeamento automático em dashboard          |
-| Versionar e assinar artefactos                | DevOps/Infra  | AppSec       | Tags, hashes, assinaturas, proveniência     |
-| Monitorizar exceções ativas                   | GRC           | AppSec       | Registo de exceções com prazo               |
+| Ação operacional | Responsável | Apoio | Evidência/Artefactos |
+|-------------------|--------------|--------|----------------------|
+| Versionar módulos e backends remotos | ⚙️ DevOps | 🔐 AppSec | `backend.tf`, `state.tf`, logs de locking |
+| Validar formato e sintaxe de IaC | 👨‍💻 Developers | 🧪 QA | Relatórios de validação automática |
+| Aplicar *policy-as-code* nos *pipelines* | 🔐 AppSec | ⚙️ DevOps | Relatórios OPA/Sentinel |
+| Assinar *plans* e gerar *attestations* | ⚙️ DevOps | 🔐 AppSec | Assinaturas digitais e `attestation.json` |
+| Detetar e corrigir *drift* | ⚙️ DevOps | 🔐 AppSec | Relatórios de `plan -refresh-only` |
+| Gerir exceções e revisões | 📑 GRC | 🔐 AppSec | `excecoes-iac.json`, logs de aprovação |
 
 ---
 
-## 🧾 User Stories por requisito
+## 🧾 User Stories normalizadas
 
-Aqui cada requisito `IAC-XXX` se traduz numa **user story reutilizável**, com contexto, racional científico, critérios de aceitação, checklist binária e artefactos.  
-Este formato permite integração direta em backlogs, assegurando que cada requisito é tratado como item de trabalho verificável.
-
----
-
-### US-01 – Backend remoto com locking (IAC-001)
-
-**Contexto.**  
-O estado da infraestrutura deve ser protegido contra alterações concorrentes.
-
-:::userstory
-**História.**   
-Como **DevOps/Infra**, quero configurar o backend remoto com locking, para garantir consistência do estado e evitar corrupção concorrente.
-
-**BDD.**  
-- Dado que vários utilizadores trabalham no mesmo projeto  
-- Quando executam operações simultâneas  
-- Então o backend bloqueia o estado e impede corrupção  
-
-**Checklist.**  
-- [ ] Backend remoto configurado (`S3+DynamoDB`, `KMS`)  
-- [ ] Teste de concorrência documentado  
-- [ ] Validação incluída em CI/CD  
-
-:::
-
-**Artefactos & evidências.** `backend.tf`, logs de locking  
-
-**Proporcionalidade.**  
-- L1: Recomendado  
-- L2: Obrigatório  
-- L3: Obrigatório + monitorização  
-
-**Integração SDLC.** Início do projeto - **Responsável:** DevOps/Infra  
-
-**Ligações úteis.**  
-xref:sbd-toe:cap02:intro  
-
----
-
-### US-02 – Segregação e versionamento de ambientes (IAC-002)
-
-**Contexto.**  
-Ambientes mal segregados aumentam risco de fuga ou alteração acidental.
-
-:::userstory
-**História.**   
-Como **Arquitetura**, quero ambientes definidos e versionados separadamente, para garantir isolamento e rollback.
-
-**BDD.**  
-- Dado que existem múltiplos ambientes  
-- Quando aplico alterações  
-- Então apenas o ambiente alvo é afetado  
-
-**Checklist.**  
-- [ ] Diretórios por ambiente (`dev/`, `prod/`)  
-- [ ] Branches ou tags dedicadas  
-- [ ] Rollback documentado  
-
-:::
-
-**Artefactos & evidências.** Estrutura de repositório, tags/releases  
-
-**Proporcionalidade.**  
-- L1: Recomendado  
-- L2: Obrigatório  
-- L3: Obrigatório + auditoria  
-
-**Integração SDLC.** Configuração inicial - **Responsável:** DevOps/Infra  
-
-**Ligações úteis.**  
-xref:sbd-toe:cap14:intro  
-
----
-
-### US-03 – Validações automáticas (IAC-003)
-
-**Contexto.**  
-Erros manuais em IaC são fonte comum de falhas.
-
-:::userstory
-**História.**   
-Como **DevOps/Infra**, quero que todas as alterações passem por validações automáticas, para evitar más práticas.
-
-**BDD.**  
-- Dado que submeto PR de IaC  
-- Quando corre o pipeline  
-- Então falha se não estiver conforme às policies  
-
-**Checklist.**  
-- [ ] Lint (`tflint`)  
-- [ ] Segurança (`tfsec`, `checkov`)  
-- [ ] Policies (`OPA`, `Sentinel`)  
-
-:::
-
-**Artefactos & evidências.** Relatórios pipeline  
-
-**Proporcionalidade.**  
-- L1: Aviso  
-- L2: Bloqueio falhas severas  
-- L3: Bloqueio total  
-
-**Integração SDLC.** Pull request - **Responsável:** DevOps/Infra + AppSec  
-
-**Ligações úteis.**  
-xref:sbd-toe:cap07:intro  
+Cada prática é expressa como **user story reutilizável**, com critérios verificáveis, artefactos concretos e proporcionalidade por nível de risco (L1–L3).
 
 ---
 
 ### US-04 – Origem confiável de módulos (IAC-004)
 
 **Contexto.**  
-Módulos não verificados podem introduzir código malicioso.
+Dependências de IaC são vetor de *supply chain*. A origem deve ser confiável, com *pinning* estrito, *digest* verificável e política de *allowlist/denylist*.
 
 :::userstory
-**História.**   
-Como **AppSec**, quero garantir que apenas módulos confiáveis são utilizados, para prevenir código malicioso.
+**História.**  
+Como **🔐 AppSec** e **⚙️ DevOps**, quero **permitir apenas módulos de repositórios aprovados, com versão *pinned* e *digest/attestation***, para reduzir risco de comprometimento de *supply chain*.
 
-**BDD.**  
-- Dado que um módulo externo é adicionado  
-- Quando submeto PR  
-- Então apenas módulos aprovados podem ser usados  
+**Critérios de aceitação (BDD).**
+- **Dado** um módulo novo  
+  **Quando** é referenciado no repositório  
+  **Então** deve constar da **allowlist** e estar **versionado** (sem *ranges*) com **digest** verificado.  
+- **Dado** atualização de módulo  
+  **Quando** o *pipeline* corre  
+  **Então** valida **attestation** e recusa se a origem não cumprir a política.  
+- **Dado** um módulo *private*  
+  **Quando** é consumido  
+  **Então** é exigida **assinatura** do produtor interno e revisão por **AppSec**.
 
-**Checklist.**  
-- [ ] Módulos pinados por versão  
-- [ ] Validados internamente  
-- [ ] Evidência anexada ao PR  
-
+**Checklist.**
+- [ ] Política de **allowlist/denylist** publicada  
+- [ ] **Pinning semântico** (sem *wildcards*)  
+- [ ] **Digest**/SHA256 verificado em *pipeline*  
+- [ ] **Attestation** exigida para fontes externas  
 :::
 
-**Artefactos & evidências.** Lista de módulos aprovados  
+**🧾 Artefactos & evidências.**  
+`policy-modulos.md`; registos de verificação de *digest*/attestation; *logs* de *pipeline* com gate de origem.
 
-**Proporcionalidade.**  
-- L1: Recomendado  
-- L2: Obrigatório  
-- L3: Obrigatório + proveniência  
-
-**Integração SDLC.** Adoção de módulos - **Responsável:** DevOps/Infra + AppSec  
-
-**Ligações úteis.**  
-xref:sbd-toe:cap05:intro  
-
----
-
-### US-05 – Histórico de alterações e tagging (IAC-005)
-
-**Contexto.**  
-Alterações não versionadas impedem auditoria.
-
-:::userstory
-**História.**   
-Como **DevOps/Infra**, quero garantir que todas as alterações têm histórico auditável, para suportar auditoria.
-
-**BDD.**  
-- Dado que publico alteração  
-- Quando gero release  
-- Então existe tag e relatório associado  
-
-**Checklist.**  
-- [ ] Git tags semânticas  
-- [ ] Releases formais  
-- [ ] Relatório de mudanças  
-
-:::
-
-**Artefactos & evidências.** `CHANGELOG`, tags  
-
-**Proporcionalidade.**  
-- L1: Recomendado  
-- L2: Obrigatório  
-- L3: Obrigatório + validação externa  
-
-**Integração SDLC.** Release - **Responsável:** DevOps/Infra  
-
-**Ligações úteis.**  
-xref:sbd-toe:cap14:intro  
-
----
-
-### US-06 – Convenções de naming e diretórios (IAC-006)
-
-**Contexto.**  
-Inconsistência no naming dificulta automação.
-
-:::userstory
-**História.**   
-Como **Arquitetura**, quero aplicar convenções de naming e diretórios, para garantir legibilidade e automação.
-
-**BDD.**  
-- Dado que crio recurso  
-- Quando aplico naming conventions  
-- Então validações automáticas passam  
-
-**Checklist.**  
-- [ ] Convenções documentadas  
-- [ ] Linter configurado  
-- [ ] Validação em pipeline  
-
-:::
-
-**Artefactos & evidências.** `naming.md`, logs  
-
-**Proporcionalidade.**  
-- L1: Recomendado  
-- L2: Obrigatório  
-- L3: Obrigatório + enforcement  
-
-**Integração SDLC.** Setup inicial - **Responsável:** Arquitetura  
-
-**Ligações úteis.**  
-xref:sbd-toe:cap06:intro  
-
----
-
-### US-07 – Revisão de `plan` antes de `apply` (IAC-007)
-
-**Contexto.**  
-Aplicar sem revisão pode introduzir falhas graves.
-
-:::userstory
-**História.**   
-Como **AppSec**, quero rever o `plan` antes de `apply`, para garantir impactos claros e validados.
-
-**BDD.**  
-- Dado que executo `terraform plan`  
-- Quando submeto PR  
-- Então aplicação só avança após aprovação  
-
-**Checklist.**  
-- [ ] Output `plan` anexado ao PR  
-- [ ] Aprovação formal antes de `apply`  
-- [ ] Bloqueio automático se não aprovado  
-
-:::
-
-**Artefactos & evidências.** Output `plan`, logs  
-
-**Proporcionalidade.**  
-- L1: Recomendado  
-- L2: Obrigatório  
-- L3: Obrigatório + dupla aprovação  
-
-**Integração SDLC.** Antes do deploy - **Responsável:** AppSec + DevOps/Infra  
-
-**Ligações úteis.**  
-xref:sbd-toe:cap14:intro  
-
----
-
-### US-08 – Rastreabilidade ficheiros→recursos (IAC-008)
-
-**Contexto.**  
-Falta de rastreio dificulta auditoria.
-
-:::userstory
-**História.**   
-Como **GRC**, quero rastrear ficheiro→recurso→ambiente, para suportar accountability.
-
-**BDD.**  
-- Dado que analiso repositório  
-- Quando consulto dashboard  
-- Então consigo mapear ficheiro→recurso  
-
-**Checklist.**  
-- [ ] Mapeamento automático  
-- [ ] Dashboard acessível  
-- [ ] Logs arquivados  
-
-:::
-
-**Artefactos & evidências.** Dashboard  
-
-**Proporcionalidade.**  
-- L1: Recomendado  
-- L2: Obrigatório  
-- L3: Obrigatório + auditoria externa  
-
-**Integração SDLC.** Auditoria - **Responsável:** GRC  
-
-**Ligações úteis.**  
-xref:sbd-toe:cap12:intro  
-
----
-
-### US-09 – *Policy-as-code* com enforcement (IAC-009)
-
-**Contexto.**  
-Sem enforcement, violações podem passar despercebidas.
-
-:::userstory
-**História.**   
-Como **AppSec**, quero enforcement automático de policies no pipeline, para evitar violações manuais.
-
-**BDD.**  
-- Dado que executo pipeline  
-- Quando policies são aplicadas  
-- Então falha se não conforme  
-
-**Checklist.**  
-- [ ] Policies definidas em OPA/Sentinel  
-- [ ] Enforcement ativo em pipeline  
-- [ ] Logs arquivados  
-
-:::
-
-**Artefactos & evidências.** Policies, logs  
-
-**Proporcionalidade.**  
-- L1: Aviso  
-- L2: Bloqueio falhas severas  
-- L3: Bloqueio total  
-
-**Integração SDLC.** CI/CD - **Responsável:** AppSec + DevOps/Infra  
-
-**Ligações úteis.**  
-xref:sbd-toe:cap07:intro  
+**⚖️ Proporcionalidade.**
+| Nível | Obrigatório? | Ajustes |
+|---|---:|---|
+| L1 | Sim | *Pinning* de versão + allowlist simples |
+| L2 | Sim | *Pinning* + **digest** obrigatório |
+| L3 | Sim | **Attestation** e revisão AppSec; *denylist* ativa |
 
 ---
 
 ### US-10 – Assinatura e Proveniência de artefactos IaC (IAC-010)
 
 **Contexto.**  
-Artefactos IaC sem assinatura ou proveniência validada podem ser adulterados.
+Sem proveniência verificável, *plans* e *applies* podem ser adulterados. Assinaturas e **attestations** devem ser verificadas **antes da promoção**.
 
 :::userstory
-**História.**   
-Como **DevOps/Infra**, quero assinar e gerar proveniência para artefactos IaC, para garantir integridade e permitir verificação antes de `apply`.
+**História.**  
+Como **⚙️ DevOps** e **🔐 AppSec**, quero **assinar *plans* e registar *attestations* de *pipeline***, para garantir integridade ponta-a-ponta até ao *apply* em ambiente crítico.
 
-**BDD.**  
-- Dado que um artefacto IaC é produzido  
-- Quando é promovido ou aplicado  
-- Então a assinatura e a proveniência SLSA são verificadas  
+**Critérios de aceitação (BDD).**
+- **Dado** um `terraform plan` gerado  
+  **Quando** é submetido a revisão  
+  **Então** deve estar **assinado** e possuir **attestation** do *pipeline*.  
+- **Dado** uma promoção para `prod`  
+  **Quando** o *gate* valida artefactos  
+  **Então** rejeita *plan/apply* **sem assinatura válida** ou **attestation**.
 
-**Checklist.**  
-- [ ] Assinatura automática dos artefactos  
-- [ ] Proveniência gerada e arquivada  
-- [ ] Gate de verificação antes de `apply`  
-- [ ] SBOM de módulos/providers  
-
+**Checklist.**
+- [ ] Assinatura de `plan` e *apply logs*  
+- [ ] **Attestation** (SLSA-like) do *pipeline*  
+- [ ] Gate de verificação antes de `prod`  
 :::
 
-**Artefactos & evidências.** Assinaturas, proveniência, SBOM  
+**🧾 Artefactos & evidências.**  
+Ficheiros de assinatura; `attestation.json`; *logs* de *gate*; trilha de aprovação.
 
-**Proporcionalidade.**  
-- L1: Recomendado  
-- L2: Obrigatório  
-- L3: Obrigatório + rejeição automática  
-
-**Integração SDLC.** Release - **Responsável:** DevOps/Infra + AppSec  
-
-**Ligações úteis.**  
-xref:sbd-toe:cap05:intro  
+**⚖️ Proporcionalidade.**
+| Nível | Obrigatório? | Ajustes |
+|---|---:|---|
+| L1 | Recomendado | Assinatura de `plan` |
+| L2 | Sim | Assinatura + verificação automática |
+| L3 | Sim | Assinatura + **attestation** e *gate* bloqueante |
 
 ---
+
+### US-11 – Gestão de segredos e identidades para IaC (IAC-011)
+
+**Contexto.**  
+Chaves estáticas em *providers* ou *runners* representam risco elevado. Preferir **OIDC / workload identity**, *scopes* mínimos e **TTL curto**.
+
+:::userstory
+**História.**  
+Como **⚙️ DevOps** e **🔐 AppSec**, quero **emitir credenciais temporárias via OIDC/workload identity** com **permissões mínimas**, para eliminar chaves long-lived e reduzir abuso.
+
+**Critérios de aceitação (BDD).**
+- **Dado** um *pipeline* de IaC  
+  **Quando** necessita aceder ao *provider*  
+  **Então** obtém **token efémero** via OIDC, com *scope* mínimo e **TTL ≤ 1h**.  
+- **Dado** um *runner* comprometido  
+  **Quando** o token expira  
+  **Então** **não** é possível reutilização ou escalada.
+
+**Checklist.**
+- [ ] OIDC/workload identity configurado  
+- [ ] *Scopes* mínimos e *boundaries* por ambiente  
+- [ ] Proibição de chaves estáticas no repositório  
+:::
+
+**🧾 Artefactos & evidências.**  
+Política de segredos; configuração OIDC; *logs* de emissão/expiração.
+
+**⚖️ Proporcionalidade.**
+| Nível | Obrigatório? | Ajustes |
+|---|---:|---|
+| L1 | Sim | Segredos cifrados e rotacionados |
+| L2 | Sim | OIDC obrigatório com TTL curto |
+| L3 | Sim | OIDC + *Just-In-Time* + *break-glass* auditado |
+
+---
+
+### US-12 – Deteção e correção de *drift* (IAC-012)
+
+**Contexto.**  
+Mudanças manuais no *runtime* criam **desalinhamento** (*drift*) com o IaC. É necessário **auditar** e **corrigir** de forma controlada.
+
+:::userstory
+**História.**  
+Como **🔐 AppSec** e **⚙️ DevOps**, quero **auditorias periódicas de *drift*** e **correção controlada**, para manter coerência entre IaC e infraestrutura.
+
+**Critérios de aceitação (BDD).**
+- **Dado** um ciclo quinzenal  
+  **Quando** corre `terraform plan -refresh-only`  
+  **Então** são gerados **relatórios de *drift*** por ambiente.  
+- **Dado** *drift* crítico em `prod`  
+  **Quando** é confirmado  
+  **Então** é criada tarefa de correção com **aprovação** antes de *apply*.
+
+**Checklist.**
+- [ ] Job agendado de *drift* por ambiente  
+- [ ] Relatórios versionados  
+- [ ] Correções via PR + revisão  
+:::
+
+**🧾 Artefactos & evidências.**  
+Relatórios de *drift*; PRs de correção; aprovações.
+
+**⚖️ Proporcionalidade.**
+| Nível | Obrigatório? | Ajustes |
+|---|---:|---|
+| L1 | Sim | Auditoria mensal |
+| L2 | Sim | Quinzenal + alertas |
+| L3 | Sim | Semanal + *gate* para *drift* crítico |
+
+---
+
+### US-13 – *Rollback* e salvaguarda de *destroy* (IAC-013)
+
+**Contexto.**  
+Falhas de *apply* e *destroy* acidentais têm impacto elevado. É necessária **estratégia de *rollback*** e *guardrails*.
+
+:::userstory
+**História.**  
+Como **⚙️ DevOps**, quero **pontos de restauração**, **confirmações explícitas** para *destroy* e **procedimento de *rollback***, para reduzir *downtime* e evitar perda de dados.
+
+**Critérios de aceitação (BDD).**
+- **Dado** um *apply* falhado  
+  **Quando** é acionado *rollback*  
+  **Então** recursos críticos regressam ao estado anterior.  
+- **Dado** uma operação `destroy`  
+  **Quando** corre em `prod`  
+  **Então** requer **dupla confirmação** e **janela de mudança**.
+
+**Checklist.**
+- [ ] *Snapshots* de estado/recursos críticos  
+- [ ] Procedimento de *rollback* testado  
+- [ ] *Kill-switch* para *destroy* em `prod`  
+:::
+
+**🧾 Artefactos & evidências.**  
+Procedimento `rollback.md`; *snapshots*; *logs* de confirmação dupla.
+
+**⚖️ Proporcionalidade.**
+| Nível | Obrigatório? | Ajustes |
+|---|---:|---|
+| L1 | Sim | *Rollback* manual documentado |
+| L2 | Sim | *Snapshots* automáticos |
+| L3 | Sim | *Rollback* automatizado e *kill-switch* |
+
+---
+
+### US-14 – Janela de mudança e aprovações por papel (IAC-014)
+
+**Contexto.**  
+Alterações em ambientes críticos exigem **janela de mudança** e **aprovação multinível**.
+
+:::userstory
+**História.**  
+Como **📑 GRC**, **🔐 AppSec** e **📋 Auditoria**, quero **janelas de mudança definidas** e **aprovações por papel** antes do *apply* em `prod`, para reduzir risco operacional.
+
+**Critérios de aceitação (BDD).**
+- **Dado** uma alteração a `prod`  
+  **Quando** o *plan* é aprovado  
+  **Então** o *apply* ocorre **apenas** na janela autorizada e com aprovações **PO/AppSec/GRC**.
+
+**Checklist.**
+- [ ] Janelas de mudança publicadas  
+- [ ] Fluxo de aprovação multinível  
+- [ ] Trilha de auditoria completa  
+:::
+
+**🧾 Artefactos & evidências.**  
+Calendário de mudança; registos de aprovação; *logs* de *apply*.
+
+**⚖️ Proporcionalidade.**
+| Nível | Obrigatório? | Ajustes |
+|---|---:|---|
+| L1 | Opcional | Aprovação simples |
+| L2 | Sim | Aprov. PO + AppSec |
+| L3 | Sim | Aprov. PO + AppSec + GRC |
+
+---
+
+### US-15 – Exceções formais em IaC (IAC-015)
+
+**Contexto.**  
+Nem todas as políticas podem ser cumpridas em todas as circunstâncias. Exceções devem ser **temporárias**, **justificadas** e com **compensações** (addon/09).
+
+:::userstory
+**História.**  
+Como **📑 GRC** e **🔐 AppSec**, quero **exceções registadas** com **prazo** e **contramedidas**, para evitar dívida estrutural.
+
+**Critérios de aceitação (BDD).**
+- **Dado** um pedido de exceção  
+  **Quando** é analisado  
+  **Então** só é aprovado com **prazo** e **compensações**; **expirado** → **revogar** e restaurar política.
+
+**Checklist.**
+- [ ] Registo de exceção com dono  
+- [ ] Prazo e contramedidas  
+- [ ] Revisão periódica automatizada  
+:::
+
+**🧾 Artefactos & evidências.**  
+`excecoes-iac.json`; decisões; *logs* de revisão e expiração.
+
+**⚖️ Proporcionalidade.**
+| Nível | Obrigatório? | Ajustes |
+|---|---:|---|
+| L1 | Sim | Aprovação única |
+| L2 | Sim | Aprovação dupla (AppSec+PO) |
+| L3 | Sim | Aprovação AppSec+GRC e *review* por sprint |
 
 ## 📦 Artefactos & Evidências Esperadas
 
@@ -426,6 +307,9 @@ Sem evidência, não há conformidade. A tabela abaixo resume os outputs esperad
 | Logs de enforcement                   | US-09       | Bloqueios e métricas de conformidade|
 | Assinaturas + Proveniência (SLSA)     | US-10       | Gate obrigatório em L2/L3           |
 | SBOM de módulos/providers             | US-10       | CycloneDX/SPDX                      |
+| Política de segredos OIDC/workload    | US-11       | Tokens efémeros e permissões mínimas|
+| Relatórios de drift e correção        | US-12       | Auditorias periódicas de infraestrutura|
+| Snapshots e logs de rollback          | US-13       | Recuperação após falha              |
 
 ---
 
@@ -445,6 +329,8 @@ A proporcionalidade permite equilibrar custo, risco e controlo.
 | Revisão de `plan`                   | Recomendado     | Obrigatório               | Obrigatório + dupla aprovação            |
 | Rastreabilidade ficheiro→recurso    | Recomendado     | Obrigatório               | Obrigatório + auditoria externa          |
 | Policy-as-code                      | Aviso           | Bloqueio falhas severas   | Bloqueio total + métricas conformidade   |
+| Gestão de segredos IaC              | Recomendado     | Obrigatório (OIDC/TTL curto) | Obrigatório + JIT + auditoria           |
+| Rollback e contingência             | Recomendado     | Obrigatório (snapshots automáticos) | Obrigatório + rollback automatizado     |
 | Assinatura + proveniência artefactos| Recomendado     | Obrigatório (gate críticos)| Obrigatório + rejeição automática        |
 
 ---

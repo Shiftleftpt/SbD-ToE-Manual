@@ -98,24 +98,21 @@ Revisões de código não são apenas uma prática de qualidade, mas um **ponto 
 
 :::userstory
 **História.**   
-Como **Revisor Técnico**, quero aplicar uma checklist de segurança em cada PR, para prevenir a entrada de vulnerabilidades no repositório.
-
-**Critérios de aceitação (BDD).**
-- Dado que abro um PR  
-- Quando aplico a checklist formal  
-- Então confirmo controlos críticos e registo evidência da revisão
+omo **Scrum Master/Team Lead**, quero garantir que cada PR é revisto com checklist de segurança obrigatória, para prevenir vulnerabilidades e manter registo de conformidade.
+*Critérios de aceitação (BDD).**
+- Dado que um PR é criado  
+- Quando é submetido à revisão  
+- Então a checklist de segurança é preenchida e o PR apenas é aceite após validação
 
 **Checklist.**
-- [ ] `checklist-pr.md` marcado no PR  
-- [ ] Itens críticos verificados  
-- [ ] Comentários registados quando aplicável  
-- [ ] Aprovação formal no histórico
-
+- [ ] `checklist-pr.md` incluído no **template de PR**  
+- [ ] Itens críticos validados (autenticação, entradas, dependências)  
+- [ ] Comentários de segurança registados quando aplicável  
+- [ ] **PR rejeitado automaticamente se checklist não estiver completa**
 :::
 
-**Artefactos & evidências.**
-- Artefacto: `checklist-pr.md`  
-- Evidência: histórico do PR e comentários de revisão
+**Artefactos & evidências.** 
+`checklist-pr.md` (PR template), histórico e comentários no PR
 
 **Proporcionalidade por risco.**
 | Nível | Obrigatório? | Ajustes |
@@ -129,8 +126,6 @@ Como **Revisor Técnico**, quero aplicar uma checklist de segurança em cada PR,
 |-----------------|-----------|------------------|--------------|
 | Revisão de Código| PR aberto| Revisor Técnico  | Antes do merge |
 
-**Ligações úteis.**  
-xref:sbd-toe:cap06:intro
 
 ---
 
@@ -172,8 +167,8 @@ Como **AppSec**, quero validar e justificar dependências externas, para reduzir
 |---------------|---------------------|--------------------|----------------|
 | Desenvolvimento | Inclusão dependência | Dev + AppSec       | Antes do merge |
 
-**Ligações úteis.**  
-xref:sbd-toe:cap05:intro
+**Nota - cruza com outras práticas**
+Esta user story cruza com praticas como [Dependências, SBOM e SCA](/sbd-toe/sbd-manual/dependencias-sbom-sca) e, de certa forma permite a monitorização de *drift* como indicado em [Monitorização & Operações](/sbd-toe/sbd-manual/monitorixacao-operacoes).
 
 ---
 
@@ -308,29 +303,33 @@ xref:sbd-toe:cap06:intro
 ### US-07 - Governação e Curadoria de Guidelines
 
 **Contexto.**  
-Sem governação ativa, guidelines estagnam e perdem relevância. A curadoria regular e a delegação de validação a linters com *rulesets* curados garantem adoção prática e atualizada.
+A governação ativa das guidelines assegura que estas evoluem com as tecnologias e com as vulnerabilidades emergentes.  
+A publicação formal e a revisão periódica são mecanismos de controlo e conformidade.
 
 :::userstory
 **História.**   
-Como **Gestor Técnico**, quero rever e publicar guidelines curadas periodicamente, para assegurar que estão atualizadas, versionadas e aprovadas.
+::userstory
+**História.**  
+Como **AppSec Engineer**, quero rever e publicar guidelines curadas trimestralmente, para garantir atualização contínua e governação formal das práticas de desenvolvimento seguro.
 
 **Critérios de aceitação (BDD).**
-- Dado que existe nova stack ou revisão trimestral  
-- Quando seleciono *rulesets* de referência e aplico *tailoring*  
-- Então publico versão aprovada por AppSec
+- Dado que decorre o ciclo de revisão ou surge nova *stack*  
+- Quando as *rulesets* são atualizadas  
+- Então é publicada uma **release/tag** aprovada por **Gestão Executiva** e **AppSec Engineer**
 
 **Checklist.**
 - [ ] *Rulesets* avaliados e documentados  
-- [ ] *Tailoring* aprovado por AppSec  
-- [ ] Configurações versionadas em `rules/`  
-- [ ] Release/tag publicada com changelog  
-- [ ] Mapeamento ASVS/CWE atualizado  
-
+- [ ] *Tailoring* validado  
+- [ ] Configurações versionadas e publicadas  
+- [ ] Changelog incluído na release  
+- [ ] Revisão periódica registada  
+- [ ] Mapeamento atualizado para ASVS/CWE
 :::
 
 **Artefactos & evidências.**
 - Artefacto: diretório `rules/`  
 - Evidência: release/tag + changelog
+- Aprovação AppSec 
 
 **Proporcionalidade por risco.**
 | Nível | Obrigatório? | Ajustes |
@@ -344,8 +343,6 @@ Como **Gestor Técnico**, quero rever e publicar guidelines curadas periodicamen
 |-----------|---------------------|-----------------------|---------|
 | Governação| Nova stack ou revisão| Gestor Técnico + AppSec| Até 2 sem.|
 
-**Ligações úteis.**  
-xref:sbd-toe:cap06:intro
 
 ---
 
@@ -387,56 +384,152 @@ Como **Desenvolvedor**, quero anotar validações de segurança com `@sec:*`, pa
 |-------------------|------------------------|-------------|------------|
 | Desenvolvimento   | Implementação de requisito | Dev + QA   | Até ao merge|
 
-**Ligações úteis.**  
-xref:sbd-toe:cap06:intro
-
 ---
-## 📦 Artefactos esperados
 
-A aplicação prática do desenvolvimento seguro deixa sempre **pegadas objetivas** - ficheiros, relatórios e registos que podem ser auditados.  
-Sem evidência, não existe conformidade. Esta tabela resume os principais artefactos esperados:
+### US-08 – Rastreabilidade com Anotações de Segurança
 
-| Artefacto               | Evidência auditável                                                |
-|--------------------------|--------------------------------------------------------------------|
-| `guidelines-stack.md`    | Regras de codificação segura por stack, com *mapping* para ASVS/CWE|
-| `rules/` versionado      | Configurações partilhadas de linters/SAST (`.eslintrc.*`, `.semgrep.yml`), com release/tag e changelog |
-| Pacote `@org/eslint-sec` | *Shareable config* interno (ex.: NPM/Artifactory) com controlo de versões |
-| `checklist-pr.md`        | Checklist formal preenchida e arquivada em PRs                    |
-| `sbom-deps.json`         | Lista de dependências externas com validação formal               |
-| Relatórios SAST/linters  | Saídas automatizadas (SARIF/JSON) arquivadas no pipeline           |
-| `excecoes-seguranca.md`  | Registo formal de exceções técnicas aprovadas e prazos definidos  |
-| `uso-genia.md`           | Registo de utilização de GenIA, revisão associada e decisão de aceitação |
+*(mantida, terminologia normalizada – Dev e QA responsáveis pela rastreabilidade `@sec:*`)*
 
 ---
 
-## ⚖️ Matriz de proporcionalidade L1–L3
+### US-09 – Gate de Segurança Pré-release
 
-Nem todas as aplicações exigem o mesmo grau de controlo.  
-A matriz abaixo traduz a lógica de proporcionalidade: **quanto maior o risco (L3), mais rigor na aplicação e governação**.
+**Contexto.**  
+Antes de cada *release* deve existir um ponto de controlo objetivo que consolide todas as evidências de segurança — relatórios SAST, SBOM, exceções, checklists e aprovações.
 
-| Prática                    | L1 (baixo)             | L2 (médio)                   | L3 (alto/crítico)                       |
-|-----------------------------|------------------------|------------------------------|-----------------------------------------|
-| Guidelines de código        | Mínimas, upstream      | Curadas por stack            | Auditadas + *policy-as-code*            |
-| Revisão de código           | Checklist básica       | Checklist completa           | Revisor dedicado com foco em segurança  |
-| Gestão de dependências      | Justificação simples   | Validação formal             | Validação + SBOM rastreável             |
-| Automatização CI/CD         | Linters básicos        | SAST obrigatório             | SAST + validações adicionais (IaC/DAST) |
-| Gestão de exceções          | Registo simples        | Revisão obrigatória          | Dupla aprovação + prazo curto           |
-| Uso de GenIA                | Registo opcional       | Revisão obrigatória          | Revisão formal + validação de licenças  |
-| Governação de guidelines    | Regras *default*       | Curadoria organizacional     | Revisão periódica + distribuição controlada |
+:::userstory
+**História.**  
+Como **DevOps/SRE**, quero executar um **gate de segurança pré-release** que agregue todas as evidências de validação, para só permitir publicações conformes com os requisitos de segurança.
+
+**Critérios de aceitação (BDD).**
+- Dado que existe uma *release* candidata  
+- E o nível de risco L1–L3 foi atribuído  
+- Quando o *security gate* é executado  
+- Então o resultado é binário (Aprovado/Rejeitado) e é registado como artefacto da release
+
+**Checklist.**
+- [ ] *Job* `release-security-gate` configurado no pipeline  
+- [ ] Relatório agregado anexado à *tag/release*  
+- [ ] Ligações a SAST, SBOM, exceções e checklist de PR  
+- [ ] Bloqueio automático em caso de falha  
+- [ ] Aprovação final por **AppSec Engineer** e **Gestão Executiva** (L3)
+:::
+
+**Artefactos & evidências.** `gate-relatorio.md`, anexos CI/CD, *tag/release* assinada
+
+**Proporcionalidade.**
+| Nível | Obrigatório? | Ajustes |
+|-------|---------------|---------|
+| L1 | Sim | Gate básico (SAST + SBOM + checklist) |
+| L2 | Sim | Gate reforçado com política de exceções |
+| L3 | Sim | *Policy-as-code* e dupla aprovação formal |
 
 ---
 
-## 🏁 Recomendações finais
+### US-10 – Perfis de Validação por Nível de Risco (L1–L3)
 
-O desenvolvimento seguro deve ser visto como **um hábito quotidiano**, não como um esforço extraordinário.  
-As práticas tornam-se naturais quando estão integradas no fluxo de trabalho e apoiadas por governação clara.  
+**Contexto.**  
+A aplicação proporcional dos controlos é essencial para garantir eficiência e consistência.  
+Cada aplicação deve herdar um perfil técnico de validação compatível com a sua classificação de risco.
 
-- **Versionar e publicar guidelines** como artefactos formais (com releases e changelogs), não como “notas avulsas”.  
-- **Automatizar ao máximo** - linters, SAST e scanners eliminam variações manuais e produzem evidência contínua.  
-- **Exceções são a exceção**: devem ser raras, temporárias e sempre justificadas.  
-- **GenIA pode ser usada**, mas sob registo e revisão técnica, nunca como substituto de disciplina humana.  
-- **KPIs de adoção** devem ser medidos: % de PRs com checklist aplicada, % de dependências validadas, % de findings resolvidos no SLA.  
-- **Revisão periódica** das práticas garante que regras não se tornam obsoletas.  
+:::userstory
+**História.**  
+Como **AppSec Engineer**, quero definir e aplicar **perfis de validação L1–L3** que determinem regras, limiares e *quality gates* adequados ao risco, para uniformizar a execução e auditoria.
+
+**Critérios de aceitação (BDD).**
+- Dado que a aplicação tem classificação L1/L2/L3  
+- Quando é executado o pipeline  
+- Então são aplicadas as regras e limiares correspondentes ao perfil definido
+
+**Checklist.**
+- [ ] Perfis L1–L3 documentados e aprovados  
+- [ ] *Rulesets* correspondentes no pipeline  
+- [ ] Métricas de severidade e cobertura definidas  
+- [ ] Auditoria trimestral aos perfis e thresholds
+:::
+
+**Artefactos & evidências.** `matriz-proporcionalidade-dev.md`, `ci/pipeline.yml`, relatórios de auditoria
+
+**Proporcionalidade.**
+| Nível | Obrigatório? | Ajustes |
+|-------|---------------|---------|
+| L1 | Sim | Cada aplicação tera o seu nivel de controlos adequado ao nivel de classificação|
+| L2 | Sim | Cada aplicação tera o seu nivel de controlos adequado ao nivel de classificação |
+| L3 | Sim | Cada aplicação tera o seu nivel de controlos adequado ao nivel de classificação |
+
+---
+
+### US-11 – Arquivo Central de Evidências de Validação
+
+**Contexto.**  
+A retenção controlada de evidências é requisito de auditoria e conformidade.  
+As provas de execução dos controlos devem ser exportadas e arquivadas de forma segura, imutável e auditável.
+
+:::userstory
+**História.**  
+Como **QA** e **DevOps/SRE**, quero **arquivar centralmente todas as evidências de validação** (relatórios SAST, SBOM, exceções, `@sec:*`), para garantir rastreabilidade e cumprimento de requisitos de auditoria.
+
+**Critérios de aceitação (BDD).**
+- Dado que o pipeline executa validações  
+- Quando conclui a execução  
+- Então exporta e arquiva relatórios e evidências num repositório controlado e versionado
+
+**Checklist.**
+- [ ] Repositório de evidências definido (preferencialmente WORM)  
+- [ ] Export automático por *build/release*  
+- [ ] Índice de evidências por aplicação e *commit*  
+- [ ] Política de retenção definida (≥ 2 anos; L3 ≥ 5 anos)  
+- [ ] Acesso auditado e controlado
+:::
+
+**Artefactos & evidências.** 
+diretório `evidencias/`, `evidencias-index.json`, registos de acesso
+
+**Proporcionalidade.**
+| Nível | Obrigatório? | Ajustes |
+|-------|---------------|---------|
+| L1 | Sim | Retenção mínima e export básico |
+| L2 | Sim | Export assinado + índice por componente |
+| L3 | Sim | Armazenamento imutável e verificação periódica de integridade |
+
+---
+
+## 📦 Artefactos Esperados
+
+| Artefacto               | Evidência auditável                                   |
+|--------------------------|-------------------------------------------------------|
+| `guidelines-stack.md`    | Guidelines curadas e aprovadas, com *changelog*      |
+| `rules/`                 | *Rulesets* versionados e aprovados                   |
+| `checklist-pr.md`        | Checklist formal integrada em PRs                    |
+| `sbom-deps.json`         | SBOM validado e aprovado                             |
+| `gate-relatorio.md`      | Relatório consolidado do *security gate*             |
+| `excecoes-seguranca.md`  | Registo de exceções e aprovações                     |
+| `uso-genia.md`           | Registo e revisão de uso de GenIA                    |
+| `evidencias/`            | Arquivo centralizado e indexado de evidências        |
+
+---
+
+## ⚖️ Matriz de Proporcionalidade L1–L3
+
+| Prática / Controlo | L1 (baixo) | L2 (médio) | L3 (crítico) |
+|--------------------|------------|-------------|--------------|
+| Guidelines | Regras upstream | Curadas por stack | Auditadas e *policy-as-code* |
+| Revisão de código | Checklist básica | Dupla revisão | Revisão formal AppSec |
+| Dependências | Validação simples | Validação formal | SBOM rastreável |
+| CI/CD | Linters básicos | SAST obrigatório | SAST + IaC/DAST + políticas |
+| Exceções | Registo simples | Reavaliação periódica | Dupla aprovação |
+| GenIA | Registo opcional | Revisão técnica | Revisão formal e licenças |
+| Governação | Curadoria anual | Trimestral | Contínua e automatizada |
+| Evidências | Export manual | Export automático | Arquivo imutável e auditado |
+| *Security Gate* | Básico | Completo | Reforçado e automatizado |
+
+---
+
+## 🏁 Recomendações Finais
+
+O desenvolvimento seguro deve ser tratado como um **processo contínuo e mensurável**.  
+As *user stories* deste capítulo operacionalizam as prescrições normativas, assegurando que cada prática deixa rasto verificável e que o grau de aplicação é proporcional ao risco.  
+A integração destas ações no *backlog* e no pipeline transforma a segurança de software em disciplina diária e auditável.
 
 Em síntese: o capítulo demonstra que **desenvolvimento seguro é a fundação sobre a qual o resto do ciclo de vida assenta**.  
 Sem ele, nenhuma prática subsequente - seja CI/CD, IaC ou runtime - consegue oferecer confiança total.

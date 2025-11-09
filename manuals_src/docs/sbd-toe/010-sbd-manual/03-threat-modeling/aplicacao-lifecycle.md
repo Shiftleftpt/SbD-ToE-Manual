@@ -124,9 +124,6 @@ Como **Arquitetura / Tech Lead**, quero validar a arquitetura através de threat
 |---|---|---|---|
 | Design / Revisão | Revisão da arquitetura | Tech Lead / AppSec | Antes da aprovação de design |
 
-**Ligações úteis.**
-- 🔗 [BSIMM Activities – Architecture Analysis](https://www.bsimm.com/)  
-
 ---
 
 ### US-03 – Atualização do modelo após alteração técnica

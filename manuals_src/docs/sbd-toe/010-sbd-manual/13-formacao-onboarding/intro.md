@@ -90,16 +90,6 @@ A formação é o que **transforma processos em cultura**.
 
 ---
 
-## 📚 Alinhamento com frameworks
-
-- **OWASP SAMM** → PO2, PO3 (Education & Guidance).  
-- **BSIMM** → T1.1 (Role-specific training), T2.3 (Security features training).  
-- **SSDF** → PO.3 (Role-specific training), PO.7 (Awareness).  
-- **SLSA** → Nível 1 (cultura organizacional).  
-- **DSOMM** → People & Training.  
-
----
-
 ## 📜 Políticas Organizacionais Relevantes
 
 | Política | Obrigatória? | Aplicação | Conteúdo mínimo |

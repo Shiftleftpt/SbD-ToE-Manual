@@ -207,7 +207,6 @@ Algumas fontes recomendadas para consulta e curadoria desses requisitos específ
 - [OWASP Internet of Things Project](https://owasp.org/www-project-internet-of-things/)
 - [IEC 62443 - Segurança em Sistemas Industriais e SCADA](https://webstore.iec.ch/publication/7033)
 - [NIST SP 800-213 - IoT Device Cybersecurity Guidance](https://csrc.nist.gov/publications/detail/sp/800-213/final)
-- [BSIMM for Embedded & Device Software](https://www.bsimm.com/)
 
 Durante a definição e manutenção contínua deste catálogo e respetivo documento de validação, devem ser mantidos os mesmos padrões de qualidade, estrutura e rastreabilidade definidos neste capítulo:
 

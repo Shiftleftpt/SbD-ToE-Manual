@@ -81,6 +81,3 @@ deny[msg] {
 * Facilita auditoria e resposta a incidentes
 * Aumenta confiança no uso de IaC em ambientes críticos
 
----
-
-> 🔗 Este ficheiro está alinhado com os requisitos `IAC-009`, `REQ-005`, `REQ-006`, com boas práticas de SSDF (PW\.5), SLSA (Build L3), SAMM (AA2.3), e BSIMM (CMVM2.1).

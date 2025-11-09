@@ -33,20 +33,6 @@ Estas políticas asseguram que:
 
 ---
 
-## 📈 Correspondência com frameworks normativos
-
-| Framework | Requisitos cobertos pelas políticas acima |
-|------------|-------------------------------------------|
-| **NIST SSDF v1.1** | PW.5 (Build Integrity), RV.1–RV.2 (Verification), PS.1 (Review of Changes). |
-| **OWASP SAMM v2.1** | Deployment (DEP 1.2), Verification (2.A/2.B), Governance (GOV 1.2). |
-| **BSIMM 13** | CMVM 1.3, ST 1.1–1.4, SE 2.2 – monitorização de vulnerabilidades e proveniência. |
-| **SLSA v1.0** | L2–L3 (Source & Build Integrity) – assinaturas, _attestations_, _provenance_. |
-| **CIS Benchmarks (Docker/Kubernetes)** | Secções 2–5 – hardening, acesso, rede, configuração segura. |
-| **ENISA Cloud Security Baseline** | Container Security 4.2–4.5 – isolamento, gestão de registos, observabilidade. |
-| **OWASP DSOMM v2** | Supply Chain, Build & Deploy – proveniência, auditoria e controlo de execução. |
-
----
-
 ## 📃 Estrutura mínima de cada política
 
 Cada política deve conter:

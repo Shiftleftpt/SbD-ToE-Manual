@@ -69,7 +69,7 @@ A aplicação prática do SbD-ToE segue uma sequência lógica:
 4. **Verificar proporcionalidade (L1–L3)** - assegurar que o esforço acompanha o risco.  
 5. **Auditar e evoluir** - porque a segurança não é estática.  
 
-Cada capítulo inclui ainda uma secção de **autoavaliação** que mostra como as práticas prescritas se alinham com referenciais reconhecidos: **SAMM, BSIMM, SSDF, DSOMM, SLSA**.  
+Cada capítulo inclui ainda uma secção de **autoavaliação** que mostra como as práticas prescritas se alinham com referenciais reconhecidos: **SAMM, SSDF, DSOMM, ASVS, SLSA**.  
 
 E, de forma complementar, evidencia como essas mesmas práticas ajudam a demonstrar conformidade com **NIS2**, **DORA** e outros regulamentos relevantes.  
 Assim, o SbD-ToE funciona não só como guia técnico, mas também como **mecanismo de tradução** entre o quotidiano das equipas e os requisitos legais de alto nível.
@@ -81,9 +81,9 @@ Assim, o SbD-ToE funciona não só como guia técnico, mas também como **mecani
 O valor científico do SbD-ToE assenta na diversidade das suas fontes:  
 
 - **Modelos de maturidade**: OWASP SAMM v2.1, OWASP DSOMM.  
-- **Práticas observadas em larga escala**: BSIMM13.  
-- **Guias normativos**: NIST SSDF (SP 800-218), ISO/IEC 27001, 27005 e 27034.  
-- **Referenciais de cadeia de software**: SLSA v1.0, ENISA Supply Chain Security Guidance.  
+- **Práticas observadas em larga escala**: BSIMM13 (do que é inferido em consulta publica).  
+- **Guias normativos**: NIST SSDF (SP 800-218), ISO/IEC 27001, 27005 e 27034 (do que é inferido em consulta publica).  
+- **Referenciais de cadeia de software**: SLSA v1.0, ENISA Good Pratices for Supply Chain Cybersecurity .  
 - **Catálogos de ameaças**: OSC&R, STRIDE, CAPEC, CWE, OWASP Top 10.  
 - **Regulamentos obrigatórios**: NIS2, DORA, AI Act, GDPR.  
 

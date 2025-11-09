@@ -47,7 +47,7 @@ Estas políticas:
 | **ENISA Risk Management** | Sec. 2.3, 3.1 - definição formal de políticas de avaliação e aceitação de risco |
 | **CIS Controls v8**    | Control 2, 4 - políticas para inventário, avaliação e aceitação de risco         |
 | **OWASP SAMM**         | Governance > Risk Management (níveis 1 e 2)                                      |
-| **BSIMM13**            | Strategy and Metrics (SR1.1, SR1.5)                                              |
+
 
 ---
 

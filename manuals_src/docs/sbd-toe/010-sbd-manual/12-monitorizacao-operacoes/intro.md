@@ -23,7 +23,7 @@ Monitorizar é muito mais do que recolher dados técnicos.
 
 A experiência mostra-nos que grande parte dos ataques não são descobertos pela sofisticação do adversário, mas pela falta de visibilidade. Casos como o da Equifax ou da Target provaram que **logs estavam lá** - mas eram incompletos, mal estruturados ou simplesmente ignorados.  
 
-É por isso que frameworks como o **SSDF (RV.4, DE.3, PO.6)**, o **BSIMM (IR1.1, AM2.3)** e regulamentos como a **NIS2** exigem controlos claros de monitorização e resposta. Não basta prevenir: é preciso **detetar e reagir**.  
+É por isso que frameworks, como o **SSDF***,  e regulamentos como a **NIS2** exigem controlos claros de monitorização e resposta. Não basta prevenir: é preciso **detetar e reagir**.  
 
 👉 Este capítulo liga-se diretamente a:  
 - **Cap. 11 - Deploy Seguro**, que garante a entrada em produção de versões observáveis.  
@@ -119,7 +119,6 @@ A eficácia da monitorização mede-se em métricas.
 
 - **KPIs chave**: MTTD (tempo médio de deteção) e MTTR (tempo médio de resposta).  
 - **Auditoria**: revisão trimestral de logs, dashboards e relatórios.  
-- **Conformidade**: mapeamento direto para **SSDF**, **BSIMM** e **SAMM**.  
 - **Governança**: relatórios de operação entregues a GRC e direção, transformando métricas técnicas em decisões de negócio.  
 
 ---
@@ -133,16 +132,6 @@ A segurança não termina no deploy: prolonga-se em runtime através da visibili
 - Sem IRP → não há ação coordenada.  
 
 Este capítulo é **basilar** porque traduz segurança em capacidade de **detetar, reagir e aprender**. É aqui que a teoria se transforma em prática viva, todos os dias, em produção.
-
----
-
-## 📚 Alinhamento com frameworks
-
-- **OWASP SAMM** → OE2-A, ST3-B.  
-- **BSIMM** → AM2.3, IR1.1, SE3.6.  
-- **SSDF** → RV.4, PO.6, DE.3.  
-- **SLSA** → Nível 2 / 4 (observabilidade em supply chain).  
-- **DSOMM** → Operate & Detect.  
 
 ---
 

@@ -34,16 +34,14 @@ Este capítulo prescreve práticas de **construção segura de imagens, assinatu
 | Falta de trilho de auditoria (quem construiu o quê) | BSIMM CMVM 1.3 | Ausência de registo entre commit → build → imagem → deploy | CI/CD com evidência imutável; correlação commit/SHA/pipeline/deploy | *Checklist 14–15*, *Rastreabilidade: DSOMM Ops* | ✅ |
 
 ---
+## 🧰 Categoria 3 – Registos e Repositórios de Containers
 
-## 🧰 Categoria 3 – Registos e repositórios de containers
+| Ameaça                               | Como surge                               | Como a prática mitiga                                                                 | Controlos associados                                         | 🧩 Mitigada apenas por este capítulo? |
+|-------------------------------------|-------------------------------------------|----------------------------------------------------------------------------------------|--------------------------------------------------------------|--------------------------------------|
+| Acesso indevido a registos          | Controlo de acesso frouxo, credenciais partilhadas | Registos privados, RBAC, _scopes_ mínimos, _audit logs_                               | *Policies: Governação de Repositórios*, *Checklist 9*        | ✅ |
+| Proliferação de imagens obsoletas   | Ausência de retenção/limpeza              | Políticas de retenção e _garbage collection_; _rebuild_ periódico                      | *Policies: Limpeza/Obsolescência*, *Checklist 12*            | ✅ |
+| Upload de imagens sem controlo      | Qualquer equipa publica artefactos        | _Ownership_ formal, _review_ e aprovação de publicação                                 | *Policies: Governação de Repositórios*                      | ✅ |
 
-| Ameaça | Fonte | Como surge | Como a prática mitiga | Controlos associados | 🧩 Mitigada apenas por este capítulo? |
-|---|---|---|---|---|---|
-| Acesso indevido a registos | ISO 27001 (alto nível), ENISA | Controlo de acesso frouxo, credenciais partilhadas | Registos privados, RBAC, _scopes_ mínimos, _audit logs_ | *Policies: Governação de Repositórios*, *Checklist 9* | ✅ |
-| Proliferação de imagens obsoletas | CIS,  SE 2.2 | Ausência de retenção/limpeza | Políticas de retenção e _garbage collection_; _rebuild_ periódico | *Policies: Limpeza/Obsolescência*, *Checklist 12* | ✅ |
-| Upload de imagens sem controlo | SAMM GOV 1.2 | Qualquer equipa publica artefactos | _Ownership_ formal, _review_ e aprovação de publicação | *Policies: Governação de Repositórios* | ✅ |
-
----
 
 ## 🖧 Categoria 4 – Configuração insegura de runtime (Docker/Kubernetes)
 

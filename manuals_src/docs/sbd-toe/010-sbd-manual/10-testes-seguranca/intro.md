@@ -62,7 +62,7 @@ A aplicação prática deve ser entendida como um **ciclo contínuo**, não como
 
 - **Porquê:**  
   Porque a validação é a única forma de garantir que segurança não é promessa, mas realidade comprovada.  
-  Os testes sustentam decisões de *go/no-go*, reduzem o tempo de exposição a vulnerabilidades e alinham a prática com normativos como **SSDF RV.1/RV.3**, **SAMM ST.1–3**, e **BSIMM T1.3/T2.4**.
+  Os testes sustentam decisões de *go/no-go* e reduzem o tempo de exposição a vulnerabilidades.
 
 ---
 
@@ -78,16 +78,6 @@ A responsabilidade pelos testes é **coletiva**, mas cada papel tem um contribut
 - **PenTester** → conduz validações ofensivas e reporta impacto real.  
 
 👉 Estas responsabilidades não são teóricas: cada papel tem histórias de utilizador correspondentes no `aplicacao-lifecycle.md`, permitindo transformar esta matriz em prática repetível.
-
----
-
-## 📚 Alinhamento com frameworks
-
-- **OWASP SAMM** → ST.1, ST.2, ST.3.  
-- **BSIMM** → T1.3, T2.4, SE3.5.  
-- **SSDF** → RV.1, RV.3, RV.6, PS.2.  
-- **SLSA** → Nível 2 / 4 (integração em pipelines).  
-- **DSOMM** → Testing (maturidade DevSecOps).  
 
 ---
 

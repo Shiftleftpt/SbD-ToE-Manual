@@ -15,7 +15,7 @@ A definição dos requisitos aplicacionais neste manual segue uma estrutura em *
 A estrutura adotada tem como base principal a framework **OWASP ASVS v5.0 (Application Security Verification Standard)**, reconhecida como uma referência global para verificação de segurança aplicacional. Contudo, a versão aqui apresentada: **Incorpora requisitos adicionais** inspirados noutras frameworks de maturidade e segurança, como:
   - **NIST SP 800-53 Rev. 5**
   - **OWASP SAMM v2.1**
-  - **BSIMM13**
+  - **BSIMM13** (do que é inferido por consulta publica)
   - **SLSA v1.0**
   - **CIS Controls v8**
 e assim - **Agrupa e adapta domínios** do ASVS com essas outras referencias para refletir melhor o modo como os sistemas são realmente desenvolvidos e mantidos;

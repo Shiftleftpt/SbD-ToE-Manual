@@ -140,7 +140,7 @@ Este capítulo define um conjunto essencial e transversal de requisitos aplicaci
 - [OWASP Internet of Things Project](https://owasp.org/www-project-internet-of-things/) <!-- Precisa revisão manual -->
 - [IEC 62443 - Segurança em Sistemas Industriais](https://webstore.iec.ch/publication/7033) <!-- Precisa revisão manual -->
 - [NIST SP 800-213 - IoT Device Cybersecurity](https://csrc.nist.gov/publications/detail/sp/800-213/final) <!-- Precisa revisão manual -->
-- [BSIMM for Embedded & Device Software](https://www.bsimm.com/) <!-- Precisa revisão manual -->
+
 
 > A definição e manutenção do catálogo de requisitos e respetivo documento de validação devem seguir o mesmo padrão técnico e editorial: estrutura coerente, proporcionalidade por nível de risco, e rastreabilidade completa.
 

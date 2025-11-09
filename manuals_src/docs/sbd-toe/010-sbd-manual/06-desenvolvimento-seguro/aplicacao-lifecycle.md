@@ -305,10 +305,8 @@ xref:sbd-toe:cap06:intro
 **Contexto.**  
 A governação ativa das guidelines assegura que estas evoluem com as tecnologias e com as vulnerabilidades emergentes.  
 A publicação formal e a revisão periódica são mecanismos de controlo e conformidade.
-
+  
 :::userstory
-**História.**   
-::userstory
 **História.**  
 Como **AppSec Engineer**, quero rever e publicar guidelines curadas trimestralmente, para garantir atualização contínua e governação formal das práticas de desenvolvimento seguro.
 

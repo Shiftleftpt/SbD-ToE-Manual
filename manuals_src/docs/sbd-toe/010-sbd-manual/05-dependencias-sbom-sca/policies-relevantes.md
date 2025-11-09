@@ -25,7 +25,7 @@ Estas políticas:
 
 > 🧩 Este capítulo **operacionaliza as políticas formais** de dependências e componentes externos. A política define, o capítulo executa.
 
-> 📎 A existência destas políticas é **explicitamente recomendada** por frameworks como **NIST SSDF**, **OWASP SAMM**, **SLSA** e **BSIMM**.
+> 📎 A existência destas políticas é **explicitamente recomendada** por frameworks como **NIST SSDF**, **OWASP SAMM** e **SLSA** .
 
 ---
 

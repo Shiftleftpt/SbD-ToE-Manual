@@ -31,20 +31,6 @@ Estas políticas garantem que:
 
 ---
 
-## 📈 Correspondência com frameworks normativos
-
-| Framework              | Requisitos cobertos pelas políticas acima                                     |
-|------------------------|--------------------------------------------------------------------------------|
-| **NIST SSDF v1.1**     | PS.3.2 (coding practices), RV.1.2, RV.2.1–2.2 (review and verification)        |
-| **OWASP SAMM v2.1**    | Implementation (1.A, 1.B), Verification (2.A, 2.B)                             |
-| **BSIMM13**            | Code Review, Standards and Guidelines (CR1.x, CR2.x)                          |
-| **ISO/IEC 27001**      | A.14.2.1 (secure development), A.14.2.5 (testing)                              |
-| **SLSA v1.0**          | Build and Source requirements for provenance and enforcement                  |
-| **CIS Controls v8**    | Control 16 (Application Security), Control 4 (Secure Configurations)          |
-| **ENISA AI Threat Landscape** | Controlo do uso de ferramentas GenIA na engenharia de software     |
-
----
-
 ## 📃 Estrutura mínima de cada política
 
 Cada política organizacional deve conter, no mínimo:

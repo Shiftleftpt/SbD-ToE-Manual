@@ -32,20 +32,6 @@ Estas políticas asseguram que:
 
 ---
 
-## 📈 Correspondência com frameworks normativos
-
-| Framework | Requisitos cobertos pelas políticas acima |
-|------------|--------------------------------------------|
-| **NIST SSDF v1.1** | PW.5 (build integrity), RV.1 (verification), PS.1 (review of changes). |
-| **OWASP SAMM v2.1** | Governance (GOV 1.1–1.2), Deployment (DEP 1.2) — governação, aprovações e rastreabilidade de *deploys*. |
-| **BSIMM 13** | CMVM 1.3, SE 2.2, ST 1.1 — conformidade, *config scanning* e validação automatizada. |
-| **SLSA v1.0** | L2–L3 (Source & Build Integrity) — rastreabilidade e proveniência de artefactos de infraestrutura. |
-| **DSOMM v2** | IaC Security & Configuration Management — governação, validação e segurança de módulos. |
-| **CIS Controls v8** | Control 4 (Secure Configurations), Control 16 (Application Security). |
-| **ENISA Cloud Security Baseline** | Secção 3 (Cloud Configuration and Change Management). |
-
----
-
 ## 📃 Estrutura mínima de cada política
 
 Cada política deve conter, no mínimo:

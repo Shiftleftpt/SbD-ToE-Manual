@@ -11,7 +11,7 @@ sidebar_position: 30
 Este anexo apresenta **práticas de nível avançado**, não obrigatórias, destinadas a organizações com maior maturidade, requisitos normativos exigentes (ex.: NIS2, DORA, ISO 27034, IEC 62443) ou equipas com processos de engenharia de segurança já consolidados.
 
 > Estas práticas **não substituem** as prescrições do Capítulo 3, nem são usadas no cálculo de maturidade.  
-> Funcionam como **extensões facultativas**, alinhadas com os níveis 3 do **OWASP SAMM**, **BSIMM** e **DSOMM – Design & Development**, reforçando a automação, rastreabilidade e governação.
+> Funcionam como **extensões facultativas**, alinhadas com os níveis 3 do **OWASP SAMM** e **DSOMM – Design & Development**, reforçando a automação, rastreabilidade e governação.
 
 ---
 
@@ -31,13 +31,6 @@ Este anexo apresenta **práticas de nível avançado**, não obrigatórias, dest
 - `tailoring-notes.md`  
 - Validação AppSec assinada
 
-**Relação com frameworks**
-| Referência | Domínio | Contribuição |
-|-------------|----------|--------------|
-| **BSIMM AM2.5** | Architecture Analysis | Normalização de práticas entre equipas |
-| **SAMM Design 3/3** | Reutilização sistemática de modelos | Consistência organizacional |
-| **DSOMM Tooling** | Threat Model Management | Integração de baselines e versionamento |
-
 ---
 
 ## 🔄 2. Sincronização com Ferramentas de Modelação
@@ -53,13 +46,6 @@ Este anexo apresenta **práticas de nível avançado**, não obrigatórias, dest
 - `tm-sync.log`  
 - `tm-coverage.csv`  
 - Relatório de diferenças
-
-**Relação com frameworks**
-| Referência | Domínio | Benefício |
-|-------------|----------|-----------|
-| **DSOMM Tooling & Automation** | Integração de pipelines | Rastreabilidade e consistência |
-| **BSIMM AM3.3** | Data Integration | Alinhamento contínuo entre código e modelos |
-| **SSDF PO.3** | Security in Build Pipelines | Validação automática de artefactos |
 
 ---
 

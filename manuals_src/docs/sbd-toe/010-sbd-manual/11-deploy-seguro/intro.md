@@ -19,7 +19,7 @@ Os capítulos operacionais implementam o SbD-ToE em contextos técnicos específ
 ## 
 
 O momento de *deploy* é, por natureza, o mais delicado de todo o ciclo de vida. Até ao último instante, a aplicação pode estar íntegra, testada e auditada; mas se a passagem a produção for feita de forma insegura, todo o investimento anterior perde valor.  
-Estudos de incidentes (BSIMM, ENISA Threat Landscape, relatórios de falhas DevOps) mostram que mais de 40% dos compromissos de segurança associados ao software ocorrem na **fase de release e operação inicial**, seja por falhas de rastreabilidade, ausência de rollback ou uso de artefactos não confiáveis.  
+Estudos de incidentes (ENISA Threat Landscape, relatórios de falhas DevOps) demonstram que o comprometimento de segurança associados ao software ocorrem na **fase de release e operação inicial**, seja por falhas de rastreabilidade, ausência de rollback ou uso de artefactos não confiáveis.  
 
 Este capítulo não se limita a “executar o pipeline”. Procura sim **estabelecer práticas que tornem cada deploy auditável, reversível e proporcional ao risco da aplicação**.  
 A segurança do deploy não é apenas uma questão técnica: é também uma forma de governação - traduz-se na capacidade de explicar, perante uma auditoria ou incidente, *quem decidiu*, *o que foi aprovado* e *como se garantiu a integridade do que chegou a produção*.  
@@ -75,20 +75,6 @@ Nenhum *deploy* seguro é responsabilidade de um só perfil. A prática exige **
 - **Gestão de Produto** → toma a decisão final de *go/no-go* e documenta a aceitação de risco residual.  
 
 Esta matriz de papéis não é opcional: é o que garante que **cada deploy é simultaneamente técnico e governado**, capaz de resistir tanto a falhas operacionais como a escrutínio regulatório.  
-
----
-
-## 📚 Alinhamento com frameworks
-
-As práticas deste capítulo alinham-se com múltiplos referenciais:
-
-- **OWASP SAMM** → OE2-A, ST3-B (governação e release).  
-- **BSIMM** → SE3.2, SE3.5, CMVM2.3 (controles de release e rollback).  
-- **SSDF** → RV.1, RV.4, PO.5 (release validation e rastreabilidade).  
-- **SLSA** → Nível 3 / 4 (garantia de integridade e proveniência de releases).  
-- **DSOMM** → Release & Deploy Practices (maturidade DevSecOps no deploy).  
-
-O cumprimento integral destas práticas posiciona a organização num patamar elevado de conformidade, ao mesmo tempo que reduz a probabilidade e o impacto de incidentes em produção.
 
 ---
 

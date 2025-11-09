@@ -11,7 +11,7 @@ sidebar_position: 30
 
 Este documento apresenta recomendações avançadas que **complementam as práticas mínimas descritas no Capítulo 13**, aplicáveis a organizações com maior maturidade em segurança, cultura DevSecOps consolidada e foco na **escala, automação e melhoria contínua** da formação técnica em segurança.
 
-> 🔍 Estas práticas permitem atingir níveis elevados de maturidade definidos por **SAMM EDU.3**, **BSIMM T&D.3**, **SSDF PO.4** e **DSOMM Training & Awareness L4**.
+> 🔍 Estas práticas permitem atingir níveis elevados de maturidade definidos por **SAMM EDU.3**, **SSDF PO.4** e **DSOMM Training & Awareness L4**.
 
 ---
 
@@ -71,11 +71,6 @@ Este documento apresenta recomendações avançadas que **complementam as práti
 - **EDU.3 – Automated, role-specific training**: Os trilhos por perfil, gating via CI/CD e dashboards suportam integralmente este nível.
 - A integração com onboarding técnico, conteúdo por capítulo e métricas são exemplos de **aplicação contínua da EDU.3**.
 
-### 📘 BSIMM13 – `Training & Awareness (T&D)`
-
-- **T&D.3 – Integration with SDLC and usage analytics**: Feedback adaptativo, quizzes correlacionados com PRs, e reforço com base em comportamento real.
-- A expansão para terceiros alinha-se com as práticas **T&D.2 e T&D.3** (formação abrangente e com integração contínua).
-
 ### 📘 NIST SSDF v1.1 – `PO.4`
 
 - **PO.4.1 / PO.4.2**: Definem que a formação deve ser atualizada com base em incidentes e centrada em papéis.
@@ -102,9 +97,3 @@ Estas práticas avançadas tornam a formação:
 - **Baseada em evidência, feedback e personalização**
 
 > 📈 A verdadeira maturidade em segurança reflete-se na capacidade de **formar, reter e capacitar equipas de forma contínua e adaptada ao risco e à função.**
-
-> 🧩 Com estas recomendações, a organização poderá atingir:
-> - **SAMM v2.1 EDU.3**
-> - **BSIMM13 T&D.3**
-> - **SSDF PO.4**
-> - **DSOMM Training & Awareness – Nível 4**

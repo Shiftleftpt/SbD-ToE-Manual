@@ -41,18 +41,6 @@ Estas políticas:
 
 ---
 
-## 📂 Correspondência com frameworks normativas
-
-| Framework           | Requisitos cobertos pelas políticas acima                                                        |
-| ------------------- | ------------------------------------------------------------------------------------------------ |
-| **NIST SSDF**       | PO.2.1 (Review contract terms), RM.3 (Review of accepted risks), PS.1.2 (Third-party validation) |
-| **OWASP SAMM**      | Governance > Policy & Compliance, Education & Guidance                                           |
-| **SLSA v1.0**       | Requirements on control of third-party, provenance and trusted onboarding                        |
-| **BSIMM13**         | GOV1.1, SE2.4, T1.4, CMVM2.2                                                                     |
-| **ENISA DevSecOps** | Good practices on vendor control, exceptions and role-based decisions                            |
-
----
-
 ## 📄 Estrutura sugerida de cada política
 
 Cada política organizacional deve conter:

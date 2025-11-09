@@ -107,13 +107,3 @@ Cada decisão deve incluir:
 | canon/20-checklist-revisao.md | Verifica aplicação real da governação              |
 
 ---
-
-## 📚 Alinhamento com frameworks
-
-- **SAMM 2.1** → Governance > Strategy & Metrics (nível 2+)
-- **SSDF** → PO.1, PO.3 (políticas, papéis, responsabilidades)
-- **BSIMM13** → SM1.1, SR1.x (security governance)
-
-> 📈 A eficácia do modelo de governação é fator direto de avaliação de maturidade de segurança.
-
----

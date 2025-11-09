@@ -104,16 +104,6 @@ Este capítulo é o que **fecha o ciclo do SbD-ToE**:
 
 ---
 
-## 📚 Alinhamento com frameworks
-
-- **OWASP SAMM** → Governance & Strategy.  
-- **BSIMM** → CP1.1, SM1.3, CMVM3.3.  
-- **SSDF** → PO.1, PO.4, GV.1.  
-- **SLSA** → Nível 3 / 4 (contratos e supply chain).  
-- **DSOMM** → Governance.  
-
----
-
 ## 📜 Políticas Organizacionais Relevantes
 
 | Política | Obrigatória? | Aplicação | Conteúdo mínimo |

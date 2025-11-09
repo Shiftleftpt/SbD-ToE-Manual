@@ -32,8 +32,6 @@ Estas políticas:
 
 > 🧩 Este capítulo **executa e operacionaliza políticas organizacionais** relativas à validação contínua e testes de segurança.
 
-> 📎 Estas políticas são recomendadas por **SSDF**, **OWASP SAMM**, **SLSA**, **BSIMM**, **ENISA** e **OWASP DSOMM** como base para maturidade em AppSec.
-
 ---
 
 ## 🧾 Políticas recomendadas

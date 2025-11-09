@@ -25,7 +25,7 @@ Estas políticas:
 
 > 🧩 Este capítulo implementa as práticas; as políticas fornecem **a base normativa e vinculativa** para garantir que são corretamente aplicadas.
 
-> 📎 A existência de políticas sobre segurança CI/CD é uma **exigência explícita** ou **recomendação forte** em frameworks como **SLSA**, **SSDF**, **OWASP CI/CD Project**, **BSIMM** e guias da **ENISA**.
+> 📎 A existência de políticas sobre segurança CI/CD é uma **exigência explícita** ou **recomendação forte** em frameworks como **SLSA**, **SSDF**, **OWASP DSOMM** e guias da **ENISA**.
 
 ---
 

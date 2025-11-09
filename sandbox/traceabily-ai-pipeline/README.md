@@ -9,7 +9,9 @@ Este kit ajuda a **documentar e operacionalizar** o uso de IA no manual SbD-ToE:
 
 > O objetivo é: *“andar para trás”* a partir da rastreabilidade central, **registar o uso de IA** (ficam guardados os prompts e entradas), e manter um **pipeline determinístico**.
 
-## Estrutura sugerida
+> o Projeto adicional SbD-ToE-RAG constroi um modelo RAG que permite suportar a criaçao consistente de "brack trace" para as referencias usadas criando uma base solida para o rastreabilidade_global.csv. O processo ainda não está totalmente automatizado, só a indexação e chunking deste manual e a criaçao de embeds. Existem scripts que usam, ou localmente ou via OpenIA API, esses embed para derivar a rastreabilidade global.
+
+## Estrutura 
 ```
 sbdtoe-ai-pipeline/
 ├── schemas/

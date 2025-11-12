@@ -83,8 +83,13 @@ Navegar para: **Settings → Security & analysis**
 - 📝 Nota: A configuração `.github/dependabot.yml` já está no repositório
 
 **Code scanning**:
-- ✅ **CodeQL analysis**: Configurado via workflow
-  - Verificar que o workflow `.github/workflows/codeql-analysis.yml` está ativo
+- ⚠️ **IMPORTANTE**: Se "Default setup" estiver ativado, tens de o **desativar primeiro**
+  - Ir a: **Settings → Code security → Code scanning → Configure**
+  - Selecionar **"Disable default setup"**
+  - Motivo: O default setup conflitua com workflows customizados
+- ✅ **CodeQL analysis**: Configurado via workflow customizado
+  - Workflow: `.github/workflows/codeql-analysis.yml`
+  - Após desativar default setup, o workflow customizado funcionará automaticamente
   - Monitorizar resultados em: **Security → Code scanning**
 
 **Secret scanning**:

@@ -1,5 +1,11 @@
 name: CodeQL Security Scanning
 
+# IMPORTANT: This workflow requires GitHub's "default setup" to be DISABLED.
+# To use this custom CodeQL workflow:
+# 1. Go to Settings → Code security → Code scanning
+# 2. If "Default setup" is enabled, click "Configure" and select "Disable default setup"
+# 3. This workflow will then run automatically on PRs and pushes to master
+
 on:
   push:
     branches: [ master ]

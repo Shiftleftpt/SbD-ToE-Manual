@@ -23,6 +23,9 @@ Este documento descreve as medidas de segurança implementadas no repositório *
 O repositório utiliza **GitHub CodeQL** para análise estática de segurança:
 
 - **Workflow**: `.github/workflows/codeql-analysis.yml`
+- **Requisito importante**: ⚠️ O "Default setup" do CodeQL deve estar **desativado** nas settings do GitHub
+  - Conflito: Default setup não funciona com workflows customizados
+  - Ver instruções detalhadas em: [GITHUB-CONFIG.md](GITHUB-CONFIG.md#seguranca-analise)
 - **Frequência**: 
   - Execução em todos os pushes para `master`
   - Execução em todos os pull requests
@@ -32,8 +35,9 @@ O repositório utiliza **GitHub CodeQL** para análise estática de segurança:
 - **Resultados**: Publicados no GitHub Security tab
 
 #### Ações recomendadas:
-1. Monitorizar regularmente o Security tab no GitHub
-2. Resolver alertas críticos e de alta severidade imediatamente
+1. **Desativar CodeQL default setup** (se ativo) - ver [GITHUB-CONFIG.md](GITHUB-CONFIG.md#seguranca-analise)
+2. Monitorizar regularmente o Security tab no GitHub
+3. Resolver alertas críticos e de alta severidade imediatamente
 3. Avaliar e corrigir alertas de média e baixa severidade periodicamente
 
 ### Dependabot

@@ -241,8 +241,8 @@ Como **Procurement Officer**, quero **executar o fluxo formal de validação de 
 **Integração.** Planeamento; Resp: Procurement Officer + AppSec Engineer + GRC Analyst; SLA: 2 semanas (L2), 1 semana (L3)  
 
 **Ligações úteis.**  
-- [Modelo de Validação de Fornecedores](/docs/sbd-toe/010-sbd-manual/14-governanca-contratacao/addon/03-modelo-validacao-fornecedores.md)  
-- [Exemplos Práticos](/docs/sbd-toe/010-sbd-manual/14-governanca-contratacao/addon/05-exemplos-praticos.md)  
+- [Modelo de Validação de Fornecedores](governanca-contratacao/addon/03-modelo-validacao-fornecedores.md)  
+- [Exemplos Práticos](governanca-contratacao/addon/05-exemplos-praticos.md)  
 
 ---
 
@@ -276,7 +276,7 @@ Como **AppSec Engineer**, quero **revisar e reavaliar exceções e compensaçõe
 **Integração.** Operações + Validação; Resp: AppSec Engineer + GRC Analyst; Triggers: Calendário (trimestral/semestral), Incidente crítico, Mudança arquitetura; SLA: Reavaliação em 5 dias úteis  
 
 **Ligações úteis.**  
-- [Validação Continuada](/docs/sbd-toe/010-sbd-manual/14-governanca-contratacao/addon/06-validacao-continuada.md)  
+- [Validação Continuada](governanca-contratacao/addon/06-validacao-continuada.md)  
 
 ---
 
@@ -311,8 +311,8 @@ Como **AppSec Engineer + Dev Lead**, quero **manter um repositório estruturado 
 **Integração.** Planeamento + Execução + Validação; Resp: AppSec Engineer + Dev Lead + GRC Analyst; SLA: Atualização por release ou 5 dias após evento crítico  
 
 **Ligações úteis.**  
-- [Controlo Sistemático das Práticas SbD-ToE](/docs/sbd-toe/010-sbd-manual/14-governanca-contratacao/addon/11-controlos-praticas-sbd.md)  
-- [Rastreabilidade Organizacional](/docs/sbd-toe/010-sbd-manual/14-governanca-contratacao/addon/04-rastreabilidade-organizacional.md)  
+- [Controlo Sistemático das Práticas SbD-ToE](governanca-contratacao/addon/11-controlos-praticas-sbd.md)  
+- [Rastreabilidade Organizacional](governanca-contratacao/addon/04-rastreabilidade-organizacional.md)  
 
 ---
 
@@ -347,8 +347,8 @@ Como **Gestão/PMO**, quero **designar formalmente um owner de segurança (Secur
 **Integração.** Planeamento; Resp: Gestão/PMO + Security Champion + AppSec Engineer; SLA: Designação no arranque do projeto ou mudança de owner  
 
 **Ligações úteis.**  
-- [Modelo de Governação](/docs/sbd-toe/010-sbd-manual/14-governanca-contratacao/addon/01-modelo-governancao.md)  
-- [Formação e Onboarding (Cap. 13)](/docs/sbd-toe/010-sbd-manual/13-formacao-onboarding/aplicacao-lifecycle.md)  
+- [Modelo de Governação](governanca-contratacao/addon/01-modelo-governancao.md)  
+- [Formação e Onboarding (Cap. 13)](/formacao-onboarding/aplicacao-lifecycle.md)  
 
 ---
 
@@ -384,8 +384,8 @@ Como **AppSec Engineer + GRC Analyst**, quero **executar validações periódica
 **Integração.** Validação + Auditoria; Resp: AppSec Engineer + GRC Analyst + Dev Lead; Triggers: Calendário cíclico, Release relevante, Incidente crítico; SLA: Ciclo completado em 2 semanas desde trigger  
 
 **Ligações úteis.**  
-- [Validação Continuada](/docs/sbd-toe/010-sbd-manual/14-governanca-contratacao/addon/06-validacao-continuada.md)  
-- [Controlo Sistemático das Práticas](/docs/sbd-toe/010-sbd-manual/14-governanca-contratacao/addon/11-controlos-praticas-sbd.md)  
+- [Validação Continuada](governanca-contratacao/addon/06-validacao-continuada.md)  
+- [Controlo Sistemático das Práticas](governanca-contratacao/addon/11-controlos-praticas-sbd.md)  
 
 ---
 
@@ -421,8 +421,8 @@ Como **CISO + Gestão Executiva**, quero **consolidar e reportar KPIs de governa
 **Integração.** Auditoria + Operações; Resp: GRC Analyst + AppSec Engineer + CISO; Triggers: Trimestral (mínimo), Semestral (recomendado); SLA: Relatório publicado 5 dias após fim do período  
 
 **Ligações úteis.**  
-- [Governação e Maturidade](/docs/sbd-toe/010-sbd-manual/14-governanca-contratacao/addon/07-governancao-e-maturidade.md)  
-- [Rastreabilidade Organizacional](/docs/sbd-toe/010-sbd-manual/14-governanca-contratacao/addon/04-rastreabilidade-organizacional.md)  
+- [Governação e Maturidade](governanca-contratacao/addon/07-governancao-e-maturidade.md)  
+- [Rastreabilidade Organizacional](governanca-contratacao/addon/04-rastreabilidade-organizacional.md)  
 
 ---
 
@@ -459,9 +459,9 @@ Como **CISO + AppSec Manager**, quero **formalizar e documentar o modelo de gove
 **Integração.** Planeamento + Execução contínua; Resp: CISO + AppSec Manager + Jurídico; Triggers: Arranque SbD-ToE, revisão anual, mudança organizacional; SLA: Publicação em 2 semanas  
 
 **Ligações úteis.**  
-- [Modelo de Governação](/docs/sbd-toe/010-sbd-manual/14-governanca-contratacao/addon/01-modelo-governancao.md)  
-- [Exemplos de Decisão](/docs/sbd-toe/010-sbd-manual/14-governanca-contratacao/addon/05-exemplos-praticos.md)  
-- [Formação de Governação (Cap. 13)](/docs/sbd-toe/010-sbd-manual/13-formacao-onboarding/aplicacao-lifecycle.md)  
+- [Modelo de Governação](governanca-contratacao/addon/01-modelo-governancao.md)  
+- [Exemplos de Decisão](governanca-contratacao/addon/05-exemplos-praticos.md)  
+- [Formação de Governação (Cap. 13)](/formacao-onboarding/aplicacao-lifecycle.md)  
 
 ---
 
@@ -498,9 +498,9 @@ Como **AppSec Engineer + Dev Lead**, quero **manter um checklist centralizado, v
 **Integração.** Planeamento + Execução + Validação + Auditoria; Resp: AppSec Engineer (validação) + Dev Lead (preenchimento) + GRC Analyst (consolidação); Triggers: Release relevante, evento crítico, ciclo programado (trimestral/semestral/anual); SLA: Atualização em 5 dias úteis após trigger  
 
 **Ligações úteis.**  
-- [Controlo Sistemático das Práticas SbD-ToE](/docs/sbd-toe/010-sbd-manual/14-governanca-contratacao/addon/11-controlos-praticas-sbd.md)  
-- [Rastreabilidade Organizacional](/docs/sbd-toe/010-sbd-manual/14-governanca-contratacao/addon/04-rastreabilidade-organizacional.md)  
-- [Validação Periódica](/docs/sbd-toe/010-sbd-manual/14-governanca-contratacao/addon/06-validacao-continuada.md)  
+- [Controlo Sistemático das Práticas SbD-ToE](governanca-contratacao/addon/11-controlos-praticas-sbd.md)  
+- [Rastreabilidade Organizacional](governanca-contratacao/addon/04-rastreabilidade-organizacional.md)  
+- [Validação Periódica](governanca-contratacao/addon/06-validacao-continuada.md)  
 
 ---
 
@@ -537,9 +537,9 @@ Como **Procurement Officer + AppSec Engineer**, quero **reavalia e reaprovar for
 **Integração.** Validação + Operações; Resp: Procurement Officer (coordenação) + AppSec Engineer (análise técnica) + GRC Analyst (decisão e registo); Triggers: Calendário programado (anual/semestral), Incidente crítico, CVE crítico não mitigado, Mudança de contrato/propriedade/SLA; SLA: Reavaliação completada em 2 semanas desde trigger  
 
 **Ligações úteis.**  
-- [Modelo de Validação de Fornecedores](/docs/sbd-toe/010-sbd-manual/14-governanca-contratacao/addon/03-modelo-validacao-fornecedores.md)  
-- [Validação Continuada](/docs/sbd-toe/010-sbd-manual/14-governanca-contratacao/addon/06-validacao-continuada.md)  
-- [Exemplos de Aplicação](/docs/sbd-toe/010-sbd-manual/14-governanca-contratacao/addon/05-exemplos-praticos.md)  
+- [Modelo de Validação de Fornecedores](governanca-contratacao/addon/03-modelo-validacao-fornecedores.md)  
+- [Validação Continuada](governanca-contratacao/addon/06-validacao-continuada.md)  
+- [Exemplos de Aplicação](governanca-contratacao/addon/05-exemplos-praticos.md)  
 
 ---
 

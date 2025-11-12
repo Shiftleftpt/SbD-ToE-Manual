@@ -29,7 +29,7 @@ Este capítulo detalha, de forma operacional e prescritiva, **quando e como impl
 
 ## 👥 Quem executa cada ação
 
-| Papel Formal (07-roles.md) | Responsabilidades em Cap. 01 |
+| Papel Formal (07-roles) | Responsabilidades em Cap. 01 |
 |---|---|
 | **Developer** | Propor classificação inicial; registar alterações E/D/I; atualizar documentação em commits |
 | **Team Lead / Scrum Master** | Facilitar integração da classificação no backlog; remover bloqueios operacionais |
@@ -88,9 +88,9 @@ Como **Developer / Team Lead**, quero **classificar a aplicação com base nos e
 | Arquitetura | Revisão de design inicial | **Developer + Arquitetura + AppSec Engineer** | Antes da aprovação de arquitetura |
 
 **Ligações úteis.**
-- [Modelo de Classificação](/docs/sbd-toe/010-sbd-manual/01-classificacao-aplicacoes/addon/01-modelo-classificacao-eixos.md)  
-- [Matriz de Controlos por Risco](/docs/sbd-toe/010-sbd-manual/01-classificacao-aplicacoes/addon/05-matriz-controlos-por-risco.md)  
-- [07-roles.md](/docs/sbd-toe/000-teory-of-everything/07-roles.md)
+- [Modelo de Classificação](/sbd-toe/sbd-manual/classificacao-aplicacoes/addon/01-modelo-classificacao-eixos)  
+- [Matriz de Controlos por Risco](/sbd-toe/sbd-manual/classificacao-aplicacoes/addon/05-matriz-controlos-por-risco)  
+- [07-roles.md](/sbd-toe/000-teory-of-everything/07-roles)
 
 ---
 
@@ -135,9 +135,9 @@ Como **Developer / Team Lead**, quero **aplicar a matriz de controlos e mapear c
 | Planeamento | Após classificação | **Developer + Team Lead + AppSec Engineer** | Antes de implementação |
 
 **Ligações úteis.**
-- [Matriz de Controlos por Risco](/docs/sbd-toe/010-sbd-manual/01-classificacao-aplicacoes/addon/05-matriz-controlos-por-risco.md)  
-- [Capítulo 02 - Requisitos de Segurança](/docs/sbd-toe/010-sbd-manual/02-requisitos-seguranca/intro.md)  
-- [07-roles.md](/docs/sbd-toe/000-teory-of-everything/07-roles.md)
+- [Matriz de Controlos por Risco](/sbd-toe/sbd-manual/classificacao-aplicacoes/addon/05-matriz-controlos-por-risco)  
+- [Capítulo 02 - Requisitos de Segurança](/sbd-toe/sbd-manual/requisitos-seguranca/intro)  
+- [07-roles.md](/sbd-toe/000-teory-of-everything/07-roles)
 
 ---
 
@@ -183,8 +183,8 @@ Como **AppSec Engineer**, quero **rever a classificação de criticidade sempre 
 | Contínuo | Mudança arquitetura, dados ou exposição | **AppSec Engineer + Developer + GRC/Compliance + Product Owner** | 3 dias úteis após trigger |
 
 **Ligações úteis.**
-- [Ciclo de Vida do Risco](/docs/sbd-toe/010-sbd-manual/01-classificacao-aplicacoes/addon/02-ciclo-vida-risco.md)  
-- [07-roles.md](/docs/sbd-toe/000-teory-of-everything/07-roles.md)
+- [Ciclo de Vida do Risco](/sbd-toe/sbd-manual/classificacao-aplicacoes/addon/02-ciclo-vida-risco)  
+- [07-roles.md](/sbd-toe/000-teory-of-everything/07-roles)
 
 ---
 
@@ -231,9 +231,9 @@ Como **AppSec Engineer**, quero **rever a classificação com cadência fixa (L1
 | Operações + Governação | Calendário time-based + Eventos críticos | **AppSec Engineer + GRC/Compliance + Product Owner** | Conclusão em 5 dias úteis da data de revisão |
 
 **Ligações úteis.**
-- [Ciclo de Vida do Risco](/docs/sbd-toe/010-sbd-manual/01-classificacao-aplicacoes/addon/02-ciclo-vida-risco.md)  
-- [Critérios Aceitação Risco](/docs/sbd-toe/010-sbd-manual/01-classificacao-aplicacoes/addon/03-criterios-aceitacao-risco.md)  
-- [07-roles.md](/docs/sbd-toe/000-teory-of-everything/07-roles.md)
+- [Ciclo de Vida do Risco](/sbd-toe/sbd-manual/classificacao-aplicacoes/addon/02-ciclo-vida-risco)  
+- [Critérios Aceitação Risco](/sbd-toe/sbd-manual/classificacao-aplicacoes/addon/03-criterios-aceitacao-risco)  
+- [07-roles.md](/sbd-toe/000-teory-of-everything/07-roles)
 
 ---
 
@@ -280,9 +280,9 @@ Como **GRC/Compliance**, quero **registar o risco residual após aplicar os cont
 | Validação | Após mapeamento de matrix; pré-release | **GRC/Compliance + AppSec Engineer + Developer** | 5 dias úteis |
 
 **Ligações úteis.**
-- [Risco Residual](/docs/sbd-toe/010-sbd-manual/01-classificacao-aplicacoes/addon/04-risco-residual.md)  
-- [Critérios Aceitação Risco](/docs/sbd-toe/010-sbd-manual/01-classificacao-aplicacoes/addon/03-criterios-aceitacao-risco.md)  
-- [07-roles.md](/docs/sbd-toe/000-teory-of-everything/07-roles.md)
+- [Risco Residual](/sbd-toe/sbd-manual/classificacao-aplicacoes/addon/04-risco-residual)  
+- [Critérios Aceitação Risco](/sbd-toe/sbd-manual/classificacao-aplicacoes/addon/03-criterios-aceitacao-risco)  
+- [07-roles.md](/sbd-toe/000-teory-of-everything/07-roles)
 
 ---
 
@@ -331,9 +331,9 @@ Como **GRC/Compliance**, quero registar aceitações com **TTL explícito e aler
 | Governação + Segurança | Decisão de aceitar risco; alerta 15d antes expiração | **GRC/Compliance (cria, registra) + AppSec Engineer (revalida, aprova) + Gestão Executiva/CISO (aprova L3) + Product Owner (notificado se impacto negócio)** | Criação: 2 dias úteis; Re-aprovação: 5 dias úteis antes da expiração |
 
 **Ligações úteis.**
-- [Critérios Aceitação Risco](/docs/sbd-toe/010-sbd-manual/01-classificacao-aplicacoes/addon/03-criterios-aceitacao-risco.md)  
+- [Critérios Aceitação Risco](/sbd-toe/sbd-manual/classificacao-aplicacoes/addon/03-criterios-aceitacao-risco)  
 - [Análise de Risco Residual](/docs/sbd-toe/010-sbd-manual/01-classificacao-aplicacoes/aplicacao-lifecycle.md#us-04--análise-de-risco-residual)  
-- [07-roles.md](/docs/sbd-toe/000-teory-of-everything/07-roles.md)
+- [07-roles.md](/sbd-toe/000-teory-of-everything/07-roles)
 
 ---
 
@@ -377,8 +377,8 @@ Como **QA**, quero **validar que os requisitos aplicáveis por nível de risco e
 | Pré-Release | Aplicação pronta para go-live | **QA + AppSec Engineer + Gestão/PMO (L3)** | 2 dias úteis antes de deploy |
 
 **Ligações úteis.**
-- [Matriz de Controlos por Risco](/docs/sbd-toe/010-sbd-manual/01-classificacao-aplicacoes/addon/05-matriz-controlos-por-risco.md)  
-- [07-roles.md](/docs/sbd-toe/000-teory-of-everything/07-roles.md)
+- [Matriz de Controlos por Risco](/sbd-toe/sbd-manual/classificacao-aplicacoes/addon/05-matriz-controlos-por-risco)  
+- [07-roles.md](/sbd-toe/000-teory-of-everything/07-roles)
 
 ## 🚧 Cascata de Gates de Validação (US-05 em Contexto)
 
@@ -514,9 +514,9 @@ Como **AppSec Engineer**, quero **verificar se as ameaças esperadas para o nív
 | Validação | Pré-release (L2/L3) | **AppSec Engineer** | 1 semana antes de release |
 
 **Ligações úteis.**
-- [Mapeamento de Ameaças por Risco](/docs/sbd-toe/010-sbd-manual/01-classificacao-aplicacoes/addon/06-mapeamento-ameacas-risco.md)  
-- [Capítulo 03 - Threat Modeling](/docs/sbd-toe/010-sbd-manual/03-threat-modeling/intro.md)  
-- [07-roles.md](/docs/sbd-toe/000-teory-of-everything/07-roles.md)
+- [Mapeamento de Ameaças por Risco](/sbd-toe/sbd-manual/classificacao-aplicacoes/addon/06-mapeamento-ameacas-risco)  
+- [Capítulo 03 - Threat Modeling](/sbd-toe/sbd-manual/threat-modeling/intro)  
+- [07-roles.md](/sbd-toe/000-teory-of-everything/07-roles)
 
 ---
 
@@ -569,7 +569,7 @@ Como **DevOps/SRE**, quero classificar **artefactos técnicos da aplicação** (
 - [Cap. 07 - CI/CD Seguro](/docs/sbd-toe/010-sbd-manual/07-cicd-seguro/)  
 - [Cap. 08 - IaC e Infraestrutura](/docs/sbd-toe/010-sbd-manual/08-iac-infraestrutura/)  
 - [Cap. 09 - Containers e Imagens](/docs/sbd-toe/010-sbd-manual/09-containers-imagens/)  
-- [07-roles.md](/docs/sbd-toe/000-teory-of-everything/07-roles.md)
+- [07-roles.md](/sbd-toe/000-teory-of-everything/07-roles)
 
 ---
 
@@ -623,10 +623,10 @@ Como **GRC/Compliance**, quero consolidar **KPIs mensais/trimestrais** sobre a c
 | Governação + Reporting | Fim de período (mensal/trimestral) | **GRC/Compliance (coleta dados, consolida, redige) + AppSec Engineer (valida métricas técnicas) + Gestão Executiva/CISO (aprova distribuição)** | Reporte: 10 dias úteis após fim do período; Distribuição: 1 dia após aprovação |
 
 **Ligações úteis.**
-- [Critérios Aceitação Risco](/docs/sbd-toe/010-sbd-manual/01-classificacao-aplicacoes/addon/03-criterios-aceitacao-risco.md)  
-- [Mapeamento de Ameaças](/docs/sbd-toe/010-sbd-manual/01-classificacao-aplicacoes/addon/06-mapeamento-ameacas-risco.md)  
-- [07-roles.md](/docs/sbd-toe/000-teory-of-everything/07-roles.md)  
-- [Auditoría & Rastreabilidade (Cap. 02)](/docs/sbd-toe/010-sbd-manual/02-requisitos-seguranca/intro.md)
+- [Critérios Aceitação Risco](/sbd-toe/sbd-manual/classificacao-aplicacoes/addon/03-criterios-aceitacao-risco)  
+- [Mapeamento de Ameaças](/sbd-toe/sbd-manual/classificacao-aplicacoes/addon/06-mapeamento-ameacas-risco)  
+- [07-roles.md](/sbd-toe/000-teory-of-everything/07-roles)  
+- [Auditoría & Rastreabilidade (Cap. 02)](/sbd-toe/sbd-manual/requisitos-seguranca/intro)
 
 ---
 
@@ -677,11 +677,11 @@ Como **Gestão Executiva/CISO**, quero que existam **4 políticas organizacionai
 | Governação + Conformidade | Kick-off (criação políticas), anualmente (revisão) | **Gestão Executiva/CISO (assina, aprova) + GRC/Compliance (redige, distribui, treina) + AppSec Engineer (input técnico) + Auditores Internos (valida conformidade) + Todos os equipas (treino + attestation)** | Redação: 30 dias; Assinatura: 5 dias; Distribuição: 1 dia; Treinamento inicial: 10 dias; Revisão anual: 15 dias |
 
 **Ligações úteis.**
-- [Intro Cap. 01 – Modelo E+D+I e Ciclos](/docs/sbd-toe/010-sbd-manual/01-classificacao-aplicacoes/intro.md)  
-- [Criterios Aceitação Risco (addon 03)](/docs/sbd-toe/010-sbd-manual/01-classificacao-aplicacoes/addon/03-criterios-aceitacao-risco.md)  
-- [Ciclo de Vida do Risco (addon 02)](/docs/sbd-toe/010-sbd-manual/01-classificacao-aplicacoes/addon/02-ciclo-vida-risco.md)  
-- [NIS2 / DORA / ISO 27001 (Cap. 002)](/docs/sbd-toe/002-cross-check-normativo/intro.md)  
-- [07-roles.md](/docs/sbd-toe/000-teory-of-everything/07-roles.md)
+- [Intro Cap. 01 – Modelo E+D+I e Ciclos](/docs/sbd-toe/010-sbd-manual/01-classificacao-aplicacoes/intro)  
+- [Criterios Aceitação Risco (addon 03)](/sbd-toe/sbd-manual/classificacao-aplicacoes/addon/03-criterios-aceitacao-risco)  
+- [Ciclo de Vida do Risco (addon 02)](/sbd-toe/sbd-manual/classificacao-aplicacoes/addon/02-ciclo-vida-risco)  
+- [NIS2 / DORA / ISO 27001 (Cap. 002)](/docs/sbd-toe/002-cross-check-normativo/intro)  
+- [07-roles.md](/sbd-toe/000-teory-of-everything/07-roles)
 
 ---
 

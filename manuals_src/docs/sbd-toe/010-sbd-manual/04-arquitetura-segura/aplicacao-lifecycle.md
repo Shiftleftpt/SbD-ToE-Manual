@@ -127,8 +127,8 @@ Como **Arquitetos de Software**, quero produzir ficha de arquitetura com control
 | Design | Definição da solução | Arquitetos de Software + AppSec Engineer | Antes da implementação |
 
 **Ligações úteis.**
-- 🔗 [Modelos de Arquitetura Segura Reutilizáveis – Addon 04](../addon/04-diagramas-referencia.md)
-- 🔗 [Catálogo de Requisitos ARC-XXX – Addon 01](../addon/01-catalogo-requisitos.md)
+- 🔗 [Modelos de Arquitetura Segura Reutilizáveis – Addon 04](../addon/diagramas-referencia.md)
+- 🔗 [Catálogo de Requisitos ARC-XXX – Addon 01](../addon/catalogo-requisitos/intro)
 
 ---
 
@@ -252,7 +252,7 @@ Como **DevOps/SRE + AppSec Engineer**, quero validar controlos de arquitetura no
 | CI/CD | Commit/MR de arquitetura ou IaC | DevOps/SRE + AppSec Engineer | Em cada build |
 
 **Ligações úteis.**
-- 🔗 [Requisitos IaC – Addon 06](../addon/06-rastreabilidade.md)
+- 🔗 [Requisitos IaC – Addon 06](../addon/rastreabilidade.md)
 - 🔗 [Cap. 7 – CI/CD Seguro](/sbd-toe/sbd-manual/cicd-seguro/intro)
 
 ---
@@ -534,8 +534,8 @@ Como **Arquitetos de Software**, quero manter um catálogo de padrões de arquit
 | Design | Novo projeto ou reavaliação de padrão | Arquitetos de Software + AppSec Engineer | Antes da ficha de solução |
 
 **Ligações úteis.**
-- 🔗 [Addon 04 – Modelos de Arquitetura Segura Reutilizáveis](../addon/04-diagramas-referencia.md)
-- 🔗 [Addon 01 – Catálogo de Requisitos ARC](../addon/01-catalogo-requisitos.md)
+- 🔗 [Addon 04 – Modelos de Arquitetura Segura Reutilizáveis](../addon/diagramas-referencia.md)
+- 🔗 [Addon 01 – Catálogo de Requisitos ARC](../addon/catalogo-requisitos/intro)
 
 ---
 
@@ -624,7 +624,7 @@ Como **DevOps/SRE + GRC/Compliance**, quero implementar e validar segregação d
 | Deploy | Setup de ambiente L3 | DevOps/SRE + GRC/Compliance | Antes da entrada em produção |
 
 **Ligações úteis.**
-- 🔗 [Addon 02 – Casos Práticos (Caso 1: L3 crítica)](../addon/02-casos-praticos.md)
+- 🔗 [Addon 02 – Casos Práticos (Caso 1: L3 crítica)](../addon/casos-praticos.md)
 - 🔗 [Cap. 14 – Governação e Contratação](/sbd-toe/sbd-manual/governanca-contratacao/intro)
 
 ---
@@ -722,7 +722,7 @@ Como **Gestão Executiva/CISO + Arquitetos de Software**, quero estabelecer proc
 | Release / Go-live | Preparação de release L3 | Gestão Executiva/CISO + Comité Técnico | 2 semanas antes do go-live |
 
 **Ligações úteis.**
-- 🔗 [Addon 05 – Critérios de Validação](../addon/05-validacao.md)
+- 🔗 [Addon 05 – Critérios de Validação](../addon/validacao.md)
 - 🔗 [Cap. 14 – Governação](/sbd-toe/sbd-manual/governanca-contratacao/intro)
 ---
 

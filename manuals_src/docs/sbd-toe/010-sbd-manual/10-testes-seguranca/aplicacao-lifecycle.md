@@ -431,7 +431,7 @@ Como **QA + AppSec**, quero **instrumentar a aplicação em staging com IAST par
 **Checklist.**  
 - [ ] Agent IAST instalado e configurado em staging  
 - [ ] Cobertura de instrumentação de endpoints críticos validada  
-- [ ] Performance da aplicação monitorizada (overhead <10% aceito)  
+- [ ] Performance da aplicação monitorizada (overhead `<10%` aceito)  
 - [ ] Findings de IAST exportados em formato estruturado  
 - [ ] Integração com ferramenta centralizada de findings (DefectDojo ou similar)  
 - [ ] Dados sensíveis mascarados nos logs de IAST  
@@ -485,7 +485,7 @@ Como **AppSec + DevOps**, quero **centralizar todos os findings de SAST, DAST, I
 - [ ] Conectores para todas as ferramentas (SAST, DAST, IAST, SCA) configurados  
 - [ ] Regras de deduplica e correlação ativas  
 - [ ] Critérios de triagem documentados (CWE, OWASP, risco organizacional)  
-- [ ] SLA definidos por severidade e Lx (Crítico: <24h, Alto: <7d, Médio: <30d)  
+- [ ] SLA definidos por severidade e Lx (Crítico: `<24h`, Alto: `<7d`, Médio: `<30d`)  
 - [ ] Dashboard públicos com KPIs (findings abertos, taxa de resolução, tempo médio)  
 - [ ] Integração com backlog (Jira/Azure Boards) para atribuição automática  
 - [ ] Auditoria de exceções com dupla aprovação para L2/L3  
@@ -556,7 +556,7 @@ Como **AppSec + DevOps**, quero **automatizar delivery de findings nos pontos de
 **Integração no SDLC.**  
 | Fase | Trigger | Responsável | SLA |
 |------|---------|-------------|-----|
-| Contínua | Geração/triagem de findings | AppSec + DevOps | <15min para críticos |
+| Contínua | Geração/triagem de findings | AppSec + DevOps | `<15min` para críticos |
 
 ---
 

@@ -565,7 +565,7 @@ Como **DevOps + Infraestrutura**, quero aplicar NetworkPolicy com ingress/egress
 |-------|-----------|----------|---------------|
 | **L1** | Recomendado documentar fluxos | Manual; fluxos observados | Trimestral |
 | **L2** | Deny-all default + ingress crítico | Namespace obrigatório; egress para registry+DNS | Mensal; auditoria anual |
-| **L3** | Egress total + auditoria contínua | Whitelist per-service; no exceptions sem aprovação GRC | Semanal; alertas <1h |
+| **L3** | Egress total + auditoria contínua | Whitelist per-service; no exceptions sem aprovação GRC | Semanal; alertas `<1h` |
 
 **Integração no SDLC.**  
 | Fase | Trigger | Responsável | SLA |
@@ -590,7 +590,7 @@ Bases heterogéneas aumentam custo operacional e risco de configuração. SLA de
 Como **DevOps + AppSec**, quero manter catálogo de Golden Base Images com versionamento semântico e SLA de patching, para padronizar segurança e reduzir configuração drift.
 
 **Critérios de aceitação (BDD).**  
-- **Dado** que uma base Ubuntu 22.04 recebe CVE crítico (CVSS≥9) **Quando** o patch está disponível **Então** nova tag é cut (Ex: ubuntu-22.04:v1.2.3→v1.2.4) e propagada em <7d (L3) ou <30d (L2)
+- **Dado** que uma base Ubuntu 22.04 recebe CVE crítico (CVSS≥9) **Quando** o patch está disponível **Então** nova tag é cut (Ex: ubuntu-22.04:v1.2.3→v1.2.4) e propagada em `<7d` (L3) ou `<30d` (L2)
 - **Dado** que um microsserviço constrói com base descontinuada **Quando** validação do pipeline executa **Então** build falha com mensagem clara do end-of-life
 - **Dado** que base node:20 é atualizada **Quando** nova release é publicada **Então** changelog é adicionado a `golden-images-catalog.md` com SBOM diff
 
@@ -624,7 +624,7 @@ Como **DevOps + AppSec**, quero manter catálogo de Golden Base Images com versi
 |------|---------|-------------|-----|
 | Catalogação | Submissão de base | AppSec | Revisão em 5d |
 | Patching | CVE publicado | DevOps (automático se via Dependabot) | Per SLA |
-| Validação | Nova tag | Pipeline CI/CD | <2h para aprovação |
+| Validação | Nova tag | Pipeline CI/CD | `<2h` para aprovação |
 | Sunsetting | EOL atingido | Plataforma + GRC | Notificação 90d antes |
 
 **Ligações úteis.**  
@@ -674,14 +674,14 @@ Como **DevOps/AppSec**, quero que builders e runners sejam mínimos, ephemerais 
 |-------|---------|---------|-----------|-----------|----------------------|
 | **L1** | Recomendado ephemeral | Imagem pública | Não | Logs básicos | Não |
 | **L2** | Obrigatório ephemeral, non-root | Imagem minimizada, versionada | Cosign recomendado | Logs centralizados, auditoria semestral | Sim (Intel + ARM) |
-| **L3** | Obrigatório ephemeral, max 24h TTL, segmentado por team | Imagem minimizada + allowlist rigorosa | Cosign + OIDC obrigatório | Logs estruturados JSON, auditoria mensal + alertas <1h | Sim (Intel, ARM, IBM Z) |
+| **L3** | Obrigatório ephemeral, max 24h TTL, segmentado por team | Imagem minimizada + allowlist rigorosa | Cosign + OIDC obrigatório | Logs estruturados JSON, auditoria mensal + alertas `<1h` | Sim (Intel, ARM, IBM Z) |
 
 **Integração no SDLC.**  
 | Fase | Trigger | Responsável | SLA |
 |------|---------|-------------|-----|
 | Definição | Criação de pipeline | Dev Team | Antes do go-live |
 | Implementação | Configuração de runners | DevOps | Validação por AppSec |
-| Execução | Cada job do pipeline | Runner (automático) | <2h para destruction cleanup |
+| Execução | Cada job do pipeline | Runner (automático) | `<2h` para destruction cleanup |
 | Auditoria | Revisão periódica | Plataforma + GRC | Trimestral; alertas imediatos para violações |
 
 **Ligações úteis.**  

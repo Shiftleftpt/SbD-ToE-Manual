@@ -452,10 +452,21 @@ Como **DevOps/SRE** e **Developer**, quero que o pipeline CI/CD verifique automa
 **Artefactos & evidências.**
 - Logs de CI, relatórios SAST/SCA/DAST, ficheiro SBOM (`sbom.cdx.json`), assinatura (`artifact.sig`), relatório de gate
 
+**Proporcionalidade por risco.**
+| Nível | Obrigatório? | Ajustes |
+|---|---|---|
+| L1 | Recomendado | SAST básico, SCA recomendado |
+| L2 | Sim | SAST + SCA obrigatório; gates com limiares configurados |
+| L3 | Sim | SAST + SCA + DAST; gates rigorosos; SBOM + assinatura obrigatória |
+
 **Integração no SDLC.**
 | Fase | Trigger | Responsável | SLA |
 |---|---|---|---|
 | Merge/Release | PR/MR targeting main/release | DevOps/SRE + AppSec | Bloqueio automático até resolução |
+
+**Ligações úteis.**
+- 🔗 [Gates de segurança em CI/CD](/sbd-toe/sbd-manual/cicd-seguro/addon/gates-seguranca)  
+- 🔗 [SBOM e proveniência](/sbd-toe/sbd-manual/dependencias-sbom-sca/intro)
 
 ---
 

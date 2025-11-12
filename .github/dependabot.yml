@@ -20,9 +20,9 @@ updates:
       prefix-development: "chore(deps-dev)"
       include: "scope"
     reviewers:
-      - "Shiftleftpt"
+      - "pedrofarinhaatshiftleftpt"
     assignees:
-      - "Shiftleftpt"
+      - "pedrofarinhaatshiftleftpt"
 
   # npm dependencies (Docusaurus project)
   - package-ecosystem: "npm"
@@ -41,9 +41,9 @@ updates:
       prefix-development: "chore(deps-dev)"
       include: "scope"
     reviewers:
-      - "Shiftleftpt"
+      - "pedrofarinhaatshiftleftpt"
     assignees:
-      - "Shiftleftpt"
+      - "pedrofarinhaatshiftleftpt"
     # Group minor and patch updates together to reduce PR noise
     groups:
       docusaurus:

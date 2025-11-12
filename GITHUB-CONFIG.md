@@ -157,7 +157,7 @@ git push origin master
 
 ### 6. CODEOWNERS
 - [ ] Abrir um PR alterando um ficheiro crítico (ex: `SECURITY.md`)
-- [ ] Verificar que `@Shiftleftpt` é automaticamente solicitado para review
+- [ ] Verificar que `@pedrofarinhaatshiftleftpt` é automaticamente solicitado para review
 
 ---
 

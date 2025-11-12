@@ -116,7 +116,7 @@ Dependências ignoradas para manter estabilidade:
 
 O ficheiro `.github/CODEOWNERS` define proprietários de código:
 
-- **Owner principal**: `@Shiftleftpt`
+- **Owner principal**: `@pedrofarinhaatshiftleftpt`
 - **Ficheiros críticos**: Segurança, workflows, configuração
 - **Expansível**: Preparado para adicionar revisores específicos por área
 

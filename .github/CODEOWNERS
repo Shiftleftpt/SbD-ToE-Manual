@@ -3,36 +3,36 @@
 
 # Default owner for everything in the repo
 # These owners will be requested for review when someone opens a PR
-*       @Shiftleftpt
+*       @pedrofarinhaatshiftleftpt
 
 # GitHub configuration and workflows
-/.github/       @Shiftleftpt
+/.github/       @pedrofarinhaatshiftleftpt
 
 # Security-related files
-/SECURITY.md    @Shiftleftpt
-/.github/dependabot.yml @Shiftleftpt
-/.github/workflows/codeql-analysis.yml @Shiftleftpt
+/SECURITY.md    @pedrofarinhaatshiftleftpt
+/.github/dependabot.yml @pedrofarinhaatshiftleftpt
+/.github/workflows/codeql-analysis.yml @pedrofarinhaatshiftleftpt
 
 # Documentation and contribution guidelines
-/README.md              @Shiftleftpt
-/CONTRIB.md             @Shiftleftpt
-/CODE_OF_CONDUCT.md     @Shiftleftpt
-/SUPPORT.md             @Shiftleftpt
-/guia-editorial.md      @Shiftleftpt
+/README.md              @pedrofarinhaatshiftleftpt
+/CONTRIB.md             @pedrofarinhaatshiftleftpt
+/CODE_OF_CONDUCT.md     @pedrofarinhaatshiftleftpt
+/SUPPORT.md             @pedrofarinhaatshiftleftpt
+/guia-editorial.md      @pedrofarinhaatshiftleftpt
 
 # License files
-/LICENSE*               @Shiftleftpt
+/LICENSE*               @pedrofarinhaatshiftleftpt
 
 # Manual source content (main documentation)
-/manuals_src/           @Shiftleftpt
+/manuals_src/           @pedrofarinhaatshiftleftpt
 
 # Build and deployment configuration
-/manuals_src/package.json       @Shiftleftpt
-/manuals_src/package-lock.json  @Shiftleftpt
-/manuals_src/docusaurus.config.* @Shiftleftpt
+/manuals_src/package.json       @pedrofarinhaatshiftleftpt
+/manuals_src/package-lock.json  @pedrofarinhaatshiftleftpt
+/manuals_src/docusaurus.config.* @pedrofarinhaatshiftleftpt
 
 # Source code utilities
-/src/                   @Shiftleftpt
+/src/                   @pedrofarinhaatshiftleftpt
 
 # Additional reviewers can be added as the team grows, for example:
 # /manuals_src/docs/cap14-governacao/ @security-reviewer @content-reviewer

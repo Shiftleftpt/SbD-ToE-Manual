@@ -2,8 +2,8 @@
 id: aplicacao-lifecycle
 title: Como Fazer
 description: Integração prática das prescrições de gestão de dependências, geração de SBOM e execução de SCA ao longo do ciclo de vida da aplicação
-tags: [dependencias, sbom, sca, supply-chain, cicd, excecoes, governance, updates]
-sidebar_position: 15
+tags: [tipo:aplicacao, ciclo-vida, dependencias, sbom, sca, supply-chain, governance]
+genia: us-format-normalization
 ---
 
 # 🔄 Aplicação no Ciclo de Vida - Dependências, SBOM e SCA
@@ -11,7 +11,7 @@ sidebar_position: 15
 ## 🧭 Quando aplicar
 
 As práticas acompanham a aplicação desde o arranque até ao *post‑release*.  
-Cada evento é um **gatilho** que deve produzir evidências objetivas.
+Cada evento é um **trigger** que deve produzir evidências objetivas.
 
 | Fase SDLC / Evento | Ação esperada | Artefacto/Evidência |
 |--------------------|---------------|---------------------|
@@ -121,6 +121,7 @@ Como **DevOps**, quero **gerar SBOM em cada build**, para **rastreabilidade comp
 
 **Ligações úteis.**  
 - CycloneDX/SPDX (normas de SBOM)
+- US-10 (Inventário e SBOM por Build — especialização com assinatura e proveniência)
 
 ---
 
@@ -187,6 +188,9 @@ Como **AppSec**, quero **formalizar exceções a CVEs**, para **manter governaç
 - `excecoes.yaml` (versionado)
 - Aprovação registada no backlog
 
+> **Referência:** Este US implementa [Cap 14-US-01: Processo formal de exceções]
+> no contexto de vulnerabilidades em dependências (CVEs). O processo de aprovação, TTL e revalidação devem seguir a política master de exceções em Cap 14.
+
 **Proporcionalidade por risco.**
 | Nível | Obrigatório? | Ajustes |
 |---|---|---|
@@ -252,7 +256,7 @@ Sem repositórios internos, dependências podem ser resolvidas de fontes não co
 
 :::userstory
 **História.**   
-Como **DevOps**, quero **forçar repositórios internos aprovados**, para **garantir proveniência e consistência**.
+Como **DevOps**, quero ***enforce* repositórios internos aprovados**, para **garantir proveniência e consistência**.
 
 **Critérios de aceitação (BDD).**
 - Dado que o *package manager* resolve dependências
@@ -378,6 +382,54 @@ Como **DevOps/Developer**, quero **bots de atualização com avaliação de impa
 
 ---
 
+### US-09 - Auditoria Periódica de Bibliotecas Copiadas Manualmente
+
+**Contexto.**  
+Bibliotecas copiadas manualmente escapam ao SBOM e ao SCA. É necessário **automação periódica** para detetar estas dependências ocultas e ***enforce* substituição** via package manager ou bloqueio em CI/CD.
+
+:::userstory
+**História.**   
+Como **AppSec Engineer**, quero **executar auditoria periódica automatizada** para detetar bibliotecas copiadas manualmente (JS, PHP, DLL, JAR, etc.), para **bloquear a sua utilização em CI/CD e garantir SBOM e SCA completos**.
+
+**Critérios de aceitação (BDD).**
+- Dado que é executada auditoria periódica (semanal/mensal conforme Lx)
+- Quando encontradas bibliotecas copiadas não via package manager
+- Então é criada issue no backlog com prazo de substituição via repositório/package manager
+
+**Checklist.**
+- [ ] Scanner automático configurado (ex: busca de padrões de libs copiadas, extensões JS/PHP/DLL/JAR)
+- [ ] Frequência de auditoria definida por Lx (L1: mensal, L2: quinzenal, L3: semanal)
+- [ ] Resultados versionados no repositório (`.audit-libs.json`)
+- [ ] Bloqueio em CI/CD para L2–L3 quando detectadas libs copiadas
+- [ ] Zero libs detectadas como meta
+
+:::
+
+**Artefactos & evidências.**
+- `.audit-libs.json` / `.audit-libs.yaml` (versionado)
+- Logs de auditoria e scanner
+- Issues de correção no backlog
+
+**Proporcionalidade por risco.**
+| Nível | Obrigatório? | Ajustes |
+|---|---|---|
+| L1 | Sim | Política documentada; auditoria manual mensal |
+| L2 | Sim | Scanner automático quinzenal; alerta em pipeline |
+| L3 | Sim | Scanner automático semanal; bloqueio em CI/CD |
+
+**Integração no SDLC.**
+| Fase | Trigger | Responsável |
+|---|---|---|
+| Ciclo regular | Auditoria periódica (cronograma) | AppSec Engineer + DevOps
+| Build | Detecção em CI/CD (L2–L3) | DevOps (bloqueio)
+| Backlog | Libs detectadas | Developer (remediação)
+
+**Ligações úteis.**  
+- US-07 (Proibição de libs copiadas)
+- Guia "Padrões de deteção de libs copiadas por stack"
+
+---
+
 ### US-10 – Inventário e SBOM por Build
 
 **Contexto.**  
@@ -475,6 +527,58 @@ Como **Gestor de Aplicação** e **AppSec**, quero **receber alertas correlacion
 
 ---
 
+### US-12 - Validação Automática de Compatibilidade de Licenças
+
+**Contexto.**  
+Dependências com licenças incompatíveis (GPL, AGPL, etc.) podem introduzir obrigações legais inesperadas. É necessário **validar automaticamente a compatibilidade** contra lista branca organizacional.
+
+:::userstory
+**História.**   
+Como **Developer**, quero **validar automaticamente a compatibilidade de licenças** de novas dependências, para **garantir conformidade legal e evitar conflitos**.
+
+**Critérios de aceitação (BDD).**
+- Dado que é adicionada nova dependência
+- Quando o build executa
+- Então validador de licenças avalia compatibilidade contra lista branca organizacional
+
+- Dado que uma licença é incompatível
+- Quando o build tenta resolver a dependência
+- Então o pipeline bloqueia com mensagem clara (L2–L3) ou avisa (L1)
+
+**Checklist.**
+- [ ] Lista branca de licenças aprovadas definida (ex: MIT, Apache 2.0, BSD)
+- [ ] Validador automático de licenças integrado no CI/CD
+- [ ] Bloqueio para licenças proibidas/incompatíveis (L2–L3)
+- [ ] Alerta para licenças não reconhecidas (para revisão manual)
+- [ ] Documentação do critério de aprovação por licença
+
+:::
+
+**Artefactos & evidências.**
+- `licenses-whitelist.yaml` / `.licenseignore` (versionado)
+- Logs de CI/CD com validação de licenças
+- Issues de remediação (trocar dependência ou requerer exceção formal)
+
+**Proporcionalidade por risco.**
+| Nível | Obrigatório? | Ajustes |
+|---|---|---|
+| L1 | Opcional | Validação manual, ad hoc |
+| L2 | Sim | Automática com alerta; bloqueio para GPL/AGPL |
+| L3 | Sim | Automática com bloqueio; exceções requerem aprovação formal |
+
+**Integração no SDLC.**
+| Fase | Trigger | Responsável |
+|---|---|---|
+| Design/Dev | Inclusão de dependência | Developer
+| Build | Resolução de dependências | CI/CD (bloqueio/alerta)
+| Exceção | Licença incompatível com business case | AppSec + Legal (se necessário)
+
+**Ligações úteis.**  
+- US-01 (Gestão de dependências seguras)
+- SPDX License List (referência)
+
+---
+
 ## 🧩 Nota complementar — Inventário contínuo de componentes e alertas em produção
 
 A gestão de dependências não termina no build.  
@@ -518,6 +622,8 @@ Ums dos aspetos fundamentais no  **Cap. 12 — Monitorização & Operação Segu
 | `excecoes.yaml` | Exceções formais aprovadas |
 | `releases.md` | Decisões *go/no-go* e histórico de *patching* |
 | `repo-config.yaml` | Repositórios internos configurados |
+| `.audit-libs.json` / `.audit-libs.yaml` | Resultados de auditoria periódica de libs copiadas |
+| `licenses-whitelist.yaml` | Lista branca de licenças aprovadas |
 | **PRs de bots** | *Labels* de impacto, logs e testes |
 | **Relatórios de drift** | Diferenças entre SBOM e runtime |
 | **Tickets ITSM / Incidentes** | Evidência de tratamento de CVE e SLA cumprido |
@@ -536,6 +642,8 @@ Ums dos aspetos fundamentais no  **Cap. 12 — Monitorização & Operação Segu
 | Exceções / VEX | Simples | Formais + revisão periódica | Formais + revalidação automática |
 | Repositório interno | Recomendado | Obrigatório | Obrigatório + assinatura e *provenance attestation* |
 | Bibliotecas copiadas | Proibidas (política) | Auditoria periódica | Enforcement CI/CD + bloqueio |
+| Auditoria de libs copiadas | Política documentada; mensal | Scanner automático; quinzenal | Scanner automático; semanal + bloqueio CI/CD |
+| Validação de licenças | Manual, ad hoc | Automática com alerta | Automática com bloqueio (exceto exceções formais) |
 | Bots / automação de patching | Opcional | Ativos + *auto-merge patch* | Ativos + *impact analysis*, *canary* e rollback |
 | Integração com Cap. 12 | Opcional | Alertas SIEM básicos | Total: SOAR, métricas MTTR/MTTA e escalonamento |
 
@@ -548,8 +656,10 @@ Ums dos aspetos fundamentais no  **Cap. 12 — Monitorização & Operação Segu
 - **SCA automatizado** com *gates* proporcionais ao risco e integração com alertas CVE em runtime.  
 - **Repositórios internos** e *attestations* são a base da confiança na supply chain.  
 - **Exceções formais e temporárias** (VEX) devem ser reavaliadas automaticamente quando muda o risco ou surge *exploit ativo*.  
-- **Eliminar bibliotecas copiadas manualmente** e reforçar *pinning* de versões e proveniência.  
-- **Bots com avaliação de impacto**:  
+- **Eliminar bibliotecas copiadas manualmente** (US-07) com **auditoria periódica automatizada** (US-09) e bloqueio em CI/CD para L2–L3.  
+- **Validar compatibilidade de licenças** (US-12) contra lista branca, bloqueando ou alertando conforme criticidade.  
+- **Bots com avaliação de impacto** (US-08):  
   - PRs de *patches triviais* → *auto-merge*;  
   - PRs com impacto → revisão humana, *canary* e promoção por estágios (sobretudo em L3).  
 - **Integração com Cap. 12** deve garantir visibilidade total, alertas em tempo real e métricas operacionais de resposta (MTTA/MTTR) por severidade e ambiente.
+

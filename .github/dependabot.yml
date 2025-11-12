@@ -1,0 +1,71 @@
+# Dependabot configuration for Security by Design - ToE Manual
+# Automated dependency updates and security vulnerability scanning
+
+version: 2
+updates:
+  # GitHub Actions dependencies
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+      day: "monday"
+      time: "09:00"
+    open-pull-requests-limit: 5
+    labels:
+      - "tipo:chore"
+      - "dependências"
+      - "ci"
+    commit-message:
+      prefix: "chore(deps)"
+      prefix-development: "chore(deps-dev)"
+      include: "scope"
+    reviewers:
+      - "Shiftleftpt"
+    assignees:
+      - "Shiftleftpt"
+
+  # npm dependencies (Docusaurus project)
+  - package-ecosystem: "npm"
+    directory: "/manuals_src"
+    schedule:
+      interval: "weekly"
+      day: "monday"
+      time: "09:00"
+    open-pull-requests-limit: 10
+    labels:
+      - "tipo:chore"
+      - "dependências"
+      - "docusaurus"
+    commit-message:
+      prefix: "chore(deps)"
+      prefix-development: "chore(deps-dev)"
+      include: "scope"
+    reviewers:
+      - "Shiftleftpt"
+    assignees:
+      - "Shiftleftpt"
+    # Group minor and patch updates together to reduce PR noise
+    groups:
+      docusaurus:
+        patterns:
+          - "@docusaurus/*"
+        update-types:
+          - "minor"
+          - "patch"
+      react:
+        patterns:
+          - "react"
+          - "react-dom"
+        update-types:
+          - "minor"
+          - "patch"
+      development-dependencies:
+        dependency-type: "development"
+        update-types:
+          - "minor"
+          - "patch"
+    # Ignore specific dependencies if needed
+    ignore:
+      # Keep Node.js version aligned with project requirements
+      - dependency-name: "node"
+        update-types: ["version-update:semver-major"]

@@ -1,0 +1,38 @@
+# CODEOWNERS - Define code ownership for Security by Design - ToE Manual
+# See: https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-code-owners
+
+# Default owner for everything in the repo
+# These owners will be requested for review when someone opens a PR
+*       @Shiftleftpt
+
+# GitHub configuration and workflows
+/.github/       @Shiftleftpt
+
+# Security-related files
+/SECURITY.md    @Shiftleftpt
+/.github/dependabot.yml @Shiftleftpt
+/.github/workflows/codeql-analysis.yml @Shiftleftpt
+
+# Documentation and contribution guidelines
+/README.md              @Shiftleftpt
+/CONTRIB.md             @Shiftleftpt
+/CODE_OF_CONDUCT.md     @Shiftleftpt
+/SUPPORT.md             @Shiftleftpt
+/guia-editorial.md      @Shiftleftpt
+
+# License files
+/LICENSE*               @Shiftleftpt
+
+# Manual source content (main documentation)
+/manuals_src/           @Shiftleftpt
+
+# Build and deployment configuration
+/manuals_src/package.json       @Shiftleftpt
+/manuals_src/package-lock.json  @Shiftleftpt
+/manuals_src/docusaurus.config.* @Shiftleftpt
+
+# Source code utilities
+/src/                   @Shiftleftpt
+
+# Additional reviewers can be added as the team grows, for example:
+# /manuals_src/docs/cap14-governacao/ @security-reviewer @content-reviewer

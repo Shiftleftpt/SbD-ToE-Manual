@@ -2,6 +2,8 @@
 
 Este documento descreve as medidas de segurança implementadas no repositório **Security by Design - Theory of Everything (SbD-ToE)** para garantir a segurança e integridade do projeto público.
 
+> 📘 **Para configurar as definições do GitHub**, consulte o guia passo-a-passo: [GITHUB-CONFIG.md](GITHUB-CONFIG.md)
+
 ## 📋 Índice
 
 1. [Scanning Automatizado de Vulnerabilidades](#scanning-automatizado)

@@ -1,0 +1,38 @@
+# CODEOWNERS - Define code ownership for Security by Design - ToE Manual
+# See: https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-code-owners
+
+# Default owner for everything in the repo
+# These owners will be requested for review when someone opens a PR
+*       @pedrofarinhaatshiftleftpt
+
+# GitHub configuration and workflows
+/.github/       @pedrofarinhaatshiftleftpt
+
+# Security-related files
+/SECURITY.md    @pedrofarinhaatshiftleftpt
+/.github/dependabot.yml @pedrofarinhaatshiftleftpt
+/.github/workflows/codeql-analysis.yml @pedrofarinhaatshiftleftpt
+
+# Documentation and contribution guidelines
+/README.md              @pedrofarinhaatshiftleftpt
+/CONTRIB.md             @pedrofarinhaatshiftleftpt
+/CODE_OF_CONDUCT.md     @pedrofarinhaatshiftleftpt
+/SUPPORT.md             @pedrofarinhaatshiftleftpt
+/guia-editorial.md      @pedrofarinhaatshiftleftpt
+
+# License files
+/LICENSE*               @pedrofarinhaatshiftleftpt
+
+# Manual source content (main documentation)
+/manuals_src/           @pedrofarinhaatshiftleftpt
+
+# Build and deployment configuration
+/manuals_src/package.json       @pedrofarinhaatshiftleftpt
+/manuals_src/package-lock.json  @pedrofarinhaatshiftleftpt
+/manuals_src/docusaurus.config.* @pedrofarinhaatshiftleftpt
+
+# Source code utilities
+/src/                   @pedrofarinhaatshiftleftpt
+
+# Additional reviewers can be added as the team grows, for example:
+# /manuals_src/docs/cap14-governacao/ @security-reviewer @content-reviewer

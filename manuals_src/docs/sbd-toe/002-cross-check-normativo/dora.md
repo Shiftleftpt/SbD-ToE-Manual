@@ -70,30 +70,31 @@ Exige programa contínuo de testes, culminando em Threat-Led Penetration Testing
 
 Exige inventário formal, avaliação de risco, cláusulas obrigatórias, supervisão contínua, plano de saída testado.
 
-**Cobertura SbD-ToE (Duas dimensões separadas de supply chain):**
+**Cobertura SbD-ToE (Duas categorias de fornecedores, uma estratégia):**
 
-**Dimensão 1: Dependências de Software (Cap. 05 - SBOM)**
-- Identifica componentes usados (bibliotecas, frameworks, dependências open source)
-- Estes são **fornecedores implícitos** (muitas vezes desconhecem que "fornecem")
-- SBOM = rastreabilidade técnica de risco de supply chain
-- **Relevante para DORA:** Vulnerabilidades em dependências (Art. 26–28 risk assessment)
+**Categoria 1: Fornecedores de Componentes de Software (Cap. 05 - SBOM)**
+- **O problema DORA:** Usas componentes (libs, frameworks) de terceiros sem saber quem são
+- **A solução:** SBOM (Software Bill of Materials) identifica-os
+- **Estes são fornecedores implícitos** (muitas vezes desconhecem que "fornecem")
+- **Gestão:** SCA contínuo (análise de vulnerabilidades), atualizações de segurança, licenças
+- **SBOM é pré-requisito para DORA:** Sem ele, não sabes quem são os teus fornecedores de software
 
-**Dimensão 2: Fornecedores Contratuais (Cap. 14 - Governance)**
+**Categoria 2: Fornecedores Contratuais (Cap. 14 - Governance)**
 - Pessoas e empresas contratadas formalmente (contractors, outsourcing, prestadores)
-- Estes são **fornecedores explícitos** com contratos e responsabilidades
+- **Estes são fornecedores explícitos** com contratos e responsabilidades documentadas
 - Ciclo de vida formal: preparação → onboarding → monitorização → offboarding
-- **Relevante para DORA:** Controlo, supervisão, cláusulas de segurança (Art. 26–28)
-- **User Stories US-15 a US-20:** Ciclo de vida de contractors/fornecedores
+- User Stories US-15 a US-20: Ciclo de vida de contractors/fornecedores
 
 **Addon files (Cap. 14):**
 - `02-template-validacao-contractors.md` (validação pré-acesso)
 - `12-guia-preparacao-sandbox.md` (preparação técnica)
 - `13-checklist-offboarding.md` (offboarding seguro)
 
-**Lacuna intencional:** O SbD-ToE não fusiona estas duas dimensões (SBOM é técnico, fornecedores contratuais são organizacionais). Para cumprir DORA: 
-- Mantenha SBOM (Cap. 05) para rastreabilidade de dependências
-- Mantenha inventário formal de fornecedores contratuais (Cap. 14) separado
-- Ambas dimensões precisam de supervisão, mas com processos diferentes
+**Conformidade DORA (Art. 26–28):**
+- **Ambas categorias exigem inventário e supervisão** → não é opcional escolher uma
+- SBOM alimenta inventário de risco técnico de componentes
+- Fornecedores contratuais alimentam inventário de risco organizacional
+- **Lacuna intencional:** O SbD-ToE não inclui templates ITS nem fórmulas DORA de análise de concentração. Para cumprir: mantenha SBOM atualizado (Cap. 05) + inventário formal de contractors (Cap. 14) + templates de contratos com cláusulas de segurança
 
 ---
 

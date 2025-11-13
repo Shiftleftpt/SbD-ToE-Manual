@@ -91,12 +91,12 @@ FASE 5: Conformidade (Contínuo)
    - Retenção: Conforme política (DORA: 3 anos mínimo)
    - Proteção contra alteração (immutability)
 
-3. **Análise de Dependências & SBOM - Cap. 05**
+3. **Análise de Dependências & SBOM - Cap. 05 (CRÍTICO PARA DORA)**
    - SCA: Análise de composição de software (Software Composition Analysis)
    - SBOM: Geração de Bill of Materials (dependências, versões, licenças)
    - SAST: Análise estática do código
    - Integração: Nos gates de CI/CD
-   - **Objetivo:** Rastreabilidade técnica de componentes (fornecedores implícitos)
+   - **Crítico para DORA Art. 26–28:** SBOM é pré-requisito para identificar fornecedores implícitos de componentes
 
 4. **Gestão de Acessos - Cap. 14**
    - Controle de acesso baseado em responsabilidades
@@ -386,26 +386,28 @@ FASE 5: Conformidade (Contínuo)
 
 ## Dimensão Crítica: Supply Chain em DORA (Cap. 05 + Cap. 14)
 
-DORA Art. 26–28 exige supervisão de fornecedores. O SbD-ToE cobre isto com **duas dimensões separadas**:
+DORA Art. 26–28 exige supervisão de fornecedores. O SbD-ToE cobre isto com **duas categorias de fornecedores** que **ambas exigem gestão**:
 
-### Dimensão 1: Dependências de Software (Cap. 05 - SBOM)
-- **O quê:** Componentes usados (bibliotecas, frameworks, open source)
-- **Fornecedores:** Implícitos (muitas vezes desconhecem que "fornecem")
+### Categoria 1: Fornecedores de Componentes de Software (Cap. 05 - SBOM)
+- **O problema:** Usas componentes (libs, frameworks) de terceiros sem saber quem são
+- **Fornecedores:** Implícitos (desconhecem que "fornecem")
 - **Rastreabilidade:** SBOM (Software Bill of Materials)
-- **Risco técnico:** Vulnerabilidades em dependências, licenças
-- **Supervisão:** Análise contínua (SCA), updates de segurança
+- **Risco técnico:** Vulnerabilidades em dependências, licenças, EOL (End of Life)
+- **Supervisão:** SCA contínuo, updates de segurança, revisão de SBOM
+- **SBOM é pré-requisito para DORA:** Sem ele, não consegues identificar fornecedores de software
 
-### Dimensão 2: Fornecedores Contratuais (Cap. 14 - Governance)
-- **O quê:** Pessoas e empresas contratadas formalmente
+### Categoria 2: Fornecedores Contratuais (Cap. 14 - Governance)
+- **O que são:** Pessoas e empresas contratadas formalmente
 - **Fornecedores:** Explícitos (contratos, acordos formais)
 - **Rastreabilidade:** Inventário formal, RACI, ciclo de vida
-- **Risco organizacional:** Acesso a sistemas, compliance, continuidade
-- **Supervisão:** Onboarding/offboarding, formação, revisão periódica
+- **Risco organizacional:** Acesso a sistemas, compliance, continuidade, formação
+- **Supervisão:** Onboarding/offboarding formal, formação, revisão periódica
 
-**Integração em DORA:**
-- Ambas dimensões precisam de **inventário e supervisão** (Art. 26–28)
-- Mas com processos **diferentes**: técnico vs. organizacional
-- **Não fusionar:** SBOM é automático/técnico; fornecedores contratuais são formais/organizacionais
+**Conformidade DORA Art. 26–28:**
+- **Ambas categorias exigem inventário e supervisão** (não é opcional escolher uma)
+- SBOM alimenta avaliação de risco técnico de componentes
+- Fornecedores contratuais alimentam avaliação de risco organizacional
+- **Processos diferentes mas igualmente obrigatórios**
 
 ### User Stories US-15 a US-20
 

@@ -8,9 +8,9 @@ sidebar_position: 1
 
 # DORA: Cross-Check Normativo
 
-> **Para o playbook de implementação:** Ver `sbd-toe-4-dora-playbook.md`
+> Para implementação prática, consulte o [Playbook SbD-ToE 4 DORA](/sbd-toe/002-cross-check-normativo/sbd-toe-4-dora-playbook).
 > 
-> **Para exemplos práticos:** Ver pasta `exemplo-playbook/`
+> Para exemplos práticos internos, ver pasta `exemplo-playbook/`.
 
 ## Enquadramento Geral
 

@@ -1,260 +1,215 @@
 ---
 id: sbd-toe-4-dora-playbook
 title: "SbD-ToE 4 DORA: Playbook de Implementação"
-description: Roadmap prático e faseado para implementar SbD-ToE conforme requisitos DORA (12-18 meses)
-tags: [playbook, dora, implementacao, roadmap, fases, 12-18-meses]
+description: Roadmap prático para implementar SbD-ToE conforme requisitos DORA — mapeamento direto de artigos para ações
+tags: [playbook, dora, implementacao, roadmap]
 sidebar_position: 2
 ---
 
 # SbD-ToE 4 DORA: Playbook de Implementação
 
-## Enquadramento Executivo
+## Visão Geral
 
-O DORA entra em vigor em **janeiro de 2025**. Organizações financeiras precisam não apenas de "ter segurança", mas de demonstrar **capacidade operacional com evidências e processos mensuráveis**.
+Este playbook mapeia **requisitos DORA (Regulamento UE 2022/2554) para ações SbD-ToE práticas**.
 
-O **SbD-ToE + este Playbook** oferecem um caminho prático para construir conformidade **"por construção"**, em vez de "auditar ao fim".
+**Princípio:** Implementar SbD-ToE = Cumprir DORA. Não é complementar, é direto.
 
-Este playbook é um **guia indicativo de 12–18 meses**. Cada organização deve:
-- ✓ Adaptar fases ao seu contexto (recursos, maturidade atual, constraints)
-- ✓ Validar timeline com direção executiva
-- ✓ Usar exemplos práticos em `exemplos-playbook-dora/` para implementação específica
-
----
-
-## Roadmap de Implementação (12–18 meses)
-
-```
-FASE 0: Preparação (M0–M2)
-  └─ Alinhar estrutura, ativar toolchain, formar equipas
-
-FASE 1: Foundation (M2–M4)
-  └─ Classificação de apps, políticas, análise de vulnerabilidades
-
-FASE 2: Automatização (M4–M8)
-  └─ CI/CD seguro, threat modeling, testes contínuos
-
-FASE 3: Operação (M8–M12)
-  └─ Monitorização, deteção de incidentes, supply chain
-
-FASE 4: Maturação (M12–M18)
-  └─ Testes de resiliência, métricas avançadas, auditoria
-
-FASE 5: Conformidade (Contínuo)
-  └─ Inspeção regulatória, melhoria contínua
-```
+**Estrutura:** Cada seção mostra:
+- DORA requisito (artigo)
+- SbD-ToE capítulo/addon aplicável
+- O que fazer (ação concreta)
+- Evidência regulatória
 
 ---
 
-## FASE 0: Preparação (M0–M2)
+## Mapa Rápido: DORA Art. → SbD-ToE
 
-### 0.1 Alinhar Governação
+| DORA Artigo | Requisito | Capítulo SbD-ToE | Ação Principal |
+|----------|-----------|-----------------|----------------|
+| **5** | Gestão de Risco TIC | Cap. 01, 14 | Classificar apps; aprovar políticas; supervisão |
+| **16** | Partilha de Ameaças | Cap. 12 | Integrar threat intelligence; acordos de partilha |
+| **18** | Reporte de Incidentes | Cap. 12, 14 | Deteção, reporte formal, documentação |
+| **19–20** | Testes de Resiliência | Cap. 10, 11 | Testes contínuos (SAST/DAST), TLPT readiness |
+| **26–28** | Gestão de Fornecedores | Cap. 05, 14 | SBOM; ciclo de vida contractors |
 
-**Objetivo:** Estruturar comissão de decisão para SbD + DORA
+---
 
-**Atividades:**
+## Como Implementar (Ordem Lógica)
+
+### Fase 1: Governação (M0–M2)
+**DORA Art. 5** — Estabelecer supervisão da board
 
 1. **Criar Comissão de Segurança Digital**
-   - Membros: CISO, CTO, Head of Product, GRC Manager, General Counsel
-   - Frequência: Quinzenal (primeiros 3 meses), depois mensal
-   - Função: Aprovar políticas, arbitrar trade-offs, auditar conformidade
+   - Membros: CISO, CTO, GRC Manager, General Counsel
+   - Frequência: Mensal
+   - **Evidência:** Ata de reuniões assinadas
 
-2. **Definir Política de Segurança Aplicacional**
-   - Referência: Cap. 02 SbD-ToE
-   - Dimensões: Requisitos L1–L3, ciclo de vida, responsabilidades
-   - Aprovação: **Board signature** (evidência DORA Art. 5 "tone at the top")
+2. **Aprovar Política de Segurança Aplicacional**
+   - Referência: [Cap. 02 - Requisitos de Segurança](/sbd-toe/sbd-manual/requisitos-seguranca/intro)
+   - **Aprovação:** Board signature (DORA Art. 5)
+   - **Conteúdo:** Requisitos L1–L3, ciclo de vida, responsabilidades
 
-3. **Mapear RACI**
-   - Responsabilidades claras por função
-   - Aprovações formais documentadas
-   - Escalations definidas
-
-**Exemplos práticos:** Ver `exemplo-playbook/03-exemplo-raci-governance.md`
-
-**Recursos:** 1 CISO, 1 GRC Manager  
-**Evidência DORA:** Política assinada, RACI document, board meeting minutes
+3. **Definir RACI**
+   - Quem aprova o quê (aprovações formais)
+   - Escalations (quando elevar)
+   - Referência: [Cap. 07 - Roles](/sbd-toe/000-teory-of-everything/07-roles)
 
 ---
 
-### 0.2 Ativar Toolchain Essencial
+### Fase 2: Classificação e Inventário (M2–M4)
+**DORA Art. 5** — Conhecer o que é crítico
 
-**Objetivo:** Infraestrutura técnica de segurança conforme Cap. 08, 12
+1. **Inventariar Aplicações**
+   - Nome, proprietário, dados processados
+   - Dependências (quem depende)
+   - Referência: [Cap. 01 - Classificação de Aplicações](/sbd-toe/sbd-manual/classificacao-aplicacoes/intro)
 
-**Atividades (princípios, não ferramentas específicas):**
-
-1. **Infraestrutura como Código (IaC) - Cap. 08**
-   - Versionar toda configuração de infraestrutura
-   - Auditoria de mudanças via controle de versão
-   - Trilho de quem fez o quê, quando
-
-2. **Logs e Recolha Centralizada - Cap. 12**
-   - Centralizar logs de aplicações, APIs, eventos críticos
-   - Retenção: Conforme política (DORA: 3 anos mínimo)
-   - Proteção contra alteração (immutability)
-
-3. **Análise de Dependências & SBOM - Cap. 05 (CRÍTICO PARA DORA)**
-   - SCA: Análise de composição de software (Software Composition Analysis)
-   - SBOM: Geração de Bill of Materials (dependências, versões, licenças)
-   - SAST: Análise estática do código
-   - Integração: Nos gates de CI/CD
-   - **Crítico para DORA Art. 26–28:** SBOM é pré-requisito para identificar fornecedores implícitos de componentes
-
-4. **Gestão de Acessos - Cap. 14**
-   - Controle de acesso baseado em responsabilidades
-   - Registro auditado de quem acedeu o quê, quando
-   - Revisão periódica de acessos
-
-**Exemplos práticos:** Ver `exemplo-playbook/01-exemplo-toolchain-options.md`
-
-**Recursos:** Security team, Infrastructure/DevOps lead  
-**Evidência DORA:** Logs centralizados, política de retenção ativa
-
----
-
-### 0.3 Formação Inicial
-
-**Objetivo:** Alinhar equipa em SbD + DORA
-
-**Atividades:**
-
-- Security team: 3 dias intensivos SbD-ToE + DORA
-- Development leads: 1 dia SbD princípios + classificação
-- All-hands: 2h briefing (compliance, responsabilidades)
-
-**Recursos:** 10 dias-pessoa
-
----
-
-## FASE 1: Foundation (M2–M4)
-
-### 1.1 Classificação de Aplicações
-
-**Objetivo:** Classificar todas as apps por criticidade L1–L3 (Cap. 01)
-
-**Atividades:**
-
-1. **Inventário completo de aplicações**
-   - Nome, proprietário, tipo (web, API, batch, etc.)
-   - Dados processados (sensíveis? de clientes? transacionais?)
-   - Dependências (quem depende desta app?)
-
-2. **Classificação L1–L3**
-   - L3 (Crítica): Impacto direto em funções críticas do negócio
-   - L2 (Importante): Suporta processos importantes
-   - L1 (Padrão): Ferramentas de suporte, reports
-
-3. **Documentação formal**
+2. **Classificar por Risco (L1–L3)**
+   - L3: Impacto direto em funções críticas
+   - L2: Suporta processos importantes
+   - L1: Ferramentas de suporte
    - Matriz assinada por CTO + Product leads
-   - Publicada para toda a organização
 
-**Exemplos práticos:** Ver `exemplo-playbook/02-exemplo-kpis-targets.md`
-
-**Responsável:** CTO + Product Managers  
-**Evidência:** Matriz assinada, trilho de decisões
-
----
-
-### 1.2 Requisitos de Segurança por Nível
-
-**Objetivo:** Mapear requisitos mínimos para cada nível (Cap. 02)
-
-**Atividades:**
-
-| Nível | Requisitos Mínimos | Exemplos |
-|-------|-------------------|----------|
-| **L1** | Basics | Senhas, logs, code review |
-| **L2** | Essenciais | + Threat modeling, SAST, testes |
-| **L3** | Rigorosos | + DAST, TLPT readiness, monitorização 24x7 |
-
-**Documentação:** Template no Cap. 02, detalhe por nível
-
-**Responsável:** Security team + Architecture  
-**Evidência:** Requisitos documentados, aprovados
+3. **Definir Requisitos Mínimos por Nível**
+   - L1: Basics (senhas, logs, code review)
+   - L2: Essenciais (+ threat modeling, SAST)
+   - L3: Rigorosos (+ DAST, 24x7 monitorização)
+   - Referência: [Cap. 02 - Requisitos](/sbd-toe/sbd-manual/requisitos-seguranca/intro)
 
 ---
 
-## FASE 2: Automatização (M4–M8)
+### Fase 3: Segurança Técnica (M4–M8)
+**DORA Art. 19–20** — Implementar controlos de resiliência
 
-### 2.1 CI/CD Seguro
+#### 3.1 CI/CD Seguro
+- **O que:** Gates de segurança no pipeline
+- **Como:** SAST/SCA antes de merge; bloqueio de secrets; validação pré-deploy
+- **Trilho:** Logs auditados de quem fez o quê, quando
+- **Referência:** [Cap. 07 - CI/CD Seguro](/sbd-toe/sbd-manual/cicd-seguro/intro)
 
-**Objetivo:** Integrar segurança no pipeline de entrega (Cap. 07)
+#### 3.2 Análise de Dependências (CRÍTICO PARA DORA)
+- **O que:** SBOM (Software Bill of Materials) + SCA
+- **Por quê:** Art. 26–28 exige saber quem são teus fornecedores de software
+- **Como:** Gerar SBOM; scan contínuo de vulnerabilidades; atualizar dependências
+- **Trilho:** Manter SBOM atualizado, vulnerabilidades documentadas
+- **Referência:** [Cap. 05 - Dependências & SBOM](/sbd-toe/sbd-manual/dependencias-sbom-sca/intro)
 
-**Atividades (princípios, não ferramentas específicas):**
-
-1. **Gates de Segurança no Pipeline**
-   - Análise de código (SAST/SCA) antes de merge
-   - Bloqueio de secrets em repositório
-   - Compilação segura
-   - Validação pré-deploy
-
-2. **Segregação de Responsabilidades**
-   - Code review: Aprovação obrigatória
-   - Deploy: Aprovação formal
-   - Trilho: Logs de quem fez o quê, quando
-
-3. **Retenção de Logs de CI/CD**
-   - Preservar histórico de builds
-   - Período mínimo: Conforme política retenção
-   - Imutabilidade: Protegido contra alteração
-
-**Exemplos práticos:** Ver `exemplos-playbook-dora/01-exemplo-toolchain-options.md` (secção CI/CD)
-
-**Responsável:** DevOps + Security  
-**Evidência:** Pipeline documentado, logs auditados
+#### 3.3 Threat Modeling (L3 apps)
+- **O que:** Identificar ameaças realistas
+- **Como:** Mapear arquitetura; usar STRIDE/MITRE ATT&CK
+- **Referência:** [Cap. 03 - Threat Modeling](/sbd-toe/sbd-manual/threat-modeling/intro)
 
 ---
 
-### 2.2 Threat Modeling
+### Fase 4: Operações (M8–M12)
+**DORA Art. 18** — Detetar e responder a incidentes
 
-**Objetivo:** Identificar ameaças realistas para apps L3 (Cap. 03)
+#### 4.1 Monitorização Centralizada
+- **O que:** Logs centralizados de apps, infra, acessos
+- **Retenção:** 3+ anos (DORA)
+- **Proteção:** Imutabilidade (impedir alteração)
+- **Referência:** [Cap. 12 - Monitorização e Operações](/sbd-toe/sbd-manual/monitorizacao-operacoes/intro)
 
-**Atividades:**
+#### 4.2 Deteção e Resposta a Incidentes
+- **O que:** Identificar eventos anómalos; classificar; responder
+- **Escalação:** Conforme plano (criticidade)
+- **Documentação:** O quê, quando, ações, aprendizagens
+- **Referência:** [Cap. 12 - Monitorização e Operações](/sbd-toe/sbd-manual/monitorizacao-operacoes/intro)
 
-1. **Seleção de apps L3**
-   - Priorizar: críticas, com dados sensíveis, expostas
-
-2. **Threat modeling por app**
-   - Arquitetura mapeada
-   - Ameaças identificadas (STRIDE, etc.)
-   - Mitigações propostas
-
-3. **Integração com development**
-   - Threat model guia requirements
-   - Atualizado conforme mudanças
-
-**Responsável:** Architecture + Security  
-**Evidência:** Threat models documentados, aprovados
+#### 4.3 Partilha de Ameaças
+- **O que:** Recolher e disseminar informação sobre ameaças/incidentes
+- **Como:** Integração com STIX/TAXII; acordos de partilha
+- **Referência:** [Cap. 12 - Monitorização e Operações](/sbd-toe/sbd-manual/monitorizacao-operacoes/intro)
 
 ---
 
-## FASE 3: Operação (M8–M12)
+### Fase 5: Supply Chain (M8–M12)
+**DORA Art. 26–28** — Gestão de fornecedores
 
-### 3.1 Monitorização e Resposta a Incidentes
+#### 5.1 Fornecedores de Componentes (SBOM)
+**Já em Fase 3.2** — Cap. 05 cobre isto com SCA + SBOM
 
-**Objetivo:** Detetar, registar, responder a incidentes (Cap. 12, DORA Art. 18)
+#### 5.2 Fornecedores Contratuais
+- **O que:** Pessoas/empresas contratadas (contractors, outsourcing)
+- **Ciclo de Vida:**
+  - **Onboarding:** Validação, formação SbD, sandbox
+  - **Operação:** Acesso controlado, revisão periódica
+  - **Offboarding:** Revogação de acessos, auditar conclusão
+- **Referência:** [Cap. 14 - Governança e Contratação](/sbd-toe/sbd-manual/governanca-contratacao/intro)
 
-**Atividades:**
+---
 
-1. **Recolha Centralizada de Eventos**
-   - Logs de apps, infraestrutura, acessos
-   - Correlação de eventos
-   - Retenção conforme política
+### Fase 6: Validação e Testes (M12–M18)
+**DORA Art. 19–20** — Validar postura defensiva
 
-2. **Deteção de Incidentes**
-   - Identificação de eventos anómalos
-   - Classificação: Severidade + Tipo
-   - Registo automatizado
+#### 6.1 Testes Contínuos
+- **SAST:** Análise estática de código (integrado em CI/CD)
+- **DAST:** Análise dinâmica de aplicações em staging
+- **Penetração:** Testes manuais baseados em threat model
+- **Referência:** [Cap. 10 - Testes de Segurança](/sbd-toe/sbd-manual/testes-seguranca/intro)
 
-3. **Resposta a Incidentes**
-   - Escalação conforme plano
-   - Documentação: O quê, quando, ações
-   - Comunicação a stakeholders
+#### 6.2 Validação Pré-Deploy
+- **O que:** Checklist de segurança antes de produção
+- **Confirmação:** Todos requisitos L1–L3 cobertos
+- **Aprovação:** Formal (AppSec + Gestão para L3)
+- **Referência:** [Cap. 11 - Deploy Seguro](/sbd-toe/sbd-manual/deploy-seguro/intro)
 
-4. **Aprendizagem Contínua**
-   - Post-incident review
-   - Atualização de medidas
-   - Melhoria de processos
+#### 6.3 TLPT (Threat-Led Penetration Testing)
+- **O que:** Testes de resiliência realistas para apps L3
+- **Base:** Cenários de threat model
+- **Remediação:** Documentada com SLAs
+- **Referência:** [Cap. 10 - Testes de Segurança](/sbd-toe/sbd-manual/testes-seguranca/intro)
 
-**Exemplos práticos:** Ver `exemplo-playbook/04-exemplo-relatorio-incidentes.md`
+---
+
+## Checklist de Conformidade
+
+- [ ] **Governação:** Política assinada por board; RACI mapeado
+- [ ] **Classificação:** Todas apps classificadas L1–L3
+- [ ] **CI/CD:** Gates de segurança operacionais
+- [ ] **SBOM:** Gerado e atualizado; SCA contínuo
+- [ ] **Threat Model:** L3 apps com threat modeling completo
+- [ ] **Monitorização:** Logs centralizados, retenção 3+ anos
+- [ ] **Incidentes:** Processo de deteção e resposta ativo
+- [ ] **Fornecedores:** Inventário de contractors; ciclo de vida operacional
+- [ ] **Testes:** SAST/DAST integrados; TLPT piloto executado
+- [ ] **Evidência:** Data room com documentação (políticas, testes, logs)
+
+---
+
+## O Que Cada Capítulo SbD-ToE Cobre (Referência Rápida)
+
+| Capítulo | DORA Artigos | O Que Faz |
+|----------|-------------|----------|
+| **Cap. 01** | Art. 5 | Classificação de apps por risco (L1–L3) |
+| **Cap. 02** | Art. 5, 19 | Requisitos de segurança mínimos por nível |
+| **Cap. 03** | Art. 19–20 | Threat modeling para identificar ameaças realistas |
+| **Cap. 05** | Art. 26–28 | SBOM, SCA, gestão de dependências de software |
+| **Cap. 07** | Art. 19–20 | CI/CD seguro, gates, trilho auditado |
+| **Cap. 10** | Art. 19–20 | Testes contínuos (SAST/DAST/penetração) |
+| **Cap. 11** | Art. 19–20 | Validação pré-deploy, conformidade requisitos |
+| **Cap. 12** | Art. 16, 18 | Monitorização, deteção de incidentes, threat intel |
+| **Cap. 13** | Art. 5 | Formação de staff em SbD (exigência de supervisão) |
+| **Cap. 14** | Art. 5, 26–28 | Governança, RACI, ciclo de vida fornecedores |
+
+---
+
+## Métrica Simples: Estou Compliant?
+
+Se consegues responder SIM a isto, estás alinhado com DORA:
+
+1. **Governance:** Tenho política assinada pelo board? ✓
+2. **Risk Management:** Todas as apps estão classificadas? ✓
+3. **Security by Design:** Meus requisitos cobrem L1–L3? ✓
+4. **Software Supply:** Tenho SBOM e SCA ativo? ✓
+5. **Operations:** Tenho monitorização centralizada com 3+ anos retenção? ✓
+6. **Incident Response:** Conseguo detetar e reportar incidentes formalmente? ✓
+7. **Vendor Management:** Tenho ciclo de vida formal de contractors? ✓
+8. **Testing:** Faço SAST/DAST/TLPT? ✓
+9. **Evidence:** Consigo demonstrar tudo isto em auditoria? ✓
+
+**Se 8/9:** Estás pronto para regulador.  
+**Se <5/9:** Prioriza governação + classificação + monitorização.
 
 **Responsável:** Security/SRE  
 **Evidência:** Logs de incidentes, plano de resposta
@@ -263,243 +218,59 @@ FASE 5: Conformidade (Contínuo)
 
 ### 3.2 Ciclo de Vida de Fornecedores Contratuais
 
-**Objetivo:** Gestão segura de fornecedores (pessoas e empresas contratadas formalmente) (Cap. 14, DORA Art. 26–28)
-
-**Nota Important:** Este ciclo de vida aplica-se a **fornecedores contratuais explícitos** (contractors, outsourcing, prestadores). Para dependências de software (SBOM), ver Cap. 05.
-
-**Atividades (User Stories US-15 a US-20):**
-
-1. **US-15: Preparação Técnica Pré-Acesso**
-   - Avaliação prévia (background, referências)
-   - Formação técnica em SbD
-   - Sandbox para exercícios práticos
-
-2. **US-16: Onboarding e Formação**
-   - Trilho de formação por função
-   - Cobertura: SbD, práticas seguras, compliance
-   - Validação: Formação completada
-
-3. **US-17: Offboarding Seguro**
-   - Procedimento estruturado de desligamento
-   - Revogação de acessos (paralela, auditada)
-   - Confirmação de conclusão
-
-4. **US-18 a US-20: Monitorização Contínua**
-   - Fornecedores em inventário (Cap. 05)
-   - Revisão periódica de acessos
-   - Feedback de desempenho
-
-**Documentação:** Cap. 14, addon files
-
-**Responsável:** GRC + Security  
-**Evidência:** Inventário fornecedores, logs ciclo de vida
 
 ---
 
-## FASE 4: Maturação (M12–M18)
+## Nota Crítica: Gestão de Exceções em DORA
 
-### 4.1 Testes de Resiliência
+DORA exige conformidade com requisitos de resiliência (Art. 5–28). **Exceções (desvios) devem ser formais e auditadas:**
 
-**Objetivo:** Validar postura defensiva com testes contínuos (Cap. 10, 11, DORA Art. 19–20)
+**O que é uma exceção em SbD-ToE/DORA:**
+- Desvio formal de um requisito
+- Exemplo: Deploy com vulnerabilidade alta (vs. requisito L3 = zero críticas)
+- Deve ter: Aprovação formal, justificação, TTL (Time-To-Live), plano de remediação
 
-**Atividades:**
+**Quem aprova (CRÍTICO - DORA Art. 5):**
+- L1 (baixo risco): Tech lead / AppSec Engineer
+- L2 (médio risco): CISO
+- L3 (crítico): Board / CRO (Board é accountable, não é delegável)
 
-1. **Testes Contínuos (Cap. 10)**
-   - SAST: Análise estática de código
-   - DAST: Análise dinâmica
-   - Testes de penetração
-   - Fuzzing
-   - Testes de segurança integrados no desenvolvimento
+**Implicação regulatória:**
+- Exceções sem aprovação formal = Art. 5 violation (lack of supervision)
+- Algumas exceções são inaceitáveis (ex: SQLi nunca, MFA nunca)
+- Trilho auditado é obrigatório para regulador demonstrar controlo
 
-2. **Validação Pré-Produção (Cap. 11)**
-   - Checklist de segurança antes de deploy
-   - Confirmação de requisitos L1–L3
-   - Aprovação formal
+**Recomendação DORA Compliant:**
+1. Política clara de quem aprova por nível de risco
+2. Trilho auditado: O quê, quem, quando, justificação, TTL
+3. SLAs de remediação: Critical ≤30d, High ≤90d, Medium ≤180d
+4. Lista de exceções inaceitáveis (política)
+5. Revisão periódica, escalação se expirada
 
-3. **Threat-Led Penetration Testing (TLPT)**
-   - Para apps críticas (L3)
-   - Baseado em cenários realistas (threat model)
-   - Remediação documentada com SLAs
-   - Evidência de conformidade técnica
-
-**Responsável:** Security + Development  
-**Evidência:** Relatórios de testes, plano de remediação
-
----
-
-### 4.2 Métricas e KPIs
-
-**Objetivo:** Monitorizar progresso conforme Cap. 12
-
-**Dimensões essenciais:**
-
-| Categoria | Métrica | Referência |
-|-----------|---------|-----------|
-| Risco Aplicacional | Apps classificadas L1-L3 | Cap. 01 |
-| | Threat modeling (L3) | Cap. 03 |
-| | Vulnerabilidades críticas não resolvidas | Cap. 05 |
-| Desenvolvimento | Cobertura de testes | Cap. 10 |
-| | Requisitos de segurança cobertos | Cap. 02 |
-| Operações | Incidentes detetados e severidade | Cap. 12 |
-| | MTTR por nível | Cap. 12 |
-| Supply Chain | Fornecedores no inventário | Cap. 05, 14 |
-| | Ciclo de vida (onboarding/offboarding) | Cap. 14 |
-| Conformidade | Política assinada | Cap. 02, 14 |
-| | Staff formado | Cap. 13 |
-| | Trilho auditoria (logs) | Cap. 12, 14 |
-
-**Exemplos práticos:** Ver `exemplos-playbook-dora/02-exemplo-kpis-targets.md`
-
-**Nota:** Targets variam por organização - não prescritos no manual.
-
----
-
-## FASE 5: Conformidade (Contínuo)
-
-### 5.1 Preparação para Inspeção Regulatória
-
-**Objetivo:** Demonstrar conformidade DORA com evidências
-
-**Atividades:**
-
-1. **Data Room de Conformidade**
-   - Políticas de segurança (assinadas)
-   - Matriz de requisitos (L1–L3 vs SbD-ToE)
-   - Trilho auditoria (logs de 3+ anos)
-   - Testes de resiliência (TLPT, DAST)
-   - Ciclo de vida fornecedores
-
-2. **Self-Assessment**
-   - Auditoria interna contra DORA Art. 5–28
-   - Gap analysis
-   - Plano de remediação
-
-3. **Comunicação com Supervisor**
-   - Notificação de incidentes conforme DORA Art. 18
-   - Demonstração de capacidade operacional
-   - Reportes conforme regulador solicita
-
-**Responsável:** GRC / Compliance  
-**Evidência:** Data room completa, self-assessment
-
----
-
-## Dimensão Crítica: Supply Chain em DORA (Cap. 05 + Cap. 14)
-
-DORA Art. 26–28 exige supervisão de fornecedores. O SbD-ToE cobre isto com **duas categorias de fornecedores** que **ambas exigem gestão**:
-
-### Categoria 1: Fornecedores de Componentes de Software (Cap. 05 - SBOM)
-- **O problema:** Usas componentes (libs, frameworks) de terceiros sem saber quem são
-- **Fornecedores:** Implícitos (desconhecem que "fornecem")
-- **Rastreabilidade:** SBOM (Software Bill of Materials)
-- **Risco técnico:** Vulnerabilidades em dependências, licenças, EOL (End of Life)
-- **Supervisão:** SCA contínuo, updates de segurança, revisão de SBOM
-- **SBOM é pré-requisito para DORA:** Sem ele, não consegues identificar fornecedores de software
-
-### Categoria 2: Fornecedores Contratuais (Cap. 14 - Governance)
-- **O que são:** Pessoas e empresas contratadas formalmente
-- **Fornecedores:** Explícitos (contratos, acordos formais)
-- **Rastreabilidade:** Inventário formal, RACI, ciclo de vida
-- **Risco organizacional:** Acesso a sistemas, compliance, continuidade, formação
-- **Supervisão:** Onboarding/offboarding formal, formação, revisão periódica
-
-**Conformidade DORA Art. 26–28:**
-- **Ambas categorias exigem inventário e supervisão** (não é opcional escolher uma)
-- SBOM alimenta avaliação de risco técnico de componentes
-- Fornecedores contratuais alimentam avaliação de risco organizacional
-- **Processos diferentes mas igualmente obrigatórios**
-
-### User Stories US-15 a US-20
-
-**US-15:** Preparação Técnica e Validação Pré-Acesso
-- Avaliação prévia do fornecedor (background, referências)
-- Formação técnica obrigatória em SbD
-- Ambiente controlado (sandbox) para exercícios práticos
-- Template: `Cap. 14 addon/02-template-validacao-contractors.md`
-
-**US-16:** Onboarding e Formação Contínua
-- Trilho de formação por função (Development, DevOps, QA, etc.)
-- Cobertura: Princípios SbD, práticas seguras, ferramentas, compliance
-- Validação: Formação completada e documentada
-- Guide: `Cap. 14 addon/12-guia-preparacao-sandbox.md`
-
-**US-17:** Offboarding Seguro
-- Procedimento estruturado de desligamento
-- Revogação de acessos (paralela, documentada)
-- Auditar e confirmar conclusão
-- Checklist: `Cap. 14 addon/13-checklist-offboarding.md`
-
-**US-18 a US-20:** Monitorização e Governança Contínua
-- Fornecedores em inventário centralizado (Cap. 05)
-- Revisão periódica de acessos e compliance
-- Feedback e rating de desempenho
-
-**Evidência Cap. 14:** Política de contratação assinada, inventário fornecedores, logs de ciclo de vida
-
----
-
-## Checklist de Implementação
-
-Este checklist mapeia cada fase aos princípios SbD-ToE:
-
-- [ ] **Fase 0:** Política de segurança aprovada (Cap. 02, 14), RACI mapeado (Cap. 14), Toolchain essencial ativa (Cap. 08, 12)
-- [ ] **Fase 1:** Apps classificadas L1–L3 (Cap. 01), Requisitos por nível definidos (Cap. 02)
-- [ ] **Fase 2:** Gates de segurança em CI/CD (Cap. 07), Análise código (SAST/SCA), Threat modeling (Cap. 03), Trilho auditoria (Cap. 12)
-- [ ] **Fase 3:** Recolha centralizada de eventos (Cap. 12), Deteção e resposta de incidentes (Cap. 12), Ciclo de vida fornecedores operacional (Cap. 14)
-- [ ] **Fase 4:** Testes de segurança contínuos (Cap. 10), Validação pré-produção (Cap. 11), TLPT piloto (L3 apps)
-- [ ] **Fase 5:** Trilho auditoria completo (Cap. 12), Data room de conformidade, Self-assessment concluído
-
----
-
-## KPIs de Monitorização
-
-Os KPIs devem alinhar com os capítulos do SbD-ToE e refletir conformidade com DORA:
-
-| Categoria | Métrica | Referência SbD-ToE | Descrição |
-|-----------|---------|-------------------|-----------|
-| Risco Aplicacional | Apps classificadas por nível | Cap. 01 | % de apps com classificação L1–L3 completa |
-| | Threat modeling | Cap. 03 | % de apps L3 com threat modeling |
-| | Vulnerabilidades críticas | Cap. 05 | Número de vulns críticas não remediadas |
-| Desenvolvimento | Cobertura de testes | Cap. 10 | % código com testes de segurança |
-| | Requisitos de segurança | Cap. 02 | % de requisitos cobertos por teste |
-| Operações | Incidentes detetados | Cap. 12 | Número e severidade de incidentes |
-| | MTTR (Mean Time to Remediate) | Cap. 12 | Tempo médio remediação por nível |
-| Supply Chain | Fornecedores no inventário | Cap. 05, 14 | % fornecedores críticos inventariados |
-| | Ciclo de vida | Cap. 14 | % fornecedores com onboarding/offboarding |
-| Conformidade | Política assinada | Cap. 02, 14 | Política de segurança aprovada |
-| | Staff formado | Cap. 13 | % staff com formação em SbD |
-| | Trilho auditoria | Cap. 12, 14 | Logs retidos conforme política |
-
-**Exemplos práticos:** Ver `exemplo-playbook/02-exemplo-kpis-targets.md` para diferentes perfis organizacionais
+**Referência:** [Cap. 02 - Requisitos de Segurança](/sbd-toe/sbd-manual/requisitos-seguranca/intro) (addon 08) e [Cap. 14 - Governança](/sbd-toe/sbd-manual/governanca-contratacao/intro) (exceções formalizadas)
 
 ---
 
 ## Próximos Passos
 
-Este playbook é um **guia indicativo**. Implementação real deve adaptar-se ao contexto organizacional:
+1. **Audit de conformidade atual:** Verificar Cap. 01–14 do SbD-ToE contra requisitos DORA
+2. **Definir roadmap:** Sequenciar fases conforme contexto organizacional
+3. **Implementar:** Iterar conforme planeado
+4. **Validar:** Demonstrar conformidade em auditoria
 
-1. **Mapeamento Inicial:** Auditar conformidade atual contra Cap. 01–14 do SbD-ToE
-2. **Definição de Roadmap:** Sequenciar fases conforme recursos disponíveis e dependências
-3. **Aprovação Executiva:** Validar timeline e budget com direção
-4. **Execução:** Iterar conforme planeado, ajustando conforme riscos reais
-5. **Validação:** Testar conformidade com DORA requirements, documentar evidências
-
-**Documentação:** Todos os capítulos referenciados (Cap. 01–14) oferecem detalhe técnico e operacional. Ver também exemplos práticos em `exemplo-playbook/`.
+**Documentação completa:** Ver capítulos SbD-ToE 01–14 para detalhe técnico e operacional.
 
 ---
 
 ## Referências
 
-- SbD-ToE Manual (Capítulos 01–14)
-- SbD-ToE 002 - Cross-Check Normativo: `dora.md` (análise normativa)
-- Regulamento DORA (UE 2022/2554)
-- NIST SP 800-53, OWASP SAMM, BSIMM, SSDF
-- Cap. 14 SbD-ToE: User Stories US-15 a US-20 (fornecedores/contractors)
-- Addon files: Templates e guias operacionais
-- **Exemplos práticos:** `exemplos-playbook-dora/` (reutilizáveis para NIS2, ISO 27001, etc.)
+- **SbD-ToE Manual:** Capítulos 01–14 (detalhe técnico por domínio)
+- **Cross-Check DORA:** [002 - dora.md](/sbd-toe/002-cross-check-normativo/dora) (análise normativa completa)
+- **Regulamento DORA:** UE 2022/2554
+- **Frameworks de Referência:** NIST SP 800-53, OWASP SAMM, BSIMM, SSDF
 
 ---
 
-**Versão:** 1.0  
+**Versão:** 1.1 (Simplificado, alinhado com DORA)  
 **Data:** Novembro 2025  
-**Próxima revisão:** Junho 2026 (ou conforme DORA RTS/ITS evoluem)
+**Nota:** Este playbook complementa `002-cross-check-normativo/dora.md` com implementação prática

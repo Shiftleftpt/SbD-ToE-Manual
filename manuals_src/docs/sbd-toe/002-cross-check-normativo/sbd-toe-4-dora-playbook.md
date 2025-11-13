@@ -96,7 +96,7 @@ FASE 5: Conformidade (Contínuo)
    - SBOM: Geração de Bill of Materials (dependências, versões, licenças)
    - SAST: Análise estática do código
    - Integração: Nos gates de CI/CD
-   - **Ponte para Fornecedores:** SBOM identifica dependências críticas → Alimenta inventário de fornecedores (Cap. 14)
+   - **Objetivo:** Rastreabilidade técnica de componentes (fornecedores implícitos)
 
 4. **Gestão de Acessos - Cap. 14**
    - Controle de acesso baseado em responsabilidades
@@ -261,11 +261,11 @@ FASE 5: Conformidade (Contínuo)
 
 ---
 
-### 3.2 Ciclo de Vida de Fornecedores
+### 3.2 Ciclo de Vida de Fornecedores Contratuais
 
-**Objetivo:** Gestão segura de fornecedores (Cap. 14, DORA Art. 26–28)
+**Objetivo:** Gestão segura de fornecedores (pessoas e empresas contratadas formalmente) (Cap. 14, DORA Art. 26–28)
 
-**Nota Important:** O SBOM (Cap. 05) identifica **quais fornecedores são críticos** (dependências core). Este ciclo de vida aplica-se aos fornecedores identificados no SBOM.
+**Nota Important:** Este ciclo de vida aplica-se a **fornecedores contratuais explícitos** (contractors, outsourcing, prestadores). Para dependências de software (SBOM), ver Cap. 05.
 
 **Atividades (User Stories US-15 a US-20):**
 
@@ -384,14 +384,28 @@ FASE 5: Conformidade (Contínuo)
 
 ---
 
-## Dimensão Crítica: Fornecedores/Contractors (Cap. 14)
+## Dimensão Crítica: Supply Chain em DORA (Cap. 05 + Cap. 14)
 
-O ciclo de vida completo de fornecedores é essencial para demonstrar conformidade com DORA Art. 26–28.
+DORA Art. 26–28 exige supervisão de fornecedores. O SbD-ToE cobre isto com **duas dimensões separadas**:
 
-**Integração Cap. 05 (SBOM) + Cap. 14 (Fornecedores):**
-- **Cap. 05** gera SBOM: lista de todas as dependências (bibliotecas, frameworks, serviços)
-- **Cap. 14** categoriza: quais são "críticas" e exigem governança formal
-- **Resultado:** Inventário de fornecedores críticos mapeado a dependências técnicas
+### Dimensão 1: Dependências de Software (Cap. 05 - SBOM)
+- **O quê:** Componentes usados (bibliotecas, frameworks, open source)
+- **Fornecedores:** Implícitos (muitas vezes desconhecem que "fornecem")
+- **Rastreabilidade:** SBOM (Software Bill of Materials)
+- **Risco técnico:** Vulnerabilidades em dependências, licenças
+- **Supervisão:** Análise contínua (SCA), updates de segurança
+
+### Dimensão 2: Fornecedores Contratuais (Cap. 14 - Governance)
+- **O quê:** Pessoas e empresas contratadas formalmente
+- **Fornecedores:** Explícitos (contratos, acordos formais)
+- **Rastreabilidade:** Inventário formal, RACI, ciclo de vida
+- **Risco organizacional:** Acesso a sistemas, compliance, continuidade
+- **Supervisão:** Onboarding/offboarding, formação, revisão periódica
+
+**Integração em DORA:**
+- Ambas dimensões precisam de **inventário e supervisão** (Art. 26–28)
+- Mas com processos **diferentes**: técnico vs. organizacional
+- **Não fusionar:** SBOM é automático/técnico; fornecedores contratuais são formais/organizacionais
 
 ### User Stories US-15 a US-20
 

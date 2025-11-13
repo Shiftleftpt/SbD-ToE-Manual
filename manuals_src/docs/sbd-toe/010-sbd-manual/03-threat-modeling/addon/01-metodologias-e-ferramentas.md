@@ -81,7 +81,7 @@ Sugestão de estrutura para manter os modelos reutilizáveis e versionados:
 
 ```
 📁 threat-model/
-├── README.md            # Resumo do modelo, escopo e metodologia usada
+├── README.md            # Resumo do modelo, âmbito e metodologia usada
 ├── dfd-diagram.drawio   # Diagrama de fluxo de dados
 ├── threats.csv          # Matriz de ameaças por componente (STRIDE)
 ├── mitigations.md       # Mitigações propostas e estado (em progresso, validado, etc.)

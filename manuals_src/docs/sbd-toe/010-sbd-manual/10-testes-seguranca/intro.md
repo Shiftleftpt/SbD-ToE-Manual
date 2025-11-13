@@ -90,7 +90,7 @@ A responsabilidade pelos testes é **coletiva**, mas cada papel tem um contribut
 | Política de DAST/Fuzzing | Recomendado | QA/Testes | DAST autenticado em staging, fuzzing em endpoints críticos |
 | Política de Gates CI/CD | Sim | DevOps + AppSec | Thresholds definidos, logs versionados, exceções registadas |
 | Política de Release Seguro | Sim | Gestão de Produto + AppSec | Checklist de release, critérios formais, aceitação de risco documentada |
-| Política de PenTesting | Recomendado (L2), Obrigatório (L3) | AppSec + PenTesters | Escopo por risco, relatórios técnicos, retests planeados |
+| Política de PenTesting | Recomendado (L2), Obrigatório (L3) | AppSec + PenTesters | âmbito por risco, relatórios técnicos, retests planeados |
 
 Na versão impressa, consultar o **Anexo de Políticas Organizacionais do manual**, onde estas políticas estão consolidadas transversalmente.
 

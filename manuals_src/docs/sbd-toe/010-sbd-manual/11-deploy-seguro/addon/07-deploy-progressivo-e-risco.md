@@ -39,7 +39,7 @@ Antes de iniciar um rollout progressivo, deve ser feita uma **avaliação formal
 
 ## 🌐 Controlo do rollout
 
-- **Escopos comuns**:
+- **âmbitos comuns**:
   - Percentagem de utilizadores (ex: 1%, 5%, 20%)
   - Segmentos por geo / tenant / perfil / device
   - Período temporal (ex: ativa por 3 horas)
@@ -66,7 +66,7 @@ Antes de iniciar um rollout progressivo, deve ser feita uma **avaliação formal
 |----------------|-----------------------------------------------------------|
 | DevOps         | Implementa estratégia de rollout e rollback               |
 | QA / AppSec    | Define critérios de bloqueio e valida resultado           |
-| Produto        | Define escopo funcional, aprova promoção                 |
+| Produto        | Define âmbito funcional, aprova promoção                 |
 | Engenharia     | Monitoriza comportamento e atua se houver incidente       |
 
 ---
@@ -76,7 +76,7 @@ Antes de iniciar um rollout progressivo, deve ser feita uma **avaliação formal
 - [ ] A release tem plano de rollout definido?
 - [ ] Existem métricas de sucesso / erro para monitorização?
 - [ ] O rollout é reversível em cada fase?
-- [ ] Existe documentação do escopo inicial e critérios de promoção?
+- [ ] Existe documentação do âmbito inicial e critérios de promoção?
 - [ ] Os toggles estão visíveis e controlados por owner?
 - [ ] As equipas responsáveis estão identificadas para cada estágio?
 

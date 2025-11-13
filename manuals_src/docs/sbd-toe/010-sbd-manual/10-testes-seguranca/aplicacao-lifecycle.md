@@ -380,12 +380,12 @@ Validação humana complementa automação.
 Como **PenTester**, quero **validar ofensivamente a eficácia dos controlos**, para **detetar falhas exploráveis antes da produção**.
 
 **Critérios de aceitação (BDD).**  
-- Dado escopo baseado em risco  
+- Dado âmbito baseado em risco  
 - Quando executo PenTest  
 - Então emito relatório com vetores, impacto e recomendações  
 
 **Checklist.**  
-- [ ] Escopo definido e consentimento  
+- [ ] âmbito definido e consentimento  
 - [ ] Relatório com PoCs e severidade  
 - [ ] Retest planeado para críticos  
 

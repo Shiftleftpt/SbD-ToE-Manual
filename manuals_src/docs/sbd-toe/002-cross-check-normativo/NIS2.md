@@ -114,9 +114,9 @@ A NIS2 pede **continuidade de negócio**, **gestão de crise**, **backups e DR t
 
 ---
 
-## Setor, escopo e sanções: o pano de fundo que orienta o detalhe
+## Setor, âmbito e sanções: o pano de fundo que orienta o detalhe
 
-A NIS2 **alarga o escopo** para 18 setores e reforça a distinção entre **essenciais** e **importantes**. Em muitos países, há **registos nacionais** e prazos de **autoregisto** para entidades abrangidas; acompanhar **trackers oficiais** ajuda a implementar as especificidades locais. [^18]
+A NIS2 **alarga o âmbito** para 18 setores e reforça a distinção entre **essenciais** e **importantes**. Em muitos países, há **registos nacionais** e prazos de **autoregisto** para entidades abrangidas; acompanhar **trackers oficiais** ajuda a implementar as especificidades locais. [^18]
 
 Em termos sancionatórios, a Diretiva estabelece patamares que os Estados-Membros transpõem: **até 10M€ ou 2%** do volume de negócios mundial para **essenciais** e **até 7M€ ou 1,4%** para **importantes** (o que for mais elevado). [^19]
 

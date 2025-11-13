@@ -79,12 +79,12 @@ Como **Developer**, quero **usar apenas dependências aprovadas**, para **reduzi
 | L3 | Sim | Revisão AppSec + proveniência
 
 **Integração no SDLC.**
-| Fase | Trigger | Responsável |
-|---|---|---|
-| Design/Dev | Inclusão de dependência | Developer + AppSec
+| Fase | Trigger | Responsável | SLA |
+|---|---|---|---|
+| Design/Dev | Inclusão de dependência | Developer + AppSec | Na aprovação da dependência |
 
 **Ligações úteis.**  
-- Política de Dependências (cap05:intro#politicas)
+- [Pilares de governação](/sbd-toe/sbd-manual/dependencias-sbom-sca/intro#pilares-de-governação)
 
 ---
 
@@ -96,6 +96,15 @@ Sem SBOM atualizado não é possível determinar rapidamente exposição a CVEs 
 :::userstory
 **História.**   
 Como **DevOps**, quero **gerar SBOM em cada build**, para **rastreabilidade completa de componentes**.
+
+**Critérios de aceitação (BDD).**
+- Dado que um build é acionado
+- Quando o artefacto é produzido
+- Então é gerado um SBOM em formato CycloneDX ou SPDX
+
+- Dado um SBOM gerado
+- Quando é associado à release
+- Então é armazenado e acessível para auditoria
 
 **Checklist.**
 - [ ] SBOM no formato CycloneDX ou SPDX  
@@ -120,8 +129,8 @@ Como **DevOps**, quero **gerar SBOM em cada build**, para **rastreabilidade comp
 | CI | Execução de build | DevOps
 
 **Ligações úteis.**  
-- CycloneDX/SPDX (normas de SBOM)
-- US-10 (Inventário e SBOM por Build — especialização com assinatura e proveniência)
+- [SBOM - Normas CycloneDX e SPDX](https://www.cyclonedx.org)
+- [US-10 - Inventário e SBOM por Build](#us-10--inventário-e-sbom-por-build)
 
 ---
 
@@ -158,12 +167,12 @@ Como **AppSec**, quero **executar SCA automático nos pipelines**, para **deteta
 | L3 | Bloqueio Medium+
 
 **Integração no SDLC.**
-| Fase | Trigger | Responsável |
-|---|---|---|
-| CI | Geração de SBOM | DevOps + AppSec
+| Fase | Trigger | Responsável | SLA |
+|---|---|---|---|
+| CI | Geração de SBOM | DevOps + AppSec | Durante o build (bloqueio imediato) |
 
 **Ligações úteis.**  
-- Guia de thresholds por L1–L3 (cap05:intro#proporcionalidade)
+- [Guia de thresholds por L1–L3](/sbd-toe/sbd-manual/dependencias-sbom-sca/aplicacao-lifecycle#matriz-de-proporcionalidade-l1l3)
 
 ---
 
@@ -175,6 +184,15 @@ Nem todos os findings podem ser resolvidos de imediato; exceções devem ser **f
 :::userstory
 **História.**   
 Como **AppSec**, quero **formalizar exceções a CVEs**, para **manter governação e justificar risco residual**.
+
+**Critérios de aceitação (BDD).**
+- Dado que existe um CVE não resolvido
+- Quando é solicitada uma exceção
+- Então a exceção é formalizada em `excecoes.yaml` com justificativa técnica e de negócio, aprovador e prazo
+
+- Dado uma exceção com prazo definido
+- Quando passa o prazo
+- Então é acionada revisão periódica com reavaliação do risco
 
 **Checklist.**
 - [ ] `excecoes.yaml` com justificativa técnica e de negócio  
@@ -204,7 +222,7 @@ Como **AppSec**, quero **formalizar exceções a CVEs**, para **manter governaç
 | Release | Findings pendentes | AppSec + Product Owner
 
 **Ligações úteis.**  
-- Template de exceções (Cap. 05 - anexos)
+- [Exceções e Aceitação de Risco em Vulnerabilidades](/sbd-toe/sbd-manual/dependencias-sbom-sca/addon/excecoes-e-aceitacao-risco)
 
 ---
 
@@ -240,12 +258,13 @@ Como **Product Owner**, quero **validar findings e exceções antes do go‑live
 | L3 | Sim | Revisão formal + AppSec envolvido
 
 **Integração no SDLC.**
-| Fase | Trigger | Responsável |
-|---|---|---|
-| Pré‑release | RC pronta | Product Owner + QA + AppSec
+| Fase | Trigger | Responsável | SLA |
+|---|---|---|---|
+| Pré‑release | RC pronta | Product Owner + QA + AppSec | Antes do deploy a produção |
 
 **Ligações úteis.**  
-- Checklist de release segura (Cap. 05 - anexos)
+<!-- genia_suggest: Criar addon/10-checklist-release-segura.md com checklist de validação de release por L1-L3 -->
+- [Artefactos esperados](/sbd-toe/sbd-manual/dependencias-sbom-sca/aplicacao-lifecycle#-artefactos-esperados)
 
 ---
 
@@ -282,9 +301,9 @@ Como **DevOps**, quero ***enforce* repositórios internos aprovados**, para **ga
 | L3 | Sim | Obrigatório + assinatura/verificação de pacotes
 
 **Integração no SDLC.**
-| Fase | Trigger | Responsável |
-|---|---|---|
-| Build | Resolução de dependências | DevOps/CI
+| Fase | Trigger | Responsável | SLA |
+|---|---|---|---|
+| Build | Resolução de dependências | DevOps/CI | Imediato (bloqueio em tempo real) |
 
 **Ligações úteis.**  
 - SLSA Provenance (conceitos)
@@ -324,12 +343,13 @@ Como **Developer**, quero **usar apenas *package managers*/repositórios interno
 | L3 | Sim | Enforcement automático em CI/CD
 
 **Integração no SDLC.**
-| Fase | Trigger | Responsável |
-|---|---|---|
-| Dev | Inclusão de nova lib | Developer + AppSec
+| Fase | Trigger | Responsável | SLA |
+|---|---|---|---|
+| Dev | Inclusão de nova lib | Developer + AppSec | Na aprovação da dependência |
 
 **Ligações úteis.**  
-- Guia “Bibliotecas locais: riscos e substituição”
+<!-- genia_suggest: Criar addon/11-bibliotecas-locais-migracao.md com padrões de migração por stack (npm, maven, composer, etc) -->
+- [Governança de Bibliotecas de Terceiros](/sbd-toe/sbd-manual/dependencias-sbom-sca/addon/governanca-libs-terceiros)
 
 ---
 
@@ -373,12 +393,13 @@ Como **DevOps/Developer**, quero **bots de atualização com avaliação de impa
 | L3 | Bots obrigatórios; *impact analysis* + *canary*; *auto‑merge* apenas *patch*; *minor/major* requer aprovação humana e promoção por estágios |
 
 **Integração no SDLC.**
-| Fase | Trigger | Responsável |
-|---|---|---|
-| Dev/CI | Nova versão publicada | DevOps + Developer + QA
+| Fase | Trigger | Responsável | SLA |
+|---|---|---|---|
+| Dev/CI | Nova versão publicada | DevOps + Developer + QA | Automático (PR aberto e processado por bot) |
 
 **Ligações úteis.**  
-- Guia de operação de bots (labels, *auto‑merge*, *canary*)
+- [Política de Atualizações Automáticas](/sbd-toe/sbd-manual/dependencias-sbom-sca/addon/politica-atualizacoes)
+- [Integração CI/CD](/sbd-toe/sbd-manual/dependencias-sbom-sca/addon/integracao-ci-cd)
 
 ---
 
@@ -418,15 +439,16 @@ Como **AppSec Engineer**, quero **executar auditoria periódica automatizada** p
 | L3 | Sim | Scanner automático semanal; bloqueio em CI/CD |
 
 **Integração no SDLC.**
-| Fase | Trigger | Responsável |
-|---|---|---|
-| Ciclo regular | Auditoria periódica (cronograma) | AppSec Engineer + DevOps
-| Build | Detecção em CI/CD (L2–L3) | DevOps (bloqueio)
+| Fase | Trigger | Responsável | SLA |
+|---|---|---|---|
+| Ciclo regular | Auditoria periódica (cronograma) | AppSec Engineer + DevOps | L1: mensal, L2: quinzenal, L3: semanal |
+| Build | Detecção em CI/CD (L2–L3) | DevOps (bloqueio) | Imediato (bloqueio em tempo real) |
 | Backlog | Libs detectadas | Developer (remediação)
 
 **Ligações úteis.**  
-- US-07 (Proibição de libs copiadas)
-- Guia "Padrões de deteção de libs copiadas por stack"
+- [US-07 - Proibir bibliotecas copiadas manualmente](#us-07---proibir-bibliotecas-copiadas-manualmente)
+<!-- genia_suggest: Criar addon/12-padroes-deteccao-libs.md com padrões regex e ferramentas por stack (npm, Python, Java, PHP, etc) -->
+- [Governança de Bibliotecas de Terceiros](/sbd-toe/sbd-manual/dependencias-sbom-sca/addon/governanca-libs-terceiros)
 
 ---
 
@@ -477,6 +499,18 @@ Como **DevOps Engineer**, quero gerar automaticamente um **SBOM assinado por bui
 | L2 | Sim | Attestations + labels por ambiente, deteção de drift básica. |
 | L3 | Sim | Drift contínuo + bloqueio de execuções não atestadas. |
 
+**Integração no SDLC.**
+| Fase | Trigger | Responsável | SLA |
+|---|---|---|---|
+| CI | Execução de build | DevOps Engineer | No build (geração automática) |
+| Deploy | Implantação em ambiente | DevOps Engineer | Imediato (associação com metadados) |
+| Operação | Monitorização contínua | DevOps + AppSec | Contínuo (deteção de drift) |
+
+**Ligações úteis.**
+- [SLSA Provenance - Conceitos e Implementação](https://slsa.dev)
+- [Inventário e SBOM](/sbd-toe/sbd-manual/dependencias-sbom-sca/addon/inventario-sbom)
+- [US-11 - Alertas sobre Vulnerabilidades](#us-11--alertas-sobre-vulnerabilidades-em-componentes-usados)
+
 ---
 
 ### US-11 – Alertas sobre Vulnerabilidades em Componentes Usados
@@ -524,6 +558,18 @@ Como **Gestor de Aplicação** e **AppSec**, quero **receber alertas correlacion
 | L2 | Sim | 2 dias úteis | 14 dias | Incluir *medium* em serviços expostos; escalonamento automático. |
 | L3 | Sim | 1 dia útil | 7 dias | *Blockers* com auto-rollback/kill-switch quando aplicável. |
 
+**Integração no SDLC.**
+| Fase | Trigger | Responsável | SLA |
+|---|---|---|---|
+| Publicação CVE | Nova vulnerabilidade pública | Automático (feed) | Detecção automática (1–6h) |
+| Triagem | CVE correlacionada com versão implantada | AppSec + DevOps | L1: 5d, L2: 2d, L3: 1d |
+| Mitigação | Plano de correção ou exceção | DevOps + AppSec | L1: 30d, L2: 14d, L3: 7d |
+
+**Ligações úteis.**
+- [US-02 - SBOM em cada build](#us-02---sbom-em-cada-build)
+- [US-10 - Inventário e SBOM por Build](#us-10--inventário-e-sbom-por-build)
+- [Cap. 12 - Monitorização & Operação Segura](/sbd-toe/sbd-manual/monitorizacao-operacoes/aplicacao-lifecycle)
+
 
 ---
 
@@ -567,15 +613,15 @@ Como **Developer**, quero **validar automaticamente a compatibilidade de licenç
 | L3 | Sim | Automática com bloqueio; exceções requerem aprovação formal |
 
 **Integração no SDLC.**
-| Fase | Trigger | Responsável |
-|---|---|---|
-| Design/Dev | Inclusão de dependência | Developer
-| Build | Resolução de dependências | CI/CD (bloqueio/alerta)
-| Exceção | Licença incompatível com business case | AppSec + Legal (se necessário)
+| Fase | Trigger | Responsável | SLA |
+|---|---|---|---|
+| Design/Dev | Inclusão de dependência | Developer | Na aprovação da dependência |
+| Build | Resolução de dependências | CI/CD (bloqueio/alerta) | Durante o build (imediato) |
+| Exceção | Licença incompatível com business case | AppSec + Legal (se necessário) | Antes do go-live |
 
 **Ligações úteis.**  
-- US-01 (Gestão de dependências seguras)
-- SPDX License List (referência)
+- [US-01 - Gestão de dependências seguras](#us-01---gestão-de-dependências-seguras)
+- [SPDX License List](https://spdx.org/licenses/)
 
 ---
 

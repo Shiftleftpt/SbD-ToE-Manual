@@ -14,10 +14,11 @@ A segurança do software não acontece num vácuo técnico.
 Organizações de diferentes setores estão sujeitas a **regulações, normas e frameworks** que estabelecem requisitos explícitos para garantir proteção adequada de sistemas, dados e operações.  
 Neste contexto, o **Security by Design – Theory of Everything (SbD-ToE)** não é apenas um manual prescritivo de boas práticas: é também um **instrumento de convergência normativa**, permitindo alinhar práticas de desenvolvimento e operação segura com as múltiplas exigências externas.
 
-O **Capítulo 15 - Cross-Check Normativo** tem precisamente este papel:  
+O **Capítulo 002 - Cross-Check Normativo** tem precisamente este papel:  
 - Demonstrar, de forma clara e verificável, **como o SbD-ToE responde a requisitos regulatórios e normativos**.  
-- Identificar onde o modelo garante **compliance “por construção”**, e onde existem **lacunas** que exigem complementaridade com processos legais, organizacionais ou contratuais.  
+- Identificar onde o modelo garante **compliance "por construção"**, e onde existem **lacunas** que exigem complementaridade com processos legais, organizacionais ou contratuais.  
 - Apoiar **equipas de GRC, auditores, equipas técnicas e de gestão** na tarefa de articular segurança operacional com conformidade formal.
+- Para **organizações que possuem ou contratam desenvolvimento de software**, oferecer **playbooks práticos** para implementar requisitos normativos de forma coerente com a disciplina de segurança aplicacional.
 
 ---
 
@@ -42,7 +43,8 @@ Ao ser construído **top-down**, com base em múltiplas referências normativas,
 1. **Mostrar a correspondência** entre práticas do SbD-ToE e requisitos de normativos internacionais e europeus.  
 2. **Evidenciar as áreas de cobertura plena**, onde a adoção do modelo conduz a conformidade quase imediata.  
 3. **Revelar lacunas e zonas cinzentas**, ajudando as organizações a perceberem onde necessitam de medidas adicionais (jurídicas, processuais ou técnicas).  
-4. **Fornecer um repositório comparativo**, que possa ser reutilizado em auditorias, certificações ou relatórios de conformidade.  
+4. **Fornecer um repositório comparativo**, que possa ser reutilizado em auditorias, certificações ou relatórios de conformidade.
+5. **Oferecer playbooks de implementação** para organizações que contratam ou desenvolvem software, garantindo que a aquisição/desenvolvimento seja coerente com requisitos normativos específicos.
 
 ---
 
@@ -56,7 +58,8 @@ A análise segue uma estrutura sistemática, comum a todos os normativos:
   - Se a cobertura é parcial, detalhar as limitações.  
   - Se não existe cobertura, indicar explicitamente o gap.  
 - **Notas Críticas** → observações sobre interpretação, sobreposição ou complementaridade.  
-- **Conclusão** → até que ponto o SbD-ToE assegura alinhamento com esse normativo.  
+- **Conclusão** → até que ponto o SbD-ToE assegura alinhamento com esse normativo.
+- **Playbook Prático** (quando aplicável) → roadmap de implementação para organizações com disciplina de desenvolvimento/AppSec, orientando como integrar requisitos normativos na aquisição ou desenvolvimento de software.
 
 ---
 
@@ -73,11 +76,24 @@ Esta visão **mitiga a fragmentação regulatória** e oferece às organizaçõe
 
 ---
 
-## Estrutura deste capítulo
+## Nota Importante: Normativos e Desenvolvimento Aplicacional
+
+Muitos normativos (ex.: **DORA**, **NIS2**, **ISO 27001**) **não são específicos de desenvolvimento de software**, mas cobrem a **gestão integral de risco TIC** em organizações.
+
+No entanto, quando uma organização **possui ou contrata desenvolvimento de software**, a disciplina de **segurança aplicacional (AppSec)** torna-se um **componente crítico** para demonstrar conformidade com esses normativos.
+
+**Consequência prática:**  
+- O normativo exige "gestão de risco TIC" (âmbito amplo)
+- A organização implementa isso através de múltiplos controles (arquitetura, operações, contratos, etc.)
+- Se existe desenvolvimento/aquisição de software, os playbooks deste capítulo orientam **como integrar práticas de AppSec** de forma **coerente e proporcional** com o regulamento
+
+**Exemplo:** **DORA** é regulação financeira, mas se uma entidade financeira desenvolve software internamente, deve aplicar os princípios do SbD-ToE para demonstrar que a sua **postura de ciber-resiliência** (DORA Art. 5) inclui **development security practices**.
+
+---
 
 Este capítulo encontra-se dividido em ficheiros independentes, cada um dedicado a um normativo/regulação:  
 
-- `dora.md` → Regulamento DORA (Resiliência Operacional Digital no setor financeiro)  
+- `dora.md` → Regulamento DORA (Resiliência Operacional Digital) **+ Playbook de Implementação**
 - `nis2.md` → Diretiva NIS2 (Cibersegurança e serviços essenciais)  
 - `iso27001.md` → Norma ISO/IEC 27001 (Gestão de Segurança da Informação)  
 - `hipaa.md` → HIPAA (Health Insurance Portability and Accountability Act)  
@@ -88,11 +104,15 @@ Este capítulo encontra-se dividido em ficheiros independentes, cada um dedicado
 
 Cada ficheiro é autónomo, mas segue a mesma estrutura, permitindo comparação direta e análise objetiva.
 
+**Ficheiros com Playbook:**  
+Determinados normativos que afetam diretamente práticas de desenvolvimento (DORA, NIS2) incluem **playbooks de implementação** com roadmaps, fases e checklists práticos.
+
 ---
 
 ## Leitura recomendada
 
 - Este capítulo deve ser lido **em articulação com o Capítulo 00 - Theory of Everything**, que explica a filosofia global do manual.  
+- Para organizações **com desenvolvimento/aquisição de software**, recomenda-se começar pelos ficheiros com Playbook (ex.: `dora.md`), que orientam implementação coerente.
 - Pode também ser utilizado como **documento autónomo**, servindo de guia de referência rápida para quem procura verificar alinhamento do SbD-ToE com exigências específicas.  
 
 ---

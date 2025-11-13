@@ -67,7 +67,7 @@ Este documento serve de base para:
 | Tópico                                    | Formato recomendado                   |
 |-------------------------------------------|----------------------------------------|
 | Pipelines CI/CD com segurança             | Oficina de stages com scanners         |
-| Gestão de segredos                        | Lab com Vault e escopos                |
+| Gestão de segredos                        | Lab com Vault e âmbitos                |
 | Hardening de imagens                      | PR review + análise com Trivy          |
 | Scanners de IaC e validação               | Hands-on com Checkov/TFSec             |
 | Deploy com rollback e feature flags       | Simulação de rollout                   |

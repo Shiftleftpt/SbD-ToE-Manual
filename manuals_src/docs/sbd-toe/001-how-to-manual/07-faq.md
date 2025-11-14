@@ -103,10 +103,12 @@ O SbD-ToE ajuda a:
 
 **Não.** O SbD-ToE não é um esquema de certificação. É um **framework operacional interno**.
 
-**Mas:** as evidências SbD-ToE podem ser reutilizadas para certificações externas:
-- **ISO 27001** (ISMS)
-- **EUCC/EUCS/EU5G** (esquemas CSA da ENISA)
-- **SOC 2 Type II** (para cloud/SaaS)
+**Mas:** as evidências SbD-ToE podem ser reutilizadas para **acelerar e simplificar** certificações externas:
+- **ISO 27001** (ISMS) — implementação de controlos técnicos A.8/A.12/A.14/A.16
+- **EUCC/EUCS/EU5G** (esquemas CSA da ENISA) — evidências de segurança de produto/serviço
+- **SOC 2 Type II** (para cloud/SaaS) — demonstração de Trust Service Criteria
+
+**Importante:** Reutilizar evidências reduz o esforço (80–90%), mas não substitui a auditoria/avaliação independente necessária para a certificação formal.
 
 Ver: [Certificação ENISA/CSA](/sbd-toe/002-cross-check-normativo/enisa-csa-certificacao)
 

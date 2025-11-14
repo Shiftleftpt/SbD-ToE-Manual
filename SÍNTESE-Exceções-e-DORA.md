@@ -1,6 +1,10 @@
-# 📋 Síntese: Gestão de Exceções e Conformidade DORA
+# Síntese: Gestão de Exceções e Conformidade DORA
 
 > **Contexto:** Este documento consolida como o SbD-ToE prescreve exceções formais **e como ausência de gestão formal as torna incoerentes com DORA Art. 5 (Supervisão de Gestão de Risco TIC)**.
+
+## Âmbito
+
+Este documento destina-se a equipas de segurança, governança e compliance que necessitam de mapear o processo de gestão de exceções do SbD-ToE aos requisitos regulatórios DORA. Apresenta-se a cobertura atual do manual, identifica-se os gaps críticos face ao regulamento, e propõem-se melhorias concretas para garantir conformidade plena.
 
 ---
 
@@ -193,6 +197,8 @@ Expandir `US-15 (Processo formal de exceções)` e adicionar `US-X (Compliance D
 
 ## 5. Checklist de Conformidade
 
+A lista abaixo permite validar se o processo de gestão de exceções está alinhado com os requisitos DORA. Recomenda-se a revisão destes pontos antes de aprovar qualquer exceção a requisitos de segurança.
+
 ### Antes de Aceitar uma Exceção
 
 - [ ] Exceção está em categoria **aceitável** (não é inaceitável per DORA)?
@@ -227,7 +233,7 @@ Expandir `US-15 (Processo formal de exceções)` e adicionar `US-X (Compliance D
 
 ---
 
-## 7. Impacto de Ausência
+## 7. Impacto da Ausência
 
 **Se não resolver os gaps:**
 
@@ -238,8 +244,10 @@ Expandir `US-15 (Processo formal de exceções)` e adicionar `US-X (Compliance D
 | Sem escalada ao regulador | Incidente não-reportado com contexto | Achado crítico + Penalidade (Art. 18) |
 | Sem política formal | Inconsistência; interpretação diferente | Achado crítico: Governance falha |
 
-**Suma:** Organização com gaps identificados = risco elevado de penalidade regulatória em inspeção DORA.
+A ausência de gestão formal de exceções pode comprometer a conformidade regulatória, expondo a organização a achados críticos em inspeções DORA e potenciais penalizações por falhas de supervisão.
 
 ---
 
-**Próxima ação:** Implementar os 4 passos acima e validar com CISO/board.
+## Próximos Passos
+
+Sugere-se a implementação dos 4 passos descritos na secção 4 (Roadmap), com validação formal por CISO e board. Recomenda-se priorizar a criação da política organizacional e a configuração da ferramenta GRC para garantir trilho auditado desde o início.

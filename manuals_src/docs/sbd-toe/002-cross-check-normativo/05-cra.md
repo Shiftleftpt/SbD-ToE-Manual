@@ -8,7 +8,8 @@ sidebar_position: 5
 
 # CRA: Cross-Check Normativo
 
-> Para implementação operacional detalhada, ver o futuro Playbook SbD-ToE 4 CRA (a criar). 
+> Para implementação prática, consulte o [Playbook SbD-ToE 4 CRA](/sbd-toe/002-cross-check-normativo/sbd-toe-4-cra-playbook).
+> 
 > Para padrões aplicacionais universais, ver capítulos base do SbD-ToE (01–14).
 
 ## Âmbito
@@ -141,7 +142,7 @@ Responda SIM aos seguintes pontos:
 
 ## Referências
 
-- Texto final do Cyber Resilience Act (Regulamento UE 2024/1745) 
+- Texto final do Cyber Resilience Act (Regulamento (UE) 2024/XXX) 
 - SbD-ToE Manual Capítulos 01–14 
 - ENISA Guidance on Product Security & Vulnerability Disclosure 
 - ISO/IEC 29147 (Vulnerability Disclosure), ISO/IEC 30111 (Vulnerability Handling)

@@ -48,7 +48,7 @@ flowchart LR
   R[Risco: L1/L2/L3] --> Q[Requisitos do Catálogo SbD-ToE]
   Q --> C[Contrato com cláusulas]
   C --> V[Validação: testes, auditoria, evidência]
-  V --> E[Registo de exceções (se aplicável)]
+  V --> E[Registo de exceções se aplicável]
   E --> O[Owner e prazo de revisão]
 ```
 

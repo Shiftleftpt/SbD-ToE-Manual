@@ -97,39 +97,39 @@ Este capítulo está organizado por **framework/normativo**, cada um numa pasta 
 
 ### Frameworks Atualmente Cobertos
 
-#### **DORA** (Digital Operational Resilience Act)
+#### **[DORA](dora/intro)** (Digital Operational Resilience Act)
 - 📂 `dora/`
-  - `01-intro.md` → Enquadramento do regulamento
-  - `02-playbook.md` → Playbook de implementação prática
-  - `03-convergencia-nis2.md` → Análise de convergência com NIS2
+  - [`01-intro.md`](dora/intro) → Enquadramento do regulamento
+  - [`02-playbook.md`](dora/playbook) → Playbook de implementação prática
+  - [`03-convergencia-nis2.md`](dora/convergencia-nis2) → Análise de convergência com NIS2
 
-#### **NIS2** (Network and Information Security Directive)
+#### **[NIS2](nis2/intro)** (Network and Information Security Directive)
 - 📂 `nis2/`
-  - `01-intro.md` → Enquadramento da diretiva
-  - `02-playbook.md` → Playbook de implementação prática
-  - `03-convergencia-dora.md` → Análise de convergência com DORA
+  - [`01-intro.md`](nis2/intro) → Enquadramento da diretiva
+  - [`02-playbook.md`](nis2/playbook) → Playbook de implementação prática
+  - [`03-convergencia-dora.md`](nis2/convergencia-dora) → Análise de convergência com DORA
 
-#### **CRA** (Cyber Resilience Act)
+#### **[CRA](cra/intro)** (Cyber Resilience Act)
 - 📂 `cra/`
-  - `01-intro.md` → Enquadramento do regulamento
-  - `02-playbook.md` → Playbook de implementação prática
+  - [`01-intro.md`](cra/intro) → Enquadramento do regulamento
+  - [`02-playbook.md`](cra/playbook) → Playbook de implementação prática
 
-#### **GDPR** (General Data Protection Regulation)
+#### **[GDPR](gdpr/intro)** (General Data Protection Regulation)
 - 📂 `gdpr/`
-  - `01-intro.md` → Enquadramento do regulamento
-  - `02-playbook.md` → Playbook de implementação prática
+  - [`01-intro.md`](gdpr/intro) → Enquadramento do regulamento
+  - [`02-playbook.md`](gdpr/playbook) → Playbook de implementação prática
 
-#### **ENISA CSA** (Cloud Security Alliance Certification)
+#### **[ENISA CSA](enisa-csa/intro)** (Cloud Security Alliance Certification)
 - 📂 `enisa-csa/`
-  - `01-intro.md` → Enquadramento do esquema de certificação
+  - [`01-intro.md`](enisa-csa/intro) → Enquadramento do esquema de certificação
 
 ### Exemplos e Templates de Suporte
 
-#### **Exemplo-Playbook**
-- 📂 `exemplo-playbook/`
+#### **[Exemplo-Playbook](exemplo-playbook/indice)**
+- 📂 [`exemplo-playbook/`](exemplo-playbook/indice)
   - Templates e exemplos reutilizáveis para implementação de qualquer framework
   - Ferramentas, KPIs, governance, relatórios, políticas, contratos
-  - Ver índice completo na pasta para detalhes
+  - [Ver índice completo](exemplo-playbook/indice) para detalhes
 
 ---
 
@@ -170,8 +170,8 @@ Cada pasta de framework segue esta estrutura consistente:
 
 ## Leitura recomendada
 
-- Este capítulo deve ser lido **em articulação com o Capítulo 00 - Theory of Everything**, que explica a filosofia global do manual.  
-- Para organizações **com desenvolvimento/aquisição de software**, recomenda-se começar pelos ficheiros com Playbook (ex.: `dora.md`), que orientam implementação coerente.
+- Este capítulo deve ser lido **em articulação com o [Capítulo 00 - Theory of Everything](../000-teory-of-everything/intro)**, que explica a filosofia global do manual.  
+- Para organizações **com desenvolvimento/aquisição de software**, recomenda-se começar pelos playbooks (ex.: [DORA](dora/playbook), [NIS2](nis2/playbook)), que orientam implementação coerente.
 - Pode também ser utilizado como **documento autónomo**, servindo de guia de referência rápida para quem procura verificar alinhamento do SbD-ToE com exigências específicas.  
 
 ---

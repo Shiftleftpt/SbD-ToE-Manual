@@ -9,7 +9,7 @@ tags: [exemplos, kpis, metricas, targets, monitoramento]
 
 ## Enquadramento
 
-O SbD-ToE prescreve (Cap. 12):
+O SbD-ToE prescreve ([Cap. 12](/sbd-toe/sbd-manual/monitorizacao-operacoes/intro)):
 - ✓ Métricas de segurança
 - ✓ Monitorização contínua
 - ✓ Melhoria baseada em dados
@@ -20,7 +20,7 @@ O SbD-ToE **NÃO prescreve** targets específicos porque contextos variam. Este 
 
 ## Dimensões de KPIs (Todas as Organizações)
 
-O manual define estas dimensões (Cap. 12):
+O manual define estas dimensões ([Cap. 12](/sbd-toe/sbd-manual/monitorizacao-operacoes/intro)):
 
 1. **Risco Aplicacional** - Cobertura de ameaças
 2. **Desenvolvimento** - Qualidade de código
@@ -118,8 +118,8 @@ FINTECH SEGURANÇA - Novembro 2025
 | | Threat modeling (L3) | 100% | M4 | Mais apps = tempo |
 | | Threat modeling (L2) | 80% | M6 | Progressivo |
 | | Vulns críticas não remediadas | 0 | Permanente | DORA + GDPR |
-| | Vulns altas (SLA remediação) | `<`30 dias | Permanente | Conforme Cap. 05 |
-| | Vulns médias (SLA remediação) | `<`90 dias | Permanente | Conforme Cap. 05 |
+| | Vulns altas (SLA remediação) | `<`30 dias | Permanente | Conforme [Cap. 05](/sbd-toe/sbd-manual/dependencias-sbom-sca/intro) |
+| | Vulns médias (SLA remediação) | `<`90 dias | Permanente | Conforme [Cap. 05](/sbd-toe/sbd-manual/dependencias-sbom-sca/intro) |
 | **Desenvolvimento** | Cobertura de testes | ≥85% | M12 | Mais rigoroso: banco |
 | | SAST findings altos | 0 | Permanente | Zero tolerance |
 | | SCA findings altos | 0 | Permanente | Zero tolerance |

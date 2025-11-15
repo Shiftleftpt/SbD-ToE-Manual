@@ -648,7 +648,7 @@ Como **Gestão Executiva/CISO**, quero que existam **4 políticas organizacionai
 **DoD.**
 - [ ] **Política 1 – Classificação de Risco**: Modelo E+D+I, critérios L1/L2/L3, responsabilidades por nível, frequency de revisão (obrigatória em L2/L3)  
 - [ ] **Política 2 – Aceitação de Risco**: Critérios de aceitabilidade, TTL por nível, aprovadores, exceções + revalidação obrigatória antes da expiração  
-- [ ] **Política 3 – Revisão Periódica**: Cadência time-based (12m/6m/3m), owners, escalada de decisões, triggers para revisão de matriz e ameaças  
+- [ ] **Política 3 – Revisão Periódica**: Cadência time-based (12m/6m/3m), owners, escalonamento de decisões, triggers para revisão de matriz e ameaças  
 - [ ] **Política 4 – Rastreabilidade & Auditoria**: Registo centralizado de classificações, exceções, revisões; versionamento; pista de auditoria; retenção de dados; acesso restrito  
 - [ ] **Cada política contém**: objetivo, âmbito, responsáveis, critérios decisão, processo aprovação, frequência revisão, ligação a capítulos do manual  
 - [ ] **Assinatura formal** por **Gestão Executiva/CISO** e **GRC/Compliance** datada  

@@ -87,7 +87,7 @@ Com base no Cap. 10:
 
 ## 📦 Deploy e execução
 
-- O próprio pipeline é deployado com rastreabilidade total;
+- O próprio pipeline é deployed com rastreabilidade total;
 - Logs são enviados para sistema central com alertas de anomalias;
 - A cada alteração relevante, é obrigatória nova revisão de threat modeling e validação funcional.
 

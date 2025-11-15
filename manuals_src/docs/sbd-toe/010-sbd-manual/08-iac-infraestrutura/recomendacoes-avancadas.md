@@ -38,7 +38,7 @@ Este anexo apresenta **práticas reforçadas** para segurança em projetos de **
 | ------------------------------------ | --------------------------------------------------------------------------- |
 | Hash e retenção dos ficheiros `plan` | Cada execução deve gerar ficheiro `plan` com hash e retenção por versão     |
 | Metadata de execução                 | Commit, branch, tag, utilizador, runner e hash associados ao plano aplicado |
-| Versão do template IaC               | Incluir no repositório e no artefacto deployado                             |
+| Versão do template IaC               | Incluir no repositório e no artefacto em deploy                             |
 | Registo inviolável de aplicação      | Guardar o `plan` e `apply` efetivos em repositório auditável                |
 
 > 📎 Facilita auditoria, rollback, comprovação de estado e análise forense.
@@ -61,7 +61,7 @@ Este anexo apresenta **práticas reforçadas** para segurança em projetos de **
 
 | Tema                             | Descrição                                                                 |
 | -------------------------------- | ------------------------------------------------------------------------- |
-| Geração de SBOM dos templates    | Catalogar módulos, recursos, providers usados em formato legível          |
+| Geração de SBOM dos templates    | Registar módulos, recursos, providers usados em formato legível           |
 | Validação semântica de providers | Bloqueio de versões não auditadas ou não testadas                         |
 | Substituição de fontes externas  | Especificar mirrors internos, registos privados, repositórios confiáveis  |
 | Auditoria de mudanças em módulos | Validar se mudanças introduzem configurações inseguras (ex: ACLs abertas) |

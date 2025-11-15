@@ -1,7 +1,7 @@
 ---
 id: exemplo-toolchain-options
 title: "Exemplo: Opções de Toolchain"
-description: Exemplos de como implementar princípios de toolchain (Cap. 08, 12) com diferentes ferramentas
+description: Exemplos de como implementar princípios de toolchain com diferentes ferramentas
 tags: [exemplos, toolchain, ferramentas, iac, logs, vulnerabilidades]
 ---
 
@@ -9,7 +9,7 @@ tags: [exemplos, toolchain, ferramentas, iac, logs, vulnerabilidades]
 
 ## Enquadramento
 
-O SbD-ToE prescreve (Cap. 08, 12):
+O SbD-ToE prescreve ([Cap. 08](/sbd-toe/sbd-manual/iac-infraestrutura/intro), [Cap. 12](/sbd-toe/sbd-manual/monitorizacao-operacoes/intro)):
 - ✓ Infraestrutura como Código (IaC)
 - ✓ Recolha centralizada de logs
 - ✓ Análise de vulnerabilidades (SCA + SAST)
@@ -21,7 +21,7 @@ O SbD-ToE **NÃO prescreve** qual ferramenta usar. Este documento apresenta **ex
 
 ## 1. Infraestrutura como Código (IaC)
 
-### Princípio (Cap. 08)
+### Princípio ([Cap. 08](/sbd-toe/sbd-manual/iac-infraestrutura/intro))
 Toda configuração de infraestrutura deve ser versionada, auditada e automatizada.
 
 ### Opção A: Terraform + AWS
@@ -60,7 +60,7 @@ resource "aws_s3_bucket_server_side_encryption_configuration" "tf_state" {
 }
 ```
 
-**Evidência Auditoria (Cap. 12):**
+**Evidência Auditoria ([Cap. 12](/sbd-toe/sbd-manual/monitorizacao-operacoes/intro)):**
 - Git logs: `git log terraform/ --oneline --decorate`
 - Terraform state history: S3 versioning
 - Change approvals: GitHub branch protection + code review
@@ -150,7 +150,7 @@ apiServer:
 
 ## 2. Recolha Centralizada de Logs
 
-### Princípio (Cap. 12)
+### Princípio ([Cap. 12](/sbd-toe/sbd-manual/monitorizacao-operacoes/intro))
 Logs de todas as aplicações, infraestrutura e acessos devem ser centralizados, retidos conforme política, e protegidos contra alteração.
 
 ### Opção A: ELK Stack (Elasticsearch + Logstash + Kibana)
@@ -189,7 +189,7 @@ output {
 }
 ```
 
-**Conformidade Auditoria (Cap. 12):**
+**Conformidade Auditoria ([Cap. 12](/sbd-toe/sbd-manual/monitorizacao-operacoes/intro)):**
 - Retenção: Policy-based (ex: 3 anos críticos, 1 ano operacional)
 - Immutability: Elasticsearch read-only index após período
 - Alertas: Elasticsearch Watcher para anomalias
@@ -253,7 +253,7 @@ SecurityEvent
 
 ## 3. Análise de Vulnerabilidades (SCA + SAST)
 
-### Princípio (Cap. 05, 07)
+### Princípio ([Cap. 05](/sbd-toe/sbd-manual/dependencias-sbom-sca/intro), [Cap. 07](/sbd-toe/sbd-manual/cicd-seguro/intro))
 Dependências e código devem ser analisados para vulnerabilidades conhecidas, integrados no CI/CD.
 
 ### Opção A: SCA + SAST com Snyk + SonarQube
@@ -285,7 +285,7 @@ jobs:
             sonarsource/sonar-scanner-cli
 ```
 
-**Conformidade Cap. 07:**
+**Conformidade [Cap. 07](/sbd-toe/sbd-manual/cicd-seguro/intro):**
 - Gate de segurança: Bloqueia merge se HIGH+
 - Reporte: SBOM gerado (`snyk sbom --format=cyclonedx`)
 - Trilho: Logs em CI/CD preservados
@@ -331,7 +331,7 @@ class SecurityScan:
         }
 ```
 
-**Conformidade Cap. 07:**
+**Conformidade [Cap. 07](/sbd-toe/sbd-manual/cicd-seguro/intro):**
 - Gate: Rejeita se CRITICAL secrets encontrados
 - Trilho: Report salvo em artefato CI/CD
 
@@ -357,7 +357,7 @@ if [ $? -ne 0 ]; then
 fi
 ```
 
-**Conformidade Cap. 07:**
+**Conformidade [Cap. 07](/sbd-toe/sbd-manual/cicd-seguro/intro):**
 - Gratuito e open-source
 - Gate de segurança integrado
 - Report em múltiplos formatos
@@ -366,7 +366,7 @@ fi
 
 ## 4. CI/CD com Gates de Segurança
 
-### Princípio (Cap. 07)
+### Princípio ([Cap. 07](/sbd-toe/sbd-manual/cicd-seguro/intro))
 Pipeline deve incluir validações de segurança, aprovações formais, e trilho auditoria completo.
 
 ### Opção A: GitHub Actions
@@ -410,7 +410,7 @@ jobs:
           docker push myregistry/app:${{ github.sha }}
 ```
 
-**Trilho Auditoria (Cap. 12):**
+**Trilho Auditoria ([Cap. 12](/sbd-toe/sbd-manual/monitorizacao-operacoes/intro)):**
 ```
 Workflow logs (7 anos retention)
 ├── SAST: SonarQube scan results
@@ -481,7 +481,7 @@ deploy:
     - main
 ```
 
-**Segregação Responsabilidades (Cap. 14):**
+**Segregação Responsabilidades ([Cap. 14](/sbd-toe/sbd-manual/governanca-contratacao/intro)):**
 - SAST/SCA: Automático
 - Secrets: Automático
 - Approval: Manual (via UI)
@@ -493,11 +493,11 @@ deploy:
 
 | Dimensão | Princípio (SbD-ToE) | Opção A | Opção B | Opção C |
 |----------|---|---|---|---|
-| **IaC** | Cap. 08 | Terraform | CloudFormation | Helm |
-| **Logs** | Cap. 12 | ELK | Datadog | Azure Sentinel |
-| **SCA** | Cap. 05 | Snyk | WhiteSource | Dep-Check |
-| **SAST** | Cap. 05 | SonarQube | Custom | TruffleHog |
-| **CI/CD** | Cap. 07 | GitHub Actions | GitLab CI | Jenkins |
+| **IaC** | [Cap. 08](/sbd-toe/sbd-manual/iac-infraestrutura/intro) | Terraform | CloudFormation | Helm |
+| **Logs** | [Cap. 12](/sbd-toe/sbd-manual/monitorizacao-operacoes/intro) | ELK | Datadog | Azure Sentinel |
+| **SCA** | [Cap. 05](/sbd-toe/sbd-manual/dependencias-sbom-sca/intro) | Snyk | WhiteSource | Dep-Check |
+| **SAST** | [Cap. 05](/sbd-toe/sbd-manual/dependencias-sbom-sca/intro) | SonarQube | Custom | TruffleHog |
+| **CI/CD** | [Cap. 07](/sbd-toe/sbd-manual/cicd-seguro/intro) | GitHub Actions | GitLab CI | Jenkins |
 
 **Nenhuma combinação é "correta"** - cada organização escolhe conforme:
 - Arquitetura existente

@@ -55,7 +55,7 @@ Cada aplicação deve ter um **repositório de conformidade**, com:
 
 ---
 
-## 📡 Supervisão, KPIs e Escalada
+## 📡 Supervisão, KPIs e Escalonamento
 
 - O estado das práticas deve ser **consolidado em dashboards operacionais** com:
 

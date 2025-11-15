@@ -64,7 +64,7 @@ Exceções são submetidas com:
 
 Após merge:
 
-1. O código é deployado em **staging isolado**, com variáveis seguras (Cap. 07 e Cap. 09);
+1. O código é deployed em **staging isolado**, com variáveis seguras (Cap. 07 e Cap. 09);
 
 2. São executados testes combinados:
 

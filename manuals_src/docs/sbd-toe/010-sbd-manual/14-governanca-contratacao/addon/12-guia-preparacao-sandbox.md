@@ -316,7 +316,7 @@ Validation:
 Logging:
   - Todos os logins capturados (timestamp, IP)
   - Git commits/pushes auditados
-  - K8s API calls logados
+  - K8s API calls em audit log
   - Secret access tracked
   - Alertas se comportamento suspeito:
       - Download of /etc/shadow (Linux)

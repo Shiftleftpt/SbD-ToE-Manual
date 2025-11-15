@@ -92,7 +92,7 @@ Reconhecer estes riscos desde início ajuda a construir sistemas mais robustos.
 - Uma equipa DevOps envia *logs* de Kubernetes para um SIEM como Splunk ou Elastic, normalizados em ECS.  
 - AppSec define como eventos críticos *logins falhados repetidos*, *acessos root inesperados* e *criação de pods privilegiados*.  
 - SREs configuram Prometheus/Grafana para alertar sobre degradação de serviço associada a ataques DoS.  
-- O SOC integra SOAR para bloquear automaticamente IPs maliciosos ou rodar credenciais comprometidas.  
+- O SOC integra SOAR para bloquear automaticamente IPs maliciosos ou fazer rotate de credenciais comprometidas.  
 
 Estes exemplos ilustram que monitorização não é abstrata: são práticas já aplicadas em milhares de organizações e exigidas por reguladores.
 

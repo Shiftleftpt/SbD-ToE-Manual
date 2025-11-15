@@ -230,7 +230,7 @@ git clone https://github.com/[org]/[private-repo]
 |------|-------|-----------|-------------|
 | **Confirmação: Todos acessos revogados** | DevOps | [ ] | Cross-check todas plataformas |
 | **Confirmação: Todas devices recuperados** | IT | [ ] | Serial numbers matched, wiping initiated |
-| **Confirmação: Contractor não consegue logar em nenhuma plataforma** | AppSec | [ ] | Teste login (deve falhar) em 5 plataformas random |
+| **Confirmação: Contractor não consegue fazer login em nenhuma plataforma** | AppSec | [ ] | Teste login (deve falhar) em 5 plataformas random |
 | **Backup de dados verificado** | DevOps | [ ] | Archive integridade validada (checksums OK) |
 | **Sign-off form assinado** | Security Champion | [ ] | Todas as partes assinaram |
 
@@ -332,7 +332,7 @@ Se qualquer uma das seguintes ocorrer, **ESCALATE IMEDIATAMENTE**:
 
 | Red Flag | Ação | Owner |
 |----------|------|-------|
-| **Contractor tenta logar após T+0** | Escalate CISO, investigate login attempt | Security Monitoring |
+| **Contractor tenta fazer login após T+0** | Escalate CISO, investigate login attempt | Security Monitoring |
 | **Dados faltam no backup** | Investigate theft/deletion, forensics | DevOps + CISO |
 | **Secrets não foram rotacionados a tempo** | Rotate AGORA, investigate why | AppSec + DevOps |
 | **Equipamento "desaparecido"** | Escalate HR + Legal, possibly theft | Facilities + HR |

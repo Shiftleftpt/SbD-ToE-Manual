@@ -1,5 +1,5 @@
 ---
-id: sbd-toe-4-cra-playbook
+id: playbook
 title: "SbD-ToE 4 CRA: Playbook de Implementação"
 description: Roadmap prático para alinhar o programa SbD-ToE aos requisitos técnicos do Cyber Resilience Act
 tags: [playbook, cra, implementacao, roadmap, produtos-digitais]
@@ -14,18 +14,20 @@ Objetivo: Transformar requisitos CRA em ações concretas usando controlos exist
 
 Princípio: Reutilizar > Inventar. Muitas capacidades (SBOM, patching, testes) já existem — ajusta-se formato, rigor e evidência.
 
+> 📚 **Recursos de Suporte:** Para templates práticos e exemplos de implementação, consultar [Exemplo-Playbook](/sbd-toe/cross-check-normativo/exemplo-playbook/indice) com toolchains, KPIs, RACI e processos de vulnerability handling reutilizáveis.
+
 ## Mapa Rápido CRA → SbD-ToE
 
 | Área CRA | SbD-ToE | Ação | Evidência |
 |----------|---------|------|----------|
-| Ciclo de Vida Seguro | Cap. 02, 06, 07, 11 | Política ciclo de vida + gates | Política aprovada; pipeline YAML |
-| Vulnerability Handling | Cap. 05, 10, 12 | Processo triagem + SLA | Registos triagem; métricas SLA |
-| SBOM | Cap. 05 | Geração contínua + export | Ficheiros CycloneDX por release |
-| Patching Rápido | Cap. 05, 07 | Workflow patch automático | Pull requests patch + tempos |
-| Reporte Exploração | Cap. 12 | Runbook exploração ativa | Runbook + JSON exemplo |
-| Documentação Segurança | Cap. 04, 11 | Guia de segurança do produto | PDF/Markdown guia publicado |
-| Exceções | Cap. 02 addon 08, 14 | Política exceções CRA | Registos exceções + aprovadores |
-| Cadeia Fornecimento | Cap. 05, 09, 14 | Checklist supply chain físico | Checklist preenchida |
+| Ciclo de Vida Seguro | [Cap. 02](/sbd-toe/sbd-manual/requisitos-seguranca/intro), [Cap. 06](/sbd-toe/sbd-manual/desenvolvimento-seguro/intro), [Cap. 07](/sbd-toe/sbd-manual/cicd-seguro/intro), [Cap. 11](/sbd-toe/sbd-manual/deploy-seguro/intro) | Política ciclo de vida + gates | Política aprovada; pipeline YAML |
+| Vulnerability Handling | [Cap. 05](/sbd-toe/sbd-manual/dependencias-sbom-sca/intro), [Cap. 10](/sbd-toe/sbd-manual/testes-seguranca/intro), [Cap. 12](/sbd-toe/sbd-manual/monitorizacao-operacoes/intro) | Processo triagem + SLA | Registos triagem; métricas SLA |
+| SBOM | [Cap. 05](/sbd-toe/sbd-manual/dependencias-sbom-sca/intro) | Geração contínua + export | Ficheiros CycloneDX por release |
+| Patching Rápido | [Cap. 05](/sbd-toe/sbd-manual/dependencias-sbom-sca/intro), [Cap. 07](/sbd-toe/sbd-manual/cicd-seguro/intro) | Workflow patch automático | Pull requests patch + tempos |
+| Reporte Exploração | [Cap. 12](/sbd-toe/sbd-manual/monitorizacao-operacoes/intro) | Runbook exploração ativa | Runbook + JSON exemplo |
+| Documentação Segurança | [Cap. 04](/sbd-toe/sbd-manual/arquitetura-segura/intro), [Cap. 11](/sbd-toe/sbd-manual/deploy-seguro/intro) | Guia de segurança do produto | PDF/Markdown guia publicado |
+| Exceções | [Cap. 02](/sbd-toe/sbd-manual/requisitos-seguranca/intro) addon 08, [Cap. 14](/sbd-toe/sbd-manual/governanca-contratacao/intro) | Política exceções CRA | Registos exceções + aprovadores |
+| Cadeia Fornecimento | [Cap. 05](/sbd-toe/sbd-manual/dependencias-sbom-sca/intro), [Cap. 09](/sbd-toe/sbd-manual/containers-runtime/intro), [Cap. 14](/sbd-toe/sbd-manual/governanca-contratacao/intro) | Checklist supply chain físico | Checklist preenchida |
 
 ---
 
@@ -201,8 +203,21 @@ Escalação: Crítico → Board; High → CISO/AppSec; Medium/Low → AppSec.
 
 ---
 
+## Recursos Práticos de Implementação
+
+Para suporte concreto na implementação deste playbook, consultar os seguintes exemplos reutilizáveis:
+
+- 🛠️ **[Opções de Toolchain](../exemplo-playbook/exemplo-toolchain-options)** - Comparação de ferramentas SCA, SBOM e vulnerability management
+- 📊 **[KPIs e Targets](../exemplo-playbook/exemplo-kpis-targets)** - Métricas de patching e SBOM coverage adaptáveis ao CRA
+- 👥 **[RACI e Governance](../exemplo-playbook/exemplo-raci-governance)** - Matrizes de responsabilidades para vulnerability handling
+- 📝 **[Relatório de Incidentes](../exemplo-playbook/exemplo-relatorio-incidentes)** - Template adaptável para reporte de exploração ativa (CRA)
+
+Estes recursos demonstram implementações práticas das abstenções deliberadas do SbD-ToE.
+
+---
+
 ## Referências
-- Cross-Check CRA (05-cra.md)
+- [Análise normativa CRA](intro)
 - SbD-ToE Capítulos 01–14
 - ENISA: Vulnerability Disclosure Guidelines
 - ISO/IEC 29147 & 30111
@@ -210,4 +225,4 @@ Escalação: Crítico → Board; High → CISO/AppSec; Medium/Low → AppSec.
 
 **Versão:** 1.0  
 **Data:** Novembro 2025  
-**Nota:** Este playbook complementa `05-cra.md` com abordagem sequencial prática
+**Nota:** Este playbook complementa a análise normativa CRA com abordagem sequencial prática

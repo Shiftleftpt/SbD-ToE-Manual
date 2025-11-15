@@ -1,5 +1,5 @@
 ---
-id: sbd-toe-4-dora-playbook
+id: playbook
 title: "SbD-ToE 4 DORA: Playbook de Implementação"
 description: Roadmap prático para implementar SbD-ToE conforme requisitos DORA — mapeamento direto de artigos para ações
 tags: [playbook, dora, implementacao, roadmap]
@@ -20,17 +20,19 @@ Este playbook mapeia **requisitos DORA (Regulamento UE 2022/2554) para ações S
 - O que fazer (ação concreta)
 - Evidência regulatória
 
+> 📚 **Recursos de Suporte:** Para templates práticos e exemplos de implementação, consultar [Exemplo-Playbook](/sbd-toe/cross-check-normativo/exemplo-playbook/indice) com toolchains, KPIs, RACI e relatórios de incidentes reutilizáveis para DORA e outros frameworks.
+
 ---
 
 ## Mapa Rápido: DORA Art. → SbD-ToE
 
 | DORA Artigo | Requisito | Capítulo SbD-ToE | Ação Principal |
 |----------|-----------|-----------------|----------------|
-| **5** | Gestão de Risco TIC | Cap. 01, 14 | Classificar apps; aprovar políticas; supervisão |
-| **16** | Partilha de Ameaças | Cap. 12 | Integrar threat intelligence; acordos de partilha |
-| **18** | Reporte de Incidentes | Cap. 12, 14 | Deteção, reporte formal, documentação |
-| **19–20** | Testes de Resiliência | Cap. 10, 11 | Testes contínuos (SAST/DAST), TLPT readiness |
-| **26–28** | Gestão de Fornecedores | Cap. 05, 14 | SBOM; ciclo de vida contractors |
+| **5** | Gestão de Risco TIC | [Cap. 01](/sbd-toe/sbd-manual/classificacao-aplicacoes/intro), [Cap. 14](/sbd-toe/sbd-manual/governanca-contratacao/intro) | Classificar apps; aprovar políticas; supervisão |
+| **16** | Partilha de Ameaças | [Cap. 12](/sbd-toe/sbd-manual/monitorizacao-operacoes/intro) | Integrar threat intelligence; acordos de partilha |
+| **18** | Reporte de Incidentes | [Cap. 12](/sbd-toe/sbd-manual/monitorizacao-operacoes/intro), [Cap. 14](/sbd-toe/sbd-manual/governanca-contratacao/intro) | Deteção, reporte formal, documentação |
+| **19–20** | Testes de Resiliência | [Cap. 10](/sbd-toe/sbd-manual/testes-seguranca/intro), [Cap. 11](/sbd-toe/sbd-manual/deploy-seguro/intro) | Testes contínuos (SAST/DAST), TLPT readiness |
+| **26–28** | Gestão de Fornecedores | [Cap. 05](/sbd-toe/sbd-manual/dependencias-sbom-sca/intro), [Cap. 14](/sbd-toe/sbd-manual/governanca-contratacao/intro) | SBOM; ciclo de vida contractors |
 
 ---
 
@@ -52,7 +54,8 @@ Este playbook mapeia **requisitos DORA (Regulamento UE 2022/2554) para ações S
 3. **Definir RACI**
    - Quem aprova o quê (aprovações formais)
    - Escalations (quando elevar)
-   - Referência: [Cap. 07 - Roles](/sbd-toe/000-teory-of-everything/07-roles)
+   - Referência: [Cap. 07 - Roles](/sbd-toe/teory-of-everything/roles)
+   - 📄 **Template:** [RACI e Governance](../exemplo-playbook/exemplo-raci-governance) - Exemplos de matrizes DORA-compatíveis
 
 ---
 
@@ -86,6 +89,7 @@ Este playbook mapeia **requisitos DORA (Regulamento UE 2022/2554) para ações S
 - **Como:** SAST/SCA antes de merge; bloqueio de secrets; validação pré-deploy
 - **Trilho:** Logs auditados de quem fez o quê, quando
 - **Referência:** [Cap. 07 - CI/CD Seguro](/sbd-toe/sbd-manual/cicd-seguro/intro)
+- 📄 **Template:** [Opções de Toolchain](../exemplo-playbook/exemplo-toolchain-options) - Comparação de ferramentas CI/CD e gates
 
 #### 3.2 Análise de Dependências (CRÍTICO PARA DORA)
 - **O que:** SBOM (Software Bill of Materials) + SCA
@@ -115,6 +119,7 @@ Este playbook mapeia **requisitos DORA (Regulamento UE 2022/2554) para ações S
 - **Escalação:** Conforme plano (criticidade)
 - **Documentação:** O quê, quando, ações, aprendizagens
 - **Referência:** [Cap. 12 - Monitorização e Operações](/sbd-toe/sbd-manual/monitorizacao-operacoes/intro)
+- 📄 **Template:** [Relatório de Incidentes](../exemplo-playbook/exemplo-relatorio-incidentes) - Template DORA-compatível para reporte formal
 
 #### 4.3 Partilha de Ameaças
 - **O que:** Recolher e disseminar informação sobre ameaças/incidentes
@@ -127,7 +132,7 @@ Este playbook mapeia **requisitos DORA (Regulamento UE 2022/2554) para ações S
 **DORA Art. 26–28** — Gestão de fornecedores
 
 #### 5.1 Fornecedores de Componentes (SBOM)
-**Já em Fase 3.2** — Cap. 05 cobre isto com SCA + SBOM
+**Já em Fase 3.2** — [Cap. 05](/sbd-toe/sbd-manual/dependencias-sbom-sca/intro) cobre isto com SCA + SBOM
 
 #### 5.2 Fornecedores Contratuais
 - **O que:** Pessoas/empresas contratadas (contractors, outsourcing)
@@ -183,16 +188,16 @@ A lista abaixo permite validar o alinhamento do programa SbD-ToE com os requisit
 
 | Capítulo | DORA Artigos | O Que Faz |
 |----------|-------------|----------|
-| **Cap. 01** | Art. 5 | Classificação de apps por risco (L1–L3) |
-| **Cap. 02** | Art. 5, 19 | Requisitos de segurança mínimos por nível |
-| **Cap. 03** | Art. 19–20 | Threat modeling para identificar ameaças realistas |
-| **Cap. 05** | Art. 26–28 | SBOM, SCA, gestão de dependências de software |
-| **Cap. 07** | Art. 19–20 | CI/CD seguro, gates, trilho auditado |
-| **Cap. 10** | Art. 19–20 | Testes contínuos (SAST/DAST/penetração) |
-| **Cap. 11** | Art. 19–20 | Validação pré-deploy, conformidade requisitos |
-| **Cap. 12** | Art. 16, 18 | Monitorização, deteção de incidentes, threat intel |
-| **Cap. 13** | Art. 5 | Formação de staff em SbD (exigência de supervisão) |
-| **Cap. 14** | Art. 5, 26–28 | Governança, RACI, ciclo de vida fornecedores |
+| **[Cap. 01](/sbd-toe/sbd-manual/classificacao-aplicacoes/intro)** | Art. 5 | Classificação de apps por risco (L1–L3) |
+| **[Cap. 02](/sbd-toe/sbd-manual/requisitos-seguranca/intro)** | Art. 5, 19 | Requisitos de segurança mínimos por nível |
+| **[Cap. 03](/sbd-toe/sbd-manual/threat-modeling/intro)** | Art. 19–20 | Threat modeling para identificar ameaças realistas |
+| **[Cap. 05](/sbd-toe/sbd-manual/dependencias-sbom-sca/intro)** | Art. 26–28 | SBOM, SCA, gestão de dependências de software |
+| **[Cap. 07](/sbd-toe/sbd-manual/cicd-seguro/intro)** | Art. 19–20 | CI/CD seguro, gates, trilho auditado |
+| **[Cap. 10](/sbd-toe/sbd-manual/testes-seguranca/intro)** | Art. 19–20 | Testes contínuos (SAST/DAST/penetração) |
+| **[Cap. 11](/sbd-toe/sbd-manual/deploy-seguro/intro)** | Art. 19–20 | Validação pré-deploy, conformidade requisitos |
+| **[Cap. 12](/sbd-toe/sbd-manual/monitorizacao-operacoes/intro)** | Art. 16, 18 | Monitorização, deteção de incidentes, threat intel |
+| **[Cap. 13](/sbd-toe/sbd-manual/formacao-onboarding/intro)** | Art. 5 | Formação de staff em SbD (exigência de supervisão) |
+| **[Cap. 14](/sbd-toe/sbd-manual/governanca-contratacao/intro)** | Art. 5, 26–28 | Governança, RACI, ciclo de vida fornecedores |
 
 ---
 
@@ -212,6 +217,19 @@ Se consegues responder SIM a isto, estás alinhado com DORA:
 
 **Se 8/9:** Estás pronto para regulador.  
 **Se `<`5/9:** Prioriza governação + classificação + monitorização.
+
+---
+
+## Recursos Práticos de Implementação
+
+Para suporte concreto na implementação deste playbook, consultar os seguintes exemplos reutilizáveis:
+
+- 🛠️ **[Opções de Toolchain](../exemplo-playbook/exemplo-toolchain-options)** - Comparação de ferramentas (IaC, logs, SCA, SAST, CI/CD) com exemplos de configuração
+- 📊 **[KPIs e Targets](../exemplo-playbook/exemplo-kpis-targets)** - Métricas de segurança por perfil organizacional (fintech vs. banco, pequena vs. grande empresa)
+- 👥 **[RACI e Governance](../exemplo-playbook/exemplo-raci-governance)** - Matrizes de responsabilidades e aprovações DORA-compatíveis
+- 📝 **[Relatório de Incidentes](../exemplo-playbook/exemplo-relatorio-incidentes)** - Templates de reporte formal com campos DORA, exemplos de classificação e escalação
+
+Estes recursos são **reutilizáveis para múltiplos frameworks** (DORA, NIS2, ISO 27001, CRA) e demonstram como implementar as abstenções deliberadas do SbD-ToE (o manual não prescreve ferramentas específicas, os exemplos mostram opções práticas).
 
 **Responsável:** Security/SRE  
 **Evidência:** Logs de incidentes, plano de resposta
@@ -252,7 +270,7 @@ A ausência de formalização pode comprometer a conformidade regulatória e exp
 
 Sugere-se a seguinte abordagem para garantir conformidade e maturidade contínua:
 
-1. Audit de conformidade atual: Verificar Cap. 01–14 do SbD-ToE contra requisitos DORA
+1. Audit de conformidade atual: Verificar [Cap. 01](/sbd-toe/sbd-manual/classificacao-aplicacoes/intro)–[Cap. 14](/sbd-toe/sbd-manual/governanca-contratacao/intro) do SbD-ToE contra requisitos DORA
 2. Definir roadmap: Sequenciar fases conforme contexto organizacional
 3. Implementar: Iterar conforme planeado
 4. Validar: Demonstrar conformidade em auditoria
@@ -264,7 +282,7 @@ Documentação completa: Ver capítulos SbD-ToE 01–14 para detalhe técnico e 
 ## Referências
 
 - **SbD-ToE Manual:** Capítulos 01–14 (detalhe técnico por domínio)
-- **Cross-Check DORA:** [002 - dora.md](/sbd-toe/002-cross-check-normativo/dora) (análise normativa completa)
+- **Cross-Check DORA:** [Análise normativa completa](/sbd-toe/cross-check-normativo/dora/intro)
 - **Regulamento DORA:** UE 2022/2554
 - **Frameworks de Referência:** NIST SP 800-53, OWASP SAMM, BSIMM, SSDF
 
@@ -272,4 +290,4 @@ Documentação completa: Ver capítulos SbD-ToE 01–14 para detalhe técnico e 
 
 **Versão:** 1.1 (Simplificado, alinhado com DORA)  
 **Data:** Novembro 2025  
-**Nota:** Este playbook complementa `002-cross-check-normativo/dora.md` com implementação prática
+**Nota:** Este playbook complementa a [análise normativa DORA](intro) com implementação prática

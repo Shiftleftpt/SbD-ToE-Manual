@@ -2,8 +2,8 @@
 id: aplicacao-lifecycle
 title: Como Fazer
 description: Como aplicar as práticas de CI/CD seguro ao longo do ciclo de vida da aplicação, com proporcionalidade por risco, user stories normalizadas e evidências auditáveis
-tags: [cicd, devsecops, pipelines, segurança, proveniência, risco, rastreabilidade]
-sidebar_position: 15
+tags: [tipo:aplicacao, ciclo-vida, cicd, devsecops, pipelines, seguranca, rastreabilidade]
+genia: us-format-normalization
 ---
 
 # 📅 Aplicação no Ciclo de Vida - CI/CD Seguro
@@ -19,14 +19,14 @@ Só assim a segurança em CI/CD deixa de ser teórica e passa a ser **prática o
 A segurança em pipelines não acontece apenas quando algo corre mal - ela é parte do seu ADN desde o primeiro commit.  
 Cada vez que se cria, altera ou promove um pipeline, existem triggers que exigem controlos específicos:
 
-| Momento gatilho                                   | Objetivo de segurança                                | Papéis principais        |
+| Momento *trigger*                                 | Objetivo de segurança                                | Papéis principais        |
 |--------------------------------------------------|------------------------------------------------------|--------------------------|
-| Criação ou refactor do pipeline                   | Introduzir controlos base (proteção, scanners)       | 👨‍💻 Developers, ⚙️ DevOps         |
-| Alteração de tooling/infra (runners, secrets)     | Rever isolamento, injeção de segredos e permissões   | ⚙️ DevOps, 🔐 AppSec           |
-| Introdução/atualização de scanners                | Aumentar cobertura e gates proporcionais ao risco    | 👨‍💻 Developers, 🔐 AppSec         |
-| Preparação de release / promoção a produção       | Validar assinatura e proveniência dos artefactos     | ⚙️ DevOps, 🔐 AppSec           |
-| Registo de exceção (bypass de gate)               | Aprovação formal, prazos e compensações              | 📑 GRC, 📋 Auditores, 🔐 AppSec    |
-| Auditoria ou revisão periódica                    | Demonstrar rastreabilidade ponta-a-ponta             | 📑 GRC, 📋 Auditores, ⚙️ DevOps    |
+| Criação ou refactor do pipeline                   | Introduzir controlos base (proteção, scanners)       | Developers, DevOps / SRE         |
+| Alteração de tooling/infra (runners, secrets)     | Rever isolamento, injeção de segredos e permissões   | DevOps / SRE, AppSec Engineers           |
+| Introdução/atualização de scanners                | Aumentar cobertura e gates proporcionais ao risco    | Developers, AppSec Engineers         |
+| Preparação de release / promoção a produção       | Validar assinatura e proveniência dos artefactos     | DevOps / SRE, AppSec Engineers           |
+| Registo de exceção (*bypass* de gate)               | Aprovação formal, prazos e compensações              | GRC / Compliance, Auditores Internos, AppSec Engineers    |
+| Auditoria ou revisão periódica                    | Demonstrar rastreabilidade ponta-a-ponta             | GRC / Compliance, Auditores Internos, DevOps / SRE    |
 
 ---
 
@@ -37,14 +37,14 @@ Um pipeline seguro resulta da soma de esforços: do programador que submete cód
 
 | Ação operacional                                                      | Responsável  | Apoio                | Evidência/Artefactos                          |
 |-----------------------------------------------------------------------|--------------|----------------------|-----------------------------------------------|
-| Definir/alterar pipeline versionado via PR                            | 👨‍💻 Developers     | ⚙️ DevOps               | `ci-pipeline.yml`, histórico de revisão       |
-| Endurecer runners (ephemerais, não-privilegiados, segregados)         | ⚙️ DevOps       | 🔐 AppSec               | Configuração de runners, imagens base         |
-| Integrar scanners (SAST, secrets, IaC, containers, SBOM)              | 👨‍💻 Developers     | 🔐 AppSec, ⚙️ DevOps       | Relatórios de scanners, configs no pipeline   |
-| Injeção segura de segredos (OIDC, TTL curto, masked logs)             | ⚙️ DevOps       | 🔐 AppSec               | Políticas de segredos, logs de acesso         |
-| Assinar artefactos e gerar proveniência                               | ⚙️ DevOps       | 🔐 AppSec               | Assinaturas, ficheiros de proveniência        |
-| Definir políticas/gates por risco (L1–L3)                             | 🔐 AppSec       | ⚙️ DevOps, 📑 GRC          | Regras de gates, thresholds                   |
-| Registar e aprovar exceções                                           | 📑 GRC, 📋 Auditores| 🔐 AppSec               | Registo formal de exceções e aprovações       |
-| Garantir rastreabilidade ponta-a-ponta                                | ⚙️ DevOps       | 📑 GRC, 📋 Auditores        | Logs correlacionados commit→pipeline→release  |
+| Definir/alterar pipeline versionado via PR                            | Developers     | DevOps / SRE               | `ci-pipeline.yml`, histórico de revisão       |
+| Endurecer runners (ephemerais, não-privilegiados, segregados)         | DevOps / SRE       | AppSec Engineers               | Configuração de runners, imagens base         |
+| Integrar scanners (SAST, secrets, IaC, containers, SBOM)              | Developers     | AppSec Engineers, DevOps / SRE       | Relatórios de scanners, configs no pipeline   |
+| Injeção segura de segredos (OIDC, TTL curto, masked logs)             | DevOps / SRE       | AppSec Engineers               | Políticas de segredos, logs de acesso         |
+| Assinar artefactos e gerar proveniência                               | DevOps / SRE       | AppSec Engineers               | Assinaturas, ficheiros de proveniência        |
+| Definir políticas/gates por risco (L1–L3)                             | AppSec Engineers       | DevOps / SRE, GRC / Compliance          | Regras de gates, thresholds                   |
+| Registar e aprovar exceções                                           | GRC / Compliance, Auditores Internos| AppSec Engineers               | Registo formal de exceções e aprovações       |
+| Garantir rastreabilidade ponta-a-ponta                                | DevOps / SRE       | GRC / Compliance, Auditores Internos        | Logs correlacionados commit→pipeline→release  |
 
 ---
 
@@ -61,7 +61,7 @@ Sem controlo sobre o repositório, qualquer pipeline é vulnerável.
 
 :::userstory
 **História.**   
-Como **👨‍💻 Developer**, quero que todas as alterações ao repositório sejam protegidas por PR e revisão obrigatória, para garantir integridade.
+Como **Developers**, quero que todas as alterações ao repositório sejam protegidas por PR e revisão obrigatória, para garantir integridade.
 
 **Critérios de aceitação (BDD).**
 - Dado que existe um repositório protegido  
@@ -97,7 +97,7 @@ Pipelines inseguros são alvos privilegiados de ataque.
 
 :::userstory
 **História.**   
-Como **⚙️ DevOps**, quero pipelines versionados e aprovados por PR, para evitar alterações não auditadas.
+Como **DevOps / SRE**, quero pipelines versionados e aprovados por PR, para evitar alterações não auditadas.
 
 **Critérios de aceitação (BDD).**
 - Dado que altero pipeline  
@@ -133,7 +133,7 @@ Detetar cedo é mais barato e eficaz.
 
 :::userstory
 **História.**   
-Como **👨‍💻 Developer**, quero que o pipeline execute scanners de segurança, para impedir falhas graves em produção.
+Como **Developers**, quero que o pipeline execute scanners de segurança, para impedir falhas graves em produção.
 
 **Critérios de aceitação (BDD).**
 - Dado que submeto código  
@@ -169,7 +169,7 @@ Segredos estáticos expõem a organização.
 
 :::userstory
 **História.**   
-Como **⚙️ DevOps**, quero segredos injetados por OIDC com TTL curto, para reduzir risco de abuso.
+Como **DevOps / SRE**, quero segredos injetados por OIDC com TTL curto, para reduzir risco de abuso.
 
 **Critérios de aceitação (BDD).**
 - Dado que pipeline arranca  
@@ -204,7 +204,7 @@ Runners inseguros comprometem todo o ecossistema.
 
 :::userstory
 **História.**   
-Como **⚙️ DevOps**, quero runners ephemerais e segregados, para reduzir persistência pós-compromisso.
+Como **DevOps / SRE**, quero runners ephemerais e segregados, para reduzir persistência pós-compromisso.
 
 **Critérios de aceitação (BDD).**
 - Dado que job termina  
@@ -239,7 +239,7 @@ Artefactos não assinados perdem legitimidade.
 
 :::userstory
 **História.**   
-Como **⚙️ DevOps**, quero que todos os artefactos sejam assinados e tenham proveniência validada, para garantir confiança.
+Como **DevOps / SRE**, quero que todos os artefactos sejam assinados e tenham proveniência validada, para garantir confiança.
 
 **Critérios de aceitação (BDD).**
 - Dado que artefacto é produzido  
@@ -258,12 +258,19 @@ Como **⚙️ DevOps**, quero que todos os artefactos sejam assinados e tenham p
 **🧾 Artefactos & evidências.**  
 Assinaturas digitais; ficheiros de proveniência; logs de promoção; auditoria de build.  
 
+> **Referência:** Este US complementa [Cap 05-US-02: SBOM em cada build]
+> ao integrar assinatura e proveniência no pipeline de CI/CD. SBOM e assinatura devem ser geradas conjuntamente como artefactos da build.
+
 **⚖️ Proporcionalidade.**  
 | Nível | Obrigatório? | Ajustes |
 |---|---|---|
 | L1 | Sim | Assinatura manual recomendada |
 | L2 | Sim | Assinatura automática e validação SLSA L2 |
 | L3 | Sim | Validação obrigatória SLSA L3 e bloqueio automático |
+
+> **Padrão Comum:** Assinatura e verificação de proveniência ocorrem em **múltiplos contextos** (CI/CD, IaC, imagens, deploy).
+> Este US foca o contexto de **pipeline de CI/CD**; ver também **Cap 08-US-09** (módulos IaC),
+> **Cap 09-US-03** (imagens), **Cap 11-US-01** (deploy). Todos aplicam o **mesmo princípio** (sign → validate → use).
 
 ---
 
@@ -274,7 +281,7 @@ Nem todas as apps exigem o mesmo rigor.
 
 :::userstory
 **História.**   
-Como **🔐 AppSec**, quero gates distintos por L1–L3, para aplicar segurança proporcional.
+Como **AppSec Engineers**, quero gates distintos por L1–L3, para aplicar segurança proporcional.
 
 **Critérios de aceitação (BDD).**
 - Dado que aplicação é L3  
@@ -309,7 +316,7 @@ Cobertura limitada cria pontos cegos.
 
 :::userstory
 **História.**   
-Como **🔐 AppSec**, quero scanners de containers e SBOM em pipelines, para cobrir supply chain.
+Como **AppSec Engineers**, quero scanners de containers e SBOM em pipelines, para cobrir supply chain.
 
 **Critérios de aceitação (BDD).**
 - Dado que imagem é construída  
@@ -344,7 +351,7 @@ Sem rastreio, auditoria é impossível.
 
 :::userstory
 **História.**   
-Como **📑 GRC**, quero rastrear commit→pipeline→release, para suportar auditorias.
+Como **GRC / Compliance**, quero rastrear commit→pipeline→release, para suportar auditorias.
 
 **Critérios de aceitação (BDD).**
 - Dado que ocorre incidente  
@@ -379,7 +386,7 @@ Exceções mal geridas tornam-se risco estrutural.
 
 :::userstory
 **História.**   
-Como **📑 GRC**, quero exceções registadas, aprovadas e temporárias, para não acumular dívida técnica.
+Como **GRC / Compliance**, quero exceções registadas, aprovadas e temporárias, para não acumular dívida técnica.
 
 **Critérios de aceitação (BDD).**
 - **Dado** que exceção é pedida  
@@ -399,6 +406,9 @@ Como **📑 GRC**, quero exceções registadas, aprovadas e temporárias, para n
 **🧾 Artefactos & evidências.**  
 Registo de exceções; logs de aprovação; relatórios de revisão periódica; prazos automáticos no sistema de GRC.  
 
+> **Referência:** Este US implementa [Cap 14-US-01: Processo formal de exceções]
+> no contexto de pipeline CI/CD. Aprovação dupla, TTL e revalidação automática devem seguir a política master de exceções em Cap 14.
+
 **⚖️ Proporcionalidade.**  
 | Nível | Obrigatório? | Ajustes |
 |---|---|---|
@@ -408,18 +418,129 @@ Registo de exceções; logs de aprovação; relatórios de revisão periódica; 
 
 ---
 
+### US-11 – Testes de segurança dinâmicos (DAST)
+
+**Contexto.**  
+Testes estáticos apenas cobrem parcialmente; DAST em staging valida comportamento real.
+
+:::userstory
+**História.**   
+Como **AppSec Engineers**, quero executar DAST em ambiente de staging após deployment, para validar vulnerabilidades comportamentais e corrigir antes de produção.
+
+**Critérios de aceitação (BDD).**
+- **Dado** que nova build é promovida a staging  
+  **Quando** inicia pipeline DAST  
+  **Então** são executadas análises de autenticação, autorização, injection e XSS.  
+- **Dado** que DAST encontra falha High  
+  **Quando** resultado é disponibilizado  
+  **Então** bloqueia promoção a produção até correção validada.  
+
+**Checklist.**
+- [ ] DAST integrado no pipeline  
+- [ ] Credenciais de teste segregadas  
+- [ ] Relatório correlacionado com commit  
+- [ ] Bloqueio automático em High/Critical  
+:::
+
+**🧾 Artefactos & evidências.**  
+Relatórios DAST; logs de execução; evidências de correção; matriz de rastreabilidade.  
+
+**⚖️ Proporcionalidade.**  
+| Nível | Obrigatório? | Ajustes |
+|---|---|---|
+| L1 | Opcional | DAST manual trimestral |
+| L2 | Sim | DAST em staging pré-release |
+| L3 | Sim | DAST contínuo com bloqueio automático e retry pós-correção |
+
+---
+
+### US-12 – Métricas e conformidade organizacional
+
+**Contexto.**  
+Sem visibilidade centralizada, risco acumula-se invisível.
+
+:::userstory
+**História.**   
+Como **Gestão Executiva / CISO**, quero visualizar dashboard de métricas de CI/CD (cobertura de scanners, exceções ativas, gate blocks, tempo de remediação), para decisão informada e ação corretiva.
+
+**Critérios de aceitação (BDD).**
+- **Dado** que pipeline executa  
+  **Quando** eventos ocorrem (merge, gate block, exceção)  
+  **Então** são automaticamente registados em base central com timestamp e atores.  
+- **Dado** que dashboard é consultado  
+  **Quando** métricas são renderizadas  
+  **Então** permitem slicing por project, team, período, severidade.  
+
+**Checklist.**
+- [ ] Eventos centralizados por telemetria  
+- [ ] Dashboard com KPIs (cobertura, MTTR, compliance rate)  
+- [ ] Alertas automáticos em anomalias  
+- [ ] Relatórios mensais para GRC  
+:::
+
+**🧾 Artefactos & evidências.**  
+Dashboard de métricas; logs centralizados; relatórios de conformidade; alertas gerados.  
+
+**⚖️ Proporcionalidade.**  
+| Nível | Obrigatório? | Ajustes |
+|---|---|---|
+| L1 | Opcional | Relatórios manuais trimestrais |
+| L2 | Sim | Dashboard com KPIs principais, atualizado diariamente |
+| L3 | Sim | Dashboard em tempo real com alertas automáticos e previsões de risco |
+
+---
+
+### US-13 – Validação de integridade de imagens base
+
+**Contexto.**  
+Imagens base comprometidas propagam risco a todo o ecossistema.
+
+:::userstory
+**História.**   
+Como **DevOps / SRE**, quero validar que imagens base não foram alteradas (hash, assinatura, drift) e correlacionar com CVEs, para evitar supply chain comprometido.
+
+**Critérios de aceitação (BDD).**
+- **Dado** que imagem base é utilizada  
+  **Quando** pipeline inicia  
+  **Então** hash é validado contra registry confiável.  
+- **Dado** que CVE novo é publicado  
+  **Quando** afeta imagem em uso  
+  **Então** alerta é criado e equipa é notificada para ação.  
+
+**Checklist.**
+- [ ] Hash de imagens base armazenado  
+- [ ] Validação automática no pull  
+- [ ] Rejeição se mismatch detectado  
+- [ ] Correlação contínua com CVE feeds  
+:::
+
+**🧾 Artefactos & evidências.**  
+Hashes de imagens; logs de validação; relatórios de drift; correção de imagens.  
+
+**⚖️ Proporcionalidade.**  
+| Nível | Obrigatório? | Ajustes |
+|---|---|---|
+| L1 | Opcional | Validação manual mensal |
+| L2 | Sim | Validação automática no pull com log |
+| L3 | Sim | Validação + assinatura de imagens + alertas automáticos em drift ou CVE |
+
+---
+
 ## 📦 Artefactos esperados
 
 Cada prática deixa pegadas técnicas. Sem elas, não há prova de conformidade:
 
 | Artefacto / Evidência                | Dono             | Observações                        |
 |-------------------------------------|------------------|------------------------------------|
-| `ci-pipeline.yml`                   | 👨‍💻 Developers    | Versionado via PR                  |
-| Assinaturas + Proveniência (SLSA)   | ⚙️ DevOps         | Validadas como gate                |
-| Relatórios de scanners              | 👨‍💻 Dev / 🔐 AppSec | Thresholds definidos               |
-| SBOM por build                      | 🔐 AppSec         | Anexado ao artefacto               |
-| Registo de exceções                 | 📑 GRC / 📋 Auditoria | Inclui prazo e compensações        |
-| Logs de execuções/releases          | ⚙️ DevOps         | IDs de correlação armazenados      |
+| `ci-pipeline.yml`                   | Developers    | Versionado via PR (US-01, US-02)                  |
+| Assinaturas + Proveniência (SLSA)   | DevOps / SRE         | Validadas como gate (US-06)               |
+| Relatórios de scanners              | Developers / AppSec Engineers | Thresholds definidos (US-03)              |
+| SBOM por build                      | AppSec Engineers         | Anexado ao artefacto (US-08)               |
+| Registo de exceções                 | GRC / Compliance / Auditores Internos | Inclui prazo e compensações (US-10)       |
+| Logs de execuções/releases          | DevOps / SRE         | IDs de correlação armazenados (US-09)      |
+| Relatórios DAST                     | AppSec Engineers         | Correlacionados com commits (US-11)       |
+| Dashboard de métricas CI/CD          | Gestão Executiva / CISO         | KPIs de conformidade (US-12)                |
+| Hashes e validação de imagens base  | DevOps / SRE         | Correlação com CVEs e drift (US-13)      |
 
 ---
 
@@ -438,6 +559,9 @@ A matriz assegura que **o esforço é proporcional ao risco**:
 | Gates por risco | Aviso                      | Bloqueio High/Critical              | Bloqueio Medium+                        |
 | Exceções        | Registo simples            | Aprovação AppSec                    | Dupla aprovação + prazo curto           |
 | Rastreabilidade | Logs básicos               | IDs correlacionados                 | Export imutável + dashboards            |
+| DAST            | Manual trimestral          | Em staging pré-release              | Contínuo com bloqueio automático        |
+| Métricas        | Relatórios manuais         | Dashboard diário com KPIs           | Dashboard tempo real + alertas          |
+| Imagens base    | Validação manual mensal    | Validação automática no pull        | + Assinatura + alertas em drift/CVE     |
 
 ---
 

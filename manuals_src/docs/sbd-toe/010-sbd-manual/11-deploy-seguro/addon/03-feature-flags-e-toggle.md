@@ -56,7 +56,7 @@ Cada toggle deve ter:
 
 - Nome único e descritivo;
 - Owner (equipa ou pessoa responsável);
-- Escopo (ambiente, grupo, tenant, região...);
+- âmbito (ambiente, grupo, tenant, região...);
 - Condição de ativação e de expiração;
 - Justificação funcional e de segurança.
 

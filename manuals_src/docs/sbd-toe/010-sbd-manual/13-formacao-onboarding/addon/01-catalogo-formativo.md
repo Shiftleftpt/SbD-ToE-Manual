@@ -56,7 +56,7 @@ A matriz define, por capítulo técnico do manual:
 | 6. Desenvolvimento Seguro  | PR seguro e validação de código        | Dev, QA             | Médio  | Revisão pública + guia comentado   |
 |                            | Common mistakes / top 5 falhas         | Dev                 | Baixo  | Quiz + exemplo de PR real          |
 | 7. CI/CD Seguro            | Pipelines com scanners                 | DevOps              | Médio  | Oficina prática + checklist        |
-|                            | Escopos de permissões em tokens        | DevOps              | Elevado| Lab + simulação de abuso           |
+|                            | âmbitos de permissões em tokens        | DevOps              | Elevado| Lab + simulação de abuso           |
 | 8. IaC Seguro              | Uso de scanners (ex: TFSec)            | DevOps, CloudEng    | Médio  | Lab com Terraform inseguro         |
 |                            | Boas práticas em pipelines IaC         | DevOps              | Médio  | PR review + clinic                 |
 | 9. *containers* & Imagens   | Dockerfiles seguros                    | Dev, DevOps         | Médio  | Lab + análise de imagem real       |

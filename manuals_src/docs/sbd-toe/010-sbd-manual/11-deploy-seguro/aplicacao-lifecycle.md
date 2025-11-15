@@ -2,8 +2,8 @@
 id: aplicacao-lifecycle
 title: Como Fazer
 description: Integração prática das práticas de release e deploy seguro no ciclo de vida de software
-tags: [ciclo de vida, deploy, release, rollback, gates, produção]
-sidebar_position: 15
+tags: [tipo:aplicacao, ciclo-vida, deploy, release, rollback, gates, producao]
+genia: us-format-normalization
 ---
 
 # 🚀 Aplicação de Deploy Seguro no Ciclo de Vida
@@ -80,29 +80,42 @@ Como **DevOps/SRE**, quero **executar deploy apenas de artefactos assinados e ve
 |------|---------|-------------|-----|
 | Build/Release | Produção de artefacto | DevOps/SRE | Cada release |
 
-**Ligações úteis.** xref:sbd-toe:cap07:intro ; xref:sbd-toe:cap11:intro  
+**Ligações úteis.** [CI/CD Seguro](/sbd-toe/sbd-manual/cicd-seguro/intro) ; [Deploy Seguro](/sbd-toe/sbd-manual/deploy-seguro/intro)  
+
+> **Padrão Comum:** Assinatura e verificação de proveniência ocorrem em **múltiplos contextos** 
+> (CI/CD, IaC, imagens container, deploy). Este US foca o contexto de **validação no deploy** onde 
+> artefactos são verificados antes de serem promovidos; ver também [Cap 07-US-06: Assinatura e 
+> proveniência em artefactos CI/CD], [Cap 08-US-09: Assinatura de módulos IaC], e [Cap 09-US-03: 
+> Assinatura de imagens container]. Todos aplicam o **mesmo princípio** (sign → validate → use).
 
 ---
 
 ### US-02 - Validação em staging antes da promoção
 
-Staging é o “ensaio geral”: sem ele, a produção torna-se campo de teste.  
+Staging é o "ensaio geral": sem ele, a produção torna-se campo de teste.  
 
 **Contexto.** Promover diretamente à produção aumenta risco de incidentes.  
 
 :::userstory
 **História.**   
-Como **QA/Testes**, quero **validar releases em staging com testes funcionais e de segurança**, para **detetar falhas antes da promoção**.  
+Como **QA/Testes**, quero **validar releases em staging com ambiente segregado, dados controlados e testes funcionais + segurança**, para **garantir readiness sem expor dados reais**.  
 
 **Critérios de aceitação (BDD).**  
-- Dado ambiente staging ativo  
-- Quando executo validações  
-- Então só versões aprovadas seguem para produção  
+- Dado environment staging idêntico a produção (mesmas versões, configuração)  
+- Quando executo validações (funcionais + DAST + SBOM check)  
+- Então apenas releases aprovadas por QA e AppSec seguem para produção  
+- E staging tem dados mascarados/fictícios (nunca dados reais)  
+- E acesso a staging é segregado (MFA, RBAC)
 
 **Checklist.**  
-- [ ] Testes funcionais executados  
+- [ ] Ambiente staging com infraestrutura equivalente a produção  
+- [ ] Dados de teste (sem dados reais, mascarados)  
+- [ ] Testes funcionais regressivos executados  
 - [ ] DAST autenticado concluído  
-- [ ] Relatório anexado à release  
+- [ ] SBOM validado (sem dependências maliciosas)  
+- [ ] Acesso segregado (MFA, permissões por papel)  
+- [ ] Relatório de validação anexado à release  
+- [ ] Aprovação formal registada (QA + AppSec)
 
 :::
 
@@ -118,7 +131,7 @@ Como **QA/Testes**, quero **validar releases em staging com testes funcionais e 
 |------|---------|-------------|-----|
 | Pré-release | Preparação para produção | QA/Testes | Cada release |
 
-**Ligações úteis.** xref:sbd-toe:cap10:intro  
+**Ligações úteis.** [Testes de Segurança](/sbd-toe/sbd-manual/testes-seguranca/intro)  
 
 ---
 
@@ -156,7 +169,7 @@ Como **AppSec**, quero **definir gates automáticos e thresholds no deploy**, pa
 |------|---------|-------------|-----|
 | Release | Promoção a produção | AppSec + DevOps | Cada release |
 
-**Ligações úteis.** xref:sbd-toe:cap07:intro ; xref:sbd-toe:cap10:intro  
+**Ligações úteis.** [CI/CD Seguro](/sbd-toe/sbd-manual/cicd-seguro/intro) ; [Testes de Segurança](/sbd-toe/sbd-manual/testes-seguranca/intro)  
 
 ---
 
@@ -194,13 +207,11 @@ Como **DevOps/SRE**, quero **rollback rápido e testado periodicamente**, para *
 |------|---------|-------------|-----|
 | Produção | Incidente ou falha | DevOps/SRE | ≤ 1h |
 
-**Ligações úteis.** xref:sbd-toe:cap12:intro  
+**Ligações úteis.** [Monitorização & Operações](/sbd-toe/sbd-manual/monitorizacao-operacoes/intro)
 
 ---
 
-### US-05 - Rastreabilidade end-to-end
-
-Se não for possível reconstituir o caminho desde o commit até ao deploy, não existe governação real.  
+### US-05 - Rastreabilidade end-to-endSe não for possível reconstituir o caminho desde o commit até ao deploy, não existe governação real.  
 
 **Contexto.** Sem rastreabilidade, não é possível auditar incidentes.  
 
@@ -232,7 +243,7 @@ Como **Gestão de Produto**, quero **garantir rastreabilidade entre commit → b
 |------|---------|-------------|-----|
 | Auditoria | Incidente ou revisão periódica | Gestão + AppSec | Anual |
 
-**Ligações úteis.** xref:sbd-toe:cap02:intro ; xref:sbd-toe:cap07:intro  
+**Ligações úteis.** [Requisitos de Segurança](/sbd-toe/sbd-manual/requisitos-seguranca/intro) ; [CI/CD Seguro](/sbd-toe/sbd-manual/cicd-seguro/intro)  
 
 ---
 
@@ -270,23 +281,295 @@ Como **DevOps/SRE**, quero **ativar monitorização pós-deploy**, para **deteta
 |------|---------|-------------|-----|
 | Pós-release | Entrada em produção | DevOps/SRE | ≤ 15 min |
 
-**Ligações úteis.** xref:sbd-toe:cap12:intro  
+**Ligações úteis.** [Monitorização & Operações](/sbd-toe/sbd-manual/monitorizacao-operacoes/intro)
 
 ---
 
-## 📦 Artefactos esperados
+### US-07 - Controlo de Execução com Feature FlagsA capacidade de ativar ou desativar funcionalidades em produção sem novo deploy é essencial para mitigar riscos e responder rapidamente a incidentes.
 
-Cada prática deve deixar um **rasto verificável**.  
+**Contexto.** Sem controlo dinâmico, cada problema requer novo deploy e rollback, amplificando impacto.
+
+:::userstory
+**História.**  
+Como **DevOps/AppSec**, quero **implementar feature flags com metadados, owner e expiração**, para **permitir ativação/desativação dinâmica de funcionalidades sem novo deploy e com rastreabilidade completa**.
+
+**Critérios de aceitação (BDD).**  
+- Dado que uma funcionalidade nova é entregue  
+- Quando a flag está ativa  
+- Então a funcionalidade é visível e controlada por regras de âmbito (ambiente, grupo, geo)  
+- E cada alteração de flag é auditada (quem, quando, porquê)  
+- E flags expiradas são automaticamente desativadas
+
+**Checklist.**  
+- [ ] Flags com metadados (owner, expiração, justificação)  
+- [ ] Flags versionadas como código (YAML/JSON)  
+- [ ] Validação de PRs com aprovação para flags críticas  
+- [ ] Logs de ativação/desativação em sistema de auditoria  
+- [ ] Kill switch configurado para funcionalidades sensíveis  
+- [ ] Testes de fallback para cada toggle crítico  
+
+:::
+
+**Artefactos & evidências.** Configuração de flags (versionada no repo), logs de auditoria, relatório de flags expiradas.
+
+**Proporcionalidade L1–L3.**  
+| L1 | L2 | L3 |
+|----|----|----|
+| Opcional | Recomendado | Obrigatório |
+
+**Integração no SDLC.**  
+| Fase | Trigger | Responsável | SLA |
+|------|---------|-------------|-----|
+| Deploy/Produção | Ativação de funcionalidade | DevOps + AppSec | Imediato |
+
+**Ligações úteis.** [Monitorização & Operações](/sbd-toe/sbd-manual/monitorizacao-operacoes/intro)
+
+---
+
+### US-08 - Gestão Segura de Segredos no DeploySegredos embebidos em artefactos criam exposição que é difícil revogar e reforçam risco de supply chain.
+
+**Contexto.** Credenciais em imagens amplificam impacto de vazamento e complicam rotação.
+
+:::userstory
+**História.**  
+Como **DevOps/AppSec**, quero **garantir que segredos nunca são embebidos em artefactos de deploy**, para **reduzir exposição e permitir rotação dinâmica sem novo deploy**.
+
+**Critérios de aceitação (BDD).**  
+- Dado um pipeline de deploy  
+- Quando artefacto é construído  
+- Então secret scanning bloqueia credenciais embebidas  
+- E credenciais são injetadas apenas em runtime via cofre de segredos  
+- E acesso a segredos é auditado com OIDC/Workload Identity  
+
+**Checklist.**  
+- [ ] Secret scanning ativo em CI (trivy, gitleaks, truffleHog)  
+- [ ] Pipeline falha se credenciais detectadas  
+- [ ] Segredos injetados via variáveis de ambiente/volumes seguros  
+- [ ] OIDC ou Workload Identity configurado (sem chaves de longa duração)  
+- [ ] Rotação de segredos documentada (TTL, política de expiração)  
+- [ ] Auditoria de acesso a segredos centralizada  
+
+:::
+
+**Artefactos & evidências.** Logs de secret scanning, configuração de injeção de segredos, relatório de auditoria de acesso.
+
+**Proporcionalidade L1–L3.**  
+| L1 | L2 | L3 |
+|----|----|----|
+| Recomendado | Obrigatório | Obrigatório + rotação automática |
+
+**Integração no SDLC.**  
+| Fase | Trigger | Responsável | SLA |
+|------|---------|-------------|-----|
+| Build/Deploy | Build de artefacto | DevOps + AppSec | Cada build |
+
+**Ligações úteis.** [CI/CD Seguro](/sbd-toe/sbd-manual/cicd-seguro/intro)  
+
+---
+
+### US-09 - Versionamento Semântico e Changelog Técnico
+
+A comunicação clara das alterações em cada release é essencial para decisões informadas sobre aceitação de risco e para auditorias pós-incidente.
+
+**Contexto.** Sem changelog estruturado, não há forma de comunicar riscos de compatibilidade ou vulnerabilidades corrigidas.
+
+:::userstory
+**História.**  
+Como **Dev/Gestão**, quero **manter versionamento semântico com changelog técnico e de segurança**, para **comunicar claramente as alterações, riscos e compatibilidade de cada release**.
+
+**Critérios de aceitação (BDD).**  
+- Dado uma release nova  
+- Quando é criada tag de versão  
+- Então versão segue semântico (MAJOR.MINOR.PATCH)  
+- E changelog lista alterações técnicas (breaking changes, CVEs corrigidas, dependências)  
+- E changelog de segurança destaca problemas resolvidos com severidade  
+
+**Checklist.**  
+- [ ] Versionamento semântico aplicado (vX.Y.Z)  
+- [ ] Changelog técnico atualizado por release  
+- [ ] Changelog de segurança destacando CVEs e mitigações  
+- [ ] Owner de release definido e registado  
+- [ ] Hash de commit e data associados à versão  
+- [ ] Documento de compatibilidade / breaking changes se aplicável  
+
+:::
+
+**Artefactos & evidências.** `CHANGELOG.md` versionado, Git tags com metadata, relatório de breaking changes.
+
+**Proporcionalidade L1–L3.**  
+| L1 | L2 | L3 |
+|----|----|----|
+| Básico | Completo + segurança | Completo + segurança + compatibilidade |
+
+**Integração no SDLC.**  
+| Fase | Trigger | Responsável | SLA |
+|------|---------|-------------|-----|
+| Release | Criação de release | Dev + Gestão | Cada versão |
+
+**Ligações úteis.** [Requisitos de Segurança](/sbd-toe/sbd-manual/requisitos-seguranca/intro)  
+
+---
+
+### US-10 - Deploy Progressivo com Estratégias Canary/Blue-Green
+
+O deploy para 100% de utilizadores simultaneamente aumenta risco de incidente generalizado. Progressividade permite detetar falhas com impacto reduzido.
+
+**Contexto.** Deploy para 100% simultaneamente amplifica impacto de qualquer falha ou regressão.
+
+:::userstory
+**História.**  
+Como **DevOps/Gestão**, quero **implementar deploy progressivo (canary, blue/green, staging rules)**, para **mitigar risco e permitir rollback rápido com impacto minimizado**.
+
+**Critérios de aceitação (BDD).**  
+- Dado uma release candidata com plano de rollout  
+- Quando inicia deploy  
+- Então a versão é promovida gradualmente (ex: 1% → 5% → 20% → 100%)  
+- E cada etapa é monitorizada antes da promoção automática ou manual  
+- E existe critério de bloqueio (latência, erros 5xx, alertas segurança)  
+- E rollback é possível em cada etapa sem impacto generalizado  
+
+**Checklist.**  
+- [ ] Estratégia de rollout documentada (Canary % ou Blue/Green com validação)  
+- [ ] Métricas de sucesso por etapa definidas (baseline vs canary)  
+- [ ] Critérios de bloqueio parametrizados (e.g., latência > 500ms = rollback automático)  
+- [ ] Testes em canary validados antes promoção para general availability  
+- [ ] Rollback automático ativado por threshold ou manual por owner  
+- [ ] Comunicação de estado de rollout em dashboard (ex: Spinnaker, Argo)  
+- [ ] Papéis de decisão claros (who approves promoção entre etapas)  
+
+:::
+
+**Artefactos & evidências.**  
+Configuração de rollout (Spinnaker, Argo Rollouts, Flagger, ou documentação manual), métricas baseline vs canary, logs de eventos de rollout, dashboard com estado em tempo real.
+
+**Proporcionalidade L1–L3.**  
+| L1 | L2 | L3 |
+|----|----|----|
+| Recomendado (manual por etapas) | Automatizado com métricas | Automatizado + threshold-triggered rollback |
+
+**Integração no SDLC.**  
+| Fase | Trigger | Responsável | SLA |
+|------|---------|-------------|-----|
+| Deploy | Promoção a produção | DevOps + QA | Per etapa ≤ 30 min |
+
+**Ligações úteis.** [Monitorização & Operações](/sbd-toe/sbd-manual/monitorizacao-operacoes/intro)
+
+---
+
+### US-11 - Validações Técnicas Pré-Deploy com Gates CondicionaisSem validações estruturadas antes de deploy, código inseguro ou não-funcional pode alcançar produção.
+
+**Contexto.** Validações inadequadas comprometem integridade de produção.
+
+:::userstory
+**História.**  
+Como **AppSec/QA**, quero **executar validações técnicas (SAST, DAST, SBOM, análise de findings) com gates condicionais por risco**, para **bloquear automaticamente releases inseguras**.
+
+**Critérios de aceitação (BDD).**  
+- Dado uma release candidata  
+- Quando pipeline de deploy inicia  
+- Então executa SAST + DAST + verificação de dependências (Semgrep, trivy, CycloneDX)  
+- E gera relatório de findings com severidade  
+- E bloqueia deploy se:
+  - L1: Críticos abertos
+  - L2: High/Critical abertos  
+  - L3: Medium+ abertos
+- E exceptuando com aprovação formal de AppSec
+
+**Checklist.**  
+- [ ] SAST configurado (SonarQube, Semgrep ou similar)  
+- [ ] DAST autenticado em staging  
+- [ ] SBOM gerado (CycloneDX, Syft) + validado  
+- [ ] Análise de dependências (OWASP Dependency Check)  
+- [ ] Findings com decisão justificada (accepted, mitigated, false positive)  
+- [ ] Gates parametrizados por risco L1–L3  
+- [ ] Exceções registadas com owner + justificativa + data de revisão  
+- [ ] Relatório de validação anexado a cada release  
+
+:::
+
+**Artefactos & evidências.**  
+Relatório SAST + DAST, SBOM (CycloneDX XML/JSON), lista de findings com status, logs de gates (bloqueios, aprovações, exceções), configuração de pipeline (versionada).
+
+**Proporcionalidade L1–L3.**  
+| L1 | L2 | L3 |
+|----|----|----|
+| SAST + Aviso | SAST + DAST + bloqueio High/Critical | SAST + DAST + bloqueio Medium+ |
+
+**Integração no SDLC.**  
+| Fase | Trigger | Responsável | SLA |
+|------|---------|-------------|-----|
+| Pre-release | Validação staging/produção | AppSec + DevOps | ≤ 30 min |
+
+**Ligações úteis.** [Testes de Segurança](/sbd-toe/sbd-manual/testes-seguranca/intro)  
+
+---
+
+### US-12 - Rollback Estruturado por Tipo (Binário, Config, BD, Infra)
+
+Nem todos os rollbacks são iguais. Sem plano específico por tipo, reversão fica manual e arriscada.
+
+**Contexto.** Rollbacks não planeados amplificam tempo de recuperação e risco de inconsistência.
+
+:::userstory
+**História.**  
+Como **DevOps/SRE**, quero **documentar e testar rollback para cada tipo de alteração (binário, config, BD, infraestrutura)**, para **reverter incidentes rapidamente com confiança**.
+
+**Critérios de aceitação (BDD).**  
+- Dado incidente em produção  
+- Quando aciono rollback  
+- Então:
+  - Se é binário: versão anterior restaurada (segundos)
+  - Se é config: feature flag desativada ou variável revertida (< 1 min)
+  - Se é BD: migração revertida ou snapshot restaurado (minutos)
+  - Se é infra: Terraform/Helm rollback ativado (minutos)
+- E rastreio de rollback registado (quem, quando, versão anterior, versão alvo)
+
+**Checklist.**  
+- [ ] Plano de rollback por tipo documentado e revisado  
+- [ ] Rollback binário: tag Git anterior identificada + testada  
+- [ ] Rollback config: feature flags ou secrets manager para revert rápido  
+- [ ] Rollback BD: script reverso ou snapshot testado  
+- [ ] Rollback infra: Terraform/Helm com estado conhecido e testado  
+- [ ] Testes de rollback executados trimestrais (evidência documentada)  
+- [ ] SLA por tipo definido e comunicado  
+- [ ] Processo de aprovação e auditoria de rollback  
+
+:::
+
+**Artefactos & evidências.**  
+Procedimentos de rollback (1 por tipo), logs de testes trimestrais, evidência de reversão em BD (migrações reversas), configuração IaC com rollback (Terraform/Helm), auditoria de rollbacks executados.
+
+**Proporcionalidade L1–L3.**  
+| L1 | L2 | L3 |
+|----|----|----|
+| Manual documentado | Automatizado (binário + config) | Automatizado todos os tipos + testado |
+
+**Integração no SDLC.**  
+| Fase | Trigger | Responsável | SLA |
+|------|---------|-------------|-----|
+| Incidente | Falha em produção | DevOps/SRE | ≤ 15 min |
+
+**Ligações úteis.** [Monitorização & Operações](/sbd-toe/sbd-manual/monitorizacao-operacoes/intro)
+
+---
+
+## 📦 Artefactos esperadosCada prática deve deixar um **rasto verificável**.  
 Estes artefactos constituem a evidência objetiva necessária para auditorias e conformidade:
 
 | Artefacto | Evidência |
 |-----------|-----------|
 | Artefacto assinado + SBOM | Proveniência validada |
-| Relatórios staging | Testes funcionais + DAST |
+| Relatórios staging | Testes funcionais + DAST + segregação de dados |
 | Configuração de gates | Pipeline versionado |
 | Logs de rollback | Evidência de reversão |
 | Rastreabilidade end-to-end | Commit → release |
 | Monitorização pós-deploy | Dashboards + alertas |
+| Configuração de feature flags | Versionada (YAML/JSON) + logs de auditoria |
+| Logs de secret scanning | Bloqueios em CI + artefactos limpos |
+| CHANGELOG.md e Git tags | Versionamento + metadata de release |
+| Configuração de rollout progressivo | Spinnaker, Argo, Flagger ou documentação com métricas |
+| Validações técnicas pré-deploy | SAST, DAST, SBOM, findings com decisão + relatório |
+| Procedimentos rollback por tipo | Manual ou IaC (Terraform/Helm) + testes trimestrais |
 
 ---
 
@@ -303,6 +586,12 @@ A proporcionalidade permite adaptar rigor sem comprometer segurança:
 | Rollback | Manual | Automatizado | Automatizado + testado |
 | Rastreabilidade | Básica | Completa | Completa + auditoria |
 | Monitorização | Básica | Crítica | Completa + resposta automática |
+| Feature flags e toggles | Opcional | Recomendado | Obrigatório |
+| Gestão de segredos (OIDC/Workload Identity) | Recomendado | Obrigatório | Obrigatório + rotação automática |
+| Versionamento semântico e changelog | Básico | Completo + segurança | Completo + segurança + compatibilidade |
+| Deploy progressivo (Canary/Blue-Green) | Recomendado (manual) | Automatizado com métricas | Automatizado + threshold-triggered rollback |
+| Validações técnicas pré-deploy | SAST + Aviso | SAST + DAST + bloqueio High/Critical | SAST + DAST + bloqueio Medium+ |
+| Rollback por tipo (binário, config, BD, infra) | Manual documentado | Automatizado (binário + config) | Automatizado todos os tipos + testado |
 
 ---
 

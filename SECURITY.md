@@ -12,7 +12,7 @@ O projeto **Security by Design – Theory of Everything (SbD-ToE)** segue práti
 
 Receberás resposta em até **72 horas**.
 
-## 🧩 Escopo
+## 🧩 âmbito
 
 - Código de build, workflows GitHub e scripts auxiliares.
 - Conteúdos Markdown e pipelines de geração de site.

@@ -1,5 +1,8 @@
 import type {Config} from '@docusaurus/types';
 import {themes as prismThemes} from 'prism-react-renderer';
+// Node-style require needed for sidebarPath (TypeScript + ESM)
+// Sidebar path: use plain string (Docusaurus will resolve). Avoid Node require to keep TS happy without @types/node.
+const sidebarPath = './sidebars-sbd-toe.ts';
 
 const config: Config = {
   
@@ -8,8 +11,8 @@ const config: Config = {
 
   favicon: 'img/brand/favicon-32.png', 
 
-  // Ativa comportamento compatível com v4 (quebra a posição do onBrokenMarkdownLinks)
-  future: { v4: true },
+  // REMOVIDO future.v4 para diagnosticar falta de hidratação Mermaid
+  // future: { v4: true },
 
   // Deploy em GitHub Pages
   url: 'https://shiftleftpt.github.io',
@@ -26,13 +29,10 @@ const config: Config = {
     locales: ['pt'],
   },
   
-  // Markdown / Mermaid
+  // Markdown / Mermaid (revert para suporte nativo)
   markdown: {
     mermaid: true,
-    // Quando future.v4=true, o onBrokenMarkdownLinks move-se para hooks
-    hooks: {
-      onBrokenMarkdownLinks: 'warn',
-    },
+
   },
   
   // Tags extra no <head> (manifest + apple-touch-icon)
@@ -47,7 +47,7 @@ const config: Config = {
     },
   ],
   
-  // ⤵️ injeta o script do Plausible em todas as páginas
+  // ⤵️ injeta apenas script de analítica (removido fallback mermaid)
   scripts: [
     {
       src: 'https://plausible.io/js/pa-vrvyYynlF73FkPELUrY4w.js',
@@ -74,7 +74,7 @@ const config: Config = {
         id: 'sbd-toe',
         path: 'docs/sbd-toe',
         routeBasePath: 'sbd-toe',
-        sidebarPath: require.resolve('./sidebars-sbd-toe.ts'),
+  sidebarPath,
         numberPrefixParser: true,
         showLastUpdateTime: false,
         showLastUpdateAuthor: false,

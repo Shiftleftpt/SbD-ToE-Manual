@@ -77,7 +77,7 @@ Este anexo apresenta, para cada requisito do Catálogo Base, o critério mínimo
 | SES-005 | Ligação da sessão ao contexto do cliente | Mudança de IP/user-agent termina sessão ou exige revalidação. |
 | SES-006 | Revogação explícita da sessão | Sessão pode ser terminada a pedido; token fica inválido imediatamente. |
 | SES-007 | Prevenção de sessões long-lived | TTL máximo configurado; sessões prolongadas não são possíveis. |
-| SES-008 | Scope, TTL e revogação de tokens JWT | Tokens JWT incluem claims de escopo, expiração, e podem ser revogados. |
+| SES-008 | Scope, TTL e revogação de tokens JWT | Tokens JWT incluem claims de âmbito, expiração, e podem ser revogados. |
 
 ---
 

@@ -49,7 +49,7 @@ O exercício de threat modeling (Cap. 03) identificou riscos como:
 
 - **Spoofing:** execução de pipelines em runners não autorizados → mitigado com labels restritos e workers dedicados.
 - **Tampering:** alteração silenciosa de templates → mitigado com PR obrigatórios e revisões.
-- **Information Disclosure:** acesso indevido a secrets → mitigado com escopo mínimo e logs validados.
+- **Information Disclosure:** acesso indevido a secrets → mitigado com âmbito mínimo e logs validados.
 - **Elevation of Privilege:** tasks inline com permissões excessivas → mitigado com revisão manual e catálogo controlado.
 
 ---

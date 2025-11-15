@@ -130,7 +130,7 @@ Cada tema agrupa requisitos com afinidade técnica e operacional, e é aplicado 
 
 ---
 
-## 📌 Nota sobre escopo e extensibilidade
+## 📌 Nota sobre âmbito e extensibilidade
 
 Este capítulo define um conjunto essencial e transversal de requisitos aplicacionais, aplicáveis à maioria dos sistemas empresariais, web e cloud-native. No entanto, aplicações com perfis técnicos específicos - como sistemas embebidos, IoT, SCADA, aplicações móveis, médicas ou industriais - poderão necessitar de requisitos e controlos adicionais.
 

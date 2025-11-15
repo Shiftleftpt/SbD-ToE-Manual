@@ -32,7 +32,7 @@ A segurança do deploy não é apenas uma questão técnica: é também uma form
 
 ## 🧭 O que cobre tecnicamente
 
-O escopo técnico do *deploy seguro* cobre os seguintes eixos principais:
+O âmbito técnico do *deploy seguro* cobre os seguintes eixos principais:
 
 - Aprovação formal e gates automáticos de release, com critérios definidos por severidade.  
 - Deploy apenas a partir de artefactos assinados, com proveniência validada e SBOM associado.  

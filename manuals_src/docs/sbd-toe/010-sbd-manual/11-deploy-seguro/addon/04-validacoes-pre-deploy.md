@@ -63,7 +63,7 @@ Aplica-se a ambientes de **QA, staging e produção**, devendo ser incorporado c
 
 - Deve existir registo de:
   - Quem aprovou o deploy
-  - Em que condições (versão, ambiente, escopo)
+  - Em que condições (versão, ambiente, âmbito)
   - Ligação a testes ou rastreabilidade de requisitos
 
 ---

@@ -197,7 +197,7 @@ Definida em `SECURITY.md`:
 | Mitigação/plano | 14 dias |
 | Divulgação pública | 30 dias ou após correção |
 
-### Escopo
+### âmbito
 
 - Código de build e workflows
 - Scripts auxiliares

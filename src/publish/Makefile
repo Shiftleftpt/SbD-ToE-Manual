@@ -19,6 +19,8 @@ help:
 	@echo ""
 	@echo "Targets disponíveis:"
 	@echo "  make web        -> update-lock + clean + prepare + install + build"
+	@echo "  make dev        -> clean + prepare + install + start (dev server)"
+	@echo "  make sync       -> rsync incremental manuals_src/ -> _out/web/"
 	@echo "  make update-lock-> atualiza package-lock.json no repo"
 	@echo "  make prepare    -> copia manuals_src/ -> _out/web/"
 	@echo "  make install    -> npm install em _out/web/"
@@ -108,7 +110,25 @@ clear:
 	rm -rf .docusaurus node_modules/.cache build
 
 .PHONY: dev
-dev: prepare install
+dev: clean prepare install
 	@echo ">> npm run start (Docusaurus dev) em $(WEB_DIR)"
 	cd "$(WEB_DIR)"; \
 	npm run start
+
+# ---------------------------------------------------------------
+# Sync incremental - atualiza _out/web quando há alterações
+# ---------------------------------------------------------------
+.PHONY: sync
+sync:
+	@echo ">> Sincronizando $(SRC_DIR) -> $(WEB_DIR)"
+	@if [ ! -d "$(SRC_DIR)" ]; then \
+	  echo "!! Origem não encontrada: $(SRC_DIR)"; exit 1; fi
+	@if [ ! -d "$(WEB_DIR)" ]; then \
+	  echo "!! $(WEB_DIR) não existe. Corre 'make dev' primeiro"; exit 1; fi
+	@if command -v rsync >/dev/null 2>&1; then \
+	  rsync -a --exclude '.git' --exclude '.docusaurus' \
+	    --exclude 'node_modules' --exclude 'build' --exclude '.DS_Store' \
+	    "$(SRC_DIR)/" "$(WEB_DIR)/"; \
+	  echo ">> Sincronização completa"; \
+	else \
+	  echo "!! rsync não encontrado"; exit 1; fi

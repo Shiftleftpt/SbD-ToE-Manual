@@ -1,5 +1,5 @@
 ---
-id: sbd-toe-4-nis2-playbook
+id: playbook
 title: "SbD-ToE 4 NIS2: Playbook de Implementação"
 description: Roadmap prático para implementar SbD-ToE conforme requisitos NIS2 — mapeamento direto de artigos para ações
 tags: [playbook, nis2, implementacao, roadmap]

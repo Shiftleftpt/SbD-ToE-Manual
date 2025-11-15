@@ -1,5 +1,5 @@
 ---
-id: convergencia-dora-nis2
+id: convergencia-dora
 title: Nota – Convergência DORA & NIS2
 description: Orientação para organizações potencialmente enquadradas simultaneamente por DORA e NIS2
 sidebar_position: 4

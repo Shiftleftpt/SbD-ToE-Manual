@@ -1,5 +1,5 @@
 ---
-id: sbd-toe-4-dora-playbook
+id: playbook
 title: "SbD-ToE 4 DORA: Playbook de Implementação"
 description: Roadmap prático para implementar SbD-ToE conforme requisitos DORA — mapeamento direto de artigos para ações
 tags: [playbook, dora, implementacao, roadmap]

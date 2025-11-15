@@ -1,5 +1,5 @@
 ---
-id: cra
+id: intro
 title: CRA - Cross-Check Normativo
 description: Análise de como o SbD-ToE cobre requisitos técnicos do Cyber Resilience Act (Produtos com Elementos Digitais)
 tags: [cross-check, cra, regulamentacao, produtos-digitais, sbom, vulnerabilidades]

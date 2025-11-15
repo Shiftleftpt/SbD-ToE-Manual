@@ -1,5 +1,5 @@
 ---
-id: indice-exemplos-playbook
+id: indice
 title: Índice de Exemplos do Playbook
 description: Guia rápido aos ficheiros de suporte com exemplos práticos (reutilizáveis para todos os normativos)
 tags: [playbook, exemplos, indice, dora, nis2, iso27001]

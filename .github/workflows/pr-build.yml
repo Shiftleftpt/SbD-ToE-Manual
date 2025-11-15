@@ -1,0 +1,62 @@
+name: PR — Build and Tests
+
+on:
+  pull_request:
+    types: [opened, synchronize, reopened, ready_for_review]
+
+jobs:
+  build:
+    name: Build and test (PR)
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+          cache: 'npm'
+
+      - name: Install Node dependencies (if package.json exists)
+        run: |
+          if [ -f package.json ]; then
+            npm ci
+          else
+            echo "No package.json — skipping Node install"
+          fi
+
+      - name: Build (if npm build script exists)
+        run: |
+          if [ -f package.json ]; then
+            npm run build --if-present
+          else
+            echo "No package.json — skipping Node build"
+          fi
+
+      - name: Run JS/TS tests (if npm test script exists)
+        run: |
+          if [ -f package.json ]; then
+            npm test --if-present
+          else
+            echo "No package.json — skipping Node tests"
+          fi
+
+      - name: Set up Python (optional)
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.x'
+
+      - name: Install Python deps and run tests (if requirements.txt or pyproject.toml exists)
+        run: |
+          if [ -f requirements.txt ]; then
+            python -m pip install --upgrade pip
+            pip install -r requirements.txt
+            pytest -q
+          elif [ -f pyproject.toml ]; then
+            python -m pip install --upgrade pip
+            pip install .
+            pytest -q
+          else
+            echo "No Python requirements found — skipping Python steps"
+          fi

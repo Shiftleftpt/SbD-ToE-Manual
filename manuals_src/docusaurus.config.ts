@@ -55,38 +55,33 @@ const config: Config = {
     },
   ],
 
-  // Temas (usar theme-classic aqui é OK) + Mermaid
-  themes: [
-    '@docusaurus/theme-mermaid',
-    [
-      '@docusaurus/theme-classic',
-      {
-        customCss: './src/css/custom.css',
-      },
-    ],
-  ],
+  // Temas
+  themes: ['@docusaurus/theme-mermaid'],
 
-  // Plugins
-  plugins: [
+  // Presets (usar classic preset como no projeto limpo)
+  presets: [
     [
-      '@docusaurus/plugin-content-docs',
+      'classic',
       {
-        id: 'sbd-toe',
-        path: 'docs/sbd-toe',
-        routeBasePath: 'sbd-toe',
-  sidebarPath,
-        numberPrefixParser: true,
-        showLastUpdateTime: false,
-        showLastUpdateAuthor: false,
-        admonitions: {
-          keywords: ['userstory'],
-          extendDefaults: true, // mantém note|tip|info|warning|danger
+        docs: {
+          path: 'docs/sbd-toe',
+          routeBasePath: 'sbd-toe',
+          sidebarPath,
+          numberPrefixParser: true,
+          showLastUpdateTime: false,
+          showLastUpdateAuthor: false,
+          admonitions: {
+            keywords: ['userstory'],
+            extendDefaults: true,
+          },
+        },
+        pages: {
+          path: 'src/pages',
+        },
+        theme: {
+          customCss: './src/css/custom.css',
         },
       },
-    ],
-    [
-      '@docusaurus/plugin-content-pages',
-      { path: 'src/pages' },
     ],
   ],
 
@@ -105,33 +100,25 @@ const config: Config = {
       items: [
         {
           type: 'docSidebar',
-          docsPluginId: 'sbd-toe',
           sidebarId: 'manualAtual',
-          docId: 'index', 
           position: 'left',
           label: 'Manual',
         },
         {
           type: 'docSidebar',
-          docsPluginId: 'sbd-toe',
           sidebarId: 'toeOverview',
-          docId: '000-teory-of-everything/intro',
           position: 'left',
           label: 'ToE',
         },
         {
           type: 'docSidebar',
-          docsPluginId: 'sbd-toe',
           sidebarId: 'toeHowTo',
-          docId: '001-how-to-manual/intro',
           position: 'left',
           label: 'Como usar',
         },
         {
           type: 'docSidebar',
-          docsPluginId: 'sbd-toe',
           sidebarId: 'toeCrossCheck',
-          docId: '002-cross-check-normativo/intro',
           position: 'left',
           label: 'Cross-check',
         },

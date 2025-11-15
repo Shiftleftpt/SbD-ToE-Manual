@@ -5,11 +5,11 @@ description: Template exemplar de RACI (Responsible, Accountable, Consulted, Inf
 tags: [exemplos, raci, governanca, responsabilidades, organizacao]
 ---
 
-# Exemplo: RACI e Governança
+# Exemplo: RACI de Governança
 
 ## Enquadramento
 
-O SbD-ToE prescreve (Cap. 14):
+O SbD-ToE prescreve ([Cap. 14](/sbd-toe/sbd-manual/governanca-contratacao/intro)):
 - ✓ Estrutura de governança
 - ✓ RACI claro
 - ✓ Aprovações formais

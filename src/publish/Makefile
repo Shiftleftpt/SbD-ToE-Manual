@@ -18,19 +18,29 @@ WEB_DIR      := $(OUT_BASE)/web
 help:
 	@echo ""
 	@echo "Targets disponíveis:"
-	@echo "  make web      -> clean + prepare + install + build"
-	@echo "  make prepare  -> copia manuals_src/ -> _out/web/"
-	@echo "  make install  -> npm install em _out/web/"
-	@echo "  make build    -> npm run build (Docusaurus)"
-	@echo "  make serve    -> npx docusaurus serve (pré-visualizar)"
-	@echo "  make clean    -> remove _out/web/"
+	@echo "  make web        -> update-lock + clean + prepare + install + build"
+	@echo "  make update-lock-> atualiza package-lock.json no repo"
+	@echo "  make prepare    -> copia manuals_src/ -> _out/web/"
+	@echo "  make install    -> npm install em _out/web/"
+	@echo "  make build      -> npm run build (Docusaurus)"
+	@echo "  make serve      -> npx docusaurus serve (pré-visualizar)"
+	@echo "  make clean      -> remove _out/web/"
 	@echo ""
 
 # ---------------------------------------------------------------
 # Pipeline completo
 # ---------------------------------------------------------------
 .PHONY: web
-web: prepare install build
+web: update-lock prepare install build
+
+# ---------------------------------------------------------------
+# Atualizar package-lock.json no repo (sem instalar node_modules)
+# ---------------------------------------------------------------
+.PHONY: update-lock
+update-lock:
+	@echo ">> Atualizando package-lock.json em $(SRC_DIR)"
+	cd "$(SRC_DIR)"; \
+	npm install --package-lock-only
 
 # ---------------------------------------------------------------
 # Copiar manuals_src -> build web

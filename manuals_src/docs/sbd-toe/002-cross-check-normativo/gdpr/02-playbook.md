@@ -20,19 +20,19 @@ Estrutura: Requisitos → Ação → Evidência. Reutilizar controlos NIS2/DORA 
 
 | Artigo GDPR | Requisito | Capítulo SbD-ToE | Ação Principal |
 |-------------|-----------|------------------|----------------|
-| 5 | Princípios | Cap. 01, 02, 04, 11 | Minimização, retenção, segurança |
-| 25 | Privacy by design/default | Cap. 04, 06–07, 11 | Configurações seguras por defeito |
-| 30 | ROPA | Cap. 01, 14 | Inventário apps/dados + registo GRC |
-| 32 | Segurança do tratamento | Cap. 02, 04, 05, 10, 12 | Cifragem, IAM, testes, resiliência |
-| 33/34 | Violação de dados | Cap. 12, 14 | Runbook 72h + comunicação |
-| 35 | DPIA | Cap. 03, 04 | TM + anexos técnicos na DPIA |
+| 5 | Princípios | [Cap. 01](/sbd-toe/sbd-manual/classificacao-aplicacoes/intro), [Cap. 02](/sbd-toe/sbd-manual/requisitos-seguranca/intro), [Cap. 04](/sbd-toe/sbd-manual/arquitetura-segura/intro), [Cap. 11](/sbd-toe/sbd-manual/deploy-seguro/intro) | Minimização, retenção, segurança |
+| 25 | Privacy by design/default | [Cap. 04](/sbd-toe/sbd-manual/arquitetura-segura/intro), [Cap. 06](/sbd-toe/sbd-manual/desenvolvimento-seguro/intro)–[Cap. 07](/sbd-toe/sbd-manual/cicd-seguro/intro), [Cap. 11](/sbd-toe/sbd-manual/deploy-seguro/intro) | Configurações seguras por defeito |
+| 30 | ROPA | [Cap. 01](/sbd-toe/sbd-manual/classificacao-aplicacoes/intro), [Cap. 14](/sbd-toe/sbd-manual/governanca-contratacao/intro) | Inventário apps/dados + registo GRC |
+| 32 | Segurança do tratamento | [Cap. 02](/sbd-toe/sbd-manual/requisitos-seguranca/intro), [Cap. 04](/sbd-toe/sbd-manual/arquitetura-segura/intro), [Cap. 05](/sbd-toe/sbd-manual/dependencias-sbom-sca/intro), [Cap. 10](/sbd-toe/sbd-manual/testes-seguranca/intro), [Cap. 12](/sbd-toe/sbd-manual/monitorizacao-operacoes/intro) | Cifragem, IAM, testes, resiliência |
+| 33/34 | Violação de dados | [Cap. 12](/sbd-toe/sbd-manual/monitorizacao-operacoes/intro), [Cap. 14](/sbd-toe/sbd-manual/governanca-contratacao/intro) | Runbook 72h + comunicação |
+| 35 | DPIA | [Cap. 03](/sbd-toe/sbd-manual/threat-modeling/intro), [Cap. 04](/sbd-toe/sbd-manual/arquitetura-segura/intro) | TM + anexos técnicos na DPIA |
 
 ---
 
 ## Fases de Implementação (≈ 4–6 meses)
 
 ### Fase 1 (M0–M1): Governação e Enquadramento
-1. Nomear DPO (se aplicável) e alinhar RACI (Cap. 14)  
+1. Nomear DPO (se aplicável) e alinhar RACI ([Cap. 14](/sbd-toe/sbd-manual/governanca-contratacao/intro))  
 2. Política "Privacidade by Design & por Defeito" aprovada  
 3. Definir classificação de dados pessoais por aplicação  
 **Evidências:** Ata aprovação; RACI; matriz dados/aplicações
@@ -58,7 +58,7 @@ Estrutura: Requisitos → Ação → Evidência. Reutilizar controlos NIS2/DORA 
 
 ### Fase 5 (M3–M4): DPIA (Art. 35)
 1. Critérios de gatilho DPIA definidos  
-2. Reutilizar Threat Modeling (Cap. 03) como anexo técnico  
+2. Reutilizar Threat Modeling ([Cap. 03](/sbd-toe/sbd-manual/threat-modeling/intro)) como anexo técnico  
 3. Adicionar Privacy TM (LINDDUN) quando alto risco  
 4. Aprovação DPO e registo  
 **Evidências:** DPIA #1; anexos TM; aprovação DPO
@@ -145,16 +145,16 @@ Estrutura: Requisitos → Ação → Evidência. Reutilizar controlos NIS2/DORA 
 
 ## Notas
 - Incidentes podem acionar também NIS2/DORA. Use um runbook único com canais diferentes.
-- LINDDUN é recomendado para Privacy TM; manter como add‑on do Cap. 03.
+- LINDDUN é recomendado para Privacy TM; manter como add‑on do [Cap. 03](/sbd-toe/sbd-manual/threat-modeling/intro).
 
 ---
 
 ## Referências
-- Cross‑check GDPR (07-gdpr.md)
+- [Análise normativa GDPR](intro)
 - EDPB – Guidelines DPIA, Breach Notification
 - ENISA – Security of Personal Data Processing
-- SbD-ToE Cap. 01–14
+- SbD-ToE [Cap. 01](/sbd-toe/sbd-manual/classificacao-aplicacoes/intro)–[Cap. 14](/sbd-toe/sbd-manual/governanca-contratacao/intro)
 
 **Versão:** 1.0  
 **Data:** Novembro 2025  
-**Nota:** Este playbook complementa `07-gdpr.md` com ações práticas
+**Nota:** Este playbook complementa a análise normativa GDPR com ações práticas

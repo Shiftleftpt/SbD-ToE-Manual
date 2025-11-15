@@ -25,12 +25,12 @@ Visão geral, estrutura e instruções de uso
 
 ---
 
-### 2. **[01-exemplo-toolchain-options.md](exemplo-toolchain-options)**
+### 2. **[Opções de Toolchain](exemplo-toolchain-options)**
 **O que aborda:** Ferramentas para implementar princípios de IaC, logs, SCA/SAST
 
 **Relacionado com (SbD-ToE):**
-- [Cap. 08 - IaC e Infraestrutura](../../010-sbd-manual/08-iac-infraestrutura/intro)
-- [Cap. 12 - Monitorização e Operações](../../010-sbd-manual/12-monitorizacao-operacoes/intro)
+- [Cap. 08 - IaC e Infraestrutura](/sbd-toe/sbd-manual/iac-infraestrutura/intro)
+- [Cap. 12 - Monitorização e Operações](/sbd-toe/sbd-manual/monitorizacao-operacoes/intro)
 
 **Abstenção deliberada coberta:**
 - ❌ O manual NÃO prescreve "Usar Terraform" ou "Usar Splunk"
@@ -49,11 +49,11 @@ Visão geral, estrutura e instruções de uso
 
 ---
 
-### 3. **[02-exemplo-kpis-targets.md](exemplo-kpis-targets)**
+### 3. **[KPIs e Targets](exemplo-kpis-targets)**
 **O que aborda:** KPIs e targets para diferentes perfis organizacionais
 
 **Relacionado com (SbD-ToE):**
-- [Cap. 12 - Monitorização e Operações](../../010-sbd-manual/12-monitorizacao-operacoes/intro)
+- [Cap. 12 - Monitorização e Operações](/sbd-toe/sbd-manual/monitorizacao-operacoes/intro)
 
 **Abstenção deliberada coberta:**
 - ❌ O manual NÃO prescreve "Target: Zero critical vulns"
@@ -73,11 +73,11 @@ Visão geral, estrutura e instruções de uso
 
 ---
 
-### 4. **[03-exemplo-raci-governance.md](exemplo-raci-governance)**
+### 4. **[RACI e Governance](exemplo-raci-governance)**
 **O que aborda:** RACI e estrutura de governança
 
 **Relacionado com (SbD-ToE):**
-- [Cap. 14 - Governança e Contratação](../../010-sbd-manual/14-governanca-contratacao/intro)
+- [Cap. 14 - Governança e Contratação](/sbd-toe/sbd-manual/governanca-contratacao/intro)
 
 **Abstenção deliberada coberta:**
 - ❌ O manual NÃO prescreve "CISO reporta a CTO" ou "7 reuniões/semana"
@@ -98,11 +98,11 @@ Visão geral, estrutura e instruções de uso
 
 ---
 
-### 5. **[04-exemplo-relatorio-incidentes.md](exemplo-relatorio-incidentes)**
+### 5. **[Relatório de Incidentes](exemplo-relatorio-incidentes)**
 **O que aborda:** Template de reporte de incidentes
 
 **Relacionado com (SbD-ToE):**
-- [Cap. 12 - Monitorização e Operações](../../010-sbd-manual/12-monitorizacao-operacoes/intro)
+- [Cap. 12 - Monitorização e Operações](/sbd-toe/sbd-manual/monitorizacao-operacoes/intro)
 
 **Abstenção deliberada coberta:**
 - ❌ O manual NÃO prescreve "Template ITS oficial DORA"
@@ -120,8 +120,8 @@ Visão geral, estrutura e instruções de uso
 **O que aborda:** Definição de RTO/RPO por app
 
 **Relacionado com (SbD-ToE):**
-- [Cap. 01 - Classificação de Aplicações](../../010-sbd-manual/01-classificacao-aplicacoes/intro)
-- [Cap. 08 - IaC e Infraestrutura](../../010-sbd-manual/08-iac-infraestrutura/intro)
+- [Cap. 01 - Classificação de Aplicações](/sbd-toe/sbd-manual/classificacao-aplicacoes/intro)
+- [Cap. 08 - IaC e Infraestrutura](/sbd-toe/sbd-manual/iac-infraestrutura/intro)
 
 **Abstenção deliberada coberta:**
 - ❌ O manual NÃO prescreve "RTO: `<1h`" ou "RPO: `<15min`"
@@ -157,8 +157,8 @@ Visão geral, estrutura e instruções de uso
 **O que aborda:** Template de Política de Segurança
 
 **Relacionado com (SbD-ToE):**
-- [Cap. 02 - Requisitos de Segurança](../../010-sbd-manual/02-requisitos-seguranca/intro)
-- [Cap. 14 - Governança e Contratação](../../010-sbd-manual/14-governanca-contratacao/intro)
+- [Cap. 02 - Requisitos de Segurança](/sbd-toe/sbd-manual/requisitos-seguranca/intro)
+- [Cap. 14 - Governança e Contratação](/sbd-toe/sbd-manual/governanca-contratacao/intro)
 
 **Abstenção deliberada coberta:**
 - ❌ O manual NÃO prescreve "Política de Segurança genérica"
@@ -176,8 +176,8 @@ Visão geral, estrutura e instruções de uso
 **O que aborda:** Cláusulas técnicas de segurança em contratos
 
 **Relacionado com (SbD-ToE):**
-- [Cap. 14 - Governança e Contratação](../../010-sbd-manual/14-governanca-contratacao/intro)
-- [Cap. 05 - Dependências, SBOM e SCA](../../010-sbd-manual/05-dependencias-sbom-sca/intro)
+- [Cap. 14 - Governança e Contratação](/sbd-toe/sbd-manual/governanca-contratacao/intro)
+- [Cap. 05 - Dependências, SBOM e SCA](/sbd-toe/sbd-manual/dependencias-sbom-sca/intro)
 
 **Abstenção deliberada coberta:**
 - ❌ O manual NÃO prescreve "Cláusulas jurídicas específicas"
@@ -194,28 +194,28 @@ Visão geral, estrutura e instruções de uso
 ## 🔍 Como Encontrar o que Procura
 
 ### "Preciso escolher ferramentas"
-→ **[01-exemplo-toolchain-options.md](exemplo-toolchain-options)**
+→ **[Opções de Toolchain](exemplo-toolchain-options)**
 
 ### "Como defino targets de segurança?"
-→ **[02-exemplo-kpis-targets.md](exemplo-kpis-targets)**
+→ **[KPIs e Targets](exemplo-kpis-targets)**
 
 ### "Como estruturo governança?"
-→ **[03-exemplo-raci-governance.md](exemplo-raci-governance)**
+→ **[RACI e Governance](exemplo-raci-governance)**
 
 ### "Como reporto incidentes?"
-→ **[04-exemplo-relatorio-incidentes.md](exemplo-relatorio-incidentes)**
+→ **[Relatório de Incidentes](exemplo-relatorio-incidentes)**
 
 ### "Como defino RTO/RPO?"
-→ **05-exemplo-rto-rpo.md** *(a criar)*
+→ **Exemplo RTO/RPO** *(a criar)*
 
 ### "Como planejo a implementação?"
-→ **06-exemplo-roadmap-adaptado.md** *(a criar)* + [**Playbook DORA**](../dora/playbook)
+→ **Exemplo Roadmap Adaptado** *(a criar)* + [**Playbook DORA**](../dora/playbook)
 
 ### "Como escrevo a política?"
-→ **07-exemplo-politica-seguranca.md** *(a criar)*
+→ **Exemplo Política de Segurança** *(a criar)*
 
 ### "Como fecho um contrato seguro?"
-→ **08-exemplo-contrato-fornecedor.md** *(a criar)*
+→ **Exemplo Contrato com Fornecedor** *(a criar)*
 
 ---
 
@@ -237,17 +237,17 @@ Ao usar estes exemplos:
 
 ```
 SbD-ToE Manual
-├─ Cap. 01 - Classificação de Aplicações
+├─ [Cap. 01](/sbd-toe/sbd-manual/classificacao-aplicacoes/intro) - Classificação de Aplicações
 │  └─ Exemplo: 05-rto-rpo.md, 06-roadmap.md
-├─ Cap. 02 - Requisitos de Segurança
+├─ [Cap. 02](/sbd-toe/sbd-manual/requisitos-seguranca/intro) - Requisitos de Segurança
 │  └─ Exemplo: 07-politica-seguranca.md
-├─ Cap. 05 - Dependências, SBOM e SCA
+├─ [Cap. 05](/sbd-toe/sbd-manual/dependencias-sbom-sca/intro) - Dependências, SBOM e SCA
 │  └─ Exemplo: 01-toolchain (SCA)
-├─ Cap. 08 - IaC e Infraestrutura
+├─ [Cap. 08](/sbd-toe/sbd-manual/iac-infraestrutura/intro) - IaC e Infraestrutura
 │  └─ Exemplo: 01-toolchain (IaC options)
-├─ Cap. 12 - Monitorização e Operações
+├─ [Cap. 12](/sbd-toe/sbd-manual/monitorizacao-operacoes/intro) - Monitorização e Operações
 │  └─ Exemplo: 01-toolchain (logs), 02-kpis, 04-incidentes
-├─ Cap. 14 - Governança e Contratação
+├─ [Cap. 14](/sbd-toe/sbd-manual/governanca-contratacao/intro) - Governança e Contratação
 │  └─ Exemplo: 03-raci-governance.md, 07-politica.md, 08-contrato.md
 └─ Playbook DORA
    └─ Exemplo: Todos (implementar princípios)

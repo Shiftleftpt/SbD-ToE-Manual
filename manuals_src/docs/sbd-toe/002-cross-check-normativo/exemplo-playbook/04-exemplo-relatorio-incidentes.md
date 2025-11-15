@@ -5,11 +5,11 @@ description: Template exemplar de reporte de incidentes alinhado com DORA RTS/IT
 tags: [exemplos, incidentes, reporte, dora, template]
 ---
 
-# Exemplo: Reporte de Incidentes
+# Exemplo: Relatório de Incidentes
 
 ## Enquadramento
 
-O SbD-ToE prescreve (Cap. 12):
+O SbD-ToE prescreve ([Cap. 12](/sbd-toe/sbd-manual/monitorizacao-operacoes/intro)):
 - ✓ Processos de deteção de incidentes
 - ✓ Registre, classifique e documente
 - ✓ Trilho auditoria completo
@@ -204,7 +204,7 @@ Use este template para estruturar seu sistema de tickets:
 
 ## Retenção de Logs
 
-**Conformidade Cap. 12 + DORA Art. 18:**
+**Conformidade [Cap. 12](/sbd-toe/sbd-manual/monitorizacao-operacoes/intro) + DORA Art. 18:**
 
 ```
 Todos os incidentes + trilho auditoria devem ser retidos:

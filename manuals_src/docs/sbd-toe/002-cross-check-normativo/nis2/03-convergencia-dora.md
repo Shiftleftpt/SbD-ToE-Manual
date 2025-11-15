@@ -44,10 +44,10 @@ Mesmo sob DORA, aspetos NIS2 podem manter valor:
 ## Estratégia de Implementação Única (SbD-ToE)
 
 1. **Política mestra de Resiliência Digital** – Integra governação, testes, reporte e fornecedores (referencia DORA Art. 5, 18–20, 26–28; nota que substitui NIS2 Art. 20–23).
-2. **Matriz de origem regulatória** – Para cada requisito técnico (Cap. 02), nova coluna `Fonte` com enum: `DORA`, `NIS2`, `Ambas`, `Outras`.
+2. **Matriz de origem regulatória** – Para cada requisito técnico ([Cap. 02](/sbd-toe/sbd-manual/requisitos-seguranca/intro)), nova coluna `Fonte` com enum: `DORA`, `NIS2`, `Ambas`, `Outras`.
 3. **Esquema de incidente** – Base = DORA RTS/ITS; marcar campos adicionais NIS2 (ex.: impacto em serviços essenciais) como opcionais.
 4. **Processo de exceções** – Escalonamento L3 sempre com supervisão board (cobre governance DORA & NIS2 simultaneamente).
-5. **Inventário de fornecedores** – Unificar: SBOM (componentes), contractors (Cap. 14), fornecedores TIC críticos (marcar se exigidos por DORA ou por clientes NIS2).
+5. **Inventário de fornecedores** – Unificar: SBOM (componentes), contractors ([Cap. 14](/sbd-toe/sbd-manual/governanca-contratacao/intro)), fornecedores TIC críticos (marcar se exigidos por DORA ou por clientes NIS2).
 6. **Formação** – Módulo anual board (DORA governance) + módulo ciber all-hazards (NIS2) integrados; uma trilha, duas etiquetas.
 
 ## Checklist de Convergência (SIM = pronto)
@@ -80,7 +80,7 @@ Executar TLPT (se aplicável) satisfaz e supera a exigência genérica NIS2 de a
 - Regulamento (UE) 2022/2554 (DORA)
 - Diretiva (UE) 2022/2555 (NIS2) Anexos I/II
 - ENISA – Orientações técnicas NIS2 (2024/2025)
-- SbD-ToE Manual (Cap. 01–14)
+- SbD-ToE Manual ([Cap. 01](/sbd-toe/sbd-manual/classificacao-aplicacoes/intro)–[Cap. 14](/sbd-toe/sbd-manual/governanca-contratacao/intro))
 
 ## Nota Final
 

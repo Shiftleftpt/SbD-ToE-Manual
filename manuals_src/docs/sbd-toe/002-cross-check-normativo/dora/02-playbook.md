@@ -26,11 +26,11 @@ Este playbook mapeia **requisitos DORA (Regulamento UE 2022/2554) para ações S
 
 | DORA Artigo | Requisito | Capítulo SbD-ToE | Ação Principal |
 |----------|-----------|-----------------|----------------|
-| **5** | Gestão de Risco TIC | Cap. 01, 14 | Classificar apps; aprovar políticas; supervisão |
-| **16** | Partilha de Ameaças | Cap. 12 | Integrar threat intelligence; acordos de partilha |
-| **18** | Reporte de Incidentes | Cap. 12, 14 | Deteção, reporte formal, documentação |
-| **19–20** | Testes de Resiliência | Cap. 10, 11 | Testes contínuos (SAST/DAST), TLPT readiness |
-| **26–28** | Gestão de Fornecedores | Cap. 05, 14 | SBOM; ciclo de vida contractors |
+| **5** | Gestão de Risco TIC | [Cap. 01](/sbd-toe/sbd-manual/classificacao-aplicacoes/intro), [Cap. 14](/sbd-toe/sbd-manual/governanca-contratacao/intro) | Classificar apps; aprovar políticas; supervisão |
+| **16** | Partilha de Ameaças | [Cap. 12](/sbd-toe/sbd-manual/monitorizacao-operacoes/intro) | Integrar threat intelligence; acordos de partilha |
+| **18** | Reporte de Incidentes | [Cap. 12](/sbd-toe/sbd-manual/monitorizacao-operacoes/intro), [Cap. 14](/sbd-toe/sbd-manual/governanca-contratacao/intro) | Deteção, reporte formal, documentação |
+| **19–20** | Testes de Resiliência | [Cap. 10](/sbd-toe/sbd-manual/testes-seguranca/intro), [Cap. 11](/sbd-toe/sbd-manual/deploy-seguro/intro) | Testes contínuos (SAST/DAST), TLPT readiness |
+| **26–28** | Gestão de Fornecedores | [Cap. 05](/sbd-toe/sbd-manual/dependencias-sbom-sca/intro), [Cap. 14](/sbd-toe/sbd-manual/governanca-contratacao/intro) | SBOM; ciclo de vida contractors |
 
 ---
 
@@ -52,7 +52,7 @@ Este playbook mapeia **requisitos DORA (Regulamento UE 2022/2554) para ações S
 3. **Definir RACI**
    - Quem aprova o quê (aprovações formais)
    - Escalations (quando elevar)
-   - Referência: [Cap. 07 - Roles](/sbd-toe/000-teory-of-everything/07-roles)
+   - Referência: [Cap. 07 - Roles](/sbd-toe/teory-of-everything/roles)
 
 ---
 
@@ -127,7 +127,7 @@ Este playbook mapeia **requisitos DORA (Regulamento UE 2022/2554) para ações S
 **DORA Art. 26–28** — Gestão de fornecedores
 
 #### 5.1 Fornecedores de Componentes (SBOM)
-**Já em Fase 3.2** — Cap. 05 cobre isto com SCA + SBOM
+**Já em Fase 3.2** — [Cap. 05](/sbd-toe/sbd-manual/dependencias-sbom-sca/intro) cobre isto com SCA + SBOM
 
 #### 5.2 Fornecedores Contratuais
 - **O que:** Pessoas/empresas contratadas (contractors, outsourcing)
@@ -183,16 +183,16 @@ A lista abaixo permite validar o alinhamento do programa SbD-ToE com os requisit
 
 | Capítulo | DORA Artigos | O Que Faz |
 |----------|-------------|----------|
-| **Cap. 01** | Art. 5 | Classificação de apps por risco (L1–L3) |
-| **Cap. 02** | Art. 5, 19 | Requisitos de segurança mínimos por nível |
-| **Cap. 03** | Art. 19–20 | Threat modeling para identificar ameaças realistas |
-| **Cap. 05** | Art. 26–28 | SBOM, SCA, gestão de dependências de software |
-| **Cap. 07** | Art. 19–20 | CI/CD seguro, gates, trilho auditado |
-| **Cap. 10** | Art. 19–20 | Testes contínuos (SAST/DAST/penetração) |
-| **Cap. 11** | Art. 19–20 | Validação pré-deploy, conformidade requisitos |
-| **Cap. 12** | Art. 16, 18 | Monitorização, deteção de incidentes, threat intel |
-| **Cap. 13** | Art. 5 | Formação de staff em SbD (exigência de supervisão) |
-| **Cap. 14** | Art. 5, 26–28 | Governança, RACI, ciclo de vida fornecedores |
+| **[Cap. 01](/sbd-toe/sbd-manual/classificacao-aplicacoes/intro)** | Art. 5 | Classificação de apps por risco (L1–L3) |
+| **[Cap. 02](/sbd-toe/sbd-manual/requisitos-seguranca/intro)** | Art. 5, 19 | Requisitos de segurança mínimos por nível |
+| **[Cap. 03](/sbd-toe/sbd-manual/threat-modeling/intro)** | Art. 19–20 | Threat modeling para identificar ameaças realistas |
+| **[Cap. 05](/sbd-toe/sbd-manual/dependencias-sbom-sca/intro)** | Art. 26–28 | SBOM, SCA, gestão de dependências de software |
+| **[Cap. 07](/sbd-toe/sbd-manual/cicd-seguro/intro)** | Art. 19–20 | CI/CD seguro, gates, trilho auditado |
+| **[Cap. 10](/sbd-toe/sbd-manual/testes-seguranca/intro)** | Art. 19–20 | Testes contínuos (SAST/DAST/penetração) |
+| **[Cap. 11](/sbd-toe/sbd-manual/deploy-seguro/intro)** | Art. 19–20 | Validação pré-deploy, conformidade requisitos |
+| **[Cap. 12](/sbd-toe/sbd-manual/monitorizacao-operacoes/intro)** | Art. 16, 18 | Monitorização, deteção de incidentes, threat intel |
+| **[Cap. 13](/sbd-toe/sbd-manual/formacao-onboarding/intro)** | Art. 5 | Formação de staff em SbD (exigência de supervisão) |
+| **[Cap. 14](/sbd-toe/sbd-manual/governanca-contratacao/intro)** | Art. 5, 26–28 | Governança, RACI, ciclo de vida fornecedores |
 
 ---
 
@@ -252,7 +252,7 @@ A ausência de formalização pode comprometer a conformidade regulatória e exp
 
 Sugere-se a seguinte abordagem para garantir conformidade e maturidade contínua:
 
-1. Audit de conformidade atual: Verificar Cap. 01–14 do SbD-ToE contra requisitos DORA
+1. Audit de conformidade atual: Verificar [Cap. 01](/sbd-toe/sbd-manual/classificacao-aplicacoes/intro)–[Cap. 14](/sbd-toe/sbd-manual/governanca-contratacao/intro) do SbD-ToE contra requisitos DORA
 2. Definir roadmap: Sequenciar fases conforme contexto organizacional
 3. Implementar: Iterar conforme planeado
 4. Validar: Demonstrar conformidade em auditoria
@@ -264,7 +264,7 @@ Documentação completa: Ver capítulos SbD-ToE 01–14 para detalhe técnico e 
 ## Referências
 
 - **SbD-ToE Manual:** Capítulos 01–14 (detalhe técnico por domínio)
-- **Cross-Check DORA:** [002 - dora.md](/sbd-toe/002-cross-check-normativo/dora) (análise normativa completa)
+- **Cross-Check DORA:** [Análise normativa completa](/sbd-toe/cross-check-normativo/dora/intro)
 - **Regulamento DORA:** UE 2022/2554
 - **Frameworks de Referência:** NIST SP 800-53, OWASP SAMM, BSIMM, SSDF
 
@@ -272,4 +272,4 @@ Documentação completa: Ver capítulos SbD-ToE 01–14 para detalhe técnico e 
 
 **Versão:** 1.1 (Simplificado, alinhado com DORA)  
 **Data:** Novembro 2025  
-**Nota:** Este playbook complementa `002-cross-check-normativo/dora.md` com implementação prática
+**Nota:** Este playbook complementa a [análise normativa DORA](intro) com implementação prática

@@ -8,7 +8,7 @@ sidebar_position: 9
 
 # Certificação ENISA/CSA: quando usar e como mapear ao SbD‑ToE
 
-> Veja também: [CRA](/sbd-toe/002-cross-check-normativo/cra), [DORA](/sbd-toe/002-cross-check-normativo/dora), [NIS2](/sbd-toe/002-cross-check-normativo/nis2) e a [Nota de Convergência DORA & NIS2](/sbd-toe/002-cross-check-normativo/convergencia-dora-nis2).
+> Veja também: [CRA](/sbd-toe/cross-check-normativo/cra), [DORA](/sbd-toe/cross-check-normativo/dora), [NIS2](/sbd-toe/cross-check-normativo/nis2) e a [Nota de Convergência DORA & NIS2](/sbd-toe/cross-check-normativo/convergencia-dora-nis2).
 
 ## Âmbito
 

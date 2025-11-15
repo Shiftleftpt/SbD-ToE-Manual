@@ -8,7 +8,7 @@ sidebar_position: 7
 
 # GDPR: Cross-Check Normativo
 
-> Para implementação prática, consulte o [Playbook SbD-ToE 4 GDPR](/sbd-toe/002-cross-check-normativo/sbd-toe-4-gdpr-playbook).
+> Para implementação prática, consulte o [Playbook SbD-ToE 4 GDPR](/sbd-toe/cross-check-normativo/sbd-toe-4-gdpr-playbook).
 >
 > Para padrões aplicacionais universais, ver capítulos base do SbD-ToE (01–14).
 

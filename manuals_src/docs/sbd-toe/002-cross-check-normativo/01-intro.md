@@ -99,29 +99,29 @@ Este capítulo está organizado por **framework/normativo**, cada um numa pasta 
 
 #### **[DORA](dora/intro)** (Digital Operational Resilience Act)
 - 📂 `dora/`
-  - [`01-intro.md`](dora/intro) → Enquadramento do regulamento
-  - [`02-playbook.md`](dora/playbook) → Playbook de implementação prática
-  - [`03-convergencia-nis2.md`](dora/convergencia-nis2) → Análise de convergência com NIS2
+  - [Enquadramento do regulamento](dora/intro)
+  - [Playbook de implementação prática](dora/playbook)
+  - [Análise de convergência com NIS2](dora/convergencia-nis2)
 
 #### **[NIS2](nis2/intro)** (Network and Information Security Directive)
 - 📂 `nis2/`
-  - [`01-intro.md`](nis2/intro) → Enquadramento da diretiva
-  - [`02-playbook.md`](nis2/playbook) → Playbook de implementação prática
-  - [`03-convergencia-dora.md`](nis2/convergencia-dora) → Análise de convergência com DORA
+  - [Enquadramento da diretiva](nis2/intro)
+  - [Playbook de implementação prática](nis2/playbook)
+  - [Análise de convergência com DORA](nis2/convergencia-dora)
 
 #### **[CRA](cra/intro)** (Cyber Resilience Act)
 - 📂 `cra/`
-  - [`01-intro.md`](cra/intro) → Enquadramento do regulamento
-  - [`02-playbook.md`](cra/playbook) → Playbook de implementação prática
+  - [Enquadramento do regulamento](cra/intro)
+  - [Playbook de implementação prática](cra/playbook)
 
 #### **[GDPR](gdpr/intro)** (General Data Protection Regulation)
 - 📂 `gdpr/`
-  - [`01-intro.md`](gdpr/intro) → Enquadramento do regulamento
-  - [`02-playbook.md`](gdpr/playbook) → Playbook de implementação prática
+  - [Enquadramento do regulamento](gdpr/intro)
+  - [Playbook de implementação prática](gdpr/playbook)
 
 #### **[ENISA CSA](enisa-csa/intro)** (Cloud Security Alliance Certification)
 - 📂 `enisa-csa/`
-  - [`01-intro.md`](enisa-csa/intro) → Enquadramento do esquema de certificação
+  - [Enquadramento do esquema de certificação](enisa-csa/intro)
 
 ### Exemplos e Templates de Suporte
 
@@ -150,12 +150,12 @@ Os seguintes frameworks estão no roadmap para adição futura:
 
 Cada pasta de framework segue esta estrutura consistente:
 
-1. **Introdução** (`01-intro.md`)
+1. **Introdução**
    - Enquadramento legal/regulatório
    - Âmbito de aplicação
    - Objetivos principais
 
-2. **Playbook de Implementação** (`02-playbook.md`)
+2. **Playbook de Implementação**
    - Cross-check: Requisitos vs. SbD-ToE
    - Roadmap de implementação
    - Fases e milestones
@@ -170,7 +170,7 @@ Cada pasta de framework segue esta estrutura consistente:
 
 ## Leitura recomendada
 
-- Este capítulo deve ser lido **em articulação com o [Capítulo 00 - Theory of Everything](../000-teory-of-everything/intro)**, que explica a filosofia global do manual.  
+- Este capítulo deve ser lido **em articulação com o [Capítulo 00 - Theory of Everything](/sbd-toe/teory-of-everything/intro)**, que explica a filosofia global do manual.  
 - Para organizações **com desenvolvimento/aquisição de software**, recomenda-se começar pelos playbooks (ex.: [DORA](dora/playbook), [NIS2](nis2/playbook)), que orientam implementação coerente.
 - Pode também ser utilizado como **documento autónomo**, servindo de guia de referência rápida para quem procura verificar alinhamento do SbD-ToE com exigências específicas.  
 

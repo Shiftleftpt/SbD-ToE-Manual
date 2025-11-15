@@ -8,7 +8,7 @@ sidebar_position: 1
 
 # DORA: Cross-Check Normativo
 
-> Para implementação prática, consulte o [Playbook SbD-ToE 4 DORA](/sbd-toe/002-cross-check-normativo/sbd-toe-4-dora-playbook).
+> Para implementação prática, consulte o [Playbook SbD-ToE 4 DORA](/sbd-toe/cross-check-normativo/sbd-toe-4-dora-playbook).
 > 
 > Para exemplos práticos internos, ver pasta `exemplo-playbook/`.
 
@@ -31,11 +31,11 @@ O SbD-ToE foi concebido como **modelo universal de segurança aplicacional** e c
 O primeiro pilar da DORA reforça que a **resiliência digital é responsabilidade última do órgão de gestão**. O Artigo 5 exige: aprovação de estratégia, supervisão de execução, inventários de funções críticas, políticas de proteção/deteção/resposta.
 
 **Cobertura SbD-ToE:**
-- **Cap. 01:** Classificação de criticidade aplicacional (L1–L3)
-- **Cap. 02:** Catálogo de requisitos de segurança por nível
-- **Cap. 03:** Threat Modeling para identificação de riscos
-- **Cap. 12:** Deteção, resposta e melhoria contínua
-- **Cap. 14:** Governação e aprovação de políticas
+- **[Cap. 01](/sbd-toe/sbd-manual/classificacao-aplicacoes/intro):** Classificação de criticidade aplicacional (L1–L3)
+- **[Cap. 02](/sbd-toe/sbd-manual/requisitos-seguranca/intro):** Catálogo de requisitos de segurança por nível
+- **[Cap. 03](/sbd-toe/sbd-manual/threat-modeling/intro):** Threat Modeling para identificação de riscos
+- **[Cap. 12](/sbd-toe/sbd-manual/monitorizacao-operacoes/intro):** Deteção, resposta e melhoria contínua
+- **[Cap. 14](/sbd-toe/sbd-manual/governanca-contratacao/intro):** Governação e aprovação de políticas
 
 **Lacuna intencional:** O SbD-ToE não fixa aprovação em board meeting (deixa em aberto). Para cumprir DORA: mapeie as políticas do SbD-ToE → aprove em board → registe a decisão formalmente.
 
@@ -46,8 +46,8 @@ O primeiro pilar da DORA reforça que a **resiliência digital é responsabilida
 Exige processo ponta-a-ponta: deteção, registo, classificação, reporte formal com templates normalizados.
 
 **Cobertura SbD-ToE:**
-- **Cap. 12:** Processos de deteção e resposta de incidentes
-- **Cap. 14:** Responsabilidades de reporte e escalonamento
+- **[Cap. 12](/sbd-toe/sbd-manual/monitorizacao-operacoes/intro):** Processos de deteção e resposta de incidentes
+- **[Cap. 14](/sbd-toe/sbd-manual/governanca-contratacao/intro):** Responsabilidades de reporte e escalonamento
 
 **Lacuna intencional:** O SbD-ToE não define taxonomia P0–P3 nem templates DORA (para manter universalidade). Para cumprir: configure campos de incidentes conforme RTS/ITS da DORA; exporte automaticamente do SIEM.
 
@@ -58,11 +58,11 @@ Exige processo ponta-a-ponta: deteção, registo, classificação, reporte forma
 Exige programa contínuo de testes, culminando em Threat-Led Penetration Testing (TLPT) para entidades elegíveis.
 
 **Cobertura SbD-ToE:**
-- **Cap. 03:** Threat Modeling (cenários de ataque realistas)
-- **Cap. 10:** Catálogo de testes (SAST, DAST, fuzzing, etc.)
-- **Cap. 11:** Validação de segurança pré-produção
+- **[Cap. 03](/sbd-toe/sbd-manual/threat-modeling/intro):** Threat Modeling (cenários de ataque realistas)
+- **[Cap. 10](/sbd-toe/sbd-manual/testes-seguranca/intro):** Catálogo de testes (SAST, DAST, fuzzing, etc.)
+- **[Cap. 11](/sbd-toe/sbd-manual/deploy-seguro/intro):** Validação de segurança pré-produção
 
-**Lacuna intencional:** O SbD-ToE não fixa elegibilidade para TLPT nem processo de attestation (regulatório). Para cumprir: adicione secção no Cap. 10 "Readiness TLPT" com critérios; use relatórios SbD-ToE como base de attestation.
+**Lacuna intencional:** O SbD-ToE não fixa elegibilidade para TLPT nem processo de attestation (regulatório). Para cumprir: adicione secção no [Cap. 10](/sbd-toe/sbd-manual/testes-seguranca/intro) "Readiness TLPT" com critérios; use relatórios SbD-ToE como base de attestation.
 
 ---
 
@@ -72,29 +72,29 @@ Exige inventário formal, avaliação de risco, cláusulas obrigatórias, superv
 
 **Cobertura SbD-ToE (Duas categorias de fornecedores, uma estratégia):**
 
-**Categoria 1: Fornecedores de Componentes de Software (Cap. 05 - SBOM)**
+**Categoria 1: Fornecedores de Componentes de Software ([Cap. 05](/sbd-toe/sbd-manual/dependencias-sbom-sca/intro) - SBOM)**
 - **O problema DORA:** Usas componentes (libs, frameworks) de terceiros sem saber quem são
 - **A solução:** SBOM (Software Bill of Materials) identifica-os
 - **Estes são fornecedores implícitos** (muitas vezes desconhecem que "fornecem")
 - **Gestão:** SCA contínuo (análise de vulnerabilidades), atualizações de segurança, licenças
 - **SBOM é pré-requisito para DORA:** Sem ele, não sabes quem são os teus fornecedores de software
 
-**Categoria 2: Fornecedores Contratuais (Cap. 14 - Governance)**
+**Categoria 2: Fornecedores Contratuais ([Cap. 14](/sbd-toe/sbd-manual/governanca-contratacao/intro) - Governance)**
 - Pessoas e empresas contratadas formalmente (contractors, outsourcing, prestadores)
 - **Estes são fornecedores explícitos** com contratos e responsabilidades documentadas
 - Ciclo de vida formal: preparação → onboarding → monitorização → offboarding
 - User Stories US-15 a US-20: Ciclo de vida de contractors/fornecedores
 
 **Addon files (Cap. 14):**
-- `02-template-validacao-contractors.md` (validação pré-acesso)
-- `12-guia-preparacao-sandbox.md` (preparação técnica)
-- `13-checklist-offboarding.md` (offboarding seguro)
+- Template de validação pré-acesso de contractors
+- Guia de preparação técnica de sandbox
+- Checklist de offboarding seguro
 
 **Conformidade DORA (Art. 26–28):**
 - **Ambas categorias exigem inventário e supervisão** → não é opcional escolher uma
 - SBOM alimenta inventário de risco técnico de componentes
 - Fornecedores contratuais alimentam inventário de risco organizacional
-- **Lacuna intencional:** O SbD-ToE não inclui templates ITS nem fórmulas DORA de análise de concentração. Para cumprir: mantenha SBOM atualizado (Cap. 05) + inventário formal de contractors (Cap. 14) + templates de contratos com cláusulas de segurança
+- **Lacuna intencional:** O SbD-ToE não inclui templates ITS nem fórmulas DORA de análise de concentração. Para cumprir: mantenha SBOM atualizado ([Cap. 05](/sbd-toe/sbd-manual/dependencias-sbom-sca/intro)) + inventário formal de contractors ([Cap. 14](/sbd-toe/sbd-manual/governanca-contratacao/intro)) + templates de contratos com cláusulas de segurança
 
 ---
 
@@ -103,10 +103,10 @@ Exige inventário formal, avaliação de risco, cláusulas obrigatórias, superv
 Exige mecanismos de recolha e disseminação de informação sobre incidentes e ameaças TIC.
 
 **Cobertura SbD-ToE:**
-- **Cap. 12:** Integração de threat intelligence (STIX/TAXII)
-- **Cap. 14:** Políticas de cooperação
+- **[Cap. 12](/sbd-toe/sbd-manual/monitorizacao-operacoes/intro):** Integração de threat intelligence (STIX/TAXII)
+- **[Cap. 14](/sbd-toe/sbd-manual/governanca-contratacao/intro):** Políticas de cooperação
 
-**Lacuna intencional:** O SbD-ToE não define acordos institucionais nem processos de notificação ao supervisor. Para cumprir: use mecanismos de threat intel do Cap. 12; firme acordos conforme comunidade; notifique supervisor conforme canais estabelecidos.
+**Lacuna intencional:** O SbD-ToE não define acordos institucionais nem processos de notificação ao supervisor. Para cumprir: use mecanismos de threat intel do [Cap. 12](/sbd-toe/sbd-manual/monitorizacao-operacoes/intro); firme acordos conforme comunidade; notifique supervisor conforme canais estabelecidos.
 
 ---
 
@@ -119,9 +119,9 @@ DORA não menciona explicitamente "exceções", mas em **conformidade regulatór
 - Plano de remediação
 
 **Cobertura SbD-ToE (Parcial):**
-- **Cap. 10:** Testes de segurança com "exceções formais aprovadas" (e.g., vulnerabilidades conhecidas com justificação)
-- **Cap. 08:** IaC com "exceções de configuração" rastreadas
-- **Cap. 14:** Governança com RACI para aprovações (implícito: quem aprova exceções?)
+- **[Cap. 10](/sbd-toe/sbd-manual/testes-seguranca/intro):** Testes de segurança com "exceções formais aprovadas" (e.g., vulnerabilidades conhecidas com justificação)
+- **[Cap. 08](/sbd-toe/sbd-manual/iac-infraestrutura/intro):** IaC com "exceções de configuração" rastreadas
+- **[Cap. 14](/sbd-toe/sbd-manual/governanca-contratacao/intro):** Governança com RACI para aprovações (implícito: quem aprova exceções?)
 
 **Lacuna intencional:** O SbD-ToE não define:
 - Quem tem autoridade para aprovar exceções em DORA (board? CISO? compliance officer?)
@@ -184,14 +184,14 @@ DORA Art. 5 estabelece que a **resiliência digital é responsabilidade última 
 
 | Capítulo | O que prescreve | Nível de detalhe |
 |----------|-----------------|-----------------|
-| **Cap. 01** | Classificação L1–L3 (base para criticidade de exceções) | ✅ Modelo E+D+I claro; criterios de L1/L2/L3 definidos |
-| **Cap. 01, addon 03** | Critérios de aceitação de risco (limiares por nível) | ✅ L1≤9, L2≤6, L3≤4; requer validação por 2+ perfis em L2/L3 |
-| **Cap. 02, addon 08** | Gestão de exceções a requisitos (processo formal) | ✅ Identificação, justificação, avaliação, compensação, revisão periódica |
-| **Cap. 04, addon 03** | Exceções a requisitos arquiteturais | ✅ Modelo de registo com horizonte temporal; responsáveis designados |
-| **Cap. 05, addon 09** | Exceções a CVEs (formalização, owner, TTL, impacto) | ✅ Processo completo: identificação → justificação → aceitação → TTL → revalidação |
-| **Cap. 10** | Exceções a testes de segurança (com aprovação formal) | ✅ Menção explícita: "exceções formais aprovadas" |
-| **Cap. 14** | Governança de exceções (RACI, approval flow, auditoria) | ⚠️ **PARCIAL** — User Stories definem roles, mas não explicam implicações DORA |
-| **Cap. 13** | Waivers e exceções temporárias (durante formação) | ✅ "Justificação formal documentada, aprovada por AppSec/GRC/gestão" |
+| **[Cap. 01](/sbd-toe/sbd-manual/classificacao-aplicacoes/intro)** | Classificação L1–L3 (base para criticidade de exceções) | ✅ Modelo E+D+I claro; criterios de L1/L2/L3 definidos |
+| **[Cap. 01](/sbd-toe/sbd-manual/classificacao-aplicacoes/intro), addon 03** | Critérios de aceitação de risco (limiares por nível) | ✅ L1≤9, L2≤6, L3≤4; requer validação por 2+ perfis em L2/L3 |
+| **[Cap. 02](/sbd-toe/sbd-manual/requisitos-seguranca/intro), addon 08** | Gestão de exceções a requisitos (processo formal) | ✅ Identificação, justificação, avaliação, compensação, revisão periódica |
+| **[Cap. 04](/sbd-toe/sbd-manual/arquitetura-segura/intro), addon 03** | Exceções a requisitos arquiteturais | ✅ Modelo de registo com horizonte temporal; responsáveis designados |
+| **[Cap. 05](/sbd-toe/sbd-manual/dependencias-sbom-sca/intro), addon 09** | Exceções a CVEs (formalização, owner, TTL, impacto) | ✅ Processo completo: identificação → justificação → aceitação → TTL → revalidação |
+| **[Cap. 10](/sbd-toe/sbd-manual/testes-seguranca/intro)** | Exceções a testes de segurança (com aprovação formal) | ✅ Menção explícita: "exceções formais aprovadas" |
+| **[Cap. 14](/sbd-toe/sbd-manual/governanca-contratacao/intro)** | Governança de exceções (RACI, approval flow, auditoria) | ⚠️ **PARCIAL** — User Stories definem roles, mas não explicam implicações DORA |
+| **[Cap. 13](/sbd-toe/sbd-manual/formacao-onboarding/intro)** | Waivers e exceções temporárias (durante formação) | ✅ "Justificação formal documentada, aprovada por AppSec/GRC/gestão" |
 
 ---
 
@@ -297,7 +297,7 @@ Rastreamento:
 
 **2. Esclarecer no Manual SbD-ToE**
 
-Adicionar ao Cap. 14 (Governança) uma secção dedicada:
+Adicionar ao [Cap. 14](/sbd-toe/sbd-manual/governanca-contratacao/intro) (Governança) uma secção dedicada:
 
 ```markdown
 ## Compatibilidade DORA: Exceções Inaceitáveis vs. Aceitáveis
@@ -317,7 +317,7 @@ Se um incidente ocorre e há exceção relacionada:
 
 ---
 
-**3. Integrar em User Stories do Cap. 14**
+**3. Integrar em User Stories do [Cap. 14](/sbd-toe/sbd-manual/governanca-contratacao/intro)**
 
 Expandir `US-15 (Processo formal de exceções)` com:
 - Approval Matrix DORA-compatível
@@ -341,7 +341,7 @@ Expandir `US-15 (Processo formal de exceções)` com:
 ### Conformidade Prática
 
 **Para cumprir DORA + SbD-ToE:**
-1. ✅ Usar processo formal de exceções do SbD-ToE (Cap. 14, Cap. 02 addon 08, Cap. 05 addon 09)
+1. ✅ Usar processo formal de exceções do SbD-ToE ([Cap. 14](/sbd-toe/sbd-manual/governanca-contratacao/intro), [Cap. 02](/sbd-toe/sbd-manual/requisitos-seguranca/intro) addon 08, [Cap. 05](/sbd-toe/sbd-manual/dependencias-sbom-sca/intro) addon 09)
 2. ✅ Mapear níveis a aprovadores DORA-compatíveis (L1→AppSec, L2→CISO, L3→Board/CRO)
 3. ✅ Definir categorias de inaceitabilidade (política organizacional)
 4. ✅ Rastreamento centralizado com audit trail (ferramenta GRC)
@@ -368,7 +368,7 @@ O **SbD-ToE cobre o coração técnico da DORA**. As lacunas observadas não sã
 - SbD-ToE Manual (Capítulos 01–14)
 - Regulamento DORA (UE 2022/2554)
 - NIST SP 800-53, OWASP SAMM, BSIMM, SSDF
-- Cap. 14 SbD-ToE: User Stories US-15 a US-20 (fornecedores/contractors)
+- [Cap. 14](/sbd-toe/sbd-manual/governanca-contratacao/intro) SbD-ToE: User Stories US-15 a US-20 (fornecedores/contractors)
 
 ---
 

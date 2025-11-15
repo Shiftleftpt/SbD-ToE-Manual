@@ -201,7 +201,7 @@ DORA Art. 5 estabelece que a **resiliência digital é responsabilidade última 
 
 | Nível | SbD-ToE Prescreve | DORA Exige | Gap |
 |-------|------------------|-----------|-----|
-| **L1** | Validação por AppSec Engineer (informal) | Aprovação por autoridade formal designada | ⚠️ Developer-friendly, mas falta escalonamento claro |
+| **L1** | Validação por AppSec Engineer (informal) | Aprovação por autoridade formal designada | ⚠️ Developer-friendly, mas falta escalada clara |
 | **L2** | Validação formal por AppSec + GRC | Aprovação por CISO ou equivalente formal | ✅ Adequado, mas manual não o diz explicitamente |
 | **L3** | Aprovação de Gestão Executiva/CISO | **Aprovação de board ou CRO (exigência DORA)** | ❌ **GAP CRÍTICO** — Manual não especifica "board-level approval" |
 
@@ -228,7 +228,7 @@ DORA Art. 5 estabelece que a **resiliência digital é responsabilidade última 
 | **Criação de exceção** | Documenta com owner, TTL, critérios | ✅ Bom | ✅ Alinhado |
 | **Reavaliação periódica** | Revisão 30 dias antes expiração; re-aprovação obrigatória | ✅ Bom | ✅ Alinhado |
 | **Rastreamento centralizado** | Ferramenta GRC; audit trail por aplicação | ✅ Bom | ⚠️ Manual não descreve formato de reporte a DORA |
-| **Escalonamento ao regulador** | Não mencionado no manual | ❌ DORA exige reportar exceções em contexto de incidentes | ❌ **GAP** — Sem guia de quando escalar ao regulador |
+| **Escalada ao regulador** | Não mencionado no manual | ❌ DORA exige reportar exceções em contexto de incidentes | ❌ **GAP** — Sem guia de quando escalar ao regulador |
 
 **Como manifesta:** Incidente de segurança; regulador pede: "mostre-me exceções relevantes" → organização não tem visão consolidada ou não sabe se deve reportar.
 
@@ -310,7 +310,7 @@ Se um incidente ocorre e há exceção relacionada:
 - **Com aprovação documentada** → Demostra supervisão; mitigação regulatória
 - **Sem aprovação documentada** → Evidência de negligência; penalidade potencial
 
-### Processo de Escalonamento ao Regulador
+### Processo de Escalada ao Regulador
 
 [Template de como reportar exceção ao supervisor em contexto de incidente]
 ```
@@ -333,7 +333,7 @@ Expandir `US-15 (Processo formal de exceções)` com:
 | **Descoberta regulatória** | Ausência de documentação de exceções ou localização desconhecida ❌ | Processo formal em sistema GRC com aprovação board-level ✅ |
 | **Trilho auditado** | Exceções em canais informais (Slack/Teams/email) ❌ | Exceções em ferramenta GRC com audit trail completo ✅ |
 | **Supervisão do board** | Board desconhece exceções críticas ❌ | Board recebe reporte trimestral de exceções L3 ✅ |
-| **Resposta a incidentes** | Desconhecimento de vulnerabilidade explorada ❌ | Vulnerabilidade registada em exceção aprovada com plano de correção; escalonamento segundo protocolo ✅ |
+| **Resposta a incidentes** | Desconhecimento de vulnerabilidade explorada ❌ | Vulnerabilidade registada em exceção aprovada com plano de correção; escalada segundo protocolo ✅ |
 | **Achados auditoria** | Achado crítico: falha de governance ❌ | Achado menor: oportunidades de melhoria operacional ✅ |
 
 ---
@@ -346,7 +346,7 @@ Expandir `US-15 (Processo formal de exceções)` com:
 3. ✅ Definir categorias de inaceitabilidade (política organizacional)
 4. ✅ Implementar rastreamento centralizado com audit trail (ferramenta GRC)
 5. ✅ Estabelecer reporte trimestral a estruturas de governance (exigência DORA Art. 5)
-6. ✅ Definir protocolo de escalonamento ao regulador em contexto de incidente (Art. 18)
+6. ✅ Definir protocolo de escalada ao regulador em contexto de incidente (Art. 18)
 
 ---
 

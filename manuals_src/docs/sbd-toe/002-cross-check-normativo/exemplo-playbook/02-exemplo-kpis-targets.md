@@ -32,7 +32,7 @@ Para cada dimensão, apresentamos targets exemplares.
 
 ---
 
-## Cenário 1: Fintech de Pagamentos (Startup, <50 devs)
+## Cenário 1: Fintech de Pagamentos (Startup, `<`50 devs)
 
 ### Contexto
 - Serviço crítico: Processamento de pagamentos
@@ -47,13 +47,13 @@ Para cada dimensão, apresentamos targets exemplares.
 | **Risco Aplicacional** | % apps classificadas | 100% | M1 | Urgente: DORA requer classificação |
 | | Threat modeling (L3) | 100% | M3 | Antes de TLPT |
 | | Vulns críticas não remediadas | 0 | Permanente | Pagamentos: zero tolerance |
-| | Vulns altas não remediadas | 0 (ou <48h SLA) | Permanente | Impacto direto PCI |
+| | Vulns altas não remediadas | 0 (ou `<`48h SLA) | Permanente | Impacto direto PCI |
 | **Desenvolvimento** | Cobertura de testes | ≥80% | M6 | Progressivo: começar com funções críticas |
 | | SAST findings altos | 0 | Permanente | Gate de CI/CD |
 | | SCA findings altos | 0 | Permanente | Gate de CI/CD |
-| **Operações** | MTTR P0 (Critical) | <2h | Permanente | Pagamentos: impacto direto |
-| | MTTR P1 (High) | <8h | Permanente | Business impacto |
-| | Incidents detetados/month | <5 | M12 | Reduzir com maturidade |
+| **Operações** | MTTR P0 (Critical) | `<`2h | Permanente | Pagamentos: impacto direto |
+| | MTTR P1 (High) | `<`8h | Permanente | Business impacto |
+| | Incidents detetados/month | `<`5 | M12 | Reduzir com maturidade |
 | **Supply Chain** | Fornecedores no inventário | 100% | M2 | DORA Art. 26 requer |
 | | % com onboarding completo | 100% | M3 | Antes de acesso |
 | | % com security trainning | 100% | M3 | Obrigatório antes acesso |
@@ -79,10 +79,10 @@ FINTECH SEGURANÇA - Novembro 2025
 │ SCA findings altos:        0    ✓             │
 └──────────────────────────────────────────────┘
 
-┌─ OPERAÇÕES ──────────────────────────────────┐
+├─ OPERAÇÕES ──────────────────────────────────┐
 │ MTTR P0:                   1.5h ✓             │
 │ MTTR P1:                   6h   ✓             │
-│ Incidents/month:           3    (<5 target)  │
+│ Incidents/month:           3    (`<`5 target)  │
 └──────────────────────────────────────────────┘
 
 ┌─ SUPPLY CHAIN ───────────────────────────────┐
@@ -101,10 +101,10 @@ FINTECH SEGURANÇA - Novembro 2025
 
 ---
 
-## Cenário 2: Banco Tradicional (Regional, 200+ devs)
+## Cenário 2: Banco Tradicional (Regional, `>`200 devs)
 
 ### Contexto
-- Apps críticas: >30 (múltiplas linhas de negócio)
+- Apps críticas: `>`30 (múltiplas linhas de negócio)
 - Deadline DORA: Janeiro 2025
 - Budget: Adequado
 - Risk appetite: Muito baixo (conformidade histórica)
@@ -118,20 +118,20 @@ FINTECH SEGURANÇA - Novembro 2025
 | | Threat modeling (L3) | 100% | M4 | Mais apps = tempo |
 | | Threat modeling (L2) | 80% | M6 | Progressivo |
 | | Vulns críticas não remediadas | 0 | Permanente | DORA + GDPR |
-| | Vulns altas (SLA remediação) | <30 dias | Permanente | Conforme Cap. 05 |
-| | Vulns médias (SLA remediação) | <90 dias | Permanente | Conforme Cap. 05 |
+| | Vulns altas (SLA remediação) | `<`30 dias | Permanente | Conforme Cap. 05 |
+| | Vulns médias (SLA remediação) | `<`90 dias | Permanente | Conforme Cap. 05 |
 | **Desenvolvimento** | Cobertura de testes | ≥85% | M12 | Mais rigoroso: banco |
 | | SAST findings altos | 0 | Permanente | Zero tolerance |
 | | SCA findings altos | 0 | Permanente | Zero tolerance |
 | | Code review rate | 100% | Permanente | Segregação duties |
-| **Operações** | MTTR P0 (Critical) | <1h | Permanente | Impacto sistémico |
-| | MTTR P1 (High) | <4h | Permanente | Impacto operacional |
+| **Operações** | MTTR P0 (Critical) | `<`1h | Permanente | Impacto sistémico |
+| | MTTR P1 (High) | `<`4h | Permanente | Impacto operacional |
 | | Disponibilidade core apps | ≥99.95% | Permanente | SLA regulatório |
-| | Incidents P0 resolvidos <24h | 100% | Permanente | Reporte DORA obrigatório |
+| | Incidents P0 resolvidos `<`24h | 100% | Permanente | Reporte DORA obrigatório |
 | **Supply Chain** | Fornecedores no inventário | 100% | M1 | DORA Art. 26 |
 | | % auditados (risk assessment) | 100% | M3 | DORA requer |
 | | % com contrato atualizado | 100% | M6 | Cláusulas técnicas |
-| | % com acesso revogado <24h | 100% | Permanente | Offboarding rigoroso |
+| | % com acesso revogado `<`24h | 100% | Permanente | Offboarding rigoroso |
 | **Conformidade** | Política board + GDPR officer | ✓ | M0 | Pré-requisito |
 | | Trilho auditoria (logs) | 5 anos | M0 | GDPR + DORA |
 | | Staff SbD training | 100% devs | M6 | Maior volume |
@@ -174,12 +174,12 @@ Banco (M0-M18):
 | **Risco Aplicacional** | % apps classificadas | 100% | M1 | Obrigatório DORA |
 | | Threat modeling (L3) | 100% | M3 | Menos apps = rápido |
 | | Vulns críticas não remediadas | 0 | Permanente | GDPR + dados |
-| | Vulns altas (SLA) | <15 dias | Permanente | Dados sensíveis |
+| | Vulns altas (SLA) | `<`15 dias | Permanente | Dados sensíveis |
 | **Desenvolvimento** | Cobertura de testes | ≥75% | M6 | Pragmático para PME |
 | | SAST findings altos | 0 | Permanente | Gate CI/CD |
 | | SCA findings altos | 0 | Permanente | Gate CI/CD |
-| **Operações** | MTTR P0 | <4h | Permanente | Seguros: impacto operacional |
-| | MTTR P1 | <24h | Permanente | Menos crítico que banco |
+| **Operações** | MTTR P0 | `<`4h | Permanente | Seguros: impacto operacional |
+| | MTTR P1 | `<`24h | Permanente | Menos crítico que banco |
 | | Disponibilidade | ≥99.5% | Permanente | SLA comercial |
 | **Supply Chain** | Fornecedores no inventário | 100% | M2 | DORA requer |
 | | % com onboarding | 100% | M3 | Antes acesso |
@@ -205,9 +205,9 @@ Banco (M0-M18):
 
 | Tier | Cliente | RTO | Vulns Altas SLA | TLPT | Training |
 |------|---------|-----|-----------------|------|----------|
-| **Essencial** | Banco pequeno | <4h | <30d | Sim | 100% |
-| **Padrão** | PME financeira | <8h | <45d | Sim | 80% |
-| **Básico** | Startup fintech | <24h | <60d | Piloto | 60% |
+| **Essencial** | Banco pequeno | `<`4h | `<`30d | Sim | 100% |
+| **Padrão** | PME financeira | `<`8h | `<`45d | Sim | 80% |
+| **Básico** | Startup fintech | `<`24h | `<`60d | Piloto | 60% |
 
 ### Gestão de Clientes
 ```
@@ -238,8 +238,8 @@ Independentemente do cenário, o dashboard deve ter:
 ├─────────────────────────────────────────────────┤
 │ RISCO                                           │
 │ ├─ Critical: 0 (target: 0)          🟢 OK       │
-│ ├─ High: 3 (target: <5)             🟢 OK       │
-│ └─ Medium: 12 (target: <20)         🟡 WATCH   │
+│ ├─ High: 3 (target: `<`5)             🟢 OK       │
+│ └─ Medium: 12 (target: `<`20)         🟡 WATCH   │
 ├─────────────────────────────────────────────────┤
 │ CONFORMIDADE                                    │
 │ ├─ Apps classificadas: 95% (100%)   🟡 DELAYED │

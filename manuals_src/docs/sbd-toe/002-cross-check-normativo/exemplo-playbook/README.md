@@ -77,7 +77,7 @@ Exemplo de definição de RTO/RPO por app, baseado em classificação L1–L3.
 **Exemplos cobertos:**
 - App L1 (não crítica): RTO 48h, RPO 24h
 - App L2 (crítica): RTO 4h, RPO 1h
-- App L3 (core banking): RTO <1h, RPO <15min
+- App L3 (core banking): RTO `<`1h, RPO `<`15min
 
 **Nota:** Valores são exemplares; cada org define conforme criticidade real.
 

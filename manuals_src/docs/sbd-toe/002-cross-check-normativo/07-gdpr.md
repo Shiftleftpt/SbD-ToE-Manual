@@ -133,7 +133,7 @@ Responda SIM:
 4. Runbook de incidente com cronómetro 72h ativo e campos RGPD? ✓
 5. Processors: contratos com cláusulas técnicas e segurança verificada? ✓
 
-≥4/5 → Boa cobertura técnica. <3 → Priorizar Art. 32, PbD e incidentes 72h.
+≥4/5 → Boa cobertura técnica. `<`3 → Priorizar Art. 32, PbD e incidentes 72h.
 
 ---
 

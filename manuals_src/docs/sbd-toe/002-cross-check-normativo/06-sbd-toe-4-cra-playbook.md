@@ -128,7 +128,7 @@ Princípio: Reutilizar > Inventar. Muitas capacidades (SBOM, patching, testes) j
 - [ ] Página política disclosure publicada
 - [ ] Canal reporte funcional (email/portal)
 - [ ] Runbook triagem interna
-- [ ] Tempo resposta médio <5 dias úteis
+- [ ] Tempo resposta médio `<`5 dias úteis
 
 ### Checklist Reporte Exploração
 - [ ] Critérios "explorada ativamente" definidos

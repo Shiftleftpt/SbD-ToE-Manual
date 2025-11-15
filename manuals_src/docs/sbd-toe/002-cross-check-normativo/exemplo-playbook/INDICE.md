@@ -124,7 +124,7 @@ Visão geral, estrutura e instruções de uso
 - Cap. 08 - IaC e Continuidade
 
 **Abstenção deliberada coberta:**
-- ❌ O manual NÃO prescreve "RTO: <1h" ou "RPO: <15min"
+- ❌ O manual NÃO prescreve "RTO: `<1h`" ou "RPO: `<15min`"
 - ✓ Exemplo: Como definir por app L1/L2/L3
 - ✓ Exemplo: Como implementar (backups, replicas, failover)
 

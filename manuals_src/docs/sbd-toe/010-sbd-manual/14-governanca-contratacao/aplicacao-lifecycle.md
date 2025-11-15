@@ -621,7 +621,7 @@ Como **CISO + Training Manager**, quero **definir e executar trilho de formaçã
 |----|----|----|
 | Básico | Obrigatório | Obrigatório + 80% score requerido |
 
-**Integração.** Planeamento + Execução; Resp: Training Manager (coordenação trilho) + AppSec Engineer (validação de conclusão) + HR (rastreabilidade); Triggers: Contractor aprovado (fim US-06/US-15); SLA: Formação completa antes de acesso real; Notificação: Semanais se em risco, daily se <3 dias  
+**Integração.** Planeamento + Execução; Resp: Training Manager (coordenação trilho) + AppSec Engineer (validação de conclusão) + HR (rastreabilidade); Triggers: Contractor aprovado (fim US-06/US-15); SLA: Formação completa antes de acesso real; Notificação: Semanais se em risco, daily se `<`3 dias  
 
 **Ligações úteis.**  
 - [Cap. 13 - Formação e Onboarding](/sbd-toe/sbd-manual/formacao-onboarding/aplicacao-lifecycle)  
@@ -670,7 +670,7 @@ Como **Security Champion + HR + DevOps Lead**, quero **executar processo formal 
 |----|----|----|
 | Básico | Obrigatório | Obrigatório + audit trail |
 
-**Integração.** Operações + Validação; Resp: HR (coordenação timeline) + DevOps (acesso técnico) + AppSec Engineer (validação) + Security Champion (checkpoints); Triggers: Data de término conhecida (programado), Rescisão imediata (unscheduled); SLA: Offboarding completo em **<24h** da data de termo; Notificação: HR envia aviso 2 semanas antes  
+**Integração.** Operações + Validação; Resp: HR (coordenação timeline) + DevOps (acesso técnico) + AppSec Engineer (validação) + Security Champion (checkpoints); Triggers: Data de término conhecida (programado), Rescisão imediata (unscheduled); SLA: Offboarding completo em **`<`24h** da data de termo; Notificação: HR envia aviso 2 semanas antes  
 
 **Ligações úteis.**  
 - [Reavaliação de Fornecedores - US-14](#us-14)  
@@ -697,7 +697,7 @@ Como **AppSec Engineer + Security Monitoring Team**, quero **monitorizar continu
 - [ ] Alerta automático acionado se:  
     - CVE crítico em dependência do fornecedor não mitigado em 72h (L3) ou 7 dias (L2)  
     - Incidente de segurança reportado pelo fornecedor  
-    - SLA não cumprido (ex.: uptime <99.5% para L3, <99% para L2)  
+    - SLA não cumprido (ex.: uptime `<`99.5% para L3, `<`99% para L2)  
     - Mudança de propriedade, localização, ou subcontratação  
 - [ ] Escalação automática com prioridade:  
     - **P0 (CVE crítico explorado):** Immediate → AppSec Engineer + Procurement Officer + CISO  
@@ -716,7 +716,7 @@ Como **AppSec Engineer + Security Monitoring Team**, quero **monitorizar continu
 |----|----|----|
 | Não | Recomendado | Obrigatório |
 
-**Integração.** Operações contínuo; Resp: AppSec Engineer (setup inicial) + Security Monitoring (operação 24x7); Triggers: Incidente, CVE crítico, SLA breach, mudança contratual; SLA: Alerta em **<1h** de deteção, escalonamento em <15 min  
+**Integração.** Operações contínuo; Resp: AppSec Engineer (setup inicial) + Security Monitoring (operação 24x7); Triggers: Incidente, CVE crítico, SLA breach, mudança contratual; SLA: Alerta em **`<`1h** de deteção, escalonamento em `<`15 min  
 
 **Ligações úteis.**  
 - [Reavaliação de Fornecedores - US-14](#us-14)  

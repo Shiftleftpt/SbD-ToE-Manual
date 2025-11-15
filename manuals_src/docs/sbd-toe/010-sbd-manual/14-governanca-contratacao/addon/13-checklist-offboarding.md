@@ -43,7 +43,7 @@ T-1 dia: Avisos finais
   └─ Equipamentos recolhidos agendados
 
 T+0 (Dia de Término):
-  └─ Acesso revogado (<24h depois)
+  └─ Acesso revogado (`<`24h depois)
   └─ Assets finais recuperados
 
 T+1 dia: Verificação
@@ -106,7 +106,7 @@ Location: /archive/offboarded/{contractor-name}/{date}/
 
 ## 🔐 OFFBOARDING EXECUTION (T+0 DATA DE TÉRMINO)
 
-### 4. Revogação de Acesso Técnico (<24h após T+0)
+### 4. Revogação de Acesso Técnico (`<`24h após T+0)
 
 **Timeline:** Começar revogação entre T+0 (fim de expediente) e T+1 (manhã)
 

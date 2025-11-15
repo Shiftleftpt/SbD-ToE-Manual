@@ -84,7 +84,7 @@ Impact:
 ├─ Affected Users: ~500 (active sessions)
 ├─ Data Exposure: None detected
 ├─ Downtime: 15 minutes (partial degradation, not full)
-├─ Business Impact: Transactions delayed (SLA met: <30min recovery)
+├─ Business Impact: Transactions delayed (SLA met: `<`30min recovery)
 └─ Regulatory Impact: DORA Art. 18 reportable? No (within thresholds)
 ```
 
@@ -119,7 +119,7 @@ Follow-up Actions (planned):
 ```
 What went well:
 - Detection fast (SIEM)
-- Team response <10 min
+- Team response `<`10 min
 - Communication clear
 - No escalation to CEO
 
@@ -138,7 +138,7 @@ Action Items:
 
 ```
 DORA Art. 18 Threshold Analysis:
-- Availability Impact: <20% (low)
+- Availability Impact: `<`20% (low)
 - Confidentiality Impact: None
 - Integrity Impact: None
 - Affected Customers: Not significantly

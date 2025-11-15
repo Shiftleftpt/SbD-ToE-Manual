@@ -125,7 +125,7 @@ Responda SIM aos seguintes pontos:
 9. Guia de Segurança do Produto publicado? ✓
 10. Processo de reporte de exploração ativa documentado? ✓
 
-≥8/10 → Boa maturidade CRA técnica. <6 → Priorizar SBOM, patching, disclosure, gating crítico.
+≥8/10 → Boa maturidade CRA técnica. `<`6 → Priorizar SBOM, patching, disclosure, gating crítico.
 
 ## Ações Prioritárias (Roadmap Inicial)
 

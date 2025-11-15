@@ -211,7 +211,7 @@ Se consegues responder SIM a isto, estás alinhado com DORA:
 9. **Evidence:** Consigo demonstrar tudo isto em auditoria? ✓
 
 **Se 8/9:** Estás pronto para regulador.  
-**Se <5/9:** Prioriza governação + classificação + monitorização.
+**Se `<`5/9:** Prioriza governação + classificação + monitorização.
 
 **Responsável:** Security/SRE  
 **Evidência:** Logs de incidentes, plano de resposta

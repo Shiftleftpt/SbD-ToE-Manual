@@ -70,7 +70,7 @@ As **políticas de execução** são regras formais aplicadas automaticamente no
 
 5. **Ativar modo `enforce`** após validação e aceitação da política.
 
-6. **Aplicar rótulos (labels), anotações e regras de escopo** (por namespace, equipa, tipo de workload).
+6. **Aplicar rótulos (labels), anotações e regras de âmbito** (por namespace, equipa, tipo de workload).
 
 ---
 
@@ -79,7 +79,7 @@ As **políticas de execução** são regras formais aplicadas automaticamente no
 - Diretório `./policies/` em repositório Git controlado;
 - Versionar com a infraestrutura (IaC);
 - Validar via CI/CD antes de aplicar;
-- Aplicar por ambientes (`dev`, `pre-prod`, `prod`) com escopo diferenciado;
+- Aplicar por ambientes (`dev`, `pre-prod`, `prod`) com âmbito diferenciado;
 - Auditar logs de rejeições e execuções conformes.
 
 ---

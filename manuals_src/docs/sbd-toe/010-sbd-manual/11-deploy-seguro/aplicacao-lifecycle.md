@@ -296,7 +296,7 @@ Como **DevOps/AppSec**, quero **implementar feature flags com metadados, owner e
 **Critérios de aceitação (BDD).**  
 - Dado que uma funcionalidade nova é entregue  
 - Quando a flag está ativa  
-- Então a funcionalidade é visível e controlada por regras de escopo (ambiente, grupo, geo)  
+- Então a funcionalidade é visível e controlada por regras de âmbito (ambiente, grupo, geo)  
 - E cada alteração de flag é auditada (quem, quando, porquê)  
 - E flags expiradas são automaticamente desativadas
 

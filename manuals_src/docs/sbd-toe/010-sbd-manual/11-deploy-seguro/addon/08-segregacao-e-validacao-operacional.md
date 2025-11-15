@@ -57,7 +57,7 @@ A separação clara entre ambientes (desenvolvimento, QA, staging, produção) �
 ## 🚑 Testes em produção com segurança
 
 Em alguns contextos, pode ser necessário validar em produção:
-- Com feature flags e escopo limitado
+- Com feature flags e âmbito limitado
 - Com logs e alertas reforçados
 - Com rollback imediato preparado
 

@@ -21,7 +21,7 @@ Definir:
 - Como deve ser planeado e integrado no ciclo de vida;
 - Que tipos de abordagem são possíveis (black-box vs grey-box);
 - Como os seus resultados devem ser utilizados para reforçar a segurança;
-- Como o Capítulo 10 pode servir de base para preparação e escopo.
+- Como o Capítulo 10 pode servir de base para preparação e âmbito.
 
 ---
 
@@ -64,7 +64,7 @@ Existem duas formas principais de conduzir um PenTest:
 | Conhecimento prévio      | Parcial. O pentester recebe contexto técnico. |
 | Dados fornecidos         | Findings de SAST/DAST/SCA, SBOM, endpoints, credenciais, API docs. |
 | Foco                     | Exploração dirigida, validação de correções, gaps reais. |
-| Benefício                | Maior eficácia com escopo orientado por risco. |
+| Benefício                | Maior eficácia com âmbito orientado por risco. |
 
 **Relação com Cap. 10:**
 - Usa os findings da validação contínua como input;
@@ -104,7 +104,7 @@ O PenTest **não substitui** testes contínuos - é um **complemento estratégic
 
 | Item                                                       | Verificado? |
 |------------------------------------------------------------|-------------|
-| Escopo definido com base em classificação de risco         | ☐           |
+| âmbito definido com base em classificação de risco         | ☐           |
 | Endpoints, APIs e versões documentadas                     | ☐           |
 | Ambiente de testes seguro e isolado disponível             | ☐           |
 | NDA e acordos de acesso definidos (se aplicável)           | ☐           |

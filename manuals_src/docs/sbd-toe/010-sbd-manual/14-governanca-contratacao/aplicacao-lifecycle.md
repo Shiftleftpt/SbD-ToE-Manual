@@ -543,6 +543,275 @@ Como **Procurement Officer + AppSec Engineer**, quero **reavalia e reaprovar for
 
 ---
 
+### US-15 - Preparação Técnica e Validação de Contractors pré-Acesso
+**Contexto.** Contractors ganham acesso sem compreender políticas de segurança, ferramentas obrigatórias, ou procedimentos. Risco de erro involuntário (credenciais expostas, acesso a dados não autorizados, práticas inseguras).
+
+:::userstory
+**História.**   
+Como **Security Champion + HR/Recruiter**, quero **executar processo estruturado de preparação técnica de contractors (triagem, formação obrigatória, teste de compreensão, ambiente sandbox) antes de ganhem acesso a sistemas**, para **garantir que estão preparados, compreenderam políticas fundamentais, e podem trabalhar seguramente**.
+
+**BDD.**  
+- Dado um novo contractor aprovado por Procurement (US-06) e contrato assinado  
+- Quando chega data de início do projeto  
+- Então trilho de preparação é acionado: formação obrigatória, quiz, sandbox setup, confirmação de NDA  
+
+**DoD.**  
+- [ ] Checklist de preparação preenchido (triagem de skills, nível de segurança esperado, formação requerida definida)  
+- [ ] Trilho de formação baseado em perfil (Dev, DevOps, QA, etc.) iniciado em LMS ou plataforma de treino  
+- [ ] Quiz de compreensão de políticas de segurança completado (score mínimo 80%)  
+- [ ] Acesso a ambiente sandbox fornecido para prática (ex.: repositório Git privado, aplicação demo, ferramentas de segurança)  
+- [ ] NDA e confidentiality agreement assinados digitalmente com timestamp  
+- [ ] Checklist de onboarding técnico preenchido e validado pela equipa (Security Champion + Tech Lead)  
+- [ ] Acesso real a sistemas concedido apenas após todos os passos de aprovação  
+- [ ] Registo de "ready for access" documentado em GRC com data, validador, e referência a todas as validações  
+
+:::
+
+**Artefactos & evidências.** Checklist de preparação preenchido, LMS enrollment confirmado, Quiz score validado, Sandbox access credentials, Acordos assinados digitalmente, Checklist de onboarding, Registo GRC de "ready for access"
+
+**Proporcionalidade.**  
+| L1 | L2 | L3 |
+|----|----|----|
+| Básico | Recomendado | Obrigatório + quiz validado |
+
+**Integração.** Planeamento; Resp: HR (coordenação) + AppSec Engineer (validação) + Tech Lead (sandbox setup); Triggers: Contrato assinado, data de início do projeto; SLA: Conclusão em 2–3 dias úteis antes de data de início; Notificação: Contractor informado via email sobre trilho  
+
+**Ligações úteis.**  
+- [Cap. 13 - Formação e Onboarding](/sbd-toe/sbd-manual/formacao-onboarding/aplicacao-lifecycle)  
+- [Validação de Fornecedores - US-06](#us-06)  
+- [Template de Validação de Contractors](/sbd-toe/sbd-manual/governanca-contratacao/addon/02-template-validacao-contractors)  
+- [Guia de Preparação Sandbox](/sbd-toe/sbd-manual/governanca-contratacao/addon/12-guia-preparacao-sandbox)  
+
+---
+
+### US-16 - Trilho de Formação Obrigatória pré-Acesso (Contractors)
+**Contexto.** Contractors iniciados sem completar formação de segurança obrigatória. Falta de integração clara entre Cap. 13 (Formação) e Cap. 14 (Governação): quem aprova, qual o SLA, como é tracked.
+
+:::userstory
+**História.**   
+Como **CISO + Training Manager**, quero **definir e executar trilho de formação obrigatória por perfil de contractor, com SLA explícito de conclusão antes de acesso técnico**, para **garantir consciência de segurança mínima, conformidade regulatória (DORA, NIS2), e rastreabilidade de preparação**.
+
+**BDD.**  
+- Dado um contractor novo contratado  
+- Quando trilho de formação é atribuído em LMS  
+- Então deve completar cursos obrigatórios, passar quiz, e ter registo consolidado antes de acesso real  
+
+**DoD.**  
+- [ ] Trilho de formação definido por perfil (Developer, DevOps, QA, Arquitetura, etc.) com duração estimada  
+- [ ] Cursos obrigatórios listados e mapeados a capítulos SbD-ToE:  
+    - **[O1] Security Awareness Geral** (2h) → Cap. 00 + 02 + 14  
+    - **[O2] SbD-ToE Overview** (1h) → Cap. 01–03 (risco, requisitos, threat modeling)  
+    - **[O3] Secure Coding & SAST** (2h) → Cap. 06 (se developer)  
+    - **[O4] CI/CD Security & Artefacts** (1h) → Cap. 07 (se DevOps)  
+    - **[O5] Incident Response Basics** (1h) → Cap. 12  
+    - **[O6] Supply Chain & Dependências** (1h) → Cap. 05 (se envolvido com builds)  
+- [ ] Quiz de avaliação por curso (score mínimo 80%) completado  
+- [ ] Registo centralizado atualizado (LMS ou Confluence) com datas, scores, validador  
+- [ ] SLA de conclusão comunicado ao contractor: Máximo **5 dias úteis antes de data de início**  
+- [ ] Notificação automática enviada se SLA em risco (ex.: 2 dias antes da deadline)  
+- [ ] Sign-off de "formação completa" fornecido ao AppSec Engineer (libera acesso técnico)  
+- [ ] Histórico mantido por 3 anos (DORA, NIS2 requirement)  
+
+:::
+
+**Artefactos & evidências.** Trilho de formação definido por perfil, LMS enrollment, Quiz completion records, Sign-off de conclusão, SLA compliance checklist, Notificações enviadas
+
+**Proporcionalidade.**  
+| L1 | L2 | L3 |
+|----|----|----|
+| Básico | Obrigatório | Obrigatório + 80% score requerido |
+
+**Integração.** Planeamento + Execução; Resp: Training Manager (coordenação trilho) + AppSec Engineer (validação de conclusão) + HR (rastreabilidade); Triggers: Contractor aprovado (fim US-06/US-15); SLA: Formação completa antes de acesso real; Notificação: Semanais se em risco, daily se `<`3 dias  
+
+**Ligações úteis.**  
+- [Cap. 13 - Formação e Onboarding](/sbd-toe/sbd-manual/formacao-onboarding/aplicacao-lifecycle)  
+- [Designação de Owners de Segurança - US-09](#us-09)  
+- [Preparação Técnica - US-15](#us-15)  
+
+---
+
+### US-17 - Offboarding Seguro de Contractors e Rescisão de Fornecedores
+**Contexto.** Contractors terminam projeto ou contrato sem processo formal: acesso mantém-se ativo, ativos (código, credenciais, documentos) não são recuperados. Risco de vazamento pós-rescisão, acesso residual, violação de confidencialidade.
+
+:::userstory
+**História.**   
+Como **Security Champion + HR + DevOps Lead**, quero **executar processo formal e automático de offboarding seguro quando contractor termina ou fornecedor é rescindido**, para **garantir que acesso é revogado completamente, ativos recuperados, confidencialidade mantida, e conformidade legal assegurada**.
+
+**BDD.**  
+- Dado um contractor cuja data de termo é conhecida (ou fornecedor rescindido com aviso)  
+- Quando data de offboarding chega  
+- Então acesso é revogado, ativos recuperados, e conclusão documentada  
+
+**DoD.**  
+- [ ] Checklist de offboarding preparado 2 semanas antes (IT, HR, AppSec, Tech Lead)  
+- [ ] Notificação formal enviada ao contractor/fornecedor com data exata de desativação  
+- [ ] Acesso a sistemas revogado (no máximo 24h após data de termo):  
+    - Contas de utilizador desativadas em Git, Jira, CI/CD  
+    - SSH keys e API tokens removidos  
+    - VPN, cloud IAM access revogado  
+    - MFA removido  
+    - Emails corporativos desativados (se aplicável)  
+- [ ] Ativos recuperados:  
+    - Código/repositórios transferidos ou archived (se contractor desenvolveu)  
+    - Documentação entregue e versionada  
+    - Laptop/hardware retornado, wiped, e certificação de limpeza  
+    - Secrets (API keys, passwords) rotacionados  
+- [ ] Last backup de trabalho do contractor realizado (ex.: clone de repos privados)  
+- [ ] Sign-off formal de "offboarding completo" registado em GRC com timestamp  
+- [ ] Reminder legal enviado ao contractor: Confidentiality obligations continuam pós-término (duração, consequências)  
+- [ ] Relatório de offboarding arquivado por 7 anos (DORA requirement)  
+
+:::
+
+**Artefactos & evidências.** Checklist de offboarding preenchido, Confirmação de desativação de acesso, Backup certificate, Ativos recuperados (inventory), Sign-off GRC, Legal notice, Relatório arquivado
+
+**Proporcionalidade.**  
+| L1 | L2 | L3 |
+|----|----|----|
+| Básico | Obrigatório | Obrigatório + audit trail |
+
+**Integração.** Operações + Validação; Resp: HR (coordenação timeline) + DevOps (acesso técnico) + AppSec Engineer (validação) + Security Champion (checkpoints); Triggers: Data de término conhecida (programado), Rescisão imediata (unscheduled); SLA: Offboarding completo em **`<`24h** da data de termo; Notificação: HR envia aviso 2 semanas antes  
+
+**Ligações úteis.**  
+- [Reavaliação de Fornecedores - US-14](#us-14)  
+- [Preparação Técnica - US-15](#us-15)  
+- [Checklist de Offboarding](/sbd-toe/sbd-manual/governanca-contratacao/addon/13-checklist-offboarding)  
+
+---
+
+### US-18 - Monitorização Contínua de Conformidade de Fornecedores (Alertas e Escalação)
+**Contexto.** Fornecedores são avaliados periodicamente (US-14), mas risco entre ciclos não é detetado. CVEs, incidentes críticos, mudanças de SLA, ou breaches não são monitorados em tempo real.
+
+:::userstory
+**História.**   
+Como **AppSec Engineer + Security Monitoring Team**, quero **monitorizar continuamente conformidade de fornecedores críticos (incidentes, CVEs, SLA, mudanças organizacionais) e escalar automaticamente se gaps surgem**, para **reduzir risco residual entre ciclos de avaliação formal e detetar eventos críticos em tempo real**.
+
+**BDD.**  
+- Dado um fornecedor crítico (L2–L3) com contrato vigente  
+- Quando incidente, CVE crítico, SLA breach, ou mudança organizacional é reportado  
+- Então alerta automático é gerado e escalado para AppSec e Procurement  
+
+**DoD.**  
+- [ ] Integração com feed de incidentes do fornecedor (status page, email alerts, API)  
+- [ ] Monitorização contínua de CVEs em stack técnico do fornecedor (via SBOM/SCA tool)  
+- [ ] Alerta automático acionado se:  
+    - CVE crítico em dependência do fornecedor não mitigado em 72h (L3) ou 7 dias (L2)  
+    - Incidente de segurança reportado pelo fornecedor  
+    - SLA não cumprido (ex.: uptime `<`99.5% para L3, `<`99% para L2)  
+    - Mudança de propriedade, localização, ou subcontratação  
+- [ ] Escalação automática com prioridade:  
+    - **P0 (CVE crítico explorado):** Immediate → AppSec Engineer + Procurement Officer + CISO  
+    - **P1 (CVE crítico, incidente grave):** 1h → AppSec Engineer + Procurement Officer  
+    - **P2 (CVE high, incidente moderado):** 4h → AppSec Engineer  
+- [ ] Trigger automático de revisão especial fora-de-ciclo (US-14) se gap crítico  
+- [ ] Registo de alerta, escalonamento, e ação documentado em GRC (audit trail)  
+- [ ] Dashboard em tempo real com status de fornecedores críticos e alertas ativas (visível a board)  
+
+:::
+
+**Artefactos & evidências.** Feed de incidentes configurado, CVE monitoring ativo, Alertas documentados com timestamps, Escalation records, Dashboard, GRC audit trail
+
+**Proporcionalidade.**  
+| L1 | L2 | L3 |
+|----|----|----|
+| Não | Recomendado | Obrigatório |
+
+**Integração.** Operações contínuo; Resp: AppSec Engineer (setup inicial) + Security Monitoring (operação 24x7); Triggers: Incidente, CVE crítico, SLA breach, mudança contratual; SLA: Alerta em **`<`1h** de deteção, escalonamento em `<`15 min  
+
+**Ligações úteis.**  
+- [Reavaliação de Fornecedores - US-14](#us-14)  
+- [Monitorização - Cap. 12](/sbd-toe/sbd-manual/monitorizacao-operacoes/aplicacao-lifecycle)  
+- [Dependências e SCA - Cap. 05](/sbd-toe/sbd-manual/dependencias-sbom-sca/aplicacao-lifecycle)  
+
+---
+
+### US-19 - Revisão Trimestral de Acesso de Contractors (Least Privilege)
+**Contexto.** Contractors ganham acesso inicial, mas permissões acumulam ao longo do tempo ("acesso creep"). Sem revisão periódica, principle of least privilege é violado.
+
+:::userstory
+**História.**   
+Como **Security Champion + Infrastructure/Tech Lead**, quero **revisar trimestralmente acesso de contractors em ativo, validando que têm apenas acesso necessário ao projeto**, para **manter principle of least privilege, reduzir risco de acesso excessivo, e remover acesso obsoleto**.
+
+**BDD.**  
+- Dado contractors ativos com acesso a sistemas (repos, CI/CD, databases, cloud)  
+- Quando ciclo trimestral de revisão chega  
+- Então acesso é validado com Tech Lead, e acesso excessivo é removido no mesmo dia  
+
+**DoD.**  
+- [ ] Lista de contractors ativos extraída de sistemas (Git orgs, Jira, VPN, Cloud IAM, databases)  
+- [ ] Por cada contractor:  
+    - Acesso listado em detalhe (repositórios, CI/CD pipelines, databases, cloud resources, etc.)  
+    - Tech Lead valida cada acesso: **Necessário para projeto atual?** (Sim/Não/Modificar)  
+    - Se **Não necessário:** acesso removido no mesmo dia  
+    - Se **Modificar:** novo scope configurado, antigo revogado  
+    - Se **Sim:** mantém-se com confirmação datada  
+- [ ] Checklist de revisão preenchido e assinado digitalmente por Tech Lead + Security Champion  
+- [ ] Notificação enviada a cada contractor informando resultado da revisão  
+- [ ] Se acesso removido: notificação clara indicando motivo e data de conclusão  
+- [ ] Registo de mudanças documentado em audit trail (Git logs, IAM change log, etc.)  
+- [ ] Relatório consolidado (% de acesso mantido, % removido) entregue ao AppSec Engineer  
+
+:::
+
+**Artefactos & evidências.** Lista de contractors e acesso, Checklist assinado, Notificações enviadas, Git/IAM logs de mudanças, Relatório consolidado, Sign-off
+
+**Proporcionalidade.**  
+| L1 | L2 | L3 |
+|----|----|----|
+| Semestral | Trimestral | Trimestral |
+
+**Integração.** Validação; Resp: Security Champion (coordenação) + Tech Lead (validação de necessidade) + DevOps (mudanças técnicas); Triggers: Calendário (trimestral), Mudança de projeto, Incidente; SLA: Revisão iniciada e completada em **1 semana**  
+
+**Ligações úteis.**  
+- [Preparação Técnica - US-15](#us-15)  
+- [Offboarding - US-17](#us-17)  
+- [Requisitos de Autenticação e Acesso - Cap. 02](/sbd-toe/sbd-manual/requisitos-seguranca/aplicacao-lifecycle)  
+
+---
+
+### US-20 - Feedback Pós-Projeto e Rating de Contractors
+**Contexto.** Contractors terminam projeto sem feedback sobre desempenho de segurança. Sem dados de avaliação, impossível tomar decisão informada sobre re-hire ou referência.
+
+:::userstory
+**História.**   
+Como **Security Champion + Tech Lead**, quero **recolher feedback estruturado pós-projeto de contractors sobre compreensão de segurança, incidentes, e recomendações**, para **informar decisão de re-hire, melhorar programa de preparação, e criar base de dados de avaliação**.
+
+**BDD.**  
+- Dado um contractor cujo projeto termina  
+- Quando offboarding é iniciado (US-17)  
+- Então feedback form é enviado para Tech Lead + AppSec Engineer preencherem  
+
+**DoD.**  
+- [ ] Feedback form criado com perguntas estruturadas:  
+    - **Segurança:** Compreensão de políticas (escala 1–5), Best practices aplicadas (Sim/Não), Incidentes durante projeto (Sim/Não + desc)  
+    - **Performance:** Qualidade de código (1–5), Teste (1–5), Documentação (1–5)  
+    - **Conformidade:** Contractor seguiu procedimentos obrigatórios (Sim/Não), Violações (Sim/Não + desc)  
+    - **Recomendações:** Áreas de melhoria em formação/preparação, Rating de segurança geral (1–5 stars)  
+    - **Decisão:** Re-hire recomendado? (Sim/Não/Talvez + justificação)  
+- [ ] Feedback recolhido de Tech Lead + AppSec Engineer + Security Champion (consenso)  
+- [ ] Resultado registado em sistema centralizado (HR, Procurement, GRC) com data e reviewers  
+- [ ] Rating (positivo/neutro/negativo) armazenado como referência para futuras contratações  
+- [ ] Se múltiplos contractors de mesmo fornecedor: insights agregados para revisão de fornecedor (US-14)  
+- [ ] Resultados consolidados publicados em relatório trimestral de programa de contractors  
+
+:::
+
+**Artefactos & evidências.** Feedback form preenchido, Ratings registados (sistema HR/GRC), Agregação por fornecedor, Relatório trimestral, Histórico de avaliações
+
+**Proporcionalidade.**  
+| L1 | L2 | L3 |
+|----|----|----|
+| Opcional | Recomendado | Obrigatório |
+
+**Integração.** Operações pós-projeto; Resp: Security Champion (coordenação) + Tech Lead + AppSec Engineer (preenchimento); Triggers: Offboarding iniciado (US-17); SLA: Feedback completado em **3 dias úteis** após fim do contrato  
+
+**Ligações úteis.**  
+- [Offboarding - US-17](#us-17)  
+- [Reavaliação de Fornecedores - US-14](#us-14)  
+- [Designação de Owners - US-09](#us-09)  
+
+---
+
 ## 📦 Artefactos esperados
 
 | Artefacto | Evidência |
@@ -582,6 +851,12 @@ Como **Procurement Officer + AppSec Engineer**, quero **reavalia e reaprovar for
 | Modelo formal de governação | Básico | Recomendado | Obrigatório |
 | Checklist centralizado por capítulo | Básico | Recomendado | Obrigatório |
 | Reavaliação de fornecedores pós-onboarding | Anual | Semestral | Trimestral / evento crítico |
+| **Preparação técnica de contractors** | Básico | Recomendado | Obrigatório + quiz validado |
+| **Trilho de formação pré-acesso** | Básico | Obrigatório | Obrigatório + 80% score |
+| **Offboarding seguro** | Básico | Obrigatório | Obrigatório + audit trail |
+| **Monitorização contínua de fornecedores** | Não | Recomendado | Obrigatório |
+| **Revisão trimestral de acesso (contractors)** | Semestral | Trimestral | Trimestral |
+| **Feedback pós-projeto** | Opcional | Recomendado | Obrigatório |
 
 ---
 
@@ -589,10 +864,12 @@ Como **Procurement Officer + AppSec Engineer**, quero **reavalia e reaprovar for
 
 - **Exceções sem registo = risco invisível.** Operacionalize US-01 (com alçadas claras) e US-07 para garantir rastreabilidade contínua e revalidação automática.  
 - **Modelo formal é o alicerce.** US-12 documenta governação com critérios explícitos, alçadas por L1–L3, e formação obrigatória para approvers (Cap. 13).  
-- **Fornecedores devem ser parte do modelo SbD-ToE.** Use US-02, US-06 e US-14 para integração contratual, validação inicial, e reavaliação periódica contínua.  
+- **Fornecedores devem ser parte do modelo SbD-ToE.** Use US-02, US-06, US-14, e US-18 para integração contratual, validação inicial, reavaliação periódica, e monitorização contínua.  
+- **Contractors merecem ciclo de vida dedicado.** US-15 (preparação técnica), US-16 (formação obrigatória), US-17 (offboarding) e US-19 (revisão de acesso) garantem que contractors são preparados, mantêm least privilege, e saem seguramente.  
 - **Designação clara de owners elimina responsabilidade dispersa.** US-09 garante continuidade de decisões de segurança com formação validada.  
 - **Repositório centralizado de conformidade dá visibilidade total.** US-08 e US-13 consolidam estado de todas as práticas por aplicação, capítulo e ciclo.  
-- **Validações periódicas detetam desvios cedo.** US-10 integra revisão contínua no ciclo de vida; US-13 valida por capítulo; US-14 reavalia fornecedores.  
+- **Validações periódicas detetam desvios cedo.** US-10 integra revisão contínua no ciclo de vida; US-13 valida por capítulo; US-14 reavalia fornecedores; US-19 valida acesso de contractors.  
 - **KPIs de governação são a medida objetiva da maturidade.** US-05 e US-11 permitem decisão estratégica baseada em evidência (% conformidade, % exceções resolvidas, % fornecedores auditados).  
-- **Rastreabilidade organizacional dá transparência à gestão.** US-04 agregada com US-08, US-10, US-13, US-14 cria visibilidade de risco em todos os níveis.  
-- **Este capítulo é o "cimento" que une os restantes 2–13:** torna práticas visíveis, auditáveis, rastreáveis e sustentáveis ao longo do tempo. Sem governação formal (US-12), controlo sistemático (US-13), e reavaliação contínua (US-01, US-07, US-14), o SbD-ToE fica limitado à prática técnica pontual.
+- **Rastreabilidade organizacional dá transparência à gestão.** US-04 agregada com US-08, US-10, US-13, US-14, US-20 cria visibilidade de risco em todos os níveis.  
+- **Preparação e feedback contínuos melhoram qualidade de contractors.** US-15, US-16, US-20 criam ciclo de melhoria contínua e base de dados de avaliação para re-hire.  
+- **Este capítulo é o "cimento" que une os restantes 2–13:** torna práticas visíveis, auditáveis, rastreáveis e sustentáveis ao longo do tempo. Sem governação formal (US-12), controlo sistemático (US-13), ciclo de vida de contractors (US-15–17, 19–20), e reavaliação contínua (US-01, US-07, US-14, US-18), o SbD-ToE fica limitado à prática técnica pontual.

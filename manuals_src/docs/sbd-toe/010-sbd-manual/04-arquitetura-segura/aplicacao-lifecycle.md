@@ -393,8 +393,8 @@ Como **Arquitetos de Software + AppSec Engineer**, quero rever *trust boundaries
 **Proporcionalidade.**
 | Nível | Obrigatório? | Ajustes |
 |---|---|---|
-| L1 | Sim | Escopo reduzido |
-| L2 | Sim | Escopo completo |
+| L1 | Sim | âmbito reduzido |
+| L2 | Sim | âmbito completo |
 | L3 | Sim | *Pen test* / validações adicionais conforme risco |
 
 ---

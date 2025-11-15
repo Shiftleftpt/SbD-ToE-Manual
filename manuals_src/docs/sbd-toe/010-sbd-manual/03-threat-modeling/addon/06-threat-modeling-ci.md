@@ -67,7 +67,7 @@ A pipeline de CI/CD deve verificar não apenas a presença de ficheiros, mas tam
 
 ```
 📁 threat-model/
-📌 README.md              # Escopo e método
+📌 README.md              # âmbito e método
 📌 dfd.drawio             # Diagrama técnico ou .mmd (Mermaid)
 📌 threats.yaml           # Lista de ameaças (id, descrição, severidade, requisito associado)
 📌 mitigations.md         # Tabela com status (mitigado, em curso, aceite)

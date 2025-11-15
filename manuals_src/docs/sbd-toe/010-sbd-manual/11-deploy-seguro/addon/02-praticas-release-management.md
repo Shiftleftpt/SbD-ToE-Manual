@@ -42,7 +42,7 @@ Release Management é o processo de **preparação, aprovação, distribuição 
 | **Checklist de aprovação**     | Critérios mínimos antes de produção (ex: findings resolvidos)            |
 | **Plano de rollback**          | Estratégia clara e testada para regressar à versão anterior              |
 | **Validações integradas**      | Testes automatizados, revisões, scan de SBOM, alertas                    |
-| **Critérios de ativação**      | Condições de toggle, escopo e aprovação de funcionalidade                |
+| **Critérios de ativação**      | Condições de toggle, âmbito e aprovação de funcionalidade                |
 
 ---
 

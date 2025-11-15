@@ -41,7 +41,7 @@ Estas políticas:
 | Política de Validação de Segurança Aplicacional       | ✅ Sim       | Todas as aplicações com entrega contínua   | Tipos de testes exigidos (SAST, DAST, fuzzing), níveis mínimos por criticidade, ferramentas aprovadas. |
 | Política de Gestão de Findings de Segurança            | ✅ Sim       | Todos os produtos com scanner ativo        | Processo de triagem, classificação, priorização, tracking, ownership e reporte de findings. |
 | Política de Exceções a Vulnerabilidades Identificadas  | ✅ Sim       | Quando um finding não é corrigido          | Justificação técnica, prazo de validade, revisão periódica, mitigação compensatória. |
-| Política de Execução de PenTesting Ofensivo            | ⚠️ Opcional  | Aplicações L2/L3, APIs externas, produtos críticos | Periodicidade definida (ex: semestral), escopo, metodologia, objetivos (black-box/grey-box), reporte e follow-up obrigatório. |
+| Política de Execução de PenTesting Ofensivo            | ⚠️ Opcional  | Aplicações L2/L3, APIs externas, produtos críticos | Periodicidade definida (ex: semestral), âmbito, metodologia, objetivos (black-box/grey-box), reporte e follow-up obrigatório. |
 | Política de Cobertura de Testes de Segurança           | ⚠️ Opcional  | Aplicações críticas (L2–L3)                | Definição de métricas de cobertura esperada, fuzzing dirigido, teste de regressões. |
 | Política de Integração de Testes com Ciclo de Vida     | ⚠️ Opcional  | Equipas com integração DevSecOps           | Definição de critérios BDD, integração com pipelines, PRs, e processos de release. |
 | Política de Revalidação e Observabilidade de Testes    | ⚠️ Opcional  | Ambientes com requisitos de auditoria      | Revalidação de findings, logging dos testes, análise de falhas de execução. |
@@ -54,7 +54,7 @@ Cada política deve incluir, pelo menos:
 
 - **Objetivo e âmbito** (ex: validação de segurança por tipo de aplicação ou contexto);
 - **Critérios obrigatórios por nível de criticidade (L1–L3)**;
-- **Requisitos técnicos por tipo de teste** (ex: ferramentas permitidas, formatos, thresholds, escopos);
+- **Requisitos técnicos por tipo de teste** (ex: ferramentas permitidas, formatos, thresholds, âmbitos);
 - **Papéis e responsabilidades** (ex: QA, AppSec, produto, equipa Dev, equipa Red Team ou externa);
 - **Formato de evidência exigida** (ex: relatórios, logs, dashboards, issues, SBOM);
 - **Processos de exceção, follow-up e revalidação periódica**;

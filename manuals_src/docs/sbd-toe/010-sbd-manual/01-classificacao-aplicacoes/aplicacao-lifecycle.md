@@ -633,7 +633,7 @@ Como **GRC/Compliance**, quero consolidar **KPIs mensais/trimestrais** sobre a c
 ### **US-11 – Políticas Organizacionais Formais (Classificação, Risco, Revisão Periódica, Rastreabilidade)**
 
 **Contexto.**  
-As user stories US-01 a US-10 definem o **como operacionalizar** a classificação. As políticas organizacionais definem o **por quê** (mandato), **quem aprova**, **qual o critério** e **como auditar**. Sem políticas, não há governança formal nem conformidade a regulamentos (NIS2, DORA, ISO 27001).
+As user stories US-01 a US-10 definem o **como operacionalizar** a classificação. As políticas organizacionais definem o **por quê** (mandato), **quem aprova**, **qual o critério** e **como auditar**. Sem políticas, não há governança formal nem conformidade a regulamentos (NIS2, DORA,).
 
 :::userstory
 **História.**  

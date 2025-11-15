@@ -153,7 +153,7 @@ Decision: Not reportable to supervisor
 
 ## Template Genérico (Excel/Jira/ServiceNow)
 
-Use este template para estruturar seu sistema de tickets:
+Este template estrutura sistemas de tickets de incidentes:
 
 | Campo | Tipo | Obrigatório | Descrição |
 |-------|------|-----------|-----------|

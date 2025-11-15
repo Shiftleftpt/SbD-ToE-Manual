@@ -144,7 +144,7 @@ Estrutura: Requisitos → Ação → Evidência. Reutilizar controlos NIS2/DORA 
 ---
 
 ## Notas
-- Incidentes podem acionar também NIS2/DORA. Use um runbook único com canais diferentes.
+- Incidentes podem acionar também NIS2/DORA. Recomenda-se runbook único com canais de reporte diferenciados.
 - LINDDUN é recomendado para Privacy TM; manter como add‑on do [Cap. 03](/sbd-toe/sbd-manual/threat-modeling/intro).
 
 ---

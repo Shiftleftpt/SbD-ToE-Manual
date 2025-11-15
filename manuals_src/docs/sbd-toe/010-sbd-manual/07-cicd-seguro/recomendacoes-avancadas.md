@@ -57,7 +57,7 @@ Este ficheiro complementa os controlos principais definidos neste capítulo com 
 - Logging centralizado com alertas para eventos como:
   - Execução fora do horário habitual;
   - Modificações em ficheiros de pipeline sem pull request aprovado;
-  - Runners a executar jobs fora do seu escopo definido.
+  - Runners a executar jobs fora do seu âmbito definido.
 
 ---
 

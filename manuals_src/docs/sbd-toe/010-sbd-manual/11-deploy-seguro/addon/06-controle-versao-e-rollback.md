@@ -21,7 +21,7 @@ Garantir reversibilidade e rastreabilidade é essencial para reduzir o impacto d
 - Associar cada release a:
   - Hash de commit ou tag Git
   - Data e hora de deploy
-  - Ambiente e escopo
+  - Ambiente e âmbito
   - Owner da release
 
 > 🔗 Deve existir relação 1:1 entre versão, binário e documentação de validação

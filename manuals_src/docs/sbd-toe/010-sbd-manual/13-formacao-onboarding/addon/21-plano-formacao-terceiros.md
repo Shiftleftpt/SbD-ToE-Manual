@@ -21,7 +21,7 @@ Este documento define os **conteúdos mínimos obrigatórios** de capacitação 
 
 ---
 
-## 🧭 Escopo de aplicação
+## 🧭 âmbito de aplicação
 
 Este modelo aplica-se a:
 

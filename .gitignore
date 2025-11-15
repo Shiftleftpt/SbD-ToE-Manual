@@ -133,3 +133,9 @@ node_modules/
 npm-debug.log*
 yarn-error.log*
 pnpm-debug.log*
+
+#stylometry
+.stylometry/    
+
+# Work drafts and auxiliary documents (REVIEW_, SÍNTESE, etc.)
+.work-drafts/

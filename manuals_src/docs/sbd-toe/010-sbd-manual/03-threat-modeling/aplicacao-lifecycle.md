@@ -2,8 +2,8 @@
 id: aplicacao-lifecycle
 title: Como Fazer
 description: Integração do threat modeling ao longo do ciclo de desenvolvimento
-tags: [tipo:aplicacao, execucao, ciclo de vida, threat-modeling, requisitos, mitigação, rastreabilidade]
-sidebar_position: 15
+tags: [tipo:aplicacao, ciclo-vida, threat-modeling, requisitos, mitigacao, rastreabilidade]
+genia: us-format-normalization
 ---
 
 
@@ -19,12 +19,12 @@ Inclui modelos reutilizáveis de user stories, ações por papel, artefactos esp
 
 | Fase / Evento              | Ação esperada                                  | Quem participa                     | Artefacto principal         |
 |----------------------------|------------------------------------------------|------------------------------------|-----------------------------|
-| Início de projeto / épico  | Realizar sessão inicial de threat modeling      | DevSecOps, PO, Arquitetura, AppSec | DFD + lista inicial de ameaças |
-| Grooming / Planeamento     | Atualizar modelos com base em novas features    | Equipa de Desenvolvimento + AppSec | Backlog + threats.yaml      |
-| Revisão de Arquitetura     | Validar ameaças antes de design final           | Arquitetura + AppSec               | Ficha de solução + mitigations.md |
-| Alterações críticas        | Atualizar modelos após integrações/refactors   | Dev + QA + Segurança               | Modelo atualizado           |
-| Release / Go-live          | Validar riscos e exceções aceites              | QA + AppSec                        | Checklist + decisions.md    |
-| CI/CD pipeline             | Validar atualidade do modelo em build/release  | Eng. CI/CD + AppSec                | Validação automática        |
+| Início de projeto / épico  | Realizar sessão inicial de threat modeling      | DevOps/SRE, Product Owner, Arquitetos de Software, AppSec Engineer | DFD + lista inicial de ameaças |
+| Grooming / Planeamento     | Atualizar modelos com base em novas features    | Developer + AppSec Engineer | Backlog + threats.yaml      |
+| Revisão de Arquitetura     | Validar ameaças antes de design final           | Arquitetos de Software + AppSec Engineer               | Ficha de solução + mitigations.md |
+| Alterações críticas        | Atualizar modelos após integrações/refactors   | Developer + QA / Test Engineer + AppSec Engineer               | Modelo atualizado           |
+| Release / Go-live          | Validar riscos e exceções aceites              | QA / Test Engineer + AppSec Engineer                        | Checklist + decisions.md    |
+| CI/CD pipeline             | Validar atualidade do modelo em build/release  | DevOps/SRE + AppSec Engineer                | Validação automática        |
 
 ---
 
@@ -32,12 +32,12 @@ Inclui modelos reutilizáveis de user stories, ações por papel, artefactos esp
 
 | Papel / Função             | Responsabilidades-chave                                      |
 |----------------------------|--------------------------------------------------------------|
-| DevSecOps / Arquitetura    | Facilitar sessões, manter modelos atualizados e documentados  |
-| Equipa de Desenvolvimento  | Identificar fluxos, pontos de entrada e lógica de negócio    |
+| Arquitetos de Software     | Facilitar sessões, manter modelos atualizados e documentados  |
+| Developer                  | Identificar fluxos, pontos de entrada e lógica de negócio    |
 | QA / Test Engineer         | Validar critérios de aceitação derivados das ameaças         |
-| Segurança / AppSec         | Identificar ameaças técnicas, apoiar mitigação e rever exceções |
-| Product Owner / Negócio    | Priorizar mitigação e validar impacto no negócio             |
-| Eng. CI/CD                 | Automatizar validações de threat modeling em pipelines       |
+| AppSec Engineer            | Identificar ameaças técnicas, apoiar mitigação e rever exceções |
+| Product Owner              | Priorizar mitigação e validar impacto no negócio             |
+| DevOps/SRE                 | Automatizar validações de threat modeling em pipelines       |
 
 ---
 
@@ -49,7 +49,7 @@ No início do projeto, deve ser criado um modelo de ameaça proporcional ao risc
 
 :::userstory
 **História.**   
-Como **Arquitetura / Tech Lead**, quero criar um modelo de ameaça inicial com DFDs e STRIDE/LINDDUN, para que os riscos de arquitetura sejam visíveis e tratados desde o início.
+Como **Arquitetos de Software** e **Team Lead / Scrum Master**, quero criar um modelo de ameaça inicial com DFDs e STRIDE/LINDDUN, para que os riscos de arquitetura sejam visíveis e tratados desde o início.
 
 **Critérios de aceitação (BDD).**
 - Dado que o projeto inicia  
@@ -79,7 +79,7 @@ Como **Arquitetura / Tech Lead**, quero criar um modelo de ameaça inicial com D
 **Integração no SDLC.**
 | Fase | Trigger | Responsável | SLA |
 |---|---|---|---|
-| Início | Kick-off do projeto | Tech Lead / AppSec | Antes do backlog inicial |
+| Início | Kick-off do projeto | Arquitetos de Software + AppSec Engineer | Antes do backlog inicial |
 
 **Ligações úteis.**
 - 🔗 [OWASP Threat Modeling](https://owasp.org/www-community/Threat_Modeling)  
@@ -93,7 +93,7 @@ As revisões de arquitetura devem incluir threat modeling para identificar amea�
 
 :::userstory
 **História.**   
-Como **Arquitetura / Tech Lead**, quero validar a arquitetura através de threat modeling, para identificar ameaças críticas antes de decisões de design.
+Como **Arquitetos de Software** e **AppSec Engineer**, quero validar a arquitetura através de threat modeling, para identificar ameaças críticas antes de decisões de design.
 
 **Critérios de aceitação (BDD).**
 - Dado que ocorre revisão da arquitetura  
@@ -122,7 +122,7 @@ Como **Arquitetura / Tech Lead**, quero validar a arquitetura através de threat
 **Integração no SDLC.**
 | Fase | Trigger | Responsável | SLA |
 |---|---|---|---|
-| Design / Revisão | Revisão da arquitetura | Tech Lead / AppSec | Antes da aprovação de design |
+| Design / Revisão | Revisão da arquitetura | Arquitetos de Software + AppSec Engineer | Antes da aprovação de design |
 
 ---
 
@@ -133,7 +133,7 @@ Sempre que ocorrer uma alteração significativa (nova feature, integração ou 
 
 :::userstory
 **História.**   
-Como **DevSecOps / Arquitetura**, quero atualizar o modelo de ameaça sempre que há alterações significativas, para que o modelo permaneça válido e útil.
+Como **Arquitetos de Software** e **DevOps/SRE**, quero atualizar o modelo de ameaça sempre que há alterações significativas, para que o modelo permaneça válido e útil.
 
 **Critérios de aceitação (BDD).**
 - Dado que ocorre alteração significativa  
@@ -162,7 +162,7 @@ Como **DevSecOps / Arquitetura**, quero atualizar o modelo de ameaça sempre que
 **Integração no SDLC.**
 | Fase | Trigger | Responsável | SLA |
 |---|---|---|---|
-| Refactor / Alteração | Alteração significativa | DevSecOps / Tech Lead | Antes da release |
+| Refactor / Alteração | Alteração significativa | Arquitetos de Software + Team Lead / Scrum Master | Antes da release |
 
 **Ligações úteis.**
 - 🔗 [SSDF Practices](https://csrc.nist.gov/publications/detail/sp/800-218/final)  
@@ -175,7 +175,7 @@ Nem todas as ameaças podem ser mitigadas; riscos residuais devem ser formalment
 
 :::userstory
 **História.**   
-Como **Equipa de Segurança / AppSec**, quero documentar e aprovar formalmente riscos residuais identificados no threat modeling, para que decisões de aceitação sejam transparentes e auditáveis.
+Como **AppSec Engineer** e **GRC/Compliance**, quero documentar e aprovar formalmente riscos residuais identificados no threat modeling, para que decisões de aceitação sejam transparentes e auditáveis.
 
 **Critérios de aceitação (BDD).**
 - Dado que há ameaças não mitigadas  
@@ -205,7 +205,7 @@ Como **Equipa de Segurança / AppSec**, quero documentar e aprovar formalmente r
 **Integração no SDLC.**
 | Fase | Trigger | Responsável | SLA |
 |---|---|---|---|
-| Planeamento/Release | Identificação de risco não mitigado | AppSec | Antes do go-live |
+| Planeamento/Release | Identificação de risco não mitigado | AppSec Engineer | Antes do go-live |
 
 **Ligações úteis.**
 - 🔗 [Gestão de exceções](/sbd-toe/sbd-manual/requisitos-seguranca/addon/gestao-excecoes) e [risco residual](/sbd-toe/sbd-manual/classificacao-aplicacoes/addon/risco-residual)  
@@ -219,7 +219,7 @@ O threat modeling deve ser integrado com pipelines CI/CD, garantindo que altera�
 
 :::userstory
 **História.**   
-Como **DevSecOps**, quero integrar validações de threat modeling no pipeline, para que cada alteração relevante seja revista automaticamente.
+Como **DevOps/SRE** e **AppSec Engineer**, quero integrar validações de threat modeling no pipeline, para que cada alteração relevante seja revista automaticamente.
 
 **Critérios de aceitação (BDD).**
 - Dado que uma alteração é feita  
@@ -248,7 +248,7 @@ Como **DevSecOps**, quero integrar validações de threat modeling no pipeline, 
 **Integração no SDLC.**
 | Fase | Trigger | Responsável | SLA |
 |---|---|---|---|
-| Implementação / CI | Execução de pipeline | DevSecOps | Em cada commit/release |
+| Implementação / CI | Execução de pipeline | DevOps/SRE | Em cada commit/release |
 
 **Ligações úteis.**
 - 🔗 [DSOMM – Automation](https://dsomm.owasp.org/)  
@@ -262,7 +262,7 @@ As ameaças identificadas devem ser priorizadas com base no impacto para o negó
 
 :::userstory
 **História.**   
-Como **Product Owner / Negócio**, quero priorizar as ameaças identificadas no modelo de acordo com impacto para o negócio, para otimizar mitigação e investimento.
+Como **Product Owner**, quero priorizar as ameaças identificadas no modelo de acordo com impacto no negócio, para otimizar mitigação e investimento.
 
 **Critérios de aceitação (BDD).**
 - Dado que ameaças foram identificadas  
@@ -291,7 +291,7 @@ Como **Product Owner / Negócio**, quero priorizar as ameaças identificadas no 
 **Integração no SDLC.**
 | Fase | Trigger | Responsável | SLA |
 |---|---|---|---|
-| Planeamento / Grooming | Avaliação de impacto | PO / Negócio | Antes de priorização de sprint |
+| Planeamento / Grooming | Avaliação de impacto | Product Owner + Gestão Executiva/CISO | Antes de priorização de sprint |
 
 **Ligações úteis.**
 - 🔗 [ISO/IEC 27005 Risk Assessment](https://www.iso.org/standard/75281.html)  
@@ -304,7 +304,7 @@ Ferramentas de threat modeling (ex.: OWASP Threat Dragon, Microsoft TMT, IriusRi
 
 :::userstory
 **História.**   
-Como **DevSecOps / AppSec**, quero usar ferramentas para automação e reutilização de modelos de ameaça, para garantir consistência e reduzir trabalho manual.
+Como **DevOps/SRE + AppSec Engineer**, quero usar ferramentas para automação e reutilização de modelos de ameaça, para garantir consistência e reduzir trabalho manual.
 
 **Critérios de aceitação (BDD).**
 - Dado que realizo threat modeling  
@@ -333,7 +333,7 @@ Como **DevSecOps / AppSec**, quero usar ferramentas para automação e reutiliza
 **Integração no SDLC.**
 | Fase | Trigger | Responsável | SLA |
 |---|---|---|---|
-| Design / Grooming | Criação e manutenção de modelos | DevSecOps / AppSec | Por projeto e atualização contínua |
+| Design / Grooming | Criação e manutenção de modelos | Arquitetos de Software + DevOps/SRE | Por projeto e atualização contínua |
 
 **Ligações úteis.**
 - 🔗 [OWASP Threat Dragon](https://owasp.org/www-project-threat-dragon/)  
@@ -348,7 +348,7 @@ Quando o sistema trata dados pessoais, a análise de privacidade deve complement
 
 :::userstory
 **História.**  
-Como **Arquitetura / Privacidade**, quero aplicar **LINDDUN** quando exista tratamento de dados pessoais, para garantir cobertura de ameaças de privacidade.
+Como **Arquitetos de Software + AppSec Engineer**, quero aplicar **LINDDUN** quando exista tratamento de dados pessoais, para garantir cobertura de ameaças de privacidade.
 
 **Critérios de aceitação (BDD).**
 - Dado que o sistema trata dados pessoais  
@@ -379,7 +379,7 @@ Como **Arquitetura / Privacidade**, quero aplicar **LINDDUN** quando exista trat
 **Integração no SDLC.**
 | Fase | Trigger | Responsável | SLA |
 |:---|:---|:---|:---|
-| Design / Revisão | Presença de dados pessoais | Arquitetura / Privacidade | Antes da aprovação de design |
+| Design / Revisão | Presença de dados pessoais | Arquitetos de Software + GRC/Compliance | Antes da aprovação de design |
 
 **Ligações úteis.**
 - 🔗 [LINDDUN Framework](https://www.linddun.org/)  
@@ -400,8 +400,6 @@ Como **Arquitetura / Privacidade**, quero aplicar **LINDDUN** quando exista trat
 | **Análise LINDDUN (privacidade)**| Não aplicável                            | Obrigatória se houver dados pessoais           | Sempre obrigatória, com revisão por DPO                          |
 
 ---
-
-## 📄 Templates e artefactos esperados
 
 ## 📄 Templates e artefactos esperados
 

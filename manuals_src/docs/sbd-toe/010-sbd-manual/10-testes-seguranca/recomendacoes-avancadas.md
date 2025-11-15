@@ -123,11 +123,11 @@ then the system must reject the request and return 401
 
 ## ✅ Conclusão
 
-Estas práticas avançadas não substituem o essencial — **reforçam-no**. Devem ser priorizadas quando:
+Estas práticas avançadas não substituem o essencial - **reforçam-no**. Devem ser priorizadas quando:
 
 * A aplicação é classificada como **L3**;
 * Há exigência de **auditorias externas ou normativas**;
 * A organização visa **maturidade contínua com métricas e feedback operacional**;
 * Existem múltiplas equipas a trabalhar de forma paralela e distribuída.
 
-> 🔁 A validação contínua e estruturada da segurança é **o passo seguinte à automatização** — onde o foco passa de "testar" para **"controlar, melhorar e evoluir com rastreabilidade"**.
+> 🔁 A validação contínua e estruturada da segurança é **o passo seguinte à automatização** - onde o foco passa de "testar" para **"controlar, melhorar e evoluir com rastreabilidade"**.

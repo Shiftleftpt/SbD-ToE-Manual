@@ -43,18 +43,20 @@ A aplicação do SbD-ToE exige a execução sistemática de certos passos fundam
    Trata-se da materialização prática de princípios como *security by design* (SSDF) e *privacy by design* (GDPR).
 
 3. **Aplicação de práticas específicas por domínio**  
-   Cada capítulo prescreve práticas concretas — da arquitetura (Cap. 04) ao deployment (Cap. 11) — de acordo com o risco identificado.  
-   Aqui alinham-se também exigências regulatórias como as do **DORA**, que requerem controlos explícitos em operações críticas.
+   Cada capítulo prescreve práticas concretas - da arquitetura (Cap. 04) ao deployment (Cap. 11) - de acordo com o risco identificado.  
+   Aqui alinham-se também exigências regulatórias como as do **DORA** e **NIS2**, que requerem controlos explícitos em operações críticas.
 
 4. **Revisão prática por checklist**  
    Cada capítulo inclui um `20-checklist-revisao.md` que funciona como instrumento de controlo binário, permitindo aferir a conformidade prática.  
    Estes checklists são uma forma objetiva de demonstrar, perante auditorias, que os controlos estão implementados.
 
-5. **Avaliação de maturidade e alinhamento**  
+<!-- todo(WIP via RAG)
+5. **Avaliação de maturidade e alinhamento**
    O ficheiro `achievable-maturity` em cada capítulo mostra o posicionamento da organização relativamente a SAMM, BSIMM, SSDF, DSOMM e SLSA.  
    Isto permite não só medir maturidade, mas também mapear cumprimento contra **obrigações de NIS2 e DORA**, que pedem evidência de processos estruturados.
-
-6. **Monitorização e governação contínua**  
+6. **Monitorização e governação contínua** 
+-->
+5. **Monitorização e governação contínua**  
    Métricas e KPIs de segurança são acompanhados em permanência.  
    Este ciclo contínuo reflete as exigências de **NIS2** (reporting contínuo, monitorização de incidentes) e **DORA** (resiliência operacional digital sustentada por métricas).  
 
@@ -65,7 +67,7 @@ A aplicação do SbD-ToE exige a execução sistemática de certos passos fundam
 A governação é o mecanismo que transforma prescrições técnicas em cultura organizacional.  
 No SbD-ToE, a governação assenta em quatro pilares:
 
-- **Clareza de papéis**: responsabilidades explícitas (Cap. 00 `roles.md`).  
+- **Clareza de papéis**: responsabilidades explícitas (ver detalhes em [Roles](./roles))
 - **Segregação de funções**: quem implementa não é quem aprova, garantindo independência.  
 - **Integração no ciclo de vida**: segurança é parte intrínseca do backlog, pipeline e operação.  
 - **Validação contínua**: práticas são revistas periodicamente, acompanhando evolução tecnológica e regulatória.  
@@ -73,11 +75,11 @@ No SbD-ToE, a governação assenta em quatro pilares:
 Este modelo está alinhado com **NIS2**, que exige governação executiva sobre risco digital, e com **DORA**, que impõe responsabilidade clara do conselho de administração sobre a resiliência operacional digital.
 
 ---
-
+<!-- #TODO - automação com RAG
 ## 📊 Autoavaliação por Capítulo
 
 Cada capítulo técnico inclui uma secção de autoavaliação.  
-Nela, o grau de cumprimento é mapeado em relação a referenciais externos — **SAMM, BSIMM, SSDF, DSOMM, SLSA** — e também em relação a **obrigações regulatórias**.  
+Nela, o grau de cumprimento é mapeado em relação a referenciais externos - **SAMM, BSIMM, SSDF, DSOMM, SLSA** - e também em relação a **obrigações regulatórias**.  
 
 Três pontos fundamentais:  
 - Nem todos os referenciais são mensuráveis em níveis. Alguns são normativos (ISO), outros regulatórios (NIS2, DORA), outros descritivos (BSIMM).  
@@ -88,7 +90,7 @@ Desta forma, cada capítulo torna-se uma ponte entre:
 - a prática técnica diária,  
 - os modelos de maturidade,  
 - e os regulamentos que impõem conformidade obrigatória.  
-
+-->
 ---
 
 ## 🔄 Ciclo de Evolução Contínua
@@ -97,8 +99,8 @@ A segurança é um processo vivo.
 As ameaças evoluem, as ferramentas mudam, e os regulamentos multiplicam-se.  
 
 O SbD-ToE incorpora desde a sua conceção um **ciclo de evolução contínua**:  
-- **Revisão periódica** das práticas prescritas, integrando novas ameaças (OSC&R, CAPEC) e novas obrigações regulatórias (como revisões futuras de NIS2 ou DORA).  
+- **Revisão periódica** das práticas prescritas, integrando novas ameaças (OSC&R, CAPEC, et al) e novas obrigações regulatórias (como revisões futuras de NIS2 ou DORA).  
 - **Integração de feedback** das organizações que aplicam o manual, garantindo relevância e operacionalidade.  
-- **Atualização da rastreabilidade** nos ficheiros `25-rastreabilidade.md` e `50-ameacas-mitigadas.md`, que ligam práticas a controlos normativos, regulatórios e ameaças emergentes.  
+- **Atualização da rastreabilidade**  que ligam práticas a controlos normativos, regulatórios e ameaças emergentes.  
 
 Assim, o SbD-ToE não é apenas uma fotografia do estado da arte; é um **instrumento dinâmico**, capaz de acompanhar a evolução tecnológica, científica e regulatória, servindo como alicerce para a confiança digital no presente e no futuro.

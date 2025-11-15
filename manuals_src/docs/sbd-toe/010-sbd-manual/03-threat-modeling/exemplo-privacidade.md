@@ -6,7 +6,7 @@ sidebar_position: 8
 tags: [exemplo, linddun, threat-modeling, privacidade, capitulo2]
 ---
 
-# 🧪 Exemplo Prático — Threat Modeling com LINDDUN
+# 🧪 Exemplo Prático - Threat Modeling com LINDDUN
 
 Este exemplo demonstra como aplicar o modelo **LINDDUN** para identificar ameaças à privacidade numa aplicação que processa dados pessoais e autenticação de utilizadores.
 

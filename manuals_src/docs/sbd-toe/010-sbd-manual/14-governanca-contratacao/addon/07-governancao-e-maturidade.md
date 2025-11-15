@@ -9,21 +9,7 @@ tags: [maturidade, governanca, compliance, evolucao]
 
 # 📈 Governança e Maturidade Organizacional
 
-Este anexo descreve como o Capítulo 14 contribui para a **maturidade de segurança** da organização, com base nos modelos SAMM, BSIMM, SSDF e SLSA, e como essas práticas se traduzem em controlo efetivo.
-
----
-
-## 🔢 1. Alinhamento com frameworks de maturidade
-
-| Framework | Domínio                         | Práticas relacionadas SbD-ToE                      | Nível sugerido |
-| --------- | ------------------------------- | -------------------------------------------------- | -------------- |
-| SAMM v2.1 | Governance > Strategy & Metrics | Modelo de decisão de risco, exceções, KPIs         | 2 / 3          |
-| SAMM v2.1 | Governance > Supplier Security  | Questionários, contratos, validação, onboarding    | 2 / 3          |
-| BSIMM13   | SM1.1 / SR1.3 / SR2.x           | Governaça institucional, owners, exceções          | 2 / 3          |
-| NIST SSDF | PO.1 / PO.3 / RV.2              | Políticas, roles, aprovações, revisões contratuais | 2 / 3          |
-| SLSA v1.0 | Provenance / Compliance         | Controlo de cadeias externas e rastreabilidade     | 1 / 4          |
-
-> 📊 As práticas de governaça permitem escalar o SbD-ToE com consistência organizacional.
+Este anexo descreve como o Capítulo 14 contribui para a **maturidade de segurança** da organização, com base nos modelos SAMM, SSDF e SLSA, e como essas práticas se traduzem em controlo efetivo.
 
 ---
 
@@ -72,7 +58,7 @@ A evolução do modelo SbD-ToE pode ser guiada por:
 ## 🔗 Ligações cruzadas
 
 * Cap. achievable-maturity de cada capítulo
-* Cap. 14.1 a 14.6 — componentes de suporte à maturidade
-* Cap. 14.30 — KPIs de governaça
+* Cap. 14.1 a 14.6 - componentes de suporte à maturidade
+* Cap. 14.30 - KPIs de governaça
 
 ---

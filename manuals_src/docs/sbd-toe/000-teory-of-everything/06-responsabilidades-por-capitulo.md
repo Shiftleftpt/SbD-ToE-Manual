@@ -21,13 +21,13 @@ O que aqui se descreve não é “mais trabalho”: são atividades que já hoje
 O papel do Developer é transversal a quase todo o manual, porque é no ato de escrever código que se materializam grande parte das práticas de segurança.  
 A responsabilidade é dupla: garantir que o software cumpre os requisitos funcionais esperados e, em simultâneo, que o faz de forma robusta, rastreável e conforme às guidelines de segurança.  
 
-No **Cap. 01 — Classificação da Criticidade**, o Developer contribui com informação técnica sobre integrações, dependências e impacto operacional, dados essenciais para avaliar o risco.  
-No **Cap. 02 — Requisitos de Segurança**, implementa os requisitos mínimos derivados dessa classificação, integrando-os no *definition of done*.  
+No **Cap. 01 - Classificação da Criticidade**, o Developer contribui com informação técnica sobre integrações, dependências e impacto operacional, dados essenciais para avaliar o risco.  
+No **Cap. 02 - Requisitos de Segurança**, implementa os requisitos mínimos derivados dessa classificação, integrando-os no *definition of done*.  
 Participa nas sessões de **Threat Modeling (Cap. 03)**, onde traduz diagramas e cenários em controlos práticos.  
-No **Cap. 04 — Arquitetura Segura**, assegura que a implementação respeita os padrões definidos pelos arquitetos.  
-No **Cap. 05 — Dependências e SBOM**, declara bibliotecas utilizadas e suporta a criação de inventários auditáveis.  
-O **Cap. 06 — Desenvolvimento Seguro** é central: aqui o Developer segue guidelines, utiliza linters e corrige findings de SAST, prevenindo vulnerabilidades triviais.  
-Nos capítulos seguintes — **CI/CD (07)**, **IaC (08)**, **Containers (09)**, **Testes de Segurança (10)**, **Deploy (11)** e **Operações (12)** — colabora com DevOps e QA, garantindo que o código é base sólida para pipelines, infraestruturas e runtime.  
+No **Cap. 04 - Arquitetura Segura**, assegura que a implementação respeita os padrões definidos pelos arquitetos.  
+No **Cap. 05 - Dependências e SBOM**, declara bibliotecas utilizadas e suporta a criação de inventários auditáveis.  
+O **Cap. 06 - Desenvolvimento Seguro** é central: aqui o Developer segue guidelines, utiliza linters e corrige findings de SAST, prevenindo vulnerabilidades triviais.  
+Nos capítulos seguintes - **CI/CD (07)**, **IaC (08)**, **Containers (09)**, **Testes de Segurança (10)**, **Deploy (11)** e **Operações (12)** - colabora com DevOps e QA, garantindo que o código é base sólida para pipelines, infraestruturas e runtime.  
 Finalmente, em **Formação (13)** e **Governança (14)**, participa em programas de capacitação e cumpre requisitos contratuais associados ao desenvolvimento.  
 
 **Enquadramento regulatório:**  
@@ -104,7 +104,7 @@ O papel de AppSec é ser ponte entre normas e execução técnica.
 É quem transforma obrigações abstratas em controlos concretos.  
 
 No **Cap. 01–02**, define critérios de classificação e requisitos técnicos.  
-No **Cap. 03–04**, facilita threat modeling e revisão arquitetural.  
+No **Cap. 03–04**, facilita threat modeling e revisão da arquitetura.  
 No **Cap. 05–06**, seleciona ferramentas de SCA e coding standards.  
 No **Cap. 07–10**, desenha controlos críticos de pipelines, IaC, containers e testes.  
 No **Cap. 12–14**, estabelece métricas de monitorização e apoia cláusulas contratuais de segurança.  
@@ -157,8 +157,8 @@ Fornece prova documental exigida em NIS2 (auditorias, reporting) e DORA (resili�
 
 Os arquitetos desenham soluções que resistem ao tempo e às ameaças.  
 
-No **Cap. 03–04**, definem padrões arquiteturais e revêm integrações críticas.  
-No **Cap. 07–08**, asseguram consistência arquitetural em pipelines e IaC.  
+No **Cap. 03–04**, definem padrões de arquitetura e revêm integrações críticas.  
+No **Cap. 07–08**, asseguram consistência da arquitetura em pipelines e IaC.  
 No **Cap. 11–12**, apoiam desenho resiliente de ambientes de produção.  
 
 **Enquadramento regulatório:**  
@@ -208,15 +208,15 @@ São instrumentos formais para comprovar cumprimento perante autoridades (NIS2, 
 É natural que a introdução do SbD-ToE suscite receios de aumento da carga de trabalho.  
 É importante sublinhar: **não se trata de adicionar tarefas novas**, mas de **dar nomes, forma e rastreabilidade** a atividades que já existem hoje, ainda que executadas de forma menos explícita ou mais ad-hoc.  
 
-- O Developer já corrige vulnerabilidades — o SbD-ToE apenas tipifica essa atividade.  
-- O QA já valida critérios — o SbD-ToE apenas assegura que a segurança é um desses critérios.  
-- O PO já define prioridades — o SbD-ToE apenas garante que requisitos de segurança são incluídos.  
-- O DevOps já mantém pipelines — o SbD-ToE apenas explicita controlos de segurança.  
+- O Developer já corrige vulnerabilidades - o SbD-ToE apenas tipifica essa atividade.  
+- O QA já valida critérios - o SbD-ToE apenas assegura que a segurança é um desses critérios.  
+- O PO já define prioridades - o SbD-ToE apenas garante que requisitos de segurança são incluídos.  
+- O DevOps já mantém pipelines - o SbD-ToE apenas explicita controlos de segurança.  
 
 Assim, o manual não **aumenta trabalho**, mas **aumenta transparência e visibilidade** sobre o que já é feito.  
 
 Outro ponto importante: nem todas as organizações terão todos os papéis aqui descritos.  
 Em muitas, um único profissional acumula várias funções, ou certas responsabilidades são partilhadas por equipas.  
-O SbD-ToE não impõe estrutura rígida; apenas explicita que as atividades **têm de existir** — sejam desempenhadas por um ou vários papéis.  
+O SbD-ToE não impõe estrutura rígida; apenas explicita que as atividades **têm de existir** - sejam desempenhadas por um ou vários papéis.  
 
 O valor está precisamente aqui: transformar práticas isoladas em processos claros, visíveis e auditáveis, **sem criar esforço adicional desnecessário**.

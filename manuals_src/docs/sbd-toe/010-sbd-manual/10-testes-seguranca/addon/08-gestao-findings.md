@@ -11,7 +11,7 @@ sidebar_position: 9
 
 ## 🌟 Objetivo
 
-Estabelecer um processo eficaz e contínuo para gerir findings de segurança — isto é, **resultados de testes que indicam potenciais vulnerabilidades ou más práticas**, assegurando:
+Estabelecer um processo eficaz e contínuo para gerir findings de segurança - isto é, **resultados de testes que indicam potenciais vulnerabilidades ou más práticas**, assegurando:
 
 - Triagem por criticidade, contexto e reprodutibilidade;
 - Integração com backlog e ferramentas de desenvolvimento;
@@ -62,7 +62,7 @@ Cada finding representa uma **observação de risco** que requer decisão:
 - Classificar findings por risco (L1–L3) e ajustar processo:
   - **L1**: findings podem ser triados diretamente no backlog;
   - **L2–L3**: devem ser centralizados, auditáveis e acompanhados por AppSec;
-- Evitar duplicações entre ferramentas — estabelecer pipelines de correlação;
+- Evitar duplicações entre ferramentas - estabelecer pipelines de correlação;
 - Automatizar exportação de findings para quadros de triagem e KPIs;
 - Rever findings aceites a cada trimestre;
 - Integrar dashboards por release, módulo, equipa ou tipo de falha.
@@ -73,9 +73,9 @@ Cada finding representa uma **observação de risco** que requer decisão:
 
 | Documento                       | Relevância estratégica                        |
 |--------------------------------|------------------------------------------------|
-| Capítulo 02 — Requisitos       | Valida requisitos e permite rastreabilidade (REQ-XXX) |
-| Capítulo 06 — Desenvolvimento  | Findings evidenciam falhas recorrentes ou violação de padrões seguros |
-| Capítulo 07 — CI/CD Seguro     | Findings originados em jobs de validação contínua |
+| Capítulo 02 - Requisitos       | Valida requisitos e permite rastreabilidade (REQ-XXX) |
+| Capítulo 06 - Desenvolvimento  | Findings evidenciam falhas recorrentes ou violação de padrões seguros |
+| Capítulo 07 - CI/CD Seguro     | Findings originados em jobs de validação contínua |
 | `01-sast.md`, `02-dast.md`     | Produzem findings que devem ser triados       |
 | `09-feedback-equipa.md`        | Define mecanismos de comunicação e ownership   |
 

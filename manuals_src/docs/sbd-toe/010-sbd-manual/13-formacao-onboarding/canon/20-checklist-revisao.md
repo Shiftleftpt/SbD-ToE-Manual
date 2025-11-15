@@ -8,10 +8,10 @@ sidebar_position: 20
 ---
 
 
-# ✅ Checklist de Revisão Periódica — Formação e Onboarding Seguro
+# ✅ Checklist de Revisão Periódica - Formação e Onboarding Seguro
 
 Este checklist aplica-se a todos os **colaboradores técnicos, internos ou externos**, com impacto direto no desenvolvimento, operação ou manutenção de software.  
-Permite avaliar de forma **binária, objetiva e rastreável** a adoção prática das prescrições do **Capítulo 13 — Formação e Onboarding Seguro**.
+Permite avaliar de forma **binária, objetiva e rastreável** a adoção prática das prescrições do **Capítulo 13 - Formação e Onboarding Seguro**.
 
 > 🛠️ Este mecanismo de controlo é essencial para validar a **formação proporcional ao risco**, a **validação técnica antes de permissões**, a **gestão de terceiros** e a **existência de cultura ativa de segurança**.
 

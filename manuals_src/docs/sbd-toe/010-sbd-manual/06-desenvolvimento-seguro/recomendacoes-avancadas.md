@@ -1,6 +1,6 @@
 ---
 id: recomendacoes-avancadas
-title: Recomendações Avançadas — Desenvolvimento Seguro
+title: Recomendações Avançadas - Desenvolvimento Seguro
 description: Práticas reforçadas e recomendações opcionais para organizações com maior maturidade em desenvolvimento seguro
 tags: [desenvolvimento, maturidade, práticas avançadas, DevSecOps, validação]
 sidebar_position: 30
@@ -61,7 +61,7 @@ Utilizar ferramentas baseadas em **LLM (Large Language Models)** para:
 
 - Sugerir remediações a findings comuns.
 - Validar existência de controlos em funções críticas.
-- Detetar fragilidades não triviais — **sempre com revisão humana final**.
+- Detetar fragilidades não triviais - **sempre com revisão humana final**.
 
 ---
 
@@ -124,4 +124,4 @@ Usar os findings reais da equipa como base para:
 
 > 💡 Muitas das práticas avançadas aqui descritas são suportadas nativamente por ferramentas comerciais consolidadas no mercado.  
 > Plataformas como **Checkmarx**, **Kiuwan**, **Xygeni**, **Snyk**, entre outras, integram funcionalidades que cobrem desde SAST, SCA, tagging semântico, enforcement de políticas, até feedback direto em pipelines e PRs.  
-> Assim, **não é necessário recorrer a um ecossistema disperso de ferramentas open source** para aplicar estas recomendações — o importante é garantir **a função de segurança**, independentemente da ferramenta escolhida.
+> Assim, **não é necessário recorrer a um ecossistema disperso de ferramentas open source** para aplicar estas recomendações - o importante é garantir **a função de segurança**, independentemente da ferramenta escolhida.

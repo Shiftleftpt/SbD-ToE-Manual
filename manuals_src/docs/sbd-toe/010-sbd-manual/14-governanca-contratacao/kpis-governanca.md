@@ -64,7 +64,7 @@ Inclui também indicadores de **formação obrigatória** para funções crític
 
 ## 🔗 Ligações cruzadas
 
-* Cap. 1 + 2 — Fonte dos requisitos e risco por aplicação
-* Cap. 13 — Formação e capacitação
-* Cap. 14.1 a 14.6 — Onde os dados são registados
-* Cap. 14.7 — Maturidade organizacional
+* Cap. 1 + 2 - Fonte dos requisitos e risco por aplicação
+* Cap. 13 - Formação e capacitação
+* Cap. 14.1 a 14.6 - Onde os dados são registados
+* Cap. 14.7 - Maturidade organizacional

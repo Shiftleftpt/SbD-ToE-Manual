@@ -1,12 +1,12 @@
 ---
 id: checklist-revisao
-title: Checklist de Revisão — Requisitos de Segurança
+title: Checklist de Revisão - Requisitos de Segurança
 description: Verificações obrigatórias por projeto para garantir a aplicação dos requisitos definidos
 tags: [checklist, validação, requisitos, auditoria, rastreabilidade]
 sidebar_position: 20
 ---
 
-# ✅ Checklist de Verificação — Requisitos de Segurança
+# ✅ Checklist de Verificação - Requisitos de Segurança
 
 Este ficheiro fornece uma lista objetiva e auditável para avaliar se os requisitos de segurança foram devidamente definidos, aplicados e rastreados ao longo do ciclo de vida da aplicação, conforme prescrito neste capítulo.
 

@@ -1,12 +1,12 @@
 ---
 id: rastreabilidade
-title: Rastreabilidade Top-Down — Desenvolvimento Seguro
+title: Rastreabilidade Top-Down - Desenvolvimento Seguro
 description: Rastreabilidade entre as práticas deste capítulo e os requisitos dos principais frameworks de segurança de software
-tags: [rastreabilidade, frameworks, desenvolvimento, SAMM, SSDF, BSIMM, DSOMM]
+tags: [rastreabilidade, frameworks, desenvolvimento, SAMM, SSDF, DSOMM]
 sidebar_position: 25
 ---
 
-# 📎 Rastreabilidade contra Frameworks — Capítulo 06: Desenvolvimento Seguro
+# 📎 Rastreabilidade contra Frameworks - Capítulo 06: Desenvolvimento Seguro
 
 Este ficheiro estabelece a **rastreabilidade entre as práticas prescritas neste capítulo** e os requisitos dos principais frameworks e normas de segurança de software relacionados com **codificação segura, automação, validação contínua e revisão estruturada**.
 
@@ -111,4 +111,4 @@ O Capítulo 06 depende e contribui para os seguintes capítulos:
 
 ---
 
-> 📌 Este capítulo fornece a camada técnica essencial para aplicar e verificar os requisitos definidos pelo SbD-ToE. As práticas aqui descritas permitem evidenciar conformidade, uniformizar validações e criar pipelines auditáveis — estabelecendo uma ponte sólida entre teoria normativa e execução prática.
+> 📌 Este capítulo fornece a camada técnica essencial para aplicar e verificar os requisitos definidos pelo SbD-ToE. As práticas aqui descritas permitem evidenciar conformidade, uniformizar validações e criar pipelines auditáveis - estabelecendo uma ponte sólida entre teoria normativa e execução prática.

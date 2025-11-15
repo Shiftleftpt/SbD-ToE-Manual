@@ -27,7 +27,7 @@ São abordagens centradas na **experiência prática**, que ligam conhecimento �
 
 ---
 
-## 🛠️ Como aplicar — Técnicas sugeridas
+## 🛠️ Como aplicar - Técnicas sugeridas
 
 ### 1. CTF (Capture The Flag)
 
@@ -128,4 +128,4 @@ São abordagens centradas na **experiência prática**, que ligam conhecimento �
 
 ---
 
-> 🧠 A aprendizagem prática contínua é o verdadeiro catalisador de maturidade em segurança. Estas técnicas ajudam a transformar conhecimento em ação — e cultura em comportamento.
+> 🧠 A aprendizagem prática contínua é o verdadeiro catalisador de maturidade em segurança. Estas técnicas ajudam a transformar conhecimento em ação - e cultura em comportamento.

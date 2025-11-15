@@ -1,12 +1,122 @@
 ---
 id: guia-estilo-linguagem
-title: Guia de Estilo de Linguagem — SbD-ToE
+title: Guia de Estilo de Linguagem - SbD-ToE
 sidebar_position: 90
 description: Guia normativo para uniformizar o tom, forma de tratamento e estilo técnico do manual
 tags: [estilo, linguagem, tratamento, norma editorial, curadoria]
 ---
 
-# 📝 Guia de Estilo de Linguagem — SbD-ToE
+# Guia de Contribuição – regras editoriais
+
+Este guia define as regras para a criação e manutenção dos capítulos do manual **Security by Design – Theory 
+of Everything (SbD-ToE)**
+
+
+> Podem existir vários manuais, complementares ou independentes.
+> `sbd-manual` é o primeiro, mas poderão existir outros (ex.: `sscs-manual`, `genai-manual`).
+> Este documento aplica-se ao manual inicial e serve de referência aos seguintes.
+## ✍️ Regras editoriais e formato 
+
+Cada capítulo técnico está localizado em:
+
+```
+docs/sbd-toe/sbd-manual/XX-nome-do-capitulo/
+```
+
+---
+
+### 📁 Estrutura de capítulos
+
+```
+├── _category_.json
+├── intro.md
+├── achievable-maturity.md
+├── aplicacao-lifecycle.md
+├── recomendacoes-avancadas.md
+├── policies-relevantes.md
+├── addon/
+│   ├── 01-*.md … 09-*.md
+│   └── ...
+└── canon/
+    ├── 20-checklist-revisao.md
+    ├── 25-rastreabilidade.md
+    └── 50-ameacas-mitigadas.md
+```
+
+---
+
+## 📌 Ficheiros obrigatórios
+
+| Ficheiro                 | Descrição                                                                |
+| ------------------------ | ------------------------------------------------------------------------ |
+| `intro.md`               | Corpo principal do capítulo; objetivos, práticas e recomendações.        |
+| `achievable-maturity.md` | Alinhamento do capítulo com frameworks de maturidade (SAMM, SSDF, etc.). |
+| `aplicacao-lifecycle.md` | Quando e como aplicar as práticas no ciclo de vida (SDLC).               |
+
+---
+
+## 📌 Ficheiros recomendados
+
+| Ficheiro                     | Descrição                                                                                                             |
+| ---------------------------- | --------------------------------------------------------------------------------------------------------------------- |
+| `recomendacoes-avancadas.md` | Práticas ou atividades avançadas que podem elevar o desempenho no tema do capítulo.                                   |
+| `policies-relevantes.md`     | Lista de políticas organizacionais relevantes ao tema; objetivos e conteúdo mínimo esperado (não constitui template). |
+
+---
+
+## 🧩 Addons específicos (`addon/`)
+
+Documentos técnicos complementares ao `intro.md`, numerados `01–09` para definir a ordem no *sidebar*.
+A nomeação deve ser curta, descritiva e estável.
+
+**Exemplos:**
+
+* `01-modelo-classificacao-eixos.md`
+* `02-casos-praticos.md`
+* `03-adopcao-drp-bia.md`
+* `04-matriz-controlos-por-risco.md`
+* `05-exemplos-aplicacao.md`
+
+---
+
+## 🧩 Documentos *canon* (`canon/`)
+
+| Ficheiro                  | Descrição                                                                                                                   |
+| ------------------------- | --------------------------------------------------------------------------------------------------------------------------- |
+| `20-checklist-revisao.md` | Checklist binário (Sim/Não) para medir e controlar a aplicação prática do capítulo, por projeto.                            |
+| `25-rastreabilidade.md`   | Mapeamento *top-down* do capítulo para normas e frameworks (SSDF, SAMM, BSIMM, etc.) com notas de normalização e evidência. |
+| `50-ameacas-mitigadas.md` | Lista de ameaças mitigadas pelo capítulo, com “como surge”, “como mitiga” e controlos associados (OSC&R, CAPEC, etc.).      |
+
+---
+
+## ✅ Frontmatter (YAML)
+
+```yaml
+---
+id: nome-unico
+title: Título a apresentar no menu
+tags:
+  - tipo: chapter | anexo
+  - grupo: base | execucao | validacao | suporte | transversal
+  - tema: nome-do-tema-tecnico
+---
+```
+
+> As *tags* são utilizadas para organização, pesquisa e rotulagem no GitHub.
+
+---
+
+## 🛠️ Boas práticas
+
+* Manter títulos coerentes e numeração sequencial nos `addon/` (`01–09`).
+* Evitar *markdown* dentro de *markdown* em blocos de código.
+* Não duplicar conteúdo entre capítulos; preferir referências cruzadas.
+* Utilizar linguagem objetiva, prescritiva e clara.
+* Garantir que todas as checklists são **binárias (Sim/Não)**.
+
+---
+
+# 📝 Guia de Estilo de Linguagem - SbD-ToE
 
 > Este guia estabelece o tom, estilo e forma de tratamento adotados no manual *Security by Design – Theory of Everything (SbD-ToE)*, assegurando uniformidade, clareza e autoridade técnica em todos os capítulos e formatos (web e livro).
 
@@ -89,19 +199,9 @@ tags: [estilo, linguagem, tratamento, norma editorial, curadoria]
 
 ---
 
-## 🧰 7. Ferramentas auxiliares (opcional)
+## 🧩 7. Aplicação prática
 
-- Linters de estilo Markdown (`markdownlint`, `Vale`) com regras customizadas.
-- Scripts de QA editorial para detetar:
-  - Uso de 2ª pessoa (“tu”, “você”)
-  - Frases longas (> 25 palavras)
-  - Uso de verbos modais não normativos (“convém”, “deveria”)
-
----
-
-## 🧩 8. Aplicação prática
-
-- Este guia aplica-se a todos os ficheiros `intro.md`, ``, `addon/` — exceto onde explicitamente justificado (ex: `addon/05-exemplos.md` pode usar estilo mais narrativo).
+- Este guia aplica-se a todos os ficheiros `intro.md`, ``, `addon/` - exceto onde explicitamente justificado (ex: `addon/05-exemplos.md` pode usar estilo mais narrativo).
 - O mesmo guia será usado para:
   - Revisão manual capítulo a capítulo;
   - Integração em scripts de validação editorial futuros;
@@ -109,22 +209,12 @@ tags: [estilo, linguagem, tratamento, norma editorial, curadoria]
 
 # Guia Editorial e Convenções SbD-ToE (versão 2025-08)
 
-## 1. Templates e Emojis Obrigatórios por Ficheiro
+## 1. Templates e Emojis recomendados por Ficheiro
 
-O manual SbD-ToE adota um sistema de templates e emojis para garantir clareza, consistência e processamento automático. Cada ficheiro, secção e bloco tem marcações obrigatórias.
+O manual SbD-ToE adota um sistema de templates e emojis para garantir clareza, consistência e processamento automático.
+O emoji do título principal deve ser coerente com o template do ficheiro; por exemplo, o emoji 🛠️ é obrigatório em todos os ficheiros aplicacao-lifecycle.md .
 
-| Template (comentário no topo)      | Emoji obrigatório no h1/header          | Aplicação / Destino                                 |
-| ---------------------------------- | --------------------------------------- | --------------------------------------------------- |
-| <!--template: sbdtoe-core -->      | 🛠️                                     | Conteúdo técnico prescritivo/normativo (addon/core) |
-| <!--template: sbdtoe-addon -->     | 📎                                      | Extensões, integrações, anexos, métodos extra       |
-| <!--template: sbdtoe-aplicacao --> | 🛠️                                     | Aplicação transversal ao ciclo de vida (ex-15)      |
-| <!--template: sbdtoe-handson -->   | 📝                                      | Casos práticos, exemplos aplicados                  |
-| <!--template: sbdtoe-userstory --> | (📝 no rendering/card, não no md)       | User stories/cartões (em secção própria)            |
-| <!--template: sbdtoe-preintro -->  | 🧠 (opcional, só se rationale/contexto) | Rationale introdutório/contexto                     |
-
-> Nota: O emoji do título principal deve ser coerente com o template do ficheiro; o emoji 🛠️ é obrigatório em todos os ficheiros aplicacao-lifecycle.md (ex-15).
-
-## 2. Emojis obrigatórios por secção
+## 2. Emojis adequados por secção
 
 | Emoji | Tema editorial / Secção                 |
 | ----- | --------------------------------------- |
@@ -144,9 +234,7 @@ O manual SbD-ToE adota um sistema de templates e emojis para garantir clareza, c
 
 ## 3. Convenção para User Stories e Cartões
 
-Cada user story/cartão deve ser delimitada por comentários explícitos:
-
-<!--userstory:start-->
+O capitulo applicacao_lifecycle, descreve user stories para a aplicação do capitulo na pratica do SDLC, cada user story/cartão deve ser formatada de forma expecifica para que a formatação seja aplicada:
 
 ### Story: \[Nome da User Story]
 
@@ -159,7 +247,6 @@ Cada user story/cartão deve ser delimitada por comentários explícitos:
 
 > \[Nota/referência cruzada, opcional]
 
-<!--userstory:end-->
 
 * Não usar emojis no header da user story (podem ser aplicados visualmente só no rendering).
 * Nunca inserir outros headings, títulos ou marcas internas entre início e fim do bloco.
@@ -170,58 +257,9 @@ Cada user story/cartão deve ser delimitada por comentários explícitos:
 Inclui sempre:
 
 * Frontmatter YAML obrigatório.
-* Linha <!--template: ... --> imediatamente a seguir.
 * Título principal com emoji obrigatório.
 * Secções internas com emoji correto (ver tabela).
 * Blocos de user story delimitados como acima.
-
----
-
-# Convenção de Tags, Parsing e Build SbD-ToE
-
-## Blocos e tags condicionais suportados
-
-* <!--web-only--> ... <!--web-only:end-->: Só incluído na versão web.
-* <!--print-only--> ... <!--print-only:end-->: Só incluído na versão impressa.
-* <!--userstory:start--> ... <!--userstory:end-->: Cada bloco é um cartão/user story — será extraído e renderizado separadamente.
-* <!--template: sbdtoe-[tipo] -->: Indica o tipo/natureza do ficheiro; obrigatório após o frontmatter.
-
-## Emojis e parsing temático
-
-* O emoji no h1 do ficheiro é obrigatório e corresponde ao template (ver tabela).
-* Emojis nas headings internas são usados para parsing semântico (ex: 📅 para triggers, 👥 para papéis, ⚖️ para limiares, etc).
-* O parser remove ou substitui emojis na versão impressa segundo a tabela de substituição.
-
-| Template / Tag   | Emoji obrigatório | Parsing/Build         |
-| ---------------- | ----------------- | --------------------- |
-| sbdtoe-core      | 🛠️               | Título e headings     |
-| sbdtoe-addon     | 📎                |                       |
-| sbdtoe-aplicacao | 🛠️               |                       |
-| sbdtoe-handson   | 📝                |                       |
-| sbdtoe-userstory | (none, card)      | Render card block     |
-| sbdtoe-preintro  | 🧠 (opcional)     | Só rationale/contexto |
-
-* Todos os headings de user stories/card começam por ### Story:, dentro dos comentários de delimitação.
-* O parser processa apenas o conteúdo entre <!--userstory:start--> e <!--userstory:end-->.
-
-## Exemplo de bloco de user story para parsing
-
-<!--userstory:start-->
-
-### Story: Classificação inicial da aplicação
-
-Como responsável técnico, quero classificar a aplicação com base nos eixos E+D+I, para garantir a aplicação proporcional de controlos de segurança.
-
-**Definition of Done:**
-
-* [ ] Modelo aplicado com pontuação 1–3 por eixo
-* [ ] Nível L1–L3 definido
-* [ ] Documento registado e versionado
-* [ ] Controlos mínimos mapeados a partir da matriz
-
-> 🔗 Suporta os domínios *Risk* e *Security Requirements* do OWASP DSOMM.
-
-<!--userstory:end-->
 
 ---
 

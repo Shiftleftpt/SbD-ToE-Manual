@@ -7,9 +7,9 @@ sidebar_position: 60
 ---
 
 
-# 🏠 Políticas Organizacionais — Deploy Seguro
+# 🏠 Políticas Organizacionais - Deploy Seguro
 
-A aplicação consistente e eficaz do Capítulo 11 — **Deploy Seguro** — exige a existência de **políticas organizacionais formais** que regulem as condições técnicas e operacionais para execução de código em produção, com foco em:
+A aplicação consistente e eficaz do Capítulo 11 - **Deploy Seguro** - exige a existência de **políticas organizacionais formais** que regulem as condições técnicas e operacionais para execução de código em produção, com foco em:
 
 - Validação pré-deploy (readiness);
 - Gating e aprovação formal;
@@ -31,8 +31,6 @@ Estas políticas devem:
 
 > 📑 Estas políticas devem estar alinhadas com os processos definidos no capítulo e ser auditáveis.
 
-> 🔹 Frameworks como **SSDF**, **SAMM**, **SLSA** e **BSIMM** recomendam explicitamente a existência destas políticas.
-
 ---
 
 ## 📓 Políticas recomendadas
@@ -45,18 +43,6 @@ Estas políticas devem:
 | Política de Gating e Automatis\-mo de Deploy      | ⚠ Opcional | Pipelines com deploy automatizado               | Definição de gates, aprovação automática, bloqueio por findings         |
 | Política de Validação em Ambiente de Staging    | ✅ Sim      | Projetos com staging ou pre-prod                | Validação funcional, métricas e readiness com evidência                   |
 | Política de Autonomia e Responsabilidade de Deploy | ⚠ Opcional | Equipas com deploy self-service ou continuo     | Quem pode autorizar, requisitos mínimos, registo de decisões             |
-
----
-
-## 📆 Correspondência com frameworks normativas
-
-| Framework        | Requisitos cobertos pelas políticas acima                                                            |
-|-----------------|------------------------------------------------------------------------------------------------------------------|
-| **NIST SSDF**    | PS.2 (Release authorization), RV.4 (Rollback), RV.5 (Logging), PO.1 (Release Readiness)                         |
-| **SLSA v1.0**    | Requirements for provenance, versioning, release policies, tamper resistance                                    |
-| **OWASP SAMM**   | Operations > Environment Management / Release Management                                                       |
-| **BSIMM13**      | SE2.5 (Operate securely in production), CMVM2.3 (Audit logging), TVM3.2 (Automate release gates)               |
-| **CIS Controls** | Control 6 (Access Control), Control 8 (Audit Log Management), Control 16 (Application Software Security)        |
 
 ---
 

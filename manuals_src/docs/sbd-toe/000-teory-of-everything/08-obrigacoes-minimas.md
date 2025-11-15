@@ -41,7 +41,7 @@ O racional técnico-científico para estas obrigações é robusto.
 Estudos de incidentes (ex.: relatórios Verizon DBIR, ENISA Threat Landscape, OWASP Top 10) demonstram que a maioria das falhas exploradas decorre de práticas básicas negligenciadas: bibliotecas não geridas, pipelines sem validações, ausência de logging ou formação insuficiente das equipas.  
 Ao definir este núcleo duro, o SbD-ToE segue a evidência empírica: **controlos simples previnem a maioria dos ataques mais comuns**.
 
-Modelos como OWASP SAMM e BSIMM mostram também que organizações maduras partilham uma característica em comum: **a uniformidade dos controlos mínimos**.  
+Modelos como OWASP SAMM mostram também que organizações maduras partilham uma característica em comum: **a uniformidade dos controlos mínimos**.  
 A ausência dessa uniformidade leva a gaps, a duplicações e a custos acrescidos em auditorias.  
 Por isso, mesmo antes de falar em maturidade avançada, importa garantir que o mínimo é consistente e transversal.
 

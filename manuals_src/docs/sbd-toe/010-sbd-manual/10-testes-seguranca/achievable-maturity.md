@@ -2,12 +2,12 @@
 id: achievable-maturity
 title: Mapeamento de Maturidade – Capítulo 10
 sidebar_position: 10
-tags: [canon, maturidade, SAMM, BSIMM, SSDF, SLSA, DSOMM]
+tags: [canon, maturidade, SAMM, SSDF, SLSA, DSOMM]
 ---
 
-# 📈 Maturidade — Testes de Segurança
+# 📈 Maturidade - Testes de Segurança
 
-Este documento apresenta o **mapeamento de maturidade das práticas descritas no Capítulo 10 — Testes de Segurança**, com base nos principais frameworks de referência:
+Este documento apresenta o **mapeamento de maturidade das práticas descritas no Capítulo 10 - Testes de Segurança**, com base nos principais frameworks de referência:
 
 - **OWASP SAMM**
 - **BSIMM**
@@ -51,7 +51,7 @@ Este mapeamento avalia o **nível de completude e integração** das práticas p
 |-------|--------------------------------------------------|--------------------------------------------------------|
 | 1     | Testes manuais básicos de segurança              | ✅ Inclui Pentesting e casos adversariais manuais      |
 | 2     | Integração de testes automatizados no pipeline   | ✅ SAST, DAST, fuzzing, cobertura e regressão          |
-| 3     | Gestão ativa de findings e feedback contínuo     | ❌ Parcial — não garante formalização organizacional   |
+| 3     | Gestão ativa de findings e feedback contínuo     | ❌ Parcial - não garante formalização organizacional   |
 
 **🧮 Maturidade atingida: 2 / 3**
 
@@ -95,7 +95,7 @@ Este mapeamento avalia o **nível de completude e integração** das práticas p
 |-------|------------------------------------------------------------------|--------------------------------------------------------|
 | 1     | Execução de testes em CI                                         | ✅ Cobertura mínima via pipelines                      |
 | 2     | Cobertura definida e evidência de testes                         | ✅ Evidência e análise rastreável                      |
-| 3     | Cobertura exigida e enforcement                                  | ❌ Parcial — depende de governance                     |
+| 3     | Cobertura exigida e enforcement                                  | ❌ Parcial - depende de governance                     |
 | 4     | Testes e resultados com garantia de integridade                  | ❌ Não abrangido pelo capítulo                         |
 
 **🔐 Nível máximo suportado por este capítulo: SLSA 2 / 4**

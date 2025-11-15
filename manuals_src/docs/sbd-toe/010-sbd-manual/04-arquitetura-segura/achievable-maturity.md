@@ -2,10 +2,10 @@
 id: achievable-maturity
 title: Mapeamento de Maturidade – Capítulo 04
 sidebar_position: 10
-tags: [canon, maturidade, SAMM, BSIMM, SSDF, SLSA, DSOMM]
+tags: [canon, maturidade, SAMM, SSDF, SLSA, DSOMM]
 ---
 
-# 📈 Maturidade — Arquitetura Segura
+# 📈 Maturidade - Arquitetura Segura
 
 Este documento estabelece o **grau de alinhamento entre as práticas descritas no Capítulo 04** do manual SbD-ToE e os requisitos das principais frameworks de segurança e maturidade:
 
@@ -39,11 +39,11 @@ Este documento **não mede a maturidade de uma organização**, mas sim o **grau
 
 | Framework         | Domínios Relevantes                    | Práticas ou Objetos Cobertos                                       | Avaliação de Maturidade          |
 |------------------|-----------------------------------------|--------------------------------------------------------------------|----------------------------------|
-| OWASP SAMM v2.1  | Design → Architecture & Design          | Princípios formais, validação e documentação arquitetural          | **2 / 3**                        |
+| OWASP SAMM v2.1  | Design → Architecture & Design          | Princípios formais, validação e documentação da arquitetura          | **2 / 3**                        |
 | OWASP DSOMM      | Architecture, Risk, Requirements         | Requisitos `ARC-XXX`, rastreabilidade, zonas de confiança          | **3 / 4** (média dos domínios)   |
-| NIST SSDF v1.1   | PW.4, PW.7                              | Revisão arquitetural formal, validação de segurança                | **✔️ PW.4, PW.7**                |
-| BSIMM13          | Architecture Analysis (AA1, AA2), CMVM  | Validação arquitetural, gestão de exceções                         | Contributo relevante             |
-| SLSA v1.0        | Build System, Provenance                | Segmentação e isolamento arquitetural                              | **Nível 2 / 4**                  |
+| NIST SSDF v1.1   | PW.4, PW.7                              | Revisão da arquitetura formal, validação de segurança                | **✔️ PW.4, PW.7**                |
+| BSIMM13          | Architecture Analysis (AA1, AA2), CMVM  | Validação da arquitetura, gestão de exceções                         | Contributo relevante             |
+| SLSA v1.0        | Build System, Provenance                | Segmentação e isolamento da arquitetura                              | **Nível 2 / 4**                  |
 
 ---
 
@@ -67,7 +67,7 @@ Este documento **não mede a maturidade de uma organização**, mas sim o **grau
 | Requirements  | 3 / 4          | Requisitos formais por tipo de componente (`ARC-XXX`)               |
 | Risk Analysis | 3 / 4          | Integração com threat modeling e aceitação de risco por exceção     |
 
-> O capítulo cobre a maioria dos aspetos arquiteturais relevantes à segurança em ambientes modernos.
+> O capítulo cobre a maioria dos aspetos de arquitetura relevantes à segurança em ambientes modernos.
 
 ---
 
@@ -84,11 +84,11 @@ Este documento **não mede a maturidade de uma organização**, mas sim o **grau
 
 | Prática BSIMM   | Alinhamento com Cap. 04                                         |
 |-----------------|-----------------------------------------------------------------|
-| AA1.2           | Técnicas arquiteturais para reduzir risco                       |
+| AA1.2           | Técnicas de arquitetura para reduzir risco                       |
 | AA2.1           | Avaliação formal da arquitetura                                 |
 | CMVM1.1         | Definição de zonas de confiança e exceções                      |
 
-> O capítulo fornece práticas que contribuem diretamente para análise arquitetural e gestão de exceções.
+> O capítulo fornece práticas que contribuem diretamente para análise da arquitetura e gestão de exceções.
 
 ---
 
@@ -108,7 +108,7 @@ Este documento **não mede a maturidade de uma organização**, mas sim o **grau
 
 - O Capítulo 04 estabelece uma base sólida para a arquitetura segura, com requisitos formais, rastreabilidade e validação;
 - Alinha-se fortemente com **SAMM (2/3)**, **DSOMM (3/4)**, **SSDF (PW.4, PW.7)** e **BSIMM (AA, CMVM)**;
-- Permite decisões justificadas com base em princípios arquiteturais reconhecidos e aplicáveis a diferentes domínios de risco;
+- Permite decisões justificadas com base em princípios de arquitetura reconhecidos e aplicáveis a diferentes domínios de risco;
 - Suporta práticas modernas de segurança por design com aplicabilidade direta a ambientes regulados ou críticos.
 
 ---
@@ -117,8 +117,8 @@ Este documento **não mede a maturidade de uma organização**, mas sim o **grau
 
 | Framework         | Domínios Relevantes                    | Práticas ou Objetos Cobertos                                       | Avaliação de Maturidade          |
 |------------------|-----------------------------------------|--------------------------------------------------------------------|----------------------------------|
-| OWASP SAMM v2.1  | Design → Architecture & Design          | Princípios formais, validação e documentação arquitetural          | **2 / 3**                        |
+| OWASP SAMM v2.1  | Design → Architecture & Design          | Princípios formais, validação e documentação da arquitetura          | **2 / 3**                        |
 | OWASP DSOMM      | Architecture, Risk, Requirements         | Requisitos `ARC-XXX`, rastreabilidade, zonas de confiança          | **3 / 4** (média dos domínios)   |
-| NIST SSDF v1.1   | PW.4, PW.7                              | Revisão arquitetural formal, validação de segurança                | **✔️ PW.4, PW.7**                |
-| BSIMM13          | Architecture Analysis (AA1, AA2), CMVM  | Validação arquitetural, gestão de exceções                         | Contributo relevante             |
-| SLSA v1.0        | Build System, Provenance                | Segmentação e isolamento arquitetural                              | **Nível 2 / 4**                  |
+| NIST SSDF v1.1   | PW.4, PW.7                              | Revisão da arquitetura formal, validação de segurança                | **✔️ PW.4, PW.7**                |
+| BSIMM13          | Architecture Analysis (AA1, AA2), CMVM  | Validação da arquitetura, gestão de exceções                         | Contributo relevante             |
+| SLSA v1.0        | Build System, Provenance                | Segmentação e isolamento da arquitetura                              | **Nível 2 / 4**                  |

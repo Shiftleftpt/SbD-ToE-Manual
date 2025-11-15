@@ -12,14 +12,14 @@ tags: [arquitetura, threat modeling, validação, revisão técnica, rastreabili
 Definir como incorporar o *Threat Modeling* de forma estruturada no processo de **revisão técnica e validação de arquitetura**, garantindo que:
 
 - A análise de ameaças é etapa obrigatória na validação técnica;
-- Os artefactos arquiteturais incluem os resultados do threat modeling;
+- Os artefactos de arquitetura incluem os resultados do threat modeling;
 - Existe rastreabilidade entre arquitetura, ameaças e requisitos de segurança (Cap. 2).
 
 ---
 
 ## 📁 Artefactos a validar
 
-Este processo está alinhado com as prescrições do **Capítulo 4 — Arquitetura Segura**, que define os artefactos mínimos exigidos para validação técnica:
+Este processo está alinhado com as prescrições do **Capítulo 4 - Arquitetura Segura**, que define os artefactos mínimos exigidos para validação técnica:
 
 | Artefacto de arquitetura     | Deve conter…                                    | Validado por…               |
 | ---------------------------- | ----------------------------------------------- | --------------------------- |
@@ -55,7 +55,7 @@ Este processo está alinhado com as prescrições do **Capítulo 4 — Arquitetu
 
 ## 🔄 Integração com o ciclo de vida
 
-Este processo deve articular-se com o **Capítulo 6 — Desenvolvimento Seguro**, garantindo que:
+Este processo deve articular-se com o **Capítulo 6 - Desenvolvimento Seguro**, garantindo que:
 
 - A validação de arquitetura ocorre antes do desenvolvimento iniciar (gate técnico);
 - O threat model está disponível para revisão e incluído como deliverable do projeto;
@@ -74,4 +74,4 @@ Este processo deve articular-se com o **Capítulo 6 — Desenvolvimento Seguro**
 
 ---
 
-> A integração do threat modeling na arquitetura não é opcional em contextos críticos — é parte integrante da decisão técnica informada e da rastreabilidade de segurança.
+> A integração do threat modeling na arquitetura não é opcional em contextos críticos - é parte integrante da decisão técnica informada e da rastreabilidade de segurança.

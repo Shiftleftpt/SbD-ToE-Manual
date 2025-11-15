@@ -62,4 +62,4 @@ Mapear os vetores de ataque que podem ser **detetados, antecipados ou correlacio
 * Relacionar diretamente com OSC\&R / MITRE ATT\&CK nos planos de cobertura e threat modeling;
 * Priorizar ameaças com **impacto elevado e baixa visibilidade sem logging ativo**.
 
-> 🧠 Monitorizar não é bloquear — é **detetar e reagir a tempo**. A visibilidade é o primeiro passo da resiliência.
+> 🧠 Monitorizar não é bloquear - é **detetar e reagir a tempo**. A visibilidade é o primeiro passo da resiliência.

@@ -2,10 +2,10 @@
 id: achievable-maturity
 title: Mapeamento de Maturidade – Capítulo 08
 sidebar_position: 10
-tags: [canon, maturidade, SAMM, BSIMM, SSDF, SLSA, DSOMM]
+tags: [canon, maturidade, SAMM, SSDF, SLSA, DSOMM]
 ---
 
-# 📈 Maturidade — Infraestrutura como Código (IaC)
+# 📈 Maturidade - Infraestrutura como Código (IaC)
 
 Este documento estabelece o **alinhamento entre as práticas descritas no Capítulo 08** do manual SbD-ToE e os domínios equivalentes nos principais frameworks de segurança e maturidade de software:
 
@@ -15,7 +15,7 @@ Este documento estabelece o **alinhamento entre as práticas descritas no Capít
 - **SLSA**
 - **OWASP DSOMM**
 
-As práticas visam garantir que projetos IaC sejam tratados como **produtos de software seguros**, com requisitos, validações, rastreabilidade e governação — totalmente integrados no ciclo de desenvolvimento e operação.
+As práticas visam garantir que projetos IaC sejam tratados como **produtos de software seguros**, com requisitos, validações, rastreabilidade e governação - totalmente integrados no ciclo de desenvolvimento e operação.
 
 ---
 
@@ -49,9 +49,9 @@ O objetivo deste mapeamento é demonstrar **completude e maturidade das prática
 
 | Nível | Descrição SAMM                                       | Cobertura pelo Cap. 08                              |
 |-------|-------------------------------------------------------|-----------------------------------------------------|
-| 1     | Configuração manual, sem rastreabilidade              | ❌ Fora do escopo — prática não recomendada         |
+| 1     | Configuração manual, sem rastreabilidade              | ❌ Fora do escopo - prática não recomendada         |
 | 2     | Uso de linters, controlo automatizado e pipelines     | ✅ Validadores de IaC e enforcement automatizado    |
-| 3     | Integração contínua com artefactos rastreáveis        | ❌ Parcial — depende do ecossistema DevOps          |
+| 3     | Integração contínua com artefactos rastreáveis        | ❌ Parcial - depende do ecossistema DevOps          |
 
 **🧮 Maturidade atingida: 2 / 3**
 

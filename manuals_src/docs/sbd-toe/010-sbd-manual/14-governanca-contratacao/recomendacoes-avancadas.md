@@ -1,13 +1,13 @@
 ---
 id: recomendacoes-avancadas
-title: Recomendações Avançadas — Governança e Contratação
+title: Recomendações Avançadas - Governança e Contratação
 sidebar_position: 30
 description: Práticas avançadas de governação aplicáveis a contextos de elevada maturidade ou requisitos regulatórios
 tags: [avancado, governance, excecoes, contratos, auditoria, rastreabilidade]
 ---
 
 
-# 🧭 Recomendações Avançadas — Governança e Contratação
+# 🧭 Recomendações Avançadas - Governança e Contratação
 
 Este ficheiro inclui práticas que reforçam a governaça da segurança aplicacional em contextos organizacionais com maior maturidade, complexidade contratual ou exigência regulatória.
 
@@ -64,8 +64,8 @@ Este ficheiro inclui práticas que reforçam a governaça da segurança aplicaci
 
 ## 🔗 Referências cruzadas
 
-* Cap. 1 — Modelo de risco e ownership
-* Cap. 2 — Requisitos aplicacionais
-* Cap. 5 — Rastreabilidade e exceções
-* Cap. 13 — Formação e onboarding
-* Cap. 14.1 a 14.6 — Processos de governaça e contratação
+* Cap. 1 - Modelo de risco e ownership
+* Cap. 2 - Requisitos aplicacionais
+* Cap. 5 - Rastreabilidade e exceções
+* Cap. 13 - Formação e onboarding
+* Cap. 14.1 a 14.6 - Processos de governaça e contratação

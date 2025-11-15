@@ -5,31 +5,12 @@ description: Princípios e práticas para assegurar visibilidade, deteção e re
 tags: [monitorizacao, operacoes, deteção, resposta, logs, métricas, incidentes]
 sidebar_position: 0
 ---
-import Badge from '@site/src/components/Badge';
-
-<div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.5rem', marginBottom: '1rem' }}>
-  
-  <Badge color="info">SAMM: 2 / 3</Badge>
-  <Badge color="info">BSIMM: AM2.3, SE3.6, IR1.1</Badge>
-  <Badge color="info">SSDF: RV.4, PO.6, DE.3</Badge>
-  <Badge color="info">SLSA: Nível 2 / 4</Badge>
-  <Badge color="info">DSOMM: 2 / 3 (Operate & Detect)</Badge>
-  <a href="./achievable-maturity" style={{ marginLeft: 'auto', fontSize: '0.9rem' }}>📄 Ver análise de maturidade</a>
-</div>
 
 :::tip Capítulo Operacional
 Este capítulo é considerado **operacional** no modelo *Security by Design – Theory of Everything (SbD-ToE)*.  
 A sua função é **aplicar, automatizar e validar** as práticas definidas nos capítulos basilares, garantindo a sua execução contínua e mensurável.  
 
-Os capítulos operacionais implementam o SbD-ToE em contextos técnicos específicos, incluindo:
-- **Gestão de dependências e SBOM/SCA** (Cap. 05)  
-- **Pipelines CI/CD e automação de controlo** (Cap. 07)  
-- **Infraestrutura como Código (IaC)** (Cap. 08)  
-- **Containers e imagens seguras** (Cap. 09)  
-- **Testes de segurança e validação técnica** (Cap. 10)  
-- **Deploy seguro, observabilidade e resposta** (Cap. 11 – 12)  
-
-Estes capítulos traduzem as prescrições basilares em práticas de **execução verificável**, promovendo a **integração contínua da segurança** ao longo do ciclo de vida do software.
+Os capítulos operacionais implementam o SbD-ToE em contextos técnicos específicos. Estes capítulos traduzem as prescrições basilares em práticas de **execução verificável**, promovendo a **integração contínua da segurança** ao longo do ciclo de vida do software.
 :::
 
 
@@ -40,13 +21,13 @@ Estes capítulos traduzem as prescrições basilares em práticas de **execuçã
 Monitorizar é muito mais do que recolher dados técnicos.  
 É transformar sinais dispersos em **inteligência acionável** que permite às equipas antecipar riscos, detetar falhas e responder antes que um problema se transforme em incidente grave.  
 
-A experiência mostra-nos que grande parte dos ataques não são descobertos pela sofisticação do adversário, mas pela falta de visibilidade. Casos como o da Equifax ou da Target provaram que **logs estavam lá** — mas eram incompletos, mal estruturados ou simplesmente ignorados.  
+A experiência mostra-nos que grande parte dos ataques não são descobertos pela sofisticação do adversário, mas pela falta de visibilidade. Casos como o da Equifax ou da Target provaram que **logs estavam lá** - mas eram incompletos, mal estruturados ou simplesmente ignorados.  
 
-É por isso que frameworks como o **SSDF (RV.4, DE.3, PO.6)**, o **BSIMM (IR1.1, AM2.3)** e regulamentos como a **NIS2** exigem controlos claros de monitorização e resposta. Não basta prevenir: é preciso **detetar e reagir**.  
+É por isso que frameworks, como o **SSDF***,  e regulamentos como a **NIS2** exigem controlos claros de monitorização e resposta. Não basta prevenir: é preciso **detetar e reagir**.  
 
 👉 Este capítulo liga-se diretamente a:  
-- **Cap. 11 — Deploy Seguro**, que garante a entrada em produção de versões observáveis.  
-- **Cap. 13 — Formação e Capacitação**, que assegura que as pessoas sabem interpretar alertas e executar playbooks.  
+- **Cap. 11 - Deploy Seguro**, que garante a entrada em produção de versões observáveis.  
+- **Cap. 13 - Formação e Capacitação**, que assegura que as pessoas sabem interpretar alertas e executar playbooks.  
 
 ---
 
@@ -69,12 +50,12 @@ Estas práticas são complementares: só fazem sentido quando atuam em conjunto,
 
 Na prática, aplicar este capítulo significa responder a quatro perguntas fundamentais:  
 
-1. **O que observar?** — Logs, métricas de integridade, falhas de autenticação, acessos privilegiados.  
-2. **Como observar?** — Pipelines de recolha, dashboards em tempo real, thresholds claros.  
-3. **Como reagir?** — Alertas com SLAs, playbooks pré-definidos, integração com SOAR.  
-4. **Estamos a melhorar?** — Medição contínua de MTTD e MTTR, relatórios para GRC.  
+1. **O que observar?** - Logs, métricas de integridade, falhas de autenticação, acessos privilegiados.  
+2. **Como observar?** - Pipelines de recolha, dashboards em tempo real, thresholds claros.  
+3. **Como reagir?** - Alertas com SLAs, playbooks pré-definidos, integração com SOAR.  
+4. **Estamos a melhorar?** - Medição contínua de MTTD e MTTR, relatórios para GRC.  
 
-Cada organização deve começar pelo essencial — logging estruturado e centralização — e evoluir até automação completa de resposta. O caminho é proporcional ao risco, mas a lógica é sempre a mesma: **ver cedo, reagir rápido, aprender sempre**.
+Cada organização deve começar pelo essencial - logging estruturado e centralização - e evoluir até automação completa de resposta. O caminho é proporcional ao risco, mas a lógica é sempre a mesma: **ver cedo, reagir rápido, aprender sempre**.
 
 ---
 
@@ -138,7 +119,6 @@ A eficácia da monitorização mede-se em métricas.
 
 - **KPIs chave**: MTTD (tempo médio de deteção) e MTTR (tempo médio de resposta).  
 - **Auditoria**: revisão trimestral de logs, dashboards e relatórios.  
-- **Conformidade**: mapeamento direto para **SSDF**, **BSIMM** e **SAMM**.  
 - **Governança**: relatórios de operação entregues a GRC e direção, transformando métricas técnicas em decisões de negócio.  
 
 ---
@@ -152,16 +132,6 @@ A segurança não termina no deploy: prolonga-se em runtime através da visibili
 - Sem IRP → não há ação coordenada.  
 
 Este capítulo é **basilar** porque traduz segurança em capacidade de **detetar, reagir e aprender**. É aqui que a teoria se transforma em prática viva, todos os dias, em produção.
-
----
-
-## 📚 Alinhamento com frameworks
-
-- **OWASP SAMM** → OE2-A, ST3-B.  
-- **BSIMM** → AM2.3, IR1.1, SE3.6.  
-- **SSDF** → RV.4, PO.6, DE.3.  
-- **SLSA** → Nível 2 / 4 (observabilidade em supply chain).  
-- **DSOMM** → Operate & Detect.  
 
 ---
 

@@ -20,7 +20,7 @@ Esta licença permite:
   - Fontes open-source utilizadas;  
 - E que **qualquer obra derivada** seja partilhada sob a **mesma licença (CC BY-SA 4.0)**.
 
-**Texto legal completo:** [CC BY-SA 4.0 — Legal Code](https://creativecommons.org/licenses/by-sa/4.0/legalcode)
+**Texto legal completo:** [CC BY-SA 4.0 - Legal Code](https://creativecommons.org/licenses/by-sa/4.0/legalcode)
 
 ---
 

@@ -44,15 +44,15 @@ Um **ambiente isolado** deve garantir:
 | Tipo                    | Exemplos                  | Risco associado             | Notas                               |
 |-------------------------|---------------------------|-----------------------------|--------------------------------------|
 | Partilhado (multi-tenant)| GitHub hosted, GitLab shared | Elevado – superfície comum | Evitar em pipelines críticas         |
-| Autogerido (on-prem/cloud)| Azure DevOps agent, K8s pod | Moderado — depende do hardening | Ideal se gerido com boas práticas    |
-| Ephemeral e dedicados   | K8s jobs, ephemeral containers | Baixo — isolamento total   | Recriado por build, não partilhado   |
+| Autogerido (on-prem/cloud)| Azure DevOps agent, K8s pod | Moderado - depende do hardening | Ideal se gerido com boas práticas    |
+| Ephemeral e dedicados   | K8s jobs, ephemeral containers | Baixo - isolamento total   | Recriado por build, não partilhado   |
 
 ---
 
 ## 🛠️ Como aplicar execução isolada
 
 1. **Evitar uso de runners partilhados** para projetos críticos (L3);
-2. **Executar *containers* em ambientes efémeros** — destruídos após uso;
+2. **Executar *containers* em ambientes efémeros** - destruídos após uso;
 3. **Desativar privilégios no runtime** (`--privileged`, `--cap-add`, `--mount /var/run/docker.sock`);
 4. **Aplicar limites de recursos (`CPU`, `RAM`) e quotas**;
 5. **Validar que o utilizador de execução não tem permissões administrativas**;

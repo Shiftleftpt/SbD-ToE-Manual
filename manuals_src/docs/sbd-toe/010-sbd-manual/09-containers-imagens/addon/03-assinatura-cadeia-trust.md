@@ -85,5 +85,5 @@ A **cadeia de confiança** aplica-se à origem e uso de imagens de *containers*,
 | `achievable-maturity`              | Assinatura é critério de maturidade elevada    |
 | `25-rastreabilidade.md`         | Requisito associado à integridade do runtime   |
 
-> 🔐 A assinatura de imagens não é opcional — é o pilar técnico da confiança no código executado em *containers*.
+> 🔐 A assinatura de imagens não é opcional - é o pilar técnico da confiança no código executado em *containers*.
 

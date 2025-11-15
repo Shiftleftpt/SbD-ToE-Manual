@@ -5,7 +5,7 @@ tags: [canon, recomendacoes, maturidade, risco]
 ---
 
 
-# 🧭 Recomendações Avançadas — Gestão de Risco
+# 🧭 Recomendações Avançadas - Gestão de Risco
 
 Este anexo apresenta práticas **não obrigatórias**, mas altamente recomendadas para organizações que pretendam alcançar **níveis mais elevados de maturidade e auditabilidade** na gestão de risco aplicada ao ciclo de vida de software.
 

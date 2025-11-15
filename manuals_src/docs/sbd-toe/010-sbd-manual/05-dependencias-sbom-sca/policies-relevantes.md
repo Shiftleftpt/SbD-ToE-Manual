@@ -7,9 +7,9 @@ sidebar_position: 60
 
 ---
 
-# 🏛️ Políticas Organizacionais — Dependências, SBOM e SCA
+# 🏛️ Políticas Organizacionais - Dependências, SBOM e SCA
 
-A adoção eficaz do Capítulo 05 — Dependências, SBOM e SCA — exige a existência de **políticas organizacionais formais** que **regulem e sustentem a gestão segura de bibliotecas de terceiros, análise de composição de software e uso de SBOMs**.
+A adoção eficaz do Capítulo 05 - Dependências, SBOM e SCA - exige a existência de **políticas organizacionais formais** que **regulem e sustentem a gestão segura de bibliotecas de terceiros, análise de composição de software e uso de SBOMs**.
 
 ---
 
@@ -25,7 +25,7 @@ Estas políticas:
 
 > 🧩 Este capítulo **operacionaliza as políticas formais** de dependências e componentes externos. A política define, o capítulo executa.
 
-> 📎 A existência destas políticas é **explicitamente recomendada** por frameworks como **NIST SSDF**, **OWASP SAMM**, **SLSA** e **BSIMM**.
+> 📎 A existência destas políticas é **explicitamente recomendada** por frameworks como **NIST SSDF**, **OWASP SAMM** e **SLSA** .
 
 ---
 
@@ -39,18 +39,6 @@ Estas políticas:
 | Política de Repositórios e Registos de Origem         | ⚠️ Opcional  | CI/CD, build agents, ambientes de execução   | Lista de registries autorizados, mirrors internos, políticas de fallback e caching. |
 | Política de Justificação de Vulnerabilidades Aceites  | ✅ Sim       | Quando um CVE é aceite sem patch imediato     | Requisitos para justificar exceções, aprovação formal, revalidação periódica. |
 | Política de Atualização Contínua de Dependências      | ⚠️ Opcional  | Projetos com ciclos curtos e contínuos       | Frequência de atualização, uso de ferramentas automáticas, rastreabilidade de alterações. |
-
----
-
-## 📎 Correspondência com frameworks normativas
-
-| Framework            | Requisitos cobertos pelas políticas acima                                                                 |
-|---------------------|------------------------------------------------------------------------------------------------------------|
-| **NIST SSDF**        | PS.3 (Third-Party Components), RV.3 (Vulnerability Management), RV.5 (SBOM Generation)                     |
-| **SLSA v1.0**        | Requirements on provenance, dependency control and build integrity                                         |
-| **OWASP SAMM**       | Design > Threat Assessment, Implementation > Environment Hardening, Verification > Security Testing       |
-| **BSIMM13**          | SFD1.3 (Track open source usage), CMVM2.2 (Detect malicious packages), SE1.4 (Scan for vulnerabilities)    |
-| **CIS Controls v8**  | Control 2 (Inventory and Control of Software Assets), Control 16 (Application Software Security)           |
 
 ---
 

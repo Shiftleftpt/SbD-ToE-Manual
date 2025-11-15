@@ -1,13 +1,13 @@
 ---
 id: recomendacoes-avancadas
-title: Práticas Avançadas — Gestão de Dependências e Supply Chain
+title: Práticas Avançadas - Gestão de Dependências e Supply Chain
 description: Recomendações reforçadas para contextos críticos ou ambientes com elevada maturidade
 tags: [avancadas, maturidade, supply-chain, dependencias, sbom, sca]
 sidebar_position: 30
 
 ---
 
-# 🧠 Práticas Avançadas — Gestão de Dependências e Supply Chain
+# 🧠 Práticas Avançadas - Gestão de Dependências e Supply Chain
 
 Este anexo apresenta práticas de segurança reforçadas aplicáveis a contextos com requisitos elevados de maturidade, conformidade regulatória exigente (ex: NIS2, CRA, ISO 27001) ou aplicações críticas (ex: finanças, infraestruturas, defesa).
 

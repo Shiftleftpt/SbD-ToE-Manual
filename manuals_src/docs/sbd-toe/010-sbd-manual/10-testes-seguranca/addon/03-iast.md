@@ -24,7 +24,7 @@ Aproveitar a execução normal da aplicação para realizar testes de segurança
 
 ## 🔍 O que é IAST
 
-IAST (Interactive Application Security Testing) é uma abordagem de testes de segurança que usa **instrumentação no servidor da aplicação** para observar chamadas, fluxos e execuções em tempo real — enquanto a aplicação é usada em testes funcionais, manuais ou automáticos.
+IAST (Interactive Application Security Testing) é uma abordagem de testes de segurança que usa **instrumentação no servidor da aplicação** para observar chamadas, fluxos e execuções em tempo real - enquanto a aplicação é usada em testes funcionais, manuais ou automáticos.
 
 Permite:
 
@@ -42,11 +42,11 @@ Permite:
 1. **Selecionar ferramenta IAST compatível com o stack da aplicação**;
 2. **Instrumentar o servidor de staging com agentes IAST** (ou containers configurados);
 3. **Executar testes funcionais, manuais ou automáticos enquanto o IAST está ativo**;
-4. **Analisar os findings gerados em contexto real — por fluxo, rota, user ID**;
+4. **Analisar os findings gerados em contexto real - por fluxo, rota, user ID**;
 5. **Triar os resultados e priorizar com base na execução e impacto**;
 6. **Integrar resultados nos ciclos de melhoria contínua (ex: backlog de segurança)**.
 
-> ⚠️ IAST não substitui DAST nem SAST — atua de forma complementar para maximizar visibilidade.
+> ⚠️ IAST não substitui DAST nem SAST - atua de forma complementar para maximizar visibilidade.
 
 ---
 
@@ -64,8 +64,8 @@ Permite:
 
 | Documento                       | Relevância estratégica                      |
 |--------------------------------|---------------------------------------------|
-| Capítulo 02 — Requisitos       | Valida `REQ-203`, `REQ-307`, `REQ-404`      |
-| Capítulo 06 — Desenvolvimento  | Observa violações em tempo real             |
+| Capítulo 02 - Requisitos       | Valida `REQ-203`, `REQ-307`, `REQ-404`      |
+| Capítulo 06 - Desenvolvimento  | Observa violações em tempo real             |
 | `01-sast.md`                   | IAST observa falhas que SAST só deteta estaticamente |
 | `02-dast.md`                   | Complementa o DAST com visibilidade no backend |
 | `06-cobertura-e-priorizacao.md`| Mede cobertura por execução real            |
@@ -73,4 +73,4 @@ Permite:
 
 ---
 
-> 🧠 O IAST combina visibilidade de código com execução real — tornando os testes de segurança **mais relevantes, precisos e contextualizados**, sem dependência de falsos positivos ou suposições.
+> 🧠 O IAST combina visibilidade de código com execução real - tornando os testes de segurança **mais relevantes, precisos e contextualizados**, sem dependência de falsos positivos ou suposições.

@@ -1,5 +1,5 @@
 ---
-id: monitorizacao-resposta
+id: monitorizacao-operacoes
 title: Integração da Monitorização com Resposta a Incidentes
 sidebar_position: 5
 description: Ligação entre mecanismos de deteção e os processos de resposta operacionais e automatizados.
@@ -10,7 +10,7 @@ tags: [resposta a incidentes, IRP, SOAR, integração, playbooks]
 
 ## 🌟 Objetivo
 
-Demonstrar como a monitorização — incluindo logs, alertas e correlação de eventos — constitui um pilar essencial para a **triagem, contenção, análise forense e melhoria contínua** da capacidade de resposta a incidentes.
+Demonstrar como a monitorização - incluindo logs, alertas e correlação de eventos - constitui um pilar essencial para a **triagem, contenção, análise forense e melhoria contínua** da capacidade de resposta a incidentes.
 
 ---
 
@@ -91,4 +91,4 @@ Cada incidente ou quase-incidente deve gerar:
 * Automatizar **extração de contexto** (utilizador, IP, origem, request ID);
 * Monitorizar a **eficácia da resposta** com métricas quantitativas.
 
-> 🌟 A monitorização eficaz **reduz o tempo de deteção e acelera a resposta** — sendo um vetor essencial de resiliência operacional.
+> 🌟 A monitorização eficaz **reduz o tempo de deteção e acelera a resposta** - sendo um vetor essencial de resiliência operacional.

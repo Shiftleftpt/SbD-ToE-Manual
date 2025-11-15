@@ -4,10 +4,10 @@ title: Ameaças Mitigadas
 sidebar_position: 50
 ---
 
-# 🔐 Ameaças Mitigadas — Capítulo 03: Threat Modeling
+# 🔐 Ameaças Mitigadas - Capítulo 03: Threat Modeling
 
 Este capítulo define práticas formais para **identificar, modelar, documentar e priorizar ameaças** ao longo do ciclo de vida de software.  
-As ameaças mitigadas por este capítulo são maioritariamente de natureza **estrutural, de antecipação, visibilidade e cobertura** — e muitas não podem ser mitigadas sem threat modeling formal.
+As ameaças mitigadas por este capítulo são maioritariamente de natureza **estrutural, de antecipação, visibilidade e cobertura** - e muitas não podem ser mitigadas sem threat modeling formal.
 
 > ✅ O Threat Modeling atua como **mecanismo de antecipação e ativação de requisitos e controlos**, sendo essencial no SbD-ToE para quebrar o ciclo reativo de segurança.
 
@@ -67,6 +67,6 @@ Este capítulo permite:
 - Integrar segurança ao raciocínio de arquitetura e negócio;
 - Tornar visível o que não é coberto por scans ou automações.
 
-> ✅ Pelo menos **12 ameaças aqui mapeadas são exclusivamente mitigadas** por threat modeling estruturado — e são aquelas que **mais frequentemente passam despercebidas** em auditorias técnicas.
+> ✅ Pelo menos **12 ameaças aqui mapeadas são exclusivamente mitigadas** por threat modeling estruturado - e são aquelas que **mais frequentemente passam despercebidas** em auditorias técnicas.
 
 > 📌 O threat modeling é o **cérebro do SbD-ToE**: sem ele, os restantes controlos não sabem quando ou onde atuar.

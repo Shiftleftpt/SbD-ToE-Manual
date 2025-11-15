@@ -5,26 +5,12 @@ description: Estruturas, políticas e práticas para assegurar governação orga
 tags: [governanca, contratacao, fornecedores, excecoes, rastreabilidade, conformidade, KPIs]
 sidebar_position: 0
 ---
-import Badge from '@site/src/components/Badge';
-
-<div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.5rem', marginBottom: '1rem' }}>
-  
-  <Badge color="info">SAMM: 2 / 3</Badge>
-  <Badge color="info">BSIMM: CP1.1, SM1.3, CMVM3.3</Badge>
-  <Badge color="info">SSDF: PO.1, PO.4, GV.1</Badge>
-  <Badge color="info">SLSA: Nível 3 / 4</Badge>
-  <Badge color="info">DSOMM: 3 / 3 (Governance)</Badge>
-  <a href="./achievable-maturity" style={{ marginLeft: 'auto', fontSize: '0.9rem' }}>📄 Ver análise de maturidade</a>
-</div>
 
 :::note Capítulo Organizacional
 Este capítulo é considerado **organizacional** no modelo *Security by Design – Theory of Everything (SbD-ToE)*.  
 A sua função é **assegurar a adoção, governação e evolução sustentável** das práticas de segurança definidas nos capítulos basilares e operacionais.  
 
-Os capítulos organizacionais estabelecem a estrutura humana e processual que permite consolidar o SbD-ToE na organização, incluindo:
-- **Formação, sensibilização e capacitação contínua** (Cap. 13)  
-- **Governança, contratação e controlo executivo** (Cap. 14)  
-
+Os capítulos organizacionais estabelecem a estrutura humana e processual que permite consolidar o SbD-ToE na organização.
 Sem estes elementos, a segurança por design torna-se pontual e dependente de indivíduos, perdendo a **consistência e resiliência organizacional** necessárias à maturidade de longo prazo.
 :::
 
@@ -115,16 +101,6 @@ Este capítulo é o que **fecha o ciclo do SbD-ToE**:
 
 👉 Sem este capítulo, o SbD-ToE fica limitado à prática técnica local.  
 👉 Com ele, torna-se um **sistema de governação organizacional**, credível e sustentável.
-
----
-
-## 📚 Alinhamento com frameworks
-
-- **OWASP SAMM** → Governance & Strategy.  
-- **BSIMM** → CP1.1, SM1.3, CMVM3.3.  
-- **SSDF** → PO.1, PO.4, GV.1.  
-- **SLSA** → Nível 3 / 4 (contratos e supply chain).  
-- **DSOMM** → Governance.  
 
 ---
 

@@ -42,7 +42,7 @@ Pode incluir:
 
 1. **Preparar ambiente isolado de staging ou pré-produção**, com dados controlados;
 2. **Selecionar scanner DAST adequado ao tipo de aplicação** (web, API, mobile);
-3. **Configurar autenticação, escopo e crawling adequado**;
+3. **Configurar autenticação, âmbito e crawling adequado**;
 4. **Executar scans regulares por versão ou por release**;
 5. **Rever findings manualmente antes de acionar ações de correção**;
 6. **Integrar resultados no backlog, com rastreabilidade por artefacto ou release**.
@@ -57,7 +57,7 @@ Pode incluir:
 - Usar dados fictícios ou mascarados;
 - Evitar testes destrutivos em ambientes partilhados;
 - Configurar tempos de espera, autenticação multi-utilizador e fallback de sessão;
-- Revisar escopos de scan após mudanças de arquitetura ou rotas;
+- Revisar âmbitos de scan após mudanças de arquitetura ou rotas;
 - Incluir APIs e pontos de integração externos.
 
 ---
@@ -66,8 +66,8 @@ Pode incluir:
 
 | Documento                       | Relevância estratégica                     |
 |--------------------------------|--------------------------------------------|
-| Capítulo 02 — Requisitos       | Valida `REQ-208`, `REQ-310`, `REQ-405`     |
-| Capítulo 07 — CI/CD Seguro     | Integração com pipelines paralelos         |
+| Capítulo 02 - Requisitos       | Valida `REQ-208`, `REQ-310`, `REQ-405`     |
+| Capítulo 07 - CI/CD Seguro     | Integração com pipelines paralelos         |
 | `04-fuzzing.md`                | Complementa validação dinâmica com aleatoriedade |
 | `06-cobertura-e-priorizacao.md`| Define criticidade de endpoints a testar   |
 | `08-gestao-findings.md`        | Gestão dos resultados e follow-up          |

@@ -68,7 +68,7 @@ Cada biblioteca deve poder ser rastreada até uma decisão de aprovação. Suger
 
 ---
 
-## 🔒 Referências cruzadas
+## 📎 Referências cruzadas
 
 | Documento                   | Relação com a governaça                            |
 |-----------------------------|---------------------------------------------------------|

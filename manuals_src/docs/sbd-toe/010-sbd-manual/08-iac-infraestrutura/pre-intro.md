@@ -1,19 +1,17 @@
 ---
 id: pre-intro
-title: Rationale — Catálogo de Requisitos de IaC
+title: Fundamentação
 description: Porque este capítulo é excecional, que fontes suportam o catálogo IAC-XXX e como criar/adaptar o catálogo organizacional
 tags: [iac, rationale, requisitos, catálogo, segurança, pipelines, terraform, kubernetes, cloud]
 sidebar_position: -1
 ---
 
-
-
-# 📑 Rationale — Catálogo de Requisitos de IaC
+# 📑 Rationale - Catálogo de Requisitos de IaC
 
 ## 🧠 Porque este capítulo é **excecional**
 
 Este capítulo é diferente dos restantes.  
-Enquanto o **Cap. 02 — Requisitos de Segurança** define uma base comum aplicável a qualquer software, aqui apresentamos um **catálogo técnico especializado (`IAC-XXX`)** que cobre riscos e controlos específicos da **Infraestrutura como Código (IaC)**.  
+Enquanto o **Cap. 02 - Requisitos de Segurança** define uma base comum aplicável a qualquer software, aqui apresentamos um **catálogo técnico especializado (`IAC-XXX`)** que cobre riscos e controlos específicos da **Infraestrutura como Código (IaC)**.  
 
 Falamos de aspetos como:  
 - integridade do estado,  
@@ -70,7 +68,7 @@ Entre elas:
 
 ---
 
-## 🧩 Relação com o Cap. 02 — Requisitos de Segurança
+## 🧩 Relação com o Cap. 02 - Requisitos de Segurança
 
 - Os requisitos `IAC-XXX` **complementam** os `SEC-XXX` do Cap. 02.  
 - Sempre que possível, estabelecemos rastreabilidade direta:  

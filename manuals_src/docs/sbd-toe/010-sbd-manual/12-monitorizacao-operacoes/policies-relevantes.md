@@ -6,15 +6,15 @@ tags: [policy, organizacional, monitorizacao, deteccao, resposta, operacoes]
 ---
 
 
-# 🏛️ Políticas Organizacionais — Monitorização e Operações
+# 🏛️ Políticas Organizacionais - Monitorização e Operações
 
-A adoção eficaz do **Capítulo 12 — Monitorização e Operações** exige a existência de **políticas organizacionais formais** que regulem e sustentem a **deteção, correlação e resposta a eventos de segurança em tempo real**.
+A adoção eficaz do **Capítulo 12 - Monitorização e Operações** exige a existência de **políticas organizacionais formais** que regulem e sustentem a **deteção, correlação e resposta a eventos de segurança em tempo real**.
 
 ---
 
 ## 📌 Nota fundamental
 
-> ⚠️ As práticas descritas neste capítulo — logging estruturado, regras de alerta, correlação de eventos, integração com IRP, medição de MTTD/MTTR — **devem ser sustentadas por políticas organizacionais claras, auditáveis e aplicáveis a todos os ambientes operacionais**.
+> ⚠️ As práticas descritas neste capítulo - logging estruturado, regras de alerta, correlação de eventos, integração com IRP, medição de MTTD/MTTR - **devem ser sustentadas por políticas organizacionais claras, auditáveis e aplicáveis a todos os ambientes operacionais**.
 
 Estas políticas:
 
@@ -35,18 +35,6 @@ Estas políticas:
 | Política de Retenção e Acesso a Registos         | ✅ Sim        | Todos os logs de segurança e operação      | Retenção ≥30 dias, ACL, cifragem, registo de acessos.                          |
 | Política de Resposta a Incidentes Operacionais   | ✅ Sim        | Todos os domínios com deteção ativa        | Canais de resposta, playbooks, reporte, owners de domínio.                     |
 | Política de Cobertura de Agentes e Instrumentação| ⚠️ Opcional  | Infraestrutura, cloud, endpoints           | Tipos de agentes obrigatórios, cobertura mínima, manutenção de visibilidade.   |
-
----
-
-## 📎 Correspondência com Frameworks Normativas
-
-| Framework            | Requisitos cobertos pelas políticas acima                                                             |
-|---------------------|--------------------------------------------------------------------------------------------------------|
-| **NIST SSDF**        | RV.1.2, RV.3.3, RV.4.1 — Logging estruturado, deteção ativa, resposta coordenada                      |
-| **CIS Controls v8**  | Control 8 (Audit Log Management), Control 17 (Incident Response), Control 6 (Access Control)           |
-| **OWASP SAMM**       | Operations > Incident Management; Deployment > Environment Management                                 |
-| **BSIMM13**          | SE3.2 (Security Events), IR1 (Incident Response), TCM1 (Deteção e mitigação de ataques)               |
-| **ENISA DevSecOps**  | Logging, observabilidade, deteção de anomalias, governação contínua                                   |
 
 ---
 
@@ -71,4 +59,4 @@ Cada política organizacional deve conter:
 - Devem ser **refletidas nas práticas de CI/CD, em ambientes de produção e nos requisitos de release**;
 - Devem ser **validadas por auditorias internas e suportadas por evidência contínua (dashboards, alertas testados, logs visíveis)**.
 
-> 📌 Políticas bem definidas são a base para **observabilidade e reação operacionais eficazes** — sem elas, mesmo os sistemas mais instrumentados ficam vulneráveis a falhas silenciosas.
+> 📌 Políticas bem definidas são a base para **observabilidade e reação operacionais eficazes** - sem elas, mesmo os sistemas mais instrumentados ficam vulneráveis a falhas silenciosas.

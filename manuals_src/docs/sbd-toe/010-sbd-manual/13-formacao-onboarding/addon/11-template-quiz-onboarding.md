@@ -78,4 +78,4 @@ Pode ser adaptado por perfil, nível de risco ou capítulo do manual SbD-ToE, se
 
 ---
 
-> 🎯 Este template pode ser duplicado e adaptado por capítulo, função ou criticidade — garantindo rastreabilidade e alinhamento com o manual SbD-ToE.
+> 🎯 Este template pode ser duplicado e adaptado por capítulo, função ou criticidade - garantindo rastreabilidade e alinhamento com o manual SbD-ToE.

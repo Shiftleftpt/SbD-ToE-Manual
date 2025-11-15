@@ -1,15 +1,15 @@
 ---
 id: checklist-revisao
-title: ✅ Checklist SbD-ToE — Governança e Contratação
+title: ✅ Checklist SbD-ToE - Governança e Contratação
 sidebar_position: 20
 description: Checklist binário de controlo da aplicação das práticas de governação por projeto
 tags: [checklist, revisao, controlo, projeto, excecoes, aprovacao, contratacao]
 ---
 
 
-# ✅ Checklist de Revisão Periódica — Governança e Contratação
+# ✅ Checklist de Revisão Periódica - Governança e Contratação
 
-Este checklist aplica-se a **projetos, aplicações ou contratos** com impacto técnico e visa validar a aplicação prática das práticas prescritas no Capítulo 14 — Governança e Contratação.
+Este checklist aplica-se a **projetos, aplicações ou contratos** com impacto técnico e visa validar a aplicação prática das práticas prescritas no Capítulo 14 - Governança e Contratação.
 
 > 📌 Deve ser usado em revisões formais, auditorias internas, milestones de projeto ou ciclos de revalidação técnica.
 
@@ -44,7 +44,7 @@ Este checklist aplica-se a **projetos, aplicações ou contratos** com impacto t
 
 ## 🎯 Conformidade e Indicadores
 
-- A validação positiva deste checklist permite declarar **conformidade com o Capítulo 14 — Governança e Contratação**.
+- A validação positiva deste checklist permite declarar **conformidade com o Capítulo 14 - Governança e Contratação**.
 - Os resultados podem ser integrados em **dashboards, ciclos de auditoria e métricas de maturidade**.
 - Permite derivar **KPIs objetivos** como:
   - % de aplicações com exceções formalmente aprovadas;
@@ -56,12 +56,12 @@ Este checklist aplica-se a **projetos, aplicações ou contratos** com impacto t
 
 ## 🔗 Ligações cruzadas
 
-- **Cap. 01** — Classificação de risco (base para aplicação proporcional)
-- **Cap. 02** — Requisitos de segurança (alvo de exceções, rastreabilidade)
-- **Cap. 05** — Dependências e SBOM (cláusulas e validações contratuais)
-- **Cap. 10** — Testes de segurança (validação prática de controlos)
-- **Cap. 13** — Formação (validação obrigatória de funções críticas)
-- **Cap. 14.08** — Governação Integral
-- **Cap. 14.09** — Controlo Consolidado das Práticas SbD-ToE
+- **Cap. 01** - Classificação de risco (base para aplicação proporcional)
+- **Cap. 02** - Requisitos de segurança (alvo de exceções, rastreabilidade)
+- **Cap. 05** - Dependências e SBOM (cláusulas e validações contratuais)
+- **Cap. 10** - Testes de segurança (validação prática de controlos)
+- **Cap. 13** - Formação (validação obrigatória de funções críticas)
+- **Cap. 14.08** - Governação Integral
+- **Cap. 14.09** - Controlo Consolidado das Práticas SbD-ToE
 
 > ✅ Este checklist é um mecanismo central de controlo contínuo, proporcional e rastreável da adoção do modelo SbD-ToE em contextos reais de governação e contratação.

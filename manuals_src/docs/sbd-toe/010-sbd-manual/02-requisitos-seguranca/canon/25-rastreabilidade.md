@@ -1,12 +1,12 @@
 ---
 id: rastreabilidade
-title: Rastreabilidade Normativa — Requisitos de Segurança
-description: Correspondência entre as práticas de requisitos e frameworks como SSDF, SAMM, ISO, BSIMM, DSOMM
-tags: [rastreabilidade, frameworks, SSDF, SAMM, DSOMM, BSIMM, ISO]
+title: Rastreabilidade Normativa - Requisitos de Segurança
+description: Correspondência entre as práticas de requisitos e frameworks como SSDF, SAMM, ISO, DSOMM
+tags: [rastreabilidade, frameworks, SSDF, SAMM, DSOMM, ISO]
 sidebar_position: 25
 ---
 
-# 📎 Rastreabilidade contra Frameworks — Capítulo 02: Requisitos de Segurança
+# 📎 Rastreabilidade contra Frameworks - Capítulo 02: Requisitos de Segurança
 
 Este ficheiro estabelece a **rastreabilidade entre as práticas de definição, validação e gestão de requisitos de segurança** descritas neste capítulo e os principais frameworks de segurança aplicacional.
 
@@ -35,9 +35,9 @@ Este ficheiro estabelece a **rastreabilidade entre as práticas de definição, 
 
 Cobertura total dos objetivos **PW.1** (definição sistemática de requisitos por risco) e **PW.4** (validação técnica e formal), suportada por:
 
-- [Catálogo de Requisitos](./addon/catalogo-requisitos)
-- [Matriz por Risco](./addon/matriz-controlos-por-risco)
-- [Validação Testável](./addon/validacao-requisitos)
+- [Catálogo de Requisitos](../addon/catalogo-requisitos)
+- [Matriz por Risco](../addon/matriz-controlos-por-risco)
+- [Validação Testável](../addon/validacao-requisitos)
 
 ---
 
@@ -101,16 +101,16 @@ As práticas incluem:
 
 ---
 
-### ⚙️ OWASP DSOMM — Domínio "Design & Development"
+### ⚙️ OWASP DSOMM - Domínio "Design & Development"
 
 O capítulo suporta parcialmente os objetivos de maturidade definidos no domínio **Design & Development** do DSOMM:
 
 | Subdomínio DSOMM         | Estado no Capítulo 02                                 |
 |--------------------------|-------------------------------------------------------|
-| Security Requirements    | ✅ Completamente coberto — catálogo, validação, tags   |
-| Reusable Controls        | ⚠️ Parcial — matriz por risco, taxonomia, exceções     |
-| Design Guidelines        | ⚠️ Parcial — refletidas no conteúdo dos requisitos     |
-| Policy as Code           | 🔄 Opcional — abordado em `30-recomendacoes-avancadas` |
+| Security Requirements    | ✅ Completamente coberto - catálogo, validação, tags   |
+| Reusable Controls        | ⚠️ Parcial - matriz por risco, taxonomia, exceções     |
+| Design Guidelines        | ⚠️ Parcial - refletidas no conteúdo dos requisitos     |
+| Policy as Code           | 🔄 Opcional - abordado em `30-recomendacoes-avancadas` |
 
 > 📌 O capítulo permite atingir **maturidade intermédia (nível 2–3)** no DSOMM, se complementado com políticas formais e práticas de rastreabilidade reforçadas.
 
@@ -120,11 +120,11 @@ O capítulo suporta parcialmente os objetivos de maturidade definidos no domíni
 
 Este capítulo depende diretamente de:
 
-- **Capítulo 01** — define a proporcionalidade por risco (L1–L3);
-- **Capítulo 03** — modelo de ameaças origina requisitos;
-- **Capítulo 04** — requisitos especializados por arquitetura;
-- **Capítulo 10** — reforça a maturidade atingida pelas práticas aqui definidas;
-- **Capítulos 13 e 14** — permitem governação contínua e exceções rastreáveis.
+- **Capítulo 01** - define a proporcionalidade por risco (L1–L3);
+- **Capítulo 03** - modelo de ameaças origina requisitos;
+- **Capítulo 04** - requisitos especializados por arquitetura;
+- **Capítulo 10** - reforça a maturidade atingida pelas práticas aqui definidas;
+- **Capítulos 13 e 14** - permitem governação contínua e exceções rastreáveis.
 
 > ✅ Esta rastreabilidade demonstra que o Capítulo 02 fornece **a espinha dorsal normativa da segurança aplicacional**, traduzindo requisitos normativos em práticas rastreáveis e validadas ao longo do ciclo de vida.
 

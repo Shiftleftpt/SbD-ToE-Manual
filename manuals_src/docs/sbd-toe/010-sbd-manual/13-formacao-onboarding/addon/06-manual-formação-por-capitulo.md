@@ -17,7 +17,7 @@ Este documento serve de base para:
 - **Onboarding técnico estruturado**
 - Planos de **retenção e rotação de conhecimento**
 
-> 📌 Alinhado com o Capítulo 01 — Gestão de Risco, a aplicação proporcional por nível de risco deve modular a profundidade dos conteúdos.
+> 📌 Alinhado com o Capítulo 01 - Gestão de Risco, a aplicação proporcional por nível de risco deve modular a profundidade dos conteúdos.
 
 ---
 
@@ -67,7 +67,7 @@ Este documento serve de base para:
 | Tópico                                    | Formato recomendado                   |
 |-------------------------------------------|----------------------------------------|
 | Pipelines CI/CD com segurança             | Oficina de stages com scanners         |
-| Gestão de segredos                        | Lab com Vault e escopos                |
+| Gestão de segredos                        | Lab com Vault e âmbitos                |
 | Hardening de imagens                      | PR review + análise com Trivy          |
 | Scanners de IaC e validação               | Hands-on com Checkov/TFSec             |
 | Deploy com rollback e feature flags       | Simulação de rollout                   |

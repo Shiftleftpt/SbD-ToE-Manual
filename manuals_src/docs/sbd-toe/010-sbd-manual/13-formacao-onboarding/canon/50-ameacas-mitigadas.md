@@ -1,13 +1,13 @@
 ---
 id: ameacas-mitigadas
-title: Ameaças Mitigadas — Formação e Onboarding Seguro
+title: Ameaças Mitigadas - Formação e Onboarding Seguro
 description: Ameaças mitigadas pela aplicação sistemática das práticas de capacitação, onboarding e cultura técnica segura.
 tags: [ameacas, mitigacao, osc&r, cultura, onboarding, terceiros, segurança humana]
 sidebar_position: 50
 ---
 
 
-# 🔐 Ameaças Mitigadas — Capítulo 13: Formação e Onboarding Seguro
+# 🔐 Ameaças Mitigadas - Capítulo 13: Formação e Onboarding Seguro
 
 Este capítulo estabelece práticas para garantir que todas as pessoas com impacto direto ou indireto na segurança estão preparadas para agir corretamente.  
 Define requisitos de **formação por perfil**, **onboarding técnico rastreável**, **validação de conhecimento** e **programas de cultura ativa** (ex: Security Champions).
@@ -20,7 +20,7 @@ Define requisitos de **formação por perfil**, **onboarding técnico rastreáve
 
 | Ameaça                                           | Fonte                                                                 | Como surge                                                                 | Como a prática mitiga                                                                  | Controlos associados                              |
 |--------------------------------------------------|------------------------------------------------------------------------|------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------|----------------------------------------------------|
-| Configuração insegura por desconhecimento        | CAPEC-118, CWE-693, BSIMM T1.1                                        | Programadores aplicam defaults ou padrões inseguros sem consciência do risco | Formação obrigatória por função com contextualização dos riscos reais                  | `addon/01-catalogo-formativo.md`, `addon/02-trilho-formativo.md` |
+| Configuração insegura por desconhecimento        | CAPEC-118, CWE-693,  T1.1                                        | Programadores aplicam defaults ou padrões inseguros sem consciência do risco | Formação obrigatória por função com contextualização dos riscos reais                  | `addon/01-catalogo-formativo.md`, `addon/02-trilho-formativo.md` |
 | Reutilização indevida de segredos ou tokens      | CAPEC-137, OSC&R (Credential Management), CWE-798                     | Falta de noção sobre a gestão correta de credenciais e tokens               | Labs e exemplos práticos de uso seguro, quizzes de validação, clinics com AppSec        | `addon/04-tecnicas-formativas.md`, `addon/06-manual-formacao-por-capitulo.md` |
 
 ---

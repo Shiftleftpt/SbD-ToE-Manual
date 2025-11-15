@@ -1,10 +1,10 @@
 00. Gestão segura de código fonte	✔️	SSDF PW.4, SLSA Source, OWASP CI/CD 1
 01. Design seguro dos pipelines	✔️	SSDF PW.5, OWASP CI/CD 1, SAMM
-02. Segurança do código dentro do pipeline	✔️	SSDF PS.3, BSIMM SE1, AppSec Pipeline
+02. Segurança do código dentro do pipeline	✔️	SSDF PS.3,  SE1, AppSec Pipeline
 03. Gestão e injeção de segredos	✔️	SSDF PW.6, OWASP CI/CD 2
 04. Isolamento e proteção de runners	✔️	SLSA Build Isolation, OSC&R, SAMM
 05. Integridade e proveniência de artefactos	✔️	SLSA Provenance, SSDF PW.7, Sigstore
 06. Políticas e gates por nível	✔️	SSDF GV.x, OWASP CI/CD 6, SAMM Governance
-07. Validações de segurança integradas (SAST, DAST, etc)	✔️	SSDF RV.3, SAMM Verification, BSIMM CR3
+07. Validações de segurança integradas (SAST, DAST, etc)	✔️	SSDF RV.3, SAMM Verification,  CR3
 08. Rastreabilidade de assinaturas e deploys	✔️	SLSA, SSDF RV.3, OWASP CI/CD 7
-09. Controlo de exceções e visibilidade organizacional	✔️	SSDF GV.3, OWASP CI/CD 8, BSIMM SM1.3
+09. Controlo de exceções e visibilidade organizacional	✔️	SSDF GV.3, OWASP CI/CD 8,  SM1.3

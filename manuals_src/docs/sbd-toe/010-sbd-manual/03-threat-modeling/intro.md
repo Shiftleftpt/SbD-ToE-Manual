@@ -1,37 +1,20 @@
 ---
 id: intro
-title: 📘 Capítulo 3 — Threat Modeling
+title: 📘 Capítulo 3 - Threat Modeling
 description: Identificação e mitigação estruturada de ameaças durante o ciclo de desenvolvimento
-tags: [threat-modeling, stride, requisitos, mitigação, risco, arquitetura, SAMM, BSIMM, SSDF, SLSA, DSOMM]
+tags: [threat-modeling, stride, requisitos, mitigação, risco, arquitetura, SAMM, SSDF, SLSA, DSOMM]
 ---
-import Badge from '@site/src/components/Badge';
 
-<div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.5rem', marginBottom: '1rem' }}>
-  
-  <Badge color="info">SAMM: 2 / 3</Badge>
-  <Badge color="info">BSIMM: AA1.1, AA1.2, AA2.1</Badge>
-  <Badge color="info">SSDF: PW.3, RV.1</Badge>
-  <Badge color="info">SLSA: Nível 1 / 4</Badge>
-  <Badge color="info">DSOMM: 2 / 3 (média)</Badge>
-  <a href="./achievable-maturity" style={{ marginLeft: 'auto', fontSize: '0.9rem' }}>📄 Ver análise de maturidade</a>
-</div>
 
 :::caution Capítulo Basilar
 Este capítulo é considerado **basilar** no modelo *Security by Design – Theory of Everything (SbD-ToE)*.  
 A sua aplicação é **obrigatória** para garantir a coerência, rastreabilidade e eficácia das restantes práticas de segurança.  
 
-Os capítulos basilares constituem a **fundação técnica e metodológica** do modelo, cobrindo:
-- **Classificação de risco e proporcionalidade** (Cap. 01)  
-- **Definição estruturada de requisitos de segurança** (Cap. 02)  
-- **Modelação de ameaças e priorização de controlos** (Cap. 03)  
-- **Desenho e validação de arquitetura segura** (Cap. 04)  
-- **Implementação disciplinada e revisão de código seguro** (Cap. 06)  
-
-A ausência ou aplicação parcial de qualquer um destes compromete a **integridade global** do SbD-ToE, tornando inviável a adoção coerente das práticas operacionais e de governação.
+Os capítulos basilares constituem a **fundação técnica e metodológica** do modelo, a ausência ou aplicação parcial de qualquer um destes compromete a **integridade global** do SbD-ToE, tornando inviável a adoção coerente das práticas operacionais e de governação.
 :::
 
 
-# 📘 Capítulo 3 — Threat Modeling
+# 📘 Capítulo 3 - Threat Modeling
 
 ## 1. 🧭 O que cobre tecnicamente
 
@@ -63,7 +46,7 @@ Este capítulo cobre:
 - Criar diagramas de fluxo de dados (DFDs) com trust boundaries
 - Associar cada ameaça a um controlo e plano de mitigação
 - Documentar decisões, ações futuras e justificar riscos aceites
-- Assegurar que o modelo se baseia em artefactos arquiteturais definidos (ver Capítulo 4)
+- Assegurar que o modelo se baseia em artefactos de arquitetura definidos (ver Capítulo 4)
 - Validar modelos de ameaça como parte da revisão de arquitetura formal
 - Integrar threat modeling com ferramentas automatizadas quando disponível
 - Garantir rastreabilidade entre ameaça identificada, requisito gerado e controlo aplicado
@@ -94,13 +77,7 @@ Este capítulo cobre:
 
 ---
 
-## 3. 🧭 Mapeamento para frameworks de maturidade
-
-Ver [Maturidade](maturidade) para alinhamento detalhado com SAMM, BSIMM, SSDF e SLSA.
-
----
-
-## 4. ⚠️ Caveats ou limitações da prescrição
+## 3. ⚠️ Caveats ou limitações da prescrição
 
 - Sessões mal facilitadas podem ser vagas ou não acionáveis
 - Documentação dispersa pode dificultar reutilização
@@ -111,8 +88,8 @@ Ver [Maturidade](maturidade) para alinhamento detalhado com SAMM, BSIMM, SSDF e 
 
 ## 5. 💡 Exemplos de aplicação
 
-- Ver [exemplo de aplicação de requisitos por nivel](/sbd-toe/sbd-manual/requisitos-seguranca/addon/exemplos-aplicacao)
-- Ver [exemplo de aplicação de privacidade](/sbd-toe/sbd-manual/threat-modeling/addon/exemplo-privacidade)
+- Ver [exemplo de aplicação de requisitos por nivel](exemplos-aplicacao-stride)
+- Ver [exemplo de aplicação de privacidade](exemplo-privacidade-lindunn)
 - Ver [exemplo uso de ferramentas, e.g., IriusRisk](/sbd-toe/sbd-manual/threat-modeling/addon/integracao-iriusrisk)
 
 ---

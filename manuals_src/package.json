@@ -35,7 +35,10 @@
   },
   "overrides": {
     "react": "18.3.1",
-    "react-dom": "18.3.1"
+    "react-dom": "18.3.1",
+    "@docsearch/react": "^3.6.1",
+    "@docsearch/css": "^3.6.1",
+    "@docsearch/core": "^3.6.1"
   },
   "browserslist": {
     "production": [">0.5%", "not dead", "not op_mini all"],

@@ -1,0 +1,71 @@
+name: CodeQL Security Scanning
+
+# IMPORTANT: This workflow requires GitHub's "default setup" to be DISABLED.
+# To use this custom CodeQL workflow:
+# 1. Go to Settings → Code security → Code scanning
+# 2. If "Default setup" is enabled, click "Configure" and select "Disable default setup"
+# 3. This workflow will then run automatically on PRs and pushes to master
+
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+  schedule:
+    # Run at 03:00 UTC every Monday
+    - cron: '0 3 * * 1'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  analyze:
+    name: Analyze code security
+    runs-on: ubuntu-latest
+    timeout-minutes: 360
+    permissions:
+      # Required for all workflows
+      security-events: write
+      # Required to fetch internal or private CodeQL packs
+      packages: read
+      # Only required for workflows in private repositories
+      actions: read
+      contents: read
+
+    strategy:
+      fail-fast: false
+      matrix:
+        # CodeQL supports: 'cpp', 'csharp', 'go', 'java', 'javascript', 'python', 'ruby', 'swift'
+        # This project uses JavaScript/TypeScript for Docusaurus
+        language: [ 'javascript' ]
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v5
+
+      - name: Initialize CodeQL
+        uses: github/codeql-action/init@v4
+        with:
+          languages: ${{ matrix.language }}
+          # Query suites: 'default', 'security-extended', 'security-and-quality'
+          queries: security-and-quality
+          # Build mode: 'none', 'autobuild', 'manual'
+          # For JavaScript, 'none' is appropriate (no compilation needed)
+          build-mode: none
+
+      # If manual build mode is needed, uncomment and configure:
+      # - name: Build project
+      #   run: |
+      #     cd manuals_src
+      #     npm ci
+      #     npm run build
+
+      - name: Perform CodeQL Analysis
+        uses: github/codeql-action/analyze@v4
+        with:
+          category: "/language:${{matrix.language}}"
+          # Upload results to GitHub Security tab
+          upload: true
+          # Optionally fail the build on high/critical issues
+          # fail-on: high,critical

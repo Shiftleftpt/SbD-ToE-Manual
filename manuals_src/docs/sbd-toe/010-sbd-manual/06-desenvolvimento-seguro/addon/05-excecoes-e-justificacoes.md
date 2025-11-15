@@ -9,9 +9,9 @@ tags: [exceções, validação, rastreabilidade, segurança, risco]
 # 📝 Justificação Formal de Exceções
 
 > 💡 **Nota prática**:  
-> Em qualquer equipa ou projeto, haverá situações onde **nem todas as práticas recomendadas podem ser cumpridas** — por motivos técnicos, contextuais ou de legado.  
+> Em qualquer equipa ou projeto, haverá situações onde **nem todas as práticas recomendadas podem ser cumpridas** - por motivos técnicos, contextuais ou de legado.  
 > Ferramentas como **Kiuwan**, **SonarQube**, **Xygeni**, **Checkmarx** ou **Semgrep** já permitem registar exceções diretamente no relatório de findings, usando mecanismos como `mute`, `waive`, `false positive accepted`, ou comentários inline com anotação.  
-> Estas marcações são úteis, mas **não dispensam uma política clara de aprovação, justificação e rastreabilidade** — que deve ser transversal ao pipeline e ao repositório.
+> Estas marcações são úteis, mas **não dispensam uma política clara de aprovação, justificação e rastreabilidade** - que deve ser transversal ao pipeline e ao repositório.
 
 ---
 

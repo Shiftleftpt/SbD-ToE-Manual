@@ -9,7 +9,7 @@ tags: [iriusrisk, integração, ameaças, requisitos, rastreabilidade, capitulo2
 
 ## 🌟 Objetivo
 
-Demonstrar como aplicar os princípios normativos deste capítulo utilizando **plataformas automatizadas de Threat Modeling**, como o **IriusRisk**, substituindo os ficheiros manuais e mantendo a rastreabilidade com os requisitos definidos no **Capítulo 2 — Requisitos de Segurança**.
+Demonstrar como aplicar os princípios normativos deste capítulo utilizando **plataformas automatizadas de Threat Modeling**, como o **IriusRisk**, substituindo os ficheiros manuais e mantendo a rastreabilidade com os requisitos definidos no **Capítulo 2 - Requisitos de Segurança**.
 
 Esta integração visa:
 
@@ -31,7 +31,7 @@ Esta integração visa:
 
 ---
 
-## 🔗 Ligação com o Capítulo 2 — Requisitos de Segurança
+## 🔗 Ligação com o Capítulo 2 - Requisitos de Segurança
 
 Para manter consistência e rastreabilidade, os requisitos definidos no IriusRisk devem:
 
@@ -124,4 +124,4 @@ cat threats.json | jq '.[] | select(.criticality == "High")' |
 
 ---
 
-> A adoção de ferramentas como IriusRisk deve ser acompanhada de processos que garantam coerência com a taxonomia e requisitos de segurança definidos no manual SbD-ToE. A ferramenta **não substitui** a responsabilidade pela rastreabilidade — apenas a sistematiza e automatiza.
+> A adoção de ferramentas como IriusRisk deve ser acompanhada de processos que garantam coerência com a taxonomia e requisitos de segurança definidos no manual SbD-ToE. A ferramenta **não substitui** a responsabilidade pela rastreabilidade - apenas a sistematiza e automatiza.

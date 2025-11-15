@@ -15,7 +15,7 @@ A classificação de criticidade aplicacional proposta neste capítulo segue uma
 
 Porquê? Porque nem sempre há um alinhamento entre a **capilaridade exigida por GRC** e a **natureza prática dos sistemas de software em desenvolvimento**. Em muitos casos, o modelo organizacional de risco é demasiado genérico ou complexo para apoiar decisões ágeis no contexto das equipas de desenvolvimento.
 
-> Esta proposta, compatível com o conceito de *risk categorization*, está totalmente alinhada com o domínio **Risk Management** do **OWASP SAMM**, com os princípios de **DSOMM**, **BSIMM**, **SSDF (RM.1)**, **ISO 27005** e **SLSA**, assegurando integração com modelos de maturidade amplamente aceites.
+> Esta proposta, compatível com o conceito de *risk categorization*, está totalmente alinhada com o domínio **Risk Management** do **OWASP SAMM**, com os princípios de **DSOMM**, **SSDF (RM.1)**, **ISO 27005** e **SLSA**, assegurando integração com modelos de maturidade amplamente aceites.
 
 Importa sublinhar: **esta abordagem não substitui métodos formais** de análise de risco (como ISO 27005, NIST 800-30 ou FAIR). O objetivo é garantir que **todas as aplicações recebem, desde o início, uma decisão clara e justificável sobre o seu nível de risco**, evitando dois cenários frequentes:
 
@@ -24,7 +24,7 @@ Importa sublinhar: **esta abordagem não substitui métodos formais** de anális
 
 Esta classificação inicial permite aplicar práticas de segurança com **proporcionalidade, rastreabilidade e foco na ação concreta**.
 
-Quando existam **artefactos organizacionais previamente definidos** — como BIA (Business Impact Analysis), DRP (Disaster Recovery Plan), BCP (Business Continuity Plan) ou outras formas de categorização — **estes podem (e devem) ser aproveitados como base factual para a classificação**. Mesmo que não sejam exatos, oferecem uma referência válida e suficiente, conforme descrito no [Alternativa - adoção de DRP, BIA ou outras Classificações Existentes](/sbd-toe/sbd-manual/classificacao-aplicacoes/addon/adopcao-drp-bia).
+Quando existam **artefactos organizacionais previamente definidos** - como BIA (Business Impact Analysis), DRP (Disaster Recovery Plan), BCP (Business Continuity Plan) ou outras formas de categorização - **estes podem (e devem) ser aproveitados como base factual para a classificação**. Mesmo que não sejam exatos, oferecem uma referência válida e suficiente, conforme descrito no [Alternativa - adoção de DRP, BIA ou outras Classificações Existentes](/sbd-toe/sbd-manual/classificacao-aplicacoes/addon/adopcao-drp-bia).
 
 ## 🎯 Modelo proposto: simples, participativo e pragmático
 
@@ -36,9 +36,9 @@ Este manual propõe um modelo de classificação **empírico e simplificado**, i
 
 Este modelo é influenciado por abordagens amplamente reconhecidas:
 
-- **OWASP SAMM** — domínio *Threat Assessment*, especialmente a atividade A.2 (Assess Risk);
-- **OWASP Risk Rating Methodology** — baseada em impacto e probabilidade;
-- **NIST 800-30** e **ISO 27005** — que sustentam metodologias formais de análise de risco.
+- **OWASP SAMM** - domínio *Threat Assessment*, especialmente a atividade A.2 (Assess Risk);
+- **OWASP Risk Rating Methodology** - baseada em impacto e probabilidade;
+- **NIST 800-30** e **ISO 27005** - que sustentam metodologias formais de análise de risco.
 
 Contudo, assume-se aqui uma abordagem **mais acessível e pragmática**, que privilegia:
 

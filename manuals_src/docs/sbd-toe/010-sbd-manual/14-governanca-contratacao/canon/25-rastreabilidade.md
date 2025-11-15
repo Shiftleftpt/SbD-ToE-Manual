@@ -7,9 +7,9 @@ tags: [rastreabilidade, frameworks, conformidade, exceções, contratos, fornece
 ---
 
 
-# 📎 Rastreabilidade contra Frameworks — Capítulo 14: Governança e Contratação Segura
+# 📎 Rastreabilidade contra Frameworks - Capítulo 14: Governança e Contratação Segura
 
-Este documento estabelece a **rastreabilidade top-down entre os requisitos dos principais frameworks e normas de segurança** e as práticas prescritas no Capítulo 14 — Governança e Contratação.
+Este documento estabelece a **rastreabilidade top-down entre os requisitos dos principais frameworks e normas de segurança** e as práticas prescritas no Capítulo 14 - Governança e Contratação.
 
 > 📌 Esta rastreabilidade permite demonstrar que as práticas de validação de exceções, cláusulas contratuais, ownership formal, onboarding de terceiros e rastreabilidade organizacional descritas neste capítulo **respondem de forma sistemática e completa às exigências técnicas e normativas reconhecidas**.
 
@@ -24,7 +24,7 @@ Este documento estabelece a **rastreabilidade top-down entre os requisitos dos p
 | **BSIMM13**         | SM1–SM3 / CP1                                 | Governação, exceções, ações corretivas                      | ✅ Nível 2 |
 | **ISO/IEC 27001**   | A.5.1 / A.15.1–15.2                           | Cláusulas contratuais, políticas de segurança               | ✅ Completo |
 | **CIS v8**          | 15.1 / 15.6 / 17.1                            | Política de terceiros, rastreabilidade, auditoria           | ✅ Completo |
-| **ENISA**           | Supply Chain / DevSecOps — Governance Layer  | Validação de fornecedores, exceções auditáveis              | ✅ Completo |
+| **ENISA**           | Supply Chain / DevSecOps - Governance Layer  | Validação de fornecedores, exceções auditáveis              | ✅ Completo |
 | **OWASP DSOMM**     | Governance / Third-Party / Verification / Policies & Standards | Owners, onboarding, auditoria contínua, exceções formalizadas | ✅ 4–5/5   |
 
 ---
@@ -99,10 +99,10 @@ O Capítulo 14 responde aos seguintes domínios do OWASP DSOMM:
 
 Este capítulo é transversal e complementa todos os outros:
 
-- **Capítulo 01** — aplica critérios de risco para decisões de exceção;
-- **Capítulo 02** — rastreabilidade e validação de requisitos implementados;
-- **Capítulo 05** — aplica cláusulas de dependências e gestão SCA;
-- **Capítulo 07 e 09** — contratualiza práticas seguras de CI/CD e execução;
-- **Capítulo 13** — aplica controlo de formação a terceiros e fornecedores.
+- **Capítulo 01** - aplica critérios de risco para decisões de exceção;
+- **Capítulo 02** - rastreabilidade e validação de requisitos implementados;
+- **Capítulo 05** - aplica cláusulas de dependências e gestão SCA;
+- **Capítulo 07 e 09** - contratualiza práticas seguras de CI/CD e execução;
+- **Capítulo 13** - aplica controlo de formação a terceiros e fornecedores.
 
 > 📌 Esta rastreabilidade comprova que o modelo de governação e contratação descrito neste capítulo funciona como **mecanismo organizacional de enforcement, controlo e maturidade da adoção do SbD-ToE**.

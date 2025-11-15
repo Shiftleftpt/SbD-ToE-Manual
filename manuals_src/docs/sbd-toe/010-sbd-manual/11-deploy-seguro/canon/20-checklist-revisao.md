@@ -7,7 +7,7 @@ tags: [checklist, controlo, deploy, rollback, validação]
 sidebar_position: 20
 ---
 
-# ✅ Checklist de Revisão Periódica — Deploy Seguro
+# ✅ Checklist de Revisão Periódica - Deploy Seguro
 
 Este checklist aplica-se a todas as aplicações em vias de serem colocadas em produção, especialmente as classificadas como L2 ou L3.
 Serve como instrumento de verificação binária e auditável da **adoção prática das prescrições do Capítulo 11**, permitindo:
@@ -53,7 +53,7 @@ Serve como instrumento de verificação binária e auditável da **adoção prá
 
 ## ✅ Conformidade e KPI
 
-- A validação deste checklist permite declarar **conformidade com o Capítulo 11 — Deploy Seguro**.
+- A validação deste checklist permite declarar **conformidade com o Capítulo 11 - Deploy Seguro**.
 - A contagem de respostas afirmativas pode ser usada para **medir o grau de adoção das práticas prescritas**.
 - Este resultado pode ser agregado por equipa, domínio ou organização como **indicador de maturidade operacional**.
 

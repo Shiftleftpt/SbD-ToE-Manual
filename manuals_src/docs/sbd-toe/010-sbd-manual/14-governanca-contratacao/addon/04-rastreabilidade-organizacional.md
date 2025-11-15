@@ -85,11 +85,11 @@ flowchart LR
 
 ## 🔗 Ligações cruzadas
 
-* Cap. 1 — Classificação de risco
-* Cap. 2 — Requisitos e matriz de aplicação
-* Cap. 14.1 — Governação e exceções
-* Cap. 14.2 — Cláusulas contratuais
-* Cap. 14.3 — Validação de fornecedores
-* Cap. 14.30 — KPIs de governação
+* Cap. 1 - Classificação de risco
+* Cap. 2 - Requisitos e matriz de aplicação
+* Cap. 14.1 - Governação e exceções
+* Cap. 14.2 - Cláusulas contratuais
+* Cap. 14.3 - Validação de fornecedores
+* Cap. 14.30 - KPIs de governação
 
 ---

@@ -48,7 +48,7 @@ São exemplos típicos:
    - Métricas, alertas, logs de ativação/desativação, rastreio de falhas;
 
 4. **Documentar fallback behavior** de cada controlo:
-   - O que acontece se for ativado/desativado — impacto esperado;
+   - O que acontece se for ativado/desativado - impacto esperado;
 
 5. **Testar periodicamente os mecanismos de controlo**:
    - Simular falhas, incidentes, carga, e validações de rollback.
@@ -79,4 +79,4 @@ São exemplos típicos:
 
 ---
 
-> 🔐 O controlo de execução em runtime é um **elemento crítico de segurança operacional**, permitindo prevenir, conter ou mitigar o impacto de alterações sem requerer novo deploy — essencial para ambientes de alta criticidade e disponibilidade.
+> 🔐 O controlo de execução em runtime é um **elemento crítico de segurança operacional**, permitindo prevenir, conter ou mitigar o impacto de alterações sem requerer novo deploy - essencial para ambientes de alta criticidade e disponibilidade.

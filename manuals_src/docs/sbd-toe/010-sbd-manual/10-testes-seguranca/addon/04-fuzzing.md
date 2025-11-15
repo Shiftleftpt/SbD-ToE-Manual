@@ -18,7 +18,7 @@ Descobrir vulnerabilidades e falhas de robustez através da **geração automát
 - Reproduzir comportamentos anómalos ou edge cases;
 - Validar a resiliência da aplicação face a entradas fora do esperado.
 
-> O fuzzing é essencial para testar “o inesperado” — aquilo que os testes planeados não cobrem.
+> O fuzzing é essencial para testar “o inesperado” - aquilo que os testes planeados não cobrem.
 
 ---
 
@@ -34,7 +34,7 @@ Tipos comuns:
 - **Coverage-guided fuzzing** (instrumentação para maximizar caminhos explorados);
 - **Mutation-based fuzzing** (variações sobre inputs reais conhecidos).
 
-> ⚠️ O fuzzing não identifica diretamente vulnerabilidades — mas sim condições de erro que **podem indicar fragilidades exploráveis**.
+> ⚠️ O fuzzing não identifica diretamente vulnerabilidades - mas sim condições de erro que **podem indicar fragilidades exploráveis**.
 
 ---
 
@@ -64,12 +64,12 @@ Tipos comuns:
 
 | Documento                       | Relevância estratégica                       |
 |--------------------------------|----------------------------------------------|
-| Capítulo 02 — Requisitos       | Relacionado com `REQ-309`, `REQ-406`         |
+| Capítulo 02 - Requisitos       | Relacionado com `REQ-309`, `REQ-406`         |
 | `02-dast.md`                   | Complementa com entradas mais imprevisíveis  |
 | `06-cobertura-e-priorizacao.md`| Usado em zonas com menos testes manuais      |
-| Capítulo 07 — CI/CD Seguro     | Aplicação em jobs dedicados ou ambientes paralelos |
+| Capítulo 07 - CI/CD Seguro     | Aplicação em jobs dedicados ou ambientes paralelos |
 | `08-gestao-findings.md`        | Findings do fuzzing podem requerer triagem especializada |
 
 ---
 
-> 🎲 O fuzzing não substitui testes planeados — mas **aumenta a cobertura invisível**, detetando falhas que só emergem com inputs fora do normal. É um sinal de maturidade na estratégia de validação de segurança.
+> 🎲 O fuzzing não substitui testes planeados - mas **aumenta a cobertura invisível**, detetando falhas que só emergem com inputs fora do normal. É um sinal de maturidade na estratégia de validação de segurança.

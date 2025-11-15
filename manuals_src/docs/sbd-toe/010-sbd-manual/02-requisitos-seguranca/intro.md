@@ -2,35 +2,15 @@
 id: intro
 title: Requisitos de Segurança
 description: Definição, aplicação, validação e rastreabilidade de requisitos de segurança aplicacionais por nível de risco
-tags: [tipo:prescricao, tema:requisitos, segurança, rastreabilidade, validação, proporcionalidade, SSDF, SAMM, DSOMM, BSIMM, ASVS]
+tags: [tipo:prescricao, tema:requisitos, segurança, rastreabilidade, validação, proporcionalidade, SSDF, SAMM, DSOMM, ASVS]
 sidebar_position: 1
 ---
 
-<!--template: sbdtoe-core -->
-
-import Badge from '@site/src/components/Badge';
-
-<div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.5rem', marginBottom: '1rem' }}>
-  <Badge color="info">SAMM: 2 / 3</Badge>
-  <Badge color="info">BSIMM: AM1.1, AM2.1</Badge>
-  <Badge color="info">SSDF: PW.1, PW.4, RV.1</Badge>
-  <Badge color="info">SLSA: Nível 1 / 4</Badge>
-  <Badge color="info">DSOMM: 2 / 3 (média)</Badge>
-  <a href="./achievable-maturity" style={{ marginLeft: 'auto', fontSize: '0.9rem' }}>📄 Ver análise de maturidade</a>
-
-</div>
 :::caution Capítulo Basilar
 Este capítulo é considerado **basilar** no modelo *Security by Design – Theory of Everything (SbD-ToE)*.  
 A sua aplicação é **obrigatória** para garantir a coerência, rastreabilidade e eficácia das restantes práticas de segurança.  
 
-Os capítulos basilares constituem a **fundação técnica e metodológica** do modelo, cobrindo:
-- **Classificação de risco e proporcionalidade** (Cap. 01)  
-- **Definição estruturada de requisitos de segurança** (Cap. 02)  
-- **Modelação de ameaças e priorização de controlos** (Cap. 03)  
-- **Desenho e validação de arquitetura segura** (Cap. 04)  
-- **Implementação disciplinada e revisão de código seguro** (Cap. 06)  
-
-A ausência ou aplicação parcial de qualquer um destes compromete a **integridade global** do SbD-ToE, tornando inviável a adoção coerente das práticas operacionais e de governação.
+Os capítulos basilares constituem a **fundação técnica e metodológica** do modelo, a ausência ou aplicação parcial de qualquer um destes compromete a **integridade global** do SbD-ToE, tornando inviável a adoção coerente das práticas operacionais e de governação.
 :::
 
 
@@ -43,7 +23,6 @@ Abrange também boas práticas de gestão, critérios de aceitação, utilizaç�
 Inclui:
 
 - Um [catálogo normativo de requisitos técnicos por tema e tipo de aplicação](/sbd-toe/sbd-manual/requisitos-seguranca/addon/catalogo-requisitos)
-- A [matriz de aplicação proporcional por nível de risco](/sbd-toe/sbd-manual/requisitos-seguranca/addon/matriz-controlos-por-risco)
 - Uma [taxonomia de rastreabilidade com tags normalizadas](/sbd-toe/sbd-manual/requisitos-seguranca/addon/rastreabilidade-controlo)
 - Recomendações para [validação testável dos requisitos](/sbd-toe/sbd-manual/requisitos-seguranca/addon/validacao-requisitos)
 - Um processo para [gestão de exceções e não aplicação justificada](/sbd-toe/sbd-manual/requisitos-seguranca/addon/gestao-excecoes)
@@ -142,23 +121,6 @@ Cada tema agrupa requisitos com afinidade técnica e operacional, e é aplicado 
 
 ---
 
-## 💡 4. Exemplos de aplicação
-
-Para uma aplicação de backend **exposta à internet** e classificada como **Nível 3 (elevado)**, podem ser definidos:
-
-- **SEC-L3-AUT-MFA**: Autenticação com MFA baseado em hardware ou biometria  
-- **SEC-L3-LOG-RET**: Logs de acesso e falhas centralizados e retidos por 180 dias  
-- **SEC-L3-PWD-NIST**: Todas as passwords em conformidade com NIST 800-63B  
-- **SEC-L3-API-VALID**: API deve rejeitar qualquer input que não respeite o schema definido (OpenAPI + validation middleware)
-
-Cada requisito é mapeado para:
-
-- Fonte: OWASP ASVS v5.0  
-- Critério de aceitação: teste automático no CI/CD + evidência manual  
-- Validação por: QA com apoio da equipa de segurança  
-
----
-
 ## 🔍 5. O que pode ser feito mais (e porquê)
 
 - Criar um catálogo interno com requisitos típicos reutilizáveis (tomando por base por exemplo o [catalogo deste manual](./addon/lista-requisitos-base))
@@ -168,17 +130,17 @@ Cada requisito é mapeado para:
 
 ---
 
-## 📌 Nota sobre escopo e extensibilidade
+## 📌 Nota sobre âmbito e extensibilidade
 
-Este capítulo define um conjunto essencial e transversal de requisitos aplicacionais, aplicáveis à maioria dos sistemas empresariais, web e cloud-native. No entanto, aplicações com perfis técnicos específicos — como sistemas embebidos, IoT, SCADA, aplicações móveis, médicas ou industriais — poderão necessitar de requisitos e controlos adicionais.
+Este capítulo define um conjunto essencial e transversal de requisitos aplicacionais, aplicáveis à maioria dos sistemas empresariais, web e cloud-native. No entanto, aplicações com perfis técnicos específicos - como sistemas embebidos, IoT, SCADA, aplicações móveis, médicas ou industriais - poderão necessitar de requisitos e controlos adicionais.
 
 É recomendada a consulta e curadoria adicional com base em fontes como:
 
 - [OWASP Mobile Security Testing Guide (MSTG)](https://owasp.org/www-project-mobile-security-testing-guide/) <!-- Precisa revisão manual -->
 - [OWASP Internet of Things Project](https://owasp.org/www-project-internet-of-things/) <!-- Precisa revisão manual -->
-- [IEC 62443 — Segurança em Sistemas Industriais](https://webstore.iec.ch/publication/7033) <!-- Precisa revisão manual -->
-- [NIST SP 800-213 — IoT Device Cybersecurity](https://csrc.nist.gov/publications/detail/sp/800-213/final) <!-- Precisa revisão manual -->
-- [BSIMM for Embedded & Device Software](https://www.bsimm.com/) <!-- Precisa revisão manual -->
+- [IEC 62443 - Segurança em Sistemas Industriais](https://webstore.iec.ch/publication/7033) <!-- Precisa revisão manual -->
+- [NIST SP 800-213 - IoT Device Cybersecurity](https://csrc.nist.gov/publications/detail/sp/800-213/final) <!-- Precisa revisão manual -->
+
 
 > A definição e manutenção do catálogo de requisitos e respetivo documento de validação devem seguir o mesmo padrão técnico e editorial: estrutura coerente, proporcionalidade por nível de risco, e rastreabilidade completa.
 

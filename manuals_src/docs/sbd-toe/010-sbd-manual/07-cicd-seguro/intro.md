@@ -5,33 +5,13 @@ description: Práticas de segurança para pipelines de integração e entrega co
 tags: [cicd, segurança, pipelines, automação, proveniência, devsecops, risco]
 sidebar_position: 0
 ---
-import Badge from '@site/src/components/Badge';
 
 :::tip Capítulo Operacional
 Este capítulo é considerado **operacional** no modelo *Security by Design – Theory of Everything (SbD-ToE)*.  
 A sua função é **aplicar, automatizar e validar** as práticas definidas nos capítulos basilares, garantindo a sua execução contínua e mensurável.  
 
-Os capítulos operacionais implementam o SbD-ToE em contextos técnicos específicos, incluindo:
-- **Gestão de dependências e SBOM/SCA** (Cap. 05)  
-- **Pipelines CI/CD e automação de controlo** (Cap. 07)  
-- **Infraestrutura como Código (IaC)** (Cap. 08)  
-- **Containers e imagens seguras** (Cap. 09)  
-- **Testes de segurança e validação técnica** (Cap. 10)  
-- **Deploy seguro, observabilidade e resposta** (Cap. 11 – 12)  
-
-Estes capítulos traduzem as prescrições basilares em práticas de **execução verificável**, promovendo a **integração contínua da segurança** ao longo do ciclo de vida do software.
+Os capítulos operacionais implementam o SbD-ToE em contextos técnicos específicos. Estes capítulos traduzem as prescrições basilares em práticas de **execução verificável**, promovendo a **integração contínua da segurança** ao longo do ciclo de vida do software.
 :::
-
-
-<div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.5rem', marginBottom: '1rem' }}>
-  
-  <Badge color="info">SAMM: 2 / 3</Badge>
-  <Badge color="info">BSIMM: CMVM1.3, SE2.5, CP1.2</Badge>
-  <Badge color="info">SSDF: PW.4–7, PS.3, RV.3, GV.2–3</Badge>
-  <Badge color="info">SLSA: Nível 3 / 4</Badge>
-  <Badge color="info">DSOMM: 3 / 4 (média)</Badge>
-  <a href="./achievable-maturity" style={{ marginLeft: 'auto', fontSize: '0.9rem' }}>📄 Ver análise de maturidade</a>
-</div>
 
 # CI/CD Seguro
 
@@ -40,7 +20,7 @@ Através deles flui código, são construídos artefactos, aplicadas validaçõe
 Se um pipeline for comprometido, o impacto é devastador: **todas as aplicações e serviços que dele dependem herdam esse risco**.
 
 Este capítulo parte de uma constatação inequívoca: **a segurança do pipeline é a segurança do produto**.  
-Não basta proteger o código-fonte ou o runtime da aplicação — é o pipeline que garante que tudo o resto chega a produção de forma íntegra, auditável e confiável.
+Não basta proteger o código-fonte ou o runtime da aplicação - é o pipeline que garante que tudo o resto chega a produção de forma íntegra, auditável e confiável.
 
 Por isso, o SbD-ToE estabelece aqui um corpo prescritivo para pipelines: **como devem ser concebidos, governados e auditados para resistirem a ataques, prevenirem falhas e suportarem a confiança organizacional**.
 

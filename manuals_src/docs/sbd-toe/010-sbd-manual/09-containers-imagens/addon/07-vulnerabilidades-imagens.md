@@ -9,7 +9,7 @@ tags: [containers, vulnerabilidades, cve, sca, trivy, syft, imagem]
 
 ## 🌟 Objetivo
 
-Garantir que todas as imagens de *container* utilizadas em execução **são analisadas quanto a vulnerabilidades conhecidas (CVEs)** antes de serem usadas em pipelines, ambientes de staging ou produção — e que existem mecanismos claros para:
+Garantir que todas as imagens de *container* utilizadas em execução **são analisadas quanto a vulnerabilidades conhecidas (CVEs)** antes de serem usadas em pipelines, ambientes de staging ou produção - e que existem mecanismos claros para:
 
 - **Identificar vulnerabilidades presentes nas imagens**;
 - **Classificá-las por severidade, contexto e impacto real**;
@@ -24,9 +24,9 @@ Cada imagem de *container* inclui **bibliotecas, runtimes e binários** que pode
 
 - Herdadas da imagem base (`ubuntu`, `alpine`, etc.);
 - Introduzidas por `RUN apt install`, `pip install`, `npm install`;
-- Transitivas — dependências de bibliotecas usadas pela aplicação.
+- Transitivas - dependências de bibliotecas usadas pela aplicação.
 
-> ⚠️ Uma imagem funcional pode conter dezenas ou centenas de vulnerabilidades — especialmente se não for minimizada.
+> ⚠️ Uma imagem funcional pode conter dezenas ou centenas de vulnerabilidades - especialmente se não for minimizada.
 
 ---
 

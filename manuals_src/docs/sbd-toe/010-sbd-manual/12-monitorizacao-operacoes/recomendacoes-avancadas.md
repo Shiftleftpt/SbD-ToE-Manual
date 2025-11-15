@@ -8,7 +8,7 @@ tags: [avancado, deteccao, resposta, correlação, observabilidade, maturidade]
 
 # 🚀 Recomendações Avançadas para Monitorização e Operações
 
-Este documento apresenta um conjunto de **recomendações avançadas** que vão para além dos requisitos mínimos definidos no Capítulo 12 — Monitorização e Operações.  
+Este documento apresenta um conjunto de **recomendações avançadas** que vão para além dos requisitos mínimos definidos no Capítulo 12 - Monitorização e Operações.  
 As práticas aqui descritas visam **aumentar a cobertura, a precisão e a maturidade dos mecanismos de deteção, resposta e correlação**.
 
 ---

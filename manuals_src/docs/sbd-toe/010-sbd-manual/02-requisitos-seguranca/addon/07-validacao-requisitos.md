@@ -127,4 +127,4 @@ A validação de requisitos deve ser incorporada num ciclo de melhoria contínua
 ---
 
 > 📌 A validação eficaz transforma requisitos em proteção real.  
-> Não basta definir — é preciso confirmar, medir, melhorar.
+> Não basta definir - é preciso confirmar, medir, melhorar.

@@ -84,7 +84,7 @@ A seleção de domínios e profundidade de monitorização deve ser proporcional
 |-------------------------------------|--------------------------------------------------|
 | `08-matriz-controles-por-risco.md` | Define mínimos por domínio e por criticidade     |
 | `04-integracao-siem.md`            | Integração de eventos com plataformas de deteção |
-| `05-monitorizacao-resposta.md`     | Resposta a eventos e alertas                     |
+| `05-monitorizacao-operacoes.md`     | Resposta a eventos e alertas                     |
 | `06-correlacao-anomalias.md`       | Estratégias de correlação entre domínios         |
 
 ---

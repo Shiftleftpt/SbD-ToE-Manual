@@ -109,4 +109,4 @@ Este processo está diretamente ligado a outros elementos do capítulo:
   - **Responsável designado**
 - Assegurar que todas as exceções estão ligadas a artefactos e justificações verificáveis.
 
-> 📌 Exceções não anulam o modelo. Tornam-no mais robusto — porque permitem reconhecer e controlar o que não é possível aplicar totalmente, sem esconder falhas ou informalidades.
+> 📌 Exceções não anulam o modelo. Tornam-no mais robusto - porque permitem reconhecer e controlar o que não é possível aplicar totalmente, sem esconder falhas ou informalidades.

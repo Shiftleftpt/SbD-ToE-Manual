@@ -11,9 +11,9 @@ Este anexo apresenta **exemplos práticos** de aplicação das recomendações d
 
 ---
 
-## 🚀 Caso 1 — API Gateway com logging estruturado e alertas
+## 🚀 Caso 1 - API Gateway com logging estruturado e alertas
 
-> 🛡️ **Classificação de risco: L3 — Aplicação com exposição pública e operações críticas**
+> 🛡️ **Classificação de risco: L3 - Aplicação com exposição pública e operações críticas**
 
 **Contexto:** Aplicativo exposto com API Gateway, autenticação via token, com endpoints críticos (checkout, transferências).
 
@@ -31,9 +31,9 @@ Este anexo apresenta **exemplos práticos** de aplicação das recomendações d
 
 ---
 
-## 💰 Caso 2 — Monitorização de uploads em aplicação de gestão documental
+## 💰 Caso 2 - Monitorização de uploads em aplicação de gestão documental
 
-> 🛡️ **Classificação de risco: L3 — Aplicação com dados sensíveis e risco de exfiltração**
+> 🛡️ **Classificação de risco: L3 - Aplicação com dados sensíveis e risco de exfiltração**
 
 **Contexto:** Plataforma interna de gestão de documentos sensíveis com workflow de revisão.
 
@@ -49,9 +49,9 @@ Este anexo apresenta **exemplos práticos** de aplicação das recomendações d
 
 ---
 
-## 👨‍💼 Caso 3 — Monitorização de pipelines CI/CD e deteção de execução invulgar
+## 👨‍💼 Caso 3 - Monitorização de pipelines CI/CD e deteção de execução invulgar
 
-> 🛡️ **Classificação de risco: L2 — Pipeline interno com impacto em cadeia de fornecimento**
+> 🛡️ **Classificação de risco: L2 - Pipeline interno com impacto em cadeia de fornecimento**
 
 **Contexto:** Pipelines com execução automática via GitHub Actions + Kubernetes. Equipa quer rastrear alterações de comportamento.
 
@@ -69,9 +69,9 @@ Este anexo apresenta **exemplos práticos** de aplicação das recomendações d
 
 ---
 
-## 🔎 Caso 4 — Correlação de logs de autenticação com movimentos de sessão
+## 🔎 Caso 4 - Correlação de logs de autenticação com movimentos de sessão
 
-> 🛡️ **Classificação de risco: L3 — Aplicação multiuser com perfis sensíveis e risco de hijack**
+> 🛡️ **Classificação de risco: L3 - Aplicação multiuser com perfis sensíveis e risco de hijack**
 
 **Contexto:** Aplicativo com users internos e externos, com sessões longas. Foi reportado uso indevido.
 
@@ -89,9 +89,9 @@ Este anexo apresenta **exemplos práticos** de aplicação das recomendações d
 
 ---
 
-## 🧪 Caso 5 — Aplicação interna de baixa criticidade com logging local e validação manual
+## 🧪 Caso 5 - Aplicação interna de baixa criticidade com logging local e validação manual
 
-> 🛡️ **Classificação de risco: L1 — Aplicação de suporte técnico, uso limitado**
+> 🛡️ **Classificação de risco: L1 - Aplicação de suporte técnico, uso limitado**
 
 **Contexto:** Aplicação interna utilizada apenas por equipa de suporte técnico, sem acesso externo nem dados sensíveis.
 

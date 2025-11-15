@@ -87,12 +87,3 @@ Nem todas as aplicações requerem o mesmo nível de segurança, mas **todas dev
 - Bypass informal ou acidental de etapas de segurança (OSC&R: CI0002).
 
 ---
-
-## 🧭 Referências
-
-- [OWASP CI/CD Security – 6. Policy Enforcement](https://owasp.org/www-project-cicd-security/#6-policy-enforcement)
-- [NIST SSDF – Governance (GV.x)](https://csrc.nist.gov/publications/detail/sp/800-218/final)
-- [Open Policy Agent (OPA)](https://www.openpolicyagent.org/)
-- [SLSA – Policy Controls & Provenance Gates](https://slsa.dev/spec/v1.0/)
-- [BSIMM – SM1.2, CR1.4]
-- [SAMM – Governance – Policy & Compliance Automation]

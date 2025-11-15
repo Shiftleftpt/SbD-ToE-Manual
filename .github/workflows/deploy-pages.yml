@@ -1,0 +1,64 @@
+name: Deploy SbD-ToE (GitHub Pages)
+
+on:
+  push:
+    tags:
+      - 'v*.*.*'   # só publica em tags de release
+
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: pages-prod
+  cancel-in-progress: false
+
+jobs:
+  build:
+    name: Build & validate
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v5
+
+      - name: Use Node 20
+        uses: actions/setup-node@v6
+        with:
+          node-version: 20
+          
+      - name: Install deps (clean)
+        working-directory: manuals_src
+        run: npm ci
+
+      # (Opcional) validações adicionais
+      # - name: Lint links / anchors
+      #   working-directory: manuals_src
+      #   run: npm run lint:links && npm run anchors:validate
+
+      - name: Build Docusaurus
+        working-directory: manuals_src
+        run: npm run build
+
+      - name: Upload static site artifact
+        uses: actions/upload-pages-artifact@v4
+        with:
+          path: manuals_src/build   # saída padrão do Docusaurus
+
+  deploy:
+    name: Deploy to GitHub Pages
+    needs: build
+    runs-on: ubuntu-latest
+    permissions:
+      pages: write    # publicar
+      id-token: write # OIDC
+      contents: read
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy
+        id: deployment
+        uses: actions/deploy-pages@v4

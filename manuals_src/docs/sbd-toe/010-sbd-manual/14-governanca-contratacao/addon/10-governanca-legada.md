@@ -70,10 +70,10 @@ Este documento aborda a aplicação proporcional e adaptada do modelo SbD-ToE a 
 
 ## 🔗 Ligações cruzadas
 
-* Cap. 1 — Classificação de risco
-* Cap. 2 — Requisitos mínimos por risco
-* Cap. 14.1 — Modelo de decisão e exceções
-* Cap. 14.6 — Validação continuada
-* Cap. 08 / 09 — Integração com pipelines e execução isolada
+* Cap. 1 - Classificação de risco
+* Cap. 2 - Requisitos mínimos por risco
+* Cap. 14.1 - Modelo de decisão e exceções
+* Cap. 14.6 - Validação continuada
+* Cap. 08 / 09 - Integração com pipelines e execução isolada
 
 ---

@@ -108,8 +108,8 @@ flowchart TD
 
 | Documento / Capítulo              | Relação com validação de fornecedores       |
 | --------------------------------- | ------------------------------------------- |
-| Cap. 01 — Classificação de risco  | Define o nível de aplicação do modelo       |
-| Cap. 02 — Requisitos de segurança | Determina o que validar por tipo de risco   |
+| Cap. 01 - Classificação de risco  | Define o nível de aplicação do modelo       |
+| Cap. 02 - Requisitos de segurança | Determina o que validar por tipo de risco   |
 | addon/02-clausulas-contratuais.md | Cláusulas por tipo de contrato e risco      |
 | addon/01-modelo-governacao.md     | Papéis e alçadas para aprovação de exceções |
 | addon/05-exemplos-praticos.md     | Casos reais de aplicação do modelo          |

@@ -8,7 +8,7 @@ tags: [formacao, terceiros, fornecedores, plano, acesso seguro]
 
 # 🤝 Formação Mínima para Terceiros e Fornecedores
 
-Este documento define os **conteúdos mínimos obrigatórios** de capacitação em segurança para todos os colaboradores externos com acesso técnico relevante — incluindo fornecedores, contractors e equipas externas — assegurando rastreabilidade e validação formal antes da atribuição de permissões.
+Este documento define os **conteúdos mínimos obrigatórios** de capacitação em segurança para todos os colaboradores externos com acesso técnico relevante - incluindo fornecedores, contractors e equipas externas - assegurando rastreabilidade e validação formal antes da atribuição de permissões.
 
 ---
 
@@ -21,7 +21,7 @@ Este documento define os **conteúdos mínimos obrigatórios** de capacitação 
 
 ---
 
-## 🧭 Escopo de aplicação
+## 🧭 âmbito de aplicação
 
 Este modelo aplica-se a:
 

@@ -16,7 +16,7 @@ Cruzar os **14 capítulos técnicos do manual SbD-ToE** com os **conteúdos de f
 - A atribuição proporcional de conteúdos a **níveis de risco (L1–L3)**;
 - A escolha de **formatos pedagógicos adequados** por perfil e contexto.
 
-Este catálogo serve de base para programas de formação, onboarding, labs e CTFs internos — e pode ser instanciado como estrutura curricular num LMS.
+Este catálogo serve de base para programas de formação, onboarding, labs e CTFs internos - e pode ser instanciado como estrutura curricular num LMS.
 
 ---
 
@@ -50,13 +50,13 @@ A matriz define, por capítulo técnico do manual:
 |                            | Uso de catálogo interno de requisitos  | Dev, PO             | Médio  | Quiz + aplicação prática           |
 | 3. Threat Modeling         | Modelação por funcionalidade real      | Dev, QA, PO         | Médio  | Sessão prática + rotação de lead   |
 |                            | Uso de checklists em design            | QA, AppSec          | Baixo  | Template + explicação peer-led     |
-| 4. Arquitetura Segura      | Padrões e antipadrões arquiteturais    | Dev, Tech Leads      | Elevado| Oficina comparativa + pairing      |
+| 4. Arquitetura Segura      | Padrões e antipadrões de arquitetura    | Dev, Tech Leads      | Elevado| Oficina comparativa + pairing      |
 | 5. Controlo de Dependências| SBOM, lockfiles e controlo de SCA      | Dev, DevOps         | Médio  | PR clinic + lab com scanner        |
 |                            | Triagem de alertas                     | AppSec, Dev          | Elevado| Revisão rotativa + lab interno     |
 | 6. Desenvolvimento Seguro  | PR seguro e validação de código        | Dev, QA             | Médio  | Revisão pública + guia comentado   |
 |                            | Common mistakes / top 5 falhas         | Dev                 | Baixo  | Quiz + exemplo de PR real          |
 | 7. CI/CD Seguro            | Pipelines com scanners                 | DevOps              | Médio  | Oficina prática + checklist        |
-|                            | Escopos de permissões em tokens        | DevOps              | Elevado| Lab + simulação de abuso           |
+|                            | âmbitos de permissões em tokens        | DevOps              | Elevado| Lab + simulação de abuso           |
 | 8. IaC Seguro              | Uso de scanners (ex: TFSec)            | DevOps, CloudEng    | Médio  | Lab com Terraform inseguro         |
 |                            | Boas práticas em pipelines IaC         | DevOps              | Médio  | PR review + clinic                 |
 | 9. *containers* & Imagens   | Dockerfiles seguros                    | Dev, DevOps         | Médio  | Lab + análise de imagem real       |
@@ -104,4 +104,4 @@ A matriz define, por capítulo técnico do manual:
 
 ---
 
-> 📚 Este catálogo pode evoluir para o **Volume II — Manual de Formação SbD-ToE**, com conteúdos, exercícios e labs por capítulo, função e nível de risco.
+> 📚 Este catálogo pode evoluir para o **Volume II - Manual de Formação SbD-ToE**, com conteúdos, exercícios e labs por capítulo, função e nível de risco.

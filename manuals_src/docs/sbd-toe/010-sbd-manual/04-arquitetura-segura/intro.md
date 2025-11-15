@@ -5,31 +5,12 @@ description: Fundamentos, objetivos e enquadramento do capítulo dedicado à arq
 tags: [introducao, arquitetura, requisitos, segurança]
 sidebar_position: 4
 ---
-import Badge from '@site/src/components/Badge';
-
-<div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.5rem', marginBottom: '1rem' }}>
-  
-  <Badge color="info">SAMM: 2 / 3</Badge>
-  <Badge color="info">BSIMM: AA1.2, AA2.1, CMVM1.1</Badge>
-  <Badge color="info">SSDF: PW.4, PW.7</Badge>
-  <Badge color="info">SLSA: Nível 2 / 4</Badge>
-  <Badge color="info">DSOMM: 3 / 4 (média)</Badge>
-  <a href="./achievable-maturity" style={{ marginLeft: 'auto', fontSize: '0.9rem' }}>📄 Ver análise de maturidade</a>
-</div>
-<!--/web-only-->
 
 :::caution Capítulo Basilar
 Este capítulo é considerado **basilar** no modelo *Security by Design – Theory of Everything (SbD-ToE)*.  
 A sua aplicação é **obrigatória** para garantir a coerência, rastreabilidade e eficácia das restantes práticas de segurança.  
 
-Os capítulos basilares constituem a **fundação técnica e metodológica** do modelo, cobrindo:
-- **Classificação de risco e proporcionalidade** (Cap. 01)  
-- **Definição estruturada de requisitos de segurança** (Cap. 02)  
-- **Modelação de ameaças e priorização de controlos** (Cap. 03)  
-- **Desenho e validação de arquitetura segura** (Cap. 04)  
-- **Implementação disciplinada e revisão de código seguro** (Cap. 06)  
-
-A ausência ou aplicação parcial de qualquer um destes compromete a **integridade global** do SbD-ToE, tornando inviável a adoção coerente das práticas operacionais e de governação.
+Os capítulos basilares constituem a **fundação técnica e metodológica** do modelo, a ausência ou aplicação parcial de qualquer um destes compromete a **integridade global** do SbD-ToE, tornando inviável a adoção coerente das práticas operacionais e de governação.
 :::
 
 
@@ -43,7 +24,7 @@ Este capítulo define as práticas para garantir que a arquitetura de uma aplica
 - Suporte a **threat modeling, autenticação, controlo de acesso, validação e operações seguras**
 - Documentação formal da arquitetura e rastreabilidade das decisões
 
-Cobre diferentes estilos arquiteturais:
+Cobre diferentes estilos de arquitetura:
 
 - Monólitos modernos e aplicações em 3 camadas
 - Microserviços e API-first
@@ -57,8 +38,8 @@ Cobre diferentes estilos arquiteturais:
 ### 📌 O que deve ser feito
 
 1. **Definir zonas de confiança** e fronteiras explícitas
-2. **Estabelecer padrões arquiteturais** proporcionais ao risco
-3. **Documentar decisões arquiteturais** (ex: ADRs, diagramas versionados)
+2. **Estabelecer padrões de arquitetura** proporcionais ao risco
+3. **Documentar decisões de arquitetura** (ex: ADRs, diagramas versionados)
 4. **Validar arquitetura antes de go-live** e em alterações significativas
 5. **Registar e gerir exceções** quando requisitos não possam ser cumpridos
 
@@ -76,7 +57,7 @@ Cobre diferentes estilos arquiteturais:
 
 | Momento                              | Ação esperada                                         |
 |--------------------------------------|-------------------------------------------------------|
-| Início de projeto                    | Definir ZTCs e padrão arquitetural                    |
+| Início de projeto                    | Definir ZTCs e padrão da arquitetura                    |
 | Nova funcionalidade ou serviço       | Rever fronteiras e controlos interzonais              |
 | Integração com terceiros             | Analisar implicações de confiança e exposição         |
 | Refactoring ou migração tecnológica  | Avaliar risco de exposição adicional                  |
@@ -88,12 +69,12 @@ Cobre diferentes estilos arquiteturais:
 |----------------------------|--------------------------------------------------------------------|
 | **Arquiteto / DevSecOps**  | Definir modelos, diagramas e decisões                               |
 | **Developer**              | Implementar e manter os controlos definidos                         |
-| **QA / Test Engineer**     | Validar requisitos arquiteturais em testes                          |
-| **AppSec / Segurança**     | Participar em threat modeling e revisões arquiteturais              |
+| **QA / Test Engineer**     | Validar requisitos de arquitetura em testes                          |
+| **AppSec / Segurança**     | Participar em threat modeling e revisões de arquitetura              |
 | **Product Owner / Negócio**| Avaliar impacto em prazos e custo                                   |
-| **Eng. CI/CD**             | Automatizar verificações de controlos arquiteturais                 |
+| **Eng. CI/CD**             | Automatizar verificações de controlos de arquitetura                 |
 
-> ✅ Toda exceção arquitetural deve ser **registada, justificada e validada** com plano compensatório.
+> ✅ Toda exceção da arquitetura deve ser **registada, justificada e validada** com plano compensatório.
 
 ### 🎯 Porquê / Para quê
 
@@ -106,7 +87,7 @@ Cobre diferentes estilos arquiteturais:
 
 ## ⚠️ 3. Caveats ou limitações da prescrição
 
-- Nem todos os controlos podem ser aplicados a todas as arquiteturas — o modelo deve ser adaptado.
+- Nem todos os controlos podem ser aplicados a todas as arquiteturas - o modelo deve ser adaptado.
 - Modelos inconsistentes, incompletos ou desatualizados **geram risco não rastreável**.
 - Threat modeling sem arquitetura clara **é ineficaz**.
 - Exceções não documentadas **invalidam a rastreabilidade e o controlo de risco residual**.
@@ -129,7 +110,7 @@ Num sistema L3 com microserviços e exposição a terceiros:
 
 | Capítulo                      | Relação técnica e de processo                                       |
 |-------------------------------|---------------------------------------------------------------------|
-| `01-gestao-risco`             | O nível de risco define a exigência e profundidade arquitetural     |
+| `01-gestao-risco`             | O nível de risco define a exigência e profundidade da arquitetura     |
 | `02-requisitos-seguranca`     | Define os requisitos técnicos do tipo `ARC-00x`                     |
 | `03-threat-modeling`          | Usa a arquitetura como base para modelar ameaças                    |
 | `06-desenvolvimento-seguro`   | Aplica controlos definidos pela arquitetura (ex: validações, filtros)|
@@ -143,7 +124,7 @@ Num sistema L3 com microserviços e exposição a terceiros:
 |----------|-------------|-----------|-----------------|
 | Política de Arquitetura Segura | Sim | Todos os projetos | Definição de princípios, padrões e controlos mínimos de arquitetura |
 | Política de Revisões Arquiteturais | Recomendado | Projetos L2–L3 | Critérios formais de revisão e aprovação AppSec |
-| Política de Automação em Pipelines | Recomendado | Projetos com CI/CD | Regras para validação automatizada de controlos arquiteturais |
+| Política de Automação em Pipelines | Recomendado | Projetos com CI/CD | Regras para validação automatizada de controlos de arquitetura |
 
 Na versão impressa, as políticas relevantes encontram-se no **anexo de políticas do manual**, incluindo: Política de Arquitetura Segura, Política de Revisões Arquiteturais e Política de Automação em Pipelines.
 

@@ -54,7 +54,7 @@ O objetivo é garantir que a aprendizagem **não é paralela à execução real*
 
 ### 4. Arquitetura Segura
 
-- Revisão coletiva de decisões arquiteturais (mensal ou por épico)
+- Revisão coletiva de decisões de arquitetura (mensal ou por épico)
 - Oficinas comparativas entre abordagens (ex: API vs eventos)
 - Repositório de arquiteturas "antes/depois" com anotações
 
@@ -162,6 +162,6 @@ O objetivo é garantir que a aprendizagem **não é paralela à execução real*
 
 ---
 
-> 📚 A formação contínua **não é paralela ao trabalho — é parte do trabalho bem feito**.  
+> 📚 A formação contínua **não é paralela ao trabalho - é parte do trabalho bem feito**.  
 >  
 > O manual SbD-ToE funciona como uma **fonte estruturada de formação viva, prática e adaptável**, cobrindo todo o ciclo de desenvolvimento.

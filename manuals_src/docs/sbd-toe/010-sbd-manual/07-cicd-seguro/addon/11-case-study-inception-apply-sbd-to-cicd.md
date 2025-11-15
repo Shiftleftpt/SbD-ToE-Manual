@@ -1,25 +1,25 @@
 ---
 id: case-study-inception-apply-sbd-to-cicd
-title: Estudo de Caso — Aplicar o SbD-ToE ao Próprio Pipeline CI/CDx
+title: Estudo de Caso - Aplicar o SbD-ToE ao Próprio Pipeline CI/CDx
 sidebar_position: 9
 description: Regras formais para permitir exceções no pipeline, com registo, aprovação, prazo de validade e visibilidade por função.
 tags: [exceções, visibilidade, cicd, governação, auditoria, segurança]
 ---
 
 
-# 🧪 Estudo de Caso — Aplicar o SbD-ToE ao Próprio Pipeline CI/CD
+# 🧪 Estudo de Caso - Aplicar o SbD-ToE ao Próprio Pipeline CI/CD
 
-Este estudo de caso descreve a aplicação transversal e rigorosa do manual **Security by Design — Theory of Everything (SbD-ToE)** ao **próprio sistema de pipelines CI/CD** de uma organização. 
+Este estudo de caso descreve a aplicação transversal e rigorosa do manual **Security by Design - Theory of Everything (SbD-ToE)** ao **próprio sistema de pipelines CI/CD** de uma organização. 
 
 > O objetivo foi tratar os pipelines como **ativos críticos (nível L3)**, com ciclo de vida, riscos e controlos equiparáveis aos de qualquer produto de software sensível.
 
-A abordagem seguiu todas as fases do ciclo de vida descritas no manual — desde o risco à operação — com validações, rastreabilidade e automatização como pilares centrais.
+A abordagem seguiu todas as fases do ciclo de vida descritas no manual - desde o risco à operação - com validações, rastreabilidade e automatização como pilares centrais.
 
 ---
 
 ## 🧭 Contexto e decisão
 
-A organização opera múltiplas aplicações em ambientes regulados. Após uma avaliação baseada no Capítulo 01 — Gestão de Risco, foi identificado que:
+A organização opera múltiplas aplicações em ambientes regulados. Após uma avaliação baseada no Capítulo 01 - Gestão de Risco, foi identificado que:
 
 - O pipeline CI/CD tem acesso privilegiado a código, artefactos, segredos e infraestrutura;
 - É o ponto de entrada para todo o ciclo de vida de software;
@@ -49,7 +49,7 @@ O exercício de threat modeling (Cap. 03) identificou riscos como:
 
 - **Spoofing:** execução de pipelines em runners não autorizados → mitigado com labels restritos e workers dedicados.
 - **Tampering:** alteração silenciosa de templates → mitigado com PR obrigatórios e revisões.
-- **Information Disclosure:** acesso indevido a secrets → mitigado com escopo mínimo e logs validados.
+- **Information Disclosure:** acesso indevido a secrets → mitigado com âmbito mínimo e logs validados.
 - **Elevation of Privilege:** tasks inline com permissões excessivas → mitigado com revisão manual e catálogo controlado.
 
 ---

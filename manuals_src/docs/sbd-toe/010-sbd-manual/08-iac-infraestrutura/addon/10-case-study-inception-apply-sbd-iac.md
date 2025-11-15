@@ -1,15 +1,15 @@
 ---
 id: case-study-inception-apply-sbd-iac
-title: Caso de Estudo — Aplicação do SbD-ToE a um Projeto IaC
+title: Caso de Estudo - Aplicação do SbD-ToE a um Projeto IaC
 sidebar_position: 10
 description: Estudo de caso completo demonstrando a aplicação das práticas de segurança de IaC desde o início de projeto até à sua execução em produção.
 tags: [caso de estudo, iac, inception, segurança, aplicação prática]
 ---
 
 
-# 🧪 Estudo de Caso — Aplicar o SbD-ToE a um Projeto de IaC
+# 🧪 Estudo de Caso - Aplicar o SbD-ToE a um Projeto de IaC
 
-Este estudo de caso descreve a aplicação prática e transversal do manual **Security by Design — Theory of Everything (SbD-ToE)** a um **projeto real de Infraestrutura como Código (IaC)**. O objetivo foi aplicar as práticas prescritas no Capítulo 08 de forma sistemática, desde a estrutura do repositório até à auditoria e validação contínua.
+Este estudo de caso descreve a aplicação prática e transversal do manual **Security by Design - Theory of Everything (SbD-ToE)** a um **projeto real de Infraestrutura como Código (IaC)**. O objetivo foi aplicar as práticas prescritas no Capítulo 08 de forma sistemática, desde a estrutura do repositório até à auditoria e validação contínua.
 
 > O projeto tratado aqui é responsável pela definição de ambientes (dev, QA, prod) num cluster Kubernetes e respetivos serviços de rede, autenticação e logging. Foi considerado de **criticidade L3**.
 

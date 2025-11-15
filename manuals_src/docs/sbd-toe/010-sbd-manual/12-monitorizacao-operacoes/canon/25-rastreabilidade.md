@@ -2,12 +2,12 @@
 id: rastreabilidade
 title: Rastreabilidade Top-Down – Capítulo 12
 sidebar_position: 25
-description: Mapeamento das práticas de monitorização e resposta face a frameworks como NIST SSDF, SAMM, BSIMM, ISO e CIS Controls.
+description: Mapeamento das práticas de monitorização e resposta face a frameworks como NIST SSDF, SAMM, ISO e CIS Controls.
 tags: [rastreabilidade, frameworks, normativo, monitorizacao, resposta, deteccao]
 ---
 
 
-# 📎 Rastreabilidade contra Frameworks — Capítulo 12: Monitorização, Operações e Telemetria
+# 📎 Rastreabilidade contra Frameworks - Capítulo 12: Monitorização, Operações e Telemetria
 
 Este documento estabelece a **rastreabilidade entre as práticas de monitorização, logging e resposta prescritas neste capítulo** e os requisitos dos principais frameworks e normas de segurança operacional e deteção de ameaças.
 
@@ -105,10 +105,10 @@ Domínio **Operations**:
 
 Este capítulo complementa:
 
-- **Capítulo 01** — classificação de risco determina escopo de monitorização;
-- **Capítulo 02 / 03** — requisitos e ameaças que devem ser detetáveis via logging;
-- **Capítulo 07** — geração de logs e rastreabilidade nos pipelines CI/CD;
-- **Capítulo 09** — observabilidade e execução segura em ambientes containerizados;
-- **Capítulo 14** — suporte à auditoria e validação contínua de exceções operacionais.
+- **Capítulo 01** - classificação de risco determina escopo de monitorização;
+- **Capítulo 02 / 03** - requisitos e ameaças que devem ser detetáveis via logging;
+- **Capítulo 07** - geração de logs e rastreabilidade nos pipelines CI/CD;
+- **Capítulo 09** - observabilidade e execução segura em ambientes containerizados;
+- **Capítulo 14** - suporte à auditoria e validação contínua de exceções operacionais.
 
 > 📌 Esta rastreabilidade demonstra que o Capítulo 12 estabelece a fundação da **segurança contínua e operacional**, com visibilidade, correlação e resposta integradas em todo o ciclo de vida.

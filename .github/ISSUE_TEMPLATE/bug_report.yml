@@ -1,0 +1,30 @@
+name: Bug ou Erro Técnico
+description: Reportar um bug, erro de build ou falha de renderização do site/manual
+labels: ["tipo:bug", "status:novo"]
+body:
+  - type: textarea
+    id: descricao
+    attributes:
+      label: Descrição
+      description: Descreve o problema encontrado
+    validations:
+      required: true
+  - type: input
+    id: localizacao
+    attributes:
+      label: Ficheiro ou Secção
+      placeholder: "ex: cap05/canon/50-ameacas-mitigadas.md"
+  - type: textarea
+    id: reproducao
+    attributes:
+      label: Passos para reproduzir
+      description: Descreve os passos, logs ou comandos para reproduzir o erro
+  - type: textarea
+    id: resultado
+    attributes:
+      label: Resultado esperado
+  - type: input
+    id: versao
+    attributes:
+      label: Versão / Tag
+      placeholder: "ex: v1.0.3"

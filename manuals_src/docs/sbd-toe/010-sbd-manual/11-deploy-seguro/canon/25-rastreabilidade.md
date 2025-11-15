@@ -1,13 +1,13 @@
 ---
 id: rastreabilidade
-title: Rastreabilidade — Deploy Seguro
+title: Rastreabilidade - Deploy Seguro
 description: Mapeamento top-down entre frameworks normativas e as práticas de segurança na entrega de código em produção.
-tags: [rastreabilidade, deploy, frameworks, ssdf, samm, bsimm]
+tags: [rastreabilidade, deploy, frameworks, ssdf, samm, ]
 sidebar_position: 25
 ---
 
 
-# 📎 Rastreabilidade contra Frameworks — Capítulo 11: Deploy Seguro e Controlo de Execução
+# 📎 Rastreabilidade contra Frameworks - Capítulo 11: Deploy Seguro e Controlo de Execução
 
 Este documento estabelece a **rastreabilidade entre as práticas prescritas neste capítulo** e os requisitos definidos pelas principais frameworks, normas e modelos de maturidade que regulam a entrega, ativação e execução segura de software.
 
@@ -19,16 +19,16 @@ Este documento estabelece a **rastreabilidade entre as práticas prescritas nest
 
 | Requisito / Domínio (Framework)                                    | Prática do Capítulo 11 que responde                          | Cobertura |
 |--------------------------------------------------------------------|----------------------------------------------------------------|-----------|
-| **NIST SSDF v1.1** — PW.6, PW.7                                    | Validações formais antes do deploy, readiness gates            | ✅        |
-| **NIST SSDF v1.1** — RV.3                                          | Monitorização pós-deploy, rollback automatizado                | ✅        |
-| **OWASP SAMM v2.1** — Release → Release Management                 | Gestão de releases, toggles, rollback                          | ✅ (N3)   |
-| **OWASP SAMM v2.1** — Release → Environment Management             | Segregação de ambientes, autorização de execução               | ✅ (N3)   |
-| **BSIMM13** — Deployment → DR1–DR3, SE2.5                          | Feature toggles, rastreabilidade, aprovação formal             | ✅        |
-| **SLSA v1.0** — Provenance Enforcement (L1–L3)                     | Deploy automatizado, rollback parcial, proveniência assinada   | 🔹 (L2)  |
-| **ISO/IEC 27001** — A.14.2.2, A.14.2.4                             | Transição controlada, segregação de ambientes                  | ✅        |
-| **CIS Controls v8** — 4.8, 6.8, 16.13                              | Deploy seguro, auditoria runtime, rollback                     | ✅        |
-| **ENISA DevSecOps** — Secure Deployment, Runtime Enforcement       | Deploy progressivo, validação pré-execução, runtime controlado | ✅        |
-| **OWASP DSOMM** — Design & Development (5 práticas)               | Validação formal, rollback, toggles rastreáveis                | ✅ (4/5) |
+| **NIST SSDF v1.1** - PW.6, PW.7                                    | Validações formais antes do deploy, readiness gates            | ✅        |
+| **NIST SSDF v1.1** - RV.3                                          | Monitorização pós-deploy, rollback automatizado                | ✅        |
+| **OWASP SAMM v2.1** - Release → Release Management                 | Gestão de releases, toggles, rollback                          | ✅ (N3)   |
+| **OWASP SAMM v2.1** - Release → Environment Management             | Segregação de ambientes, autorização de execução               | ✅ (N3)   |
+| **BSIMM13** - Deployment → DR1–DR3, SE2.5                          | Feature toggles, rastreabilidade, aprovação formal             | ✅        |
+| **SLSA v1.0** - Provenance Enforcement (L1–L3)                     | Deploy automatizado, rollback parcial, proveniência assinada   | 🔹 (L2)  |
+| **ISO/IEC 27001** - A.14.2.2, A.14.2.4                             | Transição controlada, segregação de ambientes                  | ✅        |
+| **CIS Controls v8** - 4.8, 6.8, 16.13                              | Deploy seguro, auditoria runtime, rollback                     | ✅        |
+| **ENISA DevSecOps** - Secure Deployment, Runtime Enforcement       | Deploy progressivo, validação pré-execução, runtime controlado | ✅        |
+| **OWASP DSOMM** - Design & Development (5 práticas)               | Validação formal, rollback, toggles rastreáveis                | ✅ (4/5) |
 
 ---
 
@@ -78,7 +78,7 @@ Este documento estabelece a **rastreabilidade entre as práticas prescritas nest
 
 - Domínio **Design & Development**:
   - 4 das 5 práticas cobertas: validação formal, rollback, toggles rastreáveis, readiness gates;
-  - Observabilidade contínua parcial — aprofundada no Cap. 12.
+  - Observabilidade contínua parcial - aprofundada no Cap. 12.
 
 ---
 
@@ -86,11 +86,11 @@ Este documento estabelece a **rastreabilidade entre as práticas prescritas nest
 
 As práticas aqui prescritas articulam-se diretamente com:
 
-- **Cap. 01 — Gestão de Risco**: identifica onde execução controlada é mandatória;
-- **Cap. 02 — Requisitos de Segurança**: define critérios técnicos de deploy seguro;
-- **Cap. 07 — CI/CD Seguro**: automatiza gates, rollback e validações no pipeline;
-- **Cap. 09 — Containers e Execução em Produção**: extensões runtime;
-- **Cap. 10 — Testes de Segurança**: integra os critérios de aceitação e regressão;
-- **Cap. 12 — Monitorização e Resposta**: reforça a observabilidade ativa do runtime.
+- **Cap. 01 - Gestão de Risco**: identifica onde execução controlada é mandatória;
+- **Cap. 02 - Requisitos de Segurança**: define critérios técnicos de deploy seguro;
+- **Cap. 07 - CI/CD Seguro**: automatiza gates, rollback e validações no pipeline;
+- **Cap. 09 - Containers e Execução em Produção**: extensões runtime;
+- **Cap. 10 - Testes de Segurança**: integra os critérios de aceitação e regressão;
+- **Cap. 12 - Monitorização e Resposta**: reforça a observabilidade ativa do runtime.
 
 > 📌 Esta rastreabilidade demonstra que o Capítulo 11 constitui uma **resposta prescritiva e integrada às exigências operacionais e normativas** de execução segura, validada e reversível em ambientes de produção.

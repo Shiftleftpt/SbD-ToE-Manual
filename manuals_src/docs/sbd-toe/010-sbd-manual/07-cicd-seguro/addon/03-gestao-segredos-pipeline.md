@@ -11,7 +11,7 @@ tags: [segredos, cicd, vault, pipelines, segurança, variáveis]
 
 A gestão de segredos nos pipelines CI/CD é um dos vetores de ataque mais críticos da cadeia de desenvolvimento. Tokens de acesso, chaves API, credenciais de deploy e outros segredos são frequentemente expostos acidentalmente em variáveis, logs ou ficheiros versionados.
 
-Esta prática define os controlos obrigatórios para garantir a **confidencialidade, escopo mínimo e injeção controlada** de segredos durante a execução de pipelines.
+Esta prática define os controlos obrigatórios para garantir a **confidencialidade, âmbito mínimo e injeção controlada** de segredos durante a execução de pipelines.
 
 > A confidencialidade dos segredos deve ser preservada mesmo em caso de falha no pipeline.
 
@@ -21,7 +21,7 @@ Esta prática define os controlos obrigatórios para garantir a **confidencialid
 
 - Impedir o acesso não autorizado a segredos utilizados por pipelines;
 - Prevenir a exposição acidental de segredos em logs, repositórios ou ficheiros temporários;
-- Reduzir o impacto de compromissos parciais, através de segregação, escopo limitado e rotação periódica.
+- Reduzir o impacto de compromissos parciais, através de segregação, âmbito limitado e rotação periódica.
 
 ---
 
@@ -32,7 +32,7 @@ Esta prática define os controlos obrigatórios para garantir a **confidencialid
    - A injeção deve ser feita através de mecanismos externos (ex: `secrets.*`, vaults, variable groups).
 
 2. **Segregação por ambiente, aplicação e função**  
-   - Segredos devem ter escopo mínimo (ex: apenas leitura, apenas para um job específico);
+   - Segredos devem ter âmbito mínimo (ex: apenas leitura, apenas para um job específico);
    - Evitar o uso de “segredos globais” partilhados entre pipelines ou ambientes.
 
 3. **Injeção temporária e em tempo de execução**  
@@ -55,7 +55,7 @@ Esta prática define os controlos obrigatórios para garantir a **confidencialid
 
 | Nível | Requisitos obrigatórios                              | Requisitos reforçados                                  |
 |-------|--------------------------------------------------------|---------------------------------------------------------|
-| **L1** | Segredos como variáveis seguras; logs protegidos       | —                                                       |
+| **L1** | Segredos como variáveis seguras; logs protegidos       | -                                                       |
 | **L2** | Segregação por ambiente e job; injeção em runtime      | Revogação centralizada; desativação de roaming          |
 | **L3** | Vault externo; rotação automática; segregação fina     | Auditoria de uso; alertas de acesso indevido            |
 
@@ -64,15 +64,15 @@ Esta prática define os controlos obrigatórios para garantir a **confidencialid
 ## 📌 Exemplos práticos
 
 - **GitHub Actions**  
-  - Uso de `secrets.*` com escopo mínimo e proteção `masked: true`;  
+  - Uso de `secrets.*` com âmbito mínimo e proteção `masked: true`;  
   - Ativação de audit logs no GitHub Enterprise.
 
 - **GitLab CI**  
-  - `CI/CD Variables` com `masked`, `protected` e escopo por ambiente;  
+  - `CI/CD Variables` com `masked`, `protected` e âmbito por ambiente;  
   - Integração com HashiCorp Vault.
 
 - **Azure DevOps**  
-  - `Variable Groups` com escopo por pipeline e ambiente;  
+  - `Variable Groups` com âmbito por pipeline e ambiente;  
   - Uso de `SecureString` e `Key Vault References`.
 
 - **Jenkins**  
@@ -89,11 +89,3 @@ Esta prática define os controlos obrigatórios para garantir a **confidencialid
 - Acesso lateral por pipelines não autorizados ou jobs maliciosos.
 
 ---
-
-## 🧭 Referências
-
-- [OWASP CI/CD Security – 2. Secret Management](https://owasp.org/www-project-cicd-security/#2-secret-management)
-- [NIST SSDF – PW.6: Manage Secrets](https://csrc.nist.gov/publications/detail/sp/800-218/final)
-- [SLSA – Build Isolation & Parameter Injection](https://slsa.dev/spec/v1.0/)
-- [BSIMM – SE2.5, CR2.3]
-- [SAMM – Secure Build – Environment Hardening]

@@ -9,7 +9,7 @@ tags: [dependencias, sbom, sca, supply-chain]
 
 ## 🌟 Objetivo
 
-Garantir que todas as aplicações têm um **inventário completo, rastreável e versionado** das bibliotecas e componentes utilizados — conhecido como **SBOM (Software Bill of Materials)** — como medida fundamental para:
+Garantir que todas as aplicações têm um **inventário completo, rastreável e versionado** das bibliotecas e componentes utilizados - conhecido como **SBOM (Software Bill of Materials)** - como medida fundamental para:
 
 - Mitigar riscos de terceiros e da cadeia de fornecimento;
 - Acelerar a resposta a vulnerabilidades públicas (ex: CVE);
@@ -29,7 +29,7 @@ Um **SBOM** é um ficheiro estruturado que descreve todos os componentes de soft
 - Dependências transitivas
 - Relacionamentos (ex: runtime, dev, optional)
 
-> ⚠️ Um SBOM **não é um lockfile** — é um artefacto formal, estandardizado e processável por ferramentas de segurança.
+> ⚠️ Um SBOM **não é um lockfile** - é um artefacto formal, estandardizado e processável por ferramentas de segurança.
 
 ---
 

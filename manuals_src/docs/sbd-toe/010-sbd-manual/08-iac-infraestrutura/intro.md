@@ -5,40 +5,20 @@ description: Práticas de segurança para definição, validação e gestão de 
 tags: [infraestrutura, iac, terraform, segurança, automatização, DSOMM, SAMM, SLSA, SSDF]
 sidebar_position: 0
 ---
-import Badge from '@site/src/components/Badge';
 
 :::tip Capítulo Operacional
 Este capítulo é considerado **operacional** no modelo *Security by Design – Theory of Everything (SbD-ToE)*.  
 A sua função é **aplicar, automatizar e validar** as práticas definidas nos capítulos basilares, garantindo a sua execução contínua e mensurável.  
 
-Os capítulos operacionais implementam o SbD-ToE em contextos técnicos específicos, incluindo:
-- **Gestão de dependências e SBOM/SCA** (Cap. 05)  
-- **Pipelines CI/CD e automação de controlo** (Cap. 07)  
-- **Infraestrutura como Código (IaC)** (Cap. 08)  
-- **Containers e imagens seguras** (Cap. 09)  
-- **Testes de segurança e validação técnica** (Cap. 10)  
-- **Deploy seguro, observabilidade e resposta** (Cap. 11 – 12)  
-
-Estes capítulos traduzem as prescrições basilares em práticas de **execução verificável**, promovendo a **integração contínua da segurança** ao longo do ciclo de vida do software.
+Os capítulos operacionais implementam o SbD-ToE em contextos técnicos específicos. Estes capítulos traduzem as prescrições basilares em práticas de **execução verificável**, promovendo a **integração contínua da segurança** ao longo do ciclo de vida do software.
 :::
-
-
-<div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.5rem', marginBottom: '1rem' }}>
-  
-  <Badge color="info">SAMM: 2 / 3</Badge>
-  <Badge color="info">BSIMM: CMVM1.1, CMVM2.3, CP1.2</Badge>
-  <Badge color="info">SSDF: PW.5, CM.1, PS.2, PW.6</Badge>
-  <Badge color="info">SLSA: Nível 2 / 4</Badge>
-  <Badge color="info">DSOMM: 3 / 4 (média)</Badge>
-  <a href="./achievable-maturity" style={{ marginLeft: 'auto', fontSize: '0.9rem' }}>📄 Ver análise de maturidade</a>
-</div>
 
 # Segurança em Infraestrutura como Código (IaC)
 
 A definição de infraestruturas através de código (Terraform, Pulumi, CloudFormation, etc.) tornou-se prática comum.  
 Esta abordagem trouxe ganhos claros de rapidez, consistência e escalabilidade. Mas, como qualquer tecnologia transformadora, trouxe também **novos riscos**: erros de configuração, permissões excessivas, uso de módulos maliciosos ou ambientes mal segregados.  
 
-Este capítulo prescreve como **tratar o IaC como software crítico** — com requisitos, testes, ciclo de vida e auditoria.  
+Este capítulo prescreve como **tratar o IaC como software crítico** - com requisitos, testes, ciclo de vida e auditoria.  
 A ideia central é simples: se o IaC define a base onde o software corre, então **a sua segurança determina a segurança de tudo o resto**.
 
 ---
@@ -76,7 +56,7 @@ Para transformar recomendações em práticas de engenharia aplicáveis, a organ
 ## ⚙️ Como deve ser feito
 
 A execução depende de ferramentas práticas e da sua integração disciplinada em pipelines.  
-Não basta confiar na experiência da equipa — é preciso **automatizar e auditar**:
+Não basta confiar na experiência da equipa - é preciso **automatizar e auditar**:
 
 - Ferramentas de scanning: `tfsec`, `checkov`, `kics`, `terrascan`  
 - Enforcement: `OPA`, `Sentinel`, `Conftest`  

@@ -2,12 +2,12 @@
 id: achievable-maturity
 title: Mapeamento de Maturidade – Capítulo 07
 sidebar_position: 10
-tags: [canon, maturidade, SAMM, BSIMM, SSDF, SLSA, DSOMM]
+tags: [canon, maturidade, SAMM, SSDF, SLSA, DSOMM]
 ---
 
-# 📈 Maturidade — CI/CD Seguro
+# 📈 Maturidade - CI/CD Seguro
 
-Este documento apresenta o mapeamento entre as práticas descritas no Capítulo 07 do SbD-ToE — *CI/CD Seguro* — e os principais frameworks de segurança e maturidade:
+Este documento apresenta o mapeamento entre as práticas descritas no Capítulo 07 do SbD-ToE - *CI/CD Seguro* - e os principais frameworks de segurança e maturidade:
 
 - **OWASP SAMM**
 - **BSIMM**
@@ -51,7 +51,7 @@ Este mapeamento **não mede a maturidade da organização**, mas sim o **nível 
 |-------|------------------------------------------------------------------|----------------------------------------------------------|
 | 1     | Processos de build manuais e não auditáveis                     | ✅ Formalização mínima exigida                           |
 | 2     | Pipelines automatizadas com validações e autenticação           | ✅ Execução autenticada e validada                       |
-| 3     | Ambientes segregados com integração de controlos contínuos      | ❌ Parcial — depende de controlo externo à pipeline      |
+| 3     | Ambientes segregados com integração de controlos contínuos      | ❌ Parcial - depende de controlo externo à pipeline      |
 
 **🧮 Maturidade atingida: 2 / 3**
 

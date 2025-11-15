@@ -109,6 +109,6 @@ Garantir que todos os projetos IaC são desenhados e mantidos com base em princ�
 | Documento                     | Relação com esta prática                                      |
 | ----------------------------- | ------------------------------------------------------------- |
 | `02-matriz-requisitos-iac.md` | Requisitos `IAC-002`, `IAC-005`, `REQ-004`, `REQ-006`         |
-| SAMM (AA2.1, CM1.3)           | Padrões arquiteturais e controlo de mudança                   |
+| SAMM (AA2.1, CM1.3)           | Padrões de arquitetura e controlo de mudança                   |
 | SSDF (CM.5)                   | Design seguro e separação de ambientes                        |
 | SLSA (Source & Provenance)    | Fiabilidade de origem e rastreabilidade no controlo de código |

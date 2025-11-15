@@ -7,11 +7,11 @@ sidebar_position: 50
 ---
 
 
-# 🔐 Ameaças Mitigadas — Capítulo 07: CI/CD Seguro
+# 🔐 Ameaças Mitigadas - Capítulo 07: CI/CD Seguro
 
 Este capítulo define práticas para **segurança de pipelines CI/CD**, incluindo controlo de código-fonte, validações automáticas, proteção de runners, gestão de segredos, rastreabilidade e proveniência de artefactos.
 
-> ⚠️ As ameaças mitigadas estão entre as mais críticas da cadeia de software moderno — como demonstrado pelos incidentes de SolarWinds, Codecov, CircleCI, entre outros.
+> ⚠️ As ameaças mitigadas estão entre as mais críticas da cadeia de software moderno - como demonstrado pelos incidentes de SolarWinds, Codecov, CircleCI, entre outros.
 
 ---
 
@@ -88,4 +88,4 @@ O Capítulo 07 é o principal **mecanismo de defesa operacional contra ataques �
 
 > 📌 O capítulo é essencial para conformidade com **SLSA**, **SSDF**, **BSIMM**, **OWASP CI/CD**, **ENISA DevSecOps**, e para evitar falhas sistémicas na cadeia de produção de software.
 
-> 🧩 As práticas descritas neste capítulo alinham-se diretamente com os cinco domínios operacionais do **OWASP DSOMM** — *Build*, *Test*, *Release*, *Operate* e *Govern* — mitigando ameaças estruturais e sistémicas da automação CI/CD moderna.
+> 🧩 As práticas descritas neste capítulo alinham-se diretamente com os cinco domínios operacionais do **OWASP DSOMM** - *Build*, *Test*, *Release*, *Operate* e *Govern* - mitigando ameaças estruturais e sistémicas da automação CI/CD moderna.

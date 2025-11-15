@@ -19,3 +19,13 @@ Organizado por 14 áreas principais de segurança aplicacional. Cada uma contém
 
 ## Deploy
 Este site é gerado com [Docusaurus](https://docusaurus.io) e publicado via GitHub Pages.
+
+## Segurança
+Este projeto implementa práticas rigorosas de segurança:
+- 🔒 **CodeQL** - Análise automatizada de segurança de código
+- 🤖 **Dependabot** - Monitorização e atualização automática de dependências
+- 🛡️ **Branch Protection** - Proteções rigorosas no branch principal
+- 👥 **Code Owners** - Revisão obrigatória de alterações críticas
+- 📋 **Security Policy** - Processo de divulgação responsável
+
+Para mais detalhes, consulte [SECURITY.md](SECURITY.md) e [SECURITY-CONFIG.md](SECURITY-CONFIG.md).

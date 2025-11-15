@@ -5,31 +5,12 @@ description: Princípios e controlos para garantir um processo de deploy seguro,
 tags: [deploy, segurança, produção, rollback, gates, sdlc]
 sidebar_position: 0
 ---
-import Badge from '@site/src/components/Badge';
-
-<div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.5rem', marginBottom: '1rem' }}>
-  
-  <Badge color="info">SAMM: 2 / 3</Badge>
-  <Badge color="info">BSIMM: SE3.2, SE3.5, CMVM2.3</Badge>
-  <Badge color="info">SSDF: RV.1, RV.4, PO.5</Badge>
-  <Badge color="info">SLSA: Nível 3 / 4</Badge>
-  <Badge color="info">DSOMM: 2 / 3 (Release & Deploy)</Badge>
-  <a href="./achievable-maturity" style={{ marginLeft: 'auto', fontSize: '0.9rem' }}>📄 Ver análise de maturidade</a>
-</div>
 
 :::tip Capítulo Operacional
 Este capítulo é considerado **operacional** no modelo *Security by Design – Theory of Everything (SbD-ToE)*.  
 A sua função é **aplicar, automatizar e validar** as práticas definidas nos capítulos basilares, garantindo a sua execução contínua e mensurável.  
 
-Os capítulos operacionais implementam o SbD-ToE em contextos técnicos específicos, incluindo:
-- **Gestão de dependências e SBOM/SCA** (Cap. 05)  
-- **Pipelines CI/CD e automação de controlo** (Cap. 07)  
-- **Infraestrutura como Código (IaC)** (Cap. 08)  
-- **Containers e imagens seguras** (Cap. 09)  
-- **Testes de segurança e validação técnica** (Cap. 10)  
-- **Deploy seguro, observabilidade e resposta** (Cap. 11 – 12)  
-
-Estes capítulos traduzem as prescrições basilares em práticas de **execução verificável**, promovendo a **integração contínua da segurança** ao longo do ciclo de vida do software.
+Os capítulos operacionais implementam o SbD-ToE em contextos técnicos específicos. Estes capítulos traduzem as prescrições basilares em práticas de **execução verificável**, promovendo a **integração contínua da segurança** ao longo do ciclo de vida do software.
 :::
 
 
@@ -38,20 +19,20 @@ Estes capítulos traduzem as prescrições basilares em práticas de **execuçã
 ## 
 
 O momento de *deploy* é, por natureza, o mais delicado de todo o ciclo de vida. Até ao último instante, a aplicação pode estar íntegra, testada e auditada; mas se a passagem a produção for feita de forma insegura, todo o investimento anterior perde valor.  
-Estudos de incidentes (BSIMM, ENISA Threat Landscape, relatórios de falhas DevOps) mostram que mais de 40% dos compromissos de segurança associados ao software ocorrem na **fase de release e operação inicial**, seja por falhas de rastreabilidade, ausência de rollback ou uso de artefactos não confiáveis.  
+Estudos de incidentes (ENISA Threat Landscape, relatórios de falhas DevOps) demonstram que o comprometimento de segurança associados ao software ocorrem na **fase de release e operação inicial**, seja por falhas de rastreabilidade, ausência de rollback ou uso de artefactos não confiáveis.  
 
 Este capítulo não se limita a “executar o pipeline”. Procura sim **estabelecer práticas que tornem cada deploy auditável, reversível e proporcional ao risco da aplicação**.  
-A segurança do deploy não é apenas uma questão técnica: é também uma forma de governação — traduz-se na capacidade de explicar, perante uma auditoria ou incidente, *quem decidiu*, *o que foi aprovado* e *como se garantiu a integridade do que chegou a produção*.  
+A segurança do deploy não é apenas uma questão técnica: é também uma forma de governação - traduz-se na capacidade de explicar, perante uma auditoria ou incidente, *quem decidiu*, *o que foi aprovado* e *como se garantiu a integridade do que chegou a produção*.  
 
 👉 Este capítulo complementa:  
-- **Cap. 07 — CI/CD Seguro**, onde se garante a integridade do build e pipelines.  
-- **Cap. 12 — Monitorização e Operações**, que cobre a deteção de anomalias e resposta a incidentes no runtime.  
+- **Cap. 07 - CI/CD Seguro**, onde se garante a integridade do build e pipelines.  
+- **Cap. 12 - Monitorização e Operações**, que cobre a deteção de anomalias e resposta a incidentes no runtime.  
 
 ---
 
 ## 🧭 O que cobre tecnicamente
 
-O escopo técnico do *deploy seguro* cobre os seguintes eixos principais:
+O âmbito técnico do *deploy seguro* cobre os seguintes eixos principais:
 
 - Aprovação formal e gates automáticos de release, com critérios definidos por severidade.  
 - Deploy apenas a partir de artefactos assinados, com proveniência validada e SBOM associado.  
@@ -94,20 +75,6 @@ Nenhum *deploy* seguro é responsabilidade de um só perfil. A prática exige **
 - **Gestão de Produto** → toma a decisão final de *go/no-go* e documenta a aceitação de risco residual.  
 
 Esta matriz de papéis não é opcional: é o que garante que **cada deploy é simultaneamente técnico e governado**, capaz de resistir tanto a falhas operacionais como a escrutínio regulatório.  
-
----
-
-## 📚 Alinhamento com frameworks
-
-As práticas deste capítulo alinham-se com múltiplos referenciais:
-
-- **OWASP SAMM** → OE2-A, ST3-B (governação e release).  
-- **BSIMM** → SE3.2, SE3.5, CMVM2.3 (controles de release e rollback).  
-- **SSDF** → RV.1, RV.4, PO.5 (release validation e rastreabilidade).  
-- **SLSA** → Nível 3 / 4 (garantia de integridade e proveniência de releases).  
-- **DSOMM** → Release & Deploy Practices (maturidade DevSecOps no deploy).  
-
-O cumprimento integral destas práticas posiciona a organização num patamar elevado de conformidade, ao mesmo tempo que reduz a probabilidade e o impacto de incidentes em produção.
 
 ---
 

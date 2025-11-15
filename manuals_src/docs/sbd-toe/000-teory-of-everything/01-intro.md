@@ -1,19 +1,19 @@
 ---
 id: intro
-title: Introdução — Theory of Everything
-description: Enquadramento histórico, filosófico e científico do Security by Design — Theory of Everything, com ligação a normas, frameworks e regulamentos como NIS2 e DORA
+title: Introdução - Theory of Everything
+description: Enquadramento histórico, filosófico e científico do Security by Design - Theory of Everything, com ligação a normas, frameworks e regulamentos como NIS2 e DORA
 tags: [introducao, teoria, fundamentos, sbdtoe, regulacao, nis2, dora]
 sidebar_position: 0
 ---
 
 
 
-# Introdução — Theory of Everything
+# Introdução - Theory of Everything
 
 Durante demasiado tempo, a segurança de software foi tratada como um adereço tardio: recomendações genéricas aplicadas no final, quando o produto já se encontrava concluído e em produção.  
 A experiência acumulada mostra que essa abordagem conduz inevitavelmente a custos elevados, vulnerabilidades persistentes e falhas de confiança que corroem tanto organizações como utilizadores.  
 
-O **Security by Design — Theory of Everything (SbD-ToE)** nasceu para contrariar essa realidade.  
+O **Security by Design - Theory of Everything (SbD-ToE)** nasceu para contrariar essa realidade.  
 Não se limita a apresentar um catálogo de boas práticas; procura articular uma visão coerente e unificada, que conecta normas, modelos de maturidade, catálogos de ameaças e exigências regulatórias a um conjunto de prescrições claras, **proporcionais ao risco** e **verificáveis em qualquer contexto organizacional**.  
 
 Este Capítulo 00 é o ponto de partida. Explica a origem, a filosofia e os fundamentos que sustentam o manual.  
@@ -24,7 +24,7 @@ Mais do que um guia técnico, funciona como narrativa estruturante: mostra o por
 ## 🌍 Origem e Motivação
 
 O SbD-ToE não resulta de abstrações académicas isoladas, mas de uma constatação prática: **a segurança de software estava fragmentada**.  
-As organizações viam-se obrigadas a navegar entre múltiplos referenciais — OWASP SAMM, BSIMM, NIST SSDF, ISO/IEC, ENISA, SLSA — cada um valioso, mas raramente convergente.  
+As organizações viam-se obrigadas a navegar entre múltiplos referenciais - OWASP SAMM, BSIMM, NIST SSDF, ISO/IEC, ENISA, SLSA - cada um valioso, mas raramente convergente.  
 Em paralelo, catálogos de ameaças como STRIDE, CAPEC, CWE ou OSC&R descreviam um panorama de riscos cada vez mais vasto e dinâmico.  
 
 Nos últimos anos, essa fragmentação passou a ter também uma dimensão regulatória:  
@@ -63,13 +63,13 @@ O resultado é triplo:
 
 A aplicação prática do SbD-ToE segue uma sequência lógica:  
 
-1. **Classificar a criticidade da aplicação** — definir o nível de risco antes de qualquer decisão técnica.  
-2. **Derivar requisitos mínimos** — garantir que o essencial está sempre presente.  
-3. **Aplicar práticas específicas por domínio** — arquitetura, dependências, CI/CD, containers, etc.  
-4. **Verificar proporcionalidade (L1–L3)** — assegurar que o esforço acompanha o risco.  
-5. **Auditar e evoluir** — porque a segurança não é estática.  
+1. **Classificar a criticidade da aplicação** - definir o nível de risco antes de qualquer decisão técnica.  
+2. **Derivar requisitos mínimos** - garantir que o essencial está sempre presente.  
+3. **Aplicar práticas específicas por domínio** - arquitetura, dependências, CI/CD, containers, etc.  
+4. **Verificar proporcionalidade (L1–L3)** - assegurar que o esforço acompanha o risco.  
+5. **Auditar e evoluir** - porque a segurança não é estática.  
 
-Cada capítulo inclui ainda uma secção de **autoavaliação** que mostra como as práticas prescritas se alinham com referenciais reconhecidos: **SAMM, BSIMM, SSDF, DSOMM, SLSA**.  
+Cada capítulo inclui ainda uma secção de **autoavaliação** que mostra como as práticas prescritas se alinham com referenciais reconhecidos: **SAMM, SSDF, DSOMM, ASVS, SLSA**.  
 
 E, de forma complementar, evidencia como essas mesmas práticas ajudam a demonstrar conformidade com **NIS2**, **DORA** e outros regulamentos relevantes.  
 Assim, o SbD-ToE funciona não só como guia técnico, mas também como **mecanismo de tradução** entre o quotidiano das equipas e os requisitos legais de alto nível.
@@ -81,9 +81,9 @@ Assim, o SbD-ToE funciona não só como guia técnico, mas também como **mecani
 O valor científico do SbD-ToE assenta na diversidade das suas fontes:  
 
 - **Modelos de maturidade**: OWASP SAMM v2.1, OWASP DSOMM.  
-- **Práticas observadas em larga escala**: BSIMM13.  
-- **Guias normativos**: NIST SSDF (SP 800-218), ISO/IEC 27001, 27005 e 27034.  
-- **Referenciais de cadeia de software**: SLSA v1.0, ENISA Supply Chain Security Guidance.  
+- **Práticas observadas em larga escala**: BSIMM13 (do que é inferido em consulta publica).  
+- **Guias normativos**: NIST SSDF (SP 800-218), ISO/IEC 27001, 27005 e 27034 (do que é inferido em consulta publica).  
+- **Referenciais de cadeia de software**: SLSA v1.0, ENISA Good Pratices for Supply Chain Cybersecurity .  
 - **Catálogos de ameaças**: OSC&R, STRIDE, CAPEC, CWE, OWASP Top 10.  
 - **Regulamentos obrigatórios**: NIS2, DORA, AI Act, GDPR.  
 
@@ -96,7 +96,7 @@ Cada prescrição é rastreável a uma ou mais destas referências, assegurando 
 A segurança é, antes de mais, uma **responsabilidade partilhada**.  
 Nenhuma equipa isolada consegue, sozinha, alcançar resiliência sustentável.  
 
-O SbD-ToE identifica desde logo os papéis que intervêm no ciclo de vida — Developers, QA, Product Owners, DevOps, AppSec, GRC, gestão executiva, fornecedores e auditores.  
+O SbD-ToE identifica desde logo os papéis que intervêm no ciclo de vida - Developers, QA, Product Owners, DevOps, AppSec, GRC, gestão executiva, fornecedores e auditores.  
 Cada capítulo detalha responsabilidades específicas, mas o Cap. 00 oferece uma visão global: **quem são os intervenientes e o que se espera de cada um**.  
 
 Esta clareza é o primeiro passo para transformar a segurança de um esforço fragmentado numa função coletiva.
@@ -106,7 +106,7 @@ Esta clareza é o primeiro passo para transformar a segurança de um esforço fr
 ## 📐 Proporcionalidade por Nível de Risco
 
 Um dos pilares do SbD-ToE é a proporcionalidade.  
-São definidos três níveis de aplicação — **L1, L2 e L3** — que refletem a criticidade da aplicação:  
+São definidos três níveis de aplicação - **L1, L2 e L3** - que refletem a criticidade da aplicação:  
 
 - **L1**: cobre software de baixo risco, garantindo mínimos obrigatórios.  
 - **L2**: reforça práticas para sistemas de importância moderada.  

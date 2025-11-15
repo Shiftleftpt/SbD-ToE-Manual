@@ -1,38 +1,16 @@
 ---
 id: intro
-title: Introdução — Desenvolvimento Seguro
+title: Introdução - Desenvolvimento Seguro
 description: Práticas de codificação segura, curadoria e seleção de guidelines, validação automatizada e governação durante o desenvolvimento
 tags: [desenvolvimento, segurança, guidelines de código, linters, SAST, governação]
 sidebar_position: 0
 ---
 
-import Badge from '@site/src/components/Badge';
-
-
-
-<div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.5rem', marginBottom: '1rem' }}>
-  
-  <Badge color="info">SAMM: 2 / 3</Badge>
-  <Badge color="info">BSIMM: SE2.3, SE2.4, CP1.1</Badge>
-  <Badge color="info">SSDF: PS.1, PS.2, RV.1, RV.2, PO.2</Badge>
-  <Badge color="info">SLSA: Nível 2 / 4</Badge>
-  <Badge color="info">DSOMM: 2 / 3 (média)</Badge>
-  <a href="./achievable-maturity" style={{ marginLeft: 'auto', fontSize: '0.9rem' }}>📄 Ver análise de maturidade</a>
-</div>
-
 :::tip Capítulo Operacional
 Este capítulo é considerado **operacional** no modelo *Security by Design – Theory of Everything (SbD-ToE)*.  
 A sua função é **aplicar, automatizar e validar** as práticas definidas nos capítulos basilares, garantindo a sua execução contínua e mensurável.  
 
-Os capítulos operacionais implementam o SbD-ToE em contextos técnicos específicos, incluindo:
-- **Gestão de dependências e SBOM/SCA** (Cap. 05)  
-- **Pipelines CI/CD e automação de controlo** (Cap. 07)  
-- **Infraestrutura como Código (IaC)** (Cap. 08)  
-- **Containers e imagens seguras** (Cap. 09)  
-- **Testes de segurança e validação técnica** (Cap. 10)  
-- **Deploy seguro, observabilidade e resposta** (Cap. 11 – 12)  
-
-Estes capítulos traduzem as prescrições basilares em práticas de **execução verificável**, promovendo a **integração contínua da segurança** ao longo do ciclo de vida do software.
+Os capítulos operacionais implementam o SbD-ToE em contextos técnicos específicos. Estes capítulos traduzem as prescrições basilares em práticas de **execução verificável**, promovendo a **integração contínua da segurança** ao longo do ciclo de vida do software.
 :::
 
 # Desenvolvimento Seguro
@@ -42,7 +20,7 @@ O desenvolvimento é o **coração do ciclo de vida do software**.
 Por isso, este capítulo é considerado **basilar**: sem práticas consistentes de codificação segura, todos os controlos posteriores (CI/CD, testes, IaC ou containers) tornam-se apenas paliativos.
 
 A evidência é clara: o **Verizon DBIR** e vários estudos académicos mostram que mais de um quarto das falhas exploradas têm origem em más práticas de programação.  
-A boa notícia é que estas falhas podem ser prevenidas com medidas sistemáticas e auditáveis — desde guidelines claras e linters automatizados até revisões formais, governação de exceções e, mais recentemente, o **uso validado de GenIA**.  
+A boa notícia é que estas falhas podem ser prevenidas com medidas sistemáticas e auditáveis - desde guidelines claras e linters automatizados até revisões formais, governação de exceções e, mais recentemente, o **uso validado de GenIA**.  
 O objetivo não é burocracia, mas criar um ambiente onde cada decisão de desenvolvimento deixa **evidência objetiva** de segurança aplicada.
 
 ---

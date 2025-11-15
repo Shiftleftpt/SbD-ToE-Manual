@@ -127,8 +127,8 @@ Cada cláusula deve incluir:
 
 | Documento / Capítulo                 | Relação com cláusulas contratuais                   |
 |--------------------------------------|-----------------------------------------------------|
-| Capítulo 01 — Gestão de Risco        | Define a proporcionalidade por nível L1–L3         |
-| Capítulo 02 — Requisitos de Segurança| Catálogo e requisitos aplicáveis por risco         |
+| Capítulo 01 - Gestão de Risco        | Define a proporcionalidade por nível L1–L3         |
+| Capítulo 02 - Requisitos de Segurança| Catálogo e requisitos aplicáveis por risco         |
 | addon/03-modelo-validacao-fornecedores.md | Requisitos de onboarding contratual               |
 | canon/20-checklist-revisao.md        | Verifica a formalização e aplicação contratual      |
 

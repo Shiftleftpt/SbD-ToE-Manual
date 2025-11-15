@@ -7,7 +7,7 @@ sidebar_position: 20
 ---
 
 
-# ✅ Checklist de Revisão Periódica — Testes de Segurança
+# ✅ Checklist de Revisão Periódica - Testes de Segurança
 
 Este checklist aplica-se a todas as aplicações que exigem validação de segurança no seu ciclo de vida, e serve como instrumento de verificação **binária e auditável** da **adoção prática das prescrições do Capítulo 10 – Testes de Segurança**, permitindo:
 
@@ -27,7 +27,7 @@ Este checklist aplica-se a todas as aplicações que exigem validação de segur
 | A estratégia de testes considera a arquitetura da aplicação e os vetores de ameaça mais críticos          | ☐           |
 | Foram aplicados testes mínimos obrigatórios conforme o tipo de aplicação (ex: APIs, serviços, UI, mobile) | ☐           |
 | O pipeline executa SAST de forma automática e rastreável                                                  | ☐           |
-| O pipeline executa DAST com escopo, cobertura e autenticação definidos (quando aplicável)                | ☐           |
+| O pipeline executa DAST com âmbito, cobertura e autenticação definidos (quando aplicável)                | ☐           |
 | A aplicação foi submetida a fuzzing ou testes dinâmicos aleatórios                                        | ☐           |
 | Foram realizados testes manuais exploratórios dirigidos por threat modeling (quando aplicável)           | ☐           |
 | Existem testes de regressão de segurança para vulnerabilidades previamente resolvidas                     | ☐           |
@@ -43,7 +43,7 @@ Este checklist aplica-se a todas as aplicações que exigem validação de segur
 | Existe rastreabilidade entre testes realizados e requisitos de segurança definidos (ex: REQ-XXX)          | ☐           |
 | O plano de testes de segurança está versionado no repositório ou documentado como artefacto de release    | ☐           |
 | As práticas de validação estão integradas no ciclo de vida da aplicação (build, test, release, operação)  | ☐           |
-| Foi realizado PenTesting com escopo definido e rastreabilidade dos findings (quando aplicável)            | ☐           |
+| Foi realizado PenTesting com âmbito definido e rastreabilidade dos findings (quando aplicável)            | ☐           |
 | Os resultados do PenTesting foram integrados com os restantes findings e tratados formalmente             | ☐           |
 | A eficácia dos testes é medida com métricas (ex: taxa de deteção, regressão, cobertura funcional)         | ☐           |
 
@@ -61,7 +61,7 @@ Este checklist aplica-se a todas as aplicações que exigem validação de segur
 
 ## ✅ Conformidade e KPI
 
-- A validação deste checklist permite declarar **conformidade com o Capítulo 10 — Testes de Segurança**;
+- A validação deste checklist permite declarar **conformidade com o Capítulo 10 - Testes de Segurança**;
 - A contagem de respostas afirmativas pode ser usada para **medir o grau de adoção das práticas prescritas**;
 - Este resultado pode ser agregado por equipa ou projeto como **indicador de maturidade operacional**.
 

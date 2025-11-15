@@ -3,9 +3,9 @@ id: policies-relevantes
 title: Policies
 ---
 
-# 🏛️ Políticas Organizacionais — Formação e Onboarding Seguro
+# 🏛️ Políticas Organizacionais - Formação e Onboarding Seguro
 
-A aplicação eficaz do Capítulo 13 — Formação e Onboarding Seguro — depende da existência de **políticas formais organizacionais** que sustentem:
+A aplicação eficaz do Capítulo 13 - Formação e Onboarding Seguro - depende da existência de **políticas formais organizacionais** que sustentem:
 
 - A obrigatoriedade da formação mínima por função e por acesso;
 - A validação objetiva de conhecimento antes da atribuição de permissões;
@@ -30,17 +30,6 @@ A aplicação eficaz do Capítulo 13 — Formação e Onboarding Seguro — depe
 | Política de Gestão de Conteúdos Formativos | Recomendada | Equipa AppSec, Champions e responsáveis por formação     | Estrutura modular por capítulo do SbD-ToE, templates versionados e artefactos aplicáveis aos projetos              |
 | Política de Indicadores de Formação        | Recomendada | Equipas de segurança, qualidade e governance             | KPIs de cobertura formativa por equipa, métricas de validação, alertas para formação incompleta ou desatualizada   |
 | Política de Atualização Formativa          | Opcional    | AppSec, equipa de formação e Champions                   | Revisão periódica de conteúdos, atualização após alterações relevantes (ex: incidentes, mudanças no SbD-ToE)       |
-
----
-
-## 📚 Referências normativas associadas
-
-| Referência              | Ligação com políticas propostas                                               |
-|-------------------------|------------------------------------------------------------------------------|
-| OWASP SAMM EDU1         | Educação formal de stakeholders                                              |
-| BSIMM SE1, SE2, SE3     | Programas de formação contínua, verificação prática, cultura de segurança    |
-| NIST SSDF PO.3          | Formação e sensibilização por função e perfil de risco                       |
-| ISO/IEC 27001 A.6.1.2   | Formação de pessoal com responsabilidade em segurança                        |
 
 ---
 

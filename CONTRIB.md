@@ -1,116 +1,194 @@
 # Guia de Contribuição – Manual SbD-ToE
 
-Este guia define as regras para a criação e manutenção dos capítulos do manual **Security by Design – Theory of Everything**.
+Este guia define as regras a colaboração Git adotado no repositório. 
+Para além destas regras, a criação de conteudo deverá seguir a linha editorial definida em `guia-editorial.md`.
 
 ---
 
-## 📁 Estrutura de capítulos
+## 🔄 Utilização do Git e fluxo de contribuição {#git-fluxo-contribuicao}
 
->> Nota: podem existir varios manuais, complementares ou independentes. sbd-manual é o primeiro, mas poderá existir um SSCS-manual, GenAI-manual, etc. Este documento é aplicavel ao manual inicial, sbd-manual, e a outros que venham a ser criados.
+O repositório utiliza o modelo **Trunk-Based Development**, tendo `master` como ramo principal.
 
-Cada capítulo técnico está localizado em:
+### Estrutura de branches
 
-```
-docs/sbd-toe/sbd-manual/XX-nome-do-capitulo/
-```
+| Tipo de branch         | Padrão                          | Objetivo                                                         |
+| ---------------------- | ------------------------------- | ---------------------------------------------------------------- |
+| **Principal**          | `master`                        | Fonte de verdade; contém sempre o conteúdo validado e publicável |
+| **Feature**            | `feat/<tema>`                   | Novo conteúdo ou melhoria de capítulo                            |
+| **Fix**                | `fix/<tema>`                    | Correções pontuais                                               |
+| **Chore / Docs**       | `chore/<tema>` ou `docs/<tema>` | Tarefas de build, scripts ou documentação auxiliar               |
+| **Release (opcional)** | `release/vX.Y.Z`                | Congelar conjunto para publicação (tag)                          |
+| **Hotfix (opcional)**  | `hotfix/<tema>`                 | Correção imediata pós-release                                    |
 
-Com a seguinte estrutura:
+### Fluxo de contribuição
 
-```
-├── _category_.json
-├── intro.md
-└── addons/
-    ├── achievable-maturity              (obrigatório, conteúdo específico)
-    ├── 15-aplicacao-lifecycle.md     (obrigatório, conteúdo específico)
-    ├── 20-checklist-revisao.md       (obrigatório, conteúdo específico)
-    ├── 01-*.md, 02-*.md, etc.         (addons específicos por capítulo)
-```
+1. Criar uma branch a partir de `master`:
 
----
+   ```bash
+   git switch -c feat/cap14-kpis
+   ```
+2. Editar e validar localmente (ver secção “Validação local obrigatória”):
 
-## 📌 Ficheiros obrigatórios
+   ```bash
+   npm run build     # valida site web
+   ```
+3. Utilizar mensagens de *commit* curtas e claras:
 
-cada capitulo tem que conter pelo menos o seguinte:
+   ```
+   feat(cap14): adicionar KPIs de governação
+   fix(cap05): corrigir referência cruzada no 50-ameacas
+   chore(build): estabilizar anchors para LaTeX
+   ```
+4. Subir a branch e abrir um *Pull Request* para `master`.
+5. Realizar o *merge* através de **Squash and Merge**, após a passagem dos *checks*.
 
-| Ficheiro                   | Descrição                                                                 |
-|----------------------------|---------------------------------------------------------------------------|
-| `intro.md`                | Corpo principal do capítulo, inclui objetivos, práticas e recomendações   |
-| `achievable-maturity`        | Mapeamento do capítulo para frameworks de maturidade (SAMM, NIST, etc.)   |
-| `aplicacao-lifecycle.md` | Quando e como aplicar as práticas do capítulo no ciclo de vida           |
+#### Validação local obrigatória (Makefile `src/publish`)
 
-## 📌 Ficheiros recomendados
-Não obrigatorios mas, fortemente, recomendados são os:
+Antes de submeter um *Pull Request*, é obrigatório efetuar o *build* localmente através do Makefile dedicado.
+Este processo cria um diretório limpo e isolado (`_out/web`) e evita a contaminação do repositório principal.
 
-| Ficheiro                   | Descrição                                                                 |
-|----------------------------|---------------------------------------------------------------------------|
-| `policies-relevantes.md`   | que descreve o documento policy que regula a pratica, que de acordo com a maturidade da organização deverá ser incluindo como policy da organização  |
-| `recomendacoes-avancadas`        | caso existam praticas ou atividades a desenvolver que possam beneficiar a organização no desempenho dos conceitos do capitulo  |
+> Requisitos: Node **>= 20** e npm.
+> O Makefile executa `npm install` no diretório de *build*.
 
----
+Comandos principais (a partir da raiz do repositório):
 
-## 🧩 Addons específicos
-
-Cada capítulo pode ter ficheiros adicionais explicativos de cada "intro.md", que detalham com rigor técnico e cientifico o que se pretende com o capitulo Estes documentos são colocados em `addon` e deverão usar prefixos `01-`, `02-`, etc., conforme aplicável. 
-
-Exemplos:
-- `01-modelo-classificacao-eixos.md`
-- `02-casos-praticos.md`
-- `03-adopcao-drp-bia.md`
-- `04-matriz-controlos-por-risco.md`
-- `05-exemplos-aplicacao.md`
-
-O número define a ordem no sidebar. A nomeação deve ser descritiva, curta e estável.
-
-# 🧩 Documentos canon 
-
-Cada capítulo dever ter ficheiros que completem numa perspectiva cientifica o manual. Esses ficheiros são colocado em `canon`, e pelo menos deverão conter:
-
-
-| Ficheiro                   | Descrição                                                                 |
-|----------------------------|---------------------------------------------------------------------------|
-| `20-checklist-revisão.md`   | checkilist binario para medir e controlar a implementaçao do recomendado no manual |
-| `25-rastreabilidade`        | backtrack do recomendado no manual com outras frameworks e com a explicação da normalizaçao efetuada entre diferentes referencias  (analise top-down)|
-| `50-ameacas-mitigadas`        | lista das ameaças mitigadaas com a prática descrita, com referencias e back-track para a referencia original|
-
-
----
-
-## ✅ Convenções e tags no frontmatter
-
-Todos os ficheiros `.md` devem conter um frontmatter com:
-
-```yaml
----
-id: nome-unico
-title: Título a apresentar no menu
-tags:
-  - tipo:chapter | anexo
-  - grupo:base | execucao | validacao | suporte | transversal
-  - tema:nome-do-tema-tecnico
----
+```bash
+make -C src/publish web     # pipeline completo: copia fontes → instala deps → build Docusaurus
+make -C src/publish serve   # servir localmente após o build
+make -C src/publish clean   # limpeza do diretório de build
+make -C src/publish dev     # desenvolvimento interativo (Docusaurus dev)
 ```
 
-> As `tags:` são usadas para organização, pesquisa e atribuição de labels no GitHub.
+O alvo `web` executa internamente:
+
+* `prepare` → copia `manuals_src/` para `_out/web/`
+* `install` → corre `npm install` em `_out/web/`
+* `build` → executa `npm run build` (Docusaurus)
+
+> Em caso de erros de *registry* do npm, pode ser necessário executar previamente:
+>
+> ```bash
+> npm config set registry https://registry.npmjs.org/
+> ```
 
 ---
 
-## 🛠️ Boas práticas
+### Publicação e versões
 
-- Evitar markdown embutido dentro de markdown (ex: blocos de código com markdown dentro).
-- Manter os títulos coerentes e a numeração dos addons sequencial.
-- Não duplicar conteúdo entre capítulos; referenciar se aplicável.
-- Usar linguagem objetiva, prescritiva e clara.
-- Checklists, quando existam, devem ser binários (Sim/Não).
+* Cada conjunto coerente publicado é marcado com **tag** `vX.Y.Z` em `master`.
+* A criação da tag aciona o *pipeline* de publicação Web (Docusaurus → `gh-pages`).
+* Hotfixes pós-release utilizam `fix/<tema>` e geram uma nova tag (`vX.Y.Z+1` ou `vX.Y.Z-hotfix1`).
 
 ---
 
-## 📦 Automatização
+### Proteção de branches (GitHub)
 
-Scripts estão disponíveis para:
-- Gerar ficheiros `addons` obrigatórios
-- Zipar capítulos para publicação
-- Criar issues e tarefas no GitHub com base nos capítulos
+**`master`** (ramo principal)
+
+* ✅ Pull Request obrigatório
+* ✅ *Status checks* obrigatórios (`build-web`, `lint-links`, `anchors-validate`)
+* ✅ Branch deve estar atualizada antes do *merge*
+* ✅ Histórico linear
+* ✅ Commits assinados
+* ✅ Branch protegida contra eliminação
+* ✅ Apenas *Squash Merge* permitido
+
+**Aprovações - política escalável com a equipa**
+
+* Enquanto existir apenas um mantenedor: **0 approvals** (checks obrigatórios mantêm-se).
+* Quando existirem dois ou mais contribuidores ativos:
+
+  * mínimo de **1 aprovação** de pessoa diferente do autor;
+  * ativar **Require review from Code Owners** (com `CODEOWNERS`);
+  * ativar **Require approval from someone other than the last pusher**;
+  * ativar **Dismiss stale approvals** e **Require conversation resolution**;
+  * (opcional) ativar **Merge queue**.
+
+**`gh-pages`**
+
+* *Push* permitido apenas via GitHub Actions (deploy automático).
+* Branch protegida contra eliminação.
 
 ---
 
-Para dúvidas ou pedidos de estrutura, contactar o responsável editorial do projeto.
+
+Estes *checks* devem ser configurados como **Required status checks** na regra de proteção da branch `master`.
+*(Opcional: adicionar `spell-pt` quando disponível.)*
+
+---
+
+### Fluxo local típico
+
+```bash
+git switch -c feat/cap14-kpis
+# editar ficheiros…
+npm run build
+make -C src/publish web
+make -C src/publish serve
+git add -A
+git commit -m "feat(cap14): adicionar KPIs de governação"
+git push -u origin feat/cap14-kpis
+# abrir PR → checks verdes → squash merge em master → tag vX.Y.Z
+```
+
+---
+
+## 🧾 Integração com Issues do projeto {#integracao-issues}
+
+As contribuições devem ser sempre rastreáveis através de *issues* no repositório principal do manual.
+Este mecanismo assegura visibilidade, histórico editorial e integração direta com o fluxo Git.
+
+### Boas práticas de utilização de *issues*
+
+1. **Procurar antes de criar**
+   Antes de iniciar uma nova contribuição, verificar se já existe um *issue* aberto para o tema.
+   Caso exista, comentar no *issue* e, se aplicável, assumir a execução.
+
+2. **Criar novo *issue***
+   Quando não existir *issue* aberto, criar um novo utilizando o *template* apropriado (`enhancement`, `bug`, `documentation`, etc.).
+   O título deve ser objetivo e indicar o contexto do capítulo.
+
+   > Exemplo: `cap05: atualizar tabela de dependências no 50-ameacas-mitigadas`
+
+3. **Relação entre *issue* e branch**
+   Cada *branch* deve corresponder a **um único *issue***.
+   Recomenda-se incluir o número do *issue* no nome da *branch* e na mensagem de *commit*:
+
+   ```bash
+   git switch -c feat/123-cap05-tabela-dependencias
+   ```
+
+   **Mensagem de commit:**
+
+   ```
+   feat(cap05): atualizar tabela de dependências (#123)
+   ```
+
+   Esta convenção permite o *linking automático* entre commits, *Pull Requests* e *issues* no GitHub.
+
+4. **Fecho automático de *issues***
+   O *Pull Request* que resolve o *issue* deve incluir uma referência direta no corpo da descrição:
+
+   ```
+   Closes #123
+   ```
+
+   O GitHub encerrará automaticamente o *issue* após o *merge* em `master`.
+
+5. **Etiquetas e triagem**
+   Utilizar *labels* para classificação dos *issues* (ex.: `capítulo:14`, `tipo:documentação`, `prioridade:alta`, `status:em progresso`).
+   O responsável editorial realiza a triagem inicial e atribui as *labels* padrão.
+
+6. **Workflow resumido**
+
+   | Etapa | Ação                                  | Resultado                 |
+   | ----- | ------------------------------------- | ------------------------- |
+   | 1     | Criar ou identificar *issue*          | Contexto documentado      |
+   | 2     | Criar branch `feat/<num>-<descrição>` | Ligação direta ao *issue* |
+   | 3     | Trabalhar e *commit* com `(#num)`     | Histórico rastreável      |
+   | 4     | Abrir *PR* com `Closes #num`          | Fecho automático          |
+   | 5     | Merge → Tag → Deploy                  | Publicação controlada     |
+
+---
+
+Para esclarecimentos ou pedidos de estrutura, contactar o responsável editorial do projeto.

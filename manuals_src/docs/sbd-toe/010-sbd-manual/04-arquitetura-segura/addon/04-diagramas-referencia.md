@@ -17,7 +17,7 @@ Cada modelo está associado a:
 
 ---
 
-## 🧱 Modelo 1 — Monólito Web com Backend Interno (Risco L1)
+## 🧱 Modelo 1 - Monólito Web com Backend Interno (Risco L1)
 
 ### 📝 Descrição
 
@@ -46,7 +46,7 @@ Cada modelo está associado a:
 
 ---
 
-## ☁️ Modelo 2 — Microserviços com APIs Externas (Risco L2)
+## ☁️ Modelo 2 - Microserviços com APIs Externas (Risco L2)
 
 ### 📝 Descrição
 
@@ -76,7 +76,7 @@ Cada modelo está associado a:
 
 ---
 
-## 🧐 Modelo 3 — Plataforma Crítica Regulada (Risco L3)
+## 🧐 Modelo 3 - Plataforma Crítica Regulada (Risco L3)
 
 ### 📝 Descrição
 

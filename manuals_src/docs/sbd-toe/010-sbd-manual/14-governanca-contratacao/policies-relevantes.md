@@ -7,9 +7,9 @@ tags: [policy, organizacional, governance, excecoes, fornecedores, contratacao]
 ---
 
 
-# 🏩️ Políticas Organizacionais — Governança e Contratação
+# 🏩️ Políticas Organizacionais - Governança e Contratação
 
-A adoção eficaz do Capítulo 14 — Governança e Contratação — exige a existência de **políticas organizacionais formais** que **legitimem decisões de risco, exceções, onboarding de terceiros e exigências contratuais de segurança**.
+A adoção eficaz do Capítulo 14 - Governança e Contratação - exige a existência de **políticas organizacionais formais** que **legitimem decisões de risco, exceções, onboarding de terceiros e exigências contratuais de segurança**.
 
 ---
 
@@ -38,18 +38,6 @@ Estas políticas:
 | Política de Requisitos Contratuais de Segurança      | ✅ Sim        | Contratação de software, serviços, operação crítica | Requisitos mínimos por tipo de risco, templates e revisão legal obrigatória.                     |
 | Política de Formação de Aprovadores e Decisores      | ⚠️ Opcional  | Owners de exceções, risco, conformidade             | Exigência de formação atualizada sobre SbD antes de autorizar decisões com impacto de segurança. |
 | Política de Ciclo de Revisão de Exceções e Contratos | ⚠️ Opcional  | Exceções, contratos, sistemas críticos              | Revalidação obrigatória a cada release ou alteração significativa de risco.                      |
-
----
-
-## 📂 Correspondência com frameworks normativas
-
-| Framework           | Requisitos cobertos pelas políticas acima                                                        |
-| ------------------- | ------------------------------------------------------------------------------------------------ |
-| **NIST SSDF**       | PO.2.1 (Review contract terms), RM.3 (Review of accepted risks), PS.1.2 (Third-party validation) |
-| **OWASP SAMM**      | Governance > Policy & Compliance, Education & Guidance                                           |
-| **SLSA v1.0**       | Requirements on control of third-party, provenance and trusted onboarding                        |
-| **BSIMM13**         | GOV1.1, SE2.4, T1.4, CMVM2.2                                                                     |
-| **ENISA DevSecOps** | Good practices on vendor control, exceptions and role-based decisions                            |
 
 ---
 

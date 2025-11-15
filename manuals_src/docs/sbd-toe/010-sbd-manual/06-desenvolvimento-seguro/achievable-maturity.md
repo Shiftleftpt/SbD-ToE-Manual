@@ -2,12 +2,12 @@
 id: achievable-maturity
 title: Mapeamento de Maturidade – Capítulo 06
 sidebar_position: 10
-tags: [canon, maturidade, SAMM, BSIMM, SSDF, SLSA, DSOMM]
+tags: [canon, maturidade, SAMM, SSDF, SLSA, DSOMM]
 ---
 
-# 📈 Maturidade — Desenvolvimento Seguro
+# 📈 Maturidade - Desenvolvimento Seguro
 
-Este documento apresenta o grau de alinhamento entre as práticas descritas no Capítulo 06 do SbD-ToE — *Desenvolvimento Seguro* — e os principais frameworks de segurança e maturidade de software:
+Este documento apresenta o grau de alinhamento entre as práticas descritas no Capítulo 06 do SbD-ToE - *Desenvolvimento Seguro* - e os principais frameworks de segurança e maturidade de software:
 
 - **OWASP SAMM**
 - **BSIMM**
@@ -51,7 +51,7 @@ Este mapeamento **não avalia equipas ou organizações**, mas sim o **grau de c
 |-------|------------------------------------------------------|--------------------------------------------------|
 | 1     | Práticas básicas de verificação manual              | ✅ Revisão de código e boas práticas             |
 | 2     | Integração de validações automatizadas no pipeline  | ✅ SAST, linters, PR validation                  |
-| 3     | Integração contínua e testes estruturados           | ❌ Parcial — Cap. foca-se em boas práticas, não test coverage |
+| 3     | Integração contínua e testes estruturados           | ❌ Parcial - Cap. foca-se em boas práticas, não test coverage |
 
 **🧮 Maturidade atingida: 2 / 3**
 

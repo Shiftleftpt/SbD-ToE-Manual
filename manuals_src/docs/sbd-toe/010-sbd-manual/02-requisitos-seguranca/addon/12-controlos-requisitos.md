@@ -22,22 +22,22 @@ Este documento define como cada requisito do `01-catalogo-requisitos.md` deve se
 
 ## 📚 Índice
 
-- [🔐 AUT — Autenticação e Identidade](#aut)
-- [🔓 ACC — Controlo de Acesso](#acc)
-- [📈 LOG — Registo e Monitorização](#log)
-- [🕒 SES — Sessões e Estado](#ses)
-- [🧹 VAL — Validação de Dados](#val)
-- [❗ ERR — Gestão de Erros](#err)
-- [⚙️ CFG — Configuração Segura](#cfg)
-- [🌐 API — Segurança de APIs](#api)
-- [📨 INT — Mensagens e Integrações](#int)
-- [📄 REQ — Definição de Requisitos](#req)
-- [🛠️ DST — Distribuição de Artefactos](#dst)
-- [💻 IDE — Ferramentas de Desenvolvimento](#ide)
+- [🔐 AUT - Autenticação e Identidade](#aut)
+- [🔓 ACC - Controlo de Acesso](#acc)
+- [📈 LOG - Registo e Monitorização](#log)
+- [🕒 SES - Sessões e Estado](#ses)
+- [🧹 VAL - Validação de Dados](#val)
+- [❗ ERR - Gestão de Erros](#err)
+- [⚙️ CFG - Configuração Segura](#cfg)
+- [🌐 API - Segurança de APIs](#api)
+- [📨 INT - Mensagens e Integrações](#int)
+- [📄 REQ - Definição de Requisitos](#req)
+- [🛠️ DST - Distribuição de Artefactos](#dst)
+- [💻 IDE - Ferramentas de Desenvolvimento](#ide)
 
 ---
 
-## 🔐 AUT — Autenticação e Identidade {#aut}
+## 🔐 AUT - Autenticação e Identidade {#aut}
 
 | ID       | Tag                 | Nome resumido                             | Nível | Validação Recomendada                                                                 | Evidência Esperada                                                   |
 |----------|---------------------|--------------------------------------------|--------|----------------------------------------------------------------------------------------|------------------------------------------------------------------------|
@@ -54,7 +54,7 @@ Este documento define como cada requisito do `01-catalogo-requisitos.md` deve se
 
 ---
 
-## 🔓 ACC — Controlo de Acesso {#acc}
+## 🔓 ACC - Controlo de Acesso {#acc}
 
 | ID       | Tag                  | Nome resumido                             | Nível | Validação Recomendada                                                                 | Evidência Esperada                                                     |
 |----------|----------------------|--------------------------------------------|--------|----------------------------------------------------------------------------------------|------------------------------------------------------------------------|
@@ -69,7 +69,7 @@ Este documento define como cada requisito do `01-catalogo-requisitos.md` deve se
 | ACC-009  | SEC-L3-ACC-ABAC      | Autorização baseada em atributos (ABAC)    | L3     | Rever política de autorização dinâmica. Validar decisões condicionadas a atributos.    | Logs de decisão ABAC. Screenshot de regras condicionais.              |
 | ACC-010  | SEC-L2-ACC-REVIEW    | Revisão periódica de permissões            | L2+    | Consultar registos de auditoria de permissões. Validar ciclo de revisão documentado. | Registo formal de revisão. Evidência de permissões removidas.         |
 ---
-## 📈 LOG — Registo e Monitorização {#log}
+## 📈 LOG - Registo e Monitorização {#log}
 
 | ID       | Tag                  | Nome resumido                                | Nível | Validação Recomendada                                                                 | Evidência Esperada                                                    |
 |----------|----------------------|-----------------------------------------------|--------|----------------------------------------------------------------------------------------|------------------------------------------------------------------------|
@@ -84,7 +84,7 @@ Este documento define como cada requisito do `01-catalogo-requisitos.md` deve se
 | LOG-009  | SEC-L2-LOG-INCIDENTE | Logs suportam resposta a incidentes           | L2+    | Rever planos de resposta. Verificar integração de logs no fluxo de resposta.          | Exemplo de incidente com logs associados.                             |
 | LOG-010  | SEC-L3-LOG-NEGOCIO   | Logging de eventos críticos de negócio        | L3     | Identificar eventos críticos (ex: submissão de IRS). Confirmar registo no sistema.    | Log contendo o evento de negócio e respetivo contexto.                |
 ---
-## 🕒 SES — Sessões e Estado {#ses}
+## 🕒 SES - Sessões e Estado {#ses}
 
 | ID       | Tag                   | Nome resumido                              | Nível | Validação Recomendada                                                                 | Evidência Esperada                                                       |
 |----------|-----------------------|---------------------------------------------|--------|----------------------------------------------------------------------------------------|--------------------------------------------------------------------------|
@@ -97,7 +97,7 @@ Este documento define como cada requisito do `01-catalogo-requisitos.md` deve se
 | SES-007  | SEC-L2-SES-DURACAO    | Prevenção de sessões long-lived             | L2+    | Verificar configuração de TTL para sessões. Rever política de refresh.                | Configuração de tokens. Screenshot da definição de tempo.                |
 | SES-008  | SEC-L2-SES-JWT        | Scope, TTL e revogação de tokens JWT        | L2+    | Rever payload dos tokens. Confirmar presença de claims como `exp`, `aud`, `scope`.    | Exemplo de token com claims definidos. Política de revogação ativa.      |
 ---
-## 🧹 VAL — Validação de Dados {#val}
+## 🧹 VAL - Validação de Dados {#val}
 
 | ID       | Tag                   | Nome resumido                                     | Nível | Validação Recomendada                                                                 | Evidência Esperada                                                       |
 |----------|-----------------------|----------------------------------------------------|--------|----------------------------------------------------------------------------------------|--------------------------------------------------------------------------|
@@ -109,7 +109,7 @@ Este documento define como cada requisito do `01-catalogo-requisitos.md` deve se
 | VAL-006  | SEC-Lx-VAL-MENSAGEM   | Mensagens de erro seguras na validação            | L1+    | Submeter input inválido. Verificar que resposta não expõe lógica interna.             | Mensagem genérica. Log com detalhe técnico.                              |
 | VAL-007  | SEC-L2-VAL-TESTES     | Testes automáticos contra entradas maliciosas     | L2+    | Rever cobertura de testes automatizados para XSS, SQLi, etc.                          | Relatório de testes. Exemplo de caso de teste parametrizado.             |
 ---
-## ❗ ERR — Gestão de Erros {#err}
+## ❗ ERR - Gestão de Erros {#err}
 
 | ID       | Tag                   | Nome resumido                                   | Nível | Validação Recomendada                                                                 | Evidência Esperada                                                       |
 |----------|-----------------------|--------------------------------------------------|--------|----------------------------------------------------------------------------------------|--------------------------------------------------------------------------|
@@ -121,7 +121,7 @@ Este documento define como cada requisito do `01-catalogo-requisitos.md` deve se
 | ERR-006  | SEC-L2-ERR-TESTES     | Testes automáticos para erros excessivos        | L2+    | Rever testes automatizados para erros malformados.                                    | Casos de teste com asserts sobre mensagens seguras.                      |
 | ERR-007  | SEC-L2-ERR-LOG        | Logs de erro com ID de sessão/contexto seguro   | L2+    | Verificar conteúdo dos logs. Confirmar que ID de sessão não expõe dados pessoais.     | Logs com IDs pseudonimizados. Ausência de dados sensíveis.               |
 ---
-## ⚙️ CFG — Configuração Segura {#cfg}
+## ⚙️ CFG - Configuração Segura {#cfg}
 
 | ID       | Tag                   | Nome resumido                                    | Nível | Validação Recomendada                                                                 | Evidência Esperada                                                       |
 |----------|-----------------------|---------------------------------------------------|--------|----------------------------------------------------------------------------------------|--------------------------------------------------------------------------|
@@ -134,7 +134,7 @@ Este documento define como cada requisito do `01-catalogo-requisitos.md` deve se
 | CFG-007  | SEC-L3-CFG-DRIFT      | Monitorização de drift de configuração            | L3     | Introduzir alteração em runtime. Verificar deteção e alerta.                          | Alerta de alteração inesperada. Log de evento de drift.                  |
 ---
 
-## 🌐 API — Segurança de APIs {#api}
+## 🌐 API - Segurança de APIs {#api}
 
 | ID       | Tag                   | Nome resumido                                   | Nível | Validação Recomendada                                                                 | Evidência Esperada                                                       |
 |----------|-----------------------|--------------------------------------------------|--------|----------------------------------------------------------------------------------------|--------------------------------------------------------------------------|
@@ -147,7 +147,7 @@ Este documento define como cada requisito do `01-catalogo-requisitos.md` deve se
 | API-007  | SEC-L2-API-LOG        | Logging e auditoria de chamadas externas        | L2+    | Efetuar chamadas a serviços externos. Verificar logging detalhado e métricas.         | Log de chamadas externas. Dashboard com métricas.                        |
 ---
 
-## 📨 INT — Mensagens e Integrações {#int}
+## 📨 INT - Mensagens e Integrações {#int}
 
 | ID       | Tag                   | Nome resumido                                       | Nível | Validação Recomendada                                                                 | Evidência Esperada                                                       |
 |----------|-----------------------|------------------------------------------------------|--------|----------------------------------------------------------------------------------------|--------------------------------------------------------------------------|
@@ -160,7 +160,7 @@ Este documento define como cada requisito do `01-catalogo-requisitos.md` deve se
 | INT-007  | SEC-L3-INT-MONITORIZA | Monitorização e deteção de padrões anómalos         | L3     | Simular tráfego atípico. Confirmar alerta ou deteção automatizada.                   | Log de evento anómalo. Alerta no SIEM.                                  |
 | INT-008  | SEC-L3-INT-TERCEIROS  | Revisão de segurança e contrato em integrações      | L3     | Verificar existência de cláusulas contratuais e checklist de segurança aplicado.       | Contrato com cláusula de segurança. Registo de revisão técnica.         |
 ---
-## 📄 REQ — Definição de Requisitos {#req}
+## 📄 REQ - Definição de Requisitos {#req}
 
 | ID       | Tag                   | Nome resumido                                      | Nível | Validação Recomendada                                                                 | Evidência Esperada                                                       |
 |----------|-----------------------|-----------------------------------------------------|--------|----------------------------------------------------------------------------------------|--------------------------------------------------------------------------|
@@ -172,7 +172,7 @@ Este documento define como cada requisito do `01-catalogo-requisitos.md` deve se
 | REQ-006  | SEC-L2-REQ-RASTREIO   | Rastreabilidade requisito → ameaça → teste          | L2+    | Verificar matriz de rastreabilidade. Confirmar ligação entre artefactos.              | Documento ou ferramenta com relação 3 pontos.                           |
 | REQ-007  | SEC-L2-REQ-ITERACAO   | Revisão iterativa com equipas                       | L2+    | Confirmar iteração contínua no ciclo de sprint ou equivalente.                        | Logs de reuniões. Backlog com alterações versionadas.                   |
 ---
-## 🛠️ DST — Distribuição de Artefactos {#dst}
+## 🛠️ DST - Distribuição de Artefactos {#dst}
 
 | ID       | Tag                   | Nome resumido                                      | Nível | Validação Recomendada                                                                 | Evidência Esperada                                                       |
 |----------|-----------------------|-----------------------------------------------------|--------|----------------------------------------------------------------------------------------|--------------------------------------------------------------------------|
@@ -185,7 +185,7 @@ Este documento define como cada requisito do `01-catalogo-requisitos.md` deve se
 | DST-007  | SEC-Lx-DST-REVOGACAO  | Revogação e limpeza de artefactos comprometidos    | L1+    | Publicar versão comprometida (ex: com CVE). Confirmar processo de remoção e alerta.   | Histórico de remoção. Notificação de revogação.                         |
 ---
 
-## 💻 IDE — Ferramentas de Desenvolvimento {#ide}
+## 💻 IDE - Ferramentas de Desenvolvimento {#ide}
 
 | ID       | Tag                   | Nome resumido                                      | Nível | Validação Recomendada                                                                 | Evidência Esperada                                                       |
 |----------|-----------------------|-----------------------------------------------------|--------|----------------------------------------------------------------------------------------|--------------------------------------------------------------------------|
@@ -199,15 +199,14 @@ Este documento define como cada requisito do `01-catalogo-requisitos.md` deve se
 
 ## 📌 Nota Final
 
-Este catálogo de validação cobre de forma robusta a generalidade das aplicações empresariais, web e cloud-native. No entanto, aplicações com perfis técnicos específicos — como sistemas embarcados (embedded), IoT, SCADA, mobile, aplicações médicas ou sistemas de tempo real — poderão necessitar de requisitos adicionais e validações específicas.
+Este catálogo de validação cobre de forma robusta a generalidade das aplicações empresariais, web e cloud-native. No entanto, aplicações com perfis técnicos específicos - como sistemas embarcados (embedded), IoT, SCADA, mobile, aplicações médicas ou sistemas de tempo real - poderão necessitar de requisitos adicionais e validações específicas.
 
 Algumas fontes recomendadas para consulta e curadoria desses requisitos específicos incluem:
 
 - [OWASP Mobile Security Testing Guide (MSTG)](https://owasp.org/www-project-mobile-security-testing-guide/)
 - [OWASP Internet of Things Project](https://owasp.org/www-project-internet-of-things/)
-- [IEC 62443 — Segurança em Sistemas Industriais e SCADA](https://webstore.iec.ch/publication/7033)
-- [NIST SP 800-213 — IoT Device Cybersecurity Guidance](https://csrc.nist.gov/publications/detail/sp/800-213/final)
-- [BSIMM for Embedded & Device Software](https://www.bsimm.com/)
+- [IEC 62443 - Segurança em Sistemas Industriais e SCADA](https://webstore.iec.ch/publication/7033)
+- [NIST SP 800-213 - IoT Device Cybersecurity Guidance](https://csrc.nist.gov/publications/detail/sp/800-213/final)
 
 Durante a definição e manutenção contínua deste catálogo e respetivo documento de validação, devem ser mantidos os mesmos padrões de qualidade, estrutura e rastreabilidade definidos neste capítulo:
 

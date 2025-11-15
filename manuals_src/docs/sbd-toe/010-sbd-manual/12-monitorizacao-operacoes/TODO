@@ -3,6 +3,6 @@ rever inventário de components e geração de alertas, desatualização, malwar
 monitorizar registries e cache de feeds
 mais voltado para o conceito "pragmático" sbd, sem perder o rigor da monitorizaçao "tradicional"
 02-controles-logging-centralizado.md	Foco técnico, inclui campos de eventos e práticas de forwarding	➕ adicionar referência cruzada a requisitos LOG-001..010
-05-monitorizacao-resposta.md	Integração com IRP, playbooks, timeline de deteção → mitigação	➕ potencial de link para Cap. 13 (Governança: processos IRP)
+05-monitorizacao-operacoes.md	Integração com IRP, playbooks, timeline de deteção → mitigação	➕ potencial de link para Cap. 13 (Governança: processos IRP)
 07-metricas-indicadores.md	KPIs realistas (MTTD/MTTR, cobertura, falsos positivos)	➕ adicionar modelo para reporting ou dashboards
 ver KPI's

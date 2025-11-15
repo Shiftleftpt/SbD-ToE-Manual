@@ -2,7 +2,7 @@
 id: intro
 title: Validação Contínua de Segurança
 description: Estratégias e práticas para validar continuamente a segurança de aplicações através de testes automatizados, manuais e ofensivos.
-tags: [testes, segurança, validação contínua, SAST, DAST, fuzzing, pentesting, DSOMM, SAMM, SSDF, BSIMM, SLSA]
+tags: [testes, segurança, validação contínua, SAST, DAST, fuzzing, pentesting, DSOMM, SAMM, SSDF, SLSA]
 sidebar_position: 0
 ---
 
@@ -75,15 +75,15 @@ Uma estratégia de testes de segurança define:
 | Documento                       | Relevância estratégica                         |
 |----------------------------------|------------------------------------------------|
 | `01-sast.md`                     | Parte essencial do início da estratégia        |
-| `02-dast.md`                     | Validação dinâmica — depende do contexto       |
+| `02-dast.md`                     | Validação dinâmica - depende do contexto       |
 | `06-cobertura-e-priorizacao.md` | Define alvos e profundidade dos testes         |
 | `07-integracao-pipeline.md`     | Onde e como ligar a estratégia ao CI/CD        |
-| Capítulo 01 — Gestão de Risco   | Define o nível de criticidade da aplicação     |
-| Capítulo 02 — Requisitos        | Define o quê deve ser testado (REQs)           |
-| Capítulo 06 — Desenvolvimento   | Define práticas seguras a validar              |
-| Capítulo 07 — CI/CD Seguro      | Define como os testes se integram na entrega   |
-| Capítulo 12 — Monitorização     | Observação pós-deploy e validações em runtime  |
+| Capítulo 01 - Gestão de Risco   | Define o nível de criticidade da aplicação     |
+| Capítulo 02 - Requisitos        | Define o quê deve ser testado (REQs)           |
+| Capítulo 06 - Desenvolvimento   | Define práticas seguras a validar              |
+| Capítulo 07 - CI/CD Seguro      | Define como os testes se integram na entrega   |
+| Capítulo 12 - Monitorização     | Observação pós-deploy e validações em runtime  |
 
 ---
 
-> 🧠 Uma estratégia de testes de segurança **não é uma lista de ferramentas** — é uma decisão sobre como, quando e com que profundidade validar a segurança do que se constrói. É o reflexo direto do risco aceite pela organização.
+> 🧠 Uma estratégia de testes de segurança **não é uma lista de ferramentas** - é uma decisão sobre como, quando e com que profundidade validar a segurança do que se constrói. É o reflexo direto do risco aceite pela organização.

@@ -98,10 +98,8 @@ Garantir que todas as alterações em projetos de Infraestrutura como Código (I
 |-------------------------------|--------------------------------------------------------|
 | `01-planeamento-e-controle.md` | Validação do `plan` como pré-condição ao `apply`      |
 | `02-matriz-requisitos-iac.md` | Requisitos `IAC-003`, `REQ-005`                        |
-| SSDF (PW.5, PW.6)             | Validações automatizadas e shift-left                 |
-| SLSA (Build L2)               | Controlo de qualidade antes da execução               |
-| SAMM (AA2.3) / BSIMM (CMVM1.1)| Enfoque sistemático no controlo de código IaC         |
+
 
 ---
 
-> ⚠️ A ausência de validações automáticas abre a porta a más práticas, riscos de segurança, configurações perigosas e erros difíceis de rastrear — comprometendo todo o ciclo de vida da infraestrutura como código.
+> ⚠️ A ausência de validações automáticas abre a porta a más práticas, riscos de segurança, configurações perigosas e erros difíceis de rastrear - comprometendo todo o ciclo de vida da infraestrutura como código.

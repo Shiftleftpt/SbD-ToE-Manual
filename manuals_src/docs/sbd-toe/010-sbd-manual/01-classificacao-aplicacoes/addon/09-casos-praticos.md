@@ -17,7 +17,7 @@ Estes exemplos demonstram como aplicar o [modelo dos três eixos de risco](/sbd-
 - **Dados**: Cartão de crédito + dados pessoais → 3  
 - **Impacto**: Financeiro + reputacional → 3  
 
-**Total: 9 → Risco Elevado (ASVS Nível 3)**
+**Total: 9 → Risco Elevado**
 
 > **Implicações**:
 > - Requisitos de segurança formais e completos  
@@ -33,7 +33,7 @@ Estes exemplos demonstram como aplicar o [modelo dos três eixos de risco](/sbd-
 - **Dados**: Dados clínicos e financeiros de colaboradores → 3  
 - **Impacto**: Legal + confidencialidade sensível → 3  
 
-**Total: 7 → Risco Elevado (ASVS Nível 3)**
+**Total: 7 → Risco Elevado**
 
 > **Nota**: Apesar da baixa exposição, os dados tratados e impacto legal elevam o risco.
 
@@ -45,7 +45,7 @@ Estes exemplos demonstram como aplicar o [modelo dos três eixos de risco](/sbd-
 - **Dados**: Dados financeiros e de clientes → 2  
 - **Impacto**: Operacional + financeiro → 2  
 
-**Total: 6 → Risco Médio (ASVS Nível 2)**
+**Total: 6 → Risco Médio**
 
 > **Implicações**:
 > - Controlo de dependências com SCA  
@@ -60,7 +60,7 @@ Estes exemplos demonstram como aplicar o [modelo dos três eixos de risco](/sbd-
 - **Dados**: Não sensíveis → 1  
 - **Impacto**: Baixo → 1  
 
-**Total: 3 → Risco Baixo (ASVS Nível 1)**
+**Total: 3 → Risco Baixo**
 
 > **Implicações**:
 > - Linters e revisão informal  

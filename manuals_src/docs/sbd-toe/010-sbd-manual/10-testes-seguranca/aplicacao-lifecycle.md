@@ -2,15 +2,15 @@
 id: aplicacao-lifecycle
 title: Como Fazer
 description: Integração prática das práticas de validação contínua nas diferentes fases do ciclo de vida da aplicação
-tags: [ciclo de vida, testes, segurança, integração, validação, sdlc]
-sidebar_position: 15
+tags: [tipo:aplicacao, ciclo-vida, testes, seguranca, integracao, validacao]
+genia: us-format-normalization
 ---
 
 # 🧪 Aplicação de Testes de Segurança ao Longo do Ciclo de Vida
 
 ## 🧭 Quando aplicar
 
-Os testes de segurança acompanham a aplicação em todas as fases — não são uma etapa final, mas um **ritmo contínuo** de validação.  
+Os testes de segurança acompanham a aplicação em todas as fases - não são uma etapa final, mas um **ritmo contínuo** de validação.  
 Desde a definição inicial de requisitos até à auditoria final, cada momento do ciclo de vida deve gerar **evidência objetiva** de que a aplicação está protegida contra falhas conhecidas e ameaças emergentes.  
 
 | Fase SDLC / Evento | Ação de testes | Artefacto/Evidência |
@@ -35,7 +35,7 @@ Cada papel contribui com uma perspetiva única, mas só em conjunto se obtém um
 |-------|------------------|
 | **Dev** | Corrigir findings, criar regressões automatizadas |
 | **QA/Testes** | Executar DAST, fuzzing, validar critérios |
-| **AppSec** | Definir estratégia, tuning de regras, gerir findings e exceções |
+| **AppSec** | Definir estratégia, *tuning* de regras, gerir findings e exceções |
 | **DevOps** | Integrar scanners, gates e evidências no CI/CD |
 | **Gestão de Produto** | Aprovar risco residual e decidir *go/no-go* |
 | **PenTester** | Validar ofensivamente controlos e relatar impacto |
@@ -49,18 +49,13 @@ Cada US representa um **controlo essencial**, pensado para ser integrado diretam
 
 ---
 
-### US-01 — Estratégia formal de testes por aplicação
+### US-01 - Estratégia formal de testes por aplicação
 
 A validação começa com planeamento.  
 Sem uma estratégia clara, a cobertura torna-se desigual e impossível de auditar.  
 
 **Contexto.**  
 Sem estratégia, a cobertura é desigual e difícil de auditar.
-
-**📖 Rationale científico.**  
-Referências: SSDF **RV.1**, **PS.2**; OWASP SAMM **ST.1**; BSIMM **T1.3**; ISO/IEC **27005**; DSOMM (Testing).  
-Mitiga: OSC&R *Missing Validation*, **CWE-693**.  
-Evidência: programas BSIMM/DBIR mostram que equipas com estratégia formal detetam falhas mais cedo e com menor variabilidade.  
 
 :::userstory
 **História.**   
@@ -88,24 +83,19 @@ Como **AppSec**, quero **definir uma estratégia de testes de segurança por apl
 | L3 | Sim | + fuzzing/IAST + PenTest |
 
 **Integração no SDLC.**  
-| Fase | Gatilho | Responsável | SLA |
+| Fase | Trigger | Responsável | SLA |
 |------|---------|-------------|-----|
 | Planeamento | Classificação Lx / kick-off | AppSec | Até ao fim do 1.º sprint |
 
 ---
 
-### US-02 — SAST obrigatório em Pull Request
+### US-02 - SAST obrigatório em Pull Request
 
 Detetar cedo é sempre mais barato.  
 Executar SAST no momento do PR garante que vulnerabilidades nunca chegam à *branch* principal.  
 
 **Contexto.**  
 PRs sem SAST permitem que vulnerabilidades entrem cedo no código base.
-
-**📖 Rationale científico.**  
-Referências: SSDF **PW.6**, **RV.3**; SAMM **SM.2**; BSIMM **T2.4**; OWASP Top 10.  
-Mitiga: **CWE-20**, **CWE-79**, **CWE-89**, OSC&R *Source Code Weaknesses*.  
-Evidência: NIST/SEI mostram que correções em PR custam ordens de magnitude menos que em produção.  
 
 :::userstory
 **História.**   
@@ -133,24 +123,19 @@ Como **Dev**, quero **executar SAST automático no PR com comentários inline**,
 | L3 | Bloqueio Medium+ |
 
 **Integração no SDLC.**  
-| Fase | Gatilho | Responsável | SLA |
+| Fase | Trigger | Responsável | SLA |
 |------|---------|-------------|-----|
 | Revisão de código | Abertura de PR | Dev + DevOps | Antes do merge |
 
 ---
 
-### US-03 — DAST autenticado em Staging
+### US-03 - DAST autenticado em Staging
 
 Muitas falhas críticas só se revelam após login.  
 Executar DAST autenticado em staging é o passo natural antes de promover uma release.  
 
 **Contexto.**  
 Muitas falhas surgem apenas autenticadas.
-
-**📖 Rationale científico.**  
-Referências: SSDF **RV.3**; SAMM **ST.2**; BSIMM **T1.3**.  
-Mitiga: **CWE-285**, **CWE-306/307**, CAPEC-115; OSC&R *Broken Access Controls*.  
-Evidência: dados de bug bounties e DBIR confirmam que vulnerabilidades críticas são maioritariamente exploráveis apenas autenticadas.  
 
 :::userstory
 **História.**   
@@ -178,24 +163,19 @@ Como **QA**, quero **executar DAST autenticado em staging**, para **detetar vuln
 | L3 | Automático + cobertura ampliada |
 
 **Integração no SDLC.**  
-| Fase | Gatilho | Responsável | SLA |
+| Fase | Trigger | Responsável | SLA |
 |------|---------|-------------|-----|
 | Staging | Build/Deploy em staging | QA | Antes da aprovação da release |
 
 ---
 
-### US-04 — Gates de segurança no CI/CD
+### US-04 - Gates de segurança no CI/CD
 
 Sem gates, findings tornam-se meros relatórios ignorados.  
 Gates automáticos são a barreira que impede regressões graves de avançar.  
 
 **Contexto.**  
 Sem gates, findings não impedem regressões.
-
-**📖 Rationale científico.**  
-Referências: SSDF **PS.2**, **PW.7**; SLSA **L2+**; SAMM **SM.2**.  
-Mitiga: OSC&R *CI/CD Compromise*, **CWE-693**.  
-Evidência: relatórios BSIMM mostram que *release gates* reduzem em >50% a ocorrência de críticos em produção.  
 
 :::userstory
 **História.**   
@@ -224,24 +204,26 @@ Como **DevOps**, quero **integrar gates automáticos no pipeline (SAST/SCA/IAST)
 | L3 | Bloqueio Medium+ |
 
 **Integração no SDLC.**  
-| Fase | Gatilho | Responsável | SLA |
+| Fase | Trigger | Responsável | SLA |
 |------|---------|-------------|-----|
 | CI/CD | Execução pipeline | DevOps + AppSec | Em cada build |
 
+**Detalhes de rastreabilidade (expandido):**  
+- Logs de cada execução com timestamp, commit, branch, ferramentas executadas, thresholds aplicados  
+- Relatório de exceptions aprovadas (ficheiro JSON com PR, justificação, aprovador, data de expiração)  
+- Métricas de gates: % bloqueios por severidade, taxa de override, tempo médio de remediação  
+- Dashboard Prometheus/Grafana com série histórica de findings bloqueados vs permitidos  
+- Integração com backlog para abertura automática de issues para findings bloqueados  
+
 ---
 
-### US-05 — Regressões de segurança automatizadas
+### US-05 - Regressões de segurança automatizadas
 
-Corrigir não chega — é preciso garantir que a mesma falha não regressa.  
+Corrigir não chega - é preciso garantir que a mesma falha não regressa.  
 Testes de regressão automatizados transformam cada correção numa proteção futura.  
 
 **Contexto.**  
 Falhas corrigidas voltam sem regressão automatizada.
-
-**📖 Rationale científico.**  
-Referências: SSDF **RV.6**; SAMM **ST.2**.  
-Mitiga: **CWE-459**, **CWE-388**.  
-Evidência: regressões ligadas a findings reduzem reaberturas e aceleram remediação.  
 
 :::userstory
 **História.**   
@@ -269,24 +251,19 @@ Como **Dev**, quero **criar testes de regressão para findings corrigidos**, par
 | L3 | Cobertura obrigatória |
 
 **Integração no SDLC.**  
-| Fase | Gatilho | Responsável | SLA |
+| Fase | Trigger | Responsável | SLA |
 |------|---------|-------------|-----|
 | Dev/CI | Fecho de finding | Dev | No PR de correção |
 
 ---
 
-### US-06 — Fuzzing dirigido a APIs críticas
+### US-06 - Fuzzing dirigido a APIs críticas
 
 Testes convencionais não capturam todas as falhas.  
 O fuzzing, ao explorar entradas inesperadas, revela vulnerabilidades invisíveis a olho nu.  
 
 **Contexto.**  
 Entradas complexas revelam falhas não cobertas.
-
-**📖 Rationale científico.**  
-Referências: SSDF **RV.4**; BSIMM **T2.5**; literatura DARPA sobre fuzzing.  
-Mitiga: **CWE-119**, **CWE-20**, **CWE-400**, CAPEC-28/125.  
-Evidência: fuzzing sistemático aumenta a taxa de descoberta de falhas desconhecidas.  
 
 :::userstory
 **História.**   
@@ -314,24 +291,19 @@ Como **QA**, quero **aplicar fuzzing a endpoints críticos**, para **detectar fa
 | L3 | Endpoints críticos obrigatórios |
 
 **Integração no SDLC.**  
-| Fase | Gatilho | Responsável | SLA |
+| Fase | Trigger | Responsável | SLA |
 |------|---------|-------------|-----|
 | Staging | Release candidate | QA | Antes do go-live |
 
 ---
 
-### US-07 — Critérios de release e aceitação de risco
+### US-07 - Critérios de release e aceitação de risco
 
 Cada release é também uma decisão de risco.  
 Formalizar critérios e aceitar explicitamente o risco residual é parte da governação.  
 
 **Contexto.**  
 Lançamentos sem critérios claros diluem responsabilidade.
-
-**📖 Rationale científico.**  
-Referências: SSDF **PS.2**, **GV.2–3**; SAMM **GO.3**; ISO/IEC **27005**; SLSA.  
-Mitiga: **CWE-668**, risco residual não governado.  
-Evidência: releases com critérios claros reduzem incidentes pós-go-live.  
 
 :::userstory
 **História.**   
@@ -359,13 +331,43 @@ Como **Gestão de Produto**, quero **estabelecer critérios de aceitação de se
 | L3 | Nenhum crítico sem exceção formal |
 
 **Integração no SDLC.**  
-| Fase | Gatilho | Responsável | SLA |
+| Fase | Trigger | Responsável | SLA |
 |------|---------|-------------|-----|
 | Pré-release | Release candidate | Gestão + AppSec | Até D-1 do go-live |
 
+**Template de Checklist de Release (L3):**  
+
+```markdown
+## 📋 Checklist de Release – v{VERSION}
+
+**Release:** v2.3.0  
+**Data planeada:** YYYY-MM-DD  
+**Owner:** Product Manager X, AppSec Lead Y  
+
+| Critério | Status | Evidência | Observação |
+|---|---|---|---|
+| **Findings Críticos** | ✅ ZERO | Screenshot dashboard | Aceite se mitigação documentada |
+| **SAST Thresholds** | ✅ OK | Build log #4521 | Bloqueio High/Critical não acionado |
+| **DAST Cobertura** | ✅ 85% | Relatório DAST | Meta L3 = 80%+ |
+| **Fuzzing endpoints críticos** | ✅ Completo | Log fuzzer noturno | 3 findings Low resolvidos |
+| **Regressões** | ✅ PASS | CI #4521 | Nenhuma regressão detetada |
+| **PenTest (se L3)** | ⚠️ Em curso | Relatório preliminar | Conclusão em +5d |
+| **SCA cobertura** | ✅ 100% | SBOM + scanning | 0 CVE não mitigadas |
+| **Documentação segurança** | ✅ Atualizada | Wiki link | Ameaças, controlos, mitigações |
+| **Aprovação formal risco** | ⏳ Pendente | - | Aguarda AppSec + Produto |
+
+**Risco residual aceite:**  
+- [X] 1 CVE Medium em dependência com patch disponível, mas adquirido em PR separado (até 2025-12-31)  
+- [X] Endpoint POST /admin/users sem DAST (acesso VPN, compensado por network policy)  
+
+**Aprovações:**  
+- AppSec Lead Y – aprovado em YYYY-MM-DD  
+- Product Manager X – aprovado em YYYY-MM-DD  
+```
+
 ---
 
-### US-08 — PenTesting ofensivo baseado em risco
+### US-08 - PenTesting ofensivo baseado em risco
 
 Automação é fundamental, mas não suficiente.  
 O olhar humano ofensivo identifica cadeias de ataque que scanners nunca simulam.  
@@ -373,22 +375,17 @@ O olhar humano ofensivo identifica cadeias de ataque que scanners nunca simulam.
 **Contexto.**  
 Validação humana complementa automação.
 
-**📖 Rationale científico.**  
-Referências: BSIMM **PT1.1**; SAMM **ST.3**; OWASP Testing Guide; ISO/IEC **27001**.  
-Mitiga: vetores avançados fora do escopo de scanners (chaining), **CWE-352**, CAPEC-35/152/170.  
-Evidência: em L3, Pentests mantêm maior *hit rate* de vulnerabilidades críticas.  
-
 :::userstory
 **História.**   
 Como **PenTester**, quero **validar ofensivamente a eficácia dos controlos**, para **detetar falhas exploráveis antes da produção**.
 
 **Critérios de aceitação (BDD).**  
-- Dado escopo baseado em risco  
+- Dado âmbito baseado em risco  
 - Quando executo PenTest  
 - Então emito relatório com vetores, impacto e recomendações  
 
 **Checklist.**  
-- [ ] Escopo definido e consentimento  
+- [ ] âmbito definido e consentimento  
 - [ ] Relatório com PoCs e severidade  
 - [ ] Retest planeado para críticos  
 
@@ -404,9 +401,162 @@ Como **PenTester**, quero **validar ofensivamente a eficácia dos controlos**, p
 | L3 | Obrigatório pré-produção |
 
 **Integração no SDLC.**  
-| Fase | Gatilho | Responsável | SLA |
+| Fase | Trigger | Responsável | SLA |
 |------|---------|-------------|-----|
 | Auditoria / Pré-produção | Janela de auditoria ou L3 crítico | PenTester + AppSec | Relatório antes do go-live |
+
+---
+
+### US-09 - IAST com Instrumentação em Staging
+
+DAST valida externamente, mas IAST oferece visibilidade interna de fluxos não sanitizados, chamadas inseguras e uso indevido de bibliotecas.  
+Essencial para L2/L3 de criticidade elevada.  
+
+**Contexto.**  
+DAST valida externamente, mas IAST oferece visibilidade interna.
+
+:::userstory
+**História.**   
+Como **QA + AppSec**, quero **instrumentar a aplicação em staging com IAST para observar chamadas inseguras em tempo real durante testes**, para **correlacionar findings com contexto de execução real e reduzir falsos positivos**.
+
+**Critérios de aceitação (BDD).**  
+- Dado que uma aplicação é instrumentada com agent IAST em staging  
+- Quando testes funcionais ou automáticos são executados  
+- Então findings são capturados com visibilidade total do stack (função, linha, parâmetro, valor)  
+
+- Dado um finding de IAST observado  
+- Quando é correlacionado com DAST/SAST  
+- Então o resultado é priorizado como crítico/alto se confirmado em múltiplas camadas  
+
+**Checklist.**  
+- [ ] Agent IAST instalado e configurado em staging  
+- [ ] Cobertura de instrumentação de endpoints críticos validada  
+- [ ] Performance da aplicação monitorizada (overhead `<10%` aceito)  
+- [ ] Findings de IAST exportados em formato estruturado  
+- [ ] Integração com ferramenta centralizada de findings (DefectDojo ou similar)  
+- [ ] Dados sensíveis mascarados nos logs de IAST  
+- [ ] Retest após correção de findings críticos agendado  
+
+:::
+
+**Artefactos & evidências.** Configuração de agent IAST (YAML/HCL versionado), relatórios IAST (JSON/XML), logs de performance, dashboard de correlação SAST↔DAST↔IAST, métricas de cobertura.  
+
+**Proporcionalidade por risco.**  
+| Nível | Obrigatório? | Ajustes |
+|---|---|---|
+| L1 | Não | Opcional, investigativo |
+| L2 | Recomendado | Em endpoints críticos (autenticação, pagamento) |
+| L3 | Obrigatório | Cobertura total + correlação com DAST |
+
+**Integração no SDLC.**  
+| Fase | Trigger | Responsável | SLA |
+|------|---------|-------------|-----|
+| Staging | Deploy de candidato a release | QA + AppSec | Antes de aprovação formal |
+
+---
+
+### US-10 - Gestão Centralizada de Findings com Triagem e SLA
+
+Findings dispersos em ferramentas isoladas criam redundância, ruído e falta de visibilidade.  
+Centralização com triagem formal, SLA e rastreabilidade é imperativa para governação.  
+
+**Contexto.**  
+Findings dispersos criam ruído e falta de visibilidade.
+
+:::userstory
+**História.**   
+Como **AppSec + DevOps**, quero **centralizar todos os findings de SAST, DAST, IAST, SCA, fuzzing e testes manuais numa plataforma unificada com triagem por criticidade, estado e SLA**, para **garantir rastreabilidade completa e priorização eficaz**.
+
+**Critérios de aceitação (BDD).**  
+- Dado que findings são produzidos por múltiplas ferramentas  
+- Quando são correlacionados na plataforma centralizada  
+- Então duplicados são consolidados e metadados unificados (CVE, CWE, CVSS, commit, módulo)  
+
+- Dado um finding triado  
+- Quando obtém estado (Aberto/Em investigação/Aceite/Corrigido/Validado)  
+- Então SLA é associado e alertas disparados se excedido  
+
+- Dado um finding corrigido  
+- Quando validação ocorre  
+- Então é marcado como Fechado e rastreabilidade de correção (commit, release) é registada  
+
+**Checklist.**  
+- [ ] Plataforma centralizada deployada (DefectDojo, Vulcan, Security Hub, etc.)  
+- [ ] Conectores para todas as ferramentas (SAST, DAST, IAST, SCA) configurados  
+- [ ] Regras de deduplica e correlação ativas  
+- [ ] Critérios de triagem documentados (CWE, OWASP, risco organizacional)  
+- [ ] SLA definidos por severidade e Lx (Crítico: `<24h`, Alto: `<7d`, Médio: `<30d`)  
+- [ ] Dashboard públicos com KPIs (findings abertos, taxa de resolução, tempo médio)  
+- [ ] Integração com backlog (Jira/Azure Boards) para atribuição automática  
+- [ ] Auditoria de exceções com dupla aprovação para L2/L3  
+
+:::
+
+**Artefactos & evidências.** Configuração plataforma centralizada versionada, regras de deduplica, dashboard de findings, SLA documento, logs de mudança de estado, relatórios mensais KPIs.  
+
+**Proporcionalidade por risco.**  
+| Nível | Exigência | Detalhes |
+|---|---|---|
+| L1 | Centralização simples | Triagem manual, SLA recomendado |
+| L2 | Centralização com SLA | Estados formais, alertas por exceção |
+| L3 | Centralização + auditoria | SLA rigoroso, dupla aprovação, relatório mensal |
+
+**Integração no SDLC.**  
+| Fase | Trigger | Responsável | SLA |
+|------|---------|-------------|-----|
+| Contínua | Produção de findings | AppSec + DevOps | Em tempo real |
+
+---
+
+### US-11 - Feedback Automático de Findings às Equipas
+
+Findings não comunicados eficazmente são ignorados.  
+Feedback automático em canais onde os developers trabalham reduz fricção e acelera correção.  
+
+**Contexto.**  
+Findings não comunicados são ignorados.
+
+:::userstory
+**História.**   
+Como **AppSec + DevOps**, quero **automatizar delivery de findings nos pontos de contacto das equipas (comentários em PR, notificações Slack, dashboards IDE)**, para **assegurar visibilidade e acelerar remediação**.
+
+**Critérios de aceitação (BDD).**  
+- Dado que SAST detecta uma vulnerabilidade num PR  
+- Quando o pipeline conclui  
+- Então comentário inline é publicado no PR com contexto (CWE, severidade, recomendação de fix)  
+
+- Dado um finding crítico detetado  
+- Quando é triado na plataforma centralizada  
+- Então alerta é enviado a Slack/Teams para o team owner com urgência  
+
+- Dado um developer a trabalhar  
+- Quando IDE integrado com SonarQube/Semgrep está ativo  
+- Então warnings aparecem em tempo real com sugestões de correção  
+
+**Checklist.**  
+- [ ] Integração de comentários automáticos em PRs ativa (ex: GitHub Actions, GitLab CI)  
+- [ ] Webhooks configurados para envio de notificações (Slack, Teams, Email)  
+- [ ] Severidade e contexto incluídos em cada notificação  
+- [ ] Evitar duplicação de notificações (coalescing de alerts)  
+- [ ] Dashboard público de findings por projeto/team  
+- [ ] Feedback de satisfação das equipas coletado (ex: "Muito útil", "Falso positivo")  
+- [ ] Ajustes de rules baseado em feedback periodicamente (mensal/trimestral)  
+
+:::
+
+**Artefactos & evidências.** Configuração webhooks e integrações (YAML versionado), templates de comentários em PR, dashboard comunicação, feedback logs, relatório trimestral eficácia.  
+
+**Proporcionalidade por risco.**  
+| Nível | Canais | Frequência |
+|---|---|---|
+| L1 | Email/relatório semanal | Agregado |
+| L2 | PR comments + Slack diário | Por severidade |
+| L3 | PR comments + Slack + IDE + dashboard | Real-time críticos |
+
+**Integração no SDLC.**  
+| Fase | Trigger | Responsável | SLA |
+|------|---------|-------------|-----|
+| Contínua | Geração/triagem de findings | AppSec + DevOps | `<15min` para críticos |
 
 ---
 
@@ -421,9 +571,12 @@ Estes artefactos são o que permite comprovar segurança perante auditorias ou c
 | Relatórios SAST/DAST/IAST | SARIF / HTML |
 | SBOM | CycloneDX/SPDX |
 | Regressões | Código + CI logs |
-| Checklist de release | Documento PR final |
+| Checklist de release | Documento PR final + assinaturas |
 | Relatório PenTest | PDF/MD + PoCs |
 | Registo de exceções | Ferramenta GRC |
+| **Plataforma centralizada de findings** | **DefectDojo, Vulcan, ou similar** |
+| **Webhooks e integrações de feedback** | **Configuração YAML + logs notificações** |
+| **Dashboard de KPIs** | **Prometheus/Grafana + relatórios mensais** |
 
 ---
 
@@ -436,12 +589,12 @@ O objetivo é calibrar testes de acordo com a criticidade da aplicação:
 |---------|----|----|----|
 | SAST | Aviso | Bloqueio High/Critical | Bloqueio Medium+ |
 | DAST | Manual | Automático autenticado | Automático + cobertura ampliada |
-| IAST | N/A | Opcional | Recomendado |
+| **IAST** | **N/A** | **Recomendado (críticos)** | **Obrigatório (cobertura total)** |
 | Fuzzing | Opcional | Endpoints prioritários | Endpoints críticos |
 | Regressões | Casos críticos | Por findings | Obrigatório |
 | PenTesting | N/A | Ocasional | Pré-produção obrigatório |
-| Release | Checklist | Bloqueio High/Critical | Nenhum crítico sem exceção |
-| Gestão de findings | Backlog simples | Estruturado | Ferramenta dedicada |
+| **Gestão findings** | **Backlog simples** | **Centralizado com SLA** | **Centralizado + auditoria** |
+| Release | Checklist simples | Bloqueio High/Critical | Nenhum crítico sem exceção |
 
 ---
 

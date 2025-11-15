@@ -9,7 +9,7 @@ tags: [opa, kyverno, policies, enforcement, kubernetes, runtime, containers]
 
 ## 🌟 Objetivo
 
-Garantir que apenas *containers* **conformes com políticas de segurança definidas** podem ser executados em ambientes controlados — nomeadamente **Kubernetes e pipelines CI/CD** — através de mecanismos formais de enforcement como:
+Garantir que apenas *containers* **conformes com políticas de segurança definidas** podem ser executados em ambientes controlados - nomeadamente **Kubernetes e pipelines CI/CD** - através de mecanismos formais de enforcement como:
 
 - OPA (Open Policy Agent)
 - Kyverno
@@ -34,7 +34,7 @@ As **políticas de execução** são regras formais aplicadas automaticamente no
 - **Auditar tentativas de execução fora de política**;
 - **Impor requisitos de assinatura, labels, annotations, permissões, imagens**.
 
-> 🔒 As políticas são o equivalente técnico à “governança runtime” — são o que transforma guidelines em enforcement real.
+> 🔒 As políticas são o equivalente técnico à “governança runtime” - são o que transforma guidelines em enforcement real.
 
 ---
 
@@ -70,7 +70,7 @@ As **políticas de execução** são regras formais aplicadas automaticamente no
 
 5. **Ativar modo `enforce`** após validação e aceitação da política.
 
-6. **Aplicar rótulos (labels), anotações e regras de escopo** (por namespace, equipa, tipo de workload).
+6. **Aplicar rótulos (labels), anotações e regras de âmbito** (por namespace, equipa, tipo de workload).
 
 ---
 
@@ -79,7 +79,7 @@ As **políticas de execução** são regras formais aplicadas automaticamente no
 - Diretório `./policies/` em repositório Git controlado;
 - Versionar com a infraestrutura (IaC);
 - Validar via CI/CD antes de aplicar;
-- Aplicar por ambientes (`dev`, `pre-prod`, `prod`) com escopo diferenciado;
+- Aplicar por ambientes (`dev`, `pre-prod`, `prod`) com âmbito diferenciado;
 - Auditar logs de rejeições e execuções conformes.
 
 ---
@@ -105,4 +105,4 @@ As **políticas de execução** são regras formais aplicadas automaticamente no
 | `08-kubernetes-execucao.md`     | Execução segura com enforcement ativo        |
 | `achievable-maturity`              | Políticas automáticas são critério de maturidade avançada |
 
-> 🧩 As políticas de runtime são a última linha de defesa. Se a pipeline falhar, o cluster não pode executar código fora de política — essa é a essência do enforcement.
+> 🧩 As políticas de runtime são a última linha de defesa. Se a pipeline falhar, o cluster não pode executar código fora de política - essa é a essência do enforcement.

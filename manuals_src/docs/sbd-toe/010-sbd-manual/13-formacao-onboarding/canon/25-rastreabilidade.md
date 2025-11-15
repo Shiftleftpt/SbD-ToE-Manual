@@ -8,11 +8,11 @@ sidebar_position: 20
 ---
 
 
-# 📎 Rastreabilidade contra Frameworks — Capítulo 13: Formação e Onboarding Seguro
+# 📎 Rastreabilidade contra Frameworks - Capítulo 13: Formação e Onboarding Seguro
 
 Este ficheiro estabelece a **rastreabilidade entre as práticas prescritas neste capítulo** e os requisitos dos principais frameworks e normas internacionais associados à qualificação de acesso, cultura de segurança e educação contínua.
 
-> A rastreabilidade é feita de forma **top-down**, demonstrando como o SbD-ToE cobre sistematicamente os requisitos normativos e de maturidade técnica associados à formação, onboarding e segurança comportamental — incluindo domínios como **Education & Training do OWASP DSOMM** e controlos organizacionais de ISO 27001, SSDF e CIS.
+> A rastreabilidade é feita de forma **top-down**, demonstrando como o SbD-ToE cobre sistematicamente os requisitos normativos e de maturidade técnica associados à formação, onboarding e segurança comportamental - incluindo domínios como **Education & Training do OWASP DSOMM** e controlos organizacionais de ISO 27001, SSDF e CIS.
 
 ---
 
@@ -102,10 +102,10 @@ Cobertura completa dos domínios:
 
 As práticas descritas neste capítulo são complementares e estruturantes para:
 
-- Capítulo 01 — Formação obrigatória com base na classificação de risco;
-- Capítulo 02 — Formação sobre requisitos, ameaças e validação;
-- Capítulo 03 — Formação sobre threat modeling e artefactos críticos;
-- Capítulo 05 / 07 / 09 — Integração com práticas técnicas de dependências, CI/CD e containers;
-- Todos os capítulos — formação por capítulo via Addon 06 e indicadores do Addon 90.
+- Capítulo 01 - Formação obrigatória com base na classificação de risco;
+- Capítulo 02 - Formação sobre requisitos, ameaças e validação;
+- Capítulo 03 - Formação sobre threat modeling e artefactos críticos;
+- Capítulo 05 / 07 / 09 - Integração com práticas técnicas de dependências, CI/CD e containers;
+- Todos os capítulos - formação por capítulo via Addon 06 e indicadores do Addon 90.
 
 > 📌 Esta rastreabilidade comprova que a formação prescrita no SbD-ToE **não é genérica nem informal**, mas uma componente crítica de segurança organizacional, rastreável e verificável por projeto, pessoa e função.

@@ -1,13 +1,13 @@
 ---
 id: ameacas-mitigadas
-title: Ameaças Mitigadas — Desenvolvimento Seguro
+title: Ameaças Mitigadas - Desenvolvimento Seguro
 description: Ameaças mitigadas pelas práticas deste capítulo, com mapeamento para OWASP, CAPEC, SSDF, entre outros
 tags: [ameaças, mitigação, desenvolvimento, codificação segura, validação, GenAI]
 sidebar_position: 50
 ---
 
 
-# 🔐 Ameaças Mitigadas — Capítulo 06: Desenvolvimento Seguro
+# 🔐 Ameaças Mitigadas - Capítulo 06: Desenvolvimento Seguro
 
 Este capítulo prescreve práticas de **codificação segura, validações automatizadas, gestão de exceções e evidência de conformidade**, com o objetivo de garantir a integridade e segurança do código-fonte desde o início do ciclo de desenvolvimento.
 
@@ -77,7 +77,7 @@ Este capítulo prescreve práticas de **codificação segura, validações autom
 
 ## ✅ Conclusão
 
-O Capítulo 06 mitiga ameaças críticas à **qualidade e segurança do código-fonte**, ao longo de todo o ciclo de desenvolvimento — especialmente aquelas ligadas à informalidade, falta de validação e fraca responsabilização técnica.
+O Capítulo 06 mitiga ameaças críticas à **qualidade e segurança do código-fonte**, ao longo de todo o ciclo de desenvolvimento - especialmente aquelas ligadas à informalidade, falta de validação e fraca responsabilização técnica.
 
 > 🧩 Pelo menos **10 ameaças são mitigadas exclusivamente por este capítulo**, incluindo:
 > - Justificação e rastreio de exceções em código;
@@ -86,4 +86,4 @@ O Capítulo 06 mitiga ameaças críticas à **qualidade e segurança do código-
 
 > 📦 Também reduz substancialmente o risco de problemas **que viriam a ser detetados por SBOM, SCA ou scanners**, ao garantir validações estruturadas, políticas de dependência e anotação de exceções desde a origem.
 
-> 📌 Este capítulo operacionaliza os princípios de **secure coding** e **continuous validation** de forma auditável e escalável — com impacto direto na conformidade com **SSDF, BSIMM, SAMM, ISO 27034, CAPEC e OWASP Top 10**.
+> 📌 Este capítulo operacionaliza os princípios de **secure coding** e **continuous validation** de forma auditável e escalável - com impacto direto na conformidade com **SSDF, SAMM, ISO 27034, CAPEC e OWASP Top 10**.

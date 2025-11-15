@@ -35,7 +35,7 @@ Este ficheiro complementa os controlos principais definidos neste capítulo com 
 
 ## 🔒 Aplicação de princípios de Zero Trust no pipeline
 
-- **Confiança nula entre repositórios, runners, artefactos e ambientes** — cada elemento deve ser autenticado, validado e isolado;
+- **Confiança nula entre repositórios, runners, artefactos e ambientes** - cada elemento deve ser autenticado, validado e isolado;
 - Todos os comandos do pipeline devem partir do princípio que o runner pode ser malicioso, e vice-versa;
 - Integração com serviços de autorização externa (ex: Rego/OPA, ZTA gateways).
 
@@ -57,7 +57,7 @@ Este ficheiro complementa os controlos principais definidos neste capítulo com 
 - Logging centralizado com alertas para eventos como:
   - Execução fora do horário habitual;
   - Modificações em ficheiros de pipeline sem pull request aprovado;
-  - Runners a executar jobs fora do seu escopo definido.
+  - Runners a executar jobs fora do seu âmbito definido.
 
 ---
 
@@ -80,12 +80,3 @@ Este ficheiro complementa os controlos principais definidos neste capítulo com 
 - Falhas de deteção por ausência de feedback loop (OSC&R: SC0006, CI0016).
 
 ---
-
-## 🧭 Referências adicionais
-
-- [OWASP Security Rationale for GitHub Actions](https://owasp.org/www-project-cicd-security/)
-- [SLSA – Threat Modeling](https://slsa.dev/threats)
-- [OpenSSF Best Practices for CI/CD Hardening](https://openssf.org)
-- [OPA (Open Policy Agent) – Policy as Code for CI/CD](https://www.openpolicyagent.org/)
-- [MITRE ATT&CK – T1650: Build System Compromise](https://attack.mitre.org/techniques/T1650/)
-

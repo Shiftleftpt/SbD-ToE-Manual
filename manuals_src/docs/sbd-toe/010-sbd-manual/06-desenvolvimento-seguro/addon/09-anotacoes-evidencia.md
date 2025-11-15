@@ -9,7 +9,7 @@ tags: [evidência, anotação, validação, rastreabilidade, SDLC]
 # 🏷️ Anotações e Evidência de Validações
 
 > 💡 **Nota prática**:  
-> Ferramentas como **GitHub**, **GitLab**, **Xygeni**, **SonarQube**, **Semgrep**, ou até simples editores como **VSCode** permitem o uso de **comentários estruturados, etiquetas e marcações especiais** que indicam que uma validação de segurança foi feita — ou que uma exceção foi aceite.  
+> Ferramentas como **GitHub**, **GitLab**, **Xygeni**, **SonarQube**, **Semgrep**, ou até simples editores como **VSCode** permitem o uso de **comentários estruturados, etiquetas e marcações especiais** que indicam que uma validação de segurança foi feita - ou que uma exceção foi aceite.  
 > Estas anotações tornam a revisão mais eficaz, ajudam a construir rastreabilidade e servem como evidência auditável da aplicação prática das guidelines de segurança.
 
 ---
@@ -54,7 +54,7 @@ tags: [evidência, anotação, validação, rastreabilidade, SDLC]
 4. **Reutilizar comentários nas revisões e reports**
    - As anotações servem de fonte para gerar evidência e relatórios.
 
-5. **Não abusar — apenas onde há decisão explícita**
+5. **Não abusar - apenas onde há decisão explícita**
    - Comentários inúteis reduzem o sinal:ruído e perdem valor técnico.
 
 ---

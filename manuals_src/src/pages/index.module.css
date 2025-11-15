@@ -14,13 +14,49 @@
   color: var(--ifm-color-emphasis-900);
   line-height: 1.1;
 }
+/* Título: mantemos a hierarquia e contraste dinâmico do tema */
+.heroTitle {
+  font-size: clamp(2.25rem, 2.5vw + 1.5rem, 3rem);
+  margin: 0 0 .25rem;
+  color: var(--ifm-color-emphasis-900);
+  line-height: 1.1;
+}
+
+/* Tagline: maior, mais densa e com cor adaptativa */
+:root {
+  --sl-hero-tagline-color: var(--ifm-color-emphasis-800);
+}
+[data-theme='dark'] {
+  --sl-hero-tagline-color: var(--ifm-color-emphasis-200);
+}
 
 .heroTagline {
+  margin: 0 0 1.25rem;
+  font-size: clamp(1.125rem, 0.9vw + 1rem, 1.625rem); /* ↑ tamanho */
+  line-height: 1.25;
+  font-weight: 600; /* realce */
+  color: var(--sl-hero-tagline-color);
+  max-width: 72ch; /* legibilidade em ecrãs largos */
+  margin-inline: auto; /* centra em layouts fluidos */
+}
+
+/* Realce opcional de palavras-chave dentro da tagline usando <strong> */
+.heroTagline strong {
+  /* fundo subtil que funciona nos dois temas */
+  background: color-mix(in oklab, var(--ifm-color-primary) 18%, transparent);
+  padding: .1rem .45rem;
+  border-radius: .5rem;
+}
+[data-theme='dark'] .heroTagline strong {
+  background: color-mix(in oklab, var(--ifm-color-primary) 30%, transparent);
+}
+
+/* .heroTagline {
   margin: 0 0 1.25rem;
   font-size: 1.1rem;
   color: var(--ifm-color-emphasis-700);
 }
-
+ */
 .ctaWrap {
   display: flex;
   justify-content: center;

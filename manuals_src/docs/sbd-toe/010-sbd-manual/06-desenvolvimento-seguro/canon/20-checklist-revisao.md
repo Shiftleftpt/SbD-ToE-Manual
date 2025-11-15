@@ -2,14 +2,14 @@
 id: checklist-revisao
 title: Checklist – Desenvolvimento Seguro
 sidebar_label: Checklist de Revisão
-description: Checklist binário e auditável para avaliar a adoção prática das práticas prescritas no Capítulo 06 — Desenvolvimento Seguro
+description: Checklist binário e auditável para avaliar a adoção prática das práticas prescritas no Capítulo 06 - Desenvolvimento Seguro
 tags: [checklist, desenvolvimento, validação, auditoria, conformidade]
 sidebar_position: 20
 ---
 
-# ✅ Checklist de Revisão Periódica — Desenvolvimento Seguro
+# ✅ Checklist de Revisão Periódica - Desenvolvimento Seguro
 
-Este checklist aplica-se a todas as aplicações sujeitas às práticas definidas no Capítulo 06 — Desenvolvimento Seguro.  
+Este checklist aplica-se a todas as aplicações sujeitas às práticas definidas no Capítulo 06 - Desenvolvimento Seguro.  
 Serve como instrumento de verificação binária e auditável da **adoção prática das prescrições deste capítulo**, permitindo:
 
 - Controlo contínuo da aplicação de práticas seguras de desenvolvimento

@@ -1,13 +1,13 @@
 ---
 id: ameacas-mitigadas
-title: Ameaças Mitigadas — Governança e Contratação
+title: Ameaças Mitigadas - Governança e Contratação
 sidebar_position: 50
 description: Tabela de ameaças mitigadas pelas práticas de exceções, rastreabilidade, onboarding e validação formal descritas neste capítulo
 tags: [ameacas, governance, rastreabilidade, excecoes, contratos, osc&r, dsomm]
 ---
 
 
-# 🔐 Ameaças Mitigadas — Capítulo 14: Governança e Contratação Segura
+# 🔐 Ameaças Mitigadas - Capítulo 14: Governança e Contratação Segura
 
 Este capítulo define práticas formais para **garantir que a segurança é aplicada de forma consistente e rastreável a nível organizacional**, incluindo:
 
@@ -20,7 +20,7 @@ Este capítulo define práticas formais para **garantir que a segurança é apli
 
 ---
 
-## 🧯 Categoria 1 — Adoção de software ou serviços inseguros
+## 🧯 Categoria 1 - Adoção de software ou serviços inseguros
 
 | Ameaça                                 | Fonte                                  | Como surge                                         | Como a prática mitiga                                                             | Controlos associados                         |
 |----------------------------------------|-----------------------------------------|----------------------------------------------------|------------------------------------------------------------------------------------|----------------------------------------------|
@@ -30,7 +30,7 @@ Este capítulo define práticas formais para **garantir que a segurança é apli
 
 ---
 
-## 🧱 Categoria 2 — Governança inconsistente ou ineficaz
+## 🧱 Categoria 2 - Governança inconsistente ou ineficaz
 
 | Ameaça                                   | Fonte                              | Como surge                                           | Como a prática mitiga                                                           | Controlos associados                        |
 |------------------------------------------|-------------------------------------|------------------------------------------------------|----------------------------------------------------------------------------------|---------------------------------------------|
@@ -40,7 +40,7 @@ Este capítulo define práticas formais para **garantir que a segurança é apli
 
 ---
 
-## 🔄 Categoria 3 — Falta de revisão e validação contínua
+## 🔄 Categoria 3 - Falta de revisão e validação contínua
 
 | Ameaça                                        | Fonte                             | Como surge                                            | Como a prática mitiga                                                            | Controlos associados                          |
 |-----------------------------------------------|------------------------------------|-------------------------------------------------------|-----------------------------------------------------------------------------------|------------------------------------------------|
@@ -49,7 +49,7 @@ Este capítulo define práticas formais para **garantir que a segurança é apli
 
 ---
 
-## 🧠 Categoria 4 — Ausência de maturidade e rastreabilidade estratégica
+## 🧠 Categoria 4 - Ausência de maturidade e rastreabilidade estratégica
 
 | Ameaça                                   | Fonte                             | Como surge                                           | Como a prática mitiga                                                           | Controlos associados                          |
 |------------------------------------------|------------------------------------|------------------------------------------------------|----------------------------------------------------------------------------------|------------------------------------------------|
@@ -58,7 +58,7 @@ Este capítulo define práticas formais para **garantir que a segurança é apli
 
 ---
 
-## 🚫 Categoria 5 — Falha de enforcement organizacional
+## 🚫 Categoria 5 - Falha de enforcement organizacional
 
 | Ameaça                                        | Fonte                        | Como surge                                                     | Como a prática mitiga                                                                  | Controlos associados                              |
 |-----------------------------------------------|-------------------------------|----------------------------------------------------------------|-----------------------------------------------------------------------------------------|---------------------------------------------------|
@@ -75,6 +75,6 @@ O Capítulo 14 mitiga um conjunto vasto de **ameaças estruturais e organizacion
 - Criam **riscos invisíveis** relacionados com decisões mal documentadas ou não validadas;
 - Afetam **a cadeia de fornecimento, contratos, ownership e accountability organizacional**.
 
-> ✅ Mitiga diretamente **12+ ameaças organizacionais críticas**, com base em fontes como **OWASP DSOMM, ISO 27001, SSDF, BSIMM, ENISA, CAPEC** e outras taxonomias reconhecidas.
+> ✅ Mitiga diretamente **12+ ameaças organizacionais críticas**, com base em fontes como **OWASP DSOMM, ISO 27001, SSDF, ENISA, CAPEC** e outras taxonomias reconhecidas.
 
-> 📌 Este capítulo constitui o **principal pilar de enforcement e rastreabilidade organizacional do SbD-ToE**, garantindo que a segurança não é apenas definida — mas também validada, aplicada e sustentada por estruturas formais.
+> 📌 Este capítulo constitui o **principal pilar de enforcement e rastreabilidade organizacional do SbD-ToE**, garantindo que a segurança não é apenas definida - mas também validada, aplicada e sustentada por estruturas formais.

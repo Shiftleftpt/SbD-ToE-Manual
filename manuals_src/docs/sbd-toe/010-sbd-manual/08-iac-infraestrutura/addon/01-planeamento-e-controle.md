@@ -99,4 +99,4 @@ Esta prática permite:
 
 ---
 
-> 🔐 Este controlo é essencial para garantir integridade, rastreabilidade e conformidade no ciclo de vida de infraestrutura como código — sendo um dos pilares de maturidade em IaC seguro segundo o modelo SbD-ToE.
+> 🔐 Este controlo é essencial para garantir integridade, rastreabilidade e conformidade no ciclo de vida de infraestrutura como código - sendo um dos pilares de maturidade em IaC seguro segundo o modelo SbD-ToE.

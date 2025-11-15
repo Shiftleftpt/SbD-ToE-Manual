@@ -10,7 +10,7 @@ tags: [desenvolvimento, boas práticas, secure coding, requisitos, segurança]
 # ✍️ Boas Práticas de Escrita de Código Seguro
 
 > 💡 **Nota prática**:  
-> Muitas ferramentas de análise estática e linters modernos — como ESLint, Pylint, SonarQube, Checkmarx, Semgrep, entre outras — já incluem por omissão **regras de segurança essenciais** que cobrem várias das práticas aqui descritas.  
+> Muitas ferramentas de análise estática e linters modernos - como ESLint, Pylint, SonarQube, Checkmarx, Semgrep, entre outras - já incluem por omissão **regras de segurança essenciais** que cobrem várias das práticas aqui descritas.  
 > Essas regras podem (e devem) ser **customizadas, auditadas e alinhadas com o contexto técnico da organização**.  
 > A adoção destas ferramentas não dispensa a definição destas boas práticas, mas **facilita significativamente a sua verificação e operacionalização.**
 

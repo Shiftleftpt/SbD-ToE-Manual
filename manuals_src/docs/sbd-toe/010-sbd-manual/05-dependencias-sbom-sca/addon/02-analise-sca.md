@@ -98,7 +98,7 @@ Os findings devem ser triados com base em:
 
 ---
 
-## 🔒 Referências cruzadas
+## 📎 Referências cruzadas
 
 | Documento                   | Ligação com SCA                                |
 |-----------------------------|-----------------------------------------------|

@@ -7,7 +7,7 @@ sidebar_position: 50
 ---
 
 
-# 🔐 Ameaças Mitigadas — Capítulo 02: Requisitos de Segurança
+# 🔐 Ameaças Mitigadas - Capítulo 02: Requisitos de Segurança
 
 Este capítulo define o **catálogo base de requisitos de segurança aplicacionais** do modelo SbD-ToE, bem como os mecanismos de validação, exceção e rastreabilidade.  
 As ameaças mitigadas estão diretamente ligadas à **ausência, má definição, aplicação inconsistente ou aceitação informal de requisitos de segurança.**
@@ -68,6 +68,6 @@ Este capítulo mitiga um conjunto vasto de ameaças estruturais associadas à **
 
 > O seu impacto é transversal: **não há controlo técnico no modelo que não dependa de um requisito bem definido, proporcional e validado.**
 
-> Mitiga de forma **exclusiva pelo menos 10 ameaças críticas**, com destaque para a ausência, ambiguidade e não testabilidade de requisitos — pontos não tratados nos restantes capítulos.
+> Mitiga de forma **exclusiva pelo menos 10 ameaças críticas**, com destaque para a ausência, ambiguidade e não testabilidade de requisitos - pontos não tratados nos restantes capítulos.
 
-> As práticas aqui descritas são indispensáveis para atingir conformidade com modelos como **SSDF, ASVS, BSIMM, OWASP SAMM, ISO 27034 e SLSA**.
+> As práticas aqui descritas são indispensáveis para atingir conformidade com modelos como **SSDF, ASVS, OWASP SAMM, ISO 27034 e SLSA**.

@@ -1,0 +1,27 @@
+name: Nova funcionalidade ou melhoria
+description: Propor melhoria editorial, técnica ou estrutural
+labels: ["tipo:feature", "status:novo"]
+body:
+  - type: textarea
+    id: contexto
+    attributes:
+      label: Contexto
+      description: Qual é a necessidade ou problema identificado?
+  - type: textarea
+    id: proposta
+    attributes:
+      label: Proposta
+      description: Explica brevemente o que propões adicionar ou alterar
+  - type: input
+    id: capitulo
+    attributes:
+      label: Capítulo/Ficheiro
+      placeholder: "ex: cap08/addon/02-casos-praticos.md"
+  - type: dropdown
+    id: impacto
+    attributes:
+      label: Impacto esperado
+      options:
+        - Elevado
+        - Moderado
+        - Reduzido

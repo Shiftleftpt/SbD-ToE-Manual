@@ -5,22 +5,12 @@ description: Princípios, práticas e controlos para garantir gestão segura de 
 tags: [dependencias, sbom, sca, supply-chain, oss, cicd, governance]
 sidebar_position: 0
 ---
-import Badge from '@site/src/components/Badge';
 
-<div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.5rem', marginBottom: '1rem' }}>
-  
-  <Badge color="info">SAMM: 2 / 3</Badge>
-  <Badge color="info">BSIMM: AA1.2, AA2.1, CMVM1.1</Badge>
-  <Badge color="info">SSDF: PW.4, PW.7</Badge>
-  <Badge color="info">SLSA: Nível 2 / 4</Badge>
-  <Badge color="info">DSOMM: 3 / 4 (média)</Badge>
-  <a href="./achievable-maturity" style={{ marginLeft: 'auto', fontSize: '0.9rem' }}>📄 Ver análise de maturidade</a>
-</div>
+:::tip Capítulo Operacional
+Este capítulo é considerado **operacional** no modelo *Security by Design – Theory of Everything (SbD-ToE)*.  
+A sua função é **aplicar, automatizar e validar** as práticas definidas nos capítulos basilares, garantindo a sua execução contínua e mensurável.  
 
-:::caution Capítulo Basilar
-Este capítulo é considerado **basilar** no modelo SbD-ToE.  
-A sua não aplicação **inviabiliza a confiança na cadeia de fornecimento de software**.  
-Sem SBOM e governação de dependências, não há rastreabilidade nem segurança real.
+Os capítulos operacionais implementam o SbD-ToE em contextos técnicos específicos. Estes capítulos traduzem as prescrições basilares em práticas de **execução verificável**, promovendo a **integração contínua da segurança** ao longo do ciclo de vida do software.
 :::
 
 # Dependências, SBOM e SCA
@@ -44,10 +34,10 @@ Focam-se em assegurar que:
 - nenhuma biblioteca entra “por cópia manual” fora do *package manager*.
 
 Ligação a outros capítulos:
-- **Cap. 02 — Requisitos de Segurança** (REQ-DEP-xxx),
-- **Cap. 07 — CI/CD Seguro** (pipelines e gates),
-- **Cap. 09 — Containers** (imagens como artefactos de supply chain),
-- **Cap. 14 — Governança** (exigências a fornecedores).
+- **Cap. 02 - Requisitos de Segurança** (REQ-DEP-xxx),
+- **Cap. 07 - CI/CD Seguro** (pipelines e gates),
+- **Cap. 09 - Containers** (imagens como artefactos de supply chain),
+- **Cap. 14 - Governança** (exigências a fornecedores).
 
 ---
 

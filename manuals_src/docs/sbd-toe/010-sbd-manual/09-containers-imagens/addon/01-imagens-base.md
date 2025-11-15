@@ -32,7 +32,7 @@ Uma **imagem base segura** é aquela que:
 - É submetida a **validação estática** (SCA, scanners de container);
 - É assinada e rastreável.
 
-> ⚠️ Imagens genéricas como `ubuntu`, `node`, `python`, `debian` podem conter centenas de pacotes desnecessários — devem ser evitadas em produção.
+> ⚠️ Imagens genéricas como `ubuntu`, `node`, `python`, `debian` podem conter centenas de pacotes desnecessários - devem ser evitadas em produção.
 
 ---
 

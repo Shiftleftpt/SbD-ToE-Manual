@@ -1,16 +1,16 @@
 ---
 id: ameacas-mitigadas
-title: Ameaças Mitigadas — Infraestrutura como Código (IaC)
+title: Ameaças Mitigadas - Infraestrutura como Código (IaC)
 sidebar_position: 50
 description: Ameaças específicas mitigadas pelas práticas prescritas no capítulo, com base em fontes como OSC&R, CAPEC e SSDF.
 tags: [ameaças, mitigação, segurança, iac, osc&r, capec, ssdf]
 ---
 
-# 🔐 Ameaças Mitigadas — Capítulo 08: IaC e Infraestrutura como Código
+# 🔐 Ameaças Mitigadas - Capítulo 08: IaC e Infraestrutura como Código
 
 Este capítulo define práticas seguras para projetos de **Infraestrutura como Código (IaC)**, incluindo: controlo de módulos, validações de segurança, enforcement em CI/CD, rastreabilidade de alterações e gestão de exceções.
 
-> As ameaças mitigadas são especialmente críticas por se tratarem de **artefactos que gerem ambientes de produção** — a sua falha representa risco direto à confidencialidade, integridade e disponibilidade do sistema.
+> As ameaças mitigadas são especialmente críticas por se tratarem de **artefactos que gerem ambientes de produção** - a sua falha representa risco direto à confidencialidade, integridade e disponibilidade do sistema.
 
 ---
 

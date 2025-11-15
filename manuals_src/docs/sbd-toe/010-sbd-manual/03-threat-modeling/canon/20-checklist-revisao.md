@@ -1,14 +1,14 @@
 ---
 id: checklist-revisao
-title: ✅ Checklist SbD-ToE — Threat Modeling
+title: ✅ Checklist SbD-ToE - Threat Modeling
 sidebar_label: Checklist de Revisão
 ---
 
-# ✅ Checklist de Revisão Periódica — Threat Modeling
+# ✅ Checklist de Revisão Periódica - Threat Modeling
 
-Este checklist aplica-se a todas as aplicações com criticidade L2 ou L3, ou que envolvam fluxos sensíveis, exposições externas ou alterações arquiteturais relevantes.
+Este checklist aplica-se a todas as aplicações com criticidade L2 ou L3, ou que envolvam fluxos sensíveis, exposições externas ou alterações de arquitetura relevantes.
 
-Serve como instrumento de verificação binária e auditável da **adoção prática das prescrições do Capítulo 3 — Threat Modeling**, permitindo:
+Serve como instrumento de verificação binária e auditável da **adoção prática das prescrições do Capítulo 3 - Threat Modeling**, permitindo:
 
 - Verificação formal em revisões técnicas e auditorias;
 - Controlo da rastreabilidade entre ameaças, requisitos e controlos;
@@ -47,7 +47,7 @@ Serve como instrumento de verificação binária e auditável da **adoção prá
 
 ## ✅ Conformidade e KPI
 
-- A validação deste checklist permite declarar **conformidade com o Capítulo 3 — Threat Modeling**.
+- A validação deste checklist permite declarar **conformidade com o Capítulo 3 - Threat Modeling**.
 - A contagem de respostas afirmativas pode ser usada para **medir o grau de adoção das práticas prescritas**.
 - Este resultado pode ser agregado por equipa, domínio ou organização como **indicador de maturidade e cobertura de risco**.
 

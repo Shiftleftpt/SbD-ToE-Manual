@@ -7,9 +7,9 @@ sidebar_position: 60
 ---
 
 
-# 🏛️ Políticas Organizacionais — Requisitos de Segurança
+# 🏛️ Políticas Organizacionais - Requisitos de Segurança
 
-A adoção eficaz do Capítulo 02 — Requisitos de Segurança — exige a existência de **políticas organizacionais formais** que **enquadrem, legitimem e sustentem a aplicação das práticas descritas neste capítulo**.
+A adoção eficaz do Capítulo 02 - Requisitos de Segurança - exige a existência de **políticas organizacionais formais** que **enquadrem, legitimem e sustentem a aplicação das práticas descritas neste capítulo**.
 
 ---
 
@@ -25,7 +25,7 @@ Estas políticas:
 
 > 🧩 Este capítulo **implementa, na prática, o que as políticas definem**. A política aprova, o capítulo operacionaliza.
 
-> 📎 A exigência de políticas formais sobre requisitos de segurança é explicitamente referida em frameworks como **NIST SSDF**, **ISO/IEC 27001**, **OWASP SAMM**, **ENISA SDLC** e **CIS Controls v8** — estas políticas não são apenas boas práticas, são uma expectativa normativa.
+> 📎 A exigência de políticas formais sobre requisitos de segurança é explicitamente referida em frameworks como **NIST SSDF**, **ISO/IEC 27001**, **OWASP SAMM**, **ENISA SDLC** e **CIS Controls v8** - estas políticas não são apenas boas práticas, são uma expectativa normativa.
 
 ---
 
@@ -36,20 +36,6 @@ Estas políticas:
 | Política de Requisitos de Segurança Aplicacionais       | ✅ Sim       | Todos os projetos e equipas de produto    | Catálogo obrigatório, seleção por risco, rastreabilidade, critérios de aceitação |
 | Política de Integração de Requisitos no Backlog         | ⚠️ Opcional  | Equipa de desenvolvimento, PO, QA         | Requisitos devem constar nos artefactos de planeamento (stories/tasks) com tags |
 | Política de Validação de Requisitos em Pipelines        | ⚠️ Opcional  | DevOps, QA, segurança                     | Critérios mínimos automatizados para bloqueio de builds e validação de releases |
-
----
-
-## 📎 Correspondência com frameworks normativas
-
-| Framework             | Requisitos cobertos pelas políticas acima                                  |
-|----------------------|-----------------------------------------------------------------------------|
-| **OWASP ASVS v5**     | V1, V2, V5, V14 — definição, aplicação e validação de requisitos            |
-| **NIST SSDF**         | PW.1, PW.4 — definição e revisão formal de requisitos de segurança         |
-| **ISO/IEC 27001**     | A.14.1.1, A.14.2.5 — requisitos de segurança e validação em sistemas        |
-| **ENISA SDLC**        | Sec. 2.1, 2.2 — definição, aprovação e revisão formal de requisitos         |
-| **CIS Controls v8**   | Control 16 — políticas para definição, aplicação e verificação contínua     |
-| **OWASP SAMM**        | Design → Security Requirements (níveis 1 a 3)                               |
-| **BSIMM13**           | Intelligence → Requirements and Attack Models                              |
 
 ---
 

@@ -8,7 +8,7 @@ tags: [checklist, controlo, validacao, monitorizacao, deteccao, resposta]
 ---
 
 
-# ✅ Checklist de Revisão — Capítulo 12: Monitorização e Operações
+# ✅ Checklist de Revisão - Capítulo 12: Monitorização e Operações
 
 Este checklist aplica-se a todas as aplicações que requeiram capacidade de **logging estruturado, alertas automáticos, correlação de eventos e resposta a incidentes**.  
 Serve como instrumento de verificação binária e auditável da **adoção prática das prescrições do Capítulo 12**, permitindo:
@@ -47,7 +47,7 @@ Serve como instrumento de verificação binária e auditável da **adoção prá
 
 - Este checklist pode ser usado em **auditorias técnicas, gates de release ou revisões de segurança**;
 - Cada resposta afirmativa deve ser suportada por **evidência objetiva**: regras, dashboards, tickets, configs, capturas de teste;
-- A proporcionalidade deve seguir a [matriz de controlo por risco](/sbd-toe/sbd-manual/monitorizacao-operacoes/matriz-controles-por-risco).
+- A proporcionalidade deve seguir a [matriz de controlo por risco](/sbd-toe/sbd-manual/monitorizacao-operacoes/addon/matriz-controles-por-risco).
 
 > ⚠️ **Respostas negativas exigem exceção formal aprovada e justificada.**
 
@@ -55,7 +55,7 @@ Serve como instrumento de verificação binária e auditável da **adoção prá
 
 ## 📊 Conformidade e Governação
 
-- Este instrumento valida a **conformidade com o Capítulo 12 — Monitorização e Operações**;
+- Este instrumento valida a **conformidade com o Capítulo 12 - Monitorização e Operações**;
 - Pode ser integrado em **ciclos de revisão regulares ou como KPI organizacional**;
 - A evolução das métricas (ex: % com alertas testados, cobertura de logs, MTTD médio) reflete a **maturidade da equipa**.
 

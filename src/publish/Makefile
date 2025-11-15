@@ -19,8 +19,9 @@ help:
 	@echo ""
 	@echo "Targets disponíveis:"
 	@echo "  make web        -> update-lock + clean + prepare + install + build"
-	@echo "  make dev        -> clean + prepare + install + start (dev server)"
-	@echo "  make sync       -> rsync incremental manuals_src/ -> _out/web/"
+	@echo "  make dev-setup  -> clean + prepare + install (setup inicial)"
+	@echo "  make dev        -> start dev server em _out/web (use dev-setup primeiro)"
+	@echo "  make sync       -> rsync incremental manuals_src/ -> _out/web/ (usar com dev ativo)"
 	@echo "  make update-lock-> atualiza package-lock.json no repo"
 	@echo "  make prepare    -> copia manuals_src/ -> _out/web/"
 	@echo "  make install    -> npm install em _out/web/"
@@ -109,14 +110,27 @@ clear:
 	cd "$(WEB_DIR)"; \
 	rm -rf .docusaurus node_modules/.cache build
 
+# ---------------------------------------------------------------
+# Setup inicial para desenvolvimento
+# ---------------------------------------------------------------
+.PHONY: dev-setup
+dev-setup: clean prepare install
+	@echo ">> Setup completo. Agora podes correr 'make dev'"
+
+# ---------------------------------------------------------------
+# Dev server (usa dev-setup primeiro se _out/web não existir)
+# ---------------------------------------------------------------
 .PHONY: dev
-dev: clean prepare install
+dev:
+	@if [ ! -d "$(WEB_DIR)" ]; then \
+	  echo "!! $(WEB_DIR) não existe. Corre 'make dev-setup' primeiro"; exit 1; fi
 	@echo ">> npm run start (Docusaurus dev) em $(WEB_DIR)"
 	cd "$(WEB_DIR)"; \
 	npm run start
 
 # ---------------------------------------------------------------
 # Sync incremental - atualiza _out/web quando há alterações
+# Nota: O dev server (make dev) deve estar a correr noutra janela
 # ---------------------------------------------------------------
 .PHONY: sync
 sync:
@@ -124,11 +138,12 @@ sync:
 	@if [ ! -d "$(SRC_DIR)" ]; then \
 	  echo "!! Origem não encontrada: $(SRC_DIR)"; exit 1; fi
 	@if [ ! -d "$(WEB_DIR)" ]; then \
-	  echo "!! $(WEB_DIR) não existe. Corre 'make dev' primeiro"; exit 1; fi
+	  echo "!! $(WEB_DIR) não existe. Corre 'make dev' primeiro noutra janela"; exit 1; fi
 	@if command -v rsync >/dev/null 2>&1; then \
-	  rsync -a --exclude '.git' --exclude '.docusaurus' \
+	  rsync -av --exclude '.git' --exclude '.docusaurus' \
 	    --exclude 'node_modules' --exclude 'build' --exclude '.DS_Store' \
 	    "$(SRC_DIR)/" "$(WEB_DIR)/"; \
-	  echo ">> Sincronização completa"; \
+	  echo ">> Sincronização completa. O Docusaurus dev server deve recarregar automaticamente."; \
 	else \
 	  echo "!! rsync não encontrado"; exit 1; fi
+

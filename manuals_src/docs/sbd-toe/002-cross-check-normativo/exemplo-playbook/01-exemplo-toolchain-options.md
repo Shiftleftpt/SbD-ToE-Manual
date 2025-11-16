@@ -251,6 +251,369 @@ SecurityEvent
 
 ---
 
+### 2.1. Integração Aplicacional: Como Fazer Push de Logs
+
+As opções acima mostram **onde** centralizar logs. Esta secção mostra **como** as aplicações enviam logs para essas infraestruturas.
+
+#### .NET (ASP.NET Core) → Elasticsearch/Datadog
+
+**Opção 1: Serilog + Elasticsearch**
+```csharp
+// Program.cs
+using Serilog;
+using Serilog.Sinks.Elasticsearch;
+
+var builder = WebApplication.CreateBuilder(args);
+
+// Configurar Serilog
+Log.Logger = new LoggerConfiguration()
+    .MinimumLevel.Information()
+    .MinimumLevel.Override("Microsoft", LogEventLevel.Warning)
+    .Enrich.FromLogContext()
+    .Enrich.WithMachineName()
+    .Enrich.WithEnvironmentName()
+    .Enrich.WithProperty("Application", "MyApp")
+    .WriteTo.Console()
+    .WriteTo.Elasticsearch(new ElasticsearchSinkOptions(new Uri("https://elasticsearch:9200"))
+    {
+        AutoRegisterTemplate = true,
+        IndexFormat = "logs-myapp-{0:yyyy.MM.dd}",
+        ModifyConnectionSettings = conn => conn
+            .BasicAuthentication("user", "password")
+            .ServerCertificateValidationCallback((o, cert, chain, errors) => true), // Prod: validar cert!
+        EmitEventFailure = EmitEventFailureHandling.WriteToSelfLog,
+        FailureCallback = e => Console.WriteLine($"Unable to submit event {e.MessageTemplate}"),
+    })
+    .CreateLogger();
+
+builder.Host.UseSerilog();
+
+var app = builder.Build();
+
+// Exemplo de logging estruturado
+app.MapGet("/api/users/{id}", (int id, ILogger<Program> logger) =>
+{
+    logger.LogInformation("User access: {UserId} at {Timestamp}", id, DateTime.UtcNow);
+    return Results.Ok(new { id, name = "User" });
+});
+
+app.Run();
+```
+
+**Opção 2: Serilog + Datadog**
+```csharp
+// Program.cs
+using Serilog;
+using Serilog.Sinks.Datadog.Logs;
+
+Log.Logger = new LoggerConfiguration()
+    .WriteTo.DatadogLogs(
+        apiKey: Environment.GetEnvironmentVariable("DD_API_KEY"),
+        source: "csharp",
+        service: "myapp",
+        host: Environment.MachineName,
+        tags: new[] { "env:prod", "version:1.0" }
+    )
+    .CreateLogger();
+```
+
+**NuGet Packages:**
+```xml
+<ItemGroup>
+  <PackageReference Include="Serilog.AspNetCore" Version="8.0.0" />
+  <PackageReference Include="Serilog.Sinks.Elasticsearch" Version="10.0.0" />
+  <PackageReference Include="Serilog.Sinks.Datadog.Logs" Version="0.5.2" />
+  <PackageReference Include="Serilog.Enrichers.Environment" Version="3.0.0" />
+</ItemGroup>
+```
+
+---
+
+#### Node.js (Express) → Elasticsearch/Datadog
+
+**Opção 1: Winston + Elasticsearch**
+```javascript
+// logger.js
+const winston = require('winston');
+const { ElasticsearchTransport } = require('winston-elasticsearch');
+
+const esTransportOpts = {
+  level: 'info',
+  clientOpts: {
+    node: 'https://elasticsearch:9200',
+    auth: {
+      username: process.env.ES_USER,
+      password: process.env.ES_PASSWORD,
+    },
+    tls: {
+      rejectUnauthorized: true, // Prod: validar certificado
+    },
+  },
+  index: 'logs-nodeapp',
+  dataStream: true, // Usar data streams do ES 8+
+};
+
+const logger = winston.createLogger({
+  level: 'info',
+  format: winston.format.combine(
+    winston.format.timestamp(),
+    winston.format.errors({ stack: true }),
+    winston.format.json()
+  ),
+  defaultMeta: { service: 'node-api', environment: process.env.NODE_ENV },
+  transports: [
+    new winston.transports.Console(),
+    new ElasticsearchTransport(esTransportOpts),
+  ],
+});
+
+module.exports = logger;
+
+// app.js
+const express = require('express');
+const logger = require('./logger');
+
+const app = express();
+
+app.get('/api/users/:id', (req, res) => {
+  logger.info('User access', { 
+    userId: req.params.id, 
+    ip: req.ip,
+    userAgent: req.get('user-agent'),
+  });
+  res.json({ id: req.params.id, name: 'User' });
+});
+
+app.listen(3000, () => logger.info('Server started on port 3000'));
+```
+
+**Opção 2: Winston + Datadog**
+```javascript
+const winston = require('winston');
+const { createLogger } = require('datadog-winston');
+
+const logger = createLogger({
+  apiKey: process.env.DD_API_KEY,
+  hostname: 'myapp-prod',
+  service: 'node-api',
+  ddsource: 'nodejs',
+  ddtags: 'env:prod,version:1.0',
+});
+
+logger.info('Application started', { pid: process.pid });
+```
+
+**NPM Packages:**
+```json
+{
+  "dependencies": {
+    "winston": "^3.11.0",
+    "winston-elasticsearch": "^0.17.4",
+    "datadog-winston": "^2.0.0"
+  }
+}
+```
+
+---
+
+#### Python (FastAPI/Django) → Elasticsearch/Datadog
+
+**Opção 1: Python logging + Elasticsearch**
+```python
+# logging_config.py
+import logging
+from cmreslogging.handlers import CMRESHandler
+
+def setup_elasticsearch_logging():
+    """Configura logging para Elasticsearch"""
+    
+    handler = CMRESHandler(
+        hosts=[{'host': 'elasticsearch', 'port': 9200}],
+        auth_type=CMRESHandler.AuthType.BASIC_AUTH,
+        auth_details=('user', 'password'),
+        es_index_name='logs-python-app',
+        use_ssl=True,
+        verify_ssl=True,
+        es_additional_fields={
+            'app': 'python-api',
+            'environment': 'production'
+        }
+    )
+    
+    logger = logging.getLogger()
+    logger.setLevel(logging.INFO)
+    logger.addHandler(handler)
+    
+    # Também log para console
+    console_handler = logging.StreamHandler()
+    console_handler.setFormatter(logging.Formatter(
+        '%(asctime)s - %(name)s - %(levelname)s - %(message)s'
+    ))
+    logger.addHandler(console_handler)
+    
+    return logger
+
+# main.py (FastAPI)
+from fastapi import FastAPI
+from logging_config import setup_elasticsearch_logging
+
+logger = setup_elasticsearch_logging()
+app = FastAPI()
+
+@app.get("/api/users/{user_id}")
+async def get_user(user_id: int):
+    logger.info(
+        "User access",
+        extra={
+            'user_id': user_id,
+            'endpoint': '/api/users',
+            'action': 'read'
+        }
+    )
+    return {"id": user_id, "name": "User"}
+```
+
+**Opção 2: Python + Datadog**
+```python
+from ddtrace import tracer
+from ddtrace.contrib.logging import patch as ddtrace_patch_logging
+import logging
+
+# Patch logging para adicionar trace context
+ddtrace_patch_logging()
+
+logging.basicConfig(
+    level=logging.INFO,
+    format='%(asctime)s %(levelname)s [dd.service=%(dd.service)s dd.trace_id=%(dd.trace_id)s] %(message)s'
+)
+
+logger = logging.getLogger(__name__)
+
+# FastAPI com Datadog APM
+from fastapi import FastAPI
+from ddtrace.contrib.asgi import TraceMiddleware
+
+app = FastAPI()
+app.add_middleware(TraceMiddleware, service="python-api")
+
+@app.get("/api/users/{user_id}")
+async def get_user(user_id: int):
+    logger.info(f"User access: {user_id}")
+    return {"id": user_id}
+```
+
+**PIP Requirements:**
+```txt
+CMRESHandler==1.0.0
+python-elasticsearch==8.11.0
+ddtrace==2.3.0
+```
+
+---
+
+#### Java (Spring Boot) → Elasticsearch/Datadog
+
+**Opção 1: Logback + Elasticsearch (via Logstash)**
+```xml
+<!-- logback-spring.xml -->
+<configuration>
+    <appender name="LOGSTASH" class="net.logstash.logback.appender.LogstashTcpSocketAppender">
+        <destination>logstash:5000</destination>
+        
+        <encoder class="net.logstash.logback.encoder.LogstashEncoder">
+            <customFields>{"app":"spring-api","env":"prod"}</customFields>
+        </encoder>
+        
+        <keepAliveDuration>5 minutes</keepAliveDuration>
+        <reconnectionDelay>10 seconds</reconnectionDelay>
+    </appender>
+    
+    <appender name="CONSOLE" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <pattern>%d{HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n</pattern>
+        </encoder>
+    </appender>
+    
+    <root level="INFO">
+        <appender-ref ref="LOGSTASH" />
+        <appender-ref ref="CONSOLE" />
+    </root>
+</configuration>
+```
+
+```java
+// UserController.java
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.web.bind.annotation.*;
+
+@RestController
+@RequestMapping("/api/users")
+public class UserController {
+    private static final Logger logger = LoggerFactory.getLogger(UserController.class);
+    
+    @GetMapping("/{id}")
+    public User getUser(@PathVariable Long id) {
+        logger.info("User access: userId={}, action=read", id);
+        return new User(id, "User Name");
+    }
+}
+```
+
+**Opção 2: Spring Boot + Datadog**
+```yaml
+# application.yml
+management:
+  metrics:
+    export:
+      datadog:
+        enabled: true
+        api-key: ${DD_API_KEY}
+        application-key: ${DD_APP_KEY}
+        step: 1m
+        
+logging:
+  pattern:
+    console: "%d{yyyy-MM-dd HH:mm:ss} - %msg%n"
+  level:
+    root: INFO
+    com.example: DEBUG
+```
+
+**Maven Dependencies:**
+```xml
+<dependencies>
+    <dependency>
+        <groupId>net.logstash.logback</groupId>
+        <artifactId>logstash-logback-encoder</artifactId>
+        <version>7.4</version>
+    </dependency>
+    <dependency>
+        <groupId>io.micrometer</groupId>
+        <artifactId>micrometer-registry-datadog</artifactId>
+    </dependency>
+</dependencies>
+```
+
+---
+
+#### Conformidade SbD-ToE ([Cap. 12](/sbd-toe/sbd-manual/monitorizacao-operacoes/intro))
+
+Todos os exemplos acima garantem:
+
+✅ **Logging estruturado** (JSON) - facilita queries e alertas  
+✅ **Contexto enriquecido** - app, environment, trace IDs, user IDs  
+✅ **Push automático** - logs enviados em tempo real (async)  
+✅ **Resiliência** - buffering local se infraestrutura indisponível  
+✅ **Segurança** - TLS, autenticação, sem dados sensíveis em logs  
+
+**Evidência de Auditoria:**
+- Logs com timestamp UTC, user/session IDs, action performed
+- Correlação com traces (Datadog APM, Elasticsearch APM)
+- Retention policy configurada (3+ anos para L3)
+
+---
+
 ## 3. Análise de Vulnerabilidades (SCA + SAST)
 
 ### Princípio ([Cap. 05](/sbd-toe/sbd-manual/dependencias-sbom-sca/intro), [Cap. 07](/sbd-toe/sbd-manual/cicd-seguro/intro))

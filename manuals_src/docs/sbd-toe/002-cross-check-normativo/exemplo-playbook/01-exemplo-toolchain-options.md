@@ -255,7 +255,8 @@ SecurityEvent
 
 As opções acima mostram **onde** centralizar logs. Esta secção mostra **como** as aplicações enviam logs para essas infraestruturas.
 
-#### .NET (ASP.NET Core) → Elasticsearch/Datadog
+<details>
+<summary><strong>📘 .NET (ASP.NET Core) → Elasticsearch/Datadog</strong></summary>
 
 **Opção 1: Serilog + Elasticsearch**
 ```csharp
@@ -327,9 +328,12 @@ Log.Logger = new LoggerConfiguration()
 </ItemGroup>
 ```
 
+</details>
+
 ---
 
-#### Node.js (Express) → Elasticsearch/Datadog
+<details>
+<summary><strong>📗 Node.js (Express) → Elasticsearch/Datadog</strong></summary>
 
 **Opção 1: Winston + Elasticsearch**
 ```javascript
@@ -414,9 +418,12 @@ logger.info('Application started', { pid: process.pid });
 }
 ```
 
+</details>
+
 ---
 
-#### Python (FastAPI/Django) → Elasticsearch/Datadog
+<details>
+<summary><strong>🐍 Python (FastAPI/Django) → Elasticsearch/Datadog</strong></summary>
 
 **Opção 1: Python logging + Elasticsearch**
 ```python
@@ -509,9 +516,12 @@ python-elasticsearch==8.11.0
 ddtrace==2.3.0
 ```
 
+</details>
+
 ---
 
-#### Java (Spring Boot) → Elasticsearch/Datadog
+<details>
+<summary><strong>☕ Java (Spring Boot) → Elasticsearch/Datadog</strong></summary>
 
 **Opção 1: Logback + Elasticsearch (via Logstash)**
 ```xml
@@ -595,9 +605,11 @@ logging:
 </dependencies>
 ```
 
+</details>
+
 ---
 
-#### Conformidade SbD-ToE ([Cap. 12](/sbd-toe/sbd-manual/monitorizacao-operacoes/intro))
+### Conformidade SbD-ToE ([Cap. 12](/sbd-toe/sbd-manual/monitorizacao-operacoes/intro))
 
 Todos os exemplos acima garantem:
 

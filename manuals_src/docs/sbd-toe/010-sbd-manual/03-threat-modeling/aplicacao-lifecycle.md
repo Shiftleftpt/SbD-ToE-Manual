@@ -52,9 +52,9 @@ No início do projeto, deve ser criado um modelo de ameaça proporcional ao risc
 Como **Arquitetos de Software** e **Team Lead / Scrum Master**, quero criar um modelo de ameaça inicial com DFDs e STRIDE/LINDDUN, para que os riscos de arquitetura sejam visíveis e tratados desde o início.
 
 **Critérios de aceitação (BDD).**
-- Dado que o projeto inicia  
-- Quando construo o modelo de ameaça com DFDs  
-- Então todas as ameaças são registadas e ligadas a controlos/requisitos
+- **Dado** que o projeto inicia  
+  **Quando** construo o modelo de ameaça com DFDs  
+  **Então** todas as ameaças são registadas e ligadas a controlos/requisitos
 
 **Checklist.**
 - [ ] Sessão de threat modeling realizada  
@@ -96,9 +96,9 @@ As revisões de arquitetura devem incluir threat modeling para identificar amea�
 Como **Arquitetos de Software** e **AppSec Engineer**, quero validar a arquitetura através de threat modeling, para identificar ameaças críticas antes de decisões de design.
 
 **Critérios de aceitação (BDD).**
-- Dado que ocorre revisão da arquitetura  
-- Quando aplico threat modeling  
-- Então ameaças estruturais são registadas e mitigadas
+- **Dado** que ocorre revisão da arquitetura  
+  **Quando** aplico threat modeling  
+  **Então** ameaças estruturais são registadas e mitigadas
 
 **Checklist.**
 - [ ] Revisão de arquitetura formal realizada  
@@ -136,9 +136,9 @@ Sempre que ocorrer uma alteração significativa (nova feature, integração ou 
 Como **Arquitetos de Software** e **DevOps/SRE**, quero atualizar o modelo de ameaça sempre que há alterações significativas, para que o modelo permaneça válido e útil.
 
 **Critérios de aceitação (BDD).**
-- Dado que ocorre alteração significativa  
-- Quando atualizo o modelo  
-- Então ameaças novas ou alteradas ficam registadas e mapeadas para requisitos
+- **Dado** que ocorre alteração significativa  
+  **Quando** atualizo o modelo  
+  **Então** ameaças novas ou alteradas ficam registadas e mapeadas para requisitos
 
 **Checklist.**
 - [ ] Alteração significativa identificada  
@@ -178,9 +178,9 @@ Nem todas as ameaças podem ser mitigadas; riscos residuais devem ser formalment
 Como **AppSec Engineer** e **GRC/Compliance**, quero documentar e aprovar formalmente riscos residuais identificados no threat modeling, para que decisões de aceitação sejam transparentes e auditáveis.
 
 **Critérios de aceitação (BDD).**
-- Dado que há ameaças não mitigadas  
-- Quando registo risco aceite  
-- Então decisão é documentada, aprovada e arquivada
+- **Dado** que há ameaças não mitigadas  
+  **Quando** registo risco aceite  
+  **Então** decisão é documentada, aprovada e arquivada
 
 **Checklist.**
 - [ ] Risco residual identificado  
@@ -222,9 +222,9 @@ O threat modeling deve ser integrado com pipelines CI/CD, garantindo que altera�
 Como **DevOps/SRE** e **AppSec Engineer**, quero integrar validações de threat modeling no pipeline, para que cada alteração relevante seja revista automaticamente.
 
 **Critérios de aceitação (BDD).**
-- Dado que uma alteração é feita  
-- Quando a pipeline é executada  
-- Então verificações de threat modeling são acionadas e resultados registados
+- **Dado** que uma alteração é feita  
+  **Quando** a pipeline é executada  
+  **Então** verificações de threat modeling são acionadas e resultados registados
 
 **Checklist.**
 - [ ] Pipeline CI/CD inclui job de threat modeling  
@@ -265,9 +265,9 @@ As ameaças identificadas devem ser priorizadas com base no impacto para o negó
 Como **Product Owner**, quero priorizar as ameaças identificadas no modelo de acordo com impacto no negócio, para otimizar mitigação e investimento.
 
 **Critérios de aceitação (BDD).**
-- Dado que ameaças foram identificadas  
-- Quando as avalio pelo impacto de negócio  
-- Então prioridades são registadas e comunicadas
+- **Dado** que ameaças foram identificadas  
+  **Quando** as avalio pelo impacto de negócio  
+  **Então** prioridades são registadas e comunicadas
 
 **Checklist.**
 - [ ] Impacto avaliado (financeiro, reputacional, legal)  
@@ -307,9 +307,9 @@ Ferramentas de threat modeling (ex.: OWASP Threat Dragon, Microsoft TMT, IriusRi
 Como **DevOps/SRE + AppSec Engineer**, quero usar ferramentas para automação e reutilização de modelos de ameaça, para garantir consistência e reduzir trabalho manual.
 
 **Critérios de aceitação (BDD).**
-- Dado que realizo threat modeling  
-- Quando uso ferramenta automatizada  
-- Então o modelo é gerado/reutilizado com consistência e armazenado
+- **Dado** que realizo threat modeling  
+  **Quando** uso ferramenta automatizada  
+  **Então** o modelo é gerado/reutilizado com consistência e armazenado
 
 **Checklist.**
 - [ ] Ferramenta definida e adotada  
@@ -351,9 +351,9 @@ Quando o sistema trata dados pessoais, a análise de privacidade deve complement
 Como **Arquitetos de Software + AppSec Engineer**, quero aplicar **LINDDUN** quando exista tratamento de dados pessoais, para garantir cobertura de ameaças de privacidade.
 
 **Critérios de aceitação (BDD).**
-- Dado que o sistema trata dados pessoais  
-- Quando executo Threat Modeling  
-- Então **incluo análise LINDDUN** com ameaças, mitigação e **mapeamento para `REQ-PRIV-*`**  
+- **Dado** que o sistema trata dados pessoais  
+  **Quando** executo Threat Modeling  
+  **Então** **incluo análise LINDDUN** com ameaças, mitigação e **mapeamento para `REQ-PRIV-*`**  
 - E **crio `privacy-dfd`** com trust boundaries específicos  
 
 **Checklist.**

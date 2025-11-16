@@ -56,9 +56,9 @@ Guidelines claras e versionadas por *stack* evitam decisões ad-hoc e asseguram 
 Como **Desenvolvedor**, quero aplicar as guidelines de código seguro aprovadas, para garantir consistência e reduzir vulnerabilidades desde o início.
 
 **Critérios de aceitação (BDD).**
-- Dado que inicio desenvolvimento numa *stack* definida  
-- Quando consulto as guidelines aprovadas  
-- Então aplico as regras mínimas obrigatórias e registo qualquer desvio justificado
+- **Dado** que inicio desenvolvimento numa *stack* definida  
+  **Quando** consulto as guidelines aprovadas  
+  **Então** aplico as regras mínimas obrigatórias e registo qualquer desvio justificado
 
 **Checklist.**
 - [ ] `guidelines-stack.md` referenciado no README do projeto  
@@ -103,9 +103,9 @@ Como **Scrum Master / Team Lead**, quero garantir que cada PR é revisto com che
 *(Executa: Developers/QA com suporte do Scrum Master)*
 
 **Critérios de aceitação (BDD).**
-- Dado que um PR é criado  
-- Quando é submetido à revisão  
-- Então a checklist de segurança é preenchida e o PR apenas é aceite após validação
+- **Dado** que um PR é criado  
+  **Quando** é submetido à revisão  
+  **Então** a checklist de segurança é preenchida e o PR apenas é aceite após validação
 
 **Checklist.**
 - [ ] `checklist-pr.md` incluído no **template de PR**  
@@ -142,9 +142,9 @@ Cada dependência externa adicionada ao projeto é uma potencial porta de entrad
 Como **AppSec**, quero validar e justificar dependências externas, para reduzir riscos de supply chain e garantir compliance.
 
 **Critérios de aceitação (BDD).**
-- Dado que foi proposta uma nova dependência  
-- Quando avalio licença, manutenção e CVEs associados  
-- Então aprovo ou recuso com decisão registada
+- **Dado** que foi proposta uma nova dependência  
+  **Quando** avalio licença, manutenção e CVEs associados  
+  **Então** aprovo ou recuso com decisão registada
 
 **Checklist.**
 - [ ] Dependência listada em `sbom-deps.json`  
@@ -185,9 +185,9 @@ A automatização de validações em pipelines CI/CD garante consistência, acel
 Como **DevOps/SRE**, quero integrar linters e SAST no pipeline, para detetar falhas precocemente e gerar evidência contínua.
 
 **Critérios de aceitação (BDD).**
-- Dado que o pipeline é executado  
-- Quando correm linters e SAST  
-- Então relatórios são arquivados e a build falha em findings críticos
+- **Dado** que o pipeline é executado  
+  **Quando** correm linters e SAST  
+  **Então** relatórios são arquivados e a build falha em findings críticos
 
 **Checklist.**
 - [ ] Jobs configurados no pipeline  
@@ -227,9 +227,9 @@ Nem sempre todos os controlos podem ser aplicados em tempo útil. É inevitável
 Como **AppSec**, quero registar e aprovar exceções técnicas, para garantir rastreabilidade, mitigação e revisão futura.
 
 **Critérios de aceitação (BDD).**
-- Dado que uma exceção é solicitada  
-- Quando avalio justificação e mitigação propostas  
-- Então aprovo ou recuso e defino prazo de validade
+- **Dado** que uma exceção é solicitada  
+  **Quando** avalio justificação e mitigação propostas  
+  **Então** aprovo ou recuso e defino prazo de validade
 
 **Checklist.**
 - [ ] Exceção registada em `excecoes-seguranca.md`  
@@ -273,9 +273,9 @@ Ferramentas de IA generativa (GenIA) aceleram a escrita de código, mas podem in
 Como **Desenvolvedor**, quero usar IA generativa com revisão obrigatória, para acelerar produtividade sem comprometer segurança.
 
 **Critérios de aceitação (BDD).**
-- Dado que gero código com GenIA  
-- Quando anoto origem e submeto a revisão  
-- Então só é aceite se cumprir guidelines e licenciamento
+- **Dado** que gero código com GenIA  
+  **Quando** anoto origem e submeto a revisão  
+  **Então** só é aceite se cumprir guidelines e licenciamento
 
 **Checklist.**
 - [ ] Uso registado em `uso-genia.md`  
@@ -317,9 +317,9 @@ A publicação formal e a revisão periódica são mecanismos de controlo e conf
 Como **AppSec Engineer**, quero rever e publicar guidelines curadas trimestralmente, para garantir atualização contínua e governação formal das práticas de desenvolvimento seguro.
 
 **Critérios de aceitação (BDD).**
-- Dado que decorre o ciclo de revisão ou surge nova *stack*  
-- Quando as *rulesets* são atualizadas  
-- Então é publicada uma **release/tag** aprovada por **Gestão Executiva** e **AppSec Engineer**
+- **Dado** que decorre o ciclo de revisão ou surge nova *stack*  
+  **Quando** as *rulesets* são atualizadas  
+  **Então** é publicada uma **release/tag** aprovada por **Gestão Executiva** e **AppSec Engineer**
 
 **Checklist.**
 - [ ] *Rulesets* avaliados e documentados  
@@ -360,9 +360,9 @@ Validações de segurança devem ser rastreáveis até aos requisitos originais.
 Como **Desenvolvedor**, quero anotar validações de segurança com `@sec:*`, para garantir rastreabilidade ponta-a-ponta até ao backlog.
 
 **Critérios de aceitação (BDD).**
-- Dado que implemento requisito de segurança  
-- Quando adiciono anotação `@sec:*`  
-- Então o requisito fica rastreável até ao backlog e relatórios de CI/CD
+- **Dado** que implemento requisito de segurança  
+  **Quando** adiciono anotação `@sec:*`  
+  **Então** o requisito fica rastreável até ao backlog e relatórios de CI/CD
 
 **Checklist.**
 - [ ] Anotações incluídas em código/testes  
@@ -400,10 +400,10 @@ Antes de cada *release* deve existir um ponto de controlo objetivo que consolide
 Como **DevOps/SRE**, quero executar um **gate de segurança pré-release** que agregue todas as evidências de validação, para só permitir publicações conformes com os requisitos de segurança.
 
 **Critérios de aceitação (BDD).**
-- Dado que existe uma *release* candidata  
+- **Dado** que existe uma *release* candidata  
 - E o nível de risco L1–L3 foi atribuído  
-- Quando o *security gate* é executado  
-- Então o resultado é binário (Aprovado/Rejeitado) e é registado como artefacto da release
+  **Quando** o *security gate* é executado  
+  **Então** o resultado é binário (Aprovado/Rejeitado) e é registado como artefacto da release
 
 **Checklist.**
 - [ ] *Job* `release-security-gate` configurado no pipeline  
@@ -435,9 +435,9 @@ Cada aplicação deve herdar um perfil técnico de validação compatível com a
 Como **AppSec Engineer**, quero definir e aplicar **perfis de validação L1–L3** que determinem regras, limiares e *quality gates* adequados ao risco, para uniformizar a execução e auditoria.
 
 **Critérios de aceitação (BDD).**
-- Dado que a aplicação tem classificação L1/L2/L3  
-- Quando é executado o pipeline  
-- Então são aplicadas as regras e limiares correspondentes ao perfil definido
+- **Dado** que a aplicação tem classificação L1/L2/L3  
+  **Quando** é executado o pipeline  
+  **Então** são aplicadas as regras e limiares correspondentes ao perfil definido
 
 **Checklist.**
 - [ ] Perfis L1–L3 documentados e aprovados  
@@ -468,9 +468,9 @@ As provas de execução dos controlos devem ser exportadas e arquivadas de forma
 Como **QA** e **DevOps/SRE**, quero **arquivar centralmente todas as evidências de validação** (relatórios SAST, SBOM, exceções, `@sec:*`), para garantir rastreabilidade e cumprimento de requisitos de auditoria.
 
 **Critérios de aceitação (BDD).**
-- Dado que o pipeline executa validações  
-- Quando conclui a execução  
-- Então exporta e arquiva relatórios e evidências num repositório controlado e versionado
+- **Dado** que o pipeline executa validações  
+  **Quando** conclui a execução  
+  **Então** exporta e arquiva relatórios e evidências num repositório controlado e versionado
 
 **Checklist.**
 - [ ] Repositório de evidências definido (preferencialmente WORM)  
@@ -502,9 +502,9 @@ Validações executadas localmente antes de qualquer push reduzem feedback loops
 Como **Developer**, quero executar **linters e validações de segurança localmente** antes de fazer commit, para detetar erros triviais e vulnerabilidades facilmente corrigíveis sem depender do pipeline CI/CD.
 
 **Critérios de aceitação (BDD).**
-- Dado que uso um IDE ou terminal no projeto
-- Quando executo `make lint` ou hook pre-commit (automático)
-- Então recebo feedback imediato de erros de linting e vulnerabilidades detectáveis localmente
+- **Dado** que uso um IDE ou terminal no projeto
+  **Quando** executo `make lint` ou hook pre-commit (automático)
+  **Então** recebo feedback imediato de erros de linting e vulnerabilidades detectáveis localmente
 - E falhas críticas bloqueiam o commit
 
 **Checklist.**
@@ -549,9 +549,9 @@ Padrões de código inseguro (eval, concatenação SQL, hardcoded secrets, XSS, 
 Como **AppSec Engineer**, quero que o pipeline **detecte automaticamente padrões perigosos** (eval, innerHTML sem sanitização, concatenação SQL, secrets, etc.) e bloqueie a build, com mensagem educativa e link para corrigir.
 
 **Critérios de aceitação (BDD).**
-- Dado que um PR introduz um padrão de código perigoso  
-- Quando SAST/linters/semgrep executam  
-- Então a build falha com mensagem explicativa, referência a CWE e alternativa segura
+- **Dado** que um PR introduz um padrão de código perigoso  
+  **Quando** SAST/linters/semgrep executam  
+  **Então** a build falha com mensagem explicativa, referência a CWE e alternativa segura
 - E o encontro é registado para mensuração de tendências
 
 **Checklist.**
@@ -597,9 +597,9 @@ Métricas contínuas de segurança (cobertura de linters, exceções ativas, fin
 Como **Gestor Técnico / AppSec Engineer**, quero **visualizar dashboard de métricas de segurança** (cobertura SAST, exceções ativas/expiradas, findings resolvidos, compliance por nível L1–L3) para decisão informada e ação corretiva rápida.
 
 **Critérios de aceitação (BDD).**
-- Dado que decorrem múltiplas releases e sprints  
-- Quando acedo ao dashboard de conformidade  
-- Então visualizo: trend de compliance, exceções pendentes, ações recomendadas
+- **Dado** que decorrem múltiplas releases e sprints  
+  **Quando** acedo ao dashboard de conformidade  
+  **Então** visualizo: trend de compliance, exceções pendentes, ações recomendadas
 - E recebo alertas automáticos para desvios críticos (ex: exceção expirada sem reavaliação)
 
 **Checklist.**

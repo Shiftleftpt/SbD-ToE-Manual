@@ -55,9 +55,9 @@ Logo no arranque de um projeto é necessário definir princípios de arquitetura
 Como **Arquitetos de Software**, quero definir princípios de arquitetura segura para orientar todas as decisões técnicas.
 
 **Critérios de aceitação (BDD).**
-- Dado que o projeto inicia
-- Quando os princípios de arquitetura são documentados
-- Então ficam aprovados e versionados para referência
+- **Dado** que o projeto inicia
+  **Quando** os princípios de arquitetura são documentados
+  **Então** ficam aprovados e versionados para referência
 
 **Checklist.**
 - [ ] Princípios definidos
@@ -94,9 +94,9 @@ Ao desenhar a solução é preciso registar controlos de segurança.
 Como **Arquitetos de Software**, quero produzir ficha de arquitetura com controlos de segurança, padrão reutilizável aprovado, e minimização de exposição externa, para garantir que a solução é segura, escalável e alinhada com padrões organizacionais.
 
 **Critérios de aceitação (BDD).**
-- Dado que o design está em definição  
-- Quando documento a solução de arquitetura  
-- Então a ficha inclui: zonas de confiança, exposição externa justificada, controlos de isolamento (rate limiting, circuit breakers, segmentação), padrão aplicado, e mapeamento a requisitos ARC-XXX
+- **Dado** que o design está em definição  
+  **Quando** documento a solução de arquitetura  
+  **Então** a ficha inclui: zonas de confiança, exposição externa justificada, controlos de isolamento (rate limiting, circuit breakers, segmentação), padrão aplicado, e mapeamento a requisitos ARC-XXX
 
 **Checklist.**
 - [ ] Ficha de solução criada com template aprovado (`solution-architecture.md`)
@@ -127,8 +127,8 @@ Como **Arquitetos de Software**, quero produzir ficha de arquitetura com control
 | Design | Definição da solução | Arquitetos de Software + AppSec Engineer | Antes da implementação |
 
 **Ligações úteis.**
-- 🔗 [Modelos de Arquitetura Segura Reutilizáveis - Addon 04](../addon/diagramas-referencia.md)
-- 🔗 [Catálogo de Requisitos ARC-XXX - Addon 01](../addon/catalogo-requisitos/intro)
+- 🔗 [Modelos de Arquitetura Segura Reutilizáveis - Addon 04](addon/04-diagramas-referencia.md)
+- 🔗 [Catálogo de Requisitos ARC-XXX - Addon 01](addon/01-catalogo-requisitos.md)
 
 ---
 
@@ -141,9 +141,9 @@ Antes de implementar, o design deve ser revisto.
 Como **AppSec Engineer**, quero rever designs de arquitetura para garantir conformidade.
 
 **Critérios de aceitação (BDD).**
-- Dado que a solução está desenhada
-- Quando efetuo revisão
-- Então confirmo ou peço ajustes
+- **Dado** que a solução está desenhada
+  **Quando** efetuo revisão
+  **Então** confirmo ou peço ajustes
 
 **Checklist.**
 - [ ] Revisão efetuada
@@ -180,9 +180,9 @@ Sempre que há alteração crítica é preciso atualizar documentação.
 Como **Developer**, quero atualizar ficha de arquitetura em alterações críticas para manter consistência.
 
 **Critérios de aceitação (BDD).**
-- Dado que há alteração crítica
-- Quando atualizo documentação
-- Então a ficha de arquitetura é revista
+- **Dado** que há alteração crítica
+  **Quando** atualizo documentação
+  **Então** a ficha de arquitetura é revista
 
 **Checklist.**
 - [ ] Alteração identificada
@@ -219,9 +219,9 @@ Controlos de arquitetura devem ser validados automaticamente.
 Como **DevOps/SRE + AppSec Engineer**, quero validar controlos de arquitetura no pipeline (incluindo topologia, IaC e policies), para garantir conformidade automática e reforçar integração da segurança em SDLC.
 
 **Critérios de aceitação (BDD).**
-- Dado que o pipeline CI/CD executa  
-- Quando corro verificações de arquitetura (topologia, IaC, policies)  
-- Então obtenho resultado automático com pass/fail + artefactos de auditoria
+- **Dado** que o pipeline CI/CD executa  
+  **Quando** corro verificações de arquitetura (topologia, IaC, policies)  
+  **Então** obtenho resultado automático com pass/fail + artefactos de auditoria
 
 **Checklist.**
 - [ ] Job de validação de topologia implementado (ex: Cartography, Clair, ReGraph)
@@ -252,7 +252,7 @@ Como **DevOps/SRE + AppSec Engineer**, quero validar controlos de arquitetura no
 | CI/CD | Commit/MR de arquitetura ou IaC | DevOps/SRE + AppSec Engineer | Em cada build |
 
 **Ligações úteis.**
-- 🔗 [Requisitos IaC - Addon 06](../addon/rastreabilidade.md)
+- 🔗 [Requisitos IaC - Addon 06](addon/06-rastreabilidade.md)
 - 🔗 [Cap. 7 - CI/CD Seguro](/sbd-toe/sbd-manual/cicd-seguro/intro)
 
 ---
@@ -266,9 +266,9 @@ Como **DevOps/SRE + AppSec Engineer**, quero validar controlos de arquitetura no
 Como **Product Owner**, quero validar impacto de requisitos de arquitetura para priorizar mitigação.
 
 **Critérios de aceitação (BDD).**
-- Dado que existem requisitos de arquitetura
-- Quando avalio impacto no negócio
-- Então priorizo mitigação
+- **Dado** que existem requisitos de arquitetura
+  **Quando** avalio impacto no negócio
+  **Então** priorizo mitigação
 
 **Checklist.**
 - [ ] Impacto avaliado
@@ -305,9 +305,9 @@ Antes da entrada em produção, a arquitetura deve ser formalmente validada cont
 Como **QA / Test Engineer + AppSec Engineer + Arquitetos de Software**, quero validar a arquitetura antes do go-live, para garantir que todos os controlos definidos estão aplicados e exceções documentadas.
 
 **Critérios de aceitação (BDD).**
-- Dado que a aplicação está pronta para release  
-- Quando executo checklist de validação da arquitetura  
-- Então confirmo que todos os controlos estão cumpridos ou exceções aprovadas
+- **Dado** que a aplicação está pronta para release  
+  **Quando** executo checklist de validação da arquitetura  
+  **Então** confirmo que todos os controlos estão cumpridos ou exceções aprovadas
 
 **Checklist.**
 - [ ] Checklist de arquitetura preenchido  
@@ -345,9 +345,9 @@ Decisões de arquitetura críticas devem ser documentadas com alternativas, *tra
 Como **Arquitetos de Software**, quero registar decisões de arquitetura (ADR - Architecture Decision Record ) com o racional de segurança para garantir rastreabilidade e consistência.
 
 **Critérios de aceitação (BDD).**
-- Dado que ocorre uma decisão da arquitetura relevante
-- Quando a ADR é criada segundo *template* aprovado
-- Então inclui contexto, opções, decisão, impacto (L1–L3), controlos e revisão AppSec Engineer
+- **Dado** que ocorre uma decisão da arquitetura relevante
+  **Quando** a ADR é criada segundo *template* aprovado
+  **Então** inclui contexto, opções, decisão, impacto (L1–L3), controlos e revisão AppSec Engineer
 
 **Checklist.**
 - [ ] ADR criada com *template*
@@ -377,9 +377,9 @@ Integrações entre serviços e terceiros exigem revisão explícita de fronteir
 Como **Arquitetos de Software + AppSec Engineer**, quero rever *trust boundaries* e integrações (internas/terceiros) para validar autenticação, autorização, encriptação e isolamento.
 
 **Critérios de aceitação (BDD).**
-- Dado que existe integração nova ou alterada
-- Quando avalio fronteiras de confiança e controlos
-- Então documento decisões, riscos residuais e mitigação
+- **Dado** que existe integração nova ou alterada
+  **Quando** avalio fronteiras de confiança e controlos
+  **Então** documento decisões, riscos residuais e mitigação
 
 **Checklist.**
 - [ ] Inventário de integrações atualizado
@@ -408,9 +408,9 @@ Decisões de arquitetura devem refletir o modelo de ameaças e vice-versa.
 Como **Arquitetos de Software + AppSec Engineer**, quero sincronizar o modelo de ameaças com as decisões de arquitetura para garantir que controlos cobrem as ameaças priorizadas.
 
 **Critérios de aceitação (BDD).**
-- Dado que há decisão ou alteração da arquitetura
-- Quando atualizo o modelo de ameaças e a ficha de solução
-- Então mantenho cobertura e rastreabilidade ARC-XXX ↔ ameaça ↔ controlo
+- **Dado** que há decisão ou alteração da arquitetura
+  **Quando** atualizo o modelo de ameaças e a ficha de solução
+  **Então** mantenho cobertura e rastreabilidade ARC-XXX ↔ ameaça ↔ controlo
 
 **Checklist.**
 - [ ] Modelo de ameaças atualizado
@@ -439,9 +439,9 @@ Algumas situações exigem exceções formais com controlos compensatórios e pr
 Como **Product Owner + AppSec Engineer**, quero gerir exceções de arquitetura com aprovação e controlos compensatórios para equilibrar risco e entrega.
 
 **Critérios de aceitação (BDD).**
-- Dado que é solicitada exceção
-- Quando avalio impacto, compensações e prazo
-- Então aprovo/rejeito e registo evidência e *owner* do risco
+- **Dado** que é solicitada exceção
+  **Quando** avalio impacto, compensações e prazo
+  **Então** aprovo/rejeito e registo evidência e *owner* do risco
 
 **Checklist.**
 - [ ] Formulário de exceção preenchido
@@ -471,9 +471,9 @@ Definir eventos que obrigam a rever e sincronizar documentação e controlos.
 Como **Arquitetos de Software + DevOps/SRE**, quero manter uma lista de triggers que despoletam a revisão da arquitetura para garantir documentação e controlos atualizados.
 
 **Critérios de aceitação (BDD).**
-- Dado que acontece um evento (trigger)  (ex.: nova integração, alteração de dados sensíveis, mudança de infra/pipeline, novo *threat intel*)
-- Quando executo a revisão associada
-- Então atualizo ADR, fichas, modelo de ameaças e *checklists*
+- **Dado** que acontece um evento (trigger)  (ex.: nova integração, alteração de dados sensíveis, mudança de infra/pipeline, novo *threat intel*)
+  **Quando** executo a revisão associada
+  **Então** atualizo ADR, fichas, modelo de ameaças e *checklists*
 
 **Checklist.**
 - [ ] Lista de triggers publicada (`arquitetura-triggers.md`)
@@ -502,9 +502,9 @@ Padrões de arquitetura aprovados reduzem tempo de design, erros e garantem conf
 Como **Arquitetos de Software**, quero manter um catálogo de padrões de arquitetura segura (monólito L1, microserviços L2, plataforma crítica L3) com requisitos, ameaças mitigadas e checklist de implementação, para que novos projetos reutilizem designs seguros.
 
 **Critérios de aceitação (BDD).**
-- Dado que é iniciado um novo projeto  
-- Quando seleciono um padrão do catálogo  
-- Então a ficha do padrão inclui: diagram, requisitos ARC aplicáveis, ameaças mitigadas, checklist de implementação, e rastreabilidade a threat modeling
+- **Dado** que é iniciado um novo projeto  
+  **Quando** seleciono um padrão do catálogo  
+  **Então** a ficha do padrão inclui: diagram, requisitos ARC aplicáveis, ameaças mitigadas, checklist de implementação, e rastreabilidade a threat modeling
 
 **Checklist.**
 - [ ] Catálogo publicado (`modelos-referencia.md` ou similar)
@@ -534,8 +534,8 @@ Como **Arquitetos de Software**, quero manter um catálogo de padrões de arquit
 | Design | Novo projeto ou reavaliação de padrão | Arquitetos de Software + AppSec Engineer | Antes da ficha de solução |
 
 **Ligações úteis.**
-- 🔗 [Addon 04 - Modelos de Arquitetura Segura Reutilizáveis](../addon/diagramas-referencia.md)
-- 🔗 [Addon 01 - Catálogo de Requisitos ARC](../addon/catalogo-requisitos/intro)
+- 🔗 [Addon 04 - Modelos de Arquitetura Segura Reutilizáveis](addon/04-diagramas-referencia.md)
+- 🔗 [Addon 01 - Catálogo de Requisitos ARC](addon/01-catalogo-requisitos.md)
 
 ---
 
@@ -549,9 +549,9 @@ Controlos como rate limiting, circuit breakers, segregação lógica/física (AR
 Como **Arquitetos de Software + AppSec Engineer**, quero especificar controlos técnicos de isolamento (rate limiting, circuit breakers, ACLs, namespaces, DMZ) para domínios sensíveis, com SLA de implementação, para que a solução resista a sobre-carga, cascata de falhas e acesso não autorizado.
 
 **Critérios de aceitação (BDD).**
-- Dado que identifico um domínio sensível na arquitetura  
-- Quando defino controlos de isolamento  
-- Então cada controlo tem: métrica (ex: req/s), limiar, ação (drop, retry, fallback), e teste de validação
+- **Dado** que identifico um domínio sensível na arquitetura  
+  **Quando** defino controlos de isolamento  
+  **Então** cada controlo tem: métrica (ex: req/s), limiar, ação (drop, retry, fallback), e teste de validação
 
 **Checklist.**
 - [ ] Inventário de domínios sensíveis (ex: API crítica, base de dados, serviço de pagamento)
@@ -592,9 +592,9 @@ Aplicações críticas (L3) requerem segregação rigorosa entre dev/stage/prod 
 Como **DevOps/SRE + GRC/Compliance**, quero implementar e validar segregação de ambientes (dev, QA, stage, prod) com isolamento lógico (namespaces, VPCs) e físico (clusters, IAM roles), para que cada ambiente tenha permissões mínimas e riscos de contaminação/acesso não autorizado sejam minimizados.
 
 **Critérios de aceitação (BDD).**
-- Dado que uma aplicação L3 é desplegada  
-- Quando configuro ambientes  
-- Então cada ambiente tem: namespace/VPC dedicado, RBAC mínimo por papel, auditoria de acesso, e alertas de acesso anómalo
+- **Dado** que uma aplicação L3 é desplegada  
+  **Quando** configuro ambientes  
+  **Então** cada ambiente tem: namespace/VPC dedicado, RBAC mínimo por papel, auditoria de acesso, e alertas de acesso anómalo
 
 **Checklist.**
 - [ ] Ambientes segregados (dev, QA, stage, prod)
@@ -624,7 +624,7 @@ Como **DevOps/SRE + GRC/Compliance**, quero implementar e validar segregação d
 | Deploy | Setup de ambiente L3 | DevOps/SRE + GRC/Compliance | Antes da entrada em produção |
 
 **Ligações úteis.**
-- 🔗 [Addon 02 - Casos Práticos (Caso 1: L3 crítica)](../addon/casos-praticos.md)
+- 🔗 [Addon 02 - Casos Práticos (Caso 1: L3 crítica)](addon/02-casos-praticos.md)
 - 🔗 [Cap. 14 - Governação e Contratação](/sbd-toe/sbd-manual/governanca-contratacao/intro)
 
 ---
@@ -639,9 +639,9 @@ ARC-005 prescreve que arquitecuras devem considerar threat modeling nos fluxos c
 Como **Arquitetos de Software + AppSec Engineer**, quero executar Threat Modeling (STRIDE/LINDDUN) no design inicial de arquitetura para L2–L3, identificando ameaças de fluxos críticos antes da aprovação, para que controlos sejam especificados proporcionalidade ao risco real.
 
 **Critérios de aceitação (BDD).**
-- Dado que a ficha de solução está em draft  
-- Quando executo sessão de Threat Modeling  
-- Então produzo DFD anotado com ameaças, severidades e controlos mitigadores, mapeando a requisitos ARC-XXX
+- **Dado** que a ficha de solução está em draft  
+  **Quando** executo sessão de Threat Modeling  
+  **Então** produzo DFD anotado com ameaças, severidades e controlos mitigadores, mapeando a requisitos ARC-XXX
 
 **Checklist.**
 - [ ] DFD criado com componentes, fluxos de dados e trust boundaries
@@ -674,7 +674,7 @@ Como **Arquitetos de Software + AppSec Engineer**, quero executar Threat Modelin
 
 **Ligações úteis.**
 - 🔗 [Cap. 3 - Threat Modeling](/sbd-toe/sbd-manual/threat-modeling/intro)
-- 🔗 [US-10 - Sincronização TM ↔ Arquitetura](../aplicacao-lifecycle.md#us-10)
+- 🔗 [US-10 - Sincronização TM ↔ Arquitetura](#us-10)
 
 ---
 
@@ -688,9 +688,9 @@ ARC-012 prescreve "critérios formais de aprovação para aplicações L3" (Addo
 Como **Gestão Executiva/CISO + Arquitetos de Software**, quero estabelecer processo formal de aprovação de arquitetura para L3, com comité técnico ou governance review, para garantir que riscos estruturais são identificados e mitigados antes do go-live.
 
 **Critérios de aceitação (BDD).**
-- Dado que uma aplicação L3 está pronta para aprovação de arquitetura  
-- Quando submeto ao comité de revisão  
-- Então recebo parecer formal, com lista de conformidades/desvios, prazos para remediação, e decisão de aprovação/rejeição/aprovação com exceções
+- **Dado** que uma aplicação L3 está pronta para aprovação de arquitetura  
+  **Quando** submeto ao comité de revisão  
+  **Então** recebo parecer formal, com lista de conformidades/desvios, prazos para remediação, e decisão de aprovação/rejeição/aprovação com exceções
 
 **Checklist.**
 - [ ] Comité definido (participantes, responsabilidades)
@@ -722,7 +722,7 @@ Como **Gestão Executiva/CISO + Arquitetos de Software**, quero estabelecer proc
 | Release / Go-live | Preparação de release L3 | Gestão Executiva/CISO + Comité Técnico | 2 semanas antes do go-live |
 
 **Ligações úteis.**
-- 🔗 [Addon 05 - Critérios de Validação](../addon/validacao.md)
+- 🔗 [Addon 05 - Critérios de Validação](addon/05-validacao.md)
 - 🔗 [Cap. 14 - Governação](/sbd-toe/sbd-manual/governanca-contratacao/intro)
 ---
 

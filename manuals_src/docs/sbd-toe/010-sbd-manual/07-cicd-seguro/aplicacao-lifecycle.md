@@ -64,12 +64,12 @@ Sem controlo sobre o repositório, qualquer pipeline é vulnerável.
 Como **Developers**, quero que todas as alterações ao repositório sejam protegidas por PR e revisão obrigatória, para garantir integridade.
 
 **Critérios de aceitação (BDD).**
-- Dado que existe um repositório protegido  
-- Quando submeto um PR para `main`  
-- Então só é aceite após revisão obrigatória e todos os *checks* concluídos com sucesso.  
-- Dado que ocorre um *merge*  
-- Quando são detetados conflitos  
-- Então é exigida nova revisão e execução automática dos scanners de segurança.  
+- **Dado** que existe um repositório protegido  
+  **Quando** submeto um PR para `main`  
+  **Então** só é aceite após revisão obrigatória e todos os *checks* concluídos com sucesso.  
+- **Dado** que ocorre um *merge*  
+  **Quando** são detetados conflitos  
+  **Então** é exigida nova revisão e execução automática dos scanners de segurança.  
 
 **Checklist.**
 - [ ] Branch protection ativa  
@@ -100,12 +100,12 @@ Pipelines inseguros são alvos privilegiados de ataque.
 Como **DevOps / SRE**, quero pipelines versionados e aprovados por PR, para evitar alterações não auditadas.
 
 **Critérios de aceitação (BDD).**
-- Dado que altero pipeline  
-- Quando submeto PR  
-- Então só é aceite após revisão por DevOps e AppSec.  
-- Dado que há alteração de ferramentas  
-- Quando o pipeline é modificado  
-- Então é criada nova versão rastreável.  
+- **Dado** que altero pipeline  
+  **Quando** submeto PR  
+  **Então** só é aceite após revisão por DevOps e AppSec.  
+- **Dado** que há alteração de ferramentas  
+  **Quando** o pipeline é modificado  
+  **Então** é criada nova versão rastreável.  
 
 **Checklist.**
 - [ ] `ci-pipeline.yml` versionado  
@@ -136,12 +136,12 @@ Detetar cedo é mais barato e eficaz.
 Como **Developers**, quero que o pipeline execute scanners de segurança, para impedir falhas graves em produção.
 
 **Critérios de aceitação (BDD).**
-- Dado que submeto código  
-- Quando corre pipeline  
-- Então falhas críticas bloqueiam merge.  
-- Dado que é introduzido novo tipo de artefacto  
-- Quando o scanner não o cobre  
-- Então o AppSec define regra de deteção adicional.  
+- **Dado** que submeto código  
+  **Quando** corre pipeline  
+  **Então** falhas críticas bloqueiam merge.  
+- **Dado** que é introduzido novo tipo de artefacto  
+  **Quando** o scanner não o cobre  
+  **Então** o AppSec define regra de deteção adicional.  
 
 **Checklist.**
 - [ ] SAST ativo  
@@ -172,12 +172,12 @@ Segredos estáticos expõem a organização.
 Como **DevOps / SRE**, quero segredos injetados por OIDC com TTL curto, para reduzir risco de abuso.
 
 **Critérios de aceitação (BDD).**
-- Dado que pipeline arranca  
-- Quando credenciais são necessárias  
-- Então são emitidas JIT e mascaradas em logs.  
-- Dado que o token expira  
-- Quando é necessário novo acesso  
-- Então é gerado token temporário novo sem reutilização.  
+- **Dado** que pipeline arranca  
+  **Quando** credenciais são necessárias  
+  **Então** são emitidas JIT e mascaradas em logs.  
+- **Dado** que o token expira  
+  **Quando** é necessário novo acesso  
+  **Então** é gerado token temporário novo sem reutilização.  
 
 **Checklist.**
 - [ ] OIDC configurado  
@@ -207,12 +207,12 @@ Runners inseguros comprometem todo o ecossistema.
 Como **DevOps / SRE**, quero runners ephemerais e segregados, para reduzir persistência pós-compromisso.
 
 **Critérios de aceitação (BDD).**
-- Dado que job termina  
-- Quando runner encerra  
-- Então é destruído sem manter estado.  
-- Dado que são criados novos runners  
-- Quando há pipelines paralelos  
-- Então são isolados por namespace e permissões.  
+- **Dado** que job termina  
+  **Quando** runner encerra  
+  **Então** é destruído sem manter estado.  
+- **Dado** que são criados novos runners  
+  **Quando** há pipelines paralelos  
+  **Então** são isolados por namespace e permissões.  
 
 **Checklist.**
 - [ ] Runners efémeros  
@@ -242,12 +242,12 @@ Artefactos não assinados perdem legitimidade.
 Como **DevOps / SRE**, quero que todos os artefactos sejam assinados e tenham proveniência validada, para garantir confiança.
 
 **Critérios de aceitação (BDD).**
-- Dado que artefacto é produzido  
-- Quando é promovido  
-- Então assinatura e proveniência são verificadas.  
-- Dado que falha verificação  
-- Quando assinatura não é válida  
-- Então o artefacto é rejeitado e alerta emitido.  
+- **Dado** que artefacto é produzido  
+  **Quando** é promovido  
+  **Então** assinatura e proveniência são verificadas.  
+- **Dado** que falha verificação  
+  **Quando** assinatura não é válida  
+  **Então** o artefacto é rejeitado e alerta emitido.  
 
 **Checklist.**
 - [ ] Assinatura automática  
@@ -284,12 +284,12 @@ Nem todas as apps exigem o mesmo rigor.
 Como **AppSec Engineers**, quero gates distintos por L1–L3, para aplicar segurança proporcional.
 
 **Critérios de aceitação (BDD).**
-- Dado que aplicação é L3  
-- Quando há falha High  
-- Então gate bloqueia promoção.  
-- Dado que aplicação é L1  
-- Quando há falha Medium  
-- Então alerta é registado sem bloqueio.  
+- **Dado** que aplicação é L3  
+  **Quando** há falha High  
+  **Então** gate bloqueia promoção.  
+- **Dado** que aplicação é L1  
+  **Quando** há falha Medium  
+  **Então** alerta é registado sem bloqueio.  
 
 **Checklist.**
 - [ ] Política publicada  
@@ -319,12 +319,12 @@ Cobertura limitada cria pontos cegos.
 Como **AppSec Engineers**, quero scanners de containers e SBOM em pipelines, para cobrir supply chain.
 
 **Critérios de aceitação (BDD).**
-- Dado que imagem é construída  
-- Quando corre pipeline  
-- Então SBOM é gerado e anexado.  
-- Dado que imagem base muda  
-- Quando vulnerabilidade é detetada  
-- Então é aberta tarefa de mitigação automática.  
+- **Dado** que imagem é construída  
+  **Quando** corre pipeline  
+  **Então** SBOM é gerado e anexado.  
+- **Dado** que imagem base muda  
+  **Quando** vulnerabilidade é detetada  
+  **Então** é aberta tarefa de mitigação automática.  
 
 **Checklist.**
 - [ ] Container scanning ativo  
@@ -354,12 +354,12 @@ Sem rastreio, auditoria é impossível.
 Como **GRC / Compliance**, quero rastrear commit→pipeline→release, para suportar auditorias.
 
 **Critérios de aceitação (BDD).**
-- Dado que ocorre incidente  
-- Quando analiso release  
-- Então consigo traçar origem.  
-- Dado que auditor pede evidências  
-- Quando executo consulta  
-- Então sistema exporta logs correlacionados.  
+- **Dado** que ocorre incidente  
+  **Quando** analiso release  
+  **Então** consigo traçar origem.  
+- **Dado** que auditor pede evidências  
+  **Quando** executo consulta  
+  **Então** sistema exporta logs correlacionados.  
 
 **Checklist.**
 - [ ] IDs de correlação  

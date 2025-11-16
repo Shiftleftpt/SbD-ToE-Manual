@@ -42,13 +42,13 @@ genia: us-format-normalization
 **História.**   
 Como **Dev + AppSec Engineer**, quero **submeter exceções de segurança em fluxo formal com roteamento automático por nível de risco (L1→gestor app, L2→AppSec+gestor, L3→CISO+AppSec+direção)**, para **assegurar transparência, aprovação proporcional ao risco, e revalidação periódica**.  
 
-**BDD.**  
-- Dado que um controlo não pode ser cumprido numa aplicação classificada como L1, L2 ou L3  
-- Quando submeto exceção com justificação técnica e compensação  
-- Então ela é roteada para alçada apropriada, avaliada, e aprovada ou rejeitada  
+**Critérios de aceitação (BDD).**  
+- **Dado** que um controlo não pode ser cumprido numa aplicação classificada como L1, L2 ou L3  
+  **Quando** submeto exceção com justificação técnica e compensação  
+  **Então** ela é roteada para alçada apropriada, avaliada, e aprovada ou rejeitada  
 - E um calendário de revalidação é automaticamente criado (L3: 3 meses, L2: 6 meses, L1: anual)  
 
-**DoD.**  
+**Critérios de aceitação (DoD).**  
 - [ ] Exceção registada em ferramenta GRC com campos obrigatórios: aplicação, risco (L1–L3), controlo em falta, justificação, compensação, owner  
 - [ ] Alçada de aprovação determinada automaticamente por nível de risco  
 - [ ] Aprovação formal recebida (assinatura digital ou registo de timestamp)  
@@ -76,12 +76,12 @@ Como **Dev + AppSec Engineer**, quero **submeter exceções de segurança em flu
 **História.**   
 Como **Jurídico/Procurement**, quero **incluir cláusulas SbD-ToE em contratos**, para **garantir conformidade de fornecedores**.  
 
-**BDD.**  
-- Dado contrato novo  
-- Quando cláusulas são aplicadas  
-- Então fornecedor compromete-se a cumprir práticas de segurança  
+**Critérios de aceitação (BDD).**  
+- **Dado** contrato novo  
+  **Quando** cláusulas são aplicadas  
+  **Então** fornecedor compromete-se a cumprir práticas de segurança  
 
-**DoD.**  
+**Critérios de aceitação (DoD).**  
 - [ ] Cláusulas publicadas em modelo contratual  
 - [ ] Contratos validados juridicamente  
 - [ ] Monitorização de conformidade  
@@ -106,12 +106,12 @@ Como **Jurídico/Procurement**, quero **incluir cláusulas SbD-ToE em contratos*
 **História.**   
 Como **GRC**, quero **validar fornecedores de forma contínua**, para **assegurar conformidade e segurança contratual**.  
 
-**BDD.**  
-- Dado fornecedor ativo  
-- Quando auditoria ocorre  
-- Então relatório documenta conformidade  
+**Critérios de aceitação (BDD).**  
+- **Dado** fornecedor ativo  
+  **Quando** auditoria ocorre  
+  **Então** relatório documenta conformidade  
 
-**DoD.**  
+**Critérios de aceitação (DoD).**  
 - [ ] Auditoria anual  
 - [ ] Relatório publicado  
 - [ ] Findings registados  
@@ -136,12 +136,12 @@ Como **GRC**, quero **validar fornecedores de forma contínua**, para **assegura
 **História.**   
 Como **AppSec**, quero **agregar práticas de segurança por projeto em dashboard organizacional**, para **dar visibilidade e medir adoção**.  
 
-**BDD.**  
-- Dado projetos ativos  
-- Quando métricas são recolhidas  
-- Então dashboard mostra estado global  
+**Critérios de aceitação (BDD).**  
+- **Dado** projetos ativos  
+  **Quando** métricas são recolhidas  
+  **Então** dashboard mostra estado global  
 
-**DoD.**  
+**Critérios de aceitação (DoD).**  
 - [ ] Dashboard configurado  
 - [ ] Métricas por capítulo recolhidas  
 - [ ] Relatórios entregues à direção  
@@ -188,12 +188,12 @@ A tabela seguinte consolida as práticas de rastreabilidade aplicadas em cada ca
 **História.**   
 Como **Gestão**, quero **definir e monitorizar KPIs de governação**, para **avaliar eficácia do programa SbD-ToE**.  
 
-**BDD.**  
-- Dado ciclo trimestral  
-- Quando KPIs são medidos  
-- Então relatório é partilhado com direção  
+**Critérios de aceitação (BDD).**  
+- **Dado** ciclo trimestral  
+  **Quando** KPIs são medidos  
+  **Então** relatório é partilhado com direção  
 
-**DoD.**  
+**Critérios de aceitação (DoD).**  
 - [ ] KPIs definidos (ex.: exceções, fornecedores auditados)  
 - [ ] Métricas recolhidas  
 - [ ] Relatório partilhado  
@@ -218,12 +218,12 @@ Como **Gestão**, quero **definir e monitorizar KPIs de governação**, para **a
 **História.**   
 Como **Procurement Officer**, quero **executar o fluxo formal de validação de fornecedores (questionário → análise AppSec → aprovação)**, para **garantir que novos fornecedores cumprem requisitos mínimos antes do onboarding**.  
 
-**BDD.**  
-- Dado um novo fornecedor classificado como L2 ou L3  
-- Quando o fluxo de validação é iniciado  
-- Então questionário é enviado, analisado por AppSec, e aprovação/exceção é registada  
+**Critérios de aceitação (BDD).**  
+- **Dado** um novo fornecedor classificado como L2 ou L3  
+  **Quando** o fluxo de validação é iniciado  
+  **Então** questionário é enviado, analisado por AppSec, e aprovação/exceção é registada  
 
-**DoD.**  
+**Critérios de aceitação (DoD).**  
 - [ ] Checklist de validação preenchido (questionário, cláusulas, evidência)  
 - [ ] Análise técnica por AppSec Engineer documentada  
 - [ ] Decisão formalizada (Aprovação / Rejeição / Exceção) registada em GRC  
@@ -241,8 +241,8 @@ Como **Procurement Officer**, quero **executar o fluxo formal de validação de 
 **Integração.** Planeamento; Resp: Procurement Officer + AppSec Engineer + GRC Analyst; SLA: 2 semanas (L2), 1 semana (L3)  
 
 **Ligações úteis.**  
-- [Modelo de Validação de Fornecedores](governanca-contratacao/addon/03-modelo-validacao-fornecedores.md)  
-- [Exemplos Práticos](governanca-contratacao/addon/05-exemplos-praticos.md)  
+- [Modelo de Validação de Fornecedores](addon/03-modelo-validacao-fornecedores.md)  
+- [Exemplos Práticos](addon/05-exemplos-praticos.md)  
 
 ---
 
@@ -253,12 +253,12 @@ Como **Procurement Officer**, quero **executar o fluxo formal de validação de 
 **História.**   
 Como **AppSec Engineer**, quero **revisar e reavaliar exceções e compensações de forma periódica**, para **garantir que o risco residual continua mitigado e que compensações permanecem eficazes**.  
 
-**BDD.**  
-- Dado uma exceção ou compensação ativa com prazo de revisão  
-- Quando chega a data de revisão agendada (ou ocorre evento crítico)  
-- Então é reavaliada, revalidada, prorrogada ou encerrada  
+**Critérios de aceitação (BDD).**  
+- **Dado** uma exceção ou compensação ativa com prazo de revisão  
+  **Quando** chega a data de revisão agendada (ou ocorre evento crítico)  
+  **Então** é reavaliada, revalidada, prorrogada ou encerrada  
 
-**DoD.**  
+**Critérios de aceitação (DoD).**  
 - [ ] Calendário de revisão definido por criticidade (L3 trimestral, L2 semestral)  
 - [ ] Registo de exceção atualizado com nova data de revisão  
 - [ ] Reavaliação documentada (mantém-se, prolonga-se, encerra-se)  
@@ -276,7 +276,7 @@ Como **AppSec Engineer**, quero **revisar e reavaliar exceções e compensaçõe
 **Integração.** Operações + Validação; Resp: AppSec Engineer + GRC Analyst; Triggers: Calendário (trimestral/semestral), Incidente crítico, Mudança arquitetura; SLA: Reavaliação em 5 dias úteis  
 
 **Ligações úteis.**  
-- [Validação Continuada](governanca-contratacao/addon/06-validacao-continuada.md)  
+- [Validação Continuada](addon/06-validacao-continuada.md)  
 
 ---
 
@@ -287,12 +287,12 @@ Como **AppSec Engineer**, quero **revisar e reavaliar exceções e compensaçõe
 **História.**   
 Como **AppSec Engineer + Dev Lead**, quero **manter um repositório estruturado de conformidade para cada aplicação**, para **consolidar estado de todas as práticas SbD-ToE e facilitar auditorias internas e externas**.  
 
-**BDD.**  
-- Dado uma aplicação classificada como L1, L2 ou L3  
-- Quando o repositório é criado ou atualizado  
-- Então reflete estado de todos os capítulos (2–13) em checklist estruturado  
+**Critérios de aceitação (BDD).**  
+- **Dado** uma aplicação classificada como L1, L2 ou L3  
+  **Quando** o repositório é criado ou atualizado  
+  **Então** reflete estado de todos os capítulos (2–13) em checklist estruturado  
 
-**DoD.**  
+**Critérios de aceitação (DoD).**  
 - [ ] Repositório criado (ficheiro YAML, MD versionado ou dashboard GRC)  
 - [ ] Checklist por capítulo (02–13) incluído com estado binário (Sim/Não/Exceção)  
 - [ ] Evidência de validação ligada (links a relatórios, testes, scans, auditorias)  
@@ -311,8 +311,8 @@ Como **AppSec Engineer + Dev Lead**, quero **manter um repositório estruturado 
 **Integração.** Planeamento + Execução + Validação; Resp: AppSec Engineer + Dev Lead + GRC Analyst; SLA: Atualização por release ou 5 dias após evento crítico  
 
 **Ligações úteis.**  
-- [Controlo Sistemático das Práticas SbD-ToE](governanca-contratacao/addon/11-controlos-praticas-sbd.md)  
-- [Rastreabilidade Organizacional](governanca-contratacao/addon/04-rastreabilidade-organizacional.md)  
+- [Controlo Sistemático das Práticas SbD-ToE](addon/11-controlos-praticas-sbd.md)  
+- [Rastreabilidade Organizacional](addon/04-rastreabilidade-organizacional.md)  
 
 ---
 
@@ -323,12 +323,12 @@ Como **AppSec Engineer + Dev Lead**, quero **manter um repositório estruturado 
 **História.**   
 Como **Gestão/PMO**, quero **designar formalmente um owner de segurança (Security Champion) por cada aplicação crítica**, para **garantir responsabilização clara, continuidade de decisões de segurança e comunicação de risco**.  
 
-**BDD.**  
-- Dado uma aplicação classificada como L2 ou L3  
-- Quando um Security Champion é designado  
-- Então ele é responsável pela submissão de exceções, validações, comunicação de risco e cumprimento de políticas  
+**Critérios de aceitação (BDD).**  
+- **Dado** uma aplicação classificada como L2 ou L3  
+  **Quando** um Security Champion é designado  
+  **Então** ele é responsável pela submissão de exceções, validações, comunicação de risco e cumprimento de políticas  
 
-**DoD.**  
+**Critérios de aceitação (DoD).**  
 - [ ] Security Champion designado por escrito (e-mail oficial, documento, HR system)  
 - [ ] Responsabilidades documentadas (exceções, validação, comunicação, rastreabilidade)  
 - [ ] Formação obrigatória em SbD-ToE completada (Cap. 13 - Formação e Onboarding)  
@@ -347,7 +347,7 @@ Como **Gestão/PMO**, quero **designar formalmente um owner de segurança (Secur
 **Integração.** Planeamento; Resp: Gestão/PMO + Security Champion + AppSec Engineer; SLA: Designação no arranque do projeto ou mudança de owner  
 
 **Ligações úteis.**  
-- [Modelo de Governação](governanca-contratacao/addon/01-modelo-governancao.md)  
+- [Modelo de Governação](addon/01-modelo-governancao.md)  
 - [Formação e Onboarding (Cap. 13)](/formacao-onboarding/aplicacao-lifecycle.md)  
 
 ---
@@ -359,12 +359,12 @@ Como **Gestão/PMO**, quero **designar formalmente um owner de segurança (Secur
 **História.**   
 Como **AppSec Engineer + GRC Analyst**, quero **executar validações periódicas de conformidade com SbD-ToE em cada aplicação**, para **assegurar que requisitos continuam aplicados e eficazes, detetar desvios cedo, e manter evidência atualizada**.  
 
-**BDD.**  
-- Dado um calendário de revisões definido por criticidade (L3 trimestral, L2 semestral)  
-- Quando ciclo de revisão chega  
-- Então aplicação é reavaliada, evidência recolhida, e status atualizado no repositório  
+**Critérios de aceitação (BDD).**  
+- **Dado** um calendário de revisões definido por criticidade (L3 trimestral, L2 semestral)  
+  **Quando** ciclo de revisão chega  
+  **Então** aplicação é reavaliada, evidência recolhida, e status atualizado no repositório  
 
-**DoD.**  
+**Critérios de aceitação (DoD).**  
 - [ ] Calendário de revisões definido e comunicado ao Dev Lead  
 - [ ] Checklist de validação por capítulo executado  
 - [ ] Evidência recolhida (testes, scans, revisões, auditorias externas)  
@@ -384,8 +384,8 @@ Como **AppSec Engineer + GRC Analyst**, quero **executar validações periódica
 **Integração.** Validação + Auditoria; Resp: AppSec Engineer + GRC Analyst + Dev Lead; Triggers: Calendário cíclico, Release relevante, Incidente crítico; SLA: Ciclo completado em 2 semanas desde trigger  
 
 **Ligações úteis.**  
-- [Validação Continuada](governanca-contratacao/addon/06-validacao-continuada.md)  
-- [Controlo Sistemático das Práticas](governanca-contratacao/addon/11-controlos-praticas-sbd.md)  
+- [Validação Continuada](addon/06-validacao-continuada.md)  
+- [Controlo Sistemático das Práticas](addon/11-controlos-praticas-sbd.md)  
 
 ---
 
@@ -396,12 +396,12 @@ Como **AppSec Engineer + GRC Analyst**, quero **executar validações periódica
 **História.**   
 Como **CISO + Gestão Executiva**, quero **consolidar e reportar KPIs de governação (exceções, fornecedores auditados, conformidade por capítulo, maturidade)**, para **avaliar objetivamente a maturidade de segurança da organização e tomar decisões estratégicas**.  
 
-**BDD.**  
-- Dado dados de conformidade e exceções por aplicação  
-- Quando ciclo de reporting chega (trimestral/semestral)  
-- Então KPIs são calculados, visualizados e reportados à direção  
+**Critérios de aceitação (BDD).**  
+- **Dado** dados de conformidade e exceções por aplicação  
+  **Quando** ciclo de reporting chega (trimestral/semestral)  
+  **Então** KPIs são calculados, visualizados e reportados à direção  
 
-**DoD.**  
+**Critérios de aceitação (DoD).**  
 - [ ] KPIs definidos (ex: % aplicações com rastreabilidade, % exceções resolvidas, % fornecedores auditados, nível maturidade SAMM/SSDF)  
 - [ ] Dashboard configurado com métricas por capítulo e por aplicação  
 - [ ] Dados agregados de todos os projetos, equipas e fornecedores  
@@ -421,8 +421,8 @@ Como **CISO + Gestão Executiva**, quero **consolidar e reportar KPIs de governa
 **Integração.** Auditoria + Operações; Resp: GRC Analyst + AppSec Engineer + CISO; Triggers: Trimestral (mínimo), Semestral (recomendado); SLA: Relatório publicado 5 dias após fim do período  
 
 **Ligações úteis.**  
-- [Governação e Maturidade](governanca-contratacao/addon/07-governancao-e-maturidade.md)  
-- [Rastreabilidade Organizacional](governanca-contratacao/addon/04-rastreabilidade-organizacional.md)  
+- [Governação e Maturidade](addon/07-governancao-e-maturidade.md)  
+- [Rastreabilidade Organizacional](addon/04-rastreabilidade-organizacional.md)  
 
 ---
 
@@ -433,12 +433,12 @@ Como **CISO + Gestão Executiva**, quero **consolidar e reportar KPIs de governa
 **História.**   
 Como **CISO + AppSec Manager**, quero **formalizar e documentar o modelo de governação com níveis de alçada explícitos, papéis e responsabilidades claras**, para **garantir que decisões de segurança são tomadas com autoridade apropriada, consistência, e rastreabilidade completa**.
 
-**BDD.**  
-- Dado que a organização adota SbD-ToE  
-- Quando um novo modelo de governação é definido ou revisado  
-- Então ele é documentado com alçadas por L1–L3, aprovado por direção, e comunicado a todos os stakeholders  
+**Critérios de aceitação (BDD).**  
+- **Dado** que a organização adota SbD-ToE  
+  **Quando** um novo modelo de governação é definido ou revisado  
+  **Então** ele é documentado com alçadas por L1–L3, aprovado por direção, e comunicado a todos os stakeholders  
 
-**DoD.**  
+**Critérios de aceitação (DoD).**  
 - [ ] Documento formal de "Política de Governação de Segurança SbD-ToE" aprovado por direção  
 - [ ] Níveis de alçada definidos explicitamente: L1 (Gestor Aplicação), L2 (AppSec + Gestor), L3 (CISO + AppSec + Direção)  
 - [ ] Papéis e responsabilidades mapeados por função (Dev, AppSec, Gestão, Jurídico, GRC, CISO)  
@@ -459,8 +459,8 @@ Como **CISO + AppSec Manager**, quero **formalizar e documentar o modelo de gove
 **Integração.** Planeamento + Execução contínua; Resp: CISO + AppSec Manager + Jurídico; Triggers: Arranque SbD-ToE, revisão anual, mudança organizacional; SLA: Publicação em 2 semanas  
 
 **Ligações úteis.**  
-- [Modelo de Governação](governanca-contratacao/addon/01-modelo-governancao.md)  
-- [Exemplos de Decisão](governanca-contratacao/addon/05-exemplos-praticos.md)  
+- [Modelo de Governação](addon/01-modelo-governancao.md)  
+- [Exemplos de Decisão](addon/05-exemplos-praticos.md)  
 - [Formação de Governação (Cap. 13)](/formacao-onboarding/aplicacao-lifecycle.md)  
 
 ---
@@ -472,12 +472,12 @@ Como **CISO + AppSec Manager**, quero **formalizar e documentar o modelo de gove
 **História.**   
 Como **AppSec Engineer + Dev Lead**, quero **manter um checklist centralizado, versionado e auditável de conformidade com todos os capítulos SbD-ToE (2–13), com verificação periódica por release ou evento crítico**, para **consolidar estado real de todas as práticas e facilitar auditorias, decisão de risco, e demonstração de conformidade normativa**.
 
-**BDD.**  
-- Dado uma aplicação classificada como L1, L2 ou L3  
-- Quando um ciclo de validação é acionado (por release, trimestral L3, semestral L2, ou evento crítico)  
-- Então checklist é preenchido com estado, evidência é ligada, e relatório é gerado  
+**Critérios de aceitação (BDD).**  
+- **Dado** uma aplicação classificada como L1, L2 ou L3  
+  **Quando** um ciclo de validação é acionado (por release, trimestral L3, semestral L2, ou evento crítico)  
+  **Então** checklist é preenchido com estado, evidência é ligada, e relatório é gerado  
 
-**DoD.**  
+**Critérios de aceitação (DoD).**  
 - [ ] Ficheiro de checklist versionado criado em repositório (YAML, MD ou dashboard GRC) com estrutura: Capítulo | Prática | Status (Sim/Não/Exceção/N/A) | Evidência (link/referência) | Owner | Data de validação  
 - [ ] Integração com sistema de controlo de versões (Git) ou GRC com histórico auditável  
 - [ ] Triggers definidos e automatizados: release relevante, evento crítico (incidente, CVE), ciclo programado (L3 trimestral, L2 semestral, L1 anual)  
@@ -498,9 +498,9 @@ Como **AppSec Engineer + Dev Lead**, quero **manter um checklist centralizado, v
 **Integração.** Planeamento + Execução + Validação + Auditoria; Resp: AppSec Engineer (validação) + Dev Lead (preenchimento) + GRC Analyst (consolidação); Triggers: Release relevante, evento crítico, ciclo programado (trimestral/semestral/anual); SLA: Atualização em 5 dias úteis após trigger  
 
 **Ligações úteis.**  
-- [Controlo Sistemático das Práticas SbD-ToE](governanca-contratacao/addon/11-controlos-praticas-sbd.md)  
-- [Rastreabilidade Organizacional](governanca-contratacao/addon/04-rastreabilidade-organizacional.md)  
-- [Validação Periódica](governanca-contratacao/addon/06-validacao-continuada.md)  
+- [Controlo Sistemático das Práticas SbD-ToE](addon/11-controlos-praticas-sbd.md)  
+- [Rastreabilidade Organizacional](addon/04-rastreabilidade-organizacional.md)  
+- [Validação Periódica](addon/06-validacao-continuada.md)  
 
 ---
 
@@ -511,12 +511,12 @@ Como **AppSec Engineer + Dev Lead**, quero **manter um checklist centralizado, v
 **História.**   
 Como **Procurement Officer + AppSec Engineer**, quero **reavalia e reaprovar fornecedores periodicamente (anual por defaut, semestral para L2, trimestral para L3), com validação técnica atualizada, análise de compliance SLA, e escalonamento para decisão de penalização ou substituição se necessário**, para **assegurar que continuam a cumprir requisitos e SLA, que risco é mitigado, e que decisões de continuidade são baseadas em evidência**.
 
-**BDD.**  
-- Dado um fornecedor ativo com contrato vigente  
-- Quando chega data de revisão agendada (calendário) ou evento crítico ocorre (incidente, CVE crítico, mudança SLA)  
-- Então fornecedor é reavaliado com questionário atualizado, evidência técnica validada (SBOM, SLA compliance, mudanças) e decisão é formalizada  
+**Critérios de aceitação (BDD).**  
+- **Dado** um fornecedor ativo com contrato vigente  
+  **Quando** chega data de revisão agendada (calendário) ou evento crítico ocorre (incidente, CVE crítico, mudança SLA)  
+  **Então** fornecedor é reavaliado com questionário atualizado, evidência técnica validada (SBOM, SLA compliance, mudanças) e decisão é formalizada  
 
-**DoD.**  
+**Critérios de aceitação (DoD).**  
 - [ ] Calendário de revisão de fornecedores definido e comunicado (anual mínimo, 6 meses para L2, trimestral para L3, ou por evento crítico)  
 - [ ] Questionário atualizado com perguntas de segurança e SLA enviado ao fornecedor  
 - [ ] Análise técnica documentada (AppSec): SBOM validado, CVEs analisados, SLA compliance verificado, mudanças organizacionais/técnicas identificadas  
@@ -537,9 +537,9 @@ Como **Procurement Officer + AppSec Engineer**, quero **reavalia e reaprovar for
 **Integração.** Validação + Operações; Resp: Procurement Officer (coordenação) + AppSec Engineer (análise técnica) + GRC Analyst (decisão e registo); Triggers: Calendário programado (anual/semestral), Incidente crítico, CVE crítico não mitigado, Mudança de contrato/propriedade/SLA; SLA: Reavaliação completada em 2 semanas desde trigger  
 
 **Ligações úteis.**  
-- [Modelo de Validação de Fornecedores](governanca-contratacao/addon/03-modelo-validacao-fornecedores.md)  
-- [Validação Continuada](governanca-contratacao/addon/06-validacao-continuada.md)  
-- [Exemplos de Aplicação](governanca-contratacao/addon/05-exemplos-praticos.md)  
+- [Modelo de Validação de Fornecedores](addon/03-modelo-validacao-fornecedores.md)  
+- [Validação Continuada](addon/06-validacao-continuada.md)  
+- [Exemplos de Aplicação](addon/05-exemplos-praticos.md)  
 
 ---
 
@@ -550,12 +550,12 @@ Como **Procurement Officer + AppSec Engineer**, quero **reavalia e reaprovar for
 **História.**   
 Como **Security Champion + HR/Recruiter**, quero **executar processo estruturado de preparação técnica de contractors (triagem, formação obrigatória, teste de compreensão, ambiente sandbox) antes de ganhem acesso a sistemas**, para **garantir que estão preparados, compreenderam políticas fundamentais, e podem trabalhar seguramente**.
 
-**BDD.**  
-- Dado um novo contractor aprovado por Procurement (US-06) e contrato assinado  
-- Quando chega data de início do projeto  
-- Então trilho de preparação é acionado: formação obrigatória, quiz, sandbox setup, confirmação de NDA  
+**Critérios de aceitação (BDD).**  
+- **Dado** um novo contractor aprovado por Procurement (US-06) e contrato assinado  
+  **Quando** chega data de início do projeto  
+  **Então** trilho de preparação é acionado: formação obrigatória, quiz, sandbox setup, confirmação de NDA  
 
-**DoD.**  
+**Critérios de aceitação (DoD).**  
 - [ ] Checklist de preparação preenchido (triagem de skills, nível de segurança esperado, formação requerida definida)  
 - [ ] Trilho de formação baseado em perfil (Dev, DevOps, QA, etc.) iniciado em LMS ou plataforma de treino  
 - [ ] Quiz de compreensão de políticas de segurança completado (score mínimo 80%)  
@@ -579,8 +579,8 @@ Como **Security Champion + HR/Recruiter**, quero **executar processo estruturado
 **Ligações úteis.**  
 - [Cap. 13 - Formação e Onboarding](/sbd-toe/sbd-manual/formacao-onboarding/aplicacao-lifecycle)  
 - [Validação de Fornecedores - US-06](#us-06)  
-- [Template de Validação de Contractors](/sbd-toe/sbd-manual/governanca-contratacao/addon/02-template-validacao-contractors)  
-- [Guia de Preparação Sandbox](/sbd-toe/sbd-manual/governanca-contratacao/addon/12-guia-preparacao-sandbox)  
+- [Template de Validação de Contractors](/sbd-toe/sbd-manual/addon/02-template-validacao-contractors)  
+- [Guia de Preparação Sandbox](/sbd-toe/sbd-manual/addon/12-guia-preparacao-sandbox)  
 
 ---
 
@@ -591,12 +591,12 @@ Como **Security Champion + HR/Recruiter**, quero **executar processo estruturado
 **História.**   
 Como **CISO + Training Manager**, quero **definir e executar trilho de formação obrigatória por perfil de contractor, com SLA explícito de conclusão antes de acesso técnico**, para **garantir consciência de segurança mínima, conformidade regulatória (DORA, NIS2), e rastreabilidade de preparação**.
 
-**BDD.**  
-- Dado um contractor novo contratado  
-- Quando trilho de formação é atribuído em LMS  
-- Então deve completar cursos obrigatórios, passar quiz, e ter registo consolidado antes de acesso real  
+**Critérios de aceitação (BDD).**  
+- **Dado** um contractor novo contratado  
+  **Quando** trilho de formação é atribuído em LMS  
+  **Então** deve completar cursos obrigatórios, passar quiz, e ter registo consolidado antes de acesso real  
 
-**DoD.**  
+**Critérios de aceitação (DoD).**  
 - [ ] Trilho de formação definido por perfil (Developer, DevOps, QA, Arquitetura, etc.) com duração estimada  
 - [ ] Cursos obrigatórios listados e mapeados a capítulos SbD-ToE:  
     - **[O1] Security Awareness Geral** (2h) → Cap. 00 + 02 + 14  
@@ -637,12 +637,12 @@ Como **CISO + Training Manager**, quero **definir e executar trilho de formaçã
 **História.**   
 Como **Security Champion + HR + DevOps Lead**, quero **executar processo formal e automático de offboarding seguro quando contractor termina ou fornecedor é rescindido**, para **garantir que acesso é revogado completamente, ativos recuperados, confidencialidade mantida, e conformidade legal assegurada**.
 
-**BDD.**  
-- Dado um contractor cuja data de termo é conhecida (ou fornecedor rescindido com aviso)  
-- Quando data de offboarding chega  
-- Então acesso é revogado, ativos recuperados, e conclusão documentada  
+**Critérios de aceitação (BDD).**  
+- **Dado** um contractor cuja data de termo é conhecida (ou fornecedor rescindido com aviso)  
+  **Quando** data de offboarding chega  
+  **Então** acesso é revogado, ativos recuperados, e conclusão documentada  
 
-**DoD.**  
+**Critérios de aceitação (DoD).**  
 - [ ] Checklist de offboarding preparado 2 semanas antes (IT, HR, AppSec, Tech Lead)  
 - [ ] Notificação formal enviada ao contractor/fornecedor com data exata de desativação  
 - [ ] Acesso a sistemas revogado (no máximo 24h após data de termo):  
@@ -675,7 +675,7 @@ Como **Security Champion + HR + DevOps Lead**, quero **executar processo formal 
 **Ligações úteis.**  
 - [Reavaliação de Fornecedores - US-14](#us-14)  
 - [Preparação Técnica - US-15](#us-15)  
-- [Checklist de Offboarding](/sbd-toe/sbd-manual/governanca-contratacao/addon/13-checklist-offboarding)  
+- [Checklist de Offboarding](/sbd-toe/sbd-manual/addon/13-checklist-offboarding)  
 
 ---
 
@@ -686,12 +686,12 @@ Como **Security Champion + HR + DevOps Lead**, quero **executar processo formal 
 **História.**   
 Como **AppSec Engineer + Security Monitoring Team**, quero **monitorizar continuamente conformidade de fornecedores críticos (incidentes, CVEs, SLA, mudanças organizacionais) e escalar automaticamente se gaps surgem**, para **reduzir risco residual entre ciclos de avaliação formal e detetar eventos críticos em tempo real**.
 
-**BDD.**  
-- Dado um fornecedor crítico (L2–L3) com contrato vigente  
-- Quando incidente, CVE crítico, SLA breach, ou mudança organizacional é reportado  
-- Então alerta automático é gerado e escalado para AppSec e Procurement  
+**Critérios de aceitação (BDD).**  
+- **Dado** um fornecedor crítico (L2–L3) com contrato vigente  
+  **Quando** incidente, CVE crítico, SLA breach, ou mudança organizacional é reportado  
+  **Então** alerta automático é gerado e escalado para AppSec e Procurement  
 
-**DoD.**  
+**Critérios de aceitação (DoD).**  
 - [ ] Integração com feed de incidentes do fornecedor (status page, email alerts, API)  
 - [ ] Monitorização contínua de CVEs em stack técnico do fornecedor (via SBOM/SCA tool)  
 - [ ] Alerta automático acionado se:  
@@ -732,12 +732,12 @@ Como **AppSec Engineer + Security Monitoring Team**, quero **monitorizar continu
 **História.**   
 Como **Security Champion + Infrastructure/Tech Lead**, quero **revisar trimestralmente acesso de contractors em ativo, validando que têm apenas acesso necessário ao projeto**, para **manter principle of least privilege, reduzir risco de acesso excessivo, e remover acesso obsoleto**.
 
-**BDD.**  
-- Dado contractors ativos com acesso a sistemas (repos, CI/CD, databases, cloud)  
-- Quando ciclo trimestral de revisão chega  
-- Então acesso é validado com Tech Lead, e acesso excessivo é removido no mesmo dia  
+**Critérios de aceitação (BDD).**  
+- **Dado** contractors ativos com acesso a sistemas (repos, CI/CD, databases, cloud)  
+  **Quando** ciclo trimestral de revisão chega  
+  **Então** acesso é validado com Tech Lead, e acesso excessivo é removido no mesmo dia  
 
-**DoD.**  
+**Critérios de aceitação (DoD).**  
 - [ ] Lista de contractors ativos extraída de sistemas (Git orgs, Jira, VPN, Cloud IAM, databases)  
 - [ ] Por cada contractor:  
     - Acesso listado em detalhe (repositórios, CI/CD pipelines, databases, cloud resources, etc.)  
@@ -776,12 +776,12 @@ Como **Security Champion + Infrastructure/Tech Lead**, quero **revisar trimestra
 **História.**   
 Como **Security Champion + Tech Lead**, quero **recolher feedback estruturado pós-projeto de contractors sobre compreensão de segurança, incidentes, e recomendações**, para **informar decisão de re-hire, melhorar programa de preparação, e criar base de dados de avaliação**.
 
-**BDD.**  
-- Dado um contractor cujo projeto termina  
-- Quando offboarding é iniciado (US-17)  
-- Então feedback form é enviado para Tech Lead + AppSec Engineer preencherem  
+**Critérios de aceitação (BDD).**  
+- **Dado** um contractor cujo projeto termina  
+  **Quando** offboarding é iniciado (US-17)  
+  **Então** feedback form é enviado para Tech Lead + AppSec Engineer preencherem  
 
-**DoD.**  
+**Critérios de aceitação (DoD).**  
 - [ ] Feedback form criado com perguntas estruturadas:  
     - **Segurança:** Compreensão de políticas (escala 1–5), Best practices aplicadas (Sim/Não), Incidentes durante projeto (Sim/Não + desc)  
     - **Performance:** Qualidade de código (1–5), Teste (1–5), Documentação (1–5)  

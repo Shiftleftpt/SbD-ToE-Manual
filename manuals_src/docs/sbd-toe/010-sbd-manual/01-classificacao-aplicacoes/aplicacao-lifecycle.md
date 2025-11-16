@@ -55,12 +55,12 @@ A classificação inicial da aplicação é o ponto de entrada para a aplicaçã
 **História.**  
 Como **Developer / Team Lead**, quero **classificar a aplicação com base nos eixos Exposição, Dados e Impacto (E+D+I)**, para garantir a aplicação proporcional de controlos de segurança ao longo de todos os capítulos.
 
-**BDD.**
-- Dado uma aplicação nova ou em início de projeto  
-- Quando aplico o modelo de classificação E+D+I  
-- Então obtenho uma pontuação por eixo e um nível global **L1–L3 definido, validado por AppSec Engineer e documentado**
+**Critérios de aceitação (BDD).**
+- **Dado** uma aplicação nova ou em início de projeto  
+  **Quando** aplico o modelo de classificação E+D+I  
+  **Então** obtenho uma pontuação por eixo e um nível global **L1–L3 definido, validado por AppSec Engineer e documentado**
 
-**DoD.**
+**Critérios de aceitação (DoD).**
 - [ ] Modelo de classificação E+D+I aplicado à aplicação  
 - [ ] Nível de criticidade (L1–L3) definido e **validado por AppSec Engineer**  
 - [ ] Documento de classificação registado e versionado em repositório Git  
@@ -103,12 +103,12 @@ A matriz de controlo define quais os requisitos de segurança aplicáveis em fun
 **História.**  
 Como **Developer / Team Lead**, quero **aplicar a matriz de controlos e mapear cada requisito para REQ-XXX do Capítulo 02**, para garantir que apenas os requisitos necessários são exigidos e rastreáveis.
 
-**BDD.**
-- Dado uma aplicação já classificada (L1, L2 ou L3)  
-- Quando consulto a matriz de controlos  
-- Então extraio apenas os requisitos correspondentes ao nível atribuído **e mapeio cada um para REQ-XXX específico**
+**Critérios de aceitação (BDD).**
+- **Dado** uma aplicação já classificada (L1, L2 ou L3)  
+  **Quando** consulto a matriz de controlos  
+  **Então** extraio apenas os requisitos correspondentes ao nível atribuído **e mapeio cada um para REQ-XXX específico**
 
-**DoD.**
+**Critérios de aceitação (DoD).**
 - [ ] Matriz consultada para o nível da aplicação  
 - [ ] Requisitos transformados em cartões/histórias de backlog  
 - [ ] **Cada requisito mapeado explicitamente para REQ-XXX do Cap. 02** (ex: REQ-LOG-001, REQ-ARC-003)  
@@ -150,12 +150,12 @@ A classificação deve ser revista quando existirem alterações significativas 
 **História.**  
 Como **AppSec Engineer**, quero **rever a classificação de criticidade sempre que houver alterações relevantes**, para garantir adequação contínua dos controlos ao contexto técnico real.
 
-**BDD.**
-- Dado que ocorreu uma alteração significativa (ex: nova API, novo dado sensível, mudança de exposição)  
-- Quando reviso a classificação  
-- Então documento se o nível foi mantido ou alterado, com justificação técnica clara
+**Critérios de aceitação (BDD).**
+- **Dado** que ocorreu uma alteração significativa (ex: nova API, novo dado sensível, mudança de exposição)  
+  **Quando** reviso a classificação  
+  **Então** documento se o nível foi mantido ou alterado, com justificação técnica clara
 
-**DoD.**
+**Critérios de aceitação (DoD).**
 - [ ] Trigger de revisão identificado e documentado  
 - [ ] Documento de classificação atualizado ou revalidado  
 - [ ] Justificação técnica registada (ex: "E aumentou de 1→2 por exposição a API pública")  
@@ -197,12 +197,12 @@ Para além dos triggers por alteração, a classificação deve ter **cadência 
 **História.**  
 Como **AppSec Engineer**, quero **rever a classificação com cadência fixa (L1 anual, L2 semestral, L3 trimestral)**, para garantir que o nível de criticidade e os controlos continuam adequados ao contexto actual.
 
-**BDD.**
-- Dado que existe uma classificação ativa com data de próxima revisão definida  
-- Quando a data de revisão chega  
-- Então executo reavaliação dos eixos E/D/I, documento decisão (manter/alterar) e **agenço próxima revisão**
+**Critérios de aceitação (BDD).**
+- **Dado** que existe uma classificação ativa com data de próxima revisão definida  
+  **Quando** a data de revisão chega  
+  **Então** executo reavaliação dos eixos E/D/I, documento decisão (manter/alterar) e **agenço próxima revisão**
 
-**DoD.**
+**Critérios de aceitação (DoD).**
 - [ ] Calendário de revisões definido por nível (L1=12m, L2=6m, L3=3m)  
 - [ ] Ata ou issue de revisão criada, datada e documentada com evidência técnica  
 - [ ] Justificação: "Alterado" (com novo nível e drivers) ou "Mantém-se" (com observações)  
@@ -246,12 +246,12 @@ Mesmo após aplicação da matriz, podem permanecer riscos residuais que devem s
 **História.**  
 Como **GRC/Compliance**, quero **registar o risco residual após aplicar os controlos definidos**, para fundamentar decisões de aceitação, mitigação ou transferência de risco.
 
-**BDD.**
-- Dado que alguns controlos não são aplicáveis ou foram excecionados  
-- Quando documento as justificações técnicas e avalio risco residual  
-- Então registo a análise de forma auditável com **aprovação de AppSec Engineer e Gestão**
+**Critérios de aceitação (BDD).**
+- **Dado** que alguns controlos não são aplicáveis ou foram excecionados  
+  **Quando** documento as justificações técnicas e avalio risco residual  
+  **Então** registo a análise de forma auditável com **aprovação de AppSec Engineer e Gestão**
 
-**DoD.**
+**Critérios de aceitação (DoD).**
 - [ ] Controlos não aplicados identificados explicitamente  
 - [ ] Justificação técnica detalhada registada (ex: "Requisito X não aplicável porque Y")  
 - [ ] **Risco residual avaliado contra limiares L1–L3** (ex: L2 máximo = risco médio)  
@@ -295,13 +295,13 @@ Quando o nível de risco residual é aceitável mas com **Time-To-Live (TTL) lim
 **História.**  
 Como **GRC/Compliance**, quero registar aceitações com **TTL explícito e alerta de re-aprovação**, para garantir que excepções não se tornam permanentes por esquecimento.
 
-**BDD.**
-- Dado que existe uma decisão de aceitar risco residual  
-- Quando defino **TTL em função do nível** (L1=12m, L2=6m, L3=3m)  
-- Então configuro alerta de **revalidação 15 dias antes da expiração**  
+**Critérios de aceitação (BDD).**
+- **Dado** que existe uma decisão de aceitar risco residual  
+  **Quando** defino **TTL em função do nível** (L1=12m, L2=6m, L3=3m)  
+  **Então** configuro alerta de **revalidação 15 dias antes da expiração**  
 - E documento que **sem re-aprovação explícita, a excepção expira automaticamente**
 
-**DoD.**
+**Critérios de aceitação (DoD).**
 - [ ] Owner da excepção designado e contactível  
 - [ ] **TTL definido por nível** (L1: 12 meses | L2: 6 meses | L3: 3 meses)  
 - [ ] Critérios de encerramento claros (ex: "após implementação mitigação X" ou "até data Y")  
@@ -346,12 +346,12 @@ Antes de entrar em produção é necessário validar se todos os requisitos apli
 **História.**  
 Como **QA**, quero **validar que os requisitos aplicáveis por nível de risco estão cumpridos antes da entrada em produção**, para garantir conformidade com a classificação atribuída.
 
-**BDD.**
-- Dado que a aplicação está pronta para go-live  
-- Quando reviso a checklist de controlos aplicáveis (extraída de US-02)  
-- Então confirmo que **evidências estão documentadas, testadas e aprovadas por AppSec Engineer**
+**Critérios de aceitação (BDD).**
+- **Dado** que a aplicação está pronta para go-live  
+  **Quando** reviso a checklist de controlos aplicáveis (extraída de US-02)  
+  **Então** confirmo que **evidências estão documentadas, testadas e aprovadas por AppSec Engineer**
 
-**DoD.**
+**Critérios de aceitação (DoD).**
 - [ ] Checklist de controlos revista completa (baseada em matriz aplicada)  
 - [ ] Evidências documentadas (testes, relatórios, scans, revisões)  
 - [ ] **Aprovação formal de AppSec Engineer registada**  
@@ -482,12 +482,12 @@ Cada nível de criticidade deve ser confrontado com ameaças conhecidas (STRIDE,
 **História.**  
 Como **AppSec Engineer**, quero **verificar se as ameaças esperadas para o nível de criticidade estão cobertas por controlos aplicados ou exceções rastreáveis**, para garantir que a seleção de controlos é fundamentada em ameaças reais.
 
-**BDD.**
-- Dado que a aplicação tem nível de criticidade definido (L1/L2/L3)  
-- Quando consulto o mapeamento de ameaças apropriado (STRIDE, MITRE ATT&CK)  
-- Então verifico que **todas as ameaças críticas têm cobertura por controlo ou exceção documentada**
+**Critérios de aceitação (BDD).**
+- **Dado** que a aplicação tem nível de criticidade definido (L1/L2/L3)  
+  **Quando** consulto o mapeamento de ameaças apropriado (STRIDE, MITRE ATT&CK)  
+  **Então** verifico que **todas as ameaças críticas têm cobertura por controlo ou exceção documentada**
 
-**DoD.**
+**Critérios de aceitação (DoD).**
 - [ ] Ameaças identificadas por nível (ex: STRIDE para L1, MITRE ATT&CK para L2/L3)  
 - [ ] **Mapeamento ameaça ↔ controlo documentado** (ex: Spoofing → MFA, Tampering → TLS)  
 - [ ] Cobertura validada por controlo aplicado ou exceção aprovada  
@@ -529,13 +529,13 @@ A classificação da aplicação não é suficiente; **artefactos de entrega** (
 **História.**  
 Como **DevOps/SRE**, quero classificar **artefactos técnicos da aplicação** (Dockerfile, pipeline, IaC, imagens) com a mesma criticidade, para garantir que controlos de segurança acompanham a integridade da entrega.
 
-**BDD.**
-- Dado que uma aplicação tem uma classificação L1/L2/L3  
-- Quando crio/reviso artefactos de entrega (Dockerfile, script CI/CD, manifesto IaC, imagem)  
-- Então aplico os **controlos de capítulos 07/08/09 equivalentes ao nível**  
+**Critérios de aceitação (BDD).**
+- **Dado** que uma aplicação tem uma classificação L1/L2/L3  
+  **Quando** crio/reviso artefactos de entrega (Dockerfile, script CI/CD, manifesto IaC, imagem)  
+  **Então** aplico os **controlos de capítulos 07/08/09 equivalentes ao nível**  
 - E documento **rastreabilidade: aplicação → artefacto → capítulo 07/08/09 → REQ-XXX**
 
-**DoD.**
+**Critérios de aceitação (DoD).**
 - [ ] Artefactos técnicos identificados (Dockerfile, pipeline/GitHub Actions/GitLab CI, Terraform/Helm, imagem registada)  
 - [ ] **Classificação do artefacto registada = classificação da aplicação** (ex: L3 app → L3 Dockerfile, L3 pipeline)  
 - [ ] **Controlos cap. 07 (CI/CD) aplicados se pipeline** (secrets manager, assinatura, scanning, audit log)  
@@ -582,13 +582,13 @@ Sem indicadores e visibilidade executiva, não há governança efetiva nem feedb
 **História.**  
 Como **GRC/Compliance**, quero consolidar **KPIs mensais/trimestrais** sobre a classificação, exceções e ciclos de revisão, para demonstrar maturidade de governação à **Gestão Executiva/CISO** e à **Auditoria**.
 
-**BDD.**
-- Dado que existem classificações, exceções, revisões e artefactos registados  
-- Quando consolido os dados mensalmente  
-- Então gero relatório com **KPIs por nível, tendências, alertas de conformidade e recomendações**  
+**Critérios de aceitação (BDD).**
+- **Dado** que existem classificações, exceções, revisões e artefactos registados  
+  **Quando** consolido os dados mensalmente  
+  **Então** gero relatório com **KPIs por nível, tendências, alertas de conformidade e recomendações**  
 - E distribuo a **Gestão Executiva/CISO + Auditores Internos**
 
-**DoD.**
+**Critérios de aceitação (DoD).**
 - [ ] **KPI 1: % de aplicações classificadas** (válidas com data de revisão/revalidação próxima)  
 - [ ] **KPI 2: % de exceções ainda ativas** vs **% expiradas ou prorrogadas** (por nível)  
 - [ ] **KPI 3: Lead time para classificação inicial** (dias desde criação até L1/L2/L3 atribuído)  
@@ -639,13 +639,13 @@ As user stories US-01 a US-10 definem o **como operacionalizar** a classificaç�
 **História.**  
 Como **Gestão Executiva/CISO**, quero que existam **4 políticas organizacionais formais aprovadas** (Classificação de Risco, Aceitação de Risco, Revisão Periódica, Rastreabilidade/Auditoria), para assegurar que **todas as equipas operam sob os mesmos critérios** e que o manual é **cumprido uniformemente e auditado**.
 
-**BDD.**
-- Dado que a organização necessita de **conformidade formal** a regulamentos (NIS2, DORA, ISO 27001)  
-- Quando publico 4 políticas organizacionais assinadas por **Gestão Executiva**  
+**Critérios de aceitação (BDD).**
+- **Dado** que a organização necessita de **conformidade formal** a regulamentos (NIS2, DORA, ISO 27001)  
+  **Quando** publico 4 políticas organizacionais assinadas por **Gestão Executiva**  
 - E treinamento obrigatório é documentado com **attestation** de compreensão  
-- Então **Auditores podem validar conformidade** e **todas as decisões de classificação/risco têm fundamento normativo**
+  **Então** **Auditores podem validar conformidade** e **todas as decisões de classificação/risco têm fundamento normativo**
 
-**DoD.**
+**Critérios de aceitação (DoD).**
 - [ ] **Política 1 - Classificação de Risco**: Modelo E+D+I, critérios L1/L2/L3, responsabilidades por nível, frequency de revisão (obrigatória em L2/L3)  
 - [ ] **Política 2 - Aceitação de Risco**: Critérios de aceitabilidade, TTL por nível, aprovadores, exceções + revalidação obrigatória antes da expiração  
 - [ ] **Política 3 - Revisão Periódica**: Cadência time-based (12m/6m/3m), owners, escalonamento de decisões, triggers para revisão de matriz e ameaças  

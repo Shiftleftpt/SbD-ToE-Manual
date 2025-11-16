@@ -51,9 +51,9 @@ A seleção inicial de requisitos deve ser proporcional ao risco da aplicação 
 Como **Product Owner**, quero selecionar os requisitos aplicáveis ao projeto, para garantir que a segurança é proporcional ao nível de risco.
 
 **Critérios de aceitação (BDD).**
-- Dado que a aplicação tem um nível de criticidade atribuído  
-- Quando consulto a matriz de requisitos adequada  
-- Então marco no backlog apenas os aplicáveis ao nível definido
+- **Dado** que a aplicação tem um nível de criticidade atribuído  
+  **Quando** consulto a matriz de requisitos adequada  
+  **Então** marco no backlog apenas os aplicáveis ao nível definido
 
 **Checklist.**
 - [ ] Classificação de criticidade (L1–L3) atribuída  
@@ -91,11 +91,11 @@ A classificação e os requisitos aplicados devem ser revistos sempre que ocorra
 Como **Arquitetos de Software** e **Team Lead / Scrum Master**, quero rever a classificação e os requisitos sempre que ocorra uma integração crítica ou mudança relevante, para garantir que os controlos e REQ-XXX aplicáveis são atualizados e rastreados.
 
 **Critérios de aceitação (BDD).**
-- Dado que ocorre uma alteração significativa (integração externa, mudança de dados/escalabilidade, exposição)
-- Quando os **Arquitetos de Software** analisam o impacto técnico
-- Então atualizam a matriz de requisitos (mapeando REQ-XXX), disparam nova análise de ameaças se aplicável, e criam/atualizam tarefas no backlog com tags `SEC-Lx-*`
+- **Dado** que ocorre uma alteração significativa (integração externa, mudança de dados/escalabilidade, exposição)
+  **Quando** os **Arquitetos de Software** analisam o impacto técnico
+  **Então** atualizam a matriz de requisitos (mapeando REQ-XXX), disparam nova análise de ameaças se aplicável, e criam/atualizam tarefas no backlog com tags `SEC-Lx-*`
 
-**DoD.**
+**Critérios de aceitação (DoD).**
 - [ ] Matriz de requisitos atualizada com REQ-XXX vinculados
 - [ ] Se alteração afecta risco: disparo de novo Threat Modeling registado
 - [ ] Cartões no backlog marcados com `SEC-Lx-*` e owner definido (Developer / Team Lead)
@@ -129,12 +129,12 @@ Nem todos os requisitos são aplicáveis; exceções devem ser formalmente docum
 **História.**   
 Como **Developer** (proponente) e **GRC/Compliance** (regista), quero registar exceções com TTL e fluxo de aprovação por **AppSec Engineer** (técnica) e **Gestão Executiva/CISO** (para L3), para garantir que todas as excepções são temporais, rastreáveis e sujeitas a revalidação.
 
-**BDD.**
-- Dado que um requisito não pode ser aplicado
-- Quando a equipa regista uma excepção (ID único) com justificação e TTL (ex: 6m / 3m)
-- Então a excepção fica com owner definido, alerta automático configurado 15 dias antes da expiração, e fluxo de re-aprovação exigido para renovação
+**Critérios de aceitação (BDD).**
+- **Dado** que um requisito não pode ser aplicado
+  **Quando** a equipa regista uma excepção (ID único) com justificação e TTL (ex: 6m / 3m)
+  **Então** a excepção fica com owner definido, alerta automático configurado 15 dias antes da expiração, e fluxo de re-aprovação exigido para renovação
 
-**DoD.**
+**Critérios de aceitação (DoD).**
 - [ ] Excepção com ID e ligação ao `SEC-Lx-...` registada em ferramenta (Jira/GRC)
 - [ ] TTL definido consoante nível (L1=12m rec.; L2=6m; L3=3m)
 - [ ] Owner designado (Developer / Team Lead) e receptor de alertas (GRC/Compliance)
@@ -173,9 +173,9 @@ Todos os requisitos aplicados devem ser rastreáveis no backlog e auditáveis.
 Como **QA / Test Engineer**, quero garantir que todos os requisitos aplicados têm rastreabilidade no backlog, para suportar auditoria e verificação.
 
 **Critérios de aceitação (BDD).**
-- Dado que os requisitos estão definidos  
-- Quando reviso o backlog  
-- Então encontro todos com tags `SEC-Lx-*`
+- **Dado** que os requisitos estão definidos  
+  **Quando** reviso o backlog  
+  **Então** encontro todos com tags `SEC-Lx-*`
 
 **Checklist.**
 - [ ] Todos os cartões têm tag `SEC-Lx-Tyy-ZZZ`  
@@ -217,9 +217,9 @@ Cada requisito selecionado deve ter critérios de aceitação e validação defi
 Como **Product Owner/QA**, quero garantir que cada requisito selecionado no backlog contém critérios de aceitação de segurança claros, para que possam ser validados e testados de forma consistente.
 
 **Critérios de aceitação (BDD).**
-- Dado que um requisito é selecionado  
-- Quando o coloco no backlog  
-- Então adiciono critérios de aceitação/validação formais
+- **Dado** que um requisito é selecionado  
+  **Quando** o coloco no backlog  
+  **Então** adiciono critérios de aceitação/validação formais
 
 **Checklist.**
 - [ ] Critérios definidos no cartão  
@@ -260,9 +260,9 @@ Requisitos devem ter sempre cobertura de testes para garantir eficácia e preven
 Como **QA / Test Engineer**, quero garantir que todos os requisitos têm validação associada, para prevenir falsos positivos ou ausência de controlo.
 
 **Critérios de aceitação (BDD).**
-- Dado que requisitos foram aplicados  
-- Quando executo os testes  
-- Então obtenho evidência documentada da validação
+- **Dado** que requisitos foram aplicados  
+  **Quando** executo os testes  
+  **Então** obtenho evidência documentada da validação
 
 **Checklist.**
 - [ ] Testes automáticos ou manuais documentados  
@@ -303,9 +303,9 @@ A Equipa de Segurança deve validar requisitos aplicados e aprovar exceções, g
 Como **Equipa de Segurança / AppSec**, quero validar a aplicação dos requisitos e aprovar eventuais exceções, para garantir que as decisões de risco estão formalmente controladas e documentadas.
 
 **Critérios de aceitação (BDD).**
-- Dado que os requisitos foram aplicados  
-- Quando reviso backlog e exceções  
-- Então aprovo ou rejeito com base no risco
+- **Dado** que os requisitos foram aplicados  
+  **Quando** reviso backlog e exceções  
+  **Então** aprovo ou rejeito com base no risco
 
 **Checklist.**
 - [ ] Verificação de requisitos aplicados  
@@ -346,9 +346,9 @@ No arranque do projeto e sempre que existam alterações de âmbito, deve existi
 Como **AppSec/PO/TL**, quero estabelecer e manter um catálogo de requisitos de segurança do projeto (REQ-XXX), para assegurar aplicação consistente, versionada e auditável ao longo do SDLC.
 
 **Critérios de aceitação (BDD).**
-- Dado que a aplicação tem criticidade L1–L3 definida  
-- Quando gero o catálogo a partir da baseline e filtro por nível  
-- Então o catálogo fica versionado, com owner definido e ligação a critérios de validação
+- **Dado** que a aplicação tem criticidade L1–L3 definida  
+  **Quando** gero o catálogo a partir da baseline e filtro por nível  
+  **Então** o catálogo fica versionado, com owner definido e ligação a critérios de validação
 
 **Checklist.**
 - [ ] Catálogo `REQ-XXX` criado/atualizado e versionado  
@@ -390,9 +390,9 @@ Cada requisito ativo **deve** ter uma forma de validação associada (teste, rev
 Como **QA/AppSec/TL**, quero validar cada requisito REQ-XXX segundo os critérios definidos, para assegurar que existe evidência objetiva e rastreável do seu cumprimento.
 
 **Critérios de aceitação (BDD).**
-- Dado um requisito REQ-XXX com critérios definidos  
-- Quando executo a validação associada (teste/revisão/scan)  
-- Então registo o resultado “pass/fail” e anexo a evidência ao requisito
+- **Dado** um requisito REQ-XXX com critérios definidos  
+  **Quando** executo a validação associada (teste/revisão/scan)  
+  **Então** registo o resultado “pass/fail” e anexo a evidência ao requisito
 
 **Checklist.**
 - [ ] Método de validação definido por requisito  
@@ -433,12 +433,12 @@ As pipelines devem impor verificações automáticas que assegurem que requisito
 **História.**
 Como **DevOps/SRE** e **Developer**, quero que o pipeline CI/CD verifique automaticamente SAST, SCA, DAST (quando aplicável), presença de SBOM e assinatura de artefactos, para que merges e releases só ocorram quando os requisitos de segurança forem satisfeitos.
 
-**BDD.**
-- Dado um Pull Request/MR para a branch principal
-- Quando o pipeline executa os jobs de segurança (SAST, SCA, policy-check, sbom-gen, sign-artifact)
-- Então o merge é bloqueado se qualquer job crítico falhar; logs e relatórios são anexados ao PR
+**Critérios de aceitação (BDD).**
+- **Dado** um Pull Request/MR para a branch principal
+  **Quando** o pipeline executa os jobs de segurança (SAST, SCA, policy-check, sbom-gen, sign-artifact)
+  **Então** o merge é bloqueado se qualquer job crítico falhar; logs e relatórios são anexados ao PR
 
-**DoD.**
+**Critérios de aceitação (DoD).**
 - [ ] Job SAST executado com baseline de severidade e limiares configurados
 - [ ] SCA executado; dependências com CVSS > configurable_fail_threshold falham a build ou geram issue bloqueante
 - [ ] DAST executado em ambiente de staging para alterações que mexem na superfície de rede/exposição (L2/L3)
@@ -479,12 +479,12 @@ SBOMs e assinaturas provam a proveniência dos artefactos e são necessárias pa
 **História.**
 Como **Developer** e **DevOps/SRE**, quero que a pipeline gere um SBOM (CycloneDX/SPDX) e assine o artefacto final (imagem/container/package), para que possamos verificar origem, dependências e integridade no deployment.
 
-**BDD.**
-- Dado que é construído um artefacto de release (container/image/package)
-- Quando o job de build termina com sucesso
-- Então é gerado um SBOM e o artefacto é assinado; ambos ficam armazenados no repositório/registo de artefactos com metadados de proveniência
+**Critérios de aceitação (BDD).**
+- **Dado** que é construído um artefacto de release (container/image/package)
+  **Quando** o job de build termina com sucesso
+  **Então** é gerado um SBOM e o artefacto é assinado; ambos ficam armazenados no repositório/registo de artefactos com metadados de proveniência
 
-**DoD.**
+**Critérios de aceitação (DoD).**
 - [ ] SBOM gerado em formato CycloneDX (JSON) ou SPDX e anexo ao build
 - [ ] Artefacto assinado com chave do projecto/organization (cosign/Notary/PKI) e assinatura armazenada no registo
 - [ ] Metadados de proveniência (who/when/how) registados no registro (ou attestation store)
@@ -515,12 +515,12 @@ Tags `SEC-Lx-*` e referências a `REQ-XXX` devem estar presentes nos cartões/PR
 **História.**
 Como **Developer** e **QA**, quero que o pipeline valide a presença e conformidade das tags `SEC-Lx-*` e referências a REQ-XXX no PR, para garantir que o trabalho é rastreável e que as checks automáticas sabem que requisitos foram acionados.
 
-**BDD.**
-- Dado um PR que implementa uma mudança funcional
-- Quando o job `tag-check` executa no pipeline
-- Então o PR falha se não existir pelo menos uma tag `SEC-Lx-*` válida ou um link para `REQ-XXX`; o comentário automático explica a necessidade
+**Critérios de aceitação (BDD).**
+- **Dado** um PR que implementa uma mudança funcional
+  **Quando** o job `tag-check` executa no pipeline
+  **Então** o PR falha se não existir pelo menos uma tag `SEC-Lx-*` válida ou um link para `REQ-XXX`; o comentário automático explica a necessidade
 
-**DoD.**
+**Critérios de aceitação (DoD).**
 - [ ] Job `tag-check` presente e executável no CI
 - [ ] Validação de formato `SEC-L[1-3]-[T|C]-[0-9]{3}` ou conforme taxonomia do capítulo
 - [ ] Verificação de link REQ-XXX no corpo do PR ou issue associado
@@ -547,12 +547,12 @@ Para que as práticas acima sejam aplicadas de forma consistente, a organizaçã
 **História.**
 Como **Gestão Executiva/CISO** e **GRC/Compliance**, quero publicar a política de aplicação de requisitos e providenciar formação para Developers, AppSec e DevOps, para que as equipas saibam procedimentos, SLAs e como operar os pipelines de segurança.
 
-**BDD.**
-- Dado que existem novas práticas de pipeline e gestão de exceções
-- Quando a política e os guias operacionais são publicados
-- Então as equipas recebem formação e um checklist operacional, e a conformidade é avaliada num período de 3 meses
+**Critérios de aceitação (BDD).**
+- **Dado** que existem novas práticas de pipeline e gestão de exceções
+  **Quando** a política e os guias operacionais são publicados
+  **Então** as equipas recebem formação e um checklist operacional, e a conformidade é avaliada num período de 3 meses
 
-**DoD.**
+**Critérios de aceitação (DoD).**
 - [ ] Política de aplicação de requisitos publicada e versionada
 - [ ] Playbooks operacionais (pipeline, SBOM, assinatura, exceções) documentados
 - [ ] Sessões de formação realizadas para Developers, DevOps e AppSec (registo de presenças)

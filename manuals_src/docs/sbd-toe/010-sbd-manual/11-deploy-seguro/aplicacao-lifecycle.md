@@ -57,9 +57,9 @@ A integridade começa pela proveniência: se não controlarmos a origem, todo o 
 Como **DevOps/SRE**, quero **executar deploy apenas de artefactos assinados e versionados**, para **assegurar integridade e rastreabilidade**.  
 
 **Critérios de aceitação (BDD).**  
-- Dado um pipeline de deploy  
-- Quando um artefacto não está assinado  
-- Então o deploy é bloqueado  
+- **Dado** um pipeline de deploy  
+  **Quando** um artefacto não está assinado  
+  **Então** o deploy é bloqueado  
 
 **Checklist.**  
 - [ ] Assinatura validada (cosign/in-toto)  
@@ -101,9 +101,9 @@ Staging é o "ensaio geral": sem ele, a produção torna-se campo de teste.
 Como **QA/Testes**, quero **validar releases em staging com ambiente segregado, dados controlados e testes funcionais + segurança**, para **garantir readiness sem expor dados reais**.  
 
 **Critérios de aceitação (BDD).**  
-- Dado environment staging idêntico a produção (mesmas versões, configuração)  
-- Quando executo validações (funcionais + DAST + SBOM check)  
-- Então apenas releases aprovadas por QA e AppSec seguem para produção  
+- **Dado** environment staging idêntico a produção (mesmas versões, configuração)  
+  **Quando** executo validações (funcionais + DAST + SBOM check)  
+  **Então** apenas releases aprovadas por QA e AppSec seguem para produção  
 - E staging tem dados mascarados/fictícios (nunca dados reais)  
 - E acesso a staging é segregado (MFA, RBAC)
 
@@ -146,9 +146,9 @@ Sem gates, a promoção a produção torna-se uma aposta: e a segurança não po
 Como **AppSec**, quero **definir gates automáticos e thresholds no deploy**, para **bloquear releases inseguras**.  
 
 **Critérios de aceitação (BDD).**  
-- Dado uma release candidata  
-- Quando findings críticos não estão resolvidos  
-- Então o deploy é bloqueado até aprovação formal  
+- **Dado** uma release candidata  
+  **Quando** findings críticos não estão resolvidos  
+  **Então** o deploy é bloqueado até aprovação formal  
 
 **Checklist.**  
 - [ ] Gates automáticos configurados  
@@ -184,9 +184,9 @@ Falhas acontecem. A diferença entre crise e resiliência está em quão rápido
 Como **DevOps/SRE**, quero **rollback rápido e testado periodicamente**, para **reverter releases problemáticas**.  
 
 **Critérios de aceitação (BDD).**  
-- Dado um incidente em produção  
-- Quando aciono rollback  
-- Então a versão anterior é restaurada automaticamente  
+- **Dado** um incidente em produção  
+  **Quando** aciono rollback  
+  **Então** a versão anterior é restaurada automaticamente  
 
 **Checklist.**  
 - [ ] Rollback automatizado configurado  
@@ -220,9 +220,9 @@ Como **DevOps/SRE**, quero **rollback rápido e testado periodicamente**, para *
 Como **Gestão de Produto**, quero **garantir rastreabilidade entre commit → build → release → deploy**, para **auditar e justificar decisões de risco**.  
 
 **Critérios de aceitação (BDD).**  
-- Dado incidente pós-release  
-- Quando audito histórico  
-- Então consigo traçar origem até commit inicial  
+- **Dado** incidente pós-release  
+  **Quando** audito histórico  
+  **Então** consigo traçar origem até commit inicial  
 
 **Checklist.**  
 - [ ] Logs versionados  
@@ -258,9 +258,9 @@ Um deploy não termina no *merge*: só se considera concluído quando a versão 
 Como **DevOps/SRE**, quero **ativar monitorização pós-deploy**, para **detetar anomalias e regressões em tempo real**.  
 
 **Critérios de aceitação (BDD).**  
-- Dado nova versão em produção  
-- Quando ocorre anomalia  
-- Então alertas são gerados automaticamente  
+- **Dado** nova versão em produção  
+  **Quando** ocorre anomalia  
+  **Então** alertas são gerados automaticamente  
 
 **Checklist.**  
 - [ ] Dashboards atualizados  
@@ -294,9 +294,9 @@ Como **DevOps/SRE**, quero **ativar monitorização pós-deploy**, para **deteta
 Como **DevOps/AppSec**, quero **implementar feature flags com metadados, owner e expiração**, para **permitir ativação/desativação dinâmica de funcionalidades sem novo deploy e com rastreabilidade completa**.
 
 **Critérios de aceitação (BDD).**  
-- Dado que uma funcionalidade nova é entregue  
-- Quando a flag está ativa  
-- Então a funcionalidade é visível e controlada por regras de âmbito (ambiente, grupo, geo)  
+- **Dado** que uma funcionalidade nova é entregue  
+  **Quando** a flag está ativa  
+  **Então** a funcionalidade é visível e controlada por regras de âmbito (ambiente, grupo, geo)  
 - E cada alteração de flag é auditada (quem, quando, porquê)  
 - E flags expiradas são automaticamente desativadas
 
@@ -335,9 +335,9 @@ Como **DevOps/AppSec**, quero **implementar feature flags com metadados, owner e
 Como **DevOps/AppSec**, quero **garantir que segredos nunca são embebidos em artefactos de deploy**, para **reduzir exposição e permitir rotação dinâmica sem novo deploy**.
 
 **Critérios de aceitação (BDD).**  
-- Dado um pipeline de deploy  
-- Quando artefacto é construído  
-- Então secret scanning bloqueia credenciais embebidas  
+- **Dado** um pipeline de deploy  
+  **Quando** artefacto é construído  
+  **Então** secret scanning bloqueia credenciais embebidas  
 - E credenciais são injetadas apenas em runtime via cofre de segredos  
 - E acesso a segredos é auditado com OIDC/Workload Identity  
 
@@ -378,9 +378,9 @@ A comunicação clara das alterações em cada release é essencial para decisõ
 Como **Dev/Gestão**, quero **manter versionamento semântico com changelog técnico e de segurança**, para **comunicar claramente as alterações, riscos e compatibilidade de cada release**.
 
 **Critérios de aceitação (BDD).**  
-- Dado uma release nova  
-- Quando é criada tag de versão  
-- Então versão segue semântico (MAJOR.MINOR.PATCH)  
+- **Dado** uma release nova  
+  **Quando** é criada tag de versão  
+  **Então** versão segue semântico (MAJOR.MINOR.PATCH)  
 - E changelog lista alterações técnicas (breaking changes, CVEs corrigidas, dependências)  
 - E changelog de segurança destaca problemas resolvidos com severidade  
 
@@ -421,9 +421,9 @@ O deploy para 100% de utilizadores simultaneamente aumenta risco de incidente ge
 Como **DevOps/Gestão**, quero **implementar deploy progressivo (canary, blue/green, staging rules)**, para **mitigar risco e permitir rollback rápido com impacto minimizado**.
 
 **Critérios de aceitação (BDD).**  
-- Dado uma release candidata com plano de rollout  
-- Quando inicia deploy  
-- Então a versão é promovida gradualmente (ex: 1% → 5% → 20% → 100%)  
+- **Dado** uma release candidata com plano de rollout  
+  **Quando** inicia deploy  
+  **Então** a versão é promovida gradualmente (ex: 1% → 5% → 20% → 100%)  
 - E cada etapa é monitorizada antes da promoção automática ou manual  
 - E existe critério de bloqueio (latência, erros 5xx, alertas segurança)  
 - E rollback é possível em cada etapa sem impacto generalizado  
@@ -465,9 +465,9 @@ Configuração de rollout (Spinnaker, Argo Rollouts, Flagger, ou documentação 
 Como **AppSec/QA**, quero **executar validações técnicas (SAST, DAST, SBOM, análise de findings) com gates condicionais por risco**, para **bloquear automaticamente releases inseguras**.
 
 **Critérios de aceitação (BDD).**  
-- Dado uma release candidata  
-- Quando pipeline de deploy inicia  
-- Então executa SAST + DAST + verificação de dependências (Semgrep, trivy, CycloneDX)  
+- **Dado** uma release candidata  
+  **Quando** pipeline de deploy inicia  
+  **Então** executa SAST + DAST + verificação de dependências (Semgrep, trivy, CycloneDX)  
 - E gera relatório de findings com severidade  
 - E bloqueia deploy se:
   - L1: Críticos abertos
@@ -515,8 +515,8 @@ Nem todos os rollbacks são iguais. Sem plano específico por tipo, reversão fi
 Como **DevOps/SRE**, quero **documentar e testar rollback para cada tipo de alteração (binário, config, BD, infraestrutura)**, para **reverter incidentes rapidamente com confiança**.
 
 **Critérios de aceitação (BDD).**  
-- Dado incidente em produção  
-- Quando aciono rollback  
+- **Dado** incidente em produção  
+  **Quando** aciono rollback  
 - Então:
   - Se é binário: versão anterior restaurada (segundos)
   - Se é config: feature flag desativada ou variável revertida (< 1 min)

@@ -55,9 +55,9 @@ Dependências externas sem validação introduzem risco invisível (componentes 
 Como **Developer**, quero **usar apenas dependências aprovadas**, para **reduzir risco de vulnerabilidades herdadas e conflitos de licença**.
 
 **Critérios de aceitação (BDD).**
-- Dado que pretendo incluir uma dependência
-- Quando submeto pedido de aprovação
-- Então a dependência é validada segundo a política (origem, licença, manutenção, CVEs)
+- **Dado** que pretendo incluir uma dependência
+  **Quando** submeto pedido de aprovação
+  **Então** a dependência é validada segundo a política (origem, licença, manutenção, CVEs)
 
 **Checklist.**
 - [ ] Dependência aprovada formalmente  
@@ -98,13 +98,13 @@ Sem SBOM atualizado não é possível determinar rapidamente exposição a CVEs 
 Como **DevOps**, quero **gerar SBOM em cada build**, para **rastreabilidade completa de componentes**.
 
 **Critérios de aceitação (BDD).**
-- Dado que um build é acionado
-- Quando o artefacto é produzido
-- Então é gerado um SBOM em formato CycloneDX ou SPDX
+- **Dado** que um build é acionado
+  **Quando** o artefacto é produzido
+  **Então** é gerado um SBOM em formato CycloneDX ou SPDX
 
-- Dado um SBOM gerado
-- Quando é associado à release
-- Então é armazenado e acessível para auditoria
+- **Dado** um SBOM gerado
+- **Quando** é associado à release
+- **Então** é armazenado e acessível para auditoria
 
 **Checklist.**
 - [ ] SBOM no formato CycloneDX ou SPDX  
@@ -144,9 +144,9 @@ SCA identifica vulnerabilidades conhecidas em dependências (diretas e transitiv
 Como **AppSec**, quero **executar SCA automático nos pipelines**, para **detetar CVEs antes de produção**.
 
 **Critérios de aceitação (BDD).**
-- Dado um build
-- Quando o SBOM é gerado
-- Então o SCA corre e **bloqueia** findings que excedam o threshold por Lx
+- **Dado** um build
+  **Quando** o SBOM é gerado
+  **Então** o SCA corre e **bloqueia** findings que excedam o threshold por Lx
 
 **Checklist.**
 - [ ] Scanner SCA integrado (ex.: Dependency‑Check/Trivy/Grype)  
@@ -186,13 +186,13 @@ Nem todos os findings podem ser resolvidos de imediato; exceções devem ser **f
 Como **AppSec**, quero **formalizar exceções a CVEs**, para **manter governação e justificar risco residual**.
 
 **Critérios de aceitação (BDD).**
-- Dado que existe um CVE não resolvido
-- Quando é solicitada uma exceção
-- Então a exceção é formalizada em `excecoes.yaml` com justificativa técnica e de negócio, aprovador e prazo
+- **Dado** que existe um CVE não resolvido
+  **Quando** é solicitada uma exceção
+  **Então** a exceção é formalizada em `excecoes.yaml` com justificativa técnica e de negócio, aprovador e prazo
 
-- Dado uma exceção com prazo definido
-- Quando passa o prazo
-- Então é acionada revisão periódica com reavaliação do risco
+- **Dado** uma exceção com prazo definido
+- **Quando** passa o prazo
+- **Então** é acionada revisão periódica com reavaliação do risco
 
 **Checklist.**
 - [ ] `excecoes.yaml` com justificativa técnica e de negócio  
@@ -236,9 +236,9 @@ Cada release é uma decisão de risco que deve ser **explícita e rastreável**.
 Como **Product Owner**, quero **validar findings e exceções antes do go‑live**, para **tomar decisão informada de *go/no-go***.
 
 **Critérios de aceitação (BDD).**
-- Dado uma release candidata
-- Quando verifico critérios de segurança e risco residual
-- Então documento a decisão e condicionantes (se existirem)
+- **Dado** uma release candidata
+  **Quando** verifico critérios de segurança e risco residual
+  **Então** documento a decisão e condicionantes (se existirem)
 
 **Checklist.**
 - [ ] Lista de findings e estado  
@@ -278,9 +278,9 @@ Sem repositórios internos, dependências podem ser resolvidas de fontes não co
 Como **DevOps**, quero ***enforce* repositórios internos aprovados**, para **garantir proveniência e consistência**.
 
 **Critérios de aceitação (BDD).**
-- Dado que o *package manager* resolve dependências
-- Quando a build ocorre
-- Então só aceita fontes do repositório interno aprovado
+- **Dado** que o *package manager* resolve dependências
+  **Quando** a build ocorre
+  **Então** só aceita fontes do repositório interno aprovado
 
 **Checklist.**
 - [ ] `repo-config.yaml` ativo (proxy/registry interno)  
@@ -320,9 +320,9 @@ JS, PHP, DLLs, JARs copiados diretamente para o repo escapam ao SBOM e ao SCA, c
 Como **Developer**, quero **usar apenas *package managers*/repositórios internos**, **nunca** copiar bibliotecas para o repo.
 
 **Critérios de aceitação (BDD).**
-- Dado que preciso de uma biblioteca externa
-- Quando a adiciono ao projeto
-- Então é gerida via *package manager* e **não** por cópia manual
+- **Dado** que preciso de uma biblioteca externa
+  **Quando** a adiciono ao projeto
+  **Então** é gerida via *package manager* e **não** por cópia manual
 
 **Checklist.**
 - [ ] Zero libs copiadas manualmente  
@@ -366,8 +366,8 @@ Ferramentas modernas avaliam **impacto** (semver, *release notes*, *diffs*, cobe
 Como **DevOps/Developer**, quero **bots de atualização com avaliação de impacto**, para **receber PRs seguros automaticamente e *handoff* humano quando necessário**.
 
 **Critérios de aceitação (BDD).**
-- Dado que é publicada nova versão
-- Quando o bot executa **impact analysis**
+- **Dado** que é publicada nova versão
+  **Quando** o bot executa **impact analysis**
 - Então:
   - Se **no‑impact** ⇒ PR com **auto‑merge** condicionado a CI verde e *gates* ok  
   - Se **impact** ⇒ PR **requires‑human** com *diff*, *breaking notes*, *refactor hints*, ou mesmo *GenAI com a alteração* adequada.
@@ -413,9 +413,9 @@ Bibliotecas copiadas manualmente escapam ao SBOM e ao SCA. É necessário **auto
 Como **AppSec Engineer**, quero **executar auditoria periódica automatizada** para detetar bibliotecas copiadas manualmente (JS, PHP, DLL, JAR, etc.), para **bloquear a sua utilização em CI/CD e garantir SBOM e SCA completos**.
 
 **Critérios de aceitação (BDD).**
-- Dado que é executada auditoria periódica (semanal/mensal conforme Lx)
-- Quando encontradas bibliotecas copiadas não via package manager
-- Então é criada issue no backlog com prazo de substituição via repositório/package manager
+- **Dado** que é executada auditoria periódica (semanal/mensal conforme Lx)
+  **Quando** encontradas bibliotecas copiadas não via package manager
+  **Então** é criada issue no backlog com prazo de substituição via repositório/package manager
 
 **Checklist.**
 - [ ] Scanner automático configurado (ex: busca de padrões de libs copiadas, extensões JS/PHP/DLL/JAR)
@@ -583,13 +583,13 @@ Dependências com licenças incompatíveis (GPL, AGPL, etc.) podem introduzir ob
 Como **Developer**, quero **validar automaticamente a compatibilidade de licenças** de novas dependências, para **garantir conformidade legal e evitar conflitos**.
 
 **Critérios de aceitação (BDD).**
-- Dado que é adicionada nova dependência
-- Quando o build executa
-- Então validador de licenças avalia compatibilidade contra lista branca organizacional
+- **Dado** que é adicionada nova dependência
+  **Quando** o build executa
+  **Então** validador de licenças avalia compatibilidade contra lista branca organizacional
 
-- Dado que uma licença é incompatível
-- Quando o build tenta resolver a dependência
-- Então o pipeline bloqueia com mensagem clara (L2–L3) ou avisa (L1)
+- **Dado** que uma licença é incompatível
+- **Quando** o build tenta resolver a dependência
+- **Então** o pipeline bloqueia com mensagem clara (L2–L3) ou avisa (L1)
 
 **Checklist.**
 - [ ] Lista branca de licenças aprovadas definida (ex: MIT, Apache 2.0, BSD)

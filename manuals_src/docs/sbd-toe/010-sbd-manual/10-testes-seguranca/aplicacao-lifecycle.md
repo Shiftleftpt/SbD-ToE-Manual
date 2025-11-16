@@ -62,9 +62,9 @@ Sem estratégia, a cobertura é desigual e difícil de auditar.
 Como **AppSec**, quero **definir uma estratégia de testes de segurança por aplicação**, para **assegurar cobertura proporcional ao risco e rastreabilidade com requisitos do Cap. 02**.
 
 **Critérios de aceitação (BDD).**  
-- Dado que a aplicação tem criticidade Lx  
-- Quando defino a estratégia  
-- Então os tipos de teste e gates ficam estabelecidos por L1–L3 e ligados a requisitos
+- **Dado** que a aplicação tem criticidade Lx  
+  **Quando** defino a estratégia  
+  **Então** os tipos de teste e gates ficam estabelecidos por L1–L3 e ligados a requisitos
 
 **Checklist.**  
 - [ ] Documento de estratégia versionado  
@@ -102,9 +102,9 @@ PRs sem SAST permitem que vulnerabilidades entrem cedo no código base.
 Como **Dev**, quero **executar SAST automático no PR com comentários inline**, para **corrigir vulnerabilidades antes do merge**.
 
 **Critérios de aceitação (BDD).**  
-- Dado que abro um PR  
-- Quando o pipeline corre SAST  
-- Então resultados aparecem inline e bloqueiam acima do threshold definido  
+- **Dado** que abro um PR  
+  **Quando** o pipeline corre SAST  
+  **Então** resultados aparecem inline e bloqueiam acima do threshold definido  
 
 **Checklist.**  
 - [ ] Trigger em PR ativo  
@@ -142,9 +142,9 @@ Muitas falhas surgem apenas autenticadas.
 Como **QA**, quero **executar DAST autenticado em staging**, para **detetar vulnerabilidades exploráveis em runtime**.
 
 **Critérios de aceitação (BDD).**  
-- Dado ambiente staging configurado  
-- Quando executo DAST autenticado  
-- Então relatórios são gerados e findings abertos no backlog  
+- **Dado** ambiente staging configurado  
+  **Quando** executo DAST autenticado  
+  **Então** relatórios são gerados e findings abertos no backlog  
 
 **Checklist.**  
 - [ ] Login flow configurado  
@@ -182,9 +182,9 @@ Sem gates, findings não impedem regressões.
 Como **DevOps**, quero **integrar gates automáticos no pipeline (SAST/SCA/IAST) com thresholds por Lx**, para **evitar builds inseguros**.
 
 **Critérios de aceitação (BDD).**  
-- Dado um pipeline em execução  
-- Quando um finding excede o threshold Lx  
-- Então o job falha e a promoção é bloqueada até correção ou exceção aprovada  
+- **Dado** um pipeline em execução  
+  **Quando** um finding excede o threshold Lx  
+  **Então** o job falha e a promoção é bloqueada até correção ou exceção aprovada  
 
 **Checklist.**  
 - [ ] Pipelines versionados com gates declarados  
@@ -230,9 +230,9 @@ Falhas corrigidas voltam sem regressão automatizada.
 Como **Dev**, quero **criar testes de regressão para findings corrigidos**, para **evitar reintrodução futura**.
 
 **Critérios de aceitação (BDD).**  
-- Dado um finding resolvido  
-- Quando crio o teste de regressão  
-- Então ele falha se a vulnerabilidade regressar  
+- **Dado** um finding resolvido  
+  **Quando** crio o teste de regressão  
+  **Então** ele falha se a vulnerabilidade regressar  
 
 **Checklist.**  
 - [ ] Teste criado e versionado  
@@ -270,9 +270,9 @@ Entradas complexas revelam falhas não cobertas.
 Como **QA**, quero **aplicar fuzzing a endpoints críticos**, para **detectar falhas invisíveis em testes convencionais**.
 
 **Critérios de aceitação (BDD).**  
-- Dado endpoints críticos definidos  
-- Quando executo fuzzing  
-- Então anomalias são registadas com PoC mínima  
+- **Dado** endpoints críticos definidos  
+  **Quando** executo fuzzing  
+  **Então** anomalias são registadas com PoC mínima  
 
 **Checklist.**  
 - [ ] Targets e perfis definidos  
@@ -310,9 +310,9 @@ Lançamentos sem critérios claros diluem responsabilidade.
 Como **Gestão de Produto**, quero **estabelecer critérios de aceitação de segurança por release e um processo de aceitação de risco residual**, para **decisões go/no-go informadas**.
 
 **Critérios de aceitação (BDD).**  
-- Dado uma release pronta  
-- Quando verifico critérios e findings  
-- Então aprovo, atraso ou exceciono com prazo e compensações  
+- **Dado** uma release pronta  
+  **Quando** verifico critérios e findings  
+  **Então** aprovo, atraso ou exceciono com prazo e compensações  
 
 **Checklist.**  
 - [ ] Checklist preenchida  
@@ -380,9 +380,9 @@ Validação humana complementa automação.
 Como **PenTester**, quero **validar ofensivamente a eficácia dos controlos**, para **detetar falhas exploráveis antes da produção**.
 
 **Critérios de aceitação (BDD).**  
-- Dado âmbito baseado em risco  
-- Quando executo PenTest  
-- Então emito relatório com vetores, impacto e recomendações  
+- **Dado** âmbito baseado em risco  
+  **Quando** executo PenTest  
+  **Então** emito relatório com vetores, impacto e recomendações  
 
 **Checklist.**  
 - [ ] âmbito definido e consentimento  
@@ -420,13 +420,13 @@ DAST valida externamente, mas IAST oferece visibilidade interna.
 Como **QA + AppSec**, quero **instrumentar a aplicação em staging com IAST para observar chamadas inseguras em tempo real durante testes**, para **correlacionar findings com contexto de execução real e reduzir falsos positivos**.
 
 **Critérios de aceitação (BDD).**  
-- Dado que uma aplicação é instrumentada com agent IAST em staging  
-- Quando testes funcionais ou automáticos são executados  
-- Então findings são capturados com visibilidade total do stack (função, linha, parâmetro, valor)  
+- **Dado** que uma aplicação é instrumentada com agent IAST em staging  
+  **Quando** testes funcionais ou automáticos são executados  
+  **Então** findings são capturados com visibilidade total do stack (função, linha, parâmetro, valor)  
 
-- Dado um finding de IAST observado  
-- Quando é correlacionado com DAST/SAST  
-- Então o resultado é priorizado como crítico/alto se confirmado em múltiplas camadas  
+- **Dado** um finding de IAST observado  
+- **Quando** é correlacionado com DAST/SAST  
+- **Então** o resultado é priorizado como crítico/alto se confirmado em múltiplas camadas  
 
 **Checklist.**  
 - [ ] Agent IAST instalado e configurado em staging  
@@ -468,17 +468,17 @@ Findings dispersos criam ruído e falta de visibilidade.
 Como **AppSec + DevOps**, quero **centralizar todos os findings de SAST, DAST, IAST, SCA, fuzzing e testes manuais numa plataforma unificada com triagem por criticidade, estado e SLA**, para **garantir rastreabilidade completa e priorização eficaz**.
 
 **Critérios de aceitação (BDD).**  
-- Dado que findings são produzidos por múltiplas ferramentas  
-- Quando são correlacionados na plataforma centralizada  
-- Então duplicados são consolidados e metadados unificados (CVE, CWE, CVSS, commit, módulo)  
+- **Dado** que findings são produzidos por múltiplas ferramentas  
+  **Quando** são correlacionados na plataforma centralizada  
+  **Então** duplicados são consolidados e metadados unificados (CVE, CWE, CVSS, commit, módulo)  
 
-- Dado um finding triado  
-- Quando obtém estado (Aberto/Em investigação/Aceite/Corrigido/Validado)  
-- Então SLA é associado e alertas disparados se excedido  
+- **Dado** um finding triado  
+- **Quando** obtém estado (Aberto/Em investigação/Aceite/Corrigido/Validado)  
+- **Então** SLA é associado e alertas disparados se excedido  
 
-- Dado um finding corrigido  
-- Quando validação ocorre  
-- Então é marcado como Fechado e rastreabilidade de correção (commit, release) é registada  
+- **Dado** um finding corrigido  
+- **Quando** validação ocorre  
+- **Então** é marcado como Fechado e rastreabilidade de correção (commit, release) é registada  
 
 **Checklist.**  
 - [ ] Plataforma centralizada deployada (DefectDojo, Vulcan, Security Hub, etc.)  
@@ -521,17 +521,17 @@ Findings não comunicados são ignorados.
 Como **AppSec + DevOps**, quero **automatizar delivery de findings nos pontos de contacto das equipas (comentários em PR, notificações Slack, dashboards IDE)**, para **assegurar visibilidade e acelerar remediação**.
 
 **Critérios de aceitação (BDD).**  
-- Dado que SAST detecta uma vulnerabilidade num PR  
-- Quando o pipeline conclui  
-- Então comentário inline é publicado no PR com contexto (CWE, severidade, recomendação de fix)  
+- **Dado** que SAST detecta uma vulnerabilidade num PR  
+  **Quando** o pipeline conclui  
+  **Então** comentário inline é publicado no PR com contexto (CWE, severidade, recomendação de fix)  
 
-- Dado um finding crítico detetado  
-- Quando é triado na plataforma centralizada  
-- Então alerta é enviado a Slack/Teams para o team owner com urgência  
+- **Dado** um finding crítico detetado  
+- **Quando** é triado na plataforma centralizada  
+- **Então** alerta é enviado a Slack/Teams para o team owner com urgência  
 
-- Dado um developer a trabalhar  
-- Quando IDE integrado com SonarQube/Semgrep está ativo  
-- Então warnings aparecem em tempo real com sugestões de correção  
+- **Dado** um developer a trabalhar  
+- **Quando** IDE integrado com SonarQube/Semgrep está ativo  
+- **Então** warnings aparecem em tempo real com sugestões de correção  
 
 **Checklist.**  
 - [ ] Integração de comentários automáticos em PRs ativa (ex: GitHub Actions, GitLab CI)  

@@ -489,31 +489,326 @@ deploy:
 
 ---
 
+## 5. Plataformas Integradas (All-in-One ASPM)
+
+### Princípio (Multi-capítulo)
+Uma plataforma unificada pode cobrir múltiplas áreas de segurança com correlação de dados e dashboards centralizados.
+
+### Quando Considerar Plataformas Integradas?
+
+**✅ Vantagens:**
+- Dashboard único para múltiplas áreas de segurança
+- Correlação automática entre vulnerabilidades (SCA + SAST + IaC)
+- Menor esforço de integração
+- Gestão unificada de políticas
+- Single source of truth para compliance
+
+**⚠️ Desafios:**
+- Vendor lock-in
+- Custo tipicamente mais elevado
+- Menor especialização por área vs. best-of-breed tools
+- Dependência de roadmap do vendor
+
+---
+
+### Opção D1: Xygeni (ASPM - Application Security Posture Management)
+
+**Cobertura SbD-ToE:**
+
+| Capacidade Xygeni | Capítulo SbD-ToE | Descrição |
+|-------------------|------------------|-----------|
+| **SCA** | [Cap. 05](/sbd-toe/sbd-manual/dependencias-sbom-sca/intro) | Análise de dependências, SBOM automático, deteção de malware em packages |
+| **SAST** | [Cap. 06](/sbd-toe/sbd-manual/desenvolvimento-seguro/intro) | Code security analysis, deteção de vulnerabilidades no código |
+| **Secrets Security** | [Cap. 06](/sbd-toe/sbd-manual/desenvolvimento-seguro/intro) + [Cap. 07](/sbd-toe/sbd-manual/cicd-seguro/intro) | Deteção de secrets hardcoded, tokens expostos |
+| **CI/CD Security** | [Cap. 07](/sbd-toe/sbd-manual/cicd-seguro/intro) | Análise de segurança de pipelines, deteção de configurações inseguras |
+| **IaC Security** | [Cap. 08](/sbd-toe/sbd-manual/iac-infraestrutura/intro) | Scan de Terraform/CloudFormation/Helm para misconfigurations |
+| **Build Security** | [Cap. 07](/sbd-toe/sbd-manual/cicd-seguro/intro) | Verificação de integridade de builds, supply chain attacks |
+| **Anomaly Detection** | [Cap. 12](/sbd-toe/sbd-manual/monitorizacao-operacoes/intro) | Deteção de comportamentos anómalos em runtime |
+| **ASPM Dashboard** | [Cap. 14](/sbd-toe/sbd-manual/governanca-contratacao/intro) | Visão unificada de postura de segurança, KPIs consolidados |
+
+**Exemplo de Configuração:**
+
+```yaml
+# xygeni.yml
+project:
+  name: "my-secure-app"
+  owner: "security-team"
+
+scans:
+  sca:
+    enabled: true
+    fail_on: critical
+    sbom:
+      format: cyclonedx
+      output: sbom.json
+  
+  sast:
+    enabled: true
+    languages: [java, python, javascript]
+    exclude_paths: [test/*, vendor/*]
+  
+  secrets:
+    enabled: true
+    max_depth: 50  # commits
+    exclude_patterns:
+      - "*.test.js"
+      - "mock-data/*"
+  
+  iac:
+    enabled: true
+    providers: [aws, azure, kubernetes]
+    severity_threshold: medium
+  
+  cicd:
+    enabled: true
+    platforms: [github-actions, gitlab-ci]
+
+policies:
+  block_critical: true
+  require_review_high: true
+  auto_create_tickets: true
+
+integrations:
+  jira:
+    project_key: SEC
+    auto_assign: true
+  
+  slack:
+    channel: "#security-alerts"
+    notify_on: [critical, high]
+```
+
+**Evidência Auditoria:**
+- Dashboard central: Histórico completo de scans
+- Reports consolidados: PDF/JSON exportável para compliance
+- Rastreabilidade: Commit → Scan → Issue → Resolution
+- Compliance mappings: NIS2, DORA, CRA, GDPR built-in
+
+---
+
+### Opção D2: Snyk Enterprise (Platform Approach)
+
+**Cobertura SbD-ToE:**
+
+```yaml
+# .snyk policy file
+version: v1.25.0
+
+# SCA - Cap. 05
+ignore:
+  - "SNYK-JS-LODASH-590103":
+      reason: "False positive - não usamos merge profundo"
+      expires: "2025-12-31"
+
+# SAST - Cap. 06
+code:
+  severity-threshold: high
+  
+# IaC - Cap. 08
+infrastructure-as-code:
+  providers: [terraform, kubernetes]
+  severity-threshold: medium
+
+# Container - Cap. 09
+container:
+  base-image-severity: critical
+  
+patch:
+  auto-apply: true
+  exclude:
+    - "**/test/**"
+```
+
+**Integração CI/CD ([Cap. 07](/sbd-toe/sbd-manual/cicd-seguro/intro)):**
+
+```yaml
+# .github/workflows/snyk-security.yml
+name: Snyk Security Platform
+
+on: [push, pull_request]
+
+jobs:
+  snyk-all-in-one:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      
+      - name: Run Snyk to check for vulnerabilities
+        uses: snyk/actions@master
+        env:
+          SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
+        with:
+          command: test
+          args: >
+            --all-projects
+            --severity-threshold=high
+            --sarif-file-output=snyk.sarif
+      
+      - name: Snyk IaC
+        uses: snyk/actions/iac@master
+        env:
+          SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
+      
+      - name: Snyk Container
+        uses: snyk/actions/docker@master
+        env:
+          SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
+        with:
+          image: myapp:${{ github.sha }}
+      
+      - name: Snyk Code (SAST)
+        uses: snyk/actions/code@master
+        env:
+          SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
+      
+      - name: Upload to GitHub Security
+        uses: github/codeql-action/upload-sarif@v2
+        with:
+          sarif_file: snyk.sarif
+```
+
+---
+
+### Opção D3: Checkmarx One (Unified Platform)
+
+**Cobertura Multi-Capítulo:**
+
+```xml
+<!-- checkmarx-config.xml -->
+<CheckmarxOne>
+  <!-- SAST - Cap. 06 -->
+  <SAST>
+    <PresetName>High Security</PresetName>
+    <ExcludeFolders>test,vendor</ExcludeFolders>
+    <FailOnSeverity>High</FailOnSeverity>
+  </SAST>
+  
+  <!-- SCA - Cap. 05 -->
+  <SCA>
+    <RiskThreshold>7.0</RiskThreshold>
+    <GenerateSBOM>true</GenerateSBOM>
+    <SBOMFormat>CycloneDX</SBOMFormat>
+  </SCA>
+  
+  <!-- IaC - Cap. 08 -->
+  <KICS>
+    <Platforms>Terraform,Kubernetes,Helm</Platforms>
+    <Severity>MEDIUM</Severity>
+  </KICS>
+  
+  <!-- Supply Chain - Cap. 05 + 07 -->
+  <SupplyChain>
+    <ScanDependencies>true</ScanDependencies>
+    <MalwareDetection>true</MalwareDetection>
+  </SupplyChain>
+  
+  <!-- API Security - Cap. 04 -->
+  <APITesting>
+    <Enabled>true</Enabled>
+    <SwaggerPath>./docs/api.yaml</SwaggerPath>
+  </APITesting>
+</CheckmarxOne>
+```
+
+---
+
+### Comparação: Plataforma Integrada vs. Best-of-Breed
+
+| Critério | Plataforma Integrada<br/>(Xygeni, Snyk, Checkmarx) | Best-of-Breed<br/>(Ferramentas especializadas) |
+|----------|--------------------------------------|----------------------------------------|
+| **Integração** | ✅ Plug-and-play, dashboard único | ⚠️ Requer integração manual |
+| **Correlação** | ✅ Automática entre vulnerabilidades | ⚠️ Manual ou via SIEM/SOAR |
+| **Especialização** | ⚠️ Boa mas não líder em todas áreas | ✅ Líder em área específica |
+| **Custo** | ⚠️ Tipicamente mais alto | ✅ Pay-per-tool, mais flexível |
+| **Vendor Lock-in** | ⚠️ Alto | ✅ Baixo |
+| **Compliance** | ✅ Mappings built-in (NIS2, DORA) | ⚠️ Requer trabalho manual |
+| **Time-to-Value** | ✅ Rápido (semanas) | ⚠️ Médio (meses) |
+| **Customização** | ⚠️ Limitada a features da plataforma | ✅ Total controlo |
+| **Expertise Interna** | ✅ Menor necessária | ⚠️ Maior necessária |
+
+---
+
+### Recomendações por Contexto
+
+**Use Plataforma Integrada quando:**
+- ✅ Equipa pequena/média sem expertise profundo em cada área
+- ✅ Necessidade de compliance rápida (NIS2, DORA, CRA)
+- ✅ Orçamento permite investimento inicial mais elevado
+- ✅ Preferência por simplicidade operacional
+- ✅ Necessidade de dashboard executivo unificado
+
+**Use Best-of-Breed quando:**
+- ✅ Equipa grande com especialistas por área
+- ✅ Requisitos muito específicos (ex: análise de linguagem rara)
+- ✅ Orçamento limitado ou pay-as-you-grow
+- ✅ Stack tecnológico complexo/heterogéneo
+- ✅ Prioridade em evitar vendor lock-in
+
+**Abordagem Híbrida (Recomendada para muitos casos):**
+```
+Plataforma Integrada (core) + Best-of-Breed (especializado)
+
+Exemplo:
+- Xygeni/Snyk: SCA, SAST, IaC (cobertura base)
++ Semgrep: SAST avançado com regras custom
++ Trivy: Container scanning especializado
++ Wiz: Cloud security posture
+```
+
+---
+
 ## Síntese
 
-| Dimensão | Princípio (SbD-ToE) | Opção A | Opção B | Opção C |
-|----------|---|---|---|---|
-| **IaC** | [Cap. 08](/sbd-toe/sbd-manual/iac-infraestrutura/intro) | Terraform | CloudFormation | Helm |
-| **Logs** | [Cap. 12](/sbd-toe/sbd-manual/monitorizacao-operacoes/intro) | ELK | Datadog | Azure Sentinel |
-| **SCA** | [Cap. 05](/sbd-toe/sbd-manual/dependencias-sbom-sca/intro) | Snyk | WhiteSource | Dep-Check |
-| **SAST** | [Cap. 05](/sbd-toe/sbd-manual/dependencias-sbom-sca/intro) | SonarQube | Custom | TruffleHog |
-| **CI/CD** | [Cap. 07](/sbd-toe/sbd-manual/cicd-seguro/intro) | GitHub Actions | GitLab CI | Jenkins |
+| Dimensão | Princípio (SbD-ToE) | Opção A | Opção B | Opção C | Opção D (Integrada) |
+|----------|---|---|---|---|---|
+| **IaC** | [Cap. 08](/sbd-toe/sbd-manual/iac-infraestrutura/intro) | Terraform | CloudFormation | Helm | Xygeni IaC / Snyk IaC |
+| **Logs** | [Cap. 12](/sbd-toe/sbd-manual/monitorizacao-operacoes/intro) | ELK | Datadog | Azure Sentinel | Xygeni Anomaly Detection |
+| **SCA** | [Cap. 05](/sbd-toe/sbd-manual/dependencias-sbom-sca/intro) | Snyk | WhiteSource | Dep-Check | Xygeni SCA / Snyk SCA |
+| **SAST** | [Cap. 06](/sbd-toe/sbd-manual/desenvolvimento-seguro/intro) | SonarQube | Custom | TruffleHog | Xygeni SAST / Checkmarx |
+| **Secrets** | [Cap. 06](/sbd-toe/sbd-manual/desenvolvimento-seguro/intro) | TruffleHog | detect-secrets | GitGuardian | Xygeni Secrets / Snyk |
+| **CI/CD Security** | [Cap. 07](/sbd-toe/sbd-manual/cicd-seguro/intro) | GitHub Actions | GitLab CI | Jenkins | Xygeni CI/CD Security |
+| **Container** | [Cap. 09](/sbd-toe/sbd-manual/containers-imagens/intro) | Trivy | Clair | Grype | Snyk Container / Xygeni |
+| **ASPM/Dashboard** | [Cap. 14](/sbd-toe/sbd-manual/governanca-contratacao/intro) | Custom | - | - | Xygeni / Checkmarx One |
 
 **Nenhuma combinação é "correta"** - cada organização escolhe conforme:
-- Arquitetura existente
-- Expertise disponível
-- Orçamento
-- Compliance local
+- Arquitetura existente e stack tecnológico
+- Expertise disponível na equipa
+- Orçamento e modelo de licenciamento
+- Compliance local (NIS2, DORA, CRA, GDPR)
+- Preferência por simplicidade vs. especialização
 
 ---
 
 ## Próximas Etapas
 
-1. **Avaliar contexto:** Qual stack tecnológico já existe?
-2. **Pilotar:** Implementar uma opção num projeto piloto
-3. **Validar:** Testar gates, trilho auditoria, escalabilidade
-4. **Iterar:** Ajustar conforme lições aprendidas
-5. **Documentar:** Atualizar políticas internas com stack escolhido
+1. **Avaliar contexto organizacional:**
+   - Qual stack tecnológico já existe?
+   - Qual a maturidade da equipa de segurança?
+   - Plataforma integrada ou best-of-breed?
+
+2. **Definir estratégia:**
+   - **All-in-One:** Xygeni, Snyk Enterprise, Checkmarx One
+   - **Best-of-Breed:** Ferramentas especializadas por área
+   - **Híbrida:** Plataforma base + ferramentas especializadas
+
+3. **Pilotar:** 
+   - Implementar uma opção num projeto piloto
+   - Comparar time-to-value vs. profundidade de análise
+
+4. **Validar:** 
+   - Testar gates de segurança
+   - Validar trilho de auditoria
+   - Medir escalabilidade e false-positive rate
+
+5. **Iterar:** 
+   - Ajustar conforme lições aprendidas
+   - Avaliar ROI (Return on Investment)
+   - Considerar híbrido se necessário
+
+6. **Documentar:** 
+   - Atualizar políticas internas com stack escolhido
+   - Treinar equipas nas ferramentas selecionadas
+   - Estabelecer SLAs de remediação
 
 ---
 

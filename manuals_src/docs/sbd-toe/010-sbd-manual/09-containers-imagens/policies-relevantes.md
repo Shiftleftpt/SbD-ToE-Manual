@@ -8,7 +8,7 @@ sidebar_position: 60
 
 # 🏠 Políticas Organizacionais — Containers e Imagens
 
-A aplicação eficaz do **Capítulo 09 – Containers e Imagens** requer a existência de **políticas organizacionais formais** que enquadrem e reforcem as práticas de construção, validação, assinatura, governação e execução de containers e imagens.
+A aplicação eficaz do **Capítulo 09 - Containers e Imagens** requer a existência de **políticas organizacionais formais** que enquadrem e reforcem as práticas de construção, validação, assinatura, governação e execução de containers e imagens.
 
 Estas políticas asseguram que:
 

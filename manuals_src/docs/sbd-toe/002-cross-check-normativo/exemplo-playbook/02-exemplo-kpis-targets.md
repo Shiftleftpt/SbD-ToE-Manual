@@ -63,40 +63,62 @@ Para cada dimensão, apresentamos targets exemplares.
 | | Readiness inspeção | 95% | M12 | Antes inspeção supervisor |
 
 ### Dashboard (Exemplo visual)
-```
-FINTECH SEGURANÇA - Novembro 2025
 
-┌─ RISCO APLICACIONAL ─────────────────────────┐
-│ Apps classificadas:        100% ✓             │
-│ Threat modeling (L3):       95%  (98% target) │
-│ Critical vulns:             0    ✓             │
-│ High vulns:                 2    (0 target)  │
-└──────────────────────────────────────────────┘
-
-┌─ DESENVOLVIMENTO ────────────────────────────┐
-│ Cobertura testes:          72%  (80% target) │
-│ SAST findings altos:       0    ✓             │
-│ SCA findings altos:        0    ✓             │
-└──────────────────────────────────────────────┘
-
-├─ OPERAÇÕES ──────────────────────────────────┐
-│ MTTR P0:                   1.5h ✓             │
-│ MTTR P1:                   6h   ✓             │
-│ Incidents/month:           3    (`<`5 target)  │
-└──────────────────────────────────────────────┘
-
-┌─ SUPPLY CHAIN ───────────────────────────────┐
-│ Fornecedores inventariados:100% ✓             │
-│ Com onboarding:            95% (100% target) │
-│ Com training:              95% (100% target) │
-└──────────────────────────────────────────────┘
-
-┌─ CONFORMIDADE ───────────────────────────────┐
-│ Política board:            ✓ Assinada        │
-│ Trilho auditoria:          ✓ 3 anos          │
-│ Staff training:            85% (100% target) │
-│ Readiness DORA:            92% (95% target)  │
-└──────────────────────────────────────────────┘
+```mermaid
+%%{init: {'theme':'base', 'themeVariables': { 'fontSize':'13px'}}}%%
+graph TB
+    subgraph FINTECH["📊 FINTECH SEGURANÇA - Novembro 2025"]
+        subgraph RISCO["🎯 RISCO APLICACIONAL"]
+            R1["Apps classificadas: 100%<br/>🟢 OK"]
+            R2["Threat modeling L3: 95%<br/>target: 98% | ⚠️ DELAYED"]
+            R3["Critical vulns: 0<br/>🟢 OK"]
+            R4["High vulns: 2<br/>target: 0 | 🔴 CRITICAL"]
+        end
+        
+        subgraph DEV["⚙️ DESENVOLVIMENTO"]
+            D1["Cobertura testes: 72%<br/>target: 80% | ⚠️ DELAYED"]
+            D2["SAST findings altos: 0<br/>🟢 OK"]
+            D3["SCA findings altos: 0<br/>🟢 OK"]
+        end
+        
+        subgraph OPS["�� OPERAÇÕES"]
+            O1["MTTR P0: 1.5h<br/>🟢 OK"]
+            O2["MTTR P1: 6h<br/>🟢 OK"]
+            O3["Incidents/month: 3<br/>target: <5 | 🟢 OK"]
+        end
+        
+        subgraph SUPPLY["📦 SUPPLY CHAIN"]
+            S1["Fornecedores inventariados: 100%<br/>🟢 OK"]
+            S2["Com onboarding: 95%<br/>target: 100% | ⚠️ DELAYED"]
+            S3["Com training: 95%<br/>target: 100% | ⚠️ DELAYED"]
+        end
+        
+        subgraph CONF["📋 CONFORMIDADE"]
+            C1["Política board: Assinada<br/>🟢 OK"]
+            C2["Trilho auditoria: 3 anos<br/>🟢 OK"]
+            C3["Staff training: 85%<br/>target: 100% | ⚠️ DELAYED"]
+            C4["Readiness DORA: 92%<br/>target: 95% | ⚠️ DELAYED"]
+        end
+    end
+    
+    style R1 fill:#d4edda,stroke:#155724,stroke-width:2px
+    style R2 fill:#fff3cd,stroke:#856404,stroke-width:2px
+    style R3 fill:#d4edda,stroke:#155724,stroke-width:2px
+    style R4 fill:#f8d7da,stroke:#721c24,stroke-width:2px
+    style D1 fill:#fff3cd,stroke:#856404,stroke-width:2px
+    style D2 fill:#d4edda,stroke:#155724,stroke-width:2px
+    style D3 fill:#d4edda,stroke:#155724,stroke-width:2px
+    style O1 fill:#d4edda,stroke:#155724,stroke-width:2px
+    style O2 fill:#d4edda,stroke:#155724,stroke-width:2px
+    style O3 fill:#d4edda,stroke:#155724,stroke-width:2px
+    style S1 fill:#d4edda,stroke:#155724,stroke-width:2px
+    style S2 fill:#fff3cd,stroke:#856404,stroke-width:2px
+    style S3 fill:#fff3cd,stroke:#856404,stroke-width:2px
+    style C1 fill:#d4edda,stroke:#155724,stroke-width:2px
+    style C2 fill:#d4edda,stroke:#155724,stroke-width:2px
+    style C3 fill:#fff3cd,stroke:#856404,stroke-width:2px
+    style C4 fill:#fff3cd,stroke:#856404,stroke-width:2px
+    style FINTECH fill:#f8f9fa,stroke:#343a40,stroke-width:3px
 ```
 
 ---
@@ -141,20 +163,31 @@ FINTECH SEGURANÇA - Novembro 2025
 | | Readiness inspeção supervisor | 100% | M18 | Completa preparação |
 
 ### Novidade: Timeline Diferente
-```
-Fintech (M0-M12):
-├─ M0-M2: Foundation rápida
-├─ M2-M6: Automatização
-├─ M6-M12: Operação + TLPT
-└─ M12: Conformidade
 
-Banco (M0-M18):
-├─ M0-M3: Foundation (mais apps)
-├─ M3-M9: Automatização (complexidade)
-├─ M9-M15: Operação + TLPT (menos apps/mês)
-├─ M15-M18: Auditoria interna
-└─ M18: Conformidade
+```mermaid
+gantt
+    title Timeline de Implementação: Fintech vs Banco
+    dateFormat YYYY-MM-DD
+    axisFormat %b
+    
+    section Fintech (12 meses)
+    Foundation rápida           :f1, 2025-01-01, 60d
+    Automatização              :f2, after f1, 120d
+    Operação + TLPT            :f3, after f2, 180d
+    Conformidade               :milestone, f4, after f3, 0d
+    
+    section Banco (18 meses)
+    Foundation (mais apps)      :b1, 2025-01-01, 90d
+    Automatização (complexa)    :b2, after b1, 180d
+    Operação + TLPT             :b3, after b2, 180d
+    Auditoria interna          :b4, after b3, 90d
+    Conformidade               :milestone, b5, after b4, 0d
 ```
+
+**Diferenças chave:**
+- **Fintech:** 12 meses, foundation rápida (M0-M2), foco em velocidade
+- **Banco:** 18 meses, foundation mais longa (M0-M3), mais apps e complexidade
+
 
 ---
 
@@ -210,21 +243,20 @@ Banco (M0-M18):
 | **Básico** | Startup fintech | `<`24h | `<`60d | Piloto | 60% |
 
 ### Gestão de Clientes
-```
-Cada cliente tem:
-├─ Classificação apps (L1-L3)
-├─ Policy própria (assinada)
-├─ SLA customizado
-├─ Timeline DORA específica
-├─ KPIs rastreados em dashboard
-└─ Relatório trimestral
 
-Consolidação interna:
-├─ KPI agregado: % clientes compliant
-├─ Risco agregado: Clientes em risco
-├─ Training: Cobertura por região/cliente
-└─ Alertas: Clientes que vão falhar deadline
-```
+**👤 Cada cliente tem:**
+- Classificação apps (L1-L3)
+- Policy própria (assinada)
+- SLA customizado
+- Timeline DORA específica
+- KPIs rastreados em dashboard
+- Relatório trimestral
+
+**📊 Consolidação interna:**
+- KPI agregado: % clientes compliant
+- Risco agregado: Clientes em risco
+- Training: Cobertura por região/cliente
+- Alertas: Clientes que vão falhar deadline
 
 ---
 
@@ -232,30 +264,50 @@ Consolidação interna:
 
 Independentemente do cenário, o dashboard deve ter:
 
-```
-┌─────────────────────────────────────────────────┐
-│ Período: Trimestral | Status: 92% on-track     │
-├─────────────────────────────────────────────────┤
-│ RISCO                                           │
-│ ├─ Critical: 0 (target: 0)          🟢 OK       │
-│ ├─ High: 3 (target: `<`5)             🟢 OK       │
-│ └─ Medium: 12 (target: `<`20)         🟡 WATCH   │
-├─────────────────────────────────────────────────┤
-│ CONFORMIDADE                                    │
-│ ├─ Apps classificadas: 95% (100%)   🟡 DELAYED │
-│ ├─ Policy signed: YES                🟢 OK       │
-│ ├─ Trilho logs (years): 3            🟢 OK       │
-│ └─ Staff trained: 80% (100%)        🟡 DELAYED │
-├─────────────────────────────────────────────────┤
-│ TREND (últimos 6 meses)                        │
-│ Critical vulns:  ↓ (bom)                        │
-│ High vulns:      → (estável)                    │
-│ Training:        ↑ (melhorando)                 │
-├─────────────────────────────────────────────────┤
-│ ALERTAS                                         │
-│ ⚠️ 2 fornecedores sem training (M3 deadline)   │
-│ ⚠️ 1 app L3 sem threat modeling (atrasado)     │
-└─────────────────────────────────────────────────┘
+### 📊 Dashboard Unificado
+
+```mermaid
+%%{init: {'theme':'base', 'themeVariables': { 'fontSize':'14px'}}}%%
+graph TB
+    subgraph DASH["📊 DASHBOARD - Período: Trimestral | Status: 92% on-track"]
+        subgraph RISK["🎯 RISCO"]
+            R1["Critical: 0 / target: 0<br/>🟢 OK"]
+            R2["High: 3 / target: <5<br/>🟢 OK"]
+            R3["Medium: 12 / target: <20<br/>�� WATCH"]
+        end
+        
+        subgraph COMP["📋 CONFORMIDADE"]
+            C1["Apps classificadas: 95%<br/>target: 100% | 🟡 DELAYED"]
+            C2["Policy signed: YES<br/>🟢 OK"]
+            C3["Trilho logs: 3 years<br/>🟢 OK"]
+            C4["Staff trained: 80%<br/>target: 100% | 🟡 DELAYED"]
+        end
+        
+        subgraph TREND["📈 TREND últimos 6 meses"]
+            T1["Critical vulns: ↓<br/>🟢 melhorando"]
+            T2["High vulns: →<br/>➡️ estável"]
+            T3["Training: ↑<br/>🟢 melhorando"]
+        end
+        
+        subgraph ALERT["⚠️ ALERTAS CRÍTICOS"]
+            A1["🚨 2 fornecedores sem training<br/>Deadline: M3"]
+            A2["🚨 1 app L3 sem threat modeling<br/>Status: atrasado"]
+        end
+    end
+    
+    style R1 fill:#d4edda,stroke:#155724,stroke-width:2px
+    style R2 fill:#d4edda,stroke:#155724,stroke-width:2px
+    style R3 fill:#fff3cd,stroke:#856404,stroke-width:2px
+    style C1 fill:#fff3cd,stroke:#856404,stroke-width:2px
+    style C2 fill:#d4edda,stroke:#155724,stroke-width:2px
+    style C3 fill:#d4edda,stroke:#155724,stroke-width:2px
+    style C4 fill:#fff3cd,stroke:#856404,stroke-width:2px
+    style T1 fill:#d4edda,stroke:#155724,stroke-width:2px
+    style T2 fill:#e2e3e5,stroke:#6c757d,stroke-width:2px
+    style T3 fill:#d4edda,stroke:#155724,stroke-width:2px
+    style A1 fill:#f8d7da,stroke:#721c24,stroke-width:2px
+    style A2 fill:#f8d7da,stroke:#721c24,stroke-width:2px
+    style DASH fill:#f8f9fa,stroke:#343a40,stroke-width:3px
 ```
 
 ---

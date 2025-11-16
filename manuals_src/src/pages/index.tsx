@@ -130,7 +130,7 @@ export default function Home(): JSX.Element {
   const {siteConfig} = useDocusaurusContext();
   return (
     <Layout
-      title={`Início – ${siteConfig.title}`}
+      title={`Início - ${siteConfig.title}`}
       description="Manual prático e aberto para aplicar Security by Design em organizações modernas.">
       <HomepageHeader />
       <main>

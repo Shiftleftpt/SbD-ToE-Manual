@@ -1,6 +1,6 @@
 ---
 id: checklist-revisao
-title: Checklist – Deploy Seguro
+title: Checklist - Deploy Seguro
 sidebar_label: Checklist de Revisão
 description: Verificação objetiva e binária da aplicação das práticas de deploy seguro num projeto específico.
 tags: [checklist, controlo, deploy, rollback, validação]

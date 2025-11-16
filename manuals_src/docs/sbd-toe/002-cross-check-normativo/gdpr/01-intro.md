@@ -83,7 +83,7 @@ Lacuna intencional: Templates formais de notificação e critérios legais de co
 
 ---
 
-### DPIA – Avaliação de Impacto (Art. 35)
+### DPIA - Avaliação de Impacto (Art. 35)
 Exige DPIA quando o tratamento é suscetível de alto risco.
 
 Cobertura SbD-ToE (parcial):
@@ -140,8 +140,8 @@ Responda SIM:
 ## Referências
 
 - Regulamento (UE) 2016/679 (RGPD)
-- ENISA – Guidelines on Security of Personal Data Processing
-- EDPB – Guidelines (DPIA, Breach Notification)
+- ENISA - Guidelines on Security of Personal Data Processing
+- EDPB - Guidelines (DPIA, Breach Notification)
 - SbD-ToE Capítulos 01–14
 
 **Versão:** 1.0  

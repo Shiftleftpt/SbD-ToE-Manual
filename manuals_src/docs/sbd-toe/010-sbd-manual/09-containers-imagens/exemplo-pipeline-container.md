@@ -1,11 +1,11 @@
 ---
 id: exemplo-pipeline-container
-title: Caso Prático – Pipeline Containerizado com Execução Segura
+title: Caso Prático - Pipeline Containerizado com Execução Segura
 description: Exemplo completo de pipeline CI/CD com execução de *containers* em ambiente seguro e validado
 tags: [exemplo, pipeline, containers, cicd, segurança, execucao]
 ---
 
-# 💪 Caso Prático – Pipeline Containerizado com Execução Segura
+# 💪 Caso Prático - Pipeline Containerizado com Execução Segura
 
 Este exemplo ilustra a aplicação prática das prescrições do Capítulo 09 - desde a construção segura da imagem base, até à sua execução controlada num pipeline CI/CD e em Kubernetes.
 
@@ -106,8 +106,8 @@ spec:
 
 ## 📎 Referências cruzadas
 
-- Capítulo 07 – `addon/10-sbd-no-proprio-pipeline.md`
-- Capítulo 05 – `06-validacao-dependencias.md`
-- Capítulo 10 – `intro.md` (testes de execução containerizada)
+- Capítulo 07 - `addon/10-sbd-no-proprio-pipeline.md`
+- Capítulo 05 - `06-validacao-dependencias.md`
+- Capítulo 10 - `intro.md` (testes de execução containerizada)
 
 > ✅ Este exemplo mostra como aplicar, de forma integrada e realista, as práticas do SbD-ToE ao ciclo de vida completo de execução containerizada.

@@ -1,6 +1,6 @@
 # Licenciamento e Termos de Reutilização
 
-**Obra:** *Security by Design – Theory of Everything (SbD-ToE)*  
+**Obra:** *Security by Design - Theory of Everything (SbD-ToE)*  
 **Titularidade e Direitos de Autor:** © Pedro Farinha, 2025. Todos os direitos reservados nos termos da lei aplicável.  
 **Registo IGAC:** n.º **949/2025** (Inspeção-Geral das Atividades Culturais, Portugal)
 
@@ -23,11 +23,11 @@
 
 Ao reutilizar a documentação, inclui **explicitamente**:
 - **Autor/titular:** Pedro Farinha (Registo IGAC n.º 949/2025)  
-- **Título/fonte:** *Security by Design – Theory of Everything (SbD-ToE)* (link para o repositório ou site)  
+- **Título/fonte:** *Security by Design - Theory of Everything (SbD-ToE)* (link para o repositório ou site)  
 - **Licença aplicada:** CC BY-SA 4.0 (link para o texto legal)
 
 **Exemplo de crédito:**  
-> “Baseado em *Security by Design – Theory of Everything (SbD-ToE)*, © Pedro Farinha (IGAC 949/2025) e contribuidores, sob CC BY-SA 4.0.”
+> “Baseado em *Security by Design - Theory of Everything (SbD-ToE)*, © Pedro Farinha (IGAC 949/2025) e contribuidores, sob CC BY-SA 4.0.”
 
 Para **código** sob Apache-2.0, usa o cabeçalho padrão, por exemplo:
 ```text

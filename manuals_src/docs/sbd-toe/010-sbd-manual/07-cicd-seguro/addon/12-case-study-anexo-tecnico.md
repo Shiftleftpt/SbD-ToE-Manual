@@ -17,13 +17,13 @@ Este anexo complementa o estudo de caso de aplicação do manual SbD-ToE ao pipe
 
 | Fase          | Validação                           | Ferramenta sugerida         | Capítulo SbD-ToE         |
 | ------------- | ----------------------------------- | --------------------------- | ------------------------ |
-| Planeamento   | Threat modeling documentado         | IriusRisk, Excel            | Cap. 03 – Threat Model   |
-| Design        | Requisitos L3 atribuídos ao projeto | Catálogo do Cap. 02, 07     | Cap. 02, 07 – Requisitos |
-| Implementação | Linters, revisão obrigatória        | Semgrep, ESLint, PRs        | Cap. 06 – Dev Seguro     |
+| Planeamento   | Threat modeling documentado         | IriusRisk, Excel            | Cap. 03 - Threat Model   |
+| Design        | Requisitos L3 atribuídos ao projeto | Catálogo do Cap. 02, 07     | Cap. 02, 07 - Requisitos |
+| Implementação | Linters, revisão obrigatória        | Semgrep, ESLint, PRs        | Cap. 06 - Dev Seguro     |
 | Build         | SBOM gerado para o pipeline         | `syft`, `cyclonedx`         | Cap. 05, 07              |
 | Testes        | Validações de segurança ao pipeline | `trivy`, `semgrep`, CI      | Cap. 07, Cap. 10         |
 | Deploy        | Proveniência e assinatura           | `cosign`, `slsa-provenance` | Cap. 07, 09              |
-| Operações     | Logging, rastreabilidade, alertas   | AuditLogs, Kibana           | Cap. 12 – Monitorização  |
+| Operações     | Logging, rastreabilidade, alertas   | AuditLogs, Kibana           | Cap. 12 - Monitorização  |
 
 ---
 

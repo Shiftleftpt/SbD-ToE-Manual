@@ -46,7 +46,7 @@ Inclui modelos reutilizáveis de user stories, ações por papel, artefactos esp
 
 ## 📝 User Stories Reutilizáveis
 
-### US-01 – Definição de princípios de arquitetura segura
+### US-01 - Definição de princípios de arquitetura segura
 **Contexto.**  
 Logo no arranque de um projeto é necessário definir princípios de arquitetura segura.
 
@@ -81,11 +81,11 @@ Como **Arquitetos de Software**, quero definir princípios de arquitetura segura
 | Início | Novo projeto | Arquitetos de Software | Antes do design detalhado |
 
 **Ligações úteis.**
-- 🔗 [Cap. 2 – Requisitos de Segurança](/sbd-toe/sbd-manual/requisitos-seguranca/intro)
+- 🔗 [Cap. 2 - Requisitos de Segurança](/sbd-toe/sbd-manual/requisitos-seguranca/intro)
 
 ---
 
-### US-02 – Ficha de arquitetura com controlos
+### US-02 - Ficha de arquitetura com controlos
 **Contexto.**  
 Ao desenhar a solução é preciso registar controlos de segurança.
 
@@ -127,12 +127,12 @@ Como **Arquitetos de Software**, quero produzir ficha de arquitetura com control
 | Design | Definição da solução | Arquitetos de Software + AppSec Engineer | Antes da implementação |
 
 **Ligações úteis.**
-- 🔗 [Modelos de Arquitetura Segura Reutilizáveis – Addon 04](../addon/diagramas-referencia.md)
-- 🔗 [Catálogo de Requisitos ARC-XXX – Addon 01](../addon/catalogo-requisitos/intro)
+- 🔗 [Modelos de Arquitetura Segura Reutilizáveis - Addon 04](../addon/diagramas-referencia.md)
+- 🔗 [Catálogo de Requisitos ARC-XXX - Addon 01](../addon/catalogo-requisitos/intro)
 
 ---
 
-### US-03 – Revisão de arquitetura
+### US-03 - Revisão de arquitetura
 **Contexto.**  
 Antes de implementar, o design deve ser revisto.
 
@@ -167,11 +167,11 @@ Como **AppSec Engineer**, quero rever designs de arquitetura para garantir confo
 | Grooming | Design completo | AppSec Engineer | Antes da implementação |
 
 **Ligações úteis.**
-- 🔗 [Cap. 3 – Threat Modeling](/sbd-toe/sbd-manual/threat-modeling/intro)
+- 🔗 [Cap. 3 - Threat Modeling](/sbd-toe/sbd-manual/threat-modeling/intro)
 
 ---
 
-### US-04 – Atualização de arquitetura em alterações críticas
+### US-04 - Atualização de arquitetura em alterações críticas
 **Contexto.**  
 Sempre que há alteração crítica é preciso atualizar documentação.
 
@@ -206,11 +206,11 @@ Como **Developer**, quero atualizar ficha de arquitetura em alterações crític
 | Desenvolvimento | Alteração crítica | Developer + Arquitetos de Software | No mesmo sprint |
 
 **Ligações úteis.**
-- 🔗 [Cap. 2 – Requisitos de Segurança](/sbd-toe/sbd-manual/requisitos-seguranca/intro)
+- 🔗 [Cap. 2 - Requisitos de Segurança](/sbd-toe/sbd-manual/requisitos-seguranca/intro)
 
 ---
 
-### US-05 – Validação da arquitetura em CI/CD
+### US-05 - Validação da arquitetura em CI/CD
 **Contexto.**  
 Controlos de arquitetura devem ser validados automaticamente.
 
@@ -252,12 +252,12 @@ Como **DevOps/SRE + AppSec Engineer**, quero validar controlos de arquitetura no
 | CI/CD | Commit/MR de arquitetura ou IaC | DevOps/SRE + AppSec Engineer | Em cada build |
 
 **Ligações úteis.**
-- 🔗 [Requisitos IaC – Addon 06](../addon/rastreabilidade.md)
-- 🔗 [Cap. 7 – CI/CD Seguro](/sbd-toe/sbd-manual/cicd-seguro/intro)
+- 🔗 [Requisitos IaC - Addon 06](../addon/rastreabilidade.md)
+- 🔗 [Cap. 7 - CI/CD Seguro](/sbd-toe/sbd-manual/cicd-seguro/intro)
 
 ---
 
-### US-06 – Validação de impacto no negócio
+### US-06 - Validação de impacto no negócio
 **Contexto.**  
 É necessário avaliar impacto da arquitetura no negócio.
 
@@ -292,11 +292,11 @@ Como **Product Owner**, quero validar impacto de requisitos de arquitetura para 
 | Grooming | Requisitos de arquitetura definidos | Product Owner | Antes da priorização |
 
 **Ligações úteis.**
-- 🔗 [Cap. 1 – Gestão de Risco](/sbd-toe/sbd-manual/classificacao-aplicacoes/intro)
+- 🔗 [Cap. 1 - Gestão de Risco](/sbd-toe/sbd-manual/classificacao-aplicacoes/intro)
 
 ---
 
-### US-07 – Validação da arquitetura no Go-live
+### US-07 - Validação da arquitetura no Go-live
 **Contexto.**  
 Antes da entrada em produção, a arquitetura deve ser formalmente validada contra requisitos e padrões definidos, assegurando que exceções foram aprovadas e controlos estão implementados.
 
@@ -332,11 +332,11 @@ Como **QA / Test Engineer + AppSec Engineer + Arquitetos de Software**, quero va
 | Release / Go-live | Preparação de release | QA / Test Engineer + AppSec Engineer + Arquitetos de Software | Antes da entrada em produção |
 
 **Ligações úteis.**
-- 🔗 Critérios de validação da arquitetura – *addon* correspondente
+- 🔗 Critérios de validação da arquitetura - *addon* correspondente
 
 ---
 
-### US-08 – Gestão de Decisões Arquiteturais (ADR)
+### US-08 - Gestão de Decisões Arquiteturais (ADR)
 **Contexto.**  
 Decisões de arquitetura críticas devem ser documentadas com alternativas, *trade-offs* e impacto em segurança.
 
@@ -368,7 +368,7 @@ Como **Arquitetos de Software**, quero registar decisões de arquitetura (ADR - 
 
 ---
 
-### US-09 – Revisão de Fronteiras de Confiança e Integrações
+### US-09 - Revisão de Fronteiras de Confiança e Integrações
 **Contexto.**  
 Integrações entre serviços e terceiros exigem revisão explícita de fronteiras de confiança.
 
@@ -399,7 +399,7 @@ Como **Arquitetos de Software + AppSec Engineer**, quero rever *trust boundaries
 
 ---
 
-### US-10 – Sincronização Threat Modeling ↔ Arquitetura
+### US-10 - Sincronização Threat Modeling ↔ Arquitetura
 **Contexto.**  
 Decisões de arquitetura devem refletir o modelo de ameaças e vice-versa.
 
@@ -430,7 +430,7 @@ Como **Arquitetos de Software + AppSec Engineer**, quero sincronizar o modelo de
 
 ---
 
-### US-11 – Gestão de Exceções Arquiteturais
+### US-11 - Gestão de Exceções Arquiteturais
 **Contexto.**  
 Algumas situações exigem exceções formais com controlos compensatórios e prazo.
 
@@ -462,7 +462,7 @@ Como **Product Owner + AppSec Engineer**, quero gerir exceções de arquitetura 
 
 ---
 
-### US-12 – trigger para atualização da arquitetura
+### US-12 - trigger para atualização da arquitetura
 **Contexto.**  
 Definir eventos que obrigam a rever e sincronizar documentação e controlos.
 
@@ -492,7 +492,7 @@ Como **Arquitetos de Software + DevOps/SRE**, quero manter uma lista de triggers
 | L3 | Sim | Automação de deteção e *alerts* (quando possível) |
 
 ---
-#### **US-13 (nova): Padrões de Arquitetura Segura Reutilizáveis – Catálogo e Governação**
+### **US-13 - Padrões de Arquitetura Segura Reutilizáveis - Catálogo e Governação**
 
 **Contexto.**  
 Padrões de arquitetura aprovados reduzem tempo de design, erros e garantem conformidade com requisitos de segurança (ARC-007).
@@ -534,12 +534,12 @@ Como **Arquitetos de Software**, quero manter um catálogo de padrões de arquit
 | Design | Novo projeto ou reavaliação de padrão | Arquitetos de Software + AppSec Engineer | Antes da ficha de solução |
 
 **Ligações úteis.**
-- 🔗 [Addon 04 – Modelos de Arquitetura Segura Reutilizáveis](../addon/diagramas-referencia.md)
-- 🔗 [Addon 01 – Catálogo de Requisitos ARC](../addon/catalogo-requisitos/intro)
+- 🔗 [Addon 04 - Modelos de Arquitetura Segura Reutilizáveis](../addon/diagramas-referencia.md)
+- 🔗 [Addon 01 - Catálogo de Requisitos ARC](../addon/catalogo-requisitos/intro)
 
 ---
 
-#### **US-14 (nova): Controlos Técnicos de Isolamento – Especificação e Validação**
+### **US-14 - Controlos Técnicos de Isolamento - Especificação e Validação**
 
 **Contexto.**  
 Controlos como rate limiting, circuit breakers, segregação lógica/física (ARC-006) requerem especificação clara e validação em teste.
@@ -582,7 +582,7 @@ Como **Arquitetos de Software + AppSec Engineer**, quero especificar controlos t
 
 ---
 
-#### **US-15 (nova): Segregação de Ambientes e Governação de Acesso (ARC-011) – L3**
+### **US-15 - Segregação de Ambientes e Governação de Acesso (ARC-011) - L3**
 
 **Contexto.**  
 Aplicações críticas (L3) requerem segregação rigorosa entre dev/stage/prod com controlo de acesso formal (ARC-011).
@@ -614,7 +614,7 @@ Como **DevOps/SRE + GRC/Compliance**, quero implementar e validar segregação d
 **Proporcionalidade.**
 | Nível | Obrigatório? | Ajustes |
 |---|---|---|
-| L1 | Não | – |
+| L1 | Não | - |
 | L2 | Recomendado | Segregação lógica básica |
 | L3 | Sim | Segregação lógica + física, auditoria formal |
 
@@ -624,12 +624,12 @@ Como **DevOps/SRE + GRC/Compliance**, quero implementar e validar segregação d
 | Deploy | Setup de ambiente L3 | DevOps/SRE + GRC/Compliance | Antes da entrada em produção |
 
 **Ligações úteis.**
-- 🔗 [Addon 02 – Casos Práticos (Caso 1: L3 crítica)](../addon/casos-praticos.md)
-- 🔗 [Cap. 14 – Governação e Contratação](/sbd-toe/sbd-manual/governanca-contratacao/intro)
+- 🔗 [Addon 02 - Casos Práticos (Caso 1: L3 crítica)](../addon/casos-praticos.md)
+- 🔗 [Cap. 14 - Governação e Contratação](/sbd-toe/sbd-manual/governanca-contratacao/intro)
 
 ---
 
-#### **US-16 (nova): Threat Modeling no Design Inicial – Obrigatório para L2–L3**
+### **US-16 - Threat Modeling no Design Inicial - Obrigatório para L2–L3**
 
 **Contexto.**  
 ARC-005 prescreve que arquitecuras devem considerar threat modeling nos fluxos críticos. Falta US explícita que **obriga** a aplicação de TM **antes** de aprovação de design em L2–L3.
@@ -663,7 +663,7 @@ Como **Arquitetos de Software + AppSec Engineer**, quero executar Threat Modelin
 **Proporcionalidade.**
 | Nível | Obrigatório? | Ajustes |
 |---|---|---|
-| L1 | Não | – |
+| L1 | Não | - |
 | L2 | Sim | TM formal STRIDE |
 | L3 | Sim | TM completo (STRIDE + LINDDUN) + validação independente |
 
@@ -673,12 +673,12 @@ Como **Arquitetos de Software + AppSec Engineer**, quero executar Threat Modelin
 | Design | Ficha de solução em draft | Arquitetos de Software + AppSec Engineer | Antes da aprovação de design |
 
 **Ligações úteis.**
-- 🔗 [Cap. 3 – Threat Modeling](/sbd-toe/sbd-manual/threat-modeling/intro)
-- 🔗 [US-10 – Sincronização TM ↔ Arquitetura](../aplicacao-lifecycle.md#us-10)
+- 🔗 [Cap. 3 - Threat Modeling](/sbd-toe/sbd-manual/threat-modeling/intro)
+- 🔗 [US-10 - Sincronização TM ↔ Arquitetura](../aplicacao-lifecycle.md#us-10)
 
 ---
 
-#### **US-17 (nova): Validação Formal da Arquitetura para L3 – Governance e Comité Técnico**
+### **US-17 - Validação Formal da Arquitetura para L3 - Governance e Comité Técnico**
 
 **Contexto.**  
 ARC-012 prescreve "critérios formais de aprovação para aplicações L3" (Addon 05). Falta US que **formaliza** o processo de aprovação com comité ou governance body.
@@ -712,7 +712,7 @@ Como **Gestão Executiva/CISO + Arquitetos de Software**, quero estabelecer proc
 **Proporcionalidade.**
 | Nível | Obrigatório? | Ajustes |
 |---|---|---|
-| L1 | Não | – |
+| L1 | Não | - |
 | L2 | Recomendado | Revisão técnica peer |
 | L3 | Sim | Comité formal ou governance body |
 
@@ -722,8 +722,8 @@ Como **Gestão Executiva/CISO + Arquitetos de Software**, quero estabelecer proc
 | Release / Go-live | Preparação de release L3 | Gestão Executiva/CISO + Comité Técnico | 2 semanas antes do go-live |
 
 **Ligações úteis.**
-- 🔗 [Addon 05 – Critérios de Validação](../addon/validacao.md)
-- 🔗 [Cap. 14 – Governação](/sbd-toe/sbd-manual/governanca-contratacao/intro)
+- 🔗 [Addon 05 - Critérios de Validação](../addon/validacao.md)
+- 🔗 [Cap. 14 - Governação](/sbd-toe/sbd-manual/governanca-contratacao/intro)
 ---
 
 ## 📑 Artefactos Esperados

@@ -88,7 +88,7 @@ São disposições formais incorporadas nos contratos com fornecedores, parceiro
 | **L2 (médio)** | Aplicação do Catálogo SbD-ToE; fornecimento de evidência técnica sob solicitação                      |
 | **L3 (elevado)** | Testes de segurança obrigatórios; SBOM entregue; SLA para correções críticas; direito formal de auditoria |
 
-> 📘 Usar a matriz de aplicação de requisitos (Cap. 1 – Anexo 06) como base para decidir o nível contratual exigido.
+> 📘 Usar a matriz de aplicação de requisitos (Cap. 1 - Anexo 06) como base para decidir o nível contratual exigido.
 
 ---
 

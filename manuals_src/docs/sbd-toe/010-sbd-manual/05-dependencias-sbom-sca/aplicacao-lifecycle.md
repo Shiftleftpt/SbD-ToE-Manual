@@ -452,7 +452,7 @@ Como **AppSec Engineer**, quero **executar auditoria periódica automatizada** p
 
 ---
 
-### US-10 – Inventário e SBOM por Build
+### US-10 - Inventário e SBOM por Build
 
 **Contexto.**  
 Cada build deve produzir uma **Software Bill of Materials (SBOM)** assinada e rastreável, identificando todas as dependências utilizadas (diretas e transitivas).  
@@ -513,7 +513,7 @@ Como **DevOps Engineer**, quero gerar automaticamente um **SBOM assinado por bui
 
 ---
 
-### US-11 – Alertas sobre Vulnerabilidades em Componentes Usados
+### US-11 - Alertas sobre Vulnerabilidades em Componentes Usados
 
 **Contexto.**  
 Os sistemas devem **detetar automaticamente vulnerabilidades conhecidas (CVEs)** nas dependências utilizadas.  

@@ -68,6 +68,6 @@ Este catálogo fornece os **requisitos específicos de segurança da arquitetura
 ---
 
 > 🔗 Estes requisitos devem ser lidos em conjunto com:
-> - [Capítulo 1 – Classificação de Risco](/sbd-toe/sbd-manual/classificacao-aplicacoes/intro)
-<!-- > - [Capítulo 2 – Requisitos de Segurança Globais](/sbd-toe/sbd-manual/requisitos-seguranca/intro) -->
-> - [Capítulo 3 – Threat Modeling](/sbd-toe/sbd-manual/threat-modeling/intro)
+> - [Capítulo 1 - Classificação de Risco](/sbd-toe/sbd-manual/classificacao-aplicacoes/intro)
+<!-- > - [Capítulo 2 - Requisitos de Segurança Globais](/sbd-toe/sbd-manual/requisitos-seguranca/intro) -->
+> - [Capítulo 3 - Threat Modeling](/sbd-toe/sbd-manual/threat-modeling/intro)

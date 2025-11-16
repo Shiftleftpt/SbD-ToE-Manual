@@ -7,7 +7,7 @@ sidebar_position: 0
 ---
 
 :::note Capítulo Organizacional
-Este capítulo é considerado **organizacional** no modelo *Security by Design – Theory of Everything (SbD-ToE)*.  
+Este capítulo é considerado **organizacional** no modelo *Security by Design - Theory of Everything (SbD-ToE)*.  
 A sua função é **assegurar a adoção, governação e evolução sustentável** das práticas de segurança definidas nos capítulos basilares e operacionais.  
 
 Os capítulos organizacionais estabelecem a estrutura humana e processual que permite consolidar o SbD-ToE na organização.

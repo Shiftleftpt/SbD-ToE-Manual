@@ -119,11 +119,11 @@ justification: Necessário para investigação de comportamento anómalo
 
 | Documento / Capítulo              | Relação com este tema                             |
 |-----------------------------------|---------------------------------------------------|
-| Cap. 01 – Gestão de Risco         | Avaliação de risco associada a toggles            |
-| Cap. 06 – Desenvolvimento Seguro  | Testabilidade de caminhos condicionais            |
-| Cap. 10 – Testes de Segurança     | Testes A/B, falhas induzidas e fallback           |
-| Cap. 11 – Deploy Seguro           | Toggles como mecanismo de controle de execução    |
-| Cap. 12 – Monitorização           | Observação ativa de comportamentos com toggles    |
+| Cap. 01 - Gestão de Risco         | Avaliação de risco associada a toggles            |
+| Cap. 06 - Desenvolvimento Seguro  | Testabilidade de caminhos condicionais            |
+| Cap. 10 - Testes de Segurança     | Testes A/B, falhas induzidas e fallback           |
+| Cap. 11 - Deploy Seguro           | Toggles como mecanismo de controle de execução    |
+| Cap. 12 - Monitorização           | Observação ativa de comportamentos com toggles    |
 
 ---
 

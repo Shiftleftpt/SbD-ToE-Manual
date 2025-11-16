@@ -8,7 +8,7 @@ tags: [onboarding, checklist, permissao, rastreabilidade, controlo]
 
 # ✅ Checklist de Onboarding Técnico Seguro
 
-Este checklist permite verificar se o processo de onboarding de um colaborador (interno ou externo) cumpre os requisitos mínimos definidos no **Capítulo 13 – Formação e Onboarding**, de forma **proporcional ao risco e função atribuída**, e com **rastreabilidade formal**.
+Este checklist permite verificar se o processo de onboarding de um colaborador (interno ou externo) cumpre os requisitos mínimos definidos no **Capítulo 13 - Formação e Onboarding**, de forma **proporcional ao risco e função atribuída**, e com **rastreabilidade formal**.
 
 > 📌 Pode ser usado por Dev Leads, AppSec, Champions, RH ou gestores de projeto para garantir que o elemento está apto a intervir tecnicamente no sistema.
 

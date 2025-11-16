@@ -1,6 +1,6 @@
-# Política de Segurança – SbD-ToE
+# Política de Segurança - SbD-ToE
 
-O projeto **Security by Design – Theory of Everything (SbD-ToE)** segue práticas de divulgação responsável.
+O projeto **Security by Design - Theory of Everything (SbD-ToE)** segue práticas de divulgação responsável.
 
 ## 🔎 Como reportar vulnerabilidades
 
@@ -26,5 +26,5 @@ Receberás resposta em até **72 horas**.
 | Divulgação pública | 30 dias ou após correção |
 
 ## 🔗 Referências
-- [Coordinated Vulnerability Disclosure – ENISA](https://www.enisa.europa.eu/)
+- [Coordinated Vulnerability Disclosure - ENISA](https://www.enisa.europa.eu/)
 - [GitHub Security Policy](https://docs.github.com/code-security/security-advisories)

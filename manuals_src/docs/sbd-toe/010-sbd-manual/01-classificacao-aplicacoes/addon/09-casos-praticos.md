@@ -11,7 +11,7 @@ Estes exemplos demonstram como aplicar o [modelo dos três eixos de risco](/sbd-
 
 ---
 
-## 📝 Caso 1 – Aplicação de E-commerce
+## 📝 Caso 1 - Aplicação de E-commerce
 
 - **Exposição**: Pública (web + app móvel) → 3  
 - **Dados**: Cartão de crédito + dados pessoais → 3  
@@ -27,7 +27,7 @@ Estes exemplos demonstram como aplicar o [modelo dos três eixos de risco](/sbd-
 
 ---
 
-## 📝 Caso 2 – Portal interno de RH hospitalar
+## 📝 Caso 2 - Portal interno de RH hospitalar
 
 - **Exposição**: Apenas rede interna → 1  
 - **Dados**: Dados clínicos e financeiros de colaboradores → 3  
@@ -39,7 +39,7 @@ Estes exemplos demonstram como aplicar o [modelo dos três eixos de risco](/sbd-
 
 ---
 
-## 📝 Caso 3 – Sistema de Faturação B2B
+## 📝 Caso 3 - Sistema de Faturação B2B
 
 - **Exposição**: Utilizadores autenticados externos → 2  
 - **Dados**: Dados financeiros e de clientes → 2  
@@ -54,7 +54,7 @@ Estes exemplos demonstram como aplicar o [modelo dos três eixos de risco](/sbd-
 
 ---
 
-## 📝 Caso 4 – Aplicação de gestão de tarefas internas
+## 📝 Caso 4 - Aplicação de gestão de tarefas internas
 
 - **Exposição**: Apenas rede interna → 1  
 - **Dados**: Não sensíveis → 1  

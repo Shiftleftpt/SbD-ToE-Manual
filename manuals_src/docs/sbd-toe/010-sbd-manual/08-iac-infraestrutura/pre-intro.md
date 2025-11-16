@@ -61,7 +61,7 @@ Entre elas:
 - **CIS Benchmarks** (AWS, Azure, GCP, Kubernetes, Docker, Terraform)  
 - **Kubernetes** (Pod Security Standards, Network Policies, Admission Control, Audit Logging)  
 - **NIST SP 800-53** e **NIST SP 800-190**  
-- **Cloud Security Alliance – CCM**  
+- **Cloud Security Alliance - CCM**  
 - **ISO/IEC 27001** (Annex A: change control, least privilege, segregation of duties)  
 - **SSDF (NIST 800-218)** e **SLSA** (supply chain)  
 - **Práticas de mercado** (Terraform, Pulumi, OPA, Sentinel, Kyverno)

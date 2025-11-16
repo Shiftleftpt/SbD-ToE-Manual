@@ -54,7 +54,7 @@ Cada prática é expressa como **user story reutilizável**, com critérios veri
 
 ---
 
-### US-01 – Gestão segura de código fonte
+### US-01 - Gestão segura de código fonte
 
 **Contexto.**  
 Sem controlo sobre o repositório, qualquer pipeline é vulnerável.
@@ -90,7 +90,7 @@ Políticas de branch protection; logs de revisão; histórico Git; auditoria de 
 
 ---
 
-### US-02 – Design seguro dos pipelines
+### US-02 - Design seguro dos pipelines
 
 **Contexto.**  
 Pipelines inseguros são alvos privilegiados de ataque.
@@ -126,7 +126,7 @@ Histórico de commits; ficheiro `ci-pipeline.yml`; aprovação PR; logs de revis
 
 ---
 
-### US-03 – Scanners integrados
+### US-03 - Scanners integrados
 
 **Contexto.**  
 Detetar cedo é mais barato e eficaz.
@@ -162,7 +162,7 @@ Relatórios de scanners; logs CI/CD; registos de bloqueio de merges; dashboards 
 
 ---
 
-### US-04 – Gestão de segredos
+### US-04 - Gestão de segredos
 
 **Contexto.**  
 Segredos estáticos expõem a organização.
@@ -197,7 +197,7 @@ Políticas de segredos; logs de acesso; configuração OIDC; histórico de token
 
 ---
 
-### US-05 – Isolamento de runners
+### US-05 - Isolamento de runners
 
 **Contexto.**  
 Runners inseguros comprometem todo o ecossistema.
@@ -232,7 +232,7 @@ Configuração de runners; logs de execução; registos de isolamento; scripts d
 
 ---
 
-### US-06 – Assinatura e proveniência
+### US-06 - Assinatura e proveniência
 
 **Contexto.**  
 Artefactos não assinados perdem legitimidade.
@@ -274,7 +274,7 @@ Assinaturas digitais; ficheiros de proveniência; logs de promoção; auditoria 
 
 ---
 
-### US-07 – Gates por risco
+### US-07 - Gates por risco
 
 **Contexto.**  
 Nem todas as apps exigem o mesmo rigor.
@@ -309,7 +309,7 @@ Políticas de gates; relatórios CI/CD; logs de bloqueio de promoção.
 
 ---
 
-### US-08 – Cobertura ampliada
+### US-08 - Cobertura ampliada
 
 **Contexto.**  
 Cobertura limitada cria pontos cegos.
@@ -344,7 +344,7 @@ Relatórios de scanning; SBOM; auditoria de imagens; logs de builds.
 
 ---
 
-### US-09 – Rastreabilidade ponta-a-ponta
+### US-09 - Rastreabilidade ponta-a-ponta
 
 **Contexto.**  
 Sem rastreio, auditoria é impossível.
@@ -379,7 +379,7 @@ Logs de pipelines; dashboards de rastreabilidade; registos de auditoria.
 
 ---
 
-### US-10 – Gestão de exceções
+### US-10 - Gestão de exceções
 
 **Contexto.**  
 Exceções mal geridas tornam-se risco estrutural.
@@ -418,7 +418,7 @@ Registo de exceções; logs de aprovação; relatórios de revisão periódica; 
 
 ---
 
-### US-11 – Testes de segurança dinâmicos (DAST)
+### US-11 - Testes de segurança dinâmicos (DAST)
 
 **Contexto.**  
 Testes estáticos apenas cobrem parcialmente; DAST em staging valida comportamento real.
@@ -454,7 +454,7 @@ Relatórios DAST; logs de execução; evidências de correção; matriz de rastr
 
 ---
 
-### US-12 – Métricas e conformidade organizacional
+### US-12 - Métricas e conformidade organizacional
 
 **Contexto.**  
 Sem visibilidade centralizada, risco acumula-se invisível.
@@ -490,7 +490,7 @@ Dashboard de métricas; logs centralizados; relatórios de conformidade; alertas
 
 ---
 
-### US-13 – Validação de integridade de imagens base
+### US-13 - Validação de integridade de imagens base
 
 **Contexto.**  
 Imagens base comprometidas propagam risco a todo o ecossistema.

@@ -43,7 +43,7 @@ Um **ambiente isolado** deve garantir:
 
 | Tipo                    | Exemplos                  | Risco associado             | Notas                               |
 |-------------------------|---------------------------|-----------------------------|--------------------------------------|
-| Partilhado (multi-tenant)| GitHub hosted, GitLab shared | Elevado – superfície comum | Evitar em pipelines críticas         |
+| Partilhado (multi-tenant)| GitHub hosted, GitLab shared | Elevado - superfície comum | Evitar em pipelines críticas         |
 | Autogerido (on-prem/cloud)| Azure DevOps agent, K8s pod | Moderado - depende do hardening | Ideal se gerido com boas práticas    |
 | Ephemeral e dedicados   | K8s jobs, ephemeral containers | Baixo - isolamento total   | Recriado por build, não partilhado   |
 

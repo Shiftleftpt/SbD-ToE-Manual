@@ -270,7 +270,7 @@ Use esta checklist para verificar periodicamente a configuração de segurança:
 ## 📚 Recursos Adicionais
 
 - [GitHub Security Best Practices](https://docs.github.com/en/code-security)
-- [Coordinated Vulnerability Disclosure – ENISA](https://www.enisa.europa.eu/)
+- [Coordinated Vulnerability Disclosure - ENISA](https://www.enisa.europa.eu/)
 - [OWASP Secure Coding Practices](https://owasp.org/www-project-secure-coding-practices-quick-reference-guide/)
 - [SLSA Framework](https://slsa.dev/)
 

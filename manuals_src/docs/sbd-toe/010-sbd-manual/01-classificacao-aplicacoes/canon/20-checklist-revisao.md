@@ -1,6 +1,6 @@
 ---
 id: checklist-revisao
-title: Checklist de Revisão – Capítulo 01
+title: Checklist de Revisão - Capítulo 01
 sidebar_position: 20
 tags: [canon, checklist, controlo, projeto, aplicacao]
 ---

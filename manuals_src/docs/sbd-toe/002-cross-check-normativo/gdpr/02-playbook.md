@@ -166,8 +166,8 @@ Estes recursos demonstram implementações práticas alinhadas com GDPR.
 
 ## Referências
 - [Análise normativa GDPR](intro)
-- EDPB – Guidelines DPIA, Breach Notification
-- ENISA – Security of Personal Data Processing
+- EDPB - Guidelines DPIA, Breach Notification
+- ENISA - Security of Personal Data Processing
 - SbD-ToE [Cap. 01](/sbd-toe/sbd-manual/classificacao-aplicacoes/intro)–[Cap. 14](/sbd-toe/sbd-manual/governanca-contratacao/intro)
 
 **Versão:** 1.0  

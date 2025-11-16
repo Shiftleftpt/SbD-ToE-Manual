@@ -47,8 +47,8 @@ Cada terceiro (indivíduo ou organização) deve cumprir os seguintes pontos **a
 
 ## 🧭 Boas práticas de implementação
 
-- Incluir referência ao **Capítulo 13 – Formação** no processo de contratação
-- Formalizar exigências via **Capítulo 14 – Governança e Contratação**
+- Incluir referência ao **Capítulo 13 - Formação** no processo de contratação
+- Formalizar exigências via **Capítulo 14 - Governança e Contratação**
 - Manter um **repositório interno de evidência de onboarding de terceiros**
 - Garantir que os **Champions** ou AppSec estão envolvidos na receção de terceiros
 - Prever **auditorias periódicas** de formação em fornecedores críticos

@@ -30,11 +30,11 @@ Estas ferramentas passaram a atuar como **assistentes contínuos**, não apenas 
 
 | Prática SbD-ToE                     | Como GenIA contribui                                                  |
 |-------------------------------------|------------------------------------------------------------------------|
-| `addon/01` – Boas práticas de código | Sugere estruturas seguras, nomes expressivos, separação de lógica     |
-| `addon/02` – Linters e validações    | Propõe código que evita más práticas comuns (eval, concat, hardcode)  |
-| `addon/07` – Guidelines de equipa    | Facilita documentação de padrões e refatorações                       |
-| `addon/08` – Validação de código     | Auxilia a perceber falhas óbvias e propor correções                   |
-| `addon/09` – Anotações e evidência   | Gera comentários explicativos, `TODO` e pode ser adaptada a `@sec:`   |
+| `addon/01` - Boas práticas de código | Sugere estruturas seguras, nomes expressivos, separação de lógica     |
+| `addon/02` - Linters e validações    | Propõe código que evita más práticas comuns (eval, concat, hardcode)  |
+| `addon/07` - Guidelines de equipa    | Facilita documentação de padrões e refatorações                       |
+| `addon/08` - Validação de código     | Auxilia a perceber falhas óbvias e propor correções                   |
+| `addon/09` - Anotações e evidência   | Gera comentários explicativos, `TODO` e pode ser adaptada a `@sec:`   |
 
 ---
 

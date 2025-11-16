@@ -9,7 +9,7 @@ tags: [governanca, controlo, validacao, enforcement]
 
 # 🧮 Controlo Sistemático das Práticas do SbD-ToE
 
-Este documento define o modelo de **controlo sistemático e contínuo** da aplicação das práticas prescritas ao longo de todos os capítulos do manual *Security by Design – Theory of Everything (SbD-ToE)*.
+Este documento define o modelo de **controlo sistemático e contínuo** da aplicação das práticas prescritas ao longo de todos os capítulos do manual *Security by Design - Theory of Everything (SbD-ToE)*.
 
 > 📌 O objetivo é assegurar que **todas as práticas de segurança são efetivamente aplicadas, rastreadas, validadas e auditadas** por aplicação, ao longo do tempo.
 
@@ -19,15 +19,15 @@ Este documento define o modelo de **controlo sistemático e contínuo** da aplic
 
 | Capítulo / Domínio Técnico             | Mecanismos de Governação Esperados                                               | Exemplos de Evidência / KPI                         |
 |----------------------------------------|----------------------------------------------------------------------------------|-----------------------------------------------------|
-| **Cap. 02 – Requisitos**               | Validação da aplicação por L1–L3, gestão de exceções, evidência de rastreabilidade | Checklist aplicado, % de REQ aplicados / justificados |
-| **Cap. 03 – Threat Modeling**          | Execução por milestone, owner definido, atualização periódica                   | Modelos por aplicação, histórico de revisões        |
-| **Cap. 05 – Dependências e SBOM**      | Geração automática de SBOM, análise SCA, registo de findings                    | Relatórios de findings, % resolvidos e justificados |
-| **Cap. 07 – CI/CD Seguro**             | Validação de pipelines, rastreio de execuções, controlo de bypass               | Execuções auditadas, aprovações formais de bypass   |
-| **Cap. 08 – IaC Seguro**               | Validação contínua de módulos, owners por ambiente, rastreabilidade             | Issues + owners por recurso, % de módulos validados |
-| **Cap. 09 – Containers e Imagens**     | Aplicação de políticas de imagem, validações de origem e assinatura             | Catálogo validado, evidência de scanner             |
-| **Cap. 10 – Testes de Segurança**      | Execução por L1–L3, gestão de findings, revalidação periódica                   | Evidência de testes, plano de resolução             |
-| **Cap. 11 – Deploy e Execução**        | Validação de runtime, isolamento, execuções controladas                         | Controlo de execuções, logs versionados             |
-| **Cap. 13 – Formação e Terceiros**     | Verificação de formação por perfil, onboarding com validação                    | Lista de formação por função, checklist onboarding  |
+| **Cap. 02 - Requisitos**               | Validação da aplicação por L1–L3, gestão de exceções, evidência de rastreabilidade | Checklist aplicado, % de REQ aplicados / justificados |
+| **Cap. 03 - Threat Modeling**          | Execução por milestone, owner definido, atualização periódica                   | Modelos por aplicação, histórico de revisões        |
+| **Cap. 05 - Dependências e SBOM**      | Geração automática de SBOM, análise SCA, registo de findings                    | Relatórios de findings, % resolvidos e justificados |
+| **Cap. 07 - CI/CD Seguro**             | Validação de pipelines, rastreio de execuções, controlo de bypass               | Execuções auditadas, aprovações formais de bypass   |
+| **Cap. 08 - IaC Seguro**               | Validação contínua de módulos, owners por ambiente, rastreabilidade             | Issues + owners por recurso, % de módulos validados |
+| **Cap. 09 - Containers e Imagens**     | Aplicação de políticas de imagem, validações de origem e assinatura             | Catálogo validado, evidência de scanner             |
+| **Cap. 10 - Testes de Segurança**      | Execução por L1–L3, gestão de findings, revalidação periódica                   | Evidência de testes, plano de resolução             |
+| **Cap. 11 - Deploy e Execução**        | Validação de runtime, isolamento, execuções controladas                         | Controlo de execuções, logs versionados             |
+| **Cap. 13 - Formação e Terceiros**     | Verificação de formação por perfil, onboarding com validação                    | Lista de formação por função, checklist onboarding  |
 
 ---
 

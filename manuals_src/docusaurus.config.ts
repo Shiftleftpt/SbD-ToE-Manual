@@ -93,7 +93,7 @@ const config: Config = {
       title: 'SbD–ToE',
       hideOnScroll: false,
       logo: {
-        alt: 'Security by Design – Theory of Everything',
+        alt: 'Security by Design - Theory of Everything',
         src: 'img/brand/Shiftleft_LogoHorizontal_V5.png',   
         srcDark: 'img/brand/Shiftleft_LogoHorizontal_V5.png' 
       },
@@ -159,7 +159,7 @@ const config: Config = {
           ],
         },
       ],
-      copyright: `© ${new Date().getFullYear()} Shiftleft – Secure Software Engineering, Lda. Construído com Docusaurus.`,
+      copyright: `© ${new Date().getFullYear()} Shiftleft - Secure Software Engineering, Lda. Construído com Docusaurus.`,
     },
 
     // UX/tema

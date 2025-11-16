@@ -13,7 +13,7 @@ tags:
 
 ## 🎯 Objetivo
 
-Esta secção reúne as **políticas organizacionais de âmbito global** que suportam a implementação do *Security by Design – Theory of Everything (SbD-ToE)*.  
+Esta secção reúne as **políticas organizacionais de âmbito global** que suportam a implementação do *Security by Design - Theory of Everything (SbD-ToE)*.  
 Serve como ponto de referência comum para governação, conformidade e alinhamento entre todos os capítulos técnicos do manual.
 
 ---

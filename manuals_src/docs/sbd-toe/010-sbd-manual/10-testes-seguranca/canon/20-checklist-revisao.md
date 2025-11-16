@@ -1,6 +1,6 @@
 ---
 id: checklist-revisao
-title: Checklist – Testes de Segurança
+title: Checklist - Testes de Segurança
 description: Instrumento de verificação binária e auditável da adoção prática das práticas de validação contínua de segurança.
 tags: [checklist, revisão, testes, segurança, conformidade, rastreabilidade]
 sidebar_position: 20
@@ -9,7 +9,7 @@ sidebar_position: 20
 
 # ✅ Checklist de Revisão Periódica - Testes de Segurança
 
-Este checklist aplica-se a todas as aplicações que exigem validação de segurança no seu ciclo de vida, e serve como instrumento de verificação **binária e auditável** da **adoção prática das prescrições do Capítulo 10 – Testes de Segurança**, permitindo:
+Este checklist aplica-se a todas as aplicações que exigem validação de segurança no seu ciclo de vida, e serve como instrumento de verificação **binária e auditável** da **adoção prática das prescrições do Capítulo 10 - Testes de Segurança**, permitindo:
 
 - Controlo da aplicação proporcional de testes (por nível L1–L3);
 - Verificação objetiva da presença, execução e tratamento dos testes;

@@ -6,7 +6,7 @@ tags: [onboarding, quiz, validacao, conhecimento, rastreabilidade]
 ---
 
 
-# 📝 Template de Quiz – Onboarding Técnico
+# 📝 Template de Quiz - Onboarding Técnico
 
 Este documento apresenta um exemplo reutilizável de **quiz técnico** para validação de conhecimento no contexto de **formação inicial** (onboarding) em segurança.  
 Pode ser adaptado por perfil, nível de risco ou capítulo do manual SbD-ToE, sendo especialmente útil em **trilhos de formação para developers**.

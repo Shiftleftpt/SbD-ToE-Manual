@@ -27,7 +27,7 @@ Estas validações devem ser proporcionais ao nível de risco da aplicação, ma
 
 ## 🛠️ Práticas
 
-1. **SAST – Static Application Security Testing**  
+1. **SAST - Static Application Security Testing**  
    - Análise do código fonte para deteção de padrões inseguros, más práticas ou funções perigosas;
    - Deve incluir código de aplicação e de configuração (ex: YAML, JSON, Dockerfile).
 
@@ -43,7 +43,7 @@ Estas validações devem ser proporcionais ao nível de risco da aplicação, ma
    - Análise de imagens Docker utilizadas ou geradas durante o pipeline;
    - Identificação de CVEs em camadas base, binários e bibliotecas.
 
-5. **DAST – Dynamic Application Security Testing**  
+5. **DAST - Dynamic Application Security Testing**  
    - Testes dinâmicos sobre aplicações já deployadas (ex: staging);
    - Devem ser realizados preferencialmente em ambientes isolados.
 

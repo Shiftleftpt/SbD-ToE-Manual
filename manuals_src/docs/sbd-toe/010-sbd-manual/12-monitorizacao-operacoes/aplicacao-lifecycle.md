@@ -59,9 +59,9 @@ Sem logs consistentes e centralizados, qualquer investigação começa às cegas
 Como **Dev**, quero **gerar logs estruturados e centralizados**, para **assegurar visibilidade completa em incidentes**.  
 
 **Critérios de aceitação (BDD).**  
-- Dado código em execução  
-- Quando ocorre evento relevante  
-- Então é registado em formato estruturado e enviado ao log central  
+- **Dado** código em execução  
+  **Quando** ocorre evento relevante  
+  **Então** é registado em formato estruturado e enviado ao log central  
 
 **Checklist.**  
 - [ ] Logs em formato JSON/ECS  
@@ -98,9 +98,9 @@ Visibilidade sem contexto gera apenas ruído.
 Como **AppSec**, quero **definir eventos e métricas críticas de segurança**, para **assegurar que a monitorização cobre riscos relevantes**.  
 
 **Critérios de aceitação (BDD).**  
-- Dado sistema em produção  
-- Quando defino métricas críticas  
-- Então dashboards refletem riscos reais e alertas são configurados  
+- **Dado** sistema em produção  
+  **Quando** defino métricas críticas  
+  **Então** dashboards refletem riscos reais e alertas são configurados  
 
 **Checklist.**  
 - [ ] Lista de eventos críticos aprovada  
@@ -135,9 +135,9 @@ Para que a monitorização tenha impacto, é preciso ligar cada alerta a um **co
 Como **Ops**, quero **configurar alertas críticos com SLAs definidos**, para **assegurar resposta atempada a incidentes**.  
 
 **Critérios de aceitação (BDD).**  
-- Dado alerta crítico  
-- Quando SLA é excedido  
-- Então incidente é escalado automaticamente  
+- **Dado** alerta crítico  
+  **Quando** SLA é excedido  
+  **Então** incidente é escalado automaticamente  
 
 **Checklist.**  
 - [ ] SLAs documentados  
@@ -174,9 +174,9 @@ Alertas isolados não resolvem nada: precisam de estar ligados a **playbooks cla
 Como **Ops**, quero **integrar alertas com playbooks de resposta a incidentes**, para **assegurar ação rápida e coordenada**.  
 
 **Critérios de aceitação (BDD).**  
-- Dado alerta de segurança  
-- Quando é confirmado  
-- Então playbook associado é executado  
+- **Dado** alerta de segurança  
+  **Quando** é confirmado  
+  **Então** playbook associado é executado  
 
 **Checklist.**  
 - [ ] Playbooks definidos  
@@ -213,9 +213,9 @@ Sem métricas de eficácia, qualquer esforço de monitorização corre o risco d
 Como **GRC**, quero **medir MTTD e MTTR de incidentes**, para **avaliar eficácia da monitorização e resposta**.  
 
 **Critérios de aceitação (BDD).**  
-- Dado incidentes registados  
-- Quando calculo métricas  
-- Então MTTD e MTTR são reportados periodicamente  
+- **Dado** incidentes registados  
+  **Quando** calculo métricas  
+  **Então** MTTD e MTTR são reportados periodicamente  
 
 **Checklist.**  
 - [ ] Métricas definidas  
@@ -251,9 +251,9 @@ Uma abordagem eficaz de monitorização não cobre tudo indiscriminadamente: dev
 Como **AppSec/DevOps**, quero **classificar e mapear domínios de monitorização** (técnica, segurança, negócio, conformidade, CI/CD), para **assegurar que a cobertura de logging é proporcional ao risco e abrange fluxos críticos**.
 
 **Critérios de aceitação (BDD).**  
-- Dado uma aplicação com classificação de risco  
-- Quando mapeio domínios aplicáveis  
-- Então defino fontes de dados, ferramentas e retenção para cada domínio  
+- **Dado** uma aplicação com classificação de risco  
+  **Quando** mapeio domínios aplicáveis  
+  **Então** defino fontes de dados, ferramentas e retenção para cada domínio  
 - E a cobertura é documentada e validada periodicamente  
 
 **Checklist.**  
@@ -293,9 +293,9 @@ Garantir imutabilidade, acesso auditado e retenção apropriada transforma logs 
 Como **DevOps/GRC**, quero **garantir segurança e integridade de logs** (retenção WORM, acesso restrito, assinatura/hash, isolamento de função), para **impedir alteração ou perda de evidência em caso de incidente**.
 
 **Critérios de aceitação (BDD).**  
-- Dado logs em central  
-- Quando aplicadas políticas de proteção  
-- Então logs são imutáveis, acesso auditado e integridade verificável  
+- **Dado** logs em central  
+  **Quando** aplicadas políticas de proteção  
+  **Então** logs são imutáveis, acesso auditado e integridade verificável  
 - E retenção respeita requisitos regulatórios  
 
 **Checklist.**  
@@ -336,9 +336,9 @@ Um SIEM com eventos normalizados permite **correlação, busca rápida e deteç�
 Como **DevOps/AppSec**, quero **integrar logs com SIEM** (parsing, normalização, enriquecimento), para **permitir correlação eficaz e deteção centralizada de anomalias**.
 
 **Critérios de aceitação (BDD).**  
-- Dado logs estruturados emitidos  
-- Quando enviados para SIEM  
-- Então são parseados, normalizados em ECS/formato comum, enriquecidos com contexto  
+- **Dado** logs estruturados emitidos  
+  **Quando** enviados para SIEM  
+  **Então** são parseados, normalizados em ECS/formato comum, enriquecidos com contexto  
 - E disponíveis para queries, dashboards e alertas  
 
 **Checklist.**  
@@ -379,9 +379,9 @@ A correlação transforma dados em **inteligência** e permite antecipar ataques
 Como **AppSec/IR**, quero **correlacionar eventos entre múltiplas fontes** (aplicação, infraestrutura, CI/CD) e detetar padrões comportamentais suspeitos, para **antecipar ataques ou falhas encadeadas**.
 
 **Critérios de aceitação (BDD).**  
-- Dado eventos de múltiplas fontes centralizadas  
-- Quando aplicadas regras de correlação  
-- Então padrões suspeitos (ex: login + download massivo) geram alertas de severidade elevada  
+- **Dado** eventos de múltiplas fontes centralizadas  
+  **Quando** aplicadas regras de correlação  
+  **Então** padrões suspeitos (ex: login + download massivo) geram alertas de severidade elevada  
 - E desvios de baseline por utilizador/IP/role são detetados  
 
 **Checklist.**  
@@ -422,9 +422,9 @@ Validar e afinar alertas é **trabalho contínuo**, não pontual.
 Como **AppSec/IR**, quero **validar e afinar alertas** (teste de *trigger*, simulação ativa, replay com dados reais, *tuning* de *thresholds*), para **reduzir falsos positivos e assegurar que alertas refletem risco real**.
 
 **Critérios de aceitação (BDD).**  
-- Dado um alerta configurado  
-- Quando é testado  
-- Então comporta-se conforme esperado em cenários reais e simulados  
+- **Dado** um alerta configurado  
+  **Quando** é testado  
+  **Então** comporta-se conforme esperado em cenários reais e simulados  
 - E threshold está ajustado para minimizar falsos positivos  
 - E está documentado com runbook associado  
 
@@ -466,9 +466,9 @@ Nem todas as aplicações exigem o mesmo nível de monitorização. É fundament
 Como **AppSec/GRC**, quero **aplicar controlos de monitorização de forma proporcional ao nível de risco da aplicação**, para **equilibrar custo operacional com cobertura de segurança adequada**.
 
 **Critérios de aceitação (BDD).**  
-- Dado uma aplicação classificada em risco L1, L2 ou L3  
-- Quando defino arquitetura de monitorização  
-- Então são aplicados os controlos mínimos obrigatórios conforme o nível  
+- **Dado** uma aplicação classificada em risco L1, L2 ou L3  
+  **Quando** defino arquitetura de monitorização  
+  **Então** são aplicados os controlos mínimos obrigatórios conforme o nível  
 - E documentação reflete a matriz de proporcionalidade  
 - E exceções (ex: L1 com dados sensíveis) são aprovadas e auditadas  
 
@@ -511,9 +511,9 @@ A monitorização não é um exercício técnico isolado: é um requisito regula
 Como **GRC/Auditoria**, quero **documentar e demonstrar conformidade entre controlos de monitorização e requisitos regulatórios** (SSDF, NIS2, ISO 27001), para **assegurar que a postura de segurança está alinhada com regulações**.
 
 **Critérios de aceitação (BDD).**  
-- Dado um framework de conformidade aplicável (SSDF, NIS2, ISO 27001)  
-- Quando mapéio controlos técnicos (logging, alertas, correlação, IRP, métricas)  
-- Então cada controlo técnico é rastreável até um requisito regulatório específico  
+- **Dado** um framework de conformidade aplicável (SSDF, NIS2, ISO 27001)  
+  **Quando** mapéio controlos técnicos (logging, alertas, correlação, IRP, métricas)  
+  **Então** cada controlo técnico é rastreável até um requisito regulatório específico  
 - E existe evidência auditável (logs, dashboards, relatórios, métricas)  
 - E relatórios de conformidade são gerados trimestralmente  
 

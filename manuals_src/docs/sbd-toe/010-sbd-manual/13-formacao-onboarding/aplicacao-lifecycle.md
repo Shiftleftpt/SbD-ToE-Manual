@@ -46,10 +46,10 @@ genia: us-format-normalization
 **História.**   
 Como **RH/PeopleOps**, quero **garantir formação obrigatória de onboarding em SbD**, para **assegurar que todos iniciam alinhados com as práticas**.  
 
-**BDD.**  
-- Dado novo colaborador  
-- Quando inicia funções  
-- Então só tem acesso completo após completar formação  
+**Critérios de aceitação (BDD).**  
+- **Dado** novo colaborador  
+  **Quando** inicia funções  
+  **Então** só tem acesso completo após completar formação  
 
 **Checklist.**  
 - [ ] Curso concluído no LMS  
@@ -87,10 +87,10 @@ Como **RH/PeopleOps**, quero **garantir formação obrigatória de onboarding em
 **História.**   
 Como **AppSec**, quero **fornecer formação contínua por perfil (Dev, QA, DevOps, Gestão)**, para **garantir atualização com práticas mais recentes**.  
 
-**BDD.**  
-- Dado ciclo trimestral (L3), anual (L1–L2)  
-- Quando LMS disponibiliza cursos  
-- Então cada perfil completa trilha específica  
+**Critérios de aceitação (BDD).**  
+- **Dado** ciclo trimestral (L3), anual (L1–L2)  
+  **Quando** LMS disponibiliza cursos  
+  **Então** cada perfil completa trilha específica  
 
 **Checklist.**  
 - [ ] Cursos definidos por perfil  
@@ -129,10 +129,10 @@ Como **AppSec**, quero **fornecer formação contínua por perfil (Dev, QA, DevO
 **História.**   
 Como **Champion**, quero **mentorar e evangelizar a equipa**, para **assegurar aplicação contínua das práticas SbD**.  
 
-**BDD.**  
-- Dado sprint em curso  
-- Quando surgem dúvidas  
-- Então champion apoia e orienta equipa  
+**Critérios de aceitação (BDD).**  
+- **Dado** sprint em curso  
+  **Quando** surgem dúvidas  
+  **Então** champion apoia e orienta equipa  
 
 **Checklist.**  
 - [ ] Champion nomeado por equipa  
@@ -170,12 +170,12 @@ Como **Champion**, quero **mentorar e evangelizar a equipa**, para **assegurar a
 **História.**   
 Como **QA/Testes**, quero **realizar exercícios práticos (labs, CTFs, simulações)**, para **garantir que o conhecimento é aplicável**.  
 
-**BDD.**  
-- Dado plano de formação  
-- Quando executo exercício  
-- Então registo resultado e métricas de desempenho  
+**Critérios de aceitação (BDD).**  
+- **Dado** plano de formação  
+  **Quando** executo exercício  
+  **Então** registo resultado e métricas de desempenho  
 
-**DoD.**  
+**Critérios de aceitação (DoD).**  
 - [ ] Labs executados  
 - [ ] Resultados registados  
 - [ ] Métricas analisadas  
@@ -200,12 +200,12 @@ Como **QA/Testes**, quero **realizar exercícios práticos (labs, CTFs, simulaç
 **História.**   
 Como **GRC**, quero **medir KPIs de capacitação (taxa de conclusão, eficácia em auditoria)**, para **avaliar impacto real da formação**.  
 
-**BDD.**  
-- Dado ciclo de formação  
-- Quando recolho métricas  
-- Então KPIs são reportados a gestão  
+**Critérios de aceitação (BDD).**  
+- **Dado** ciclo de formação  
+  **Quando** recolho métricas  
+  **Então** KPIs são reportados a gestão  
 
-**DoD.**  
+**Critérios de aceitação (DoD).**  
 - [ ] KPIs definidos  
 - [ ] Métricas recolhidas  
 - [ ] Relatórios trimestrais  
@@ -231,9 +231,9 @@ Como **GRC**, quero **medir KPIs de capacitação (taxa de conclusão, eficácia
 Como **AppSec Engineer**, quero **executar code clinics estruturadas** (revisão de PR reais, educativas, com checklist de segurança aplicado), para **garantir aprendizagem contínua e aplicação visível de padrões seguros**.
 
 **Critérios de aceitação (BDD).**  
-- Dado que uma ou mais PRs são selecionadas  
-- Quando a sessão é conduzida (presencial ou assíncrona)  
-- Então o checklist de segurança é aplicado publicamente  
+- **Dado** que uma ou mais PRs são selecionadas  
+  **Quando** a sessão é conduzida (presencial ou assíncrona)  
+  **Então** o checklist de segurança é aplicado publicamente  
 - E feedback é registado e compartilhado em canal interno  
 - E lições aprendidas são documentadas para reutilização  
 
@@ -276,9 +276,9 @@ Como **AppSec Engineer**, quero **executar code clinics estruturadas** (revisão
 Como **Developer / Security Champion**, quero **liderar sessões de threat modeling** (por feature, épico ou refactor), para **disseminar conhecimento de análise de risco e aplicar SbD em design**.
 
 **Critérios de aceitação (BDD).**  
-- Dado que uma feature nova ou refactor é planeado  
-- Quando a sessão de threat modeling é agendada  
-- Então é facilitada por Developer ou Champion com apoio de AppSec Engineer  
+- **Dado** que uma feature nova ou refactor é planeado  
+  **Quando** a sessão de threat modeling é agendada  
+  **Então** é facilitada por Developer ou Champion com apoio de AppSec Engineer  
 - E output é documentado (diagrama, matriz de riscos)  
 - E decisões de segurança são rastreadas a requisitos do manual  
 
@@ -323,9 +323,9 @@ Como **Developer / Security Champion**, quero **liderar sessões de threat model
 Como **Gestão Executiva / GRC**, quero **executar simulações de incidentes (war room)** regularmente, para **treinar equipas na resposta e validar processos de comunicação e remediação**.
 
 **Critérios de aceitação (BDD).**  
-- Dado que um cenário de incidente é simulado  
-- Quando a resposta é executada em tempo real  
-- Então todos os papéis (Developer, DevOps, AppSec Engineer, Operações, Gestão) participam  
+- **Dado** que um cenário de incidente é simulado  
+  **Quando** a resposta é executada em tempo real  
+  **Então** todos os papéis (Developer, DevOps, AppSec Engineer, Operações, Gestão) participam  
 - E o processo é documentado e analisado num debrief educativo  
 - E lições aprendidas são incorporadas em runbooks  
 
@@ -370,9 +370,9 @@ Como **Gestão Executiva / GRC**, quero **executar simulações de incidentes (w
 Como **AppSec Engineer / GRC**, quero **manter e atualizar trilhos formativos por perfil e risco** (anualmente ou por trigger), para **garantir que a formação reflete práticas atuais e lições aprendidas**.
 
 **Critérios de aceitação (BDD).**  
-- Dado que um ano passou ou um novo risco é identificado  
-- Quando a revisão de trilhos é agendada  
-- Então conteúdos são reavaliados contra incidentes, atualizações tecnológicas e feedback de Security Champions  
+- **Dado** que um ano passou ou um novo risco é identificado  
+  **Quando** a revisão de trilhos é agendada  
+  **Então** conteúdos são reavaliados contra incidentes, atualizações tecnológicas e feedback de Security Champions  
 - E trilhos são atualizados ou novos conteúdos são adicionados  
 - E mudanças são comunicadas a RH e às equipas  
 
@@ -419,9 +419,9 @@ Trilhos formativos precisam de ser explicitamente proporcionais ao risco da apli
 Como **AppSec Engineer / GRC**, quero **aplicar trilhos formativos de forma explicitamente proporcional ao nível de risco** (L1, L2, L3) da aplicação e ao perfil técnico, para **garantir que cada colaborador recebe formação adequada ao seu contexto e responsabilidade**.
 
 **Critérios de aceitação (BDD).**  
-- Dado uma aplicação classificada em L1, L2 ou L3  
-- Quando um novo colaborador é onboarded ou trilho é atualizado  
-- Então o trilho formativo aplicado corresponde à matriz de proporcionalidade  
+- **Dado** uma aplicação classificada em L1, L2 ou L3  
+  **Quando** um novo colaborador é onboarded ou trilho é atualizado  
+  **Então** o trilho formativo aplicado corresponde à matriz de proporcionalidade  
 - E conteúdo reflete práticas obrigatórias conforme nível de risco  
 - E rastreabilidade entre classificação → trilho é documentada  
 
@@ -469,9 +469,9 @@ Documento de classificação de risco (cap 01), matriz de trilhos (addon/02) com
 Como **RH / GRC**, quero **validar formalmente o onboarding de cada colaborador** (via checklist estruturado), para **garantir que todos cumprem requisitos mínimos antes de acesso técnico e criar rastreabilidade auditável**.
 
 **Critérios de aceitação (BDD).**  
-- Dado que um novo colaborador inicia  
-- Quando o processo de onboarding é executado  
-- Então todos os itens do checklist são validados por responsável designado  
+- **Dado** que um novo colaborador inicia  
+  **Quando** o processo de onboarding é executado  
+  **Então** todos os itens do checklist são validados por responsável designado  
 - E o registo formal é arquivado  
 - E acesso técnico é bloqueado até conclusão  
 
@@ -517,9 +517,9 @@ Como **RH / GRC**, quero **validar formalmente o onboarding de cada colaborador*
 Como **AppSec Engineer / RH**, quero **implementar e executar quizzes de validação** (pós-onboarding, contínuos, por função) para **garantir retenção de conhecimento e criar registro auditável de competência**.
 
 **Critérios de aceitação (BDD).**  
-- Dado que um colaborador completa formação  
-- Quando o quiz é aplicado  
-- Então resultado ≥ 80% é obtido  
+- **Dado** que um colaborador completa formação  
+  **Quando** o quiz é aplicado  
+  **Então** resultado ≥ 80% é obtido  
 - E o registo (pontuação, data, validador) é arquivado  
 - E acesso técnico só é desbloqueado com resultado positivo  
 
@@ -566,9 +566,9 @@ Como **AppSec Engineer / RH**, quero **implementar e executar quizzes de valida�
 Como **GRC / Gestão Executiva**, quero **garantir que fornecedores e terceiros com acesso recebem formação mínima obrigatória**, para **reduzir risco de falhas de segurança por falta de conhecimento e cumprir obrigações regulatórias (NIS2, DORA)**.
 
 **Critérios de aceitação (BDD).**  
-- Dado que um fornecedor com acesso técnico é onboarded  
-- Quando é estabelecido acesso  
-- Então completa trilho formativo obrigatório (ex: política da organização, canais de apoio, requisitos mínimos)  
+- **Dado** que um fornecedor com acesso técnico é onboarded  
+  **Quando** é estabelecido acesso  
+  **Então** completa trilho formativo obrigatório (ex: política da organização, canais de apoio, requisitos mínimos)  
 - E certificação é registada contratualmente  
 - E acesso é bloqueado até conclusão  
 
@@ -614,9 +614,9 @@ Como **GRC / Gestão Executiva**, quero **garantir que fornecedores e terceiros 
 Como **GRC / Gestão Executiva**, quero **definir e recolher KPIs de capacitação** (taxa de conclusão, taxa de aprovação, eficácia em auditoria, MTTR em exercícios), para **avaliar impacto e reportar conformidade**.
 
 **Critérios de aceitação (BDD).**
-- Dado ciclo de formação definido
-- Quando as métricas são recolhidas
-- Então os KPIs são reportados ao dashboard e enviados trimestralmente para Gestão Executiva
+- **Dado** ciclo de formação definido
+  **Quando** as métricas são recolhidas
+  **Então** os KPIs são reportados ao dashboard e enviados trimestralmente para Gestão Executiva
 
 **Checklist.**
 - [ ] Lista de KPIs definida (ex: taxa de conclusão, taxa aprovação ≥80%, % tópicos falhados, tempo médio para completar labs)
@@ -649,9 +649,9 @@ Como **GRC / Gestão Executiva**, quero **definir e recolher KPIs de capacitaç�
 Como **AppSec Engineer / RH**, quero **definir os formatos de entrega e o DoD mínimo por formato** (labs, code clinics, microlearning, quizzes, simulações), para **garantir consistência e qualidade na formação**.
 
 **Critérios de aceitação (BDD).**
-- Dado um formato escolhido (ex: lab)
-- Quando a sessão é planeada
-- Então existe um DoD mínimo (infra + cenário + scoring + registo) e artefactos associados
+- **Dado** um formato escolhido (ex: lab)
+  **Quando** a sessão é planeada
+  **Então** existe um DoD mínimo (infra + cenário + scoring + registo) e artefactos associados
 
 **Checklist / DoD por formato.**
 - Labs: infra provisionada + app vulnerável (ou VM) + guia de exercícios + scoring automático/manual + logs e relatório

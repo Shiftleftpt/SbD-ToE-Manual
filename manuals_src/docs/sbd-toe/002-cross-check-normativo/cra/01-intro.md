@@ -14,7 +14,29 @@ sidebar_position: 5
 
 ## Âmbito
 
-O **Cyber Resilience Act (CRA)** estabelece requisitos **horizontais de segurança para produtos com elementos digitais** (hardware, software, componentes integrados) colocados no mercado da UE. Foca: ciclo de vida seguro, gestão de vulnerabilidades, transparência (SBOM/declarações), correções rápidas, reporte de vulnerabilidades exploradas.
+### 🧩 CRA – Cyber Resilience Act
+
+O **Cyber Resilience Act (CRA)** é o **Regulamento (UE) 2024/2847** (CELEX: [32024R2847](https://eur-lex.europa.eu/legal-content/PT/TXT/?uri=CELEX:32024R2847)), que estabelece requisitos horizontais para a conceção, desenvolvimento, produção e suporte de produtos com elementos digitais.
+
+O CRA impõe obrigações aos fabricantes, importadores e distribuidores, incluindo:
+
+- requisitos essenciais de **segurança por conceção e por defeito** durante todo o ciclo de vida;
+- processos de **gestão de vulnerabilidades**, incluindo receção, análise, correção e divulgação responsável;
+- **monitorização pós-comercialização** e correção atempada de vulnerabilidades;
+- requisitos de **documentação técnica**, instruções e informação ao utilizador;
+- obrigações de **notificação de vulnerabilidades exploradas ativamente e incidentes graves**.
+
+No contexto do SbD-ToE, o CRA é operacionalizado através de:
+
+- práticas de engenharia segura (capítulos de requisitos, arquitetura, desenvolvimento, IaC, pipelines, testes);
+- gestão de SBOM, proveniência e supply chain (dependências, containers, imagens, CI/CD);
+- processos estruturados de _vulnerability handling_ e _incident handling_;
+- governação e contratos (incluindo subcontratantes e fornecedores de software/serviços).
+
+> ⚖️ **Nota sobre referências técnicas.**  
+> O CRA não impõe um formato único de SBOM nem obriga explicitamente ao uso de normas específicas.  
+> No entanto, padrões como **CycloneDX**, **SPDX**, **ISO/IEC 29147 (Vulnerability Disclosure)** e **ISO/IEC 30111 (Vulnerability Handling)** são amplamente reconhecidos e fornecem uma base sólida para cumprir os requisitos técnicos e processuais do regulamento.  
+> O SbD-ToE assume estes padrões como **boas práticas recomendadas**, não como requisitos legais em si mesmos.
 
 O SbD-ToE foi desenhado para aplicações e pipelines software; grande parte dos controlos técnicos e processuais **alinha com o núcleo de obrigações CRA**. Este documento identifica cobertura, lacunas intencionais e ações de adaptação.
 
@@ -142,7 +164,7 @@ Responda SIM aos seguintes pontos:
 
 ## Referências
 
-- Texto final do Cyber Resilience Act (Regulamento (UE) 2024/XXX) 
+- **Cyber Resilience Act**: Regulamento (UE) 2024/2847 (CELEX: [32024R2847](https://eur-lex.europa.eu/legal-content/PT/TXT/?uri=CELEX:32024R2847))
 - SbD-ToE Manual Capítulos 01–14 
 - ENISA Guidance on Product Security & Vulnerability Disclosure 
 - ISO/IEC 29147 (Vulnerability Disclosure), ISO/IEC 30111 (Vulnerability Handling)

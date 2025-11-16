@@ -12,9 +12,40 @@ sidebar_position: 9
 
 ## Âmbito
 
+### 🏛️ ENISA e Cybersecurity Act (CSA)
+
+O **Cybersecurity Act** é o **Regulamento (UE) 2019/881** (CELEX: [32019R0881](https://eur-lex.europa.eu/legal-content/PT/TXT/?uri=CELEX:32019R0881)), que:
+
+- reforça o mandato da **ENISA** enquanto agência europeia de cibersegurança; e
+- estabelece um **quadro europeu de certificação de cibersegurança** para produtos, serviços e processos TIC.
+
+No âmbito deste quadro, estão a ser desenvolvidos vários **esquemas europeus de certificação**, nomeadamente:
+
+- **EUCC** – para produtos de TIC (substituto evolutivo dos Common Criteria a nível europeu);
+- **EUCS** – para serviços de computação em nuvem;
+- **EU5G** – para redes e serviços 5G.
+
+> 📅 **Estado em 2025.**  
+> Em 2025, o EUCC encontra-se num estado mais maduro e próximo de operacionalização, enquanto o EUCS e o EU5G ainda se encontram em diferentes fases de desenvolvimento e aprovação.  
+> O SbD-ToE assume esta realidade: utiliza os esquemas como **referenciais de boas práticas e fontes de requisitos**, não como uma lista fechada de obrigações já em vigor em todos os Estados-Membros.
+
+Do ponto de vista do SbD-ToE, a certificação ao abrigo do CSA implica, tipicamente:
+
+- um **mapeamento claro entre requisitos de segurança** dos esquemas e controlos concretos (incluindo evidência técnica);
+- **documentação robusta** de arquitetura, _threat modeling_, _hardening_, _secure development_ e _testing_;
+- processos repetíveis de **gestão de vulnerabilidades**, _patching_, monitorização e resposta a incidentes;
+- **governação e _ownership_ claros** sobre ativos, pipelines, ambientes e decisões de risco.
+
+O manual SbD-ToE fornece a "camada de engenharia" que permite:
+
+- desenhar e operar sistemas alinhados com os níveis de garantia esperados pelos esquemas (básico, substancial, elevado);
+- produzir **artefactos de evidência** (SBOM, relatórios de testes, _runbooks_, matrizes de rastreabilidade) que podem ser usados em processos de avaliação de conformidade sob o CSA.
+
+---
+
 Os esquemas europeus de certificação de cibersegurança, no âmbito do **Cybersecurity Act (CSA)**, visam **reconhecimento UE** de que produtos/serviços cumprem requisitos de segurança. A **ENISA** coordena e suporta a elaboração de esquemas; a certificação é executada por **Organismos de Avaliação da Conformidade (CABs)** acreditados e supervisionada por **autoridades nacionais**.
 
-Esta nota explica “para quem se destina”, quando é útil/necessária e como **reaproveitar controlos e evidências do SbD‑ToE**.
+Esta nota explica "para quem se destina", quando é útil/necessária e como **reaproveitar controlos e evidências do SbD‑ToE**.
 
 ## Para quem se destina
 
@@ -111,7 +142,7 @@ Sugere-se criar um **dossiê de certificação** com referências cruzadas (cont
 
 ## Referências
 
-- Regulamento (UE) 2019/881 — Cybersecurity Act (CSA)
+- **Cybersecurity Act**: Regulamento (UE) 2019/881 (CELEX: [32019R0881](https://eur-lex.europa.eu/legal-content/PT/TXT/?uri=CELEX:32019R0881))
 - ENISA — Páginas dos esquemas de certificação (EUCC, EUCS, EU5G)
 - SbD‑ToE Capítulos 01–14; CRA/NIS2/DORA cross‑checks
 

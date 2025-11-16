@@ -14,7 +14,7 @@ sidebar_position: 7
 
 ## Âmbito
 
-O **Regulamento Geral sobre a Proteção de Dados (RGPD/GDPR)** estabelece princípios e obrigações para o tratamento de dados pessoais. Este cross‑check foca a **dimensão técnica** alinhada ao SbD-ToE (segurança e engineering), reconhecendo que várias obrigações são **jurídico‑organizacionais** (base legal, direitos dos titulares, transferências internacionais).
+O **Regulamento Geral sobre a Proteção de Dados (RGPD/GDPR)** - **Regulamento (UE) 2016/679** (CELEX: [32016R0679](https://eur-lex.europa.eu/legal-content/PT/TXT/?uri=CELEX:32016R0679)) - estabelece princípios e obrigações para o tratamento de dados pessoais. Este cross‑check foca a **dimensão técnica** alinhada ao SbD-ToE (segurança e engineering), reconhecendo que várias obrigações são **jurídico‑organizacionais** (base legal, direitos dos titulares, transferências internacionais).
 
 Sugere-se usar o SbD-ToE como núcleo técnico para os artigos que exigem medidas de segurança, privacidade‑by‑design e gestão de incidentes, articulando com jurídico/GRC para o restante.
 
@@ -139,7 +139,7 @@ Responda SIM:
 
 ## Referências
 
-- Regulamento (UE) 2016/679 (RGPD)
+- **RGPD/GDPR**: Regulamento (UE) 2016/679 (CELEX: [32016R0679](https://eur-lex.europa.eu/legal-content/PT/TXT/?uri=CELEX:32016R0679))
 - ENISA - Guidelines on Security of Personal Data Processing
 - EDPB - Guidelines (DPIA, Breach Notification)
 - SbD-ToE Capítulos 01–14

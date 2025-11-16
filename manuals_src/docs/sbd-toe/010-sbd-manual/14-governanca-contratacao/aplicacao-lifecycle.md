@@ -348,7 +348,7 @@ Como **Gestão/PMO**, quero **designar formalmente um owner de segurança (Secur
 
 **Ligações úteis.**  
 - [Modelo de Governação](addon/01-modelo-governancao.md)  
-- [Formação e Onboarding (Cap. 13)](/formacao-onboarding/aplicacao-lifecycle.md)  
+- [Formação e Onboarding (Cap. 13)](/sbd-toe/sbd-manual/formacao-onboarding/aplicacao-lifecycle)  
 
 ---
 
@@ -461,7 +461,7 @@ Como **CISO + AppSec Manager**, quero **formalizar e documentar o modelo de gove
 **Ligações úteis.**  
 - [Modelo de Governação](addon/01-modelo-governancao.md)  
 - [Exemplos de Decisão](addon/05-exemplos-praticos.md)  
-- [Formação de Governação (Cap. 13)](/formacao-onboarding/aplicacao-lifecycle.md)  
+- [Formação de Governação (Cap. 13)](/sbd-toe/sbd-manual/formacao-onboarding/aplicacao-lifecycle)  
 
 ---
 

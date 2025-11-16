@@ -338,7 +338,7 @@ Como **Gestão de Produto**, quero **estabelecer critérios de aceitação de se
 **Template de Checklist de Release (L3):**  
 
 ```markdown
-## 📋 Checklist de Release – v{VERSION}
+## 📋 Checklist de Release - v{VERSION}
 
 **Release:** v2.3.0  
 **Data planeada:** YYYY-MM-DD  
@@ -361,8 +361,8 @@ Como **Gestão de Produto**, quero **estabelecer critérios de aceitação de se
 - [X] Endpoint POST /admin/users sem DAST (acesso VPN, compensado por network policy)  
 
 **Aprovações:**  
-- AppSec Lead Y – aprovado em YYYY-MM-DD  
-- Product Manager X – aprovado em YYYY-MM-DD  
+- AppSec Lead Y - aprovado em YYYY-MM-DD  
+- Product Manager X - aprovado em YYYY-MM-DD  
 ```
 
 ---

@@ -6,9 +6,9 @@ description: Guia normativo para uniformizar o tom, forma de tratamento e estilo
 tags: [estilo, linguagem, tratamento, norma editorial, curadoria]
 ---
 
-# Guia de Contribuição – regras editoriais
+# Guia de Contribuição - regras editoriais
 
-Este guia define as regras para a criação e manutenção dos capítulos do manual **Security by Design – Theory 
+Este guia define as regras para a criação e manutenção dos capítulos do manual **Security by Design - Theory 
 of Everything (SbD-ToE)**
 
 
@@ -118,7 +118,7 @@ tags:
 
 # 📝 Guia de Estilo de Linguagem - SbD-ToE
 
-> Este guia estabelece o tom, estilo e forma de tratamento adotados no manual *Security by Design – Theory of Everything (SbD-ToE)*, assegurando uniformidade, clareza e autoridade técnica em todos os capítulos e formatos (web e livro).
+> Este guia estabelece o tom, estilo e forma de tratamento adotados no manual *Security by Design - Theory of Everything (SbD-ToE)*, assegurando uniformidade, clareza e autoridade técnica em todos os capítulos e formatos (web e livro).
 
 ---
 

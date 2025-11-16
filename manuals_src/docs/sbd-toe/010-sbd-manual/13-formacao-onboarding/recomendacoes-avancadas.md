@@ -20,7 +20,7 @@ Este documento apresenta recomendações avançadas que **complementam as práti
 ### 🧠 1. Integração com plataforma LMS
 
 - Automatizar **trilhos formativos personalizados** por perfil técnico (Dev, QA, DevOps, AppSec).
-- Integrar quizzes, vídeos, provas práticas e registo automatizado por capítulo (ex: Cap. 05 – SBOM).
+- Integrar quizzes, vídeos, provas práticas e registo automatizado por capítulo (ex: Cap. 05 - SBOM).
 - Gerar **dashboards em tempo real por equipa, projeto ou domínio** funcional.
 - Versionar os conteúdos por capítulo do SbD-ToE e associar métricas de conclusão.
 
@@ -55,7 +55,7 @@ Este documento apresenta recomendações avançadas que **complementam as práti
 
 ## 🧭 Integração com frameworks de maturidade
 
-### 📘 OWASP DSOMM – `Training & Awareness`
+### 📘 OWASP DSOMM - `Training & Awareness`
 
 | Nível | Prática esperada no DSOMM                                                                             | Coberto pelas recomendações |
 |-------|--------------------------------------------------------------------------------------------------------|------------------------------|
@@ -66,12 +66,12 @@ Este documento apresenta recomendações avançadas que **complementam as práti
 
 > ✅ As recomendações aqui descritas permitem atingir **DSOMM nível 4** no domínio `Training & Awareness`.
 
-### 📘 SAMM v2.1 – `Education & Guidance`
+### 📘 SAMM v2.1 - `Education & Guidance`
 
-- **EDU.3 – Automated, role-specific training**: Os trilhos por perfil, gating via CI/CD e dashboards suportam integralmente este nível.
+- **EDU.3 - Automated, role-specific training**: Os trilhos por perfil, gating via CI/CD e dashboards suportam integralmente este nível.
 - A integração com onboarding técnico, conteúdo por capítulo e métricas são exemplos de **aplicação contínua da EDU.3**.
 
-### 📘 NIST SSDF v1.1 – `PO.4`
+### 📘 NIST SSDF v1.1 - `PO.4`
 
 - **PO.4.1 / PO.4.2**: Definem que a formação deve ser atualizada com base em incidentes e centrada em papéis.
 - **PO.4.3 / PO.4.4**: Apoiam a medição e revisão contínua - tal como recomendado com os dashboards e KPIs.

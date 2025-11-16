@@ -1,6 +1,6 @@
 ---
 id: checklist-revisao
-title: Checklist – Formação e Onboarding Seguro
+title: Checklist - Formação e Onboarding Seguro
 sidebar_label: Checklist de Revisão
 description: Lista de verificação binária e rastreável da adoção das práticas do Capítulo 13.
 tags: [checklist, formacao, onboarding, controlo, validacao, auditoria]

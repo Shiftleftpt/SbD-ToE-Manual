@@ -1,4 +1,4 @@
-/* HERO – respeita o tema claro/escuro */
+/* HERO - respeita o tema claro/escuro */
 .slHero {
   /* NÃO usar #fff; usar as vars do tema */
   background: var(--ifm-background-color);

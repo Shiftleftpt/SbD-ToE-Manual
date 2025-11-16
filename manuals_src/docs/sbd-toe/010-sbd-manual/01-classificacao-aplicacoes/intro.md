@@ -6,7 +6,7 @@ tags: [base, classificacao, risco, proporcionalidade, ciclo-vida]
 ---
 
 :::caution Capítulo Basilar
-Este capítulo é considerado **basilar** no modelo *Security by Design – Theory of Everything (SbD-ToE)*.  
+Este capítulo é considerado **basilar** no modelo *Security by Design - Theory of Everything (SbD-ToE)*.  
 A sua aplicação é **obrigatória** para garantir a coerência, rastreabilidade e eficácia das restantes práticas de segurança.  
 
 Os capítulos basilares constituem a **fundação técnica e metodológica** do modelo, a ausência ou aplicação parcial de qualquer um destes compromete a **integridade global** do SbD-ToE, tornando inviável a adoção coerente das práticas operacionais e de governação.
@@ -20,7 +20,7 @@ Neste capitulo é sugerido um modelo de classificação simples, direto e rápid
 O que interessa, e o que este manual tenta prover, é 1º classificar as aplicações - para assegurar a proporcionalidade adequada, e 2º ter mecanismos bem claro, rápidos e económicos de o fazer.
 
 >> 📌 A classificação da criticidade é o ponto de entrada para os capítulos:
->> [Capítulo 02 – Requisitos](/sbd-toe/sbd-manual/requisitos-seguranca/intro), [Capítulo 04 – Arquitetura](/sbd-toe/sbd-manual/arquitetura-segura/intro), [Capítulo 07 – CI/CD](/sbd-toe/sbd-manual/cicd-seguro/intro) e [Capítulo 10 – Testes](/sbd-toe/sbd-manual/testes-seguranca/intro).
+>> [Capítulo 02 - Requisitos](/sbd-toe/sbd-manual/requisitos-seguranca/intro), [Capítulo 04 - Arquitetura](/sbd-toe/sbd-manual/arquitetura-segura/intro), [Capítulo 07 - CI/CD](/sbd-toe/sbd-manual/cicd-seguro/intro) e [Capítulo 10 - Testes](/sbd-toe/sbd-manual/testes-seguranca/intro).
 
 ---
 

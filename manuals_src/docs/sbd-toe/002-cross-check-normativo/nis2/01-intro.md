@@ -1,5 +1,5 @@
 ---
-id: nis2
+id: intro
 title: NIS2 - Cross-check normativo
 description: Como o SbD-ToE cobre, deixa em aberto deliberadamente e pode integrar rapidamente os requisitos da Diretiva NIS2 (UE 2022/2555)
 tags: [cross-check, nis2, diretiva, ciberseguranca, incident-reporting, governance]
@@ -12,18 +12,18 @@ sidebar_position: 3
 
 A **Diretiva (UE) 2022/2555 (NIS2)** atualiza o quadro europeu de cibersegurança para entidades essenciais e importantes em 18 setores, reforçando governação, medidas de gestão de risco e obrigação de reporte de incidentes. Os Estados-Membros tinham até 17 de outubro de 2024 para transpor a NIS2; a NIS1 foi revogada a 18 de outubro de 2024.
 
-No espírito da NIS2, não chega "ter controlos" – é preciso demonstrar capacidade operacional e responsabilização da gestão. O SbD-ToE, construído top-down e atento a múltiplas referências, encaixa naturalmente neste ethos: entrega processos, políticas e artefactos técnicos reutilizáveis, deixando propositadamente algumas variáveis em aberto para preservar a universalidade do manual.
+No espírito da NIS2, não chega "ter controlos" - é preciso demonstrar capacidade operacional e responsabilização da gestão. O SbD-ToE, construído top-down e atento a múltiplas referências, encaixa naturalmente neste ethos: entrega processos, políticas e artefactos técnicos reutilizáveis, deixando propositadamente algumas variáveis em aberto para preservar a universalidade do manual.
 
 Este documento apresenta:
 
-1. **PARTE I: ANÁLISE NORMATIVA** – mapeamento artigo a artigo dos requisitos NIS2 para capítulos SbD-ToE, identificando cobertura existente, lacunas intencionais e passos de integração.
-2. **PARTE II: SÍNTESE E REFERÊNCIAS** – visão consolidada da relação NIS2/SbD-ToE e referências normativas.
+1. **PARTE I: ANÁLISE NORMATIVA** - mapeamento artigo a artigo dos requisitos NIS2 para capítulos SbD-ToE, identificando cobertura existente, lacunas intencionais e passos de integração.
+2. **PARTE II: SÍNTESE E REFERÊNCIAS** - visão consolidada da relação NIS2/SbD-ToE e referências normativas.
 
 ---
 
 ## PARTE I: ANÁLISE NORMATIVA
 
-### Artigo 20 – Governação e responsabilização
+### Artigo 20 - Governação e responsabilização
 
 **Conteúdo normativo**
 
@@ -39,7 +39,7 @@ O Art. 20 coloca o órgão de gestão no centro: ele aprova as medidas de gestã
 
 **O que o SbD-ToE cobre**
 
-- Define políticas e papéis (Cap. 02 – Requisitos; Cap. 14 – Governança e Contratação).
+- Define políticas e papéis (Cap. 02 - Requisitos; Cap. 14 - Governança e Contratação).
 - Estabelece ciclos de aprovação e monitorização com métricas e evidências operacionais (Cap. 12).
 - Prescreve programa de formação e onboarding (Cap. 13).
 
@@ -53,13 +53,13 @@ Sugere-se registar, no Cap. 14, que as políticas do SbD-ToE foram aprovadas pel
 
 ---
 
-### Artigo 21 – Medidas de gestão de risco de cibersegurança
+### Artigo 21 - Medidas de gestão de risco de cibersegurança
 
 **Conteúdo normativo**
 
 O Art. 21 pede um conjunto mínimo de medidas, num all-hazards approach: políticas de análise de risco e segurança, gestão de incidentes, continuidade/crise (backups, DR), segurança da cadeia de fornecimento, segurança em aquisição/desenvolvimento/manutenção, avaliação da eficácia dos controlos, higiene cibernética/treino, IAM, criptografia, gestão de vulnerabilidades/patching, logging e monitorização.
 
-Em 2024/2025, a Comissão e a ENISA publicaram orientações técnicas e mapeamentos práticos com exemplos de evidência para implementar estas medidas – utilíssimos para auditoria.
+Em 2024/2025, a Comissão e a ENISA publicaram orientações técnicas e mapeamentos práticos com exemplos de evidência para implementar estas medidas - utilíssimos para auditoria.
 
 **Cobertura SbD-ToE**
 
@@ -78,8 +78,8 @@ Em 2024/2025, a Comissão e a ENISA publicaram orientações técnicas e mapeame
 
 **O que o SbD-ToE cobre**
 
-- **Políticas e controlos técnicos** (Cap. 02 – Requisitos de Segurança).
-- **Classificação de criticidade** e risco proporcional (Cap. 01 – Classificação de Aplicações).
+- **Políticas e controlos técnicos** (Cap. 02 - Requisitos de Segurança).
+- **Classificação de criticidade** e risco proporcional (Cap. 01 - Classificação de Aplicações).
 - **Threat modeling** (Cap. 03).
 - **Cadeia de fornecimento**: SBOM/SCA, dependências (Cap. 05).
 - **CI/CD & IaC** seguros (Cap. 07, Cap. 08); containers/runtime (Cap. 09).
@@ -97,7 +97,7 @@ Sugere-se usar o catálogo do Cap. 02 como base de SoA técnica e alinhar as evi
 
 ---
 
-### Artigo 23 – Reporte de incidentes
+### Artigo 23 - Reporte de incidentes
 
 **Conteúdo normativo**
 
@@ -197,14 +197,14 @@ Sugere-se alinhar a matriz de fontes (app, IAM, rede, cloud audit, EDR) e reten�
 
 A NIS2 pede gestão com responsabilidade, medidas com substância e reportes com prazos. O SbD-ToE oferece o coração técnico-operacional: políticas, processos, testes, inventários, automação e evidências.
 
-As aparentes lacunas do manual – quem aprova políticas, campos rígidos de logs/incidentes, templates e formatos de submissão, pormenores jurídicos de contratos – são lacunas deliberadas: detalhes específicos que mudam entre normas e países e que, por isso, o SbD-ToE deixa configuráveis.
+As aparentes lacunas do manual - quem aprova políticas, campos rígidos de logs/incidentes, templates e formatos de submissão, pormenores jurídicos de contratos - são lacunas deliberadas: detalhes específicos que mudam entre normas e países e que, por isso, o SbD-ToE deixa configuráveis.
 
 O resultado é elegante:
 
 - **Hoje**, o SbD-ToE permite a qualquer equipa praticar segurança por desenho com qualidade.
-- **Amanhã**, quando a organização quiser cumprir NIS2, basta ligar os detalhes – aprovação pelo board (Art. 20), campos e prazos de incidente (Art. 23), mapeamento das medidas (Art. 21) e, quando necessário, requisitos nacionais.
+- **Amanhã**, quando a organização quiser cumprir NIS2, basta ligar os detalhes - aprovação pelo board (Art. 20), campos e prazos de incidente (Art. 23), mapeamento das medidas (Art. 21) e, quando necessário, requisitos nacionais.
 
-Assim, o SbD-ToE mantém-se universal e quente na prática diária, e a NIS2 acrescenta a camada de formalidade e supervisão. Juntos, constroem uma conformidade sustentável – não por check-box, mas por construção.
+Assim, o SbD-ToE mantém-se universal e quente na prática diária, e a NIS2 acrescenta a camada de formalidade e supervisão. Juntos, constroem uma conformidade sustentável - não por check-box, mas por construção.
 
 ### Setor, âmbito e sanções
 
@@ -214,14 +214,14 @@ Em termos sancionatórios, a Diretiva estabelece patamares que os Estados-Membro
 
 ### Referências
 
-- **Diretiva (UE) 2022/2555 ("NIS2")** – Texto oficial: EUR-Lex - *eli/dir/2022/2555/oj*.
-- **Art. 20** – Responsabilidade do órgão de gestão e obrigação de formação.
-- **Art. 21** – Medidas mínimas de gestão de risco (abordagem "all-hazards").
-- **Art. 23** – Prazos de reporte de incidentes (24h/72h/1 mês) e relatórios intermédios.
-- **Art. 34** – Sanções administrativas máximas (10M€ ou 2%; 7M€ ou 1,4%).
-- **ENISA & Comissão Europeia (2024/2025)** – Orientações técnicas e mapeamentos práticos com exemplos de evidência para Art. 21.
-- **ENISA** – *Technical implementation guidance for NIS2 risk-management measures* (exemplos de evidência e mapeamentos).
-- **Autoridades nacionais NIS2** – Guias/portais de registo e requisitos locais (exemplos: NCSC nacionais).
+- **Diretiva (UE) 2022/2555 ("NIS2")** - Texto oficial: EUR-Lex - *eli/dir/2022/2555/oj*.
+- **Art. 20** - Responsabilidade do órgão de gestão e obrigação de formação.
+- **Art. 21** - Medidas mínimas de gestão de risco (abordagem "all-hazards").
+- **Art. 23** - Prazos de reporte de incidentes (24h/72h/1 mês) e relatórios intermédios.
+- **Art. 34** - Sanções administrativas máximas (10M€ ou 2%; 7M€ ou 1,4%).
+- **ENISA & Comissão Europeia (2024/2025)** - Orientações técnicas e mapeamentos práticos com exemplos de evidência para Art. 21.
+- **ENISA** - *Technical implementation guidance for NIS2 risk-management measures* (exemplos de evidência e mapeamentos).
+- **Autoridades nacionais NIS2** - Guias/portais de registo e requisitos locais (exemplos: NCSC nacionais).
 
 ---
 
@@ -229,6 +229,6 @@ Em termos sancionatórios, a Diretiva estabelece patamares que os Estados-Membro
 
 A NIS2, tal como a DORA, beneficia de um processo formal de exceções à conformidade. Casos onde um requisito específico não é aplicável ou onde se aceita um risco temporário devem ser documentados, aprovados pelo órgão de gestão e revistos periodicamente.
 
-O Cap. 14 (Governança e Contratação) do SbD-ToE fornece os artefactos necessários: registo de exceções, critérios de aceitação de risco, cadeia de aprovação e plano de remediação. A existência deste processo não é sinal de fragilidade – é evidência de governação madura e de controlo consciente sobre o perfil de risco da organização.
+O Cap. 14 (Governança e Contratação) do SbD-ToE fornece os artefactos necessários: registo de exceções, critérios de aceitação de risco, cadeia de aprovação e plano de remediação. A existência deste processo não é sinal de fragilidade - é evidência de governação madura e de controlo consciente sobre o perfil de risco da organização.
 
 :::

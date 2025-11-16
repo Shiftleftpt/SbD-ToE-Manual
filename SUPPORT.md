@@ -1,6 +1,6 @@
 # Apoio e Contactos
 
-O projeto **Security by Design – Theory of Everything (SbD-ToE)** é mantido pela equipa ShiftLeft.
+O projeto **Security by Design - Theory of Everything (SbD-ToE)** é mantido pela equipa ShiftLeft.
 
 ## Canais de apoio
 

@@ -46,7 +46,7 @@ Este capítulo detalha, de forma operacional e prescritiva, **quando e como impl
 
 ## 🛠️ User stories reutilizáveis
 
-### US-01 – Classificação inicial da aplicação
+### US-01 - Classificação inicial da aplicação
 
 **Contexto.**  
 A classificação inicial da aplicação é o ponto de entrada para a aplicação proporcional de controlos de segurança (L1–L3). Sem este passo, não é possível garantir rastreabilidade nem proporcionalidade.
@@ -94,7 +94,7 @@ Como **Developer / Team Lead**, quero **classificar a aplicação com base nos e
 
 ---
 
-### US-02 – Aplicação da matriz de controlo
+### US-02 - Aplicação da matriz de controlo
 
 **Contexto.**  
 A matriz de controlo define quais os requisitos de segurança aplicáveis em função do nível de risco. Sem mapeamento explícito, há risco de sobreproteção ou underprotection.
@@ -141,7 +141,7 @@ Como **Developer / Team Lead**, quero **aplicar a matriz de controlos e mapear c
 
 ---
 
-### US-03 – Revisão por alteração relevante (event-based)
+### US-03 - Revisão por alteração relevante (event-based)
 
 **Contexto.**  
 A classificação deve ser revista quando existirem alterações significativas de arquitetura, dados ou exposição. Sem revisão, mudanças lentas podem gerar desalinhamento entre nível e controlos.
@@ -188,7 +188,7 @@ Como **AppSec Engineer**, quero **rever a classificação de criticidade sempre 
 
 ---
 
-### **US-07 – Revisão Periódica Time-Based da Classificação (Cadência Obrigatória)**
+### **US-07 - Revisão Periódica Time-Based da Classificação (Cadência Obrigatória)**
 
 **Contexto.**  
 Para além dos triggers por alteração, a classificação deve ter **cadência periódica fixa**. Sem calendário, mudanças lentas (ex: crescimento de dados críticos) ficam não-detetadas.
@@ -237,7 +237,7 @@ Como **AppSec Engineer**, quero **rever a classificação com cadência fixa (L1
 
 ---
 
-### US-04 – Análise de risco residual
+### US-04 - Análise de risco residual
 
 **Contexto.**  
 Mesmo após aplicação da matriz, podem permanecer riscos residuais que devem ser documentados, quantificados e aprovados formalmente. Sem análise residual, exceções ficam sem justificação técnica clara.
@@ -286,7 +286,7 @@ Como **GRC/Compliance**, quero **registar o risco residual após aplicar os cont
 
 ---
 
-### **US-08 – Aceitação de Risco com TTL e Revalidação Obrigatória**
+### **US-08 - Aceitação de Risco com TTL e Revalidação Obrigatória**
 
 **Contexto.**  
 Quando o nível de risco residual é aceitável mas com **Time-To-Live (TTL) limitado**, o risco pode expirar. Sem revalidação automática, excepções "dormem" indefinidamente.
@@ -337,7 +337,7 @@ Como **GRC/Compliance**, quero registar aceitações com **TTL explícito e aler
 
 ---
 
-### US-05 – Validação antes do go-live
+### US-05 - Validação antes do go-live
 
 **Contexto.**  
 Antes de entrar em produção é necessário validar se todos os requisitos aplicáveis foram cumpridos. Esta etapa impede deployes com cobertura de segurança incompleta.
@@ -472,7 +472,7 @@ A validação antes do go-live é implementada através de uma **cascata de gate
 
 ---
 
-### US-06 – Mapeamento de ameaças por nível de risco
+### US-06 - Mapeamento de ameaças por nível de risco
 
 
 **Contexto.**  
@@ -520,7 +520,7 @@ Como **AppSec Engineer**, quero **verificar se as ameaças esperadas para o nív
 
 ---
 
-### **US-09 – Classificação de Artefactos Técnicos (Pipeline, IaC, Imagens)**
+### **US-09 - Classificação de Artefactos Técnicos (Pipeline, IaC, Imagens)**
 
 **Contexto.**  
 A classificação da aplicação não é suficiente; **artefactos de entrega** (Dockerfile, scripts CI/CD, IaC, imagens) herdam a criticidade e exigem controlos específicos descritos nos capítulos 07 (CI/CD Seguro), 08 (IaC), 09 (Containers).
@@ -573,7 +573,7 @@ Como **DevOps/SRE**, quero classificar **artefactos técnicos da aplicação** (
 
 ---
 
-### **US-10 – KPIs, Métricas e Reporting de Classificação e Conformidade**
+### **US-10 - KPIs, Métricas e Reporting de Classificação e Conformidade**
 
 **Contexto.**  
 Sem indicadores e visibilidade executiva, não há governança efetiva nem feedback loop para melhoria contínua. É necessário consolidar métricas operacionais e de conformidade sobre o ciclo de classificação.
@@ -630,7 +630,7 @@ Como **GRC/Compliance**, quero consolidar **KPIs mensais/trimestrais** sobre a c
 
 ---
 
-### **US-11 – Políticas Organizacionais Formais (Classificação, Risco, Revisão Periódica, Rastreabilidade)**
+### **US-11 - Políticas Organizacionais Formais (Classificação, Risco, Revisão Periódica, Rastreabilidade)**
 
 **Contexto.**  
 As user stories US-01 a US-10 definem o **como operacionalizar** a classificação. As políticas organizacionais definem o **por quê** (mandato), **quem aprova**, **qual o critério** e **como auditar**. Sem políticas, não há governança formal nem conformidade a regulamentos (NIS2, DORA,).
@@ -646,10 +646,10 @@ Como **Gestão Executiva/CISO**, quero que existam **4 políticas organizacionai
 - Então **Auditores podem validar conformidade** e **todas as decisões de classificação/risco têm fundamento normativo**
 
 **DoD.**
-- [ ] **Política 1 – Classificação de Risco**: Modelo E+D+I, critérios L1/L2/L3, responsabilidades por nível, frequency de revisão (obrigatória em L2/L3)  
-- [ ] **Política 2 – Aceitação de Risco**: Critérios de aceitabilidade, TTL por nível, aprovadores, exceções + revalidação obrigatória antes da expiração  
-- [ ] **Política 3 – Revisão Periódica**: Cadência time-based (12m/6m/3m), owners, escalada de decisões, triggers para revisão de matriz e ameaças  
-- [ ] **Política 4 – Rastreabilidade & Auditoria**: Registo centralizado de classificações, exceções, revisões; versionamento; pista de auditoria; retenção de dados; acesso restrito  
+- [ ] **Política 1 - Classificação de Risco**: Modelo E+D+I, critérios L1/L2/L3, responsabilidades por nível, frequency de revisão (obrigatória em L2/L3)  
+- [ ] **Política 2 - Aceitação de Risco**: Critérios de aceitabilidade, TTL por nível, aprovadores, exceções + revalidação obrigatória antes da expiração  
+- [ ] **Política 3 - Revisão Periódica**: Cadência time-based (12m/6m/3m), owners, escalonamento de decisões, triggers para revisão de matriz e ameaças  
+- [ ] **Política 4 - Rastreabilidade & Auditoria**: Registo centralizado de classificações, exceções, revisões; versionamento; pista de auditoria; retenção de dados; acesso restrito  
 - [ ] **Cada política contém**: objetivo, âmbito, responsáveis, critérios decisão, processo aprovação, frequência revisão, ligação a capítulos do manual  
 - [ ] **Assinatura formal** por **Gestão Executiva/CISO** e **GRC/Compliance** datada  
 - [ ] **Publicação acessível** em Wiki interna, repositório de políticas, ou portal de compliance  
@@ -677,7 +677,7 @@ Como **Gestão Executiva/CISO**, quero que existam **4 políticas organizacionai
 | Governação + Conformidade | Kick-off (criação políticas), anualmente (revisão) | **Gestão Executiva/CISO (assina, aprova) + GRC/Compliance (redige, distribui, treina) + AppSec Engineer (input técnico) + Auditores Internos (valida conformidade) + Todos os equipas (treino + attestation)** | Redação: 30 dias; Assinatura: 5 dias; Distribuição: 1 dia; Treinamento inicial: 10 dias; Revisão anual: 15 dias |
 
 **Ligações úteis.**
-- [Intro Cap. 01 – Modelo E+D+I e Ciclos](/docs/sbd-toe/010-sbd-manual/01-classificacao-aplicacoes/intro)  
+- [Intro Cap. 01 - Modelo E+D+I e Ciclos](/docs/sbd-toe/010-sbd-manual/01-classificacao-aplicacoes/intro)  
 - [Criterios Aceitação Risco (addon 03)](/sbd-toe/sbd-manual/classificacao-aplicacoes/addon/03-criterios-aceitacao-risco)  
 - [Ciclo de Vida do Risco (addon 02)](/sbd-toe/sbd-manual/classificacao-aplicacoes/addon/02-ciclo-vida-risco)  
 - [NIS2 / DORA / ISO 27001 (Cap. 002)](/docs/sbd-toe/002-cross-check-normativo/intro)  
@@ -708,17 +708,17 @@ Como **Gestão Executiva/CISO**, quero que existam **4 políticas organizacionai
 
 | Prática / Story                                 | L1 | L2 | L3 | Observações |
 |-------------------------------------------------|----|----|----|-------------|
-| US-01 – Classificação inicial                    | ✔  | ✔  | ✔  | Validação AppSec obrigatória em L2/L3 |
-| US-02 – Aplicação da matriz (c/ REQ-XXX)        | ✔  | ✔  | ✔  | Rastreabilidade REQ para Cap. 02 |
-| US-03 – Revisão por alteração relevante          | ✔  | ✔  | ✔  | Event-based, cascata a US-02/US-06 |
-| **US-07-rev – Revisão periódica time-based**    | ✔ (Rec.) | ✔  | ✔  | Cadência: 12m / 6m / 3m (obrigatória em L2/L3) |
-| US-04 – Risco residual                           | (opcional) | ✔ | ✔  | Aprovações formais em L3 |
-| **US-08-rev – Aceitação com TTL**                | (Rec.) | ✔ | ✔  | TTL 12m/6m/3m; re-aprovação obrigatória em L2/L3 |
-| US-05 – Validação go-live                        | (Rec.) | ✔ | ✔  | Aprovação AppSec + Gestão em L3 |
-| US-06 – Mapeamento de ameaças                    | (opcional) | ✔ | ✔  | Validação Arquitetos; escala de risco crítico |
-| US-09 – Classificação de artefactos técnicos    | ✔ (Rec.) | ✔ | ✔  | Aplica controlos Cap. 07/08/09; Arquitetos valida |
-| **US-11 – Políticas Organizacionais Formais**   | (Rec.) | ✔ | ✔  | 4 políticas obrigatórias em L2/L3; treinamento + auditoria |
-| **US-10 – KPIs e Reporting**                    | (Rec.) | ✔ | ✔  | Mensal (ops), trimestral (gestão), anual (auditores) |
+| US-01 - Classificação inicial                    | ✔  | ✔  | ✔  | Validação AppSec obrigatória em L2/L3 |
+| US-02 - Aplicação da matriz (c/ REQ-XXX)        | ✔  | ✔  | ✔  | Rastreabilidade REQ para Cap. 02 |
+| US-03 - Revisão por alteração relevante          | ✔  | ✔  | ✔  | Event-based, cascata a US-02/US-06 |
+| **US-07-rev - Revisão periódica time-based**    | ✔ (Rec.) | ✔  | ✔  | Cadência: 12m / 6m / 3m (obrigatória em L2/L3) |
+| US-04 - Risco residual                           | (opcional) | ✔ | ✔  | Aprovações formais em L3 |
+| **US-08-rev - Aceitação com TTL**                | (Rec.) | ✔ | ✔  | TTL 12m/6m/3m; re-aprovação obrigatória em L2/L3 |
+| US-05 - Validação go-live                        | (Rec.) | ✔ | ✔  | Aprovação AppSec + Gestão em L3 |
+| US-06 - Mapeamento de ameaças                    | (opcional) | ✔ | ✔  | Validação Arquitetos; escala de risco crítico |
+| US-09 - Classificação de artefactos técnicos    | ✔ (Rec.) | ✔ | ✔  | Aplica controlos Cap. 07/08/09; Arquitetos valida |
+| **US-11 - Políticas Organizacionais Formais**   | (Rec.) | ✔ | ✔  | 4 políticas obrigatórias em L2/L3; treinamento + auditoria |
+| **US-10 - KPIs e Reporting**                    | (Rec.) | ✔ | ✔  | Mensal (ops), trimestral (gestão), anual (auditores) |
 
 ---
 

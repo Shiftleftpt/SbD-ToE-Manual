@@ -1,21 +1,21 @@
 ---
 id: tldr
 title: "TL;DR — Resumo Executivo do SbD-ToE"
-description: "Resumo global e sínteses por capítulo do manual Security by Design – Theory of Everything."
+description: "Resumo global e sínteses por capítulo do manual Security by Design - Theory of Everything."
 sidebar_position: 0
 ---
 
 # 🚀 TL;DR — Resumo Executivo do SbD-ToE {#tldr-sbdtoe}
 
 <!--web-only-->
-> Esta página fornece uma visão executiva do manual **Security by Design – Theory of Everything (SbD-ToE)** e uma síntese objetiva de cada capítulo.  
+> Esta página fornece uma visão executiva do manual **Security by Design - Theory of Everything (SbD-ToE)** e uma síntese objetiva de cada capítulo.  
 > É a camada de leitura rápida para equipas técnicas, gestão, auditores e novos leitores.
 <!--/web-only-->
 
 ---
 
 # 📘 1. O que é o SbD-ToE? {#o-que-e}
-O *Security by Design – Theory of Everything (SbD-ToE)* é um modelo **prescritivo, proporcional e verificável** para construir, validar e operar software seguro em qualquer organização.
+O *Security by Design - Theory of Everything (SbD-ToE)* é um modelo **prescritivo, proporcional e verificável** para construir, validar e operar software seguro em qualquer organização.
 
 Integra princípios de **engenharia segura**, governação, práticas de SDLC, threat modeling, requisitos, arquitetura, dependências, pipelines, IaC, containers, operações e controlo contínuo — tudo com **evidência auditável**, **rastreabilidade global**, **mapeamento a frameworks** (SAMM, SSDF, SLSA, DSOMM) e **checklists canónicos**.
 

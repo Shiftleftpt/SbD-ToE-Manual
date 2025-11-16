@@ -27,7 +27,7 @@ Este questionário destina-se a validar se os terceiros (fornecedores, contracto
 
 ---
 
-2. **O que deve fazer se encontrar um segredo (ex: token, password) num ficheiro `.env` commitado?**
+2. **O que deve fazer se encontrar um segredo (ex: token, password) num ficheiro `.env` committed ao repositório?**
    - a) Ignorar, pois está num ficheiro comum  
    - b) Apagar localmente apenas  
    - c) Notificar a equipa e seguir o processo de rotação de segredos  

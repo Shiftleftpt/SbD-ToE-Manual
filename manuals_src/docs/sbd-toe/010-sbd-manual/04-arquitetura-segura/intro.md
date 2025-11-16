@@ -1,13 +1,13 @@
 ---
 id: intro
-title: Capítulo 4 – Arquitetura Segura
+title: Capítulo 4 - Arquitetura Segura
 description: Fundamentos, objetivos e enquadramento do capítulo dedicado à arquitetura segura no ciclo de vida de software
 tags: [introducao, arquitetura, requisitos, segurança]
 sidebar_position: 4
 ---
 
 :::caution Capítulo Basilar
-Este capítulo é considerado **basilar** no modelo *Security by Design – Theory of Everything (SbD-ToE)*.  
+Este capítulo é considerado **basilar** no modelo *Security by Design - Theory of Everything (SbD-ToE)*.  
 A sua aplicação é **obrigatória** para garantir a coerência, rastreabilidade e eficácia das restantes práticas de segurança.  
 
 Os capítulos basilares constituem a **fundação técnica e metodológica** do modelo, a ausência ou aplicação parcial de qualquer um destes compromete a **integridade global** do SbD-ToE, tornando inviável a adoção coerente das práticas operacionais e de governação.

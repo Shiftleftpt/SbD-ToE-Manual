@@ -1,6 +1,6 @@
 ---
 id: checklist-revisao
-title: Checklist – Dependências, SBOM e SCA
+title: Checklist - Dependências, SBOM e SCA
 description: Verificação binária da aplicação das práticas prescritas no Capítulo 05
 tags: [checklist, controlo, dependencias, sbom, sca, supply-chain]
 sidebar_position: 20

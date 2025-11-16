@@ -135,7 +135,7 @@ permitir {
 }
 ```
 
-> 📍 Esta prática responde diretamente ao **DSOMM – Policy as Code**.
+> 📍 Esta prática responde diretamente ao **DSOMM - Policy as Code**.
 
 ---
 
@@ -147,4 +147,4 @@ permitir {
 - Criar "Design Guidelines to REQ" mappings
 - Garantir que decisões de arquitetura resultam em requisitos rastreáveis
 
-> 🧐 Esta prática reforça o alinhamento com o **DSOMM – Design & Development**.
+> 🧐 Esta prática reforça o alinhamento com o **DSOMM - Design & Development**.

@@ -24,7 +24,7 @@ Assegurar que os módulos reutilizados em projetos de Infraestrutura como Códig
 
 ## 📌 O que deve ser feito
 
-1. Catalogar os módulos internos com informação sobre origem, responsável e versão;
+1. Registar os módulos internos com informação sobre origem, responsável e versão;
 2. Verificar a proveniência e integridade de módulos externos antes da adoção;
 3. Impedir o uso de módulos não validados em ambientes críticos (ex: produção);
 4. Controlar versões e reforçar imutabilidade - evitar `main`, `latest` ou referências flutuantes;

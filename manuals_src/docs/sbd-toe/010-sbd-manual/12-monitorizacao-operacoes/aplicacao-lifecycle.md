@@ -132,7 +132,7 @@ Para que a monitorização tenha impacto, é preciso ligar cada alerta a um **co
 
 :::userstory
 **História.**   
-Como **IR**, quero **configurar alertas críticos com SLAs definidos**, para **assegurar resposta atempada a incidentes**.  
+Como **Ops**, quero **configurar alertas críticos com SLAs definidos**, para **assegurar resposta atempada a incidentes**.  
 
 **Critérios de aceitação (BDD).**  
 - Dado alerta crítico  
@@ -156,7 +156,7 @@ Como **IR**, quero **configurar alertas críticos com SLAs definidos**, para **a
 **Integração no SDLC.**  
 | Fase | Trigger | Responsável | SLA |
 |------|---------|-------------|-----|
-| Produção | Incidente crítico | IR + AppSec | Conforme SLA |
+| Produção | Incidente crítico | Ops + AppSec | Conforme SLA |
 
 **Ligações úteis.** [Formação & Onboarding](/sbd-toe/sbd-manual/formacao-onboarding/intro)
 
@@ -171,7 +171,7 @@ Alertas isolados não resolvem nada: precisam de estar ligados a **playbooks cla
 
 :::userstory
 **História.**   
-Como **IR**, quero **integrar alertas com playbooks de resposta a incidentes**, para **assegurar ação rápida e coordenada**.  
+Como **Ops**, quero **integrar alertas com playbooks de resposta a incidentes**, para **assegurar ação rápida e coordenada**.  
 
 **Critérios de aceitação (BDD).**  
 - Dado alerta de segurança  
@@ -203,9 +203,7 @@ Como **IR**, quero **integrar alertas com playbooks de resposta a incidentes**, 
 
 ### US-05 - Métricas de eficácia (MTTD/MTTR)
 
----
-
-### US-05 - Métricas de eficácia (MTTD/MTTR)Só é possível melhorar aquilo que se mede.  
+Só é possível melhorar aquilo que se mede.  
 Sem métricas de eficácia, qualquer esforço de monitorização corre o risco de se tornar estático e complacente.  
 
 **Contexto.** Sem medir eficácia, não há melhoria contínua.  
@@ -242,7 +240,9 @@ Como **GRC**, quero **medir MTTD e MTTR de incidentes**, para **avaliar eficáci
 
 ---
 
-### US-06 - Classificação e Cobertura de Domínios de MonitorizaçãoUma abordagem eficaz de monitorização não cobre tudo indiscriminadamente: deve ser **proporcional e focada nos domínios que mais importam** para a segurança e operação de cada aplicação.
+### US-06 - Classificação e Cobertura de Domínios de Monitorização
+
+Uma abordagem eficaz de monitorização não cobre tudo indiscriminadamente: deve ser **proporcional e focada nos domínios que mais importam** para a segurança e operação de cada aplicação.
 
 **Contexto.** Sem mapeamento claro de domínios, a cobertura fica lacunar e ineficiente.
 

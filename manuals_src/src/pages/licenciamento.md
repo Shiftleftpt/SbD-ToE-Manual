@@ -8,7 +8,7 @@ description: Condições de uso e partilha do manual SbD-ToE
 
 ## Licenciamento
 
-Este manual encontra-se registado no **IGAC – Inspeção-Geral das Atividades Culturais** sob o n.º **949/2025**, com titularidade atribuída a **Pedro Farinha**, e é publicado sob a licença  
+Este manual encontra-se registado no **IGAC - Inspeção-Geral das Atividades Culturais** sob o n.º **949/2025**, com titularidade atribuída a **Pedro Farinha**, e é publicado sob a licença  
 **Creative Commons Attribution–ShareAlike 4.0 International (CC BY-SA 4.0)**.
 
 Esta licença permite:
@@ -30,7 +30,7 @@ O uso do manual deve respeitar as condições da licença CC BY-SA 4.0 e reconhe
 
 **Atribuição recomendada:**
 
-> “Baseado em *Security by Design – Theory of Everything (SbD-ToE)*,  
+> “Baseado em *Security by Design - Theory of Everything (SbD-ToE)*,  
 > © Pedro Farinha (IGAC 949/2025) e contribuidores, sob CC BY-SA 4.0.”
 
 O registo IGAC serve como **prova pública de titularidade e data de criação** e não altera os direitos concedidos pela licença.

@@ -1,4 +1,4 @@
-# Security by Design – Theory of Everything
+# Security by Design - Theory of Everything
 
 Este é um manual prático e prescritivo de Security by Design, orientado ao ciclo de vida do software.
 

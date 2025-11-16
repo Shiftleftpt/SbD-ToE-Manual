@@ -390,7 +390,7 @@ Como **Desenvolvedor**, quero anotar validações de segurança com `@sec:*`, pa
 
 ---
 
-### US-09 – Gate de Segurança Pré-release
+### US-09 - Gate de Segurança Pré-release
 
 **Contexto.**  
 Antes de cada *release* deve existir um ponto de controlo objetivo que consolide todas as evidências de segurança — relatórios SAST, SBOM, exceções, checklists e aprovações.
@@ -424,7 +424,7 @@ Como **DevOps/SRE**, quero executar um **gate de segurança pré-release** que a
 
 ---
 
-### US-10 – Perfis de Validação por Nível de Risco (L1–L3)
+### US-10 - Perfis de Validação por Nível de Risco (L1–L3)
 
 **Contexto.**  
 A aplicação proporcional dos controlos é essencial para garantir eficiência e consistência.  
@@ -457,7 +457,7 @@ Como **AppSec Engineer**, quero definir e aplicar **perfis de validação L1–L
 
 ---
 
-### US-11 – Arquivo Central de Evidências de Validação
+### US-11 - Arquivo Central de Evidências de Validação
 
 **Contexto.**  
 A retenção controlada de evidências é requisito de auditoria e conformidade.  
@@ -492,7 +492,7 @@ diretório `evidencias/`, `evidencias-index.json`, registos de acesso
 
 ---
 
-### US-12 – Validações Locais Obrigatórias (Pre-commit)
+### US-12 - Validações Locais Obrigatórias (Pre-commit)
 
 **Contexto.**  
 Validações executadas localmente antes de qualquer push reduzem feedback loops, aumentam consistência de código e diminuem carga no pipeline. Git hooks e linters locais são a primeira linha de defesa.
@@ -539,7 +539,7 @@ Como **Developer**, quero executar **linters e validações de segurança localm
 
 ---
 
-### US-13 – Validação de Padrões Perigosos e Anti-patterns
+### US-13 - Validação de Padrões Perigosos e Anti-patterns
 
 **Contexto.**  
 Padrões de código inseguro (eval, concatenação SQL, hardcoded secrets, XSS, etc.) devem ser detectados automaticamente e bloqueados, com educação sobre alternativas seguras.
@@ -587,7 +587,7 @@ Como **AppSec Engineer**, quero que o pipeline **detecte automaticamente padrõe
 
 ---
 
-### US-14 – Monitorização de Conformidade e Métricas de Segurança
+### US-14 - Monitorização de Conformidade e Métricas de Segurança
 
 **Contexto.**  
 Métricas contínuas de segurança (cobertura de linters, exceções ativas, findings resolvidos, compliance L1–L3) permitem governação informada e identificação rápida de desvios.

@@ -17,7 +17,7 @@ Este estudo de caso descreve a aplicação prática e transversal do manual **Se
 
 ## 🧭 Classificação de risco
 
-Através da metodologia do Capítulo 01 – Gestão de Risco, foi atribuída classificação **L3 (Elevado)** ao projeto IaC, com base em:
+Através da metodologia do Capítulo 01 - Gestão de Risco, foi atribuída classificação **L3 (Elevado)** ao projeto IaC, com base em:
 
 * Capacidade de impactar ambientes produtivos e múltiplas aplicações;
 * Acesso a recursos críticos (VPC, certificados, serviços core);
@@ -37,7 +37,7 @@ Através da metodologia do Capítulo 01 – Gestão de Risco, foi atribuída cla
 
 ## 🔍 Threat modeling
 
-Aplicado conforme Capítulo 03 – Threat Modeling:
+Aplicado conforme Capítulo 03 - Threat Modeling:
 
 * Análise STRIDE dos fluxos de aplicação da infraestrutura;
 * Identificação de ameaças como:

@@ -1,5 +1,5 @@
 ---
-id: cra
+id: intro
 title: CRA - Cross-Check Normativo
 description: Análise de como o SbD-ToE cobre requisitos técnicos do Cyber Resilience Act (Produtos com Elementos Digitais)
 tags: [cross-check, cra, regulamentacao, produtos-digitais, sbom, vulnerabilidades]
@@ -8,7 +8,7 @@ sidebar_position: 5
 
 # CRA: Cross-Check Normativo
 
-> Para implementação prática, consulte o [Playbook SbD-ToE 4 CRA](/sbd-toe/002-cross-check-normativo/sbd-toe-4-cra-playbook).
+> Para implementação prática, consulte o [Playbook SbD-ToE 4 CRA](/sbd-toe/cross-check-normativo/sbd-toe-4-cra-playbook).
 > 
 > Para padrões aplicacionais universais, ver capítulos base do SbD-ToE (01–14).
 
@@ -54,7 +54,7 @@ O SbD-ToE define gates de segurança desde a classificação até ao deploy. Ist
 ### 2. Vulnerability Handling & Coordinated Disclosure
 SbD-ToE já prevê triagem interna (SCA, scans, testes). CRA exige também canal externo para investigadores ou utilizadores reportarem falhas.
 
-**Ação:** Criar página pública com política de disclosure (escopo, chave PGP, tempo de resposta, não iniciar ação legal de boa fé).
+**Ação:** Criar página pública com política de disclosure (Âmbito, chave PGP, tempo de resposta, não iniciar ação legal de boa fé).
 
 ### 3. SBOM e Transparência
 SBOM contínuo (Cap. 05) é base para fornecer visibilidade. CRA poderá exigir formato padronizado (CycloneDX/SPDX).

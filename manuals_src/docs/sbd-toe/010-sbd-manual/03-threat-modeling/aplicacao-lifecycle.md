@@ -42,7 +42,7 @@ Inclui modelos reutilizáveis de user stories, ações por papel, artefactos esp
 ---
 
 ## 📝 User Stories e Cartões Reutilizáveis
-### US-01 – Criação do modelo de ameaça
+### US-01 - Criação do modelo de ameaça
 
 **Contexto.**  
 No início do projeto, deve ser criado um modelo de ameaça proporcional ao risco da aplicação.
@@ -86,7 +86,7 @@ Como **Arquitetos de Software** e **Team Lead / Scrum Master**, quero criar um m
 
 ---
 
-### US-02 – Validação de arquitetura com threat modeling
+### US-02 - Validação de arquitetura com threat modeling
 
 **Contexto.**  
 As revisões de arquitetura devem incluir threat modeling para identificar ameaças estruturais.
@@ -126,7 +126,7 @@ Como **Arquitetos de Software** e **AppSec Engineer**, quero validar a arquitetu
 
 ---
 
-### US-03 – Atualização do modelo após alteração técnica
+### US-03 - Atualização do modelo após alteração técnica
 
 **Contexto.**  
 Sempre que ocorrer uma alteração significativa (nova feature, integração ou refactor), o modelo de ameaça deve ser atualizado.
@@ -168,7 +168,7 @@ Como **Arquitetos de Software** e **DevOps/SRE**, quero atualizar o modelo de am
 - 🔗 [SSDF Practices](https://csrc.nist.gov/publications/detail/sp/800-218/final)  
 
 ---
-### US-04 – Justificação formal de risco aceite
+### US-04 - Justificação formal de risco aceite
 
 **Contexto.**  
 Nem todas as ameaças podem ser mitigadas; riscos residuais devem ser formalmente documentados, aprovados e revistos.
@@ -212,7 +212,7 @@ Como **AppSec Engineer** e **GRC/Compliance**, quero documentar e aprovar formal
 
 ---
 
-### US-05 – Integração com CI/CD
+### US-05 - Integração com CI/CD
 
 **Contexto.**  
 O threat modeling deve ser integrado com pipelines CI/CD, garantindo que alterações significativas acionam revisão automática do modelo e validações associadas.
@@ -251,11 +251,11 @@ Como **DevOps/SRE** e **AppSec Engineer**, quero integrar validações de threat
 | Implementação / CI | Execução de pipeline | DevOps/SRE | Em cada commit/release |
 
 **Ligações úteis.**
-- 🔗 [DSOMM – Automation](https://dsomm.owasp.org/)  
+- 🔗 [DSOMM - Automation](https://dsomm.owasp.org/)  
 
 ---
 
-### US-06 – Validação de impacto no negócio
+### US-06 - Validação de impacto no negócio
 
 **Contexto.**  
 As ameaças identificadas devem ser priorizadas com base no impacto para o negócio, e não apenas em métricas técnicas.
@@ -297,7 +297,7 @@ Como **Product Owner**, quero priorizar as ameaças identificadas no modelo de a
 - 🔗 [ISO/IEC 27005 Risk Assessment](https://www.iso.org/standard/75281.html)  
 
 ---
-### US-07 – Automação e reutilização de modelos
+### US-07 - Automação e reutilização de modelos
 
 **Contexto.**  
 Ferramentas de threat modeling (ex.: OWASP Threat Dragon, Microsoft TMT, IriusRisk) devem ser usadas para automatizar e reutilizar modelos, garantindo consistência e eficiência.
@@ -341,7 +341,7 @@ Como **DevOps/SRE + AppSec Engineer**, quero usar ferramentas para automação e
 
 ---
 
-### US-08 – Aplicação LINDDUN quando existir tratamento de dados pessoais  *(novo)*
+### US-08 - Aplicação LINDDUN quando existir tratamento de dados pessoais  *(novo)*
 
 **Contexto.**  
 Quando o sistema trata dados pessoais, a análise de privacidade deve complementar a análise de segurança.
@@ -383,7 +383,7 @@ Como **Arquitetos de Software + AppSec Engineer**, quero aplicar **LINDDUN** qua
 
 **Ligações úteis.**
 - 🔗 [LINDDUN Framework](https://www.linddun.org/)  
-- 🔗 [ENISA – Privacy by Design Guidelines](https://www.enisa.europa.eu/)  
+- 🔗 [ENISA - Privacy by Design Guidelines](https://www.enisa.europa.eu/)  
 
 
 

@@ -6,7 +6,7 @@ tags: [desenvolvimento, maturidade, práticas avançadas, DevSecOps, validação
 sidebar_position: 30
 ---
 
-# 🧠 Recomendações Avançadas – Desenvolvimento Seguro
+# 🧠 Recomendações Avançadas - Desenvolvimento Seguro
 
 Este ficheiro apresenta um conjunto de práticas avançadas que **complementam e reforçam** as medidas prescritas neste capítulo.  
 São especialmente relevantes para organizações com pipelines maduros, cultura de DevSecOps, e equipas com elevada autonomia técnica.

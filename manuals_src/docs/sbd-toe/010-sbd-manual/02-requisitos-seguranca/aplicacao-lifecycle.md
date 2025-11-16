@@ -41,7 +41,7 @@ Inclui modelos reutilizáveis de user stories, ações por papel, artefactos esp
 
 ## 📝 User Stories e Cartões Reutilizáveis
 
-### US-01 – Seleção de requisitos por criticidade
+### US-01 - Seleção de requisitos por criticidade
 
 **Contexto.**  
 A seleção inicial de requisitos deve ser proporcional ao risco da aplicação (L1–L3).
@@ -81,7 +81,7 @@ Como **Product Owner**, quero selecionar os requisitos aplicáveis ao projeto, p
 
 ---
 
-### US-02 – Revisão por alteração relevante
+### US-02 - Revisão por alteração relevante
 
 **Contexto.**  
 A classificação e os requisitos aplicados devem ser revistos sempre que ocorra uma integração crítica, mudança de exposição, dados ou arquitetura que possa alterar o perfil de risco.
@@ -120,7 +120,7 @@ Como **Arquitetos de Software** e **Team Lead / Scrum Master**, quero rever a cl
 
 ---
 
-### US-03 – Gestão de Exceções com TTL e Revalidação Obrigatória
+### US-03 - Gestão de Exceções com TTL e Revalidação Obrigatória
 
 **Contexto.**  
 Nem todos os requisitos são aplicáveis; exceções devem ser formalmente documentadas, justificadas, aprovadas e sujeitas a revalidação periódica para evitar excepções permanentes.
@@ -163,7 +163,7 @@ Como **Developer** (proponente) e **GRC/Compliance** (regista), quero registar e
 
 ---
 
-### US-04 – Rastreabilidade de requisitos
+### US-04 - Rastreabilidade de requisitos
 
 **Contexto.**  
 Todos os requisitos aplicados devem ser rastreáveis no backlog e auditáveis.
@@ -206,7 +206,7 @@ Como **QA / Test Engineer**, quero garantir que todos os requisitos aplicados t�
 
 ---
 
-### US-05 – Definição de critérios de validação
+### US-05 - Definição de critérios de validação
 
 **Contexto.**  
 Cada requisito selecionado deve ter critérios de aceitação e validação definidos de forma explícita, para garantir verificabilidade e testes eficazes.
@@ -250,7 +250,7 @@ Como **Product Owner/QA**, quero garantir que cada requisito selecionado no back
 
 ---
 
-### US-06 – Validação de cobertura de testes
+### US-06 - Validação de cobertura de testes
 
 **Contexto.**  
 Requisitos devem ter sempre cobertura de testes para garantir eficácia e prevenir regressões.
@@ -293,7 +293,7 @@ Como **QA / Test Engineer**, quero garantir que todos os requisitos têm valida�
 
 ---
 
-### US-07 – Validação e aprovação final
+### US-07 - Validação e aprovação final
 
 **Contexto.**  
 A Equipa de Segurança deve validar requisitos aplicados e aprovar exceções, garantindo que as decisões de risco são formalmente controladas.
@@ -336,7 +336,7 @@ Como **Equipa de Segurança / AppSec**, quero validar a aplicação dos requisit
 
 ---
 
-### US-08 – Catálogo de requisitos do projeto (criação e manutenção)
+### US-08 - Catálogo de requisitos do projeto (criação e manutenção)
 
 **Contexto.**  
 No arranque do projeto e sempre que existam alterações de âmbito, deve existir um **catálogo versionado de requisitos (REQ-XXX)**, derivado da baseline organizacional e filtrado pela criticidade.
@@ -380,7 +380,7 @@ Como **AppSec/PO/TL**, quero estabelecer e manter um catálogo de requisitos de 
 
 ---
 
-### US-09 – Validação por requisito/domínio (REQ-XXX → evidência)
+### US-09 - Validação por requisito/domínio (REQ-XXX → evidência)
 
 **Contexto.**  
 Cada requisito ativo **deve** ter uma forma de validação associada (teste, revisão, scanner, evidência manual), com **resultado e prova** ligados ao requisito.
@@ -424,7 +424,7 @@ Como **QA/AppSec/TL**, quero validar cada requisito REQ-XXX segundo os critério
 
 ---
 
-### US-10 – Gates automáticos em CI/CD para requisitos de segurança
+### US-10 - Gates automáticos em CI/CD para requisitos de segurança
 
 **Contexto.**
 As pipelines devem impor verificações automáticas que assegurem que requisitos seleccionados (REQ-XXX) são validados antes de merge/release.
@@ -470,7 +470,7 @@ Como **DevOps/SRE** e **Developer**, quero que o pipeline CI/CD verifique automa
 
 ---
 
-### US-11 – Geração de SBOM e assinatura de artefactos de build
+### US-11 - Geração de SBOM e assinatura de artefactos de build
 
 **Contexto.**
 SBOMs e assinaturas provam a proveniência dos artefactos e são necessárias para auditoria e para gates de cadeia de fornecimento.
@@ -506,7 +506,7 @@ Como **Developer** e **DevOps/SRE**, quero que a pipeline gere um SBOM (CycloneD
 
 ---
 
-### US-12 – Validação de tags `SEC-Lx-*` e requisitos no pipeline
+### US-12 - Validação de tags `SEC-Lx-*` e requisitos no pipeline
 
 **Contexto.**
 Tags `SEC-Lx-*` e referências a `REQ-XXX` devem estar presentes nos cartões/PRs para garantir rastreabilidade e cobertura automática.
@@ -538,7 +538,7 @@ Como **Developer** e **QA**, quero que o pipeline valide a presença e conformid
 
 ---
 
-### US-13 – Política, Formação e Publicação de Procedimentos Operacionais
+### US-13 - Política, Formação e Publicação de Procedimentos Operacionais
 
 **Contexto.**
 Para que as práticas acima sejam aplicadas de forma consistente, a organização deve publicar políticas, definir responsabilidades e conduzir formação para os papéis relevantes.

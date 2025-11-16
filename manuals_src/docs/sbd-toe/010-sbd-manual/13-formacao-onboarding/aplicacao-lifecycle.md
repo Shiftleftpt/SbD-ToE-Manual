@@ -263,7 +263,7 @@ Como **AppSec Engineer**, quero **executar code clinics estruturadas** (revisão
 
 **Ligações úteis.**  
 [Técnicas Formativas Avançadas](formacao-onboarding/addon/04-tecnicas-formativas)  
-[Exemplo – Pull Request Seguro](formacao-onboarding/addon/07-exemplo1-manual-formacao-dev-pr-seguro)  
+[Exemplo - Pull Request Seguro](formacao-onboarding/addon/07-exemplo1-manual-formacao-dev-pr-seguro)  
 [Papéis e Responsabilidades](/sbd-toe/000-teory-of-everything/07-roles)
 
 ---
@@ -310,7 +310,7 @@ Como **Developer / Security Champion**, quero **liderar sessões de threat model
 **Ligações úteis.**  
 [Técnicas Formativas Avançadas](formacao-onboarding/addon/04-tecnicas-formativas)  
 [Integração Transversal com Capítulos Técnicos](formacao-onboarding/addon/05-integracao-transversal)  
-[Threat Modeling – Capítulo 03](/threat-modeling/intro)  
+[Threat Modeling - Capítulo 03](/threat-modeling/intro)  
 [Papéis e Responsabilidades](/sbd-toe/000-teory-of-everything/07-roles)
 
 ---
@@ -357,7 +357,7 @@ Como **Gestão Executiva / GRC**, quero **executar simulações de incidentes (w
 
 **Ligações úteis.**  
 [Técnicas Formativas Avançadas](formacao-onboarding/addon/04-tecnicas-formativas)  
-[Monitorização e Operações – Capítulo 12](/monitorizacao-operacoes/intro)  
+[Monitorização e Operações - Capítulo 12](/monitorizacao-operacoes/intro)  
 [Papéis e Responsabilidades](/sbd-toe/000-teory-of-everything/07-roles)
 
 ---
@@ -456,7 +456,7 @@ Documento de classificação de risco (cap 01), matriz de trilhos (addon/02) com
 
 **Ligações úteis.**  
 [Trilhos Formativos por Função e Risco](formacao-onboarding/addon/02-trilho-formativo)  
-[Gestão de Risco e Classificação – Capítulo 01](/classificacao-aplicacoes/intro)  
+[Gestão de Risco e Classificação - Capítulo 01](/classificacao-aplicacoes/intro)  
 [Papéis e Responsabilidades](/sbd-toe/000-teory-of-everything/07-roles)
 
 ---
@@ -603,7 +603,7 @@ Como **GRC / Gestão Executiva**, quero **garantir que fornecedores e terceiros 
 [Modelo de Inclusão de Terceiros](formacao-onboarding/addon/20-modelo-inclusao-terceiros)  
 [Plano de Formação de Terceiros](formacao-onboarding/addon/21-plano-formacao-terceiros)  
 [Quiz de Validação para Terceiros](formacao-onboarding/addon/22-template-quiz-terceiros)  
-[Governança e Contratação – Capítulo 14](/governanca-contratacao/intro)  
+[Governança e Contratação - Capítulo 14](/governanca-contratacao/intro)  
 [Papéis e Responsabilidades](/sbd-toe/000-teory-of-everything/07-roles)
 
 ### US-14 - KPIs de Capacitação e Reporte (GRC)

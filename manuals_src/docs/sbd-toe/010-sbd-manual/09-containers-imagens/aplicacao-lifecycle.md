@@ -44,7 +44,7 @@ Cada papel contribui com uma parte da cadeia de confiança, e apenas a colabora�
 
 ## 📖 User Stories Reutilizáveis
 
-### US-01 – Construção de imagens a partir de bases seguras, minimalistas e pinned por digest
+### US-01 - Construção de imagens a partir de bases seguras, minimalistas e pinned por digest
 
 **Contexto.**  
 Imagens construídas sobre bases não confiáveis ou com versões flutuantes herdam vulnerabilidades. O ponto de partida é crítico para toda a cadeia de confiança.
@@ -96,7 +96,7 @@ Como **Dev Team**, quero construir imagens a partir de bases confiáveis, versio
 
 ---
 
-### US-02 – Validação automática de vulnerabilidades em imagens no pipeline CI/CD
+### US-02 - Validação automática de vulnerabilidades em imagens no pipeline CI/CD
 
 **Contexto.**  
 Vulnerabilidades descobertas tarde no ciclo têm custo exponencial. Shift-left é imperativo: identificar CVEs durante a build, não em produção.
@@ -147,7 +147,7 @@ Como **DevOps**, quero que o pipeline execute scanners de vulnerabilidades (SCA)
 
 ---
 
-### US-03 – Assinatura e verificação de proveniência de imagens com Cosign e Rekor
+### US-03 - Assinatura e verificação de proveniência de imagens com Cosign e Rekor
 
 **Contexto.**  
 Sem proveniência verificável, imagens podem ser adulteradas ou substituídas. A assinatura é o segundo pilar da confiança (após a construção segura).
@@ -203,7 +203,7 @@ Como **AppSec**, quero que todas as imagens produzidas sejam assinadas digitalme
 
 ---
 
-### US-04 – Aplicação de políticas formais de segurança no runtime com OPA/Kyverno
+### US-04 - Aplicação de políticas formais de segurança no runtime com OPA/Kyverno
 
 **Contexto.**  
 Um container sem restrições de execução expande a superfície de ataque exponencialmente. Políticas formais garantem conformidade automática com baseline de segurança.
@@ -254,7 +254,7 @@ Como **DevOps**, quero que todas as execuções de containers em Kubernetes seja
 
 ---
 
-### US-05 – Monitorização e Resposta a Incidentes em Runtime
+### US-05 - Monitorização e Resposta a Incidentes em Runtime
 
 **Contexto.**  
 Ataques de runtime só são detetados com monitorização ativa contínua. Ausência de alertas permite persistência silenciosa de comprometimentos.
@@ -309,7 +309,7 @@ Como **AppSec + GRC**, quero monitorizar comportamento de containers em execuç�
 
 ---
 
-### US-06 – Geração e Rastreabilidade de SBOM em Imagens
+### US-06 - Geração e Rastreabilidade de SBOM em Imagens
 
 **Contexto.**  
 Sem SBOM, não há visibilidade sobre componentes presentes nem análise rápida de impacto de CVEs. SBOM é prerequisito para supply chain integrity.
@@ -365,7 +365,7 @@ Como **DevOps**, quero gerar SBOM (Software Bill of Materials) automaticamente a
 
 ---
 
-### US-07 – Governação de Registries com Allowlist e Digest-Only
+### US-07 - Governação de Registries com Allowlist e Digest-Only
 
 **Contexto.**  
 Pulls de registries não confiáveis ou com tags mutáveis expõem a cadeia de fornecimento a ataques de typosquatting e image tampering. Governance forma é imperativa.
@@ -419,7 +419,7 @@ Como **DevOps + AppSec**, quero impor allowlist de registries confiáveis e ***e
 
 ---
 
-### US-08 – Gestão de Segredos Fora da Imagem com OIDC e Workload Identity
+### US-08 - Gestão de Segredos Fora da Imagem com OIDC e Workload Identity
 
 **Contexto.**  
 Segredos embebidos em imagens criam exposição difícil de revogar. Credenciais long-lived em pipelines são vulneráveis a comprometimento. Workload identity efémera é o padrão moderno.
@@ -474,7 +474,7 @@ Como **DevOps**, quero proibir credenciais estáticas em imagens e usar identida
 
 ---
 
-### US-09 – RBAC Mínimo e ServiceAccounts Dedicadas
+### US-09 - RBAC Mínimo e ServiceAccounts Dedicadas
 
 **Contexto.**  
 Workloads com permissões excessivas ou usando default ServiceAccount ampliam impacto de compromisso. RBAC mínimo reduz "blast radius" de falhas de segurança.
@@ -528,7 +528,7 @@ Como **DevOps + AppSec**, quero ***enforce* uso de ServiceAccounts dedicadas com
 
 ---
 
-### US-10 – Segmentação de Rede e NetworkPolicy
+### US-10 - Segmentação de Rede e NetworkPolicy
 
 **Contexto.**  
 Sem segmentação de rede, workloads comprometidos exfiltram dados e propagam ataques lateralmente. NetworkPolicy implementa zero-trust de rede, bloqueando fluxos não-autorizados.
@@ -580,7 +580,7 @@ Como **DevOps + Infraestrutura**, quero aplicar NetworkPolicy com ingress/egress
 
 ---
 
-### US-11 – Golden Base Images com Patching Automático
+### US-11 - Golden Base Images com Patching Automático
 
 **Contexto.**  
 Bases heterogéneas aumentam custo operacional e risco de configuração. SLA de patching assegura que vulnerabilidades não se propagam.
@@ -607,7 +607,7 @@ Como **DevOps + AppSec**, quero manter catálogo de Golden Base Images com versi
 
 **Artefactos & evidências.**  
 - `golden-images-catalog.md` (tabela: base, latest tag, release date, EOL date, SBOM, assinatura status)
-- Changelog de segurança (Ex: "ubuntu-22.04:v1.2.4 – patch CVE-2024-12345 expat")
+- Changelog de segurança (Ex: "ubuntu-22.04:v1.2.4 - patch CVE-2024-12345 expat")
 - SBOM de cada golden image (formato CycloneDX, armazenado em registry via tag `.sbom.json` ou atributo custom)
 - Logs de patching: data/hora, criticidade, autor, link para upstream advisory
 - Métricas de adoção (% aplicações usando latest, % usando deprecated)
@@ -632,7 +632,7 @@ Como **DevOps + AppSec**, quero manter catálogo de Golden Base Images com versi
 
 ---
 
-### US-12 – Builders e Runners Ephemerais, Assinados e com Auditoria
+### US-12 - Builders e Runners Ephemerais, Assinados e com Auditoria
 
 **Contexto.**  
 Builders comprometidos comprometem todas as releases. Runners partilhados ou persistentes são pontos críticos de ataque na supply chain. Rastreabilidade é essencial para investigação pós-incidente.
@@ -689,7 +689,7 @@ Como **DevOps/AppSec**, quero que builders e runners sejam mínimos, ephemerais 
 
 ---
 
-### US-13 – Enforcement Centralizado e Auditável de Políticas no Runtime
+### US-13 - Enforcement Centralizado e Auditável de Políticas no Runtime
 
 **Contexto.**  
 Para garantir que políticas são aplicadas de forma sistemática e que violações são rastreadas, é necessário enforcement formal com logs centralizados e revisão periódica.
@@ -744,7 +744,7 @@ Como **DevOps/AppSec**, quero que o enforcement de políticas de segurança seja
 
 ---
 
-### US-14 – Sandboxing Avançado com gVisor/Kata para Workloads Críticas
+### US-14 - Sandboxing Avançado com gVisor/Kata para Workloads Críticas
 
 **Contexto.**  
 Aplicações que processam dados críticos (pagamentos, dados pessoais) exigem isolamento reforçado para proteção contra escalada de privilégios ou acesso ao host.

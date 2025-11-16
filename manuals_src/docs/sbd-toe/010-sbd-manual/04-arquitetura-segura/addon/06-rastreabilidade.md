@@ -54,8 +54,8 @@ Estes requisitos são aplicáveis diretamente ao **código, estrutura e prática
 
 ## 🔗 Relacionado com outros capítulos
 
-<!-- - [Capítulo 02 – Requisitos de Segurança (REQ-XXX)](../../02-requisitos-seguranca) -->
-- [Capítulo 06 – Desenvolvimento Seguro](/sbd-toe/sbd-manual/desenvolvimento-seguro/intro)
-- [Capítulo 07 – CI/CD Seguro](/sbd-toe/sbd-manual/cicd-seguro/intro)
-- [Capítulo 11 – Deploy e Controlo de Execução](/sbd-toe/sbd-manual/deploy-seguro/intro)
+<!-- - [Capítulo 02 - Requisitos de Segurança (REQ-XXX)](../../02-requisitos-seguranca) -->
+- [Capítulo 06 - Desenvolvimento Seguro](/sbd-toe/sbd-manual/desenvolvimento-seguro/intro)
+- [Capítulo 07 - CI/CD Seguro](/sbd-toe/sbd-manual/cicd-seguro/intro)
+- [Capítulo 11 - Deploy e Controlo de Execução](/sbd-toe/sbd-manual/deploy-seguro/intro)
 

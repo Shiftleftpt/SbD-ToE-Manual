@@ -7,7 +7,7 @@ tags: [formacao, iac, terraform, tfsec, checkov, pipelines, devops, validacao, r
 ---
 
 
-# 🧱 Módulo Formativo – Infraestrutura como Código (IaC) Seguro
+# 🧱 Módulo Formativo - Infraestrutura como Código (IaC) Seguro
 
 ## 🎯 Objetivo
 
@@ -74,10 +74,10 @@ Capacitar as equipas técnicas para:
 
 | Capítulo                       | Relevância                                                 |
 |--------------------------------|------------------------------------------------------------|
-| Capítulo 08 – IaC Seguro       | Fonte principal de requisitos e práticas (IAC-001 a IAC-013) |
-| Capítulo 07 – CI/CD Seguro     | Integração com pipelines e execuções isoladas             |
-| Capítulo 04 – Arquitetura      | Impacto estrutural das configurações e módulos reutilizáveis|
-| Capítulo 02 – Requisitos       | Correspondência com REQ-XXX relacionados com segredos, permissões, segregação |
+| Capítulo 08 - IaC Seguro       | Fonte principal de requisitos e práticas (IAC-001 a IAC-013) |
+| Capítulo 07 - CI/CD Seguro     | Integração com pipelines e execuções isoladas             |
+| Capítulo 04 - Arquitetura      | Impacto estrutural das configurações e módulos reutilizáveis|
+| Capítulo 02 - Requisitos       | Correspondência com REQ-XXX relacionados com segredos, permissões, segregação |
 
 ---
 

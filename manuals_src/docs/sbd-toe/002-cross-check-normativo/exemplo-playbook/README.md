@@ -1,157 +1,307 @@
 ---
-id: exemplos-playbook
+id: indice
 title: Exemplos de Suporte aos Playbooks
-description: Ficheiros exemplares para demonstrar como implementar os princípios do SbD-ToE (reutilizáveis para DORA, NIS2, ISO 27001, etc.)
-tags: [playbook, exemplos, dora, nis2, iso27001, implementacao, suporte]
+description: Templates e exemplos práticos reutilizáveis para implementar princípios do SbD-ToE em qualquer framework normativo
+tags: [playbook, exemplos, dora, nis2, iso27001, cra, gdpr, templates]
 ---
 
 # Exemplos de Suporte aos Playbooks
 
-Este folder contém **exemplos e templates** que ilustram como implementar os princípios prescritos no SbD-ToE.
+## 📚 Estrutura de Ficheiros
 
-Estes exemplos são **reutilizáveis para múltiplos playbooks** (DORA, NIS2, ISO 27001, etc.)
+Esta pasta (`exemplo-playbook`) contém **ficheiros exemplares** que demonstram como implementar os princípios que o SbD-ToE prescreve.
 
-## ⚠️ Importante
-
-**Estes ficheiros são exemplos, NÃO prescrições do manual.**
-
-O SbD-ToE prescreve *princípios*; organizações devem adaptar estes exemplos a:
-- Stack tecnológico específico
-- Constraints de orçamento e recursos
-- Governance existente
-- Contexto regulatório adicional
+**Importante:** 
+- Estes são exemplos, não prescrições
+- Cada organização deve adaptar ao seu contexto
+- Exemplos são **reutilizáveis para múltiplos normativos** (DORA, NIS2, ISO 27001, etc.)
 
 ---
 
-## Estrutura de Ficheiros
+## 📖 Ficheiros Disponíveis
 
-### 1. **01-exemplo-toolchain-options.md**
-Apresenta opções de ferramentas para implementar os princípios do Cap. 08, 12, etc.
-
-**Exemplos cobertos:**
-- Infraestrutura como Código (IaC)
-- Recolha centralizada de logs
-- Análise de vulnerabilidades (SCA/SAST)
-- CI/CD seguro
-
-**Nota:** Não é prescrição de qual ferramenta usar, mas ilustra como diferentes stacks podem implementar os *princípios*.
+### 1. **README.md** (Este ficheiro)
+Visão geral, estrutura e instruções de uso
 
 ---
 
-### 2. **02-exemplo-kpis-targets.md**
-Apresenta exemplos de KPIs e targets para diferentes perfis organizacionais.
+### 2. **[Opções de Toolchain](exemplo-toolchain-options)**
+**O que aborda:** Ferramentas para implementar princípios de IaC, logs, SCA/SAST
 
-**Exemplos cobertos:**
-- Banco pequeno (PME financeira)
-- Banco médio (regional)
-- Fintech de pagamentos
-- Segurado digital
+**Relacionado com (SbD-ToE):**
+- [Cap. 08 - IaC e Infraestrutura](/sbd-toe/sbd-manual/iac-infraestrutura/intro)
+- [Cap. 12 - Monitorização e Operações](/sbd-toe/sbd-manual/monitorizacao-operacoes/intro)
 
-**Nota:** Targets variam conforme risk appetite, não são obrigatórios.
+**Abstenção deliberada coberta:**
+- ❌ O manual NÃO prescreve "Usar Terraform" ou "Usar Splunk"
+- ✓ Exemplo: Como implementar "IaC" com Terraform, CloudFormation ou Helm
+- ✓ Exemplo: Como centralizar logs com ELK, Datadog ou Azure Sentinel
 
----
+**Quando usar:**
+- Avaliando qual stack technológico
+- Comparando opções de ferramentas
+- Validando que escolha implementa princípios SbD-ToE
 
-### 3. **03-exemplo-raci-governance.md**
-Template RACI exemplar mostrando como estruturar responsabilidades.
-
-**Exemplos cobertos:**
-- Governance committee
-- Security team
-- Development squads
-- Operations
-
-**Nota:** Organigrama específico depende de estrutura existente.
+**Entregáveis:**
+- Comparação 3 opções por dimensão (IaC, Logs, SCA, SAST, CI/CD)
+- Exemplos de código
+- Trilho de auditoria para cada opção
 
 ---
 
-### 4. **04-exemplo-relatorio-incidentes.md**
-Exemplo de template de reporte de incidentes alinhado com DORA RTS/ITS (informativo).
+### 3. **[KPIs e Targets](exemplo-kpis-targets)**
+**O que aborda:** KPIs e targets para diferentes perfis organizacionais
 
-**Nota:** Templates oficiais vêm de regulador (EBA, BCB, ESMA); este é apenas ilustrativo.
+**Relacionado com (SbD-ToE):**
+- [Cap. 12 - Monitorização e Operações](/sbd-toe/sbd-manual/monitorizacao-operacoes/intro)
 
----
+**Abstenção deliberada coberta:**
+- ❌ O manual NÃO prescreve "Target: Zero critical vulns"
+- ✓ Exemplo: Fintech (pequena) - targets agressivos, timeline curta
+- ✓ Exemplo: Banco (grande) - targets conservadores, timeline longa
+- ✓ Exemplo: PME (distribuída) - targets pragmáticos
 
-### 5. **05-exemplo-rto-rpo.md**
-Exemplo de definição de RTO/RPO por app, baseado em classificação L1–L3.
+**Quando usar:**
+- Definindo targets para sua organização
+- Comunicando com executivos ("Por que não 100%?")
+- Ajustando conforme maturidade
 
-**Exemplos cobertos:**
-- App L1 (não crítica): RTO 48h, RPO 24h
-- App L2 (crítica): RTO 4h, RPO 1h
-- App L3 (core banking): RTO `<`1h, RPO `<`15min
-
-**Nota:** Valores são exemplares; cada org define conforme criticidade real.
-
----
-
-### 6. **06-exemplo-roadmap-adaptado.md**
-Exemplos de roadmaps adaptados para diferentes cenários.
-
-**Exemplos cobertos:**
-- Cenário: Startup fintech (poucos recursos, deadline DORA curto)
-- Cenário: Banco tradicional (mais recursos, governance complexa)
-- Cenário: PME com outsourcing parcial
+**Entregáveis:**
+- KPI dashboards visuais (por cenário)
+- Tabelas de targets (por dimensão)
+- Processo de definição de targets
 
 ---
 
-### 7. **07-exemplo-politica-seguranca.md**
-Template exemplar de Política de Segurança Aplicacional.
+### 4. **[RACI e Governance](exemplo-raci-governance)**
+**O que aborda:** RACI e estrutura de governança
 
-**Conteúdo:**
-- Princípios (referência SbD-ToE Cap. 02)
-- Governança (Cap. 14)
-- Responsabilidades (RACI)
-- Ciclo de vida apps (Cap. 01–14)
-- Conformidade DORA (mapeamento)
+**Relacionado com (SbD-ToE):**
+- [Cap. 14 - Governança e Contratação](/sbd-toe/sbd-manual/governanca-contratacao/intro)
 
----
+**Abstenção deliberada coberta:**
+- ❌ O manual NÃO prescreve "CISO reporta a CTO" ou "7 reuniões/semana"
+- ✓ Exemplo: Fintech (pequena) - RACI enxuta, reuniões quinzenais
+- ✓ Exemplo: Banco (grande) - RACI estruturada, múltiplos níveis
+- ✓ Exemplo: PME (distribuída) - RACI híbrida, comunicação remota
 
-### 8. **08-exemplo-contrato-fornecedor.md**
-Exemplo de cláusulas técnicas para contrato de fornecedor.
+**Quando usar:**
+- Desenhando estrutura de governança
+- Definindo responsabilidades
+- Estruturando comunicação/reuniões
 
-**Conteúdo:**
-- Security by Design obligations
-- Ciclo de vida (onboarding/offboarding)
-- Testes de segurança
-- Liability e conformidade
-
----
-
-## Como Usar Estes Exemplos
-
-1. **Não copie diretamente** - Adapte ao seu contexto
-2. **Use como referência** - Combine com outras boas práticas
-3. **Valide com stakeholders** - Governança, GRC, Jurídico
-4. **Itere** - Atualize conforme lições aprendidas
+**Entregáveis:**
+- Organogramas (por cenário)
+- Matrizes RACI (por atividade)
+- Calendários de reuniões
+- Procedimentos de aprovação
 
 ---
 
-## Relação com o Manual
+### 5. **[Relatório de Incidentes](exemplo-relatorio-incidentes)**
+**O que aborda:** Template de reporte de incidentes
 
-| Ficheiro | Prescrição SbD-ToE | Abstenção Deliberada |
-|----------|---|---|
-| 01-toolchain-options | Cap. 08, 12 (princípios) | Ferramentas específicas |
-| 02-kpis-targets | Cap. 12 (métricas) | Targets quantitativos |
-| 03-raci-governance | Cap. 14 (governança) | Estrutura organizacional |
-| 04-relatorio-incidentes | Cap. 12 (incidentes) | Templates DORA RTS/ITS |
-| 05-rto-rpo | Cap. 01, 08 (disponibilidade) | Valores específicos |
-| 06-roadmap-adaptado | Playbook (fases) | Timeline executiva |
-| 07-politica-seguranca | Cap. 02, 14 | Política específica org |
-| 08-contrato-fornecedor | Cap. 14 | Cláusulas jurídicas |
+**Relacionado com (SbD-ToE):**
+- [Cap. 12 - Monitorização e Operações](/sbd-toe/sbd-manual/monitorizacao-operacoes/intro)
 
----
+**Abstenção deliberada coberta:**
+- ❌ O manual NÃO prescreve "Template ITS oficial DORA"
+- ✓ Exemplo: Como estruturar reporte (o quê, quando, como, quem, impacto, ação)
+- ✓ Exemplo: Campos para rastreabilidade
 
-## Aviso Legal
-
-Estes exemplos são fornecidos como referência educativa e de suporte ao playbook DORA.
-
-**Cada organização é responsável por:**
-- Adaptar a seu contexto legal, regulatório e operacional
-- Validar com GRC, Compliance, Jurídico
-- Assegurar conformidade com DORA e regulações locais
-- Testar antes de implementar em produção
+**Quando usar:**
+- Configurando ferramenta de incidentes (Jira, ServiceNow, etc.)
+- Alinhando equipa em definição de incidente
+- Preparando para auditoria DORA
 
 ---
 
-**Data:** Novembro 2025  
+### 6. **05-exemplo-rto-rpo.md** *(próximo a criar)*
+**O que aborda:** Definição de RTO/RPO por app
+
+**Relacionado com (SbD-ToE):**
+- [Cap. 01 - Classificação de Aplicações](/sbd-toe/sbd-manual/classificacao-aplicacoes/intro)
+- [Cap. 08 - IaC e Infraestrutura](/sbd-toe/sbd-manual/iac-infraestrutura/intro)
+
+**Abstenção deliberada coberta:**
+- ❌ O manual NÃO prescreve "RTO: `<1h`" ou "RPO: `<15min`"
+- ✓ Exemplo: Como definir por app L1/L2/L3
+- ✓ Exemplo: Como implementar (backups, replicas, failover)
+
+**Quando usar:**
+- Desenhando arquitetura de disponibilidade
+- Comunicando criticidade interna
+
+---
+
+### 7. **06-exemplo-roadmap-adaptado.md** *(próximo a criar)*
+**O que aborda:** Roadmaps adaptados a diferentes cenários
+
+**Relacionado com (SbD-ToE):**
+- [Playbook DORA](../dora/playbook) - Fases 0-5
+
+**Abstenção deliberada coberta:**
+- ❌ O manual NÃO prescreve "Fase 0 sempre 2 meses"
+- ✓ Exemplo: Timeline curta (Fintech: urgência DORA)
+- ✓ Exemplo: Timeline longa (Banco: complexidade + governance)
+- ✓ Exemplo: Timeline pragmática (PME: recursos)
+
+**Quando usar:**
+- Planeando implementação
+- Comunicando timeline executiva
+- Adaptando ao contexto real
+
+---
+
+### 8. **07-exemplo-politica-seguranca.md** *(próximo a criar)*
+**O que aborda:** Template de Política de Segurança
+
+**Relacionado com (SbD-ToE):**
+- [Cap. 02 - Requisitos de Segurança](/sbd-toe/sbd-manual/requisitos-seguranca/intro)
+- [Cap. 14 - Governança e Contratação](/sbd-toe/sbd-manual/governanca-contratacao/intro)
+
+**Abstenção deliberada coberta:**
+- ❌ O manual NÃO prescreve "Política de Segurança genérica"
+- ✓ Exemplo: Estrutura, conteúdo mínimo, assinatura
+- ✓ Exemplo: Referência a SbD-ToE e DORA
+
+**Quando usar:**
+- Redigindo política interno
+- Validando conteúdo essencial
+- Preparando para aprovação Board
+
+---
+
+### 9. **08-exemplo-contrato-fornecedor.md** *(próximo a criar)*
+**O que aborda:** Cláusulas técnicas de segurança em contratos
+
+**Relacionado com (SbD-ToE):**
+- [Cap. 14 - Governança e Contratação](/sbd-toe/sbd-manual/governanca-contratacao/intro)
+- [Cap. 05 - Dependências, SBOM e SCA](/sbd-toe/sbd-manual/dependencias-sbom-sca/intro)
+
+**Abstenção deliberada coberta:**
+- ❌ O manual NÃO prescreve "Cláusulas jurídicas específicas"
+- ✓ Exemplo: Requisitos técnicos (SbD compliance, formação, etc.)
+- ✓ Exemplo: SLAs de resposta (incidentes, remediação, etc.)
+
+**Quando usar:**
+- Negociando com fornecedores
+- Incluindo security requirements
+- Alinhando com DORA Art. 26-28
+
+---
+
+## 🔍 Como Encontrar o que Procura
+
+### "Preciso escolher ferramentas"
+→ **[Opções de Toolchain](exemplo-toolchain-options)**
+
+### "Como defino targets de segurança?"
+→ **[KPIs e Targets](exemplo-kpis-targets)**
+
+### "Como estruturo governança?"
+→ **[RACI e Governance](exemplo-raci-governance)**
+
+### "Como reporto incidentes?"
+→ **[Relatório de Incidentes](exemplo-relatorio-incidentes)**
+
+### "Como defino RTO/RPO?"
+→ **Exemplo RTO/RPO** *(a criar)*
+
+### "Como planejo a implementação?"
+→ **Exemplo Roadmap Adaptado** *(a criar)* + [**Playbook DORA**](../dora/playbook)
+
+### "Como escrevo a política?"
+→ **Exemplo Política de Segurança** *(a criar)*
+
+### "Como fecho um contrato seguro?"
+→ **Exemplo Contrato com Fornecedor** *(a criar)*
+
+---
+
+## 📋 Checklist de Uso
+
+Ao usar estes exemplos:
+
+- [ ] **Ler README** - Entender propósito
+- [ ] **Selecionar exemplo relevante** - Por contexto/abstenção
+- [ ] **Adaptar ao seu contexto** - Não copiar direto
+- [ ] **Validar com stakeholders** - GRC, Jurídico, Compliance
+- [ ] **Testar antes de implementar** - Validar trilho auditoria
+- [ ] **Documentar decisões** - Porquê escolheu X vs Y
+- [ ] **Iterar** - Ajustar conforme lições
+
+---
+
+## 🔗 Relação com Capítulos do Manual
+
+```
+SbD-ToE Manual
+├─ [Cap. 01](/sbd-toe/sbd-manual/classificacao-aplicacoes/intro) - Classificação de Aplicações
+│  └─ Exemplo: 05-rto-rpo.md, 06-roadmap.md
+├─ [Cap. 02](/sbd-toe/sbd-manual/requisitos-seguranca/intro) - Requisitos de Segurança
+│  └─ Exemplo: 07-politica-seguranca.md
+├─ [Cap. 05](/sbd-toe/sbd-manual/dependencias-sbom-sca/intro) - Dependências, SBOM e SCA
+│  └─ Exemplo: 01-toolchain (SCA)
+├─ [Cap. 08](/sbd-toe/sbd-manual/iac-infraestrutura/intro) - IaC e Infraestrutura
+│  └─ Exemplo: 01-toolchain (IaC options)
+├─ [Cap. 12](/sbd-toe/sbd-manual/monitorizacao-operacoes/intro) - Monitorização e Operações
+│  └─ Exemplo: 01-toolchain (logs), 02-kpis, 04-incidentes
+├─ [Cap. 14](/sbd-toe/sbd-manual/governanca-contratacao/intro) - Governança e Contratação
+│  └─ Exemplo: 03-raci-governance.md, 07-politica.md, 08-contrato.md
+└─ Playbook DORA
+   └─ Exemplo: Todos (implementar princípios)
+```
+
+---
+
+## ⚠️ Avisos Importantes
+
+1. **Estes exemplos são ilustrativos**
+   - Não copie diretamente
+   - Adapte ao seu contexto legal, regulatório, operacional
+
+2. **Consulte especialistas**
+   - GRC/Compliance para políticas
+   - Jurídico para contratos
+   - Segurança para arquitetura
+
+3. **Teste antes de usar em produção**
+   - Validar trilho auditoria
+   - Verificar conformidade com DORA
+   - Confirmar integração
+
+4. **Atualize regularmente**
+   - DORA evolui (RTS/ITS)
+   - Ferramentas evoluem
+   - Best practices evoluem
+
+---
+
+## 🔄 Processo de Atualização
+
+Estes exemplos serão atualizados quando:
+- DORA RTS/ITS mudam
+- Novo major version SbD-ToE
+- Feedback de implementações reais
+- Mudanças em best practices
+
+**Próxima revisão programada:** Junho 2026
+
+---
+
+## 📞 Feedback
+
+Se encontrar:
+- ❓ Ambiguidade nos exemplos
+- 🐛 Erro técnico
+- ✨ Sugestão de melhoria
+- 🔄 Novo exemplo needed
+
+**Contacte:** [guardaremos para future releases]
+
+---
+
 **Versão:** 1.0  
+**Data:** Novembro 2025  
 **Próxima atualização:** Junho 2026

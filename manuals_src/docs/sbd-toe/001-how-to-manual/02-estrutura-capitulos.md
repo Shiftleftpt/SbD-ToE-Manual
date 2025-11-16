@@ -3,12 +3,12 @@ id: estrutura-capitulos
 title: Estrutura dos Capítulos do Manual SbD-ToE
 hide_title: false
 hide_table_of_contents: false
-description: Classificação dos capítulos do manual em Basilares, Operacionais e Organizacionais, e respetiva função no modelo Security by Design – Theory of Everything.
+description: Classificação dos capítulos do manual em Basilares, Operacionais e Organizacionais, e respetiva função no modelo Security by Design - Theory of Everything.
 ---
 
 # Estrutura dos Capítulos do Manual SbD-ToE
 
-O manual *Security by Design – Theory of Everything (SbD-ToE)* organiza os seus 14 capítulos em **três agrupamentos complementares**, que refletem a natureza e o papel de cada tema dentro do modelo global de segurança.
+O manual *Security by Design - Theory of Everything (SbD-ToE)* organiza os seus 14 capítulos em **três agrupamentos complementares**, que refletem a natureza e o papel de cada tema dentro do modelo global de segurança.
 
 Cada agrupamento representa um **nível distinto de responsabilidade** no ciclo de vida e governação da segurança de software:
 
@@ -107,4 +107,4 @@ A aplicação bem-sucedida do SbD-ToE requer equilíbrio entre os três níveis:
 > ⚙️ **Operacionais** - executam o ciclo de segurança  
 > 🏛️ **Organizacionais** - garantem continuidade e governação  
 
-Juntos, formam a estrutura completa do *Security by Design – Theory of Everything*, onde **a segurança é construída por design e sustentada por cultura**.
+Juntos, formam a estrutura completa do *Security by Design - Theory of Everything*, onde **a segurança é construída por design e sustentada por cultura**.

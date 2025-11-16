@@ -1,5 +1,5 @@
 ---
-id: gdpr
+id: intro
 title: GDPR - Cross-Check Normativo
 description: Como o SbD-ToE cobre requisitos técnicos do RGPD (UE 2016/679)
 tags: [cross-check, gdpr, privacidade, protecao-dados, art32, privacy-by-design]
@@ -8,7 +8,7 @@ sidebar_position: 7
 
 # GDPR: Cross-Check Normativo
 
-> Para implementação prática, consulte o [Playbook SbD-ToE 4 GDPR](/sbd-toe/002-cross-check-normativo/sbd-toe-4-gdpr-playbook).
+> Para implementação prática, consulte o [Playbook SbD-ToE 4 GDPR](/sbd-toe/cross-check-normativo/sbd-toe-4-gdpr-playbook).
 >
 > Para padrões aplicacionais universais, ver capítulos base do SbD-ToE (01–14).
 
@@ -31,7 +31,7 @@ Cobertura SbD-ToE:
 - Cap. 04: Arquitetura segura (segregação, encriptação, logging proporcional)
 - Cap. 11: Validação antes de produção (confirmações de requisitos)
 
-Lacuna intencional: Definição de bases legais, políticas de conservação e finalidades → fora do escopo técnico; tratar em governança/DPO.
+Lacuna intencional: Definição de bases legais, políticas de conservação e finalidades → fora do âmbito técnico; tratar em governança/DPO.
 
 ---
 
@@ -83,7 +83,7 @@ Lacuna intencional: Templates formais de notificação e critérios legais de co
 
 ---
 
-### DPIA – Avaliação de Impacto (Art. 35)
+### DPIA - Avaliação de Impacto (Art. 35)
 Exige DPIA quando o tratamento é suscetível de alto risco.
 
 Cobertura SbD-ToE (parcial):
@@ -140,8 +140,8 @@ Responda SIM:
 ## Referências
 
 - Regulamento (UE) 2016/679 (RGPD)
-- ENISA – Guidelines on Security of Personal Data Processing
-- EDPB – Guidelines (DPIA, Breach Notification)
+- ENISA - Guidelines on Security of Personal Data Processing
+- EDPB - Guidelines (DPIA, Breach Notification)
 - SbD-ToE Capítulos 01–14
 
 **Versão:** 1.0  

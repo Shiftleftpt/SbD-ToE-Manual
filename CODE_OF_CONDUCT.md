@@ -1,4 +1,4 @@
-# Código de Conduta – Security by Design – Theory of Everything
+# Código de Conduta - Security by Design - Theory of Everything
 
 Este projeto adota o [Contributor Covenant v2.1](https://www.contributor-covenant.org/version/2/1/code_of_conduct/).
 

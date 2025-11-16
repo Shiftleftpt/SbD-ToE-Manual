@@ -11,7 +11,7 @@ sidebar_position: 30
 Este anexo apresenta **práticas de nível avançado**, não obrigatórias, destinadas a organizações com maior maturidade, requisitos normativos exigentes (ex.: NIS2, DORA, ISO 27034, IEC 62443) ou equipas com processos de engenharia de segurança já consolidados.
 
 > Estas práticas **não substituem** as prescrições do Capítulo 3, nem são usadas no cálculo de maturidade.  
-> Funcionam como **extensões facultativas**, alinhadas com os níveis 3 do **OWASP SAMM** e **DSOMM – Design & Development**, reforçando a automação, rastreabilidade e governação.
+> Funcionam como **extensões facultativas**, alinhadas com os níveis 3 do **OWASP SAMM** e **DSOMM - Design & Development**, reforçando a automação, rastreabilidade e governação.
 
 ---
 

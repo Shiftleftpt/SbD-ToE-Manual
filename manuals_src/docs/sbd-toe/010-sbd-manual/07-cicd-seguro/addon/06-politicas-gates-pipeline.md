@@ -76,7 +76,7 @@ Nem todas as aplicações requerem o mesmo nível de segurança, mas **todas dev
 
 - **Jenkins**  
   - Uso de `when { expression { isCritical() } }` para ativar etapas reforçadas;  
-  - Integração com ferramentas de policy-as-code (ex: Open Policy Agent – OPA).
+  - Integração com ferramentas de policy-as-code (ex: Open Policy Agent - OPA).
 
 ---
 

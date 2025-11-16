@@ -130,10 +130,10 @@ Release Management é o processo de **preparação, aprovação, distribuição 
 
 | Documento / Capítulo         | Relação com este tema                       |
 |------------------------------|---------------------------------------------|
-| Cap. 07 – CI/CD Seguro       | Processo automatizado e controlos por stage |
-| Cap. 05 – Dependências e SBOM| SBOM como requisito para release            |
-| Cap. 10 – Testes de Segurança| Validação antes do deploy                   |
-| Cap. 12 – Monitorização      | Observação pós-release                      |
+| Cap. 07 - CI/CD Seguro       | Processo automatizado e controlos por stage |
+| Cap. 05 - Dependências e SBOM| SBOM como requisito para release            |
+| Cap. 10 - Testes de Segurança| Validação antes do deploy                   |
+| Cap. 12 - Monitorização      | Observação pós-release                      |
 | SLSA L3/L4                   | Proveniência de release e rollback seguro   |
 | NIST SSDF PM.3, RV.1         | Aprovação formal e gestão de riscos         |
 

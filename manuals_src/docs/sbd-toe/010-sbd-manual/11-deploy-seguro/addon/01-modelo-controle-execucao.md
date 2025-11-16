@@ -71,9 +71,9 @@ São exemplos típicos:
 
 | Documento / Capítulo               | Relação com este tema                              |
 |------------------------------------|----------------------------------------------------|
-| Cap. 07 – CI/CD Seguro             | Validação de ambientes e execução por pipeline     |
-| Cap. 10 – Testes de Segurança      | Testes funcionais a toggles, guards e fallbacks    |
-| Cap. 12 – Monitorização e Alertas  | Observabilidade de runtime e resposta a falhas     |
+| Cap. 07 - CI/CD Seguro             | Validação de ambientes e execução por pipeline     |
+| Cap. 10 - Testes de Segurança      | Testes funcionais a toggles, guards e fallbacks    |
+| Cap. 12 - Monitorização e Alertas  | Observabilidade de runtime e resposta a falhas     |
 | SLSA L3/L4                         | Execução verificada, ambientes controlados         |
 | NIST SSDF PR.AC-3                  | Controlo de execução autorizado                    |
 

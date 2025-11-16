@@ -8,7 +8,7 @@ sidebar_position: 60
 
 # 🏠 Políticas Organizacionais — IaC e Infraestrutura como Código
 
-A aplicação eficaz do **Capítulo 08 – IaC e Infraestrutura como Código** exige a existência de **políticas organizacionais formais** que enquadrem, reforcem e legitimem as práticas de governação técnica, segurança e validação associadas à automatização da infraestrutura.
+A aplicação eficaz do **Capítulo 08 - IaC e Infraestrutura como Código** exige a existência de **políticas organizacionais formais** que enquadrem, reforcem e legitimem as práticas de governação técnica, segurança e validação associadas à automatização da infraestrutura.
 
 Estas políticas asseguram que:
 

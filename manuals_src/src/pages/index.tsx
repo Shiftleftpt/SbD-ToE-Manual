@@ -7,7 +7,7 @@ import styles from './index.module.css';
 
 function HomepageHeader() {
   const {siteConfig} = useDocusaurusContext();
-  const introUrl = 'sbd-toe/sbd-manual/';
+  const introUrl = 'sbd-toe/sbd-manual/classificacao-aplicacoes/intro';
 
   return (
     <header className={clsx('hero', 'hero--primary', styles.slHero)}>
@@ -17,9 +17,12 @@ function HomepageHeader() {
            <p className={styles.heroTagline} role="doc-subtitle" aria-describedby="hero-cta">
             Theory of <strong>Everything</strong>
           </p>
+          <p className="hero__subtitle" style={{ marginBottom: '1.5rem', fontSize: '1.1rem', color: 'var(--ifm-color-emphasis-700)' }}>
+            Manual prático de segurança aplicacional para todo o ciclo de vida de desenvolvimento
+          </p>
           <div className={styles.ctaWrap}>
             <Link className="button button--lg button--secondary" to={introUrl}>
-              Explorar o Manual →
+              Começar pelo Capítulo 01 →
             </Link>
           </div>
         </div>
@@ -31,35 +34,35 @@ function HomepageHeader() {
 function SectionCards() {
   const cards = [
     {
-      title: 'Theory of Everything',
-      description: 'Visão global: princípios, governação e aplicação do SbD-ToE.',
-      to: '/sbd-toe/teory-of-everything/intro',
+      title: 'Manual SbD-ToE (Cap. 01-14)',
+      description: '14 capítulos práticos cobrindo todo o ciclo de vida de segurança aplicacional, desde classificação até operações.',
+      to: '/sbd-toe/sbd-manual/classificacao-aplicacoes/intro',
       icon: '📘',
     },
     {
-      title: 'Como usar este manual',
-      description: 'Guia prático para navegar e aplicar o conteúdo na organização.',
-      to: '/sbd-toe/how-to-manual/como-usar-este-manual',
+      title: 'Theory of Everything',
+      description: 'Fundamentos, filosofia e aplicação do modelo. Como o SbD-ToE unifica frameworks e normas.',
+      to: '/sbd-toe/teory-of-everything/intro',
       icon: '🧭',
     },
     {
       title: 'Cross-check normativo',
-      description: 'Como o SbD-ToE cobre (ou liga a) NIS2, DORA, ISO/IEC 27001, SSDF, SLSA, etc.',
+      description: 'Mapeamento para DORA, NIS2, CRA, GDPR, ISO 27001 e outros frameworks regulatórios.',
       to: '/sbd-toe/cross-check-normativo/intro',
       icon: '🏛️',
     },
     {
-      title: 'Políticas globais do manual',
-      description: 'Conjunto de políticas organizacionais transversais ao SbD-ToE.',
-      to: '/sbd-toe/policies-globals/intro',
-      icon: '📜',
+      title: 'Como usar este manual',
+      description: 'Guia de navegação, estrutura dos capítulos e cobertura de frameworks externos.',
+      to: '/sbd-toe/how-to-manual/como-usar-este-manual',
+      icon: '�',
     },
   ];
 
   return (
     <section className={styles.cardsSection}>
       <div className="container">
-        <h2 className={styles.cardsTitle}>Capítulos e temas</h2>
+        <h2 className={styles.cardsTitle}>Explorar o manual</h2>
         <div className={clsx('row', styles.cardsGrid)}>
           {cards.map((c, idx) => (
             // menos espaço vertical entre cards
@@ -88,26 +91,26 @@ function SectionCards() {
 function SectionFeatures() {
   const features = [
     {
-      title: 'A “cola” entre standards',
-      description: <>Agrega OWASP, NIST SSDF, SLSA, MITRE e outros, com aplicação pragmática.</>,
-      icon: '🧩',
-    },
-    {
-      title: 'Foco no que fazer (e quando)',
-      description: <>Prescritivo, com responsabilidades, exemplos, checklists e ações por fase do SDLC.</>,
+      title: '14 capítulos basilares + addons',
+      description: <>Cobertura completa do ciclo de vida: classificação, requisitos, threat modeling, arquitetura, dependências, desenvolvimento, CI/CD, IaC, containers, testes, deploy, operações, formação e governança.</>,
       icon: '📋',
     },
     {
-      title: 'Desenhado para adaptar',
-      description: <>Aplicável a contextos cloud-native, DevSecOps, pipelines tradicionais e modelos híbridos.</>,
-      icon: '⚙️',
+      title: 'Baseado em frameworks estabelecidos',
+      description: <>Agrega OWASP SAMM, NIST SSDF, SLSA, BSIMM, MITRE ATT&CK e catálogos de ameaças (STRIDE, CWE, CAPEC) numa abordagem unificada e pragmática.</>,
+      icon: '🧩',
+    },
+    {
+      title: 'Proporcional ao risco (L1/L2/L3)',
+      description: <>Controlos ajustados à criticidade da aplicação. Requisitos mínimos para L1, essenciais para L2, rigorosos para L3. Evita sobreproteção e subproteção.</>,
+      icon: '⚖️',
     },
   ];
 
   return (
     <section className={styles.features}>
       <div className="container">
-        <h2 className={styles.cardsTitle}></h2>
+        <h2 className={styles.cardsTitle}>O que encontras aqui</h2>
         <div className="row">
           {features.map((f, idx) => (
             <div key={idx} className="col col--4">
@@ -127,7 +130,7 @@ export default function Home(): JSX.Element {
   const {siteConfig} = useDocusaurusContext();
   return (
     <Layout
-      title={`Início – ${siteConfig.title}`}
+      title={`Início - ${siteConfig.title}`}
       description="Manual prático e aberto para aplicar Security by Design em organizações modernas.">
       <HomepageHeader />
       <main>

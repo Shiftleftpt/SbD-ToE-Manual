@@ -76,10 +76,10 @@ Para tal é necessário adoptar uma taxonomia comum que permita a partilha de in
 
 | ARC-ID | Prática associada | Artefacto esperado |
 |---|---|---|
-| **ARC-015 – AuthN centralizada** | Integração OIDC; revisão *trust boundary* | ADR, `integration-review.md`, `solution-architecture.md` |
-| **ARC-023 – Segregação por contexto** | *Trust boundaries*, *least privilege* | Diagrama C4 anotado, *review* AppSec |
-| **ARC-031 – Criptografia em trâns./repouso** | *Key management*, *KMS* | `solution-architecture.md`, *evidence* CI/CD |
-| **ARC-042 – Observabilidade de segurança** | *Tracing*, *audit logs* | Plano de *logging*, métricas, *dashboards* |
+| **ARC-015 - AuthN centralizada** | Integração OIDC; revisão *trust boundary* | ADR, `integration-review.md`, `solution-architecture.md` |
+| **ARC-023 - Segregação por contexto** | *Trust boundaries*, *least privilege* | Diagrama C4 anotado, *review* AppSec |
+| **ARC-031 - Criptografia em trâns./repouso** | *Key management*, *KMS* | `solution-architecture.md`, *evidence* CI/CD |
+| **ARC-042 - Observabilidade de segurança** | *Tracing*, *audit logs* | Plano de *logging*, métricas, *dashboards* |
 
 ## 🔄 Como usar este jargão nas User Stories 
 - **US-08 (ADR)**: aceitar como válido ADR em Markdown, *wiki* ou *issue*, desde que haja contexto → decisão → impacto → rastreabilidade (ARC-XXX).  

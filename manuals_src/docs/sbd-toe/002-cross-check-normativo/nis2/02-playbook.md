@@ -1,5 +1,5 @@
 ---
-id: sbd-toe-4-nis2-playbook
+id: playbook
 title: "SbD-ToE 4 NIS2: Playbook de Implementação"
 description: Roadmap prático para implementar SbD-ToE conforme requisitos NIS2 — mapeamento direto de artigos para ações
 tags: [playbook, nis2, implementacao, roadmap]
@@ -20,17 +20,19 @@ Este playbook mapeia **requisitos NIS2 (Diretiva UE 2022/2555) para ações SbD-
 - O que fazer (ação concreta)
 - Evidência regulatória
 
+> 📚 **Recursos de Suporte:** Para templates práticos e exemplos de implementação, consultar [Exemplo-Playbook](/sbd-toe/cross-check-normativo/exemplo-playbook/indice) com toolchains, KPIs, RACI e relatórios de incidentes reutilizáveis para NIS2 e outros frameworks.
+
 ---
 
 ## Mapa Rápido: NIS2 Art. → SbD-ToE
 
 | NIS2 Artigo | Requisito | Capítulo SbD-ToE | Ação Principal |
 |----------|-----------|-----------------|----------------|
-| **20** | Governação e Responsabilização | Cap. 02, 13, 14 | Aprovar políticas (board); formação gestão |
-| **21** | Medidas de Gestão de Risco | Cap. 01–14 | Implementar controlos técnicos; evidências |
-| **23** | Reporte de Incidentes | Cap. 12, 14 | Deteção, reporte 24h/72h/1M; schema |
-| **Cadeia Fornecimento** | Segurança de Fornecedores | Cap. 05, 14 | SBOM; avaliação terceiros; registos |
-| **Continuidade** | Continuidade e Crise | Cap. 12 | Backups testados; DR; logging |
+| **20** | Governação e Responsabilização | [Cap. 02](/sbd-toe/sbd-manual/requisitos-seguranca/intro), [Cap. 13](/sbd-toe/sbd-manual/formacao-onboarding/intro), [Cap. 14](/sbd-toe/sbd-manual/governanca-contratacao/intro) | Aprovar políticas (board); formação gestão |
+| **21** | Medidas de Gestão de Risco | [Cap. 01](/sbd-toe/sbd-manual/classificacao-aplicacoes/intro)–[Cap. 14](/sbd-toe/sbd-manual/governanca-contratacao/intro) | Implementar controlos técnicos; evidências |
+| **23** | Reporte de Incidentes | [Cap. 12](/sbd-toe/sbd-manual/monitorizacao-operacoes/intro), [Cap. 14](/sbd-toe/sbd-manual/governanca-contratacao/intro) | Deteção, reporte 24h/72h/1M; schema |
+| **Cadeia Fornecimento** | Segurança de Fornecedores | [Cap. 05](/sbd-toe/sbd-manual/dependencias-sbom-sca/intro), [Cap. 14](/sbd-toe/sbd-manual/governanca-contratacao/intro) | SBOM; avaliação terceiros; registos |
+| **Continuidade** | Continuidade e Crise | [Cap. 12](/sbd-toe/sbd-manual/monitorizacao-operacoes/intro) | Backups testados; DR; logging |
 
 ---
 
@@ -52,7 +54,7 @@ Este playbook mapeia **requisitos NIS2 (Diretiva UE 2022/2555) para ações SbD-
 3. **Definir RACI**
    - Quem aprova o quê (aprovações formais)
    - Escalations (quando elevar)
-   - Referência: [Cap. 07 - Roles](/sbd-toe/000-teory-of-everything/07-roles)
+   - Referência: [Cap. 07 - Roles](/sbd-toe/teory-of-everything/roles)
 
 4. **Estabelecer Programa de Formação para a Gestão**
    - Periodicidade: Anual (mínimo)
@@ -131,7 +133,7 @@ Este playbook mapeia **requisitos NIS2 (Diretiva UE 2022/2555) para ações SbD-
 **NIS2 Art. 21** — Gestão de fornecedores e terceiros
 
 #### 4.1 Fornecedores de Componentes (SBOM)
-**Já em Fase 3.2** — Cap. 05 cobre isto com SCA + SBOM
+**Já em Fase 3.2** — [Cap. 05](/sbd-toe/sbd-manual/dependencias-sbom-sca/intro) cobre isto com SCA + SBOM
 
 #### 4.2 Fornecedores Contratuais
 - **O que:** Pessoas/empresas contratadas (contractors, outsourcing)
@@ -241,20 +243,20 @@ A lista abaixo permite validar o alinhamento do programa SbD-ToE com os requisit
 
 | Capítulo | NIS2 Artigos | O Que Faz |
 |----------|-------------|----------|
-| **Cap. 01** | Art. 21 | Classificação de apps por risco (L1–L3) |
-| **Cap. 02** | Art. 20, 21 | Requisitos de segurança mínimos por nível |
-| **Cap. 03** | Art. 21 | Threat modeling para identificar ameaças realistas |
-| **Cap. 04** | Art. 21 | Arquitetura segura, IAM, criptografia |
-| **Cap. 05** | Art. 21 | SBOM, SCA, gestão de vulnerabilidades |
-| **Cap. 06** | Art. 21 | Desenvolvimento seguro |
-| **Cap. 07** | Art. 21 | CI/CD seguro, gates, trilho auditado |
-| **Cap. 08** | Art. 21 | IaC segura |
-| **Cap. 09** | Art. 21 | Containers/runtime seguros |
-| **Cap. 10** | Art. 21 | Testes contínuos (SAST/DAST/penetração) |
-| **Cap. 11** | Art. 21 | Validação pré-deploy, conformidade requisitos |
-| **Cap. 12** | Art. 21, 23 | Monitorização, deteção/reporte de incidentes, continuidade |
-| **Cap. 13** | Art. 20, 21 | Formação de staff e gestão em cibersegurança |
-| **Cap. 14** | Art. 20, 21 | Governança, RACI, ciclo de vida fornecedores |
+| **[Cap. 01](/sbd-toe/sbd-manual/classificacao-aplicacoes/intro)** | Art. 21 | Classificação de apps por risco (L1–L3) |
+| **[Cap. 02](/sbd-toe/sbd-manual/requisitos-seguranca/intro)** | Art. 20, 21 | Requisitos de segurança mínimos por nível |
+| **[Cap. 03](/sbd-toe/sbd-manual/threat-modeling/intro)** | Art. 21 | Threat modeling para identificar ameaças realistas |
+| **[Cap. 04](/sbd-toe/sbd-manual/arquitetura-segura/intro)** | Art. 21 | Arquitetura segura, IAM, criptografia |
+| **[Cap. 05](/sbd-toe/sbd-manual/dependencias-sbom-sca/intro)** | Art. 21 | SBOM, SCA, gestão de vulnerabilidades |
+| **[Cap. 06](/sbd-toe/sbd-manual/desenvolvimento-seguro/intro)** | Art. 21 | Desenvolvimento seguro |
+| **[Cap. 07](/sbd-toe/sbd-manual/cicd-seguro/intro)** | Art. 21 | CI/CD seguro, gates, trilho auditado |
+| **[Cap. 08](/sbd-toe/sbd-manual/iac-infraestrutura/intro)** | Art. 21 | IaC segura |
+| **[Cap. 09](/sbd-toe/sbd-manual/containers-runtime/intro)** | Art. 21 | Containers/runtime seguros |
+| **[Cap. 10](/sbd-toe/sbd-manual/testes-seguranca/intro)** | Art. 21 | Testes contínuos (SAST/DAST/penetração) |
+| **[Cap. 11](/sbd-toe/sbd-manual/deploy-seguro/intro)** | Art. 21 | Validação pré-deploy, conformidade requisitos |
+| **[Cap. 12](/sbd-toe/sbd-manual/monitorizacao-operacoes/intro)** | Art. 21, 23 | Monitorização, deteção/reporte de incidentes, continuidade |
+| **[Cap. 13](/sbd-toe/sbd-manual/formacao-onboarding/intro)** | Art. 20, 21 | Formação de staff e gestão em cibersegurança |
+| **[Cap. 14](/sbd-toe/sbd-manual/governanca-contratacao/intro)** | Art. 20, 21 | Governança, RACI, ciclo de vida fornecedores |
 
 ---
 
@@ -314,11 +316,24 @@ A ausência de formalização pode comprometer a conformidade regulatória e exp
 
 ---
 
+## Recursos Práticos de Implementação
+
+Para suporte concreto na implementação deste playbook, consultar os seguintes exemplos reutilizáveis:
+
+- 🛠️ **[Opções de Toolchain](../exemplo-playbook/exemplo-toolchain-options)** - Comparação de ferramentas (IaC, logs, SCA, SAST, CI/CD) com exemplos de configuração
+- 📊 **[KPIs e Targets](../exemplo-playbook/exemplo-kpis-targets)** - Métricas de segurança por perfil organizacional compatíveis com NIS2
+- 👥 **[RACI e Governance](../exemplo-playbook/exemplo-raci-governance)** - Matrizes de responsabilidades alinhadas com Art. 20 (responsabilização de gestão)
+- 📝 **[Relatório de Incidentes](../exemplo-playbook/exemplo-relatorio-incidentes)** - Templates de reporte formal com timelines NIS2 (24h/72h/1M)
+
+Estes recursos são **reutilizáveis para múltiplos frameworks** (NIS2, DORA, ISO 27001, CRA) e demonstram como implementar as abstenções deliberadas do SbD-ToE (o manual não prescreve ferramentas específicas, os exemplos mostram opções práticas).
+
+---
+
 ## Próximos Passos
 
 Sugere-se a seguinte abordagem para garantir conformidade e maturidade contínua:
 
-1. Audit de conformidade atual: Verificar Cap. 01–14 do SbD-ToE contra requisitos NIS2
+1. Audit de conformidade atual: Verificar [Cap. 01](/sbd-toe/sbd-manual/classificacao-aplicacoes/intro)–[Cap. 14](/sbd-toe/sbd-manual/governanca-contratacao/intro) do SbD-ToE contra requisitos NIS2
 2. Verificar classificação da entidade: Essencial / Importante (conforme Anexos I/II)
 3. Definir roadmap: Sequenciar fases conforme contexto organizacional
 4. Implementar: Iterar conforme planeado
@@ -332,7 +347,7 @@ Documentação completa: Ver capítulos SbD-ToE 01–14 para detalhe técnico e 
 ## Referências
 
 - **SbD-ToE Manual:** Capítulos 01–14 (detalhe técnico por domínio)
-- **Cross-Check NIS2:** [002 - NIS2.md](/sbd-toe/002-cross-check-normativo/nis2) (análise normativa completa)
+- **Cross-Check NIS2:** [Análise normativa completa](/sbd-toe/cross-check-normativo/nis2/intro)
 - **Diretiva NIS2:** UE 2022/2555
 - **ENISA:** Orientações técnicas e mapeamentos práticos (2024/2025)
 - **Autoridades Nacionais:** Guias/portais de registo e requisitos locais
@@ -341,4 +356,4 @@ Documentação completa: Ver capítulos SbD-ToE 01–14 para detalhe técnico e 
 
 **Versão:** 1.0  
 **Data:** Janeiro 2025  
-**Nota:** Este playbook complementa `002-cross-check-normativo/NIS2.md` com implementação prática
+**Nota:** Este playbook complementa a [análise normativa NIS2](intro) com implementação prática

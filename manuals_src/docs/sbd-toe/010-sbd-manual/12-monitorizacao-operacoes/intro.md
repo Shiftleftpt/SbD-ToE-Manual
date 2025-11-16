@@ -7,7 +7,7 @@ sidebar_position: 0
 ---
 
 :::tip Capítulo Operacional
-Este capítulo é considerado **operacional** no modelo *Security by Design – Theory of Everything (SbD-ToE)*.  
+Este capítulo é considerado **operacional** no modelo *Security by Design - Theory of Everything (SbD-ToE)*.  
 A sua função é **aplicar, automatizar e validar** as práticas definidas nos capítulos basilares, garantindo a sua execução contínua e mensurável.  
 
 Os capítulos operacionais implementam o SbD-ToE em contextos técnicos específicos. Estes capítulos traduzem as prescrições basilares em práticas de **execução verificável**, promovendo a **integração contínua da segurança** ao longo do ciclo de vida do software.
@@ -92,7 +92,7 @@ Reconhecer estes riscos desde início ajuda a construir sistemas mais robustos.
 - Uma equipa DevOps envia *logs* de Kubernetes para um SIEM como Splunk ou Elastic, normalizados em ECS.  
 - AppSec define como eventos críticos *logins falhados repetidos*, *acessos root inesperados* e *criação de pods privilegiados*.  
 - SREs configuram Prometheus/Grafana para alertar sobre degradação de serviço associada a ataques DoS.  
-- O SOC integra SOAR para bloquear automaticamente IPs maliciosos ou rodar credenciais comprometidas.  
+- O SOC integra SOAR para bloquear automaticamente IPs maliciosos ou fazer rotate de credenciais comprometidas.  
 
 Estes exemplos ilustram que monitorização não é abstrata: são práticas já aplicadas em milhares de organizações e exigidas por reguladores.
 

@@ -12,7 +12,7 @@ sidebar_position: 0
 
 A segurança do software não acontece num vácuo técnico.  
 Organizações de diferentes setores estão sujeitas a **regulações, normas e frameworks** que estabelecem requisitos explícitos para garantir proteção adequada de sistemas, dados e operações.  
-Neste contexto, o **Security by Design – Theory of Everything (SbD-ToE)** não é apenas um manual prescritivo de boas práticas: é também um **instrumento de convergência normativa**, permitindo alinhar práticas de desenvolvimento e operação segura com as múltiplas exigências externas.
+Neste contexto, o **Security by Design - Theory of Everything (SbD-ToE)** não é apenas um manual prescritivo de boas práticas: é também um **instrumento de convergência normativa**, permitindo alinhar práticas de desenvolvimento e operação segura com as múltiplas exigências externas.
 
 O **Capítulo 002 - Cross-Check Normativo** tem precisamente este papel:  
 - Demonstrar, de forma clara e verificável, **como o SbD-ToE responde a requisitos regulatórios e normativos**.  
@@ -91,28 +91,87 @@ No entanto, quando uma organização **possui ou contrata desenvolvimento de sof
 
 ---
 
-Este capítulo encontra-se dividido em ficheiros independentes, cada um dedicado a um normativo/regulação:  
+## Estrutura do Capítulo
 
-- `dora.md` → Regulamento DORA (Resiliência Operacional Digital) **+ Playbook de Implementação**
-- `nis2.md` → Diretiva NIS2 (Cibersegurança e serviços essenciais)  
-- `iso27001.md` → Norma ISO/IEC 27001 (Gestão de Segurança da Informação)  
-- `hipaa.md` → HIPAA (Health Insurance Portability and Accountability Act)  
-- `gdpr.md` → Regulamento Geral de Proteção de Dados  
-- `pci-dss.md` → PCI-DSS (Payment Card Industry Data Security Standard)  
-- `soc2.md` → SOC2 (Service Organization Control 2)  
-- ... outros a incluir (ex.: FedRAMP, ENISA supply chain guidance, CSA STAR).  
+Este capítulo está organizado por **framework/normativo**, cada um numa pasta dedicada com introdução e playbook de implementação:
 
-Cada ficheiro é autónomo, mas segue a mesma estrutura, permitindo comparação direta e análise objetiva.
+### Frameworks Atualmente Cobertos
 
-**Ficheiros com Playbook:**  
-Determinados normativos que afetam diretamente práticas de desenvolvimento (DORA, NIS2) incluem **playbooks de implementação** com roadmaps, fases e checklists práticos.
+#### **[DORA](dora/intro)** (Digital Operational Resilience Act)
+- 📂 `dora/`
+  - [Enquadramento do regulamento](dora/intro)
+  - [Playbook de implementação prática](dora/playbook)
+  - [Análise de convergência com NIS2](dora/convergencia-nis2)
+
+#### **[NIS2](nis2/intro)** (Network and Information Security Directive)
+- 📂 `nis2/`
+  - [Enquadramento da diretiva](nis2/intro)
+  - [Playbook de implementação prática](nis2/playbook)
+  - [Análise de convergência com DORA](nis2/convergencia-dora)
+
+#### **[CRA](cra/intro)** (Cyber Resilience Act)
+- 📂 `cra/`
+  - [Enquadramento do regulamento](cra/intro)
+  - [Playbook de implementação prática](cra/playbook)
+
+#### **[GDPR](gdpr/intro)** (General Data Protection Regulation)
+- 📂 `gdpr/`
+  - [Enquadramento do regulamento](gdpr/intro)
+  - [Playbook de implementação prática](gdpr/playbook)
+
+#### **[ENISA CSA](enisa-csa/intro)** (Cloud Security Alliance Certification)
+- 📂 `enisa-csa/`
+  - [Enquadramento do esquema de certificação](enisa-csa/intro)
+
+### Exemplos e Templates de Suporte
+
+#### **[Exemplo-Playbook](exemplo-playbook/indice)**
+- 📂 [`exemplo-playbook/`](exemplo-playbook/indice)
+  - Templates e exemplos reutilizáveis para implementação de qualquer framework
+  - Ferramentas, KPIs, governance, relatórios, políticas, contratos
+  - [Ver índice completo](exemplo-playbook/indice) para detalhes
+
+---
+
+### Frameworks a Incluir (Roadmap)
+
+Os seguintes frameworks estão no roadmap para adição futura:
+
+- **ISO 27001** → Norma de Gestão de Segurança da Informação
+- **HIPAA** → Health Insurance Portability and Accountability Act
+- **PCI-DSS** → Payment Card Industry Data Security Standard
+- **SOC2** → Service Organization Control 2
+- **FedRAMP** → Federal Risk and Authorization Management Program
+- **CSA STAR** → Cloud Security Alliance Security Trust Assurance and Risk
+
+---
+
+### Estrutura Comum de Cada Framework
+
+Cada pasta de framework segue esta estrutura consistente:
+
+1. **Introdução**
+   - Enquadramento legal/regulatório
+   - Âmbito de aplicação
+   - Objetivos principais
+
+2. **Playbook de Implementação**
+   - Cross-check: Requisitos vs. SbD-ToE
+   - Roadmap de implementação
+   - Fases e milestones
+   - Checklists práticas
+
+3. **Análises de Convergência** (quando aplicável)
+   - Sobreposição entre frameworks
+   - Princípio *lex specialis*
+   - Estratégias de implementação harmonizada
 
 ---
 
 ## Leitura recomendada
 
-- Este capítulo deve ser lido **em articulação com o Capítulo 00 - Theory of Everything**, que explica a filosofia global do manual.  
-- Para organizações **com desenvolvimento/aquisição de software**, recomenda-se começar pelos ficheiros com Playbook (ex.: `dora.md`), que orientam implementação coerente.
+- Este capítulo deve ser lido **em articulação com o [Capítulo 00 - Theory of Everything](/sbd-toe/teory-of-everything/intro)**, que explica a filosofia global do manual.  
+- Para organizações **com desenvolvimento/aquisição de software**, recomenda-se começar pelos playbooks (ex.: [DORA](dora/playbook), [NIS2](nis2/playbook)), que orientam implementação coerente.
 - Pode também ser utilizado como **documento autónomo**, servindo de guia de referência rápida para quem procura verificar alinhamento do SbD-ToE com exigências específicas.  
 
 ---

@@ -14,7 +14,7 @@ sidebar_position: 1
 
 ## Enquadramento Geral
 
-O **Digital Operational Resilience Act (DORA)** - Regulamento (UE) 2022/2554 - representa uma viragem histórica na forma como a União Europeia encara a **resiliência digital** no setor financeiro.  
+O **Digital Operational Resilience Act (DORA)** - **Regulamento (UE) 2022/2554** (CELEX: [32022R2554](https://eur-lex.europa.eu/legal-content/PT/TXT/?uri=CELEX:32022R2554)) - representa uma viragem histórica na forma como a União Europeia encara a **resiliência digital** no setor financeiro.  
 A partir de janeiro de 2025, não basta às entidades financeiras protegerem dados ou cumprirem boas práticas gerais: exige-se que demonstrem, com evidências e mecanismos consistentes, que **sabem identificar, prevenir, detetar, responder e aprender com riscos tecnológicos**.
 
 O SbD-ToE foi concebido como **modelo universal de segurança aplicacional** e cobre naturalmente os pilares técnicos da DORA. Este documento consolida:
@@ -26,9 +26,47 @@ O SbD-ToE foi concebido como **modelo universal de segurança aplicacional** e c
 
 ## PARTE I: ANÁLISE NORMATIVA
 
-### Gestão de Risco TIC (Artigo 5 DORA)
+### 🔍 O que DORA exige, em termos operacionais
 
-O primeiro pilar da DORA reforça que a **resiliência digital é responsabilidade última do órgão de gestão**. O Artigo 5 exige: aprovação de estratégia, supervisão de execução, inventários de funções críticas, políticas de proteção/deteção/resposta.
+> ⚖️ **Nota editorial.**  
+> Esta secção é uma **síntese operacional** dos artigos relevantes do DORA, não uma citação literal do regulamento.  
+> Baseia-se, em particular, nos Artigos 4.º–7.º (governação e gestão de risco TIC), 11.º–12.º (classificação de incidentes), 15.º, 18.º–20.º (incidentes e testes), 26.º–28.º (fornecedores TIC).
+
+De forma prática, o DORA traduz-se em obrigações que impactam diretamente as práticas do SbD-ToE:
+
+- **Órgão de gestão com responsabilidade explícita (Art. 5.º).**  
+  - O órgão de gestão aprova a estratégia de gestão de risco TIC, acompanha a sua execução e é responsável por garantir que existem políticas, procedimentos, documentação e evidência.  
+  - No SbD-ToE isto liga-se à governação global, políticas e à exigência de _accountability_ sobre decisões de risco.
+
+- **Gestão de risco TIC estruturada e documentada (Art. 6.º–7.º).**  
+  - O regulamento exige identificação de ativos críticos, avaliação de impacto, definição de controlos e monitorização contínua.  
+  - O SbD-ToE fornece os blocos técnicos (capítulos 01–14) que podem ser usados como catálogo de controlos para cumprir esta obrigação.
+
+- **Gestão de incidentes e reporte estruturado (Art. 18.º–20.º).**  
+  - DORA define requisitos mínimos para classificação, registo, escalonamento e reporte de incidentes de TIC a autoridades competentes, em prazos definidos.  
+  - O manual fornece práticas para deteção, _logging_, evidência técnica e _runbooks_ que suportam estes fluxos.
+
+- **Testes de resiliência operacional digital (Art. 19.º–20.º).**  
+  - Exige um programa de testes regulares, proporcional ao risco (incluindo _threat-led penetration testing_ para entidades mais críticas).  
+  - No SbD-ToE isto cruza diretamente com capítulos de testes de segurança, _red teaming_, _chaos engineering_ e validação contínua de pipelines.
+
+- **Gestão de risco de terceiros TIC (Art. 26.º–28.º).**  
+  - Impõe inventário de fornecedores TIC críticos, avaliação de risco, cláusulas contratuais específicas e supervisão contínua.  
+  - O manual cobre estes aspetos nos capítulos de dependências, SBOM/SCA, supply chain, _outsourcing_ e governação/contratação.
+
+- **Decisões de exceção e vulnerabilidades não remediadas.**  
+  - Embora o regulamento não use exatamente esta formulação, a combinação de exigências sobre gestão de risco, testes, incidentes e terceiros implica que:  
+    - **exceções a testes de resiliência**,  
+    - **aceitação de vulnerabilidades não remediadas**, e  
+    - **desvios às políticas de segurança aprovadas**  
+    devem ser **formalmente analisados, contextualizados, aprovados ao nível adequado e documentados** (incluindo justificação, prazo, _owner_ e medidas compensatórias).  
+  - O SbD-ToE materializa isto em _playbooks_ de Risk Acceptance, fluxos de aprovação, registos estruturados e KPIs.
+
+Na prática, o DORA fornece o "chapéu regulatório" e os critérios de responsabilização; o SbD-ToE funciona como o **manual técnico** que torna essas obrigações executáveis no ciclo de vida de desenvolvimento e operação.
+
+---
+
+### Gestão de Risco TIC (Artigo 5 DORA)
 
 **Cobertura SbD-ToE:**
 - **[Cap. 01](/sbd-toe/sbd-manual/classificacao-aplicacoes/intro):** Classificação de criticidade aplicacional (L1–L3)

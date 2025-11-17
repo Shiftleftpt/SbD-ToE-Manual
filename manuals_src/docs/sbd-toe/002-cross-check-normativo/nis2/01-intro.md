@@ -10,7 +10,7 @@ sidebar_position: 3
 
 ## Âmbito
 
-A **Diretiva (UE) 2022/2555 (NIS2)** atualiza o quadro europeu de cibersegurança para entidades essenciais e importantes em 18 setores, reforçando governação, medidas de gestão de risco e obrigação de reporte de incidentes. Os Estados-Membros tinham até 17 de outubro de 2024 para transpor a NIS2; a NIS1 foi revogada a 18 de outubro de 2024.
+A **Diretiva (UE) 2022/2555 (NIS2)** (CELEX: [32022L2555](https://eur-lex.europa.eu/legal-content/PT/TXT/?uri=CELEX:32022L2555)) atualiza o quadro europeu de cibersegurança para entidades essenciais e importantes em 18 setores, reforçando governação, medidas de gestão de risco e obrigação de reporte de incidentes. Os Estados-Membros tinham até 17 de outubro de 2024 para transpor a NIS2; a NIS1 foi revogada a 18 de outubro de 2024.
 
 No espírito da NIS2, não chega "ter controlos" - é preciso demonstrar capacidade operacional e responsabilização da gestão. O SbD-ToE, construído top-down e atento a múltiplas referências, encaixa naturalmente neste ethos: entrega processos, políticas e artefactos técnicos reutilizáveis, deixando propositadamente algumas variáveis em aberto para preservar a universalidade do manual.
 
@@ -214,7 +214,7 @@ Em termos sancionatórios, a Diretiva estabelece patamares que os Estados-Membro
 
 ### Referências
 
-- **Diretiva (UE) 2022/2555 ("NIS2")** - Texto oficial: EUR-Lex - *eli/dir/2022/2555/oj*.
+- **Diretiva NIS2**: Diretiva (UE) 2022/2555 (CELEX: [32022L2555](https://eur-lex.europa.eu/legal-content/PT/TXT/?uri=CELEX:32022L2555))
 - **Art. 20** - Responsabilidade do órgão de gestão e obrigação de formação.
 - **Art. 21** - Medidas mínimas de gestão de risco (abordagem "all-hazards").
 - **Art. 23** - Prazos de reporte de incidentes (24h/72h/1 mês) e relatórios intermédios.

@@ -24,7 +24,9 @@ O SbD-ToE **NÃO prescreve** qual ferramenta usar. Este documento apresenta **ex
 ### Princípio ([Cap. 08](/sbd-toe/sbd-manual/iac-infraestrutura/intro))
 Toda configuração de infraestrutura deve ser versionada, auditada e automatizada.
 
-### Opção A: Terraform + AWS
+<details>
+<summary><strong>🔧 Opção A: Terraform + AWS</strong></summary>
+
 ```hcl
 # main.tf
 terraform {
@@ -65,9 +67,13 @@ resource "aws_s3_bucket_server_side_encryption_configuration" "tf_state" {
 - Terraform state history: S3 versioning
 - Change approvals: GitHub branch protection + code review
 
+</details>
+
 ---
 
-### Opção B: CloudFormation + AWS
+<details>
+<summary><strong>☁️ Opção B: CloudFormation + AWS</strong></summary>
+
 ```yaml
 AWSTemplateFormatVersion: '2010-09-09'
 Description: 'CloudFormation template com auditoria'
@@ -108,9 +114,13 @@ Resources:
 - Stack events: `aws cloudformation describe-stack-events`
 - Change sets: Revisão antes de aplicar
 
+</details>
+
 ---
 
-### Opção C: Helm + Kubernetes
+<details>
+<summary><strong>⎈ Opção C: Helm + Kubernetes</strong></summary>
+
 ```yaml
 # values.yaml
 replicaCount: 3
@@ -146,6 +156,8 @@ apiServer:
 - Git tags: `git tag -l v1.2.3`
 - Kubernetes audit logs: Centralizados no SIEM
 
+</details>
+
 ---
 
 ## 2. Recolha Centralizada de Logs
@@ -153,7 +165,9 @@ apiServer:
 ### Princípio ([Cap. 12](/sbd-toe/sbd-manual/monitorizacao-operacoes/intro))
 Logs de todas as aplicações, infraestrutura e acessos devem ser centralizados, retidos conforme política, e protegidos contra alteração.
 
-### Opção A: ELK Stack (Elasticsearch + Logstash + Kibana)
+<details>
+<summary><strong>🔍 Opção A: ELK Stack (Elasticsearch + Logstash + Kibana)</strong></summary>
+
 ```yaml
 # logstash.conf
 input {
@@ -194,9 +208,13 @@ output {
 - Immutability: Elasticsearch read-only index após período
 - Alertas: Elasticsearch Watcher para anomalias
 
+</details>
+
 ---
 
-### Opção B: Datadog
+<details>
+<summary><strong>📊 Opção B: Datadog</strong></summary>
+
 ```python
 # Python app
 import logging
@@ -230,9 +248,13 @@ class SecurityAuditLogger:
 - Retention policy: API-driven
 - Alerting: Query-based monitors
 
+</details>
+
 ---
 
-### Opção C: Azure Sentinel
+<details>
+<summary><strong>☁️ Opção C: Azure Sentinel</strong></summary>
+
 ```kusto
 // KQL query para auditoria
 SecurityEvent
@@ -248,6 +270,8 @@ SecurityEvent
 - Retenção: 90 dias (grátis), até 5 anos (extended)
 - Immutability: Logs protegidos via Azure RBAC
 - Alertas: Automation rules + Playbooks
+
+</details>
 
 ---
 
@@ -607,6 +631,8 @@ logging:
 
 </details>
 
+</details>
+
 ---
 
 ### Conformidade SbD-ToE ([Cap. 12](/sbd-toe/sbd-manual/monitorizacao-operacoes/intro))
@@ -631,7 +657,9 @@ Todos os exemplos acima garantem:
 ### Princípio ([Cap. 05](/sbd-toe/sbd-manual/dependencias-sbom-sca/intro), [Cap. 07](/sbd-toe/sbd-manual/cicd-seguro/intro))
 Dependências e código devem ser analisados para vulnerabilidades conhecidas, integrados no CI/CD.
 
-### Opção A: SCA + SAST com Snyk + SonarQube
+<details>
+<summary><strong>🛡️ Opção A: SCA + SAST com Snyk + SonarQube</strong></summary>
+
 ```yaml
 # .github/workflows/security.yml
 name: Security Analysis
@@ -710,9 +738,13 @@ class SecurityScan:
 - Gate: Rejeita se CRITICAL secrets encontrados
 - Trilho: Report salvo em artefato CI/CD
 
+</details>
+
 ---
 
-### Opção C: Dependency Check (Open Source)
+<details>
+<summary><strong>🔒 Opção B: Dependency Check (Open Source)</strong></summary>
+
 ```bash
 #!/bin/bash
 # scan-dependencies.sh
@@ -737,6 +769,8 @@ fi
 - Gate de segurança integrado
 - Report em múltiplos formatos
 
+</details>
+
 ---
 
 ## 4. CI/CD com Gates de Segurança
@@ -744,7 +778,9 @@ fi
 ### Princípio ([Cap. 07](/sbd-toe/sbd-manual/cicd-seguro/intro))
 Pipeline deve incluir validações de segurança, aprovações formais, e trilho auditoria completo.
 
-### Opção A: GitHub Actions
+<details>
+<summary><strong>🔄 Opção A: GitHub Actions</strong></summary>
+
 ```yaml
 name: Deploy with Security Gates
 
@@ -796,9 +832,13 @@ Workflow logs (7 anos retention)
 └── Push: Registry audit logs
 ```
 
+</details>
+
 ---
 
-### Opção B: GitLab CI
+<details>
+<summary><strong>⚙️ Opção B: GitLab CI</strong></summary>
+
 ```yaml
 stages:
   - security
@@ -862,6 +902,8 @@ deploy:
 - Approval: Manual (via UI)
 - Deploy: Via RBAC
 
+</details>
+
 ---
 
 ## 5. Plataformas Integradas (All-in-One ASPM)
@@ -886,7 +928,8 @@ Uma plataforma unificada pode cobrir múltiplas áreas de segurança com correla
 
 ---
 
-### Opção D1: Xygeni (ASPM - Application Security Posture Management)
+<details>
+<summary><strong>🔐 Opção A: Xygeni (ASPM - Application Security Posture Management)</strong></summary>
 
 **Cobertura SbD-ToE:**
 
@@ -959,9 +1002,13 @@ integrations:
 - Rastreabilidade: Commit → Scan → Issue → Resolution
 - Compliance mappings: NIS2, DORA, CRA, GDPR built-in
 
+
+</details>
+
 ---
 
-### Opção D2: Snyk Enterprise (Platform Approach)
+<details>
+<summary><strong>🐍 Opção B: Snyk Enterprise (Platform Approach)</strong></summary>
 
 **Cobertura SbD-ToE:**
 
@@ -1042,9 +1089,12 @@ jobs:
           sarif_file: snyk.sarif
 ```
 
+</details>
+
 ---
 
-### Opção D3: Checkmarx One (Unified Platform)
+<details>
+<summary><strong>✅ Opção C: Checkmarx One (Unified Platform)</strong></summary>
 
 **Cobertura Multi-Capítulo:**
 
@@ -1129,6 +1179,8 @@ Exemplo:
 + Trivy: Container scanning especializado
 + Wiz: Cloud security posture
 ```
+
+</details>
 
 ---
 

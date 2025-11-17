@@ -631,8 +631,6 @@ logging:
 
 </details>
 
-</details>
-
 ---
 
 ### Conformidade SbD-ToE ([Cap. 12](/sbd-toe/sbd-manual/monitorizacao-operacoes/intro))

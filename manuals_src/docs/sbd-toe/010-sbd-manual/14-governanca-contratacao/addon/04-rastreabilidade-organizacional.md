@@ -65,9 +65,9 @@ Garantir que existe uma **ligação clara, documentada e auditável** entre:
 
 ```mermaid
 flowchart LR
-  R[Risco Classificado (L1/L2/L3)] --> Q[Requisitos Selecionados]
+  R[Risco Classificado: L1/L2/L3] --> Q[Requisitos Selecionados]
   Q --> C[Contrato com Cláusulas Alinhadas]
-  C --> V[Validação: testes, revisões, SBOM, etc.]
+  C --> V[Validação: testes, revisões, SBOM]
   V --> E[Evidência Documentada]
   E --> D[Decisões de exceção se aplicável]
   D --> O[Owner nomeado / revalidação futura]

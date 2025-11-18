@@ -27,13 +27,13 @@ Estabelecer um processo formal, proporcional e auditável para:
 
 ```mermaid
 flowchart TD
-  A[Pedido de contratação] --> B[Classificação de risco (L1, L2, L3)]
+  A[Pedido de contratação] --> B[Classificação de risco: L1, L2, L3]
   B --> C[Seleção de critérios de validação]
   C --> D[Envio de questionário ou cláusulas]
-  D --> E[Análise técnica (AppSec)]
+  D --> E[Análise técnica AppSec]
   E --> F{Conformidade verificada?}
-  F -- Sim --> G[Aprovação formal]
-  F -- Não --> H[Proposta de compensações / exceção]
+  F -->|Sim| G[Aprovação formal]
+  F -->|Não| H[Proposta de compensações / exceção]
   H --> I[Aprovação de exceção com owner]
   G --> Z[Onboarding]
   I --> Z

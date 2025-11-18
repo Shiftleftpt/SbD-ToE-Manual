@@ -21,8 +21,8 @@ flowchart TD
   B --> C[Proposta de compensação]
   C --> D[Avaliação AppSec]
   D --> E{Aprovação formal?}
-  E -- Sim --> F[Exceção registada com owner e validade]
-  E -- Não --> G[Controlo obrigatório aplica-se]
+  E -->|Sim| F[Exceção registada com owner e validade]
+  E -->|Não| G[Controlo obrigatório aplica-se]
 ```
 
 ---
@@ -35,8 +35,8 @@ flowchart TD
   B --> C[Checklist e questionário de segurança]
   C --> D[Análise AppSec + Procurement]
   D --> E{Requisitos cumpridos?}
-  E -- Sim --> F[Aprovação de onboarding]
-  E -- Não --> G[Negociação / Compensação / Rejeição]
+  E -->|Sim| F[Aprovação de onboarding]
+  E -->|Não| G[Negociação / Compensação / Rejeição]
 ```
 
 ---
@@ -62,6 +62,6 @@ flowchart TD
   B --> C[Revisão dos requisitos aplicados]
   C --> D[Validação de conformidade + evidência]
   D --> E{Alterou-se o risco ou requisitos?}
-  E -- Sim --> F[Atualização do registo / exceção]
-  E -- Não --> G[Confirmação e encerramento do ciclo]
+  E -->|Sim| F[Atualização do registo / exceção]
+  E -->|Não| G[Confirmação e encerramento do ciclo]
 ```

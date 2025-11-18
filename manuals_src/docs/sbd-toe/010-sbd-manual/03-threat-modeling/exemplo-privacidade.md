@@ -30,10 +30,15 @@ Serviço de autenticação `auth-service` com as seguintes características:
 
 ## 📈 Modelo de dados e fluxos (DFD simplificado)
 
-```
-[Utilizador] --> [POST /login] --> [Auth Service] --> [DB Utilizadores]
-[Auth Service] --> [JWT Generator] --> [JWT Token]
-[JWT Token] --> [GET /me], [GET /admin/audits]
+```mermaid
+flowchart LR
+    U[Utilizador] --> L[POST /login]
+    L --> AS[Auth Service]
+    AS --> DB[(DB Utilizadores)]
+    AS --> JG[JWT Generator]
+    JG --> JWT[JWT Token]
+    JWT --> ME[GET /me]
+    JWT --> AD[GET /admin/audits]
 ```
 
 ---

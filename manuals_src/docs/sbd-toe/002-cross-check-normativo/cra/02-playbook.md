@@ -1,10 +1,19 @@
 ---
+description: Roadmap prático para alinhar o programa SbD-ToE aos requisitos técnicos
+  do Cyber Resilience Act
 id: playbook
-title: "SbD-ToE 4 CRA: Playbook de Implementação"
-description: Roadmap prático para alinhar o programa SbD-ToE aos requisitos técnicos do Cyber Resilience Act
-tags: [cra, implementacao, playbook, produtos-digitais, roadmap]
 sidebar_position: 6
+tags:
+- cra
+- dora
+- implementacao
+- nis2
+- playbook
+- produtos-digitais
+- roadmap
+title: 'SbD-ToE 4 CRA: Playbook de Implementação'
 ---
+
 
 # SbD-ToE 4 CRA: Playbook de Implementação
 

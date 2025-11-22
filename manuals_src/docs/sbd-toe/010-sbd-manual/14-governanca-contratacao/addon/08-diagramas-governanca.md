@@ -1,10 +1,18 @@
 ---
-id: diagramas-governanca
-title: Diagramas de Governação de Segurança
-sidebar_position: 8
 description: Diagramas visuais dos fluxos de governação, exceções e validações formais
-tags: [diagramas, excecoes, fluxo, validacao]
+id: diagramas-governanca
+sidebar_position: 8
+tags:
+- contratacao
+- diagramas
+- excecoes
+- fluxo
+- fornecedores
+- validacao
+- validação
+title: Diagramas de Governação de Segurança
 ---
+
 
 
 # 🗾️ Diagramas de Apoio à Governança

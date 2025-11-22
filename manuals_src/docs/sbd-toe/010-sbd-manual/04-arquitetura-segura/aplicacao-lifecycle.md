@@ -1,10 +1,18 @@
 ---
-id: aplicacao-lifecycle
-title: Como Fazer
 description: Integração das práticas de arquitetura segura ao longo do ciclo de desenvolvimento
-tags: [arquitetura, ciclo-vida, requisitos, seguranca, tipo:aplicacao]
 genia: us-format-normalization
+id: aplicacao-lifecycle
+tags:
+- arquitetura
+- ciclo-vida
+- requisitos
+- seguranca
+- segurança
+- tipo-aplicacao
+- tipo:aplicacao
+title: Como Fazer
 ---
+
 
 # 🏛️ Aplicação de Arquitetura Segura no Ciclo de Vida
 

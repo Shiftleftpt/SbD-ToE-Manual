@@ -1,10 +1,19 @@
 ---
-id: aplicacao-lifecycle
-title: Como Fazer
-description: Integração prática das práticas de monitorização e resposta no ciclo de vida seguro
-tags: [ciclo-vida, deteção, incidentes, monitorizacao, operacoes, tipo:aplicacao]
+description: Integração prática das práticas de monitorização e resposta no ciclo
+  de vida seguro
 genia: us-format-normalization
+id: aplicacao-lifecycle
+tags:
+- ciclo-vida
+- deteccao
+- deteção
+- incidentes
+- monitorizacao
+- operacoes
+- tipo:aplicacao
+title: Como Fazer
 ---
+
 
 # 👁️ Aplicação de Monitorização & Operações no Ciclo de Vida
 

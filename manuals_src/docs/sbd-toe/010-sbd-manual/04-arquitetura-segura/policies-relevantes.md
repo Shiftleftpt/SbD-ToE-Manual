@@ -1,10 +1,19 @@
 ---
+description: Políticas organizacionais que suportam a adoção das práticas de arquitetura
+  segura
 id: policies-relevantes
-title: Policies
-description: Políticas organizacionais que suportam a adoção das práticas de arquitetura segura
-tags: [arquitetura, governanca, politicas]
 sidebar_position: 60
+tags:
+- arquitetura
+- excecoes
+- governanca
+- governação
+- policy
+- politicas
+- políticas
+title: Policies
 ---
+
 
 # 🏛️ Políticas Organizacionais - Arquitetura Segura
 

@@ -1,11 +1,20 @@
 ---
+description: Checklist binário e auditável para avaliar a adoção prática das práticas
+  prescritas no Capítulo 09 - Containers e Imagens
 id: checklist-revisao
-title: Checklist - Containers e Imagens
 sidebar_label: Checklist de Revisão
-description: Checklist binário e auditável para avaliar a adoção prática das práticas prescritas no Capítulo 09 - Containers e Imagens
-tags: [auditoria, checklist, containers, imagens, kubernetes, supply chain]
 sidebar_position: 20
+tags:
+- auditoria
+- checklist
+- containers
+- imagens
+- kubernetes
+- supply chain
+- supply-chain
+title: Checklist - Containers e Imagens
 ---
+
 
 # ✅ Checklist de Revisão Periódica — Containers e Imagens
 

@@ -1,9 +1,18 @@
 ---
+description: Procedimento formalizado e executável para rescisão segura de contractors
+  e fornecedores
 id: checklist-offboarding
+tags:
+- auditoria
+- contractors
+- contratos
+- governanca
+- offboarding
+- rescisao
+- seguranca
 title: Checklist de Offboarding Seguro
-description: Procedimento formalizado e executável para rescisão segura de contractors e fornecedores
-tags: [auditoria, contractors, governanca, offboarding, rescisao, seguranca]
 ---
+
 
 # ✅ Checklist de Offboarding Seguro
 

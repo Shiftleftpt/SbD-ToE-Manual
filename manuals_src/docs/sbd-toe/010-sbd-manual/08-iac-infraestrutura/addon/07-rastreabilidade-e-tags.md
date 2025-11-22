@@ -1,10 +1,19 @@
 ---
+description: Técnicas para garantir a rastreabilidade de alterações, uso de tagging
+  e gestão de versões seguras em IaC.
 id: rastreabilidade-e-tags
-title: Rastreabilidade e Versionamento com Tags em IaC
 sidebar_position: 7
-description: Técnicas para garantir a rastreabilidade de alterações, uso de tagging e gestão de versões seguras em IaC.
-tags: [git, iac, rastreabilidade, seguranca, tags, versionamento]
+tags:
+- git
+- iac
+- rastreabilidade
+- seguranca
+- segurança
+- tags
+- versionamento
+title: Rastreabilidade e Versionamento com Tags em IaC
 ---
+
 
 
 # 🔍 Rastreabilidade e Uso de Tags em Projetos IaC

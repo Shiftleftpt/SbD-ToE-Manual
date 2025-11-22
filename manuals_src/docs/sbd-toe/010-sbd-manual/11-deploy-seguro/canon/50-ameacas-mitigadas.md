@@ -1,10 +1,19 @@
 ---
+description: Visão bottom-up das ameaças mitigadas pelas práticas de deploy seguro
+  descritas neste capítulo.
 id: ameacas-mitigadas
-title: Ameaças Mitigadas - Deploy Seguro
-description: Visão bottom-up das ameaças mitigadas pelas práticas de deploy seguro descritas neste capítulo.
-tags: [ameacas, capec, deploy, execução, mitigacao, osc-r, rollback, runtime, ssdf, stride, toggle]
 sidebar_position: 50
+tags:
+- ameacas
+- capec
+- deploy
+- execução
+- mitigacao
+- osc-r
+- rollback
+title: Ameaças Mitigadas - Deploy Seguro
 ---
+
 
 
 # 🔐 Ameaças Mitigadas - Capítulo 11: Deploy e Controlo de Execução

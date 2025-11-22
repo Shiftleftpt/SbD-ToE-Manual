@@ -1,10 +1,19 @@
 ---
+description: Princípios e práticas para assegurar visibilidade, deteção e resposta
+  eficaz em ambientes de produção
 id: intro
-title: Monitorização & Operações
-description: Princípios e práticas para assegurar visibilidade, deteção e resposta eficaz em ambientes de produção
-tags: [cat_operacional, deteção, grp_operacao_melhoria, incidentes, logs, monitorizacao, métricas, operacao-continuidade, operacoes, resposta]
 sidebar_position: 0
+tags:
+- cat_operacional
+- deteção
+- grp_operacao_melhoria
+- incidentes
+- logs
+- monitorizacao
+- métricas
+title: Monitorização & Operações
 ---
+
 
 :::tip Capítulo Operacional
 Este capítulo é considerado **operacional** no modelo *Security by Design - Theory of Everything (SbD-ToE)*.  

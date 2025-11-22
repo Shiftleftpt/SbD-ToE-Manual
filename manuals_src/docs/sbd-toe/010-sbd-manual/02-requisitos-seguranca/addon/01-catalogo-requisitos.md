@@ -1,9 +1,18 @@
 ---
+description: Lista essencial de requisitos de segurança organizados por categoria
+  e nível de risco
 id: catalogo-requisitos
+tags:
+- ASVS
+- asvs
+- criticidade
+- rastreabilidade
+- tema:requisitos
+- tipo-catalogo
+- tipo:catalogo
 title: Definir o catálogo de Requisitos Aplicacionais
-description: Lista essencial de requisitos de segurança organizados por categoria e nível de risco
-tags: [ASVS, criticidade, rastreabilidade, tema:requisitos, tipo:catalogo]
 ---
+
 
 <!--template: sbdtoe-addon -->
 

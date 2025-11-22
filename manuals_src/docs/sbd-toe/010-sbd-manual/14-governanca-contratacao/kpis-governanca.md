@@ -1,10 +1,19 @@
 ---
+description: Indicadores operacionais e de maturidade aplicáveis à governação de segurança
+  por projeto e organização
 id: kpis-governanca
-title: KPIs e Métricas de Governação
 sidebar_position: 90
-description: Indicadores operacionais e de maturidade aplicáveis à governação de segurança por projeto e organização
-tags: [controlo, excecoes, governance, kpi, maturidade, metricas]
+tags:
+- controlo
+- excecoes
+- exemplos
+- governance
+- kpi
+- maturidade
+- metricas
+title: KPIs e Métricas de Governação
 ---
+
 
 
 # 📊 KPIs de Governança e Visibilidade Organizacional

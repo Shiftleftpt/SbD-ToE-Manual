@@ -1,10 +1,19 @@
 ---
+description: Práticas avançadas para contextos de elevada maturidade em arquitetura
+  segura
 id: recomendacoes-avancadas
-title: Recomendações Avançadas - Arquitetura Segura
-description: Práticas avançadas para contextos de elevada maturidade em arquitetura segura
-tags: [arquitetura, avancado, maturidade, sbomm, zero-trust]
 sidebar_position: 30
+tags:
+- arquitetura
+- avancado
+- avançado
+- grupo:avancado
+- maturidade
+- sbomm
+- zero-trust
+title: Recomendações Avançadas - Arquitetura Segura
 ---
+
 
 # 🧠 Recomendações Avançadas - Arquitetura Segura
 

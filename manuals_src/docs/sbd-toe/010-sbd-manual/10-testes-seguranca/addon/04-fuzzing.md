@@ -1,10 +1,19 @@
 ---
+description: Testes com dados inesperados ou malformados para descoberta de falhas
+  em parsers, APIs e lógica interna.
 id: fuzzing
-title: Fuzzing Direcionado e Aleatório
-description: Testes com dados inesperados ou malformados para descoberta de falhas em parsers, APIs e lógica interna.
-tags: [cobertura, fuzzers, fuzzing, testes aleatórios, validacao]
 sidebar_position: 5
+tags:
+- cobertura
+- fuzzers
+- fuzzing
+- testes
+- testes aleatórios
+- validacao
+- validação
+title: Fuzzing Direcionado e Aleatório
 ---
+
 
 
 # 🌀 Fuzzing de Segurança

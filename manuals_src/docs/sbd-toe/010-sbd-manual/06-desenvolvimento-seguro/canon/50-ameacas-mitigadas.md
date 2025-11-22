@@ -1,10 +1,19 @@
 ---
+description: Ameaças mitigadas pelas práticas deste capítulo, com mapeamento para
+  OWASP, CAPEC, SSDF, entre outros
 id: ameacas-mitigadas
-title: Ameaças Mitigadas - Desenvolvimento Seguro
-description: Ameaças mitigadas pelas práticas deste capítulo, com mapeamento para OWASP, CAPEC, SSDF, entre outros
-tags: [GenAI, ameacas, codificação segura, desenvolvimento, mitigacao, validacao]
 sidebar_position: 50
+tags:
+- GenAI
+- ameacas
+- ameaças
+- codificação segura
+- desenvolvimento
+- mitigacao
+- validacao
+title: Ameaças Mitigadas - Desenvolvimento Seguro
 ---
+
 
 
 # 🔐 Ameaças Mitigadas - Capítulo 06: Desenvolvimento Seguro

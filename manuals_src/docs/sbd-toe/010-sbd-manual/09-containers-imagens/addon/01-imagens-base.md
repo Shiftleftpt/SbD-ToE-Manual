@@ -1,9 +1,17 @@
 ---
-id: imagens-base
-title: Imagens Base Seguras e Minimalistas
 description: Seleção, reforço e validação de imagens base seguras para *containers*
-tags: [containers, hardening, imagens base, runtime, supply chain]
+id: imagens-base
+tags:
+- cicd
+- containers
+- hardening
+- imagens base
+- runtime
+- supply chain
+- supply-chain
+title: Imagens Base Seguras e Minimalistas
 ---
+
 
 # 🧱 Imagens Base Seguras e Minimalistas
 

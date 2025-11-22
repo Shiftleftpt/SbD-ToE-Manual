@@ -1,9 +1,18 @@
 ---
+description: Lista essencial de requisitos de segurança organizados por categoria
+  e nível de risco
 id: controlos-requisitos
+tags:
+- ASVS
+- asvs
+- catalogo
+- cicd
+- criticidade
+- rastreabilidade
+- requisitos
 title: Catálogo de Requisitos Aplicacionais
-description: Lista essencial de requisitos de segurança organizados por categoria e nível de risco
-tags: [ASVS, catalogo, criticidade, rastreabilidade, requisitos]
 ---
+
 
 
 # ✅ Validação de Requisitos de Segurança

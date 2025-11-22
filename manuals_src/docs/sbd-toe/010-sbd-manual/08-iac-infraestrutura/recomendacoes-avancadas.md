@@ -1,10 +1,19 @@
 ---
+description: Práticas reforçadas para contextos de maior maturidade ou requisitos
+  regulatórios em projetos de IaC.
 id: recomendacoes-avancadas
-title: Recomendações Avançadas para Segurança em Infraestrutura como Código (IaC)
 sidebar_position: 30
-description: Práticas reforçadas para contextos de maior maturidade ou requisitos regulatórios em projetos de IaC.
-tags: [grupo:avancado, maturidade, reforço, tema:iac, tipo:anexo]
+tags:
+- grupo:avancado
+- iac
+- maturidade
+- reforço
+- tema:iac
+- tipo-anexo
+- tipo:anexo
+title: Recomendações Avançadas para Segurança em Infraestrutura como Código (IaC)
 ---
+
 
 
 # 🔐 Recomendações Avançadas para IaC Seguro

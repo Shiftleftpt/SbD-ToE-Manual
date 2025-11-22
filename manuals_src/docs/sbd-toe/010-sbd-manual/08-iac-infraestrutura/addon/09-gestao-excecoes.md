@@ -1,10 +1,19 @@
 ---
+description: Procedimentos e critérios para tratamento de exceções às práticas prescritas
+  de IaC Seguro.
 id: gestao-excecoes
-title: Gestão de Exceções e Justificações Formais em IaC
 sidebar_position: 9
-description: Procedimentos e critérios para tratamento de exceções às práticas prescritas de IaC Seguro.
-tags: [auditoria, controlo, exceções, governanca, iac, seguranca]
+tags:
+- auditoria
+- controlo
+- exceções
+- governanca
+- governação
+- iac
+- seguranca
+title: Gestão de Exceções e Justificações Formais em IaC
 ---
+
 
 
 # ⚠️ Gestão de Exceções e Não-Conformidades em Projetos IaC

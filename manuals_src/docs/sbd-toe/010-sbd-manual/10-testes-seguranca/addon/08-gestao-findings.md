@@ -1,10 +1,19 @@
 ---
+description: Processo de triagem, priorização, rastreio e resolução de vulnerabilidades
+  detetadas nos testes de segurança.
 id: gestao-findings
-title: Gestão de Findings de Segurança
-description: Processo de triagem, priorização, rastreio e resolução de vulnerabilidades detetadas nos testes de segurança.
-tags: [findings, gestão, rastreabilidade, seguranca, vulnerabilidades]
 sidebar_position: 9
+tags:
+- findings
+- gestão
+- rastreabilidade
+- seguranca
+- segurança
+- testes
+- vulnerabilidades
+title: Gestão de Findings de Segurança
 ---
+
 
 
 # 🗂️ Gestão de Findings de Segurança

@@ -1,10 +1,19 @@
 ---
+description: Práticas para garantir logging estruturado, transporte seguro e centralização
+  de eventos operacionais.
 id: controles-logging-centralizado
-title: Controles de Logging Estruturado e Centralizado
 sidebar_position: 2
-description: Práticas para garantir logging estruturado, transporte seguro e centralização de eventos operacionais.
-tags: [ECS, centralização, estruturação, logging, transporte seguro]
+tags:
+- ECS
+- centralização
+- ciclo-vida
+- deteccao
+- estruturação
+- logging
+- transporte seguro
+title: Controles de Logging Estruturado e Centralizado
 ---
+
 
 
 # 🗃️ Logging Estruturado e Centralizado

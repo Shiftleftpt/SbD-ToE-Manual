@@ -1,9 +1,17 @@
 ---
 id: mapeamento-ameacas-risco
-title: Mapeamento de Ameaças por Nível de Risco
 sidebar_position: 6
-tags: [ameacas, controlo, risco, tipo:mapeamento]
+tags:
+- ameacas
+- ameaças
+- base
+- cat_basilar
+- controlo
+- risco
+- tipo:mapeamento
+title: Mapeamento de Ameaças por Nível de Risco
 ---
+
 
 <!--template: sbdtoe-core -->
 

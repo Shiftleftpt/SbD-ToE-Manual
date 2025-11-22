@@ -1,10 +1,19 @@
 ---
+description: Recomendações para escrita de código seguro por linguagem e stack, incluindo
+  padrões proibidos e boas práticas validadas
 id: boas-praticas-codigo
-title: Boas Práticas de Escrita de Código Seguro
 sidebar_position: 1
-description: Recomendações para escrita de código seguro por linguagem e stack, incluindo padrões proibidos e boas práticas validadas
-tags: [boas práticas, desenvolvimento, requisitos, secure coding, seguranca]
+tags:
+- boas práticas
+- desenvolvimento
+- requisitos
+- secure coding
+- seguranca
+- segurança
+- validação
+title: Boas Práticas de Escrita de Código Seguro
 ---
+
 
 
 # ✍️ Boas Práticas de Escrita de Código Seguro

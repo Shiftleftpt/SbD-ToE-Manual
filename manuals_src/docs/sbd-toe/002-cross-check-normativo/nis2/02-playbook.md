@@ -1,10 +1,19 @@
 ---
+description: Roadmap prático para implementar SbD-ToE conforme requisitos NIS2 — mapeamento
+  direto de artigos para ações
 id: playbook
-title: "SbD-ToE 4 NIS2: Playbook de Implementação"
-description: Roadmap prático para implementar SbD-ToE conforme requisitos NIS2 — mapeamento direto de artigos para ações
-tags: [implementacao, nis2, playbook, roadmap]
 sidebar_position: 3
+tags:
+- cra
+- dora
+- implementacao
+- nis2
+- playbook
+- produtos-digitais
+- roadmap
+title: 'SbD-ToE 4 NIS2: Playbook de Implementação'
 ---
+
 
 # SbD-ToE 4 NIS2: Playbook de Implementação
 

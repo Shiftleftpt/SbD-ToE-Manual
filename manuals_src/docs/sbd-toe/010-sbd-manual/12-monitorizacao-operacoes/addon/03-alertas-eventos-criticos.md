@@ -1,10 +1,19 @@
 ---
+description: Regras, thresholds e melhores práticas para alertas eficazes baseados
+  em eventos sensíveis.
 id: alertas-eventos-criticos
-title: Geração e Gestão de Alertas para Eventos Críticos
 sidebar_position: 3
-description: Regras, thresholds e melhores práticas para alertas eficazes baseados em eventos sensíveis.
-tags: [alertas, deteção, eventos críticos, severidade, thresholds]
+tags:
+- alertas
+- ciclo-vida
+- deteccao
+- deteção
+- eventos críticos
+- severidade
+- thresholds
+title: Geração e Gestão de Alertas para Eventos Críticos
 ---
+
 
 # 🚨 Alertas baseados em Eventos Críticos
 

@@ -1,9 +1,17 @@
 ---
-id: politica-atualizacoes
-title: Políticas de Atualização de Dependências
 description: Práticas de atualização proativa, TTL, locking e gestão de versões seguras
-tags: [dependencias, policies, sbom, sca, supply-chain]
+id: politica-atualizacoes
+tags:
+- cicd
+- dependencias
+- policies
+- policy
+- sbom
+- sca
+- supply-chain
+title: Políticas de Atualização de Dependências
 ---
+
 
 # ♻️ Políticas de Atualização de Dependências
 

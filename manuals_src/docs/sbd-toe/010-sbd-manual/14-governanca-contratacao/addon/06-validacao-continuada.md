@@ -1,10 +1,18 @@
 ---
-id: validacao-continuada
-title: Validação Contínua de Governação
-sidebar_position: 6
 description: Estratégias e ciclos para manter validações, KPIs e exceções auditáveis
-tags: [auditoria, ciclo-continuo, excecoes, validacao]
+id: validacao-continuada
+sidebar_position: 6
+tags:
+- auditoria
+- ciclo-continuo
+- excecoes
+- formacao
+- segurança
+- validacao
+- validação
+title: Validação Contínua de Governação
 ---
+
 
 
 # 🔄 Validação Continuada e Revisões

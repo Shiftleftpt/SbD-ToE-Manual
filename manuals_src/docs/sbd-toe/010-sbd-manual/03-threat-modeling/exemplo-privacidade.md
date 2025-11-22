@@ -1,10 +1,19 @@
 ---
+description: Aplicação do modelo LINDDUN para identificar ameaças à privacidade num
+  sistema de autenticação
 id: exemplo-privacidade-lindunn
-title: Exemplo Threat Modeling com LINDDUN
-description: Aplicação do modelo LINDDUN para identificar ameaças à privacidade num sistema de autenticação
 sidebar_position: 8
-tags: [capitulo2, exemplos, linddun, privacidade, threat-modeling]
+tags:
+- capitulo2
+- exemplos
+- linddun
+- privacidade
+- rastreabilidade
+- requisitos
+- threat-modeling
+title: Exemplo Threat Modeling com LINDDUN
 ---
+
 
 # 🧪 Exemplo Prático - Threat Modeling com LINDDUN
 

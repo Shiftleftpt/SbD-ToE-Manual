@@ -1,10 +1,19 @@
 ---
+description: Práticas reforçadas para ambientes com elevado nível de criticidade,
+  exposição ou requisitos regulatórios.
 id: recomendacoes-avancadas
-title: Recomendações Avançadas para Validação Contínua de Segurança
-description: Práticas reforçadas para ambientes com elevado nível de criticidade, exposição ou requisitos regulatórios.
-tags: [avançadas, recomendações, seguranca, testes, validação contínua]
 sidebar_position: 30
+tags:
+- avançadas
+- recomendações
+- seguranca
+- segurança
+- testes
+- validação
+- validação contínua
+title: Recomendações Avançadas para Validação Contínua de Segurança
 ---
+
 
 
 # 🚀 Recomendações Avançadas para Validação Contínua de Segurança

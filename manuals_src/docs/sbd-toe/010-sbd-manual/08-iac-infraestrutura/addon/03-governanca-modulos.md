@@ -1,10 +1,19 @@
 ---
+description: Práticas de gestão e aprovação de módulos reutilizáveis em projetos IaC,
+  garantindo rastreabilidade e segurança.
 id: governanca-modulos
-title: Governação de Módulos e Reutilização Segura
 sidebar_position: 3
-description: Práticas de gestão e aprovação de módulos reutilizáveis em projetos IaC, garantindo rastreabilidade e segurança.
-tags: [governanca, iac, módulos, rastreabilidade, reutilização, seguranca]
+tags:
+- governanca
+- governação
+- iac
+- módulos
+- rastreabilidade
+- reutilização
+- seguranca
+title: Governação de Módulos e Reutilização Segura
 ---
+
 
 
 # 🛡️ Governação de Módulos Reutilizáveis em IaC

@@ -1,10 +1,19 @@
 ---
+description: Interpretação dos princípios de Security by Design no contexto específico
+  de Infraestrutura como Código.
 id: principios-sbd-iac
-title: Princípios de Security by Design aplicados a IaC
 sidebar_position: 4
-description: Interpretação dos princípios de Security by Design no contexto específico de Infraestrutura como Código.
-tags: [arquitetura segura, fundamentos, iac, princípios, security by design]
+tags:
+- arquitetura segura
+- contratacao
+- excecoes
+- fundamentos
+- iac
+- princípios
+- security by design
+title: Princípios de Security by Design aplicados a IaC
 ---
+
 
 # 🛡️ Princípios de Security by Design aplicados a Projetos IaC
 

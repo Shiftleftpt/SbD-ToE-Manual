@@ -1,9 +1,17 @@
 ---
 id: casos-praticos
-title: Exemplos de Aplicação deC lassificação de Risco
 sidebar_position: 9
-tags: [aplicacao, risco, tema:classificacao, tipo:exemplo]
+tags:
+- aplicacao
+- base
+- cat_basilar
+- ciclo-vida
+- risco
+- tema:classificacao
+- tipo:exemplo
+title: Exemplos de Aplicação deC lassificação de Risco
 ---
+
 
 # 🧪 Casos Práticos de Classificação de Risco
 

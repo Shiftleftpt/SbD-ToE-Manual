@@ -1,9 +1,18 @@
 ---
+description: Procedimento padronizado para onboarding seguro de terceiros, com formação
+  mínima exigida.
 id: inclusao-terceiros
+tags:
+- ciclo-vida
+- formacao
+- inclusao
+- onboarding
+- rastreabilidade
+- supply-chain
+- terceiros
 title: Modelo de Inclusão de Terceiros e Fornecedores
-description: Procedimento padronizado para onboarding seguro de terceiros, com formação mínima exigida.
-tags: [formacao, inclusao, onboarding, rastreabilidade, terceiros]
 ---
+
 
 
 # 🤝 Inclusão de Terceiros em Programas de Formação

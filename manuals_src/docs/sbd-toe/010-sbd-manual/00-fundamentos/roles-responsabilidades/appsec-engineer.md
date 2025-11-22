@@ -1,11 +1,19 @@
 ---
-id: appsec-engineer
-title: AppSec Engineer
-sidebar_label: 🔐 AppSec Engineer
 description: Responsabilidades do AppSec Engineer no SbD-ToE
-tags: [appsec, responsabilidades, seguranca, vulnerabilidades]
+id: appsec-engineer
+sidebar_label: 🔐 AppSec Engineer
 sidebar_position: 5
+tags:
+- appsec
+- eixo
+- responsabilidades
+- seguranca
+- segurança
+- threat-modeling
+- vulnerabilidades
+title: AppSec Engineer
 ---
+
 
 # 🔐 AppSec Engineer
 

@@ -1,10 +1,19 @@
 ---
+description: Integração com sistemas SIEM para parsing, visualização e correlação
+  de eventos.
 id: integracao-siem
-title: Integração com SIEM e Plataformas de Correlação
 sidebar_position: 4
-description: Integração com sistemas SIEM para parsing, visualização e correlação de eventos.
-tags: [correlação, dashboards, integracao, parsing, siem]
+tags:
+- cat_organizacional
+- correlação
+- dashboards
+- formacao
+- integracao
+- parsing
+- siem
+title: Integração com SIEM e Plataformas de Correlação
 ---
+
 
 
 # 📉 Integração com Sistemas de Deteção (SIEM)

@@ -1,9 +1,18 @@
 ---
+description: Determinação da criticidade de aplicações para aplicar proporcionalidade
+  nos controlos de segurança
 id: intro
+tags:
+- base
+- cat_basilar
+- ciclo-vida
+- classificacao
+- fundamentos
+- grp_fundamentos_contexto
+- proporcionalidade
 title: Classificação da Criticidade Aplicacional
-description: Determinação da criticidade de aplicações para aplicar proporcionalidade nos controlos de segurança
-tags: [base, cat_basilar, ciclo-vida, classificacao, fundamentos, grp_fundamentos_contexto, proporcionalidade, risco]
 ---
+
 
 <details className="basilar-admonition">
   <summary>⚠️ Capítulo basilar – o que significa?</summary>

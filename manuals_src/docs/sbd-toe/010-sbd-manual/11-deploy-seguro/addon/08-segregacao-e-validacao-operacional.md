@@ -1,9 +1,18 @@
 ---
+description: Estratégias para validação em ambientes staging e pre-prod que garantem
+  readiness e segurança operacional.
 id: 08-segregacao-e-validacao-operacional
+tags:
+- grupo:execucao
+- readiness
+- segregacao
+- staging
+- tema:validacao
+- tipo-anexo
+- tipo:anexo
 title: Validação Operacional com Ambientes Segregados
-description: Estratégias para validação em ambientes staging e pre-prod que garantem readiness e segurança operacional.
-tags: [grupo:execucao, readiness, segregacao, staging, tema:validacao, tipo:anexo]
 ---
+
 
 
 # 🏢 Segregação de Ambientes e Validação Operacional

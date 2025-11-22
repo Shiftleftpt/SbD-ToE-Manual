@@ -1,11 +1,19 @@
 ---
-id: developer
-title: Developer
-sidebar_label: 👨‍💻 Developer
 description: Responsabilidades do Developer no SbD-ToE
-tags: [codigo, dev, developer, responsabilidades]
+id: developer
+sidebar_label: 👨‍💻 Developer
 sidebar_position: 2
+tags:
+- automação
+- codigo
+- dev
+- developer
+- responsabilidades
+- segurança
+- threat-modeling
+title: Developer
 ---
+
 
 # 👨‍💻 Developer
 

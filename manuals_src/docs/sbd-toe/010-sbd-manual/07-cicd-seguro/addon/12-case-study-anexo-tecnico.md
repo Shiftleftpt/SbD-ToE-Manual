@@ -1,10 +1,19 @@
 ---
+description: Regras formais para permitir exceções no pipeline, com registo, aprovação,
+  prazo de validade e visibilidade por função.
 id: case-study-anexo-tecnico
-title: Anexo Técnico - Aplicação do SbD-ToE ao Pipeline CI/CD
 sidebar_position: 9
-description: Regras formais para permitir exceções no pipeline, com registo, aprovação, prazo de validade e visibilidade por função.
-tags: [auditoria, cicd, exceções, governanca, seguranca, visibilidade]
+tags:
+- auditoria
+- cicd
+- excecoes
+- exceções
+- governanca
+- seguranca
+- visibilidade
+title: Anexo Técnico - Aplicação do SbD-ToE ao Pipeline CI/CD
 ---
+
 
 
 # 📎 Anexo Técnico - Aplicação do SbD-ToE ao Pipeline CI/CD

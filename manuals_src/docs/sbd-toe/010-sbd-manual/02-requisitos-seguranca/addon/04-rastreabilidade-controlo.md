@@ -1,9 +1,17 @@
 ---
-id: rastreabilidade-controlo
-title: Rastreabilidade entre Requisitos e Controlos Técnicos
 description: Ligação entre requisitos definidos, testes aplicáveis e controlos implementados
-tags: [cobertura, controlos, rastreabilidade, requisitos, testes]
+id: rastreabilidade-controlo
+tags:
+- ciclo-vida
+- cobertura
+- controlos
+- rastreabilidade
+- requisitos
+- testes
+- tipo-aplicacao
+title: Rastreabilidade entre Requisitos e Controlos Técnicos
 ---
+
 
 # 🔗 Modelo de Rastreabilidade de Requisitos
 

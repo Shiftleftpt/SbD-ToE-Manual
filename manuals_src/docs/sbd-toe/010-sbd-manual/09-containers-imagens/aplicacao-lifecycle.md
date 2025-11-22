@@ -1,10 +1,19 @@
 ---
-id: aplicacao-lifecycle
-title: Como Fazer
-description: Como aplicar as práticas prescritas de segurança em containers ao longo do ciclo de vida de desenvolvimento e operação
-tags: [ciclo-vida, containers, imagens, isolamento, sbom, seguranca, supply-chain, tipo:aplicacao]
+description: Como aplicar as práticas prescritas de segurança em containers ao longo
+  do ciclo de vida de desenvolvimento e operação
 genia: us-format-normalization
+id: aplicacao-lifecycle
+tags:
+- ciclo-vida
+- containers
+- imagens
+- isolamento
+- sbom
+- seguranca
+- tipo:aplicacao
+title: Como Fazer
 ---
+
 
 # ⚙️ Aplicação ao Ciclo de Vida - Containers e Execução Isolada
 

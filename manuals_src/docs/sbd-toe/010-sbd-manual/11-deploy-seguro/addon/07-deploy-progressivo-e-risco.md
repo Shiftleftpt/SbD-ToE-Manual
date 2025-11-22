@@ -1,9 +1,18 @@
 ---
+description: Práticas como canary releases, blue/green e staged rollout para mitigar
+  risco em deploys críticos.
 id: 07-deploy-progressivo-e-risco
+tags:
+- deploy
+- grupo:execucao
+- risco
+- staging
+- tema:deploy-progressivo
+- tipo-anexo
+- tipo:anexo
 title: Deploy Progressivo e Controlo de Risco
-description: Práticas como canary releases, blue/green e staged rollout para mitigar risco em deploys críticos.
-tags: [grupo:execucao, risco, staging, tema:deploy-progressivo, tipo:anexo]
 ---
+
 
 
 # 🚀 Deploy Progressivo e Avaliação de Risco

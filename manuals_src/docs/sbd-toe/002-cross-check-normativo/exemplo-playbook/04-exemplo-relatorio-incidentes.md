@@ -1,9 +1,17 @@
 ---
-id: exemplo-relatorio-incidentes
-title: "Exemplo: Reporte de Incidentes"
 description: Template exemplar de reporte de incidentes alinhado com DORA RTS/ITS
-tags: [dora, exemplos, incidentes, reporte, template]
+id: exemplo-relatorio-incidentes
+tags:
+- dora
+- exemplos
+- implementacao
+- incidentes
+- playbook
+- reporte
+- template
+title: 'Exemplo: Reporte de Incidentes'
 ---
+
 
 # Exemplo: Relatório de Incidentes
 

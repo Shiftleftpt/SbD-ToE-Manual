@@ -1,10 +1,19 @@
 ---
+description: Análise de como o SbD-ToE cobre os requisitos técnicos do Regulamento
+  DORA (UE 2022/2554)
 id: intro
-title: DORA - Cross-Check Normativo
-description: Análise de como o SbD-ToE cobre os requisitos técnicos do Regulamento DORA (UE 2022/2554)
-tags: [cross-check, dora, finanças, ict-risk, regulamentacao, resiliencia]
 sidebar_position: 1
+tags:
+- arquitetura
+- cross-check
+- dora
+- finanças
+- ict-risk
+- regulamentacao
+- resiliencia
+title: DORA - Cross-Check Normativo
 ---
+
 
 # DORA: Cross-Check Normativo
 

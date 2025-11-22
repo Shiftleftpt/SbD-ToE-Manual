@@ -1,10 +1,19 @@
 ---
+description: Roadmap prático para implementar SbD-ToE conforme requisitos DORA — mapeamento
+  direto de artigos para ações
 id: playbook
-title: "SbD-ToE 4 DORA: Playbook de Implementação"
-description: Roadmap prático para implementar SbD-ToE conforme requisitos DORA — mapeamento direto de artigos para ações
-tags: [dora, implementacao, playbook, roadmap]
 sidebar_position: 2
+tags:
+- cra
+- dora
+- implementacao
+- nis2
+- playbook
+- produtos-digitais
+- roadmap
+title: 'SbD-ToE 4 DORA: Playbook de Implementação'
 ---
+
 
 # SbD-ToE 4 DORA: Playbook de Implementação
 

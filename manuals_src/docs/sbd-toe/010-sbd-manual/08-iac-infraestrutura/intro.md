@@ -1,10 +1,19 @@
 ---
+description: Práticas de segurança para definição, validação e gestão de infraestrutura
+  como código
 id: intro
-title: Infraestrutura como Código (IaC)
-description: Práticas de segurança para definição, validação e gestão de infraestrutura como código
-tags: [DSOMM, SAMM, SLSA, SSDF, automatização, cat_operacional, grp_implementacao_automacao, iac, implementacao-automacao, infraestrutura, seguranca, terraform]
 sidebar_position: 0
+tags:
+- DSOMM
+- SAMM
+- SLSA
+- SSDF
+- automatização
+- cat_operacional
+- grp_implementacao_automacao
+title: Infraestrutura como Código (IaC)
 ---
+
 
 :::tip Capítulo Operacional
 Este capítulo é considerado **operacional** no modelo *Security by Design - Theory of Everything (SbD-ToE)*.  

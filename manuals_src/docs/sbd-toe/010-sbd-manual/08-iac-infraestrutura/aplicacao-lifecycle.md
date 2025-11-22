@@ -1,10 +1,19 @@
 ---
-id: aplicacao-lifecycle
-title: Como Fazer
-description: Integração prática das práticas de segurança IaC no SDLC, com proporcionalidade por risco, user stories reutilizáveis e evidência auditável
-tags: [ciclo-vida, iac, infraestrutura, pipelines, seguranca, tipo:aplicacao]
+description: Integração prática das práticas de segurança IaC no SDLC, com proporcionalidade
+  por risco, user stories reutilizáveis e evidência auditável
 genia: us-format-normalization
+id: aplicacao-lifecycle
+tags:
+- cicd
+- ciclo-vida
+- iac
+- infraestrutura
+- pipelines
+- seguranca
+- tipo:aplicacao
+title: Como Fazer
 ---
+
 
 # 📅 Aplicação no Ciclo de Vida - Infraestrutura como Código (IaC)
 

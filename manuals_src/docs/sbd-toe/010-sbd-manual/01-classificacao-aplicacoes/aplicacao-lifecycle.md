@@ -1,9 +1,18 @@
 ---
+description: Aplicação da classificação de criticidade ao longo do ciclo de vida de
+  desenvolvimento
 id: aplicacao-lifecycle
+tags:
+- ciclo-vida
+- classificacao
+- genia:us-format-normalization
+- risco
+- tipo-aplicacao
+- tipo:aplicacao
+- user-stories
 title: Como Fazer
-description: Aplicação da classificação de criticidade ao longo do ciclo de vida de desenvolvimento
-tags: [ciclo-vida, classificacao, genia:us-format-normalization, risco, tipo:aplicacao, user-stories]
 ---
+
 
 # 🛠️ Aplicação da Classificação de Criticidade ao Longo do Ciclo de Vida
 

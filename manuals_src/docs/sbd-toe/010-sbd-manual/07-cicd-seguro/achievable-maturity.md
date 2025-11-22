@@ -1,9 +1,17 @@
 ---
 id: achievable-maturity
-title: Mapeamento de Maturidade - Capítulo 07
 sidebar_position: 10
-tags: [DSOMM, SAMM, SLSA, SSDF, canon, maturidade]
+tags:
+- DSOMM
+- SAMM
+- SLSA
+- SSDF
+- canon
+- cicd
+- maturidade
+title: Mapeamento de Maturidade - Capítulo 07
 ---
+
 
 # 📈 Maturidade - CI/CD Seguro
 

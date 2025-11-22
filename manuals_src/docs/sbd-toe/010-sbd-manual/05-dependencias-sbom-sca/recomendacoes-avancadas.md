@@ -1,11 +1,19 @@
 ---
+description: Recomendações reforçadas para contextos críticos ou ambientes com elevada
+  maturidade
 id: recomendacoes-avancadas
-title: Práticas Avançadas - Gestão de Dependências e Supply Chain
-description: Recomendações reforçadas para contextos críticos ou ambientes com elevada maturidade
-tags: [avancadas, dependencias, maturidade, sbom, sca, supply-chain]
 sidebar_position: 30
-
+tags:
+- avancadas
+- cicd
+- dependencias
+- maturidade
+- sbom
+- sca
+- supply-chain
+title: Práticas Avançadas - Gestão de Dependências e Supply Chain
 ---
+
 
 # 🧠 Práticas Avançadas - Gestão de Dependências e Supply Chain
 

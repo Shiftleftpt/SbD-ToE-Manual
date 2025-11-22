@@ -1,10 +1,19 @@
 ---
+description: Regras formais para permitir exceções no pipeline, com registo, aprovação,
+  prazo de validade e visibilidade por função.
 id: case-study-inception-apply-sbd-to-cicd
-title: Estudo de Caso - Aplicar o SbD-ToE ao Próprio Pipeline CI/CDx
 sidebar_position: 9
-description: Regras formais para permitir exceções no pipeline, com registo, aprovação, prazo de validade e visibilidade por função.
-tags: [auditoria, cicd, exceções, governanca, seguranca, visibilidade]
+tags:
+- auditoria
+- cicd
+- dependencias
+- exceções
+- governanca
+- seguranca
+- visibilidade
+title: Estudo de Caso - Aplicar o SbD-ToE ao Próprio Pipeline CI/CDx
 ---
+
 
 
 # 🧪 Estudo de Caso - Aplicar o SbD-ToE ao Próprio Pipeline CI/CD

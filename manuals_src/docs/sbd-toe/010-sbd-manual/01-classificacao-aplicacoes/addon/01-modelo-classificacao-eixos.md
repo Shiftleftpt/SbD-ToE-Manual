@@ -1,9 +1,17 @@
 ---
 id: modelo-classificacao-eixos
-title: Modelo de Classificação
 sidebar_position: 1
-tags: [eixo, risco, tema:criticidade, tipo:modelo]
+tags:
+- auditoria
+- eixo
+- evolucao
+- governação
+- risco
+- tema:criticidade
+- tipo:modelo
+title: Modelo de Classificação
 ---
+
 <!--template: sbdtoe-core -->
 
 # 📎 Modelo de Classificação por Eixos de Risco

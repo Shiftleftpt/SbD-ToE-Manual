@@ -1,10 +1,19 @@
 ---
+description: Casos práticos de aplicação de governação de segurança em projetos, exceções
+  e contratações
 id: exemplos-aplicacao-governanca
-title: Exemplos de Aplicação e Onboarding
 sidebar_position: 5
-description: Casos práticos de aplicação de governação de segurança em projetos, exceções e contratações
-tags: [excecoes, exemplos, governance, onboarding]
+tags:
+- controlo
+- excecoes
+- exemplos
+- formacao
+- governance
+- onboarding
+- rastreabilidade
+title: Exemplos de Aplicação e Onboarding
 ---
+
 
 
 

@@ -1,10 +1,18 @@
 ---
-
+description: Porquê Determinação da criticidade de aplicações para aplicar proporcionalidade
+  nos controlos de segurança
 id: pre-note
+tags:
+- base
+- ciclo-vida
+- classificacao
+- genia:us-format-normalization
+- proporcionalidade
+- risco
+- tipo-aplicacao
 title: ℹ️ Fundamentação
-description: Porquê Determinação da criticidade de aplicações para aplicar proporcionalidade nos controlos de segurança
-tags: [base, ciclo-vida, classificacao, proporcionalidade, risco]
 ---
+
 
 # Classificação da Criticidade Aplicacional
 

@@ -1,10 +1,19 @@
 ---
+description: Estruturas, políticas e práticas para assegurar governação organizacional,
+  integração de fornecedores e transparência no ciclo SbD-ToE
 id: intro
-title: Governança & Contratação
-description: Estruturas, políticas e práticas para assegurar governação organizacional, integração de fornecedores e transparência no ciclo SbD-ToE
-tags: [KPIs, cat_organizacional, conformidade, contratacao, excecoes, fornecedores, fundamentos, governanca, grp_fundamentos_contexto, rastreabilidade]
 sidebar_position: 0
+tags:
+- KPIs
+- cat_organizacional
+- conformidade
+- contratacao
+- excecoes
+- fornecedores
+- grp_fundamentos_contexto
+title: Governança & Contratação
 ---
+
 
 :::note Capítulo Organizacional
 Este capítulo é considerado **organizacional** no modelo *Security by Design - Theory of Everything (SbD-ToE)*.  

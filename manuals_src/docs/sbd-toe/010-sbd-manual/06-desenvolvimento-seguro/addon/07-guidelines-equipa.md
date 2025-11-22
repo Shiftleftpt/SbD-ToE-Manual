@@ -1,10 +1,19 @@
 ---
+description: Documentação e alinhamento de práticas de segurança entre equipas, promovendo
+  coerência e baseline técnico comum
 id: guidelines-equipa
-title: Guidelines de Equipa e Práticas Partilhadas
 sidebar_position: 7
-description: Documentação e alinhamento de práticas de segurança entre equipas, promovendo coerência e baseline técnico comum
-tags: [alinhamento, equipa, guidelines, práticas seguras, seguranca]
+tags:
+- alinhamento
+- ciclo-vida
+- equipa
+- guidelines
+- práticas seguras
+- seguranca
+- segurança
+title: Guidelines de Equipa e Práticas Partilhadas
 ---
+
 
 
 # 🤝 Guidelines de Equipa e Práticas Partilhadas

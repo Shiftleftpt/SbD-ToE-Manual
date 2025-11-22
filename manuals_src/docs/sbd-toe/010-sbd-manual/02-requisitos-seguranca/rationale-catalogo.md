@@ -1,10 +1,18 @@
 ---
-id: rationale-catalogo
-title: ℹ️ Fundamentação
 description: Fundamentação e estrutura lógica dos temas de requisitos usados no catálogo
-tags: [asvs, estrutura, rastreabilidade, requisitos, temas]
+id: rationale-catalogo
 sidebar_position: 2
+tags:
+- arquitetura
+- asvs
+- cicd
+- estrutura
+- rastreabilidade
+- requisitos
+- temas
+title: ℹ️ Fundamentação
 ---
+
 
 ## Rationale para a Estrutura dos Requisitos Aplicacionais
 

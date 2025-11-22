@@ -1,9 +1,18 @@
 ---
+description: Exemplo completo com DFD, STRIDE e mitigação num serviço de autenticação
+  com JWT
 id: exemplos-aplicacao-stride
+tags:
+- arquitetura
+- controlo
+- dfd
+- exemplos
+- mitigacao
+- stride
+- threat-modeling
 title: Exemplos Threat Modeling DFD e STRIDE
-description: Exemplo completo com DFD, STRIDE e mitigação num serviço de autenticação com JWT
-tags: [dfd, exemplos, mitigacao, stride, threat-modeling]
 ---
+
 
 # 🧪 Exemplo prático - Threat Modeling de um serviço de autenticação com JWT
 

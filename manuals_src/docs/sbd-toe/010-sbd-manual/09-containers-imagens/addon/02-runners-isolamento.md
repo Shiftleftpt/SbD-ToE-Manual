@@ -1,9 +1,18 @@
 ---
+description: Garantia de execução segura e controlada de *containers* em pipelines
+  e ambientes partilhados
 id: runners-isolamento
+tags:
+- ci-cd
+- cicd
+- execucao
+- isolamento
+- pipelines
+- runners
+- seguranca
 title: Runners, Execução Isolada e Ambientes Controlados
-description: Garantia de execução segura e controlada de *containers* em pipelines e ambientes partilhados
-tags: [ci-cd, execucao, isolamento, pipelines, runners, seguranca]
 ---
+
 
 # 🏃‍♂️ Runners, Execução Isolada e Ambientes Controlados
 

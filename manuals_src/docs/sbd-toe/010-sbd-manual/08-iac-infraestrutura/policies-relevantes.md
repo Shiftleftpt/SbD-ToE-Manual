@@ -1,10 +1,19 @@
 ---
+description: Políticas organizacionais necessárias para enquadrar e reforçar a governação
+  e segurança na utilização de Infrastructure as Code (IaC)
 id: policies-relevantes
-title: Policies
-description: Políticas organizacionais necessárias para enquadrar e reforçar a governação e segurança na utilização de Infrastructure as Code (IaC)
-tags: [cloud, configuração segura, devsecops, infraestrutura como código, pipelines, políticas]
 sidebar_position: 60
+tags:
+- cicd
+- cloud
+- configuração segura
+- devsecops
+- infraestrutura como código
+- pipelines
+- políticas
+title: Policies
 ---
+
 
 # 🏠 Políticas Organizacionais — IaC e Infraestrutura como Código
 

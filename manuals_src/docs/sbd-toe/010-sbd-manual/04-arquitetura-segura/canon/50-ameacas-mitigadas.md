@@ -1,10 +1,19 @@
 ---
+description: Ameaças mitigadas pelas práticas prescritas neste capítulo de arquitetura
+  segura
 id: ameacas-mitigadas
-title: Ameaças Mitigadas
-description: Ameaças mitigadas pelas práticas prescritas neste capítulo de arquitetura segura
-tags: [ameacas, arquitetura, dsomm, oscar, risco, stride]
 sidebar_position: 50
+tags:
+- ameacas
+- ameaças
+- arquitetura
+- dsomm
+- oscar
+- risco
+- stride
+title: Ameaças Mitigadas
 ---
+
 
 # 🔐 Ameaças Mitigadas - Capítulo 04: Arquitetura Segura
 

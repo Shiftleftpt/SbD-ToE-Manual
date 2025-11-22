@@ -1,10 +1,19 @@
 ---
+description: Práticas de segurança para pipelines de integração e entrega contínua,
+  com foco em automação, rastreabilidade e controlo proporcional ao risco
 id: intro
-title: CI/CD Seguro
-description: Práticas de segurança para pipelines de integração e entrega contínua, com foco em automação, rastreabilidade e controlo proporcional ao risco
-tags: [automação, cat_operacional, cicd, devsecops, grp_implementacao_automacao, implementacao-automacao, pipelines, proveniência, risco, seguranca]
 sidebar_position: 0
+tags:
+- automação
+- cat_operacional
+- cicd
+- devsecops
+- grp_implementacao_automacao
+- implementacao-automacao
+- pipelines
+title: CI/CD Seguro
 ---
+
 
 :::tip Capítulo Operacional
 Este capítulo é considerado **operacional** no modelo *Security by Design - Theory of Everything (SbD-ToE)*.  

@@ -1,9 +1,18 @@
 ---
+description: Estratégias para gestão segura de releases e segregação de funcionalidades
+  durante a entrega contínua.
 id: 02-praticas-release-management
+tags:
+- grupo:execucao
+- seguranca
+- segurança
+- staging
+- tema:release
+- tipo-anexo
+- tipo:anexo
 title: Práticas de Release Management
-description: Estratégias para gestão segura de releases e segregação de funcionalidades durante a entrega contínua.
-tags: [grupo:execucao, seguranca, staging, tema:release, tipo:anexo]
 ---
+
 
 
 # 🚀 Práticas de Release Management com Foco em Segurança

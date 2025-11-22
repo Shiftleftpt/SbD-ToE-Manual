@@ -1,11 +1,19 @@
 ---
-id: product-owner
-title: Product Owner (PO)
-sidebar_label: 📋 Product Owner (PO)
 description: Responsabilidades do Product Owner no SbD-ToE
-tags: [po, product-owner, produto, responsabilidades]
+id: product-owner
+sidebar_label: 📋 Product Owner (PO)
 sidebar_position: 8
+tags:
+- cicd
+- dependencias
+- po
+- product-owner
+- produto
+- responsabilidades
+- threat-modeling
+title: Product Owner (PO)
 ---
+
 
 # 📋 Product Owner (PO)
 

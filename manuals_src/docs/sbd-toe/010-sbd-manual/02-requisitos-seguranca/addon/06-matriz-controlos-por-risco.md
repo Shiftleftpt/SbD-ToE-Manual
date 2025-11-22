@@ -1,9 +1,17 @@
 ---
-id: matriz-controlos-por-risco
-title: Aplicação de Requisitos por Classificação
 description: Requisitos mínimos obrigatórios por classificação de criticidade da aplicação
-tags: [controlo, matriz, proporcionalidade, requisitos, risco]
+id: matriz-controlos-por-risco
+tags:
+- arquitetura
+- controlo
+- matriz
+- proporcionalidade
+- rastreabilidade
+- requisitos
+- risco
+title: Aplicação de Requisitos por Classificação
 ---
+
 
 # 🧩 Matriz de Aplicação de Requisitos por Nível de Risco
 

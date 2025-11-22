@@ -1,9 +1,18 @@
 ---
+description: Métricas operacionais e institucionais que permitem avaliar a eficácia
+  da formação e onboarding.
 id: indicadores-metricas
+tags:
+- dashboards
+- dsomm
+- formacao
+- kpi
+- metricas
+- onboarding
+- rastreabilidade
 title: Indicadores e Métricas de Formação em Segurança
-description: Métricas operacionais e institucionais que permitem avaliar a eficácia da formação e onboarding.
-tags: [dashboards, formacao, kpi, metricas, onboarding, rastreabilidade]
 ---
+
 
 # 📊 Indicadores e Métricas de Formação
 

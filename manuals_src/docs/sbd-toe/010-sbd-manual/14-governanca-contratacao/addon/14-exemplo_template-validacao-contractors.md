@@ -1,9 +1,18 @@
 ---
+description: Checklist e modelo de validação estruturado para triagem, aprovação e
+  onboarding de contractors
 id: template-validacao-contractors
+tags:
+- checklist
+- contractors
+- formacao
+- governanca
+- onboarding
+- triagem
+- validacao
 title: Template de Validação de Contractors
-description: Checklist e modelo de validação estruturado para triagem, aprovação e onboarding de contractors
-tags: [checklist, contractors, governanca, onboarding, triagem, validacao]
 ---
+
 
 # 📋 Template de Validação de Contractors
 

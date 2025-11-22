@@ -1,9 +1,18 @@
 ---
+description: Uso de feature toggles com segurança, rastreabilidade e capacidade de
+  reversão em produção.
 id: 03-feature-flags-e-toggle
+tags:
+- deploy
+- grupo:execucao
+- rastreabilidade
+- tema:feature-flags
+- tipo-anexo
+- tipo:anexo
+- toggles
 title: Controlo de Funcionalidades com Feature Flags
-description: Uso de feature toggles com segurança, rastreabilidade e capacidade de reversão em produção.
-tags: [deploy, grupo:execucao, rastreabilidade, tema:feature-flags, tipo:anexo, toggles]
 ---
+
 
 
 # 🌺 Utilização Segura de Feature Flags e Toggles

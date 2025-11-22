@@ -1,10 +1,19 @@
 ---
+description: Práticas reforçadas e recomendações opcionais para organizações com maior
+  maturidade em desenvolvimento seguro
 id: recomendacoes-avancadas
-title: Recomendações Avançadas - Desenvolvimento Seguro
-description: Práticas reforçadas e recomendações opcionais para organizações com maior maturidade em desenvolvimento seguro
-tags: [DevSecOps, desenvolvimento, maturidade, práticas avançadas, validacao]
 sidebar_position: 30
+tags:
+- DevSecOps
+- desenvolvimento
+- devsecops
+- maturidade
+- práticas avançadas
+- validacao
+- validação
+title: Recomendações Avançadas - Desenvolvimento Seguro
 ---
+
 
 # 🧠 Recomendações Avançadas - Desenvolvimento Seguro
 

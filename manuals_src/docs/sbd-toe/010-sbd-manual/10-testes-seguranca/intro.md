@@ -1,10 +1,19 @@
 ---
+description: Estratégias e práticas para validar continuamente a segurança de aplicações
+  através de testes automatizados, manuais e ofensivos
 id: intro
-title: Testes de Segurança
-description: Estratégias e práticas para validar continuamente a segurança de aplicações através de testes automatizados, manuais e ofensivos
-tags: [DAST, DSOMM, SAMM, SAST, SLSA, SSDF, cat_operacional, fuzzing, grp_implementacao_automacao, implementacao-automacao, pentesting, seguranca, testes, validação contínua]
 sidebar_position: 0
+tags:
+- DAST
+- DSOMM
+- SAMM
+- SAST
+- SLSA
+- cat_operacional
+- grp_implementacao_automacao
+title: Testes de Segurança
 ---
+
 
 :::tip Capítulo Operacional
 Este capítulo é considerado **operacional** no modelo *Security by Design - Theory of Everything (SbD-ToE)*.  

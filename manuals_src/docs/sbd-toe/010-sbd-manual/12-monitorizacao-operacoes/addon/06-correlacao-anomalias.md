@@ -1,10 +1,19 @@
 ---
+description: Estratégias para correlação de logs entre fontes e deteção de comportamentos
+  suspeitos.
 id: correlacao-anomalias
-title: Correlação de Eventos e Deteção de Anomalias
 sidebar_position: 6
-description: Estratégias para correlação de logs entre fontes e deteção de comportamentos suspeitos.
-tags: [anomalias, correlação, deteção, eventos, multi-sistema]
+tags:
+- anomalias
+- contratacao
+- correlação
+- deteccao
+- deteção
+- eventos
+- multi-sistema
+title: Correlação de Eventos e Deteção de Anomalias
 ---
+
 
 
 # 🧬 Correlação e Deteção de Anomalias

@@ -1,11 +1,18 @@
 ---
-id: policies-relevantes
-title: Policies
 description: Políticas organizacionais que sustentam a aplicação prática deste capítulo
-tags: [dependencias, organizacional, policy, sbom, sca]
+id: policies-relevantes
 sidebar_position: 60
-
+tags:
+- dependencias
+- dsomm
+- organizacional
+- policy
+- políticas
+- sbom
+- sca
+title: Policies
 ---
+
 
 # 🏛️ Políticas Organizacionais - Dependências, SBOM e SCA
 

@@ -1,9 +1,18 @@
 ---
+description: Formalização de desvios justificados em findings SCA, com critérios e
+  rastreabilidade
 id: excecoes-e-aceitacao-risco
+tags:
+- dependencias
+- excecoes
+- exceptions
+- sbom
+- sca
+- supply-chain
+- validação
 title: Exceções e Aceitação de Risco em Vulnerabilidades
-description: Formalização de desvios justificados em findings SCA, com critérios e rastreabilidade
-tags: [dependencias, exceptions, sbom, sca, supply-chain]
 ---
+
 
 # ⚖️ Exceções e Aceitação de Risco em Vulnerabilidades
 

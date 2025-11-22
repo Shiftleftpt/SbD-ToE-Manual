@@ -1,9 +1,17 @@
 ---
-id: gestao-excecoes
-title: Gestão de Exceções a Requisitos de Segurança
 description: Processo formal de exceção e aceitação de risco associado a requisitos
-tags: [exceções, políticas, requisitos, risco, validacao]
+id: gestao-excecoes
+tags:
+- excecoes
+- exceções
+- políticas
+- requisitos
+- risco
+- validacao
+- validação
+title: Gestão de Exceções a Requisitos de Segurança
 ---
+
 
 # ⚠️ Gestão de Exceções a Requisitos de Segurança
 

@@ -1,9 +1,17 @@
 ---
 id: achievable-maturity
-title: Mapeamento de Maturidade - Capítulo 12
 sidebar_position: 10
-tags: [DSOMM, SAMM, SLSA, SSDF, canon, maturidade]
+tags:
+- DSOMM
+- SAMM
+- SLSA
+- SSDF
+- canon
+- dsomm
+- maturidade
+title: Mapeamento de Maturidade - Capítulo 12
 ---
+
 
 # 📈 Maturidade - Monitorização e Operações
 

@@ -1,10 +1,19 @@
 ---
-id: aplicacao-lifecycle
-title: Como Fazer
-description: Integração prática das práticas de capacitação e onboarding no ciclo de vida de desenvolvimento
-tags: [capacitacao, ciclo-vida, formacao, onboarding, seguranca, tipo:aplicacao]
+description: Integração prática das práticas de capacitação e onboarding no ciclo
+  de vida de desenvolvimento
 genia: us-format-normalization
+id: aplicacao-lifecycle
+tags:
+- capacitacao
+- cicd
+- ciclo-vida
+- formacao
+- onboarding
+- seguranca
+- tipo:aplicacao
+title: Como Fazer
 ---
+
 
 # 🎓 Aplicação de Formação e Capacitação no Ciclo de Vida
 

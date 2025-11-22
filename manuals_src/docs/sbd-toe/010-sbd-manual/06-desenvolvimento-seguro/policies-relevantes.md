@@ -1,10 +1,19 @@
 ---
+description: Políticas necessárias para enquadrar e reforçar as práticas de desenvolvimento
+  seguro definidas neste capítulo
 id: policies-relevantes
-title: Policies
-description: Políticas necessárias para enquadrar e reforçar as práticas de desenvolvimento seguro definidas neste capítulo
-tags: [GenAI, codificação segura, desenvolvimento, exceções, políticas, validacao]
 sidebar_position: 60
+tags:
+- GenAI
+- codificação segura
+- desenvolvimento
+- excecoes
+- exceções
+- políticas
+- validacao
+title: Policies
 ---
+
 
 
 # 🏠 Políticas Organizacionais - Desenvolvimento Seguro

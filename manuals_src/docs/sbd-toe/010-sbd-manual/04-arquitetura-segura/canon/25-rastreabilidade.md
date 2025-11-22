@@ -1,10 +1,19 @@
 ---
+description: Mapeamento das práticas deste capítulo face a frameworks normativos e
+  requisitos de segurança reconhecidos
 id: rastreabilidade
-title: Rastreabilidade Top-Down - Capítulo 04
-description: Mapeamento das práticas deste capítulo face a frameworks normativos e requisitos de segurança reconhecidos
-tags: [arquitetura, dsomm, frameworks, iso, rastreabilidade, samm, slsa, ssdf]
 sidebar_position: 25
+tags:
+- arquitetura
+- dsomm
+- frameworks
+- iso
+- rastreabilidade
+- samm
+- slsa
+title: Rastreabilidade Top-Down - Capítulo 04
 ---
+
 
 # 📎 Rastreabilidade contra Frameworks - Capítulo 04: Arquitetura Segura
 

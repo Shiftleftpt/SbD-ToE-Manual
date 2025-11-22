@@ -1,10 +1,19 @@
 ---
+description: Mapeamento top-down entre frameworks normativas e as práticas de segurança
+  na entrega de código em produção.
 id: rastreabilidade
-title: Rastreabilidade - Deploy Seguro
-description: Mapeamento top-down entre frameworks normativas e as práticas de segurança na entrega de código em produção.
-tags: [deploy, frameworks, rastreabilidade, samm, ssdf]
 sidebar_position: 25
+tags:
+- dependencias
+- deploy
+- dsomm
+- frameworks
+- rastreabilidade
+- samm
+- ssdf
+title: Rastreabilidade - Deploy Seguro
 ---
+
 
 
 # 📎 Rastreabilidade contra Frameworks - Capítulo 11: Deploy Seguro e Controlo de Execução

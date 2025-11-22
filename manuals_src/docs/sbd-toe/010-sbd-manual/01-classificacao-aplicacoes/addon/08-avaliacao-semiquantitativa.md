@@ -1,10 +1,17 @@
 ---
-
 id: avaliacao-semiquantitativa
-title: Alternativa - Avaliação Semiquantitativa do Risco
 sidebar_position: 8
-tags: [criticidade, metodologia, tema:risco, tipo:avaliacao]
+tags:
+- asvs
+- criticidade
+- metodologia
+- rastreabilidade
+- tema:requisitos
+- tema:risco
+- tipo:avaliacao
+title: Alternativa - Avaliação Semiquantitativa do Risco
 ---
+
 
 # 🛠️ Modelo Alternativo : Avaliação Semiquantitativa
 

@@ -1,3 +1,13 @@
+---
+tags:
+- ameaças
+- arquitetura
+- cicd
+- dsomm
+- rastreabilidade
+- requisitos
+- threat-modeling
+---
 id: termos-e-glossario-arquitetura
 title: Glossário Operacional
 description: Termos usados no Capítulo 04 com definições operacionais e artefactos associados

@@ -1,10 +1,19 @@
 ---
-id: aplicacao-lifecycle
-title: Como Fazer
-description: Integração prática das práticas de validação contínua nas diferentes fases do ciclo de vida da aplicação
-tags: [ciclo-vida, integracao, seguranca, testes, tipo:aplicacao, validacao]
+description: Integração prática das práticas de validação contínua nas diferentes
+  fases do ciclo de vida da aplicação
 genia: us-format-normalization
+id: aplicacao-lifecycle
+tags:
+- cicd
+- ciclo-vida
+- integracao
+- seguranca
+- testes
+- tipo:aplicacao
+- validacao
+title: Como Fazer
 ---
+
 
 # 🧪 Aplicação de Testes de Segurança ao Longo do Ciclo de Vida
 

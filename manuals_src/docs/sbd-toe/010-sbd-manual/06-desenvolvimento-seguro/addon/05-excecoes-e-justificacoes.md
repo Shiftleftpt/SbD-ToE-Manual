@@ -1,10 +1,19 @@
 ---
+description: Mecanismos formais para registar, aprovar e controlar exceções às regras
+  de segurança durante o desenvolvimento
 id: excecoes-e-justificacoes
-title: Justificação Formal de Exceções
 sidebar_position: 5
-description: Mecanismos formais para registar, aprovar e controlar exceções às regras de segurança durante o desenvolvimento
-tags: [exceções, rastreabilidade, risco, seguranca, validacao]
+tags:
+- excecoes
+- exceções
+- rastreabilidade
+- risco
+- seguranca
+- segurança
+- validacao
+title: Justificação Formal de Exceções
 ---
+
 
 # 📝 Justificação Formal de Exceções
 

@@ -1,10 +1,19 @@
 ---
+description: Correspondência entre as práticas de requisitos e frameworks como SSDF,
+  SAMM, ISO, DSOMM
 id: rastreabilidade
-title: Rastreabilidade Normativa - Requisitos de Segurança
-description: Correspondência entre as práticas de requisitos e frameworks como SSDF, SAMM, ISO, DSOMM
-tags: [DSOMM, ISO, SAMM, SSDF, frameworks, rastreabilidade]
 sidebar_position: 25
+tags:
+- DSOMM
+- ISO
+- SAMM
+- SSDF
+- arquitetura
+- frameworks
+- rastreabilidade
+title: Rastreabilidade Normativa - Requisitos de Segurança
 ---
+
 
 # 📎 Rastreabilidade contra Frameworks - Capítulo 02: Requisitos de Segurança
 

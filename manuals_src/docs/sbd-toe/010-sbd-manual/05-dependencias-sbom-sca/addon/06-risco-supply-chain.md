@@ -1,9 +1,17 @@
 ---
-id: risco-supply-chain
-title: Ameaças à Cadeia de Fornecimento (Supply Chain)
 description: Tipos de ataque via dependências e práticas para deteção e mitigação
-tags: [dependencias, risks, sbom, sca, supply-chain]
+id: risco-supply-chain
+tags:
+- avancadas
+- containers
+- dependencias
+- risks
+- sbom
+- sca
+- supply-chain
+title: Ameaças à Cadeia de Fornecimento (Supply Chain)
 ---
+
 
 # 🚨 Ameaças à Cadeia de Fornecimento (Supply Chain)
 

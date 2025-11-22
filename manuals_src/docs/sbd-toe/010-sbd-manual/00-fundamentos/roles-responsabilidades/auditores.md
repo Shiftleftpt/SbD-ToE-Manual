@@ -1,11 +1,19 @@
 ---
-id: auditores
-title: Auditores Internos e Externos
-sidebar_label: 📋 Auditores Internos e Externos
 description: Responsabilidades dos Auditores no SbD-ToE
-tags: [auditores, auditoria, compliance, responsabilidades]
+id: auditores
+sidebar_label: 📋 Auditores Internos e Externos
 sidebar_position: 14
+tags:
+- auditores
+- auditoria
+- compliance
+- organizacional
+- políticas
+- responsabilidades
+- validação
+title: Auditores Internos e Externos
 ---
+
 
 # 📋 Auditores Internos e Externos
 

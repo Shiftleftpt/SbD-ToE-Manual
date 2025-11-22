@@ -1,9 +1,18 @@
 ---
+description: Políticas necessárias para suportar práticas de logging, deteção e resposta
+  contínua.
 id: policies-relevantes
+tags:
+- deteção
+- monitorizacao
+- operacoes
+- organizacional
+- policy
+- políticas
+- resposta
 title: Policies
-description: Políticas necessárias para suportar práticas de logging, deteção e resposta contínua.
-tags: [deteção, monitorizacao, operacoes, organizacional, policy, resposta]
 ---
+
 
 
 # 🏛️ Políticas Organizacionais - Monitorização e Operações

@@ -1,10 +1,19 @@
 ---
+description: Técnicas para gerar, assinar e validar artefactos com proveniência confiável,
+  garantindo rastreabilidade de build até produção.
 id: integridade-proveniencia
-title: Integridade e Proveniência de Artefactos
 sidebar_position: 5
-description: Técnicas para gerar, assinar e validar artefactos com proveniência confiável, garantindo rastreabilidade de build até produção.
-tags: [artefactos, assinatura, build, cicd, proveniência, rastreabilidade]
+tags:
+- artefactos
+- assinatura
+- build
+- cicd
+- ciclo-vida
+- proveniência
+- rastreabilidade
+title: Integridade e Proveniência de Artefactos
 ---
+
 
 
 # 📦 Integridade e proveniência de artefactos

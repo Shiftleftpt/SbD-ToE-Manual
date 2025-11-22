@@ -1,10 +1,19 @@
 ---
+description: Execução automatizada de testes de segurança como parte de pipelines
+  CI/CD, com rastreabilidade e thresholds.
 id: integracao-pipeline
-title: Integração de Testes no Pipeline
-description: Execução automatizada de testes de segurança como parte de pipelines CI/CD, com rastreabilidade e thresholds.
-tags: [integração contínua, pipelines, rastreabilidade, seguranca, testes]
 sidebar_position: 8
+tags:
+- cicd
+- integração contínua
+- pipelines
+- rastreabilidade
+- seguranca
+- segurança
+- testes
+title: Integração de Testes no Pipeline
 ---
+
 
 
 # 🛠️ Integração dos Testes de Segurança no Pipeline CI/CD

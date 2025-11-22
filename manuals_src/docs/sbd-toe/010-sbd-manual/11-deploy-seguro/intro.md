@@ -1,10 +1,19 @@
 ---
+description: Princípios e controlos para garantir um processo de deploy seguro, validado
+  e rastreável em ambientes de produção
 id: intro
-title: Deploy Seguro
-description: Princípios e controlos para garantir um processo de deploy seguro, validado e rastreável em ambientes de produção
-tags: [cat_operacional, deploy, gates, grp_operacao_melhoria, operacao-continuidade, produção, rollback, sdlc, seguranca]
 sidebar_position: 0
+tags:
+- cat_operacional
+- deploy
+- gates
+- grp_operacao_melhoria
+- operacao-continuidade
+- produção
+- rollback
+title: Deploy Seguro
 ---
+
 
 :::tip Capítulo Operacional
 Este capítulo é considerado **operacional** no modelo *Security by Design - Theory of Everything (SbD-ToE)*.  

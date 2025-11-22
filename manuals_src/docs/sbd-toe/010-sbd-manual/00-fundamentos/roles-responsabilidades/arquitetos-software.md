@@ -1,11 +1,19 @@
 ---
-id: arquitetos-software
-title: Arquitetos de Software
-sidebar_label: 🏗️ Arquitetos de Software
 description: Responsabilidades dos Arquitetos de Software no SbD-ToE
-tags: [arquitetura, design, responsabilidades, seguranca]
+id: arquitetos-software
+sidebar_label: 🏗️ Arquitetos de Software
 sidebar_position: 6
+tags:
+- arquitetura
+- containers
+- dependencias
+- design
+- responsabilidades
+- seguranca
+- segurança
+title: Arquitetos de Software
 ---
+
 
 # 🏗️ Arquitetos de Software
 

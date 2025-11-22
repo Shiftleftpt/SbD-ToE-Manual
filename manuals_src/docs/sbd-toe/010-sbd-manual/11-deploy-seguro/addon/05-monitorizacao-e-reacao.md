@@ -1,9 +1,18 @@
 ---
+description: Práticas de observabilidade, métricas de runtime e mecanismos automáticos
+  de rollback após o deploy.
 id: 05-monitorizacao-e-reacao
+tags:
+- grupo:execucao
+- monitorizacao
+- observabilidade
+- rollback
+- tema:monitorizacao
+- tipo-anexo
+- tipo:anexo
 title: Monitorização Pós-Deploy e Ações de Reação
-description: Práticas de observabilidade, métricas de runtime e mecanismos automáticos de rollback após o deploy.
-tags: [grupo:execucao, observabilidade, rollback, tema:monitorizacao, tipo:anexo]
 ---
+
 
 # 📊 Monitorização e Reação a Incidentes de Runtime
 

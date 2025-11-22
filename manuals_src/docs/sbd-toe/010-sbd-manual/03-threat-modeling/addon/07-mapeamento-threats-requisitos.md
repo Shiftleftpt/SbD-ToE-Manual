@@ -1,9 +1,18 @@
 ---
+description: Como ligar ameaças identificadas a requisitos formais definidos no Capítulo
+  2
 id: mapeamento-threats-requisitos
+tags:
+- capitulo2
+- mapeamento
+- rastreabilidade
+- requisitos
+- stride
+- threat-modeling
+- threats
 title: Mapeamento de Ameaças para Requisitos de Segurança
-description: Como ligar ameaças identificadas a requisitos formais definidos no Capítulo 2
-tags: [capitulo2, mapeamento, rastreabilidade, requisitos, stride, threats]
 ---
+
 
 # 🧩 Mapeamento de Ameaças para Requisitos de Segurança
 

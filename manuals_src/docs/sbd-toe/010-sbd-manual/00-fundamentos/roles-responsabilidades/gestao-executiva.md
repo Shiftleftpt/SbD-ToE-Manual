@@ -1,11 +1,19 @@
 ---
-id: gestao-executiva
-title: Gestão Executiva / CISO
-sidebar_label: 🏛️ Gestão Executiva / CISO
 description: Responsabilidades da Gestão Executiva no SbD-ToE
-tags: [ciso, gestao-executiva, governance, responsabilidades]
+id: gestao-executiva
+sidebar_label: 🏛️ Gestão Executiva / CISO
 sidebar_position: 10
+tags:
+- ciclo-vida
+- ciso
+- contratacao
+- gestao-executiva
+- governance
+- rastreabilidade
+- responsabilidades
+title: Gestão Executiva / CISO
 ---
+
 
 # 🏛️ Gestão Executiva / CISO
 

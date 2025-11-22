@@ -1,10 +1,19 @@
 ---
+description: Regras e ferramentas para validação de segurança diretamente no ambiente
+  de desenvolvimento (pre-commit, IDE, CLI)
 id: linters-validacoes
-title: Linters e Validações Locais de Segurança
 sidebar_position: 2
-description: Regras e ferramentas para validação de segurança diretamente no ambiente de desenvolvimento (pre-commit, IDE, CLI)
-tags: [IDE, automação, linters, pre-commit, seguranca, validacao]
+tags:
+- IDE
+- automação
+- linters
+- pre-commit
+- seguranca
+- validacao
+- validação
+title: Linters e Validações Locais de Segurança
 ---
+
 
 # 🧪 Linters e Validações Locais de Segurança
 

@@ -1,10 +1,19 @@
 ---
+description: Estratégias de planeamento e controlo para garantir uma adoção eficaz
+  e auditável das práticas de segurança em Infraestrutura como Código.
 id: planeamento-e-controle
-title: Planeamento e Controlo da Aplicação de IaC Seguro
 sidebar_position: 1
-description: Estratégias de planeamento e controlo para garantir uma adoção eficaz e auditável das práticas de segurança em Infraestrutura como Código.
-tags: [adoção, controlo, governanca, iac, planeamento, seguranca]
+tags:
+- adoção
+- cicd
+- controlo
+- governanca
+- iac
+- planeamento
+- seguranca
+title: Planeamento e Controlo da Aplicação de IaC Seguro
 ---
+
 
 # 🧭 Planeamento de Execução e Controlo de Estado
 

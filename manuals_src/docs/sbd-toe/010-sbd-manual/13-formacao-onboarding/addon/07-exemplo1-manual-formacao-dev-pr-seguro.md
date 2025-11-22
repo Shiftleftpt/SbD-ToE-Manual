@@ -1,9 +1,18 @@
 ---
+description: Exemplo concreto de manual formativo para desenvolvedores sobre práticas
+  seguras em PRs.
 id: exemplo-manual-dev-pr
+tags:
+- aplicacao
+- auditoria
+- dev
+- exemplos
+- formacao
+- pull request
+- segurança
 title: Exemplo de Manual de Formação - Pull Request Seguro
-description: Exemplo concreto de manual formativo para desenvolvedores sobre práticas seguras em PRs.
-tags: [aplicacao, dev, exemplos, formacao, pull request]
 ---
+
 
 
 # 🛠️ Módulo Formativo - Pull Request Seguro

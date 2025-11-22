@@ -1,10 +1,19 @@
 ---
+description: Catálogo de eventos típicos a monitorizar para fins operacionais e de
+  segurança.
 id: exemplos-eventos
-title: Exemplos de Eventos Relevantes para Monitorização
 sidebar_position: 9
-description: Catálogo de eventos típicos a monitorizar para fins operacionais e de segurança.
-tags: [catálogo, eventos, logging, observabilidade, seguranca]
+tags:
+- catálogo
+- eventos
+- logging
+- monitorizacao
+- observabilidade
+- seguranca
+- segurança
+title: Exemplos de Eventos Relevantes para Monitorização
 ---
+
 
 
 # 🪨 Ameaças Mitigadas por Monitorização e Operações

@@ -1,10 +1,18 @@
 ---
-id: policies-relevantes
-title: Policies Relevantes
 description: Políticas que sustentam a definição, exceção e validação de requisitos
-tags: [exceções, políticas, rastreabilidade, requisitos, validacao]
+id: policies-relevantes
 sidebar_position: 60
+tags:
+- excecoes
+- exceções
+- políticas
+- rastreabilidade
+- requisitos
+- validacao
+- validação
+title: Policies Relevantes
 ---
+
 
 
 # 🏛️ Políticas Organizacionais - Requisitos de Segurança

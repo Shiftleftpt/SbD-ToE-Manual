@@ -1,10 +1,19 @@
 ---
+description: Definição, aplicação, validação e rastreabilidade de requisitos de segurança
+  aplicacionais por nível de risco
 id: intro
-title: Requisitos de Segurança
-description: Definição, aplicação, validação e rastreabilidade de requisitos de segurança aplicacionais por nível de risco
-tags: [ASVS, DSOMM, SAMM, SSDF, cat_basilar, engenharia-segura, grp_engenharia_segura, proporcionalidade, rastreabilidade, seguranca, tema:requisitos, tipo:prescricao, validacao]
 sidebar_position: 1
+tags:
+- ASVS
+- DSOMM
+- SAMM
+- cat_basilar
+- grp_engenharia_segura
+- tema:requisitos
+- tipo:prescricao
+title: Requisitos de Segurança
 ---
+
 
 :::caution Capítulo Basilar
 Este capítulo é considerado **basilar** no modelo *Security by Design - Theory of Everything (SbD-ToE)*.  

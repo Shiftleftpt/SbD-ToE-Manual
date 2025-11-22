@@ -1,9 +1,18 @@
 ---
+description: Estratégia para garantir que todo o código executado em produção foi
+  previamente validado e autorizado.
 id: 01-modelo-controle-execucao
+tags:
+- deploy
+- grupo:execucao
+- seguranca
+- segurança
+- tema:pipeline
+- tipo-anexo
+- tipo:anexo
 title: Modelo de Controlo de Execução
-description: Estratégia para garantir que todo o código executado em produção foi previamente validado e autorizado.
-tags: [deploy, grupo:execucao, seguranca, tema:pipeline, tipo:anexo]
 ---
+
 
 
 # 🧠 Modelo de Controlo de Execução em Runtime

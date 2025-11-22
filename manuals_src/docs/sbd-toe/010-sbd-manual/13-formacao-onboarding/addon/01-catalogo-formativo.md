@@ -1,9 +1,18 @@
 ---
+description: Listagem de conteúdos formativos mínimos por perfil técnico para onboarding
+  e capacitação contínua.
 id: catalogo-formativo
+tags:
+- catalogo
+- conteudos
+- formacao
+- manual
+- onboarding
+- perfis
+- por capitulo
 title: Catálogo de Formação por Perfil Técnico
-description: Listagem de conteúdos formativos mínimos por perfil técnico para onboarding e capacitação contínua.
-tags: [catalogo, conteudos, formacao, onboarding, perfis]
 ---
+
 
 
 # 🗺️ Catálogo de Conteúdos Formativos SbD-ToE

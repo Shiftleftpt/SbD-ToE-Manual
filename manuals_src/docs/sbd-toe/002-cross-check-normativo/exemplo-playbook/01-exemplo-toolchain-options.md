@@ -1,9 +1,17 @@
 ---
-id: exemplo-toolchain-options
-title: "Exemplo: Opções de Toolchain"
 description: Exemplos de como implementar princípios de toolchain com diferentes ferramentas
-tags: [exemplos, ferramentas, iac, logs, toolchain, vulnerabilidades]
+id: exemplo-toolchain-options
+tags:
+- exemplos
+- ferramentas
+- iac
+- logs
+- monitorizacao
+- toolchain
+- vulnerabilidades
+title: 'Exemplo: Opções de Toolchain'
 ---
+
 
 # Exemplo: Opções de Toolchain
 

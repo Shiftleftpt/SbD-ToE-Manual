@@ -1,9 +1,18 @@
 ---
+description: Estudo de caso que ilustra a aplicação dos requisitos ao longo do ciclo
+  de vida
 id: exemplos-aplicacao
+tags:
+- aplicação
+- ciclo-vida
+- exemplos
+- rastreabilidade
+- requisitos
+- validacao
+- validação
 title: Exemplo Prático de Aplicação de Requisitos
-description: Estudo de caso que ilustra a aplicação dos requisitos ao longo do ciclo de vida
-tags: [aplicação, exemplos, rastreabilidade, requisitos, validacao]
 ---
+
 
 # Exemplos de Aplicação de Requisitos de Segurança
 

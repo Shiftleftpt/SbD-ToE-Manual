@@ -1,10 +1,19 @@
 ---
+description: Políticas formais necessárias para garantir a segurança, reversibilidade
+  e rastreabilidade de deploys em produção.
 id: policies-relevantes
-title: Policies
-description: Políticas formais necessárias para garantir a segurança, reversibilidade e rastreabilidade de deploys em produção.
-tags: [deploy, organizacional, policy, rastreabilidade, rollback, validacao]
 sidebar_position: 60
+tags:
+- deploy
+- organizacional
+- policy
+- políticas
+- rastreabilidade
+- rollback
+- validacao
+title: Policies
 ---
+
 
 
 # 🏠 Políticas Organizacionais - Deploy Seguro

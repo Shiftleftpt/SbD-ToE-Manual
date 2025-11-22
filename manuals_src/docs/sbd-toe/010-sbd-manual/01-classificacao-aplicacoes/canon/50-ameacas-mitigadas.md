@@ -1,9 +1,17 @@
 ---
 id: ameacas-mitigadas
-title: Ameaças Mitigadas por Práticas do Capítulo 01
 sidebar_position: 50
-tags: [ameacas, canon, controlo, mitigacao, risco]
+tags:
+- ameacas
+- ameaças
+- canon
+- controlo
+- iac
+- mitigacao
+- risco
+title: Ameaças Mitigadas por Práticas do Capítulo 01
 ---
+
 
 # 🔐 Ameaças Mitigadas - Capítulo 01: Classificação da Criticidade Aplicacional
 

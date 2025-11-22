@@ -1,9 +1,18 @@
 ---
+description: Lista de verificação formal para onboarding técnico seguro, com registo
+  e validação por função.
 id: checklist-onboarding
+tags:
+- capacitacao
+- checklist
+- controlo
+- formacao
+- onboarding
+- permissao
+- rastreabilidade
 title: Checklist de Onboarding Técnico
-description: Lista de verificação formal para onboarding técnico seguro, com registo e validação por função.
-tags: [checklist, controlo, onboarding, permissao, rastreabilidade]
 ---
+
 
 
 # ✅ Checklist de Onboarding Técnico Seguro

@@ -1,9 +1,17 @@
 ---
 id: matriz-controlos-por-risco
-title: Matriz de Controlos por Nível de Risco
 sidebar_position: 5
-tags: [controlos, proporcionalidade, risco, tipo:matriz]
+tags:
+- ameaças
+- controlo
+- controlos
+- proporcionalidade
+- risco
+- testes
+- tipo:matriz
+title: Matriz de Controlos por Nível de Risco
 ---
+
 
 <!--template: sbdtoe-core -->
 

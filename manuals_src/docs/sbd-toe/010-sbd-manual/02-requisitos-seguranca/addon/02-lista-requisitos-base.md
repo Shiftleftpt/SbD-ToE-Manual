@@ -1,9 +1,18 @@
 ---
+description: Matriz síntese dos requisitos aplicacionais por nível de risco (L1–L3),
+  anexo para consulta rápida e referência.
 id: lista-requisitos-base
+tags:
+- anexo
+- criticidade
+- tema:requisitos
+- tema:resumo
+- tipo-anexo
+- tipo-catalogo
+- tipo:catalogo
 title: Compilação do Catálogo Requisitos de Segurança
-description: Matriz síntese dos requisitos aplicacionais por nível de risco (L1–L3), anexo para consulta rápida e referência.
-tags: [anexo, criticidade, tema:requisitos, tema:resumo, tipo:catalogo]
 ---
+
 
 > Importante:
 >

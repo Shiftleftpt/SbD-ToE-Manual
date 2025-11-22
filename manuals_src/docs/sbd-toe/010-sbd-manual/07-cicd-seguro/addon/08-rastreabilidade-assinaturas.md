@@ -1,10 +1,19 @@
 ---
+description: Garantir que cada execução de pipeline e cada artefacto podem ser rastreados
+  até ao commit, origem e responsável associado.
 id: rastreabilidade-assinaturas
-title: Rastreabilidade de Execuções, Assinaturas e Deploys
 sidebar_position: 8
-description: Garantir que cada execução de pipeline e cada artefacto podem ser rastreados até ao commit, origem e responsável associado.
-tags: [auditoria, cicd, deploy, execuções, logs, rastreabilidade]
+tags:
+- auditoria
+- cicd
+- deploy
+- execuções
+- logs
+- monitorizacao
+- rastreabilidade
+title: Rastreabilidade de Execuções, Assinaturas e Deploys
 ---
+
 
 
 # 🧾 Rastreabilidade de assinaturas e deploys

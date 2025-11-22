@@ -1,10 +1,19 @@
 ---
+description: Orientação para organizações potencialmente enquadradas simultaneamente
+  por DORA e NIS2
 id: convergencia-dora
-title: Nota - Convergência DORA & NIS2
-description: Orientação para organizações potencialmente enquadradas simultaneamente por DORA e NIS2
 sidebar_position: 4
-tags: [convergencia, dora, governanca, lex-specialis, nis2]
+tags:
+- convergencia
+- dora
+- governanca
+- governação
+- lex-specialis
+- nis2
+- testes
+title: Nota - Convergência DORA & NIS2
 ---
+
 
 # Nota: Organizações abrangidas por DORA e NIS2
 

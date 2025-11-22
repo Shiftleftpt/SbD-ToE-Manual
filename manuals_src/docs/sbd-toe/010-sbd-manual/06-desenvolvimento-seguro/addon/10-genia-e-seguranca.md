@@ -1,10 +1,19 @@
 ---
+description: Boas práticas e controlos para uso seguro de ferramentas de IA generativa
+  na escrita de código e revisão automática
 id: genia-e-seguranca
-title: Uso de GenIA no Desenvolvimento Seguro
 sidebar_position: 10
-description: Boas práticas e controlos para uso seguro de ferramentas de IA generativa na escrita de código e revisão automática
-tags: [ai, código gerado, genia, revisão, seguranca, validacao]
+tags:
+- ai
+- checklist
+- código gerado
+- genia
+- revisão
+- seguranca
+- validacao
+title: Uso de GenIA no Desenvolvimento Seguro
 ---
+
 
 
 # 🤖 Uso de GenIA no Desenvolvimento Seguro

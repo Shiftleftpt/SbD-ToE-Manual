@@ -1,10 +1,19 @@
 ---
+description: Estratégias e práticas para garantir que equipas, perfis e stakeholders
+  estão preparados para aplicar o Security by Design
 id: intro
-title: Formação e Capacitação
-description: Estratégias e práticas para garantir que equipas, perfis e stakeholders estão preparados para aplicar o Security by Design
-tags: [DSOMM, SAMM, aprendizagem, capacitacao, cat_organizacional, champions, formacao, fundamentos, grp_fundamentos_contexto, onboarding]
 sidebar_position: 0
+tags:
+- DSOMM
+- SAMM
+- aprendizagem
+- capacitacao
+- cat_organizacional
+- champions
+- grp_fundamentos_contexto
+title: Formação e Capacitação
 ---
+
 
 :::note Capítulo Organizacional
 Este capítulo é considerado **organizacional** no modelo *Security by Design - Theory of Everything (SbD-ToE)*.  

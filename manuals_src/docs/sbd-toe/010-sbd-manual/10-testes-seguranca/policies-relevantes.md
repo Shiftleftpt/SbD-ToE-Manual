@@ -1,10 +1,19 @@
 ---
+description: Políticas formais necessárias para legitimar e operacionalizar a validação
+  contínua da segurança das aplicações.
 id: policies-relevantes
-title: Policies
-description: Políticas formais necessárias para legitimar e operacionalizar a validação contínua da segurança das aplicações.
-tags: [dsoom, organizacional, policy, samm, seguranca, ssdf, testes, validacao]
 sidebar_position: 60
+tags:
+- dsoom
+- organizacional
+- policy
+- samm
+- seguranca
+- ssdf
+- testes
+title: Policies
 ---
+
 
 
 # 🏛️ Políticas Organizacionais - Testes de Segurança

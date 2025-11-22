@@ -1,10 +1,19 @@
 ---
+description: Porque este capítulo é excecional, que fontes suportam o catálogo IAC-XXX
+  e como criar/adaptar o catálogo organizacional
 id: pre-intro
-title: Fundamentação
-description: Porque este capítulo é excecional, que fontes suportam o catálogo IAC-XXX e como criar/adaptar o catálogo organizacional
-tags: [catálogo, cloud, iac, kubernetes, pipelines, rationale, requisitos, seguranca, terraform]
 sidebar_position: -1
+tags:
+- catálogo
+- cloud
+- iac
+- kubernetes
+- pipelines
+- rationale
+- requisitos
+title: Fundamentação
 ---
+
 
 # 📑 Rationale - Catálogo de Requisitos de IaC
 

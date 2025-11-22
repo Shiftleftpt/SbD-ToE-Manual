@@ -1,9 +1,17 @@
 ---
 id: achievable-maturity
-title: Mapeamento de Maturidade - Capítulo 10
 sidebar_position: 10
-tags: [DSOMM, SAMM, SLSA, SSDF, canon, maturidade]
+tags:
+- DSOMM
+- SAMM
+- SLSA
+- SSDF
+- canon
+- maturidade
+- testes
+title: Mapeamento de Maturidade - Capítulo 10
 ---
+
 
 # 📈 Maturidade - Testes de Segurança
 

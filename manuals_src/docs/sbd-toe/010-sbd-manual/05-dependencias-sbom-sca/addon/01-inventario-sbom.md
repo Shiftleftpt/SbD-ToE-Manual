@@ -1,9 +1,18 @@
 ---
+description: Geração e gestão de Software Bill of Materials (SBOM) com rastreabilidade
+  no ciclo de vida
 id: inventario-sbom
+tags:
+- cat_operacional
+- cicd
+- dependencias
+- engenharia-segura
+- sbom
+- sca
+- supply-chain
 title: Inventário de Dependências e SBOM
-description: Geração e gestão de Software Bill of Materials (SBOM) com rastreabilidade no ciclo de vida
-tags: [dependencias, sbom, sca, supply-chain]
 ---
+
 
 # 📦 Inventário de Dependências e SBOM
 

@@ -1,9 +1,18 @@
 ---
+description: Verificações obrigatórias antes da promoção de código para produção,
+  incluindo segurança, funcionalidade e readiness.
 id: 04-validacoes-pre-deploy
+tags:
+- grupo:execucao
+- pre-deploy
+- seguranca
+- segurança
+- tema:validacao
+- tipo-anexo
+- tipo:anexo
 title: Validações Técnicas e Funcionais Pré-Deploy
-description: Verificações obrigatórias antes da promoção de código para produção, incluindo segurança, funcionalidade e readiness.
-tags: [grupo:execucao, pre-deploy, seguranca, tema:validacao, tipo:anexo]
 ---
+
 
 # 🔧 Validações de Segurança antes de Deploy
 

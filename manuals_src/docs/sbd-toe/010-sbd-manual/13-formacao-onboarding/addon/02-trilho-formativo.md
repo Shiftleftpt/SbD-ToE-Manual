@@ -1,9 +1,18 @@
 ---
+description: Caminho formativo adaptado ao nível de risco (L1–L3) e ao perfil técnico
+  de cada colaborador.
 id: trilho-formativo
+tags:
+- capacitacao
+- ciclo-vida
+- formacao
+- onboarding
+- perfis
+- risco
+- trilho
 title: Trilho de Formação por Nível de Risco
-description: Caminho formativo adaptado ao nível de risco (L1–L3) e ao perfil técnico de cada colaborador.
-tags: [formacao, onboarding, perfis, risco, trilho]
 ---
+
 
 
 # 🎓 Trilhos Formativos por Função e Risco

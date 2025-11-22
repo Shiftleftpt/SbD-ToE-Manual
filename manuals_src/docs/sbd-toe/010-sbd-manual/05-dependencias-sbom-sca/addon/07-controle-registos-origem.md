@@ -1,9 +1,18 @@
 ---
+description: Políticas para repositórios internos, proxies, mirrors e validação da
+  proveniência
 id: controle-registos-origem
+tags:
+- cat_operacional
+- cicd
+- dependencias
+- invetario
+- sbom
+- sca
+- supply-chai
 title: Controlo de Registos e Origem de Pacotes
-description: Políticas para repositórios internos, proxies, mirrors e validação da proveniência
-tags: [dependencias, invetario, sbom, sca, supply-chai]
 ---
+
 
 # 📂 Controlo de Registos e Origem de Pacotes
 

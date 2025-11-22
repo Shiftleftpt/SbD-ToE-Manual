@@ -1,11 +1,20 @@
 ---
+description: Lista de verificação binária e rastreável da adoção das práticas do Capítulo
+  13.
 id: Rastreabilidade
-title: Rastreabilidade contra Frameworks
 sidebar_label: Checklist de Revisão
-description: Lista de verificação binária e rastreável da adoção das práticas do Capítulo 13.
-tags: [auditoria, checklist, controlo, formacao, onboarding, validacao]
 sidebar_position: 20
+tags:
+- auditoria
+- checklist
+- controlo
+- formacao
+- onboarding
+- validacao
+- validação
+title: Rastreabilidade contra Frameworks
 ---
+
 
 
 # 📎 Rastreabilidade contra Frameworks - Capítulo 13: Formação e Onboarding Seguro

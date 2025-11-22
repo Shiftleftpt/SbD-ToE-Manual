@@ -1,9 +1,18 @@
 ---
+description: Setup e utilização de ambiente isolado para formação prática de contractors
+  antes de acesso a sistemas reais
 id: guia-preparacao-sandbox
+tags:
+- contractors
+- contratos
+- formacao
+- governanca
+- onboarding
+- pratica
+- sandbox
 title: Guia de Preparação Sandbox para Contractors
-description: Setup e utilização de ambiente isolado para formação prática de contractors antes de acesso a sistemas reais
-tags: [contractors, formacao, governanca, onboarding, pratica, sandbox]
 ---
+
 
 # 🏜️ Guia de Preparação Sandbox para Contractors
 

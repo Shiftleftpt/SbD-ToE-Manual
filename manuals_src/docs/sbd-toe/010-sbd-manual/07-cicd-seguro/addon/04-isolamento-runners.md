@@ -1,10 +1,19 @@
 ---
+description: Medidas para segregar runners por aplicação, evitar persistência e garantir
+  ambientes de execução efémeros e controlados.
 id: isolamento-runners
-title: Isolamento e Proteção de Runners
 sidebar_position: 4
-description: Medidas para segregar runners por aplicação, evitar persistência e garantir ambientes de execução efémeros e controlados.
-tags: [cicd, execução, infraestrutura, isolamento, runners, seguranca]
+tags:
+- cicd
+- execução
+- infraestrutura
+- isolamento
+- runners
+- seguranca
+- segurança
+title: Isolamento e Proteção de Runners
 ---
+
 
 # 🖥️ Isolamento e proteção de runners
 

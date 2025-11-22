@@ -1,9 +1,18 @@
 ---
+description: Alinhamento entre as práticas deste capítulo e os principais frameworks
+  de segurança
 id: achievable-maturity
+tags:
+- DSOMM
+- SAMM
+- SLSA
+- SSDF
+- arquitetura
+- maturidade
+- threat-modeling
 title: Mapeamento de Maturidade - Threat Modeling
-description: Alinhamento entre as práticas deste capítulo e os principais frameworks de segurança
-tags: [DSOMM, SAMM, SLSA, SSDF, maturidade, threat-modeling]
 ---
+
 
 # 📈 Maturidade - Threat Modeling
 

@@ -1,10 +1,19 @@
 ---
+description: Definição e cálculo de indicadores como MTTD e MTTR, e sua aplicação
+  em dashboards operacionais.
 id: metricas-indicadores
-title: Métricas, Indicadores e KPIs de Deteção e Resposta
 sidebar_position: 7
-description: Definição e cálculo de indicadores como MTTD e MTTR, e sua aplicação em dashboards operacionais.
-tags: [dashboards, indicadores, kpi, mttd, mttr, métricas]
+tags:
+- cicd
+- dashboards
+- indicadores
+- kpi
+- mttd
+- mttr
+- métricas
+title: Métricas, Indicadores e KPIs de Deteção e Resposta
 ---
+
 
 # 📈 Métricas, Indicadores e Cobertura
 

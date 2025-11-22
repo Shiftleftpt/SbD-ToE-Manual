@@ -1,10 +1,19 @@
 ---
+description: Definição de políticas automáticas no pipeline com gates de segurança
+  que variam segundo o nível de risco da aplicação.
 id: politicas-gates-pipeline
-title: Políticas e Gates por Nível de Aplicação
 sidebar_position: 6
-description: Definição de políticas automáticas no pipeline com gates de segurança que variam segundo o nível de risco da aplicação.
-tags: [cicd, gates, políticas, risco, seguranca, validações]
+tags:
+- cicd
+- gates
+- políticas
+- risco
+- seguranca
+- segurança
+- validações
+title: Políticas e Gates por Nível de Aplicação
 ---
+
 
 
 # 🛂 Políticas e gates por nível de aplicação

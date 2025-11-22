@@ -1,9 +1,18 @@
 ---
+description: Práticas de controlo, aprovação e rastreabilidade de bibliotecas externas
+  e pacotes de terceiros
 id: governanca-libs-terceiros
+tags:
+- checklist
+- dependencias
+- governance
+- policy
+- sbom
+- sca
+- supply-chain
 title: Governaça de Bibliotecas e Componentes de Terceiros
-description: Práticas de controlo, aprovação e rastreabilidade de bibliotecas externas e pacotes de terceiros
-tags: [dependencias, governance, sbom, sca, supply-chain]
 ---
+
 
 # 📄 Governaça de Bibliotecas e Componentes de Terceiros
 

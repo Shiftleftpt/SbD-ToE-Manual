@@ -1,10 +1,19 @@
 ---
+description: Regras de construção e revisão segura de pipelines como código, com triggers
+  controlados e ambientes previsíveis.
 id: design-seguro-pipelines
-title: Design Seguro dos Pipelines
 sidebar_position: 1
-description: Regras de construção e revisão segura de pipelines como código, com triggers controlados e ambientes previsíveis.
-tags: [automação, cicd, pipelines, revisão, triggers, yaml]
+tags:
+- automação
+- checklist
+- cicd
+- pipelines
+- revisão
+- triggers
+- yaml
+title: Design Seguro dos Pipelines
 ---
+
 
 
 # 🧱 Design seguro dos pipelines

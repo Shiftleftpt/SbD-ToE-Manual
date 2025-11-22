@@ -1,9 +1,18 @@
 ---
+description: Requisitos específicos aplicáveis ao design e revisão de arquiteturas
+  seguras
 id: catalogo-requisitos
+tags:
+- arquitetura
+- ciclo-vida
+- rastreabilidade
+- requisitos
+- seguranca
+- segurança
+- threat-modeling
 title: Catálogo de Requisitos Técnicos de Arquitetura Segura
-description: Requisitos específicos aplicáveis ao design e revisão de arquiteturas seguras
-tags: [arquitetura, rastreabilidade, requisitos, seguranca, threat-modeling]
 ---
+
 
 # 📘 Catálogo de Requisitos Técnicos de Arquitetura Segura
 

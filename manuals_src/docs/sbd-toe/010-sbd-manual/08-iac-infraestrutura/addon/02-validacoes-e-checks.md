@@ -1,10 +1,19 @@
 ---
+description: Estratégias de planeamento e controlo para garantir uma adoção eficaz
+  e auditável das práticas de segurança em Infraestrutura como Código.
 id: validacoes-e-checks
-title: Validações Automáticas e Controlo de Qualidade no Projeto IaC
 sidebar_position: 1
-description: Estratégias de planeamento e controlo para garantir uma adoção eficaz e auditável das práticas de segurança em Infraestrutura como Código.
-tags: [adoção, controlo, governanca, iac, planeamento, seguranca]
+tags:
+- adoção
+- cicd
+- controlo
+- governanca
+- iac
+- planeamento
+- seguranca
+title: Validações Automáticas e Controlo de Qualidade no Projeto IaC
 ---
+
 
 
 # 🧪 Validações Automáticas e Controlo de Qualidade no Projeto IaC

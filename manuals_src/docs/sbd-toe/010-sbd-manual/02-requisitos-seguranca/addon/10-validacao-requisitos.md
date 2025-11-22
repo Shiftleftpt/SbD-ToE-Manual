@@ -1,9 +1,17 @@
 ---
-id: plano-validacao
-title: Plano de Validação de Requisitos de Segurança
 description: Orientações de verificação por requisito do catálogo
-tags: [evidência, rastreabilidade, requisitos, teste, validacao]
+id: plano-validacao
+tags:
+- evidência
+- rastreabilidade
+- requisitos
+- teste
+- testes
+- validacao
+- validação
+title: Plano de Validação de Requisitos de Segurança
 ---
+
 
 # 🧪 Validação dos Requisitos de Segurança
 

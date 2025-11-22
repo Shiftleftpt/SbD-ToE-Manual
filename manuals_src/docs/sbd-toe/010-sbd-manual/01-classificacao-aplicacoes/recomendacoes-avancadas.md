@@ -1,8 +1,16 @@
 ---
 id: recomendacoes-avancadas
+tags:
+- canon
+- maturidade
+- po
+- product-owner
+- produto
+- recomendacoes
+- risco
 title: Recomendações Avançadas para Classificação de Risco
-tags: [canon, maturidade, recomendacoes, risco]
 ---
+
 
 
 # 🧭 Recomendações Avançadas - Gestão de Risco

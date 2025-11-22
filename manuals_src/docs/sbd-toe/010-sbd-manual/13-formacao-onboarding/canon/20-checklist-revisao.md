@@ -1,11 +1,20 @@
 ---
+description: Lista de verificação binária e rastreável da adoção das práticas do Capítulo
+  13.
 id: checklist-revisao
-title: Checklist - Formação e Onboarding Seguro
 sidebar_label: Checklist de Revisão
-description: Lista de verificação binária e rastreável da adoção das práticas do Capítulo 13.
-tags: [auditoria, checklist, controlo, formacao, onboarding, validacao]
 sidebar_position: 20
+tags:
+- auditoria
+- checklist
+- controlo
+- formacao
+- onboarding
+- validacao
+- validação
+title: Checklist - Formação e Onboarding Seguro
 ---
+
 
 
 # ✅ Checklist de Revisão Periódica - Formação e Onboarding Seguro

@@ -1,10 +1,19 @@
 ---
+description: Mapeamento entre as práticas deste capítulo e os requisitos normativos
+  e frameworks de segurança.
 id: rastreabilidade
-title: Rastreabilidade Normativa e Frameworks - Testes de Segurança
-description: Mapeamento entre as práticas deste capítulo e os requisitos normativos e frameworks de segurança.
-tags: [dsoom, frameworks, rastreabilidade, samm, slsa, ssdf]
 sidebar_position: 25
+tags:
+- dsomm
+- dsoom
+- frameworks
+- rastreabilidade
+- samm
+- slsa
+- ssdf
+title: Rastreabilidade Normativa e Frameworks - Testes de Segurança
 ---
+
 
 
 # 📎 Rastreabilidade contra Frameworks - Capítulo 10: Testes de Segurança

@@ -1,11 +1,19 @@
 ---
-id: security-champion
-title: Security Champion
-sidebar_label: 🏅 Security Champion
 description: Responsabilidades do Security Champion no SbD-ToE
-tags: [advocacy, responsabilidades, security-champion, seguranca]
+id: security-champion
+sidebar_label: 🏅 Security Champion
 sidebar_position: 12
+tags:
+- advocacy
+- apoio
+- formacao
+- responsabilidades
+- security-champion
+- seguranca
+- segurança
+title: Security Champion
 ---
+
 
 # 🏅 Security Champion
 

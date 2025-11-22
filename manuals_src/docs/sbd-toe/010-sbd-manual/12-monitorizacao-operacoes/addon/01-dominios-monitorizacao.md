@@ -1,10 +1,19 @@
 ---
+description: Identificação e definição dos domínios técnicos e operacionais a monitorizar
+  em sistemas modernos.
 id: dominios-monitorizacao
-title: Domínios de Monitorização e Observabilidade
 sidebar_position: 1
-description: Identificação e definição dos domínios técnicos e operacionais a monitorizar em sistemas modernos.
-tags: [infraestrutura, logging, monitorização, observabilidade, runtime, seguranca]
+tags:
+- infraestrutura
+- logging
+- monitorização
+- observabilidade
+- runtime
+- seguranca
+- segurança
+title: Domínios de Monitorização e Observabilidade
 ---
+
 
 # 🧭 Domínios e Abrangência da Monitorização
 

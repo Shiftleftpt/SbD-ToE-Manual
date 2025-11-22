@@ -1,10 +1,19 @@
 ---
+description: Recomendações reforçadas para organizações com elevada maturidade ou
+  requisitos normativos
 id: recomendacoes-avancadas
-title: Práticas Avançadas em Threat Modeling
-description: Recomendações reforçadas para organizações com elevada maturidade ou requisitos normativos
-tags: [automação, avancado, baseline, governanca, sincronização, threat-modeling]
 sidebar_position: 30
+tags:
+- automação
+- avancado
+- baseline
+- governanca
+- governação
+- sincronização
+- threat-modeling
+title: Práticas Avançadas em Threat Modeling
 ---
+
 
 # 🧩 Práticas Avançadas em Threat Modeling
 

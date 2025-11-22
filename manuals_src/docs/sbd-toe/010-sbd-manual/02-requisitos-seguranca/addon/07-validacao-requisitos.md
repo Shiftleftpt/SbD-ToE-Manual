@@ -1,9 +1,17 @@
 ---
-id: validacao-requisitos
-title: Estratégias de Validação de Requisitos
 description: Formas recomendadas de testar e verificar requisitos definidos no catálogo
-tags: [ciclo de vida, evidência, requisitos, testes, validacao]
+id: validacao-requisitos
+tags:
+- ciclo de vida
+- ciclo-vida
+- evidência
+- requisitos
+- testes
+- validacao
+- validação
+title: Estratégias de Validação de Requisitos
 ---
+
 
 # ✅ Validação de Requisitos de Segurança
 

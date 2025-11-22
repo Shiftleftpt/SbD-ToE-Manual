@@ -1,9 +1,18 @@
 ---
+description: Plano técnico de capacitação mínima obrigatória para fornecedores, contractors
+  e parceiros com acesso técnico.
 id: plano-formacao-terceiros
+tags:
+- acesso seguro
+- formacao
+- fornecedores
+- plano
+- supply-chain
+- terceiros
+- validação
 title: Plano de Formação para Terceiros
-description: Plano técnico de capacitação mínima obrigatória para fornecedores, contractors e parceiros com acesso técnico.
-tags: [acesso seguro, formacao, fornecedores, plano, terceiros]
 ---
+
 
 
 # 🤝 Formação Mínima para Terceiros e Fornecedores

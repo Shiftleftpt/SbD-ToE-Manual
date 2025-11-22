@@ -1,11 +1,19 @@
 ---
-id: grc-compliance
-title: GRC / Compliance
-sidebar_label: 📑 GRC / Compliance
 description: Responsabilidades de GRC/Compliance no SbD-ToE
-tags: [compliance, governance, grc, responsabilidades]
+id: grc-compliance
+sidebar_label: 📑 GRC / Compliance
 sidebar_position: 11
+tags:
+- auditores
+- auditoria
+- cicd
+- compliance
+- governance
+- grc
+- responsabilidades
+title: GRC / Compliance
 ---
+
 
 # 📑 GRC / Compliance
 

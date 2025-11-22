@@ -1,10 +1,19 @@
 ---
+description: Integração de validadores de segurança (SAST, secrets, IaC, containers)
+  diretamente na pipeline, com execução obrigatória.
 id: validacoes-seguranca-integradas
-title: Validações de Segurança Integradas no Pipeline
 sidebar_position: 7
-description: Integração de validadores de segurança (SAST, secrets, IaC, containers) diretamente na pipeline, com execução obrigatória.
-tags: [automação, cicd, sast, scanner, seguranca, validações]
+tags:
+- automação
+- cicd
+- sast
+- scanner
+- seguranca
+- segurança
+- validações
+title: Validações de Segurança Integradas no Pipeline
 ---
+
 
 
 # 🧪 Validações de segurança integradas no pipeline

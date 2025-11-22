@@ -1,10 +1,19 @@
 ---
+description: Modelo de registo e justificação formal de decisões e entregáveis de
+  segurança
 id: rastreabilidade-organizacional
-title: Rastreabilidade Organizacional de Segurança
 sidebar_position: 4
-description: Modelo de registo e justificação formal de decisões e entregáveis de segurança
-tags: [auditoria, compliance, evidencias, rastreabilidade]
+tags:
+- auditoria
+- compliance
+- evidencias
+- evidência
+- rastreabilidade
+- testes
+- validação
+title: Rastreabilidade Organizacional de Segurança
 ---
+
 
 
 

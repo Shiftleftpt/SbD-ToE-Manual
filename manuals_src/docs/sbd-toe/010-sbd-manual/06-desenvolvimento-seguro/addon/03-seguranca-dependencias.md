@@ -1,10 +1,19 @@
 ---
+description: Práticas de gestão e validação de dependências externas para garantir
+  integridade, atualização e segurança no código
 id: seguranca-dependencias
-title: Segurança de Dependências
 sidebar_position: 3
-description: Práticas de gestão e validação de dependências externas para garantir integridade, atualização e segurança no código
-tags: [dependências, gestão, sbom, seguranca, validacao]
+tags:
+- dependencias
+- dependências
+- gestão
+- sbom
+- seguranca
+- segurança
+- validacao
+title: Segurança de Dependências
 ---
+
 
 # 📦 Segurança de Dependências
 

@@ -1,10 +1,19 @@
 ---
+description: Validações do próprio código do pipeline (YAML, scripts, linters), incluindo
+  controlo de lógica, permissões e uso de componentes externos.
 id: seguranca-codigo-pipeline
-title: Segurança do Código dentro do Pipeline
 sidebar_position: 2
-description: Validações do próprio código do pipeline (YAML, scripts, linters), incluindo controlo de lógica, permissões e uso de componentes externos.
-tags: [cicd, linters, pipelines, scripts, seguranca, validacao]
+tags:
+- cicd
+- linters
+- pipelines
+- scripts
+- seguranca
+- validacao
+- validação
+title: Segurança do Código dentro do Pipeline
 ---
+
 
 
 # 🔒 Segurança do código dentro do pipeline

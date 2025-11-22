@@ -1,10 +1,19 @@
 ---
+description: Conjunto de políticas recomendadas para sustentar e legitimar as práticas
+  de segurança CI/CD descritas no capítulo
 id: policies-relevantes
-title: Policies
-description: Conjunto de políticas recomendadas para sustentar e legitimar as práticas de segurança CI/CD descritas no capítulo
-tags: [cicd, governança, pipelines, políticas, segurança organizacional]
 sidebar_position: 60
+tags:
+- cicd
+- excecoes
+- governança
+- pipelines
+- políticas
+- rastreabilidade
+- segurança organizacional
+title: Policies
 ---
+
 
 
 # 🏛️ Políticas Organizacionais - Segurança em Pipelines CI/CD

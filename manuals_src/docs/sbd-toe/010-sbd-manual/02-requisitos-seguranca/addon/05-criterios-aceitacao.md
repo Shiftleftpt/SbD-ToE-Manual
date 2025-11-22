@@ -1,9 +1,18 @@
 ---
+description: Critérios de aceitação mínimos para cada requisito do catálogo base do
+  capítulo, para apoio à validação, auditoria e integração em projetos.
 id: criterios-aceitacao
-title: Critérios de Aceitação 
-description: Critérios de aceitação mínimos para cada requisito do catálogo base do capítulo, para apoio à validação, auditoria e integração em projetos.
-tags: [anexo, auditoria, tema:requisitos, tipo:aceitacao, validacao]
+tags:
+- anexo
+- auditoria
+- tema:requisitos
+- tipo-anexo
+- tipo:aceitacao
+- validacao
+- validação
+title: Critérios de Aceitação
 ---
+
 
 <!--template: sbdtoe-addon -->
 

@@ -1,9 +1,17 @@
 ---
 id: achievable-maturity
-title: Mapeamento de Maturidade - Capítulo 14
 sidebar_position: 10
-tags: [DSOMM, SAMM, SLSA, SSDF, canon, maturidade]
+tags:
+- DSOMM
+- SAMM
+- SLSA
+- SSDF
+- canon
+- maturidade
+- slsa
+title: Mapeamento de Maturidade - Capítulo 14
 ---
+
 
 # 📈 Maturidade - Governança e Contratação
 

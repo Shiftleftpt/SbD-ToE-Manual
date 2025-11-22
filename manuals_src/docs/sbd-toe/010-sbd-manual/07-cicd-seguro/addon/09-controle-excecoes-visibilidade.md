@@ -1,10 +1,19 @@
 ---
+description: Regras formais para permitir exceções no pipeline, com registo, aprovação,
+  prazo de validade e visibilidade por função.
 id: controle-excecoes-visibilidade
-title: Controlo de Exceções e Visibilidade Organizacional
 sidebar_position: 9
-description: Regras formais para permitir exceções no pipeline, com registo, aprovação, prazo de validade e visibilidade por função.
-tags: [auditoria, cicd, exceções, governanca, seguranca, visibilidade]
+tags:
+- auditoria
+- cicd
+- excecoes
+- exceções
+- governanca
+- seguranca
+- visibilidade
+title: Controlo de Exceções e Visibilidade Organizacional
 ---
+
 
 
 # 🧭 Controlo de exceções e visibilidade organizacional

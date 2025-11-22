@@ -1,10 +1,19 @@
 ---
+description: Mapeamento detalhado dos requisitos IAC-001 a IAC-010 com orientações
+  práticas para validação e aplicação.
 id: matriz-requisitos-iac
-title: Matriz de Requisitos Técnicos para Infraestrutura como Código
 sidebar_position: 8
-description: Mapeamento detalhado dos requisitos IAC-001 a IAC-010 com orientações práticas para validação e aplicação.
-tags: [auditoria, controlo, iac, matriz, requisitos, validacao]
+tags:
+- auditoria
+- cicd
+- controlo
+- iac
+- matriz
+- requisitos
+- validacao
+title: Matriz de Requisitos Técnicos para Infraestrutura como Código
 ---
+
 
 # 📘️ Matriz de Requisitos Técnicos para Projetos IaC
 

@@ -1,10 +1,19 @@
 ---
+description: Práticas de codificação segura, curadoria e seleção de guidelines, validação
+  automatizada e governação durante o desenvolvimento
 id: intro
-title: Introdução - Desenvolvimento Seguro
-description: Práticas de codificação segura, curadoria e seleção de guidelines, validação automatizada e governação durante o desenvolvimento
-tags: [SAST, cat_basilar, desenvolvimento, governanca, grp_implementacao_automacao, guidelines de código, implementacao-automacao, linters, seguranca]
 sidebar_position: 0
+tags:
+- SAST
+- cat_basilar
+- desenvolvimento
+- governanca
+- grp_implementacao_automacao
+- guidelines de código
+- implementacao-automacao
+title: Introdução - Desenvolvimento Seguro
 ---
+
 
 :::caution Capítulo Basilar
 Este capítulo é considerado **basilar** no modelo *Security by Design - Theory of Everything (SbD-ToE)*.  

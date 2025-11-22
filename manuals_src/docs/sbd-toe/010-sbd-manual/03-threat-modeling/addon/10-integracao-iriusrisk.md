@@ -1,9 +1,18 @@
 ---
+description: Como substituir o mapeamento manual threat → requisito usando plataformas
+  como IriusRisk, mantendo a rastreabilidade com o Capítulo 2
 id: integracao-iriusrisk
+tags:
+- ameacas
+- ameaças
+- capitulo2
+- integracao
+- iriusrisk
+- rastreabilidade
+- requisitos
 title: Integração com IriusRisk e Ferramentas Automatizadas
-description: Como substituir o mapeamento manual threat → requisito usando plataformas como IriusRisk, mantendo a rastreabilidade com o Capítulo 2
-tags: [ameacas, capitulo2, integracao, iriusrisk, rastreabilidade, requisitos]
 ---
+
 
 # 🧠 Integração com IriusRisk e Ferramentas Automatizadas
 

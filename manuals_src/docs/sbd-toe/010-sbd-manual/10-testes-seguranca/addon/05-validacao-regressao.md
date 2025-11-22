@@ -1,10 +1,19 @@
 ---
+description: Validação recorrente de vulnerabilidades previamente corrigidas para
+  evitar reintroduções em versões futuras.
 id: validacao-regressao
-title: Testes de Regressão de Segurança
-description: Validação recorrente de vulnerabilidades previamente corrigidas para evitar reintroduções em versões futuras.
-tags: [regressão, seguranca, testes, validação contínua]
 sidebar_position: 6
+tags:
+- ciclo-vida
+- regressão
+- seguranca
+- segurança
+- testes
+- validação
+- validação contínua
+title: Testes de Regressão de Segurança
 ---
+
 
 
 # 🔁 Validação de Regressões de Segurança

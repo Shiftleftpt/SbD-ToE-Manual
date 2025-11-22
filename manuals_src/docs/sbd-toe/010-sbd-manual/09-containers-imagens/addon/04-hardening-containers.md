@@ -1,9 +1,18 @@
 ---
+description: Minimização, reforço e controlo de permissões em imagens e ambientes
+  containerizados
 id: hardening-containers
+tags:
+- cicd
+- containers
+- hardening
+- isolamento
+- permissões
+- runtime
+- seguranca
 title: Hardening e Restrições de Execução em *containers*
-description: Minimização, reforço e controlo de permissões em imagens e ambientes containerizados
-tags: [containers, hardening, isolamento, permissões, runtime, seguranca]
 ---
+
 
 # 🛡️ Hardening e Restrições de Execução em *containers*
 

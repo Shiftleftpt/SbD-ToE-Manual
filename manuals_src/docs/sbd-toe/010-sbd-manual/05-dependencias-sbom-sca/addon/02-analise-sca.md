@@ -1,9 +1,18 @@
 ---
+description: Práticas de Software Composition Analysis para detetar, priorizar e mitigar
+  vulnerabilidades conhecidas
 id: analise-sca
+tags:
+- cat_operacional
+- cicd
+- dependencias
+- engenharia-segura
+- sbom
+- sca
+- supply-chain
 title: Análise de Vulnerabilidades em Dependências (SCA)
-description: Práticas de Software Composition Analysis para detetar, priorizar e mitigar vulnerabilidades conhecidas
-tags: [dependencias, sbom, sca, supply-chain]
 ---
+
 
 # ⚠️ Análise de Vulnerabilidades em Dependências (SCA)
 

@@ -1,11 +1,19 @@
 ---
-id: operacoes
-title: Operações (Ops)
-sidebar_label: 🔧 Operações (Ops)
 description: Responsabilidades de Operações no SbD-ToE
-tags: [incident-response, operacoes, ops, responsabilidades, runtime]
+id: operacoes
+sidebar_label: 🔧 Operações (Ops)
 sidebar_position: 7
+tags:
+- incident-response
+- monitorizacao
+- operacoes
+- ops
+- responsabilidades
+- rollback
+- runtime
+title: Operações (Ops)
 ---
+
 
 # 🔧 Operações (Ops)
 

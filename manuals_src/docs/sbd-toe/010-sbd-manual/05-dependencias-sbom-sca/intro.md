@@ -1,10 +1,19 @@
 ---
+description: Princípios, práticas e controlos para garantir gestão segura de dependências,
+  geração de SBOM e análise automatizada de composição de software
 id: intro
-title: Dependências, SBOM e SCA
-description: Princípios, práticas e controlos para garantir gestão segura de dependências, geração de SBOM e análise automatizada de composição de software
-tags: [cat_operacional, cicd, dependencias, engenharia-segura, governance, grp_engenharia_segura, oss, sbom, sca, supply-chain]
 sidebar_position: 0
+tags:
+- cat_operacional
+- cicd
+- dependencias
+- engenharia-segura
+- governance
+- grp_engenharia_segura
+- oss
+title: Dependências, SBOM e SCA
 ---
+
 
 :::tip Capítulo Operacional
 Este capítulo é considerado **operacional** no modelo *Security by Design - Theory of Everything (SbD-ToE)*.  

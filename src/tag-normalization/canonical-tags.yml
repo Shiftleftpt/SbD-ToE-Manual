@@ -157,7 +157,7 @@ cultura:
   label: Cultura
 dashboards:
   aliases: []
-  description: Dashboards de monitoramento
+  description: Dashboards de monitorização
   label: Dashboards
 dast:
   aliases:
@@ -410,7 +410,7 @@ nist:
   label: NIST
 observabilidade:
   aliases: []
-  description: Observabilidade e monitoramento
+  description: Observabilidade e monitorização
   label: Observabilidade
 onboarding:
   aliases: []
@@ -1468,10 +1468,6 @@ codigo:
 ownership:
   label: ownership
   description: ownership related content
-  aliases: []
-monitoramento:
-  label: monitoramento
-  description: monitoramento related content
   aliases: []
 governança:
   label: governança

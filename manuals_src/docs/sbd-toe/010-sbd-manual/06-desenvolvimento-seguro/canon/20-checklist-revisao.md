@@ -3,7 +3,7 @@ id: checklist-revisao
 title: Checklist - Desenvolvimento Seguro
 sidebar_label: Checklist de Revisão
 description: Checklist binário e auditável para avaliar a adoção prática das práticas prescritas no Capítulo 06 - Desenvolvimento Seguro
-tags: [checklist, desenvolvimento, validação, auditoria, conformidade]
+tags: [auditoria, checklist, conformidade, desenvolvimento, validacao]
 sidebar_position: 20
 ---
 

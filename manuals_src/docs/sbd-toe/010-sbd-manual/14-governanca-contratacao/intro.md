@@ -2,7 +2,7 @@
 id: intro
 title: Governança & Contratação
 description: Estruturas, políticas e práticas para assegurar governação organizacional, integração de fornecedores e transparência no ciclo SbD-ToE
-tags: [governanca, contratacao, fornecedores, excecoes, rastreabilidade, conformidade, KPIs]
+tags: [KPIs, cat_organizacional, conformidade, contratacao, excecoes, fornecedores, fundamentos, governanca, grp_fundamentos_contexto, rastreabilidade]
 sidebar_position: 0
 ---
 

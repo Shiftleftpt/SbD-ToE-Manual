@@ -2,7 +2,7 @@
 id: assinatura-cadeia-trust
 title: Assinatura de Imagens e Cadeia de Confiança
 description: Validação da proveniência, integridade e autenticidade de imagens de *containers*
-tags: [containers, assinatura, trust, notary, cosign, rekor, supply chain]
+tags: [assinatura, containers, cosign, notary, rekor, supply chain, trust]
 ---
 
 # 🔏 Assinatura de Imagens e Cadeia de Confiança

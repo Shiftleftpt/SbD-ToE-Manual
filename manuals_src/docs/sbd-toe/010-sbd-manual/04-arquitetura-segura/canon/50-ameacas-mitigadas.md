@@ -2,7 +2,7 @@
 id: ameacas-mitigadas
 title: Ameaças Mitigadas
 description: Ameaças mitigadas pelas práticas prescritas neste capítulo de arquitetura segura
-tags: [ameaças, arquitetura, risco, stride, oscar, dsomm]
+tags: [ameacas, arquitetura, dsomm, oscar, risco, stride]
 sidebar_position: 50
 ---
 

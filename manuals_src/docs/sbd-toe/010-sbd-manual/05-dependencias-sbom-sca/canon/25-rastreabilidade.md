@@ -2,7 +2,7 @@
 id: rastreabilidade
 title: Rastreabilidade Top-Down - Capítulo 05
 description: Análise de rastreabilidade das práticas deste capítulo face aos principais frameworks normativos
-tags: [rastreabilidade, frameworks, dependencias, sbom, sca, supply-chain, dsomm]
+tags: [dependencias, dsomm, frameworks, rastreabilidade, sbom, sca, supply-chain]
 sidebar_position: 25
 
 ---

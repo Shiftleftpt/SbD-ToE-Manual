@@ -1,0 +1,315 @@
+{
+  "timestamp": "2025-11-22T14:49:57.528580",
+  "test_type": "multifile_recall_quality_test",
+  "summary": {
+    "files_analyzed": 4,
+    "total_existing_tags": 27,
+    "total_re_detected": 0,
+    "total_missed": 27,
+    "average_recall_percentage": 0.0,
+    "total_new_suggestions": 20
+  },
+  "files": [
+    {
+      "filepath": "../../manuals_src/docs/sbd-toe/002-cross-check-normativo/01-intro.md",
+      "filename": "01-intro.md",
+      "content_length": 9571,
+      "existing_tags": [
+        "compliance",
+        "cross-check",
+        "dora",
+        "gdpr",
+        "hipaa",
+        "iso27001",
+        "nis2",
+        "normativos",
+        "pci-dss",
+        "soc2"
+      ],
+      "existing_count": 10,
+      "re_detected": [],
+      "re_detected_count": 0,
+      "missed_tags": [
+        "compliance",
+        "cross-check",
+        "dora",
+        "gdpr",
+        "hipaa",
+        "iso27001",
+        "nis2",
+        "normativos",
+        "pci-dss",
+        "soc2"
+      ],
+      "missed_count": 10,
+      "recall_percentage": 0.0,
+      "new_suggestions": [
+        {
+          "tag": "cloud",
+          "confidence": 0.7,
+          "reason": "tag keyword"
+        },
+        {
+          "tag": "cobertura",
+          "confidence": 0.7,
+          "reason": "tag keyword"
+        },
+        {
+          "tag": "conformidade",
+          "confidence": 0.7,
+          "reason": "tag keyword"
+        },
+        {
+          "tag": "desenvolvimento",
+          "confidence": 0.7,
+          "reason": "tag keyword"
+        },
+        {
+          "tag": "exemplos",
+          "confidence": 0.7,
+          "reason": "tag keyword"
+        }
+      ],
+      "new_suggestions_count": 5,
+      "recommendation_action": {
+        "keep": [],
+        "review": [
+          "compliance",
+          "cross-check",
+          "dora",
+          "gdpr",
+          "hipaa",
+          "iso27001",
+          "nis2",
+          "normativos",
+          "pci-dss",
+          "soc2"
+        ],
+        "add": [
+          "cloud",
+          "cobertura",
+          "conformidade",
+          "desenvolvimento",
+          "exemplos"
+        ],
+        "total_optimized": 5
+      }
+    },
+    {
+      "filepath": "../../manuals_src/docs/sbd-toe/002-cross-check-normativo/cra/01-intro.md",
+      "filename": "01-intro.md",
+      "content_length": 11982,
+      "existing_tags": [
+        "cra",
+        "cross-check",
+        "produtos-digitais",
+        "regulamentacao",
+        "sbom",
+        "vulnerabilidades"
+      ],
+      "existing_count": 6,
+      "re_detected": [],
+      "re_detected_count": 0,
+      "missed_tags": [
+        "cra",
+        "cross-check",
+        "produtos-digitais",
+        "regulamentacao",
+        "sbom",
+        "vulnerabilidades"
+      ],
+      "missed_count": 6,
+      "recall_percentage": 0.0,
+      "new_suggestions": [
+        {
+          "tag": "checklist",
+          "confidence": 0.7,
+          "reason": "tag keyword"
+        },
+        {
+          "tag": "cobertura",
+          "confidence": 0.7,
+          "reason": "tag keyword"
+        },
+        {
+          "tag": "conformidade",
+          "confidence": 0.7,
+          "reason": "tag keyword"
+        },
+        {
+          "tag": "contratos",
+          "confidence": 0.7,
+          "reason": "tag keyword"
+        },
+        {
+          "tag": "controlo",
+          "confidence": 0.7,
+          "reason": "tag keyword"
+        }
+      ],
+      "new_suggestions_count": 5,
+      "recommendation_action": {
+        "keep": [],
+        "review": [
+          "cra",
+          "cross-check",
+          "produtos-digitais",
+          "regulamentacao",
+          "sbom",
+          "vulnerabilidades"
+        ],
+        "add": [
+          "checklist",
+          "cobertura",
+          "conformidade",
+          "contratos",
+          "controlo"
+        ],
+        "total_optimized": 5
+      }
+    },
+    {
+      "filepath": "../../manuals_src/docs/sbd-toe/002-cross-check-normativo/cra/02-playbook.md",
+      "filename": "02-playbook.md",
+      "content_length": 10164,
+      "existing_tags": [
+        "cra",
+        "implementacao",
+        "playbook",
+        "produtos-digitais",
+        "roadmap"
+      ],
+      "existing_count": 5,
+      "re_detected": [],
+      "re_detected_count": 0,
+      "missed_tags": [
+        "cra",
+        "implementacao",
+        "playbook",
+        "produtos-digitais",
+        "roadmap"
+      ],
+      "missed_count": 5,
+      "recall_percentage": 0.0,
+      "new_suggestions": [
+        {
+          "tag": "checklist",
+          "confidence": 0.7,
+          "reason": "tag keyword"
+        },
+        {
+          "tag": "cobertura",
+          "confidence": 0.7,
+          "reason": "tag keyword"
+        },
+        {
+          "tag": "compliance",
+          "confidence": 0.7,
+          "reason": "tag keyword"
+        },
+        {
+          "tag": "conformidade",
+          "confidence": 0.7,
+          "reason": "tag keyword"
+        },
+        {
+          "tag": "criticidade",
+          "confidence": 0.7,
+          "reason": "tag keyword"
+        }
+      ],
+      "new_suggestions_count": 5,
+      "recommendation_action": {
+        "keep": [],
+        "review": [
+          "cra",
+          "implementacao",
+          "playbook",
+          "produtos-digitais",
+          "roadmap"
+        ],
+        "add": [
+          "checklist",
+          "cobertura",
+          "compliance",
+          "conformidade",
+          "criticidade"
+        ],
+        "total_optimized": 5
+      }
+    },
+    {
+      "filepath": "../../manuals_src/docs/sbd-toe/002-cross-check-normativo/dora/01-intro.md",
+      "filename": "01-intro.md",
+      "content_length": 24268,
+      "existing_tags": [
+        "cross-check",
+        "dora",
+        "finanças",
+        "ict-risk",
+        "regulamentacao",
+        "resiliencia"
+      ],
+      "existing_count": 6,
+      "re_detected": [],
+      "re_detected_count": 0,
+      "missed_tags": [
+        "cross-check",
+        "dora",
+        "finanças",
+        "ict-risk",
+        "regulamentacao",
+        "resiliencia"
+      ],
+      "missed_count": 6,
+      "recall_percentage": 0.0,
+      "new_suggestions": [
+        {
+          "tag": "ameaças",
+          "confidence": 0.7,
+          "reason": "tag keyword"
+        },
+        {
+          "tag": "auditoria",
+          "confidence": 0.7,
+          "reason": "tag keyword"
+        },
+        {
+          "tag": "checklist",
+          "confidence": 0.7,
+          "reason": "tag keyword"
+        },
+        {
+          "tag": "cobertura",
+          "confidence": 0.7,
+          "reason": "tag keyword"
+        },
+        {
+          "tag": "compliance",
+          "confidence": 0.7,
+          "reason": "tag keyword"
+        }
+      ],
+      "new_suggestions_count": 5,
+      "recommendation_action": {
+        "keep": [],
+        "review": [
+          "cross-check",
+          "dora",
+          "finanças",
+          "ict-risk",
+          "regulamentacao",
+          "resiliencia"
+        ],
+        "add": [
+          "ameaças",
+          "auditoria",
+          "checklist",
+          "cobertura",
+          "compliance"
+        ],
+        "total_optimized": 5
+      }
+    }
+  ]
+}

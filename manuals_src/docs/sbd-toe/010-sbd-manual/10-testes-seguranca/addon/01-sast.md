@@ -2,7 +2,7 @@
 id: sast
 title: Validação Estática de Código (SAST)
 description: Aplicação de testes estáticos ao código-fonte para deteção precoce de vulnerabilidades e falhas de segurança.
-tags: [sast, validação, segurança, código, análise estática]
+tags: [análise estática, código, sast, seguranca, validacao]
 sidebar_position: 2
 ---
 

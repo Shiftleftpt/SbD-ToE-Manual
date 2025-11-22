@@ -3,7 +3,7 @@ id: convergencia-dora
 title: Nota - Convergência DORA & NIS2
 description: Orientação para organizações potencialmente enquadradas simultaneamente por DORA e NIS2
 sidebar_position: 4
-tags: [dora, nis2, convergencia, lex-specialis, governação]
+tags: [convergencia, dora, governanca, lex-specialis, nis2]
 ---
 
 # Nota: Organizações abrangidas por DORA e NIS2

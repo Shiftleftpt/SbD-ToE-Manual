@@ -2,7 +2,7 @@
 id: 03-feature-flags-e-toggle
 title: Controlo de Funcionalidades com Feature Flags
 description: Uso de feature toggles com segurança, rastreabilidade e capacidade de reversão em produção.
-tags: [tipo:anexo, grupo:execucao, tema:feature-flags, toggles, deploy, rastreabilidade]
+tags: [deploy, grupo:execucao, rastreabilidade, tema:feature-flags, tipo:anexo, toggles]
 ---
 
 

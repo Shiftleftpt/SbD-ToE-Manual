@@ -2,7 +2,7 @@
 id: ameacas-mitigadas
 title: Ameaças Mitigadas - Capítulo 05
 description: Análise das ameaças mitigadas pelas práticas deste capítulo, com base em OSC&R, CAPEC, STRIDE, DSOMM e outros modelos
-tags: [ameaças, mitigação, sbom, sca, supply-chain, dsomm, capec, oscar, ]
+tags: [ameacas, capec, dsomm, mitigacao, oscar, sbom, sca, supply-chain]
 sidebar_position: 50
 
 ---

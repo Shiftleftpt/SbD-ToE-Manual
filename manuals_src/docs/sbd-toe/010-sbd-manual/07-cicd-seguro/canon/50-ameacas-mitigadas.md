@@ -2,7 +2,7 @@
 id: ameacas-mitigadas
 title: Ameaças Mitigadas
 description: Ameaças mitigadas pelas práticas de segurança de CI/CD descritas neste capítulo
-tags: [ameaças, mitigação, cicd, supply chain, osc&r, stride, dsomm]
+tags: [ameacas, cicd, dsomm, mitigacao, osc-r, stride, supply chain]
 sidebar_position: 50
 ---
 

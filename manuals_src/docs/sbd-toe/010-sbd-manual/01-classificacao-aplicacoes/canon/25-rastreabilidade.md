@@ -2,7 +2,7 @@
 id: rastreabilidade
 title: Rastreabilidade Top-Down - Capítulo 01
 sidebar_position: 25
-tags: [canon, rastreabilidade, frameworks, alinhamento]
+tags: [alinhamento, canon, frameworks, rastreabilidade]
 ---
 
 # 📎 Rastreabilidade contra Frameworks - Capítulo 01: Classificação do Risco

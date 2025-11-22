@@ -2,7 +2,7 @@
 id: policies-relevantes
 title: Policies
 description: Políticas organizacionais necessárias para garantir segurança, rastreabilidade e governação de containers e imagens ao longo do ciclo de vida.
-tags: [políticas, containers, imagens, supply chain, kubernetes, devsecops, cloud]
+tags: [cloud, containers, devsecops, imagens, kubernetes, políticas, supply chain]
 sidebar_position: 60
 ---
 

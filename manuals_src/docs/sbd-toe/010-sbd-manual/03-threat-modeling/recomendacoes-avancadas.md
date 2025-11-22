@@ -2,7 +2,7 @@
 id: recomendacoes-avancadas
 title: Práticas Avançadas em Threat Modeling
 description: Recomendações reforçadas para organizações com elevada maturidade ou requisitos normativos
-tags: [avançado, threat-modeling, automação, baseline, sincronização, governação]
+tags: [automação, avancado, baseline, governanca, sincronização, threat-modeling]
 sidebar_position: 30
 ---
 

@@ -2,7 +2,7 @@
 id: aplicacao-lifecycle
 title: Como Fazer
 description: Como aplicar práticas de desenvolvimento seguro em cada fase do SDLC, com user stories reutilizáveis, artefactos auditáveis e matriz proporcional L1–L3
-tags: [tipo:aplicacao, ciclo-vida, desenvolvimento, codificacao-segura, validacao, user-stories]
+tags: [ciclo-vida, codificacao-segura, desenvolvimento, tipo:aplicacao, user-stories, validacao]
 genia: us-format-normalization
 ---
 

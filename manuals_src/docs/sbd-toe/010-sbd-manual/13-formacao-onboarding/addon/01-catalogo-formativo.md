@@ -2,7 +2,7 @@
 id: catalogo-formativo
 title: Catálogo de Formação por Perfil Técnico
 description: Listagem de conteúdos formativos mínimos por perfil técnico para onboarding e capacitação contínua.
-tags: [formacao, perfis, conteudos, catalogo, onboarding]
+tags: [catalogo, conteudos, formacao, onboarding, perfis]
 ---
 
 

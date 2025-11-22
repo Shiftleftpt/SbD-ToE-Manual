@@ -2,7 +2,7 @@
 id: intro
 title: CI/CD Seguro
 description: Práticas de segurança para pipelines de integração e entrega contínua, com foco em automação, rastreabilidade e controlo proporcional ao risco
-tags: [cicd, segurança, pipelines, automação, proveniência, devsecops, risco]
+tags: [automação, cat_operacional, cicd, devsecops, grp_implementacao_automacao, implementacao-automacao, pipelines, proveniência, risco, seguranca]
 sidebar_position: 0
 ---
 

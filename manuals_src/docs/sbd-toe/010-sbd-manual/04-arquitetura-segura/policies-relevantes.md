@@ -2,7 +2,7 @@
 id: policies-relevantes
 title: Policies
 description: Políticas organizacionais que suportam a adoção das práticas de arquitetura segura
-tags: [politicas, arquitetura, governanca]
+tags: [arquitetura, governanca, politicas]
 sidebar_position: 60
 ---
 

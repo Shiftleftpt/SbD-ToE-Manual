@@ -2,7 +2,7 @@
 id: exemplo-kpis-targets
 title: "Exemplo: KPIs e Targets"
 description: Exemplos de KPIs e targets para diferentes perfis organizacionais
-tags: [exemplos, kpis, metricas, targets, monitoramento]
+tags: [exemplos, kpis, metricas, monitoramento, targets]
 ---
 
 # Exemplo: KPIs e Targets

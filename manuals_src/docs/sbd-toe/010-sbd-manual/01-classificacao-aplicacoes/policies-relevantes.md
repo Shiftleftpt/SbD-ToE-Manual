@@ -1,7 +1,7 @@
 ---
 id: policies-relevantes
 title: Policies Relevantes
-tags: [canon, politicas, risco, classificacao, excecao]
+tags: [canon, classificacao, excecao, politicas, risco]
 ---
 
 # 🏛️ Políticas Organizacionais - Gestão de Risco

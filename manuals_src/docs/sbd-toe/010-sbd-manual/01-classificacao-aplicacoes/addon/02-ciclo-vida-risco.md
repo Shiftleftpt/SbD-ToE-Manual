@@ -2,7 +2,7 @@
 id: ciclo-vida-risco
 title: Ciclo de Vida da Classificação de Risco
 sidebar_position: 2
-tags: [tipo:ciclo, tema:revisao, classificacao, eventos]
+tags: [classificacao, eventos, tema:revisao, tipo:ciclo]
 ---
 
 <!--template: sbdtoe-core -->

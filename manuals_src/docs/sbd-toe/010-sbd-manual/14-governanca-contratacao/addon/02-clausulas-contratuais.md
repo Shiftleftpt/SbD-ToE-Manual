@@ -3,7 +3,7 @@ id: clausulas-contratuais
 title: Cláusulas Contratuais de Segurança
 sidebar_position: 3
 description: Cláusulas Contratuais de Segurança em contratos com fornecedores, contratados e terceiros técnicos
-tags: [fornecedores, validacao, terceiros, contratacao]
+tags: [contratacao, fornecedores, terceiros, validacao]
 ---
 
 

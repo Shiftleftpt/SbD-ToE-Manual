@@ -2,7 +2,7 @@
 id: casos-praticos
 title: Exemplos de Aplicação deC lassificação de Risco
 sidebar_position: 9
-tags: [tipo:exemplo, tema:classificacao, risco, aplicacao]
+tags: [aplicacao, risco, tema:classificacao, tipo:exemplo]
 ---
 
 # 🧪 Casos Práticos de Classificação de Risco

@@ -3,7 +3,7 @@ id: modelo-governancao
 title: Modelo de Governação para Segurança Aplicacional
 sidebar_position: 1
 description: Definição de papéis formais, responsabilidades e fluxo de decisão de segurança aplicacional
-tags: [governanca, ownership, excecoes, validacao]
+tags: [excecoes, governanca, ownership, validacao]
 ---
 
 

@@ -2,7 +2,7 @@
 id: intro
 title: Monitorização & Operações
 description: Princípios e práticas para assegurar visibilidade, deteção e resposta eficaz em ambientes de produção
-tags: [monitorizacao, operacoes, deteção, resposta, logs, métricas, incidentes]
+tags: [cat_operacional, deteção, grp_operacao_melhoria, incidentes, logs, monitorizacao, métricas, operacao-continuidade, operacoes, resposta]
 sidebar_position: 0
 ---
 

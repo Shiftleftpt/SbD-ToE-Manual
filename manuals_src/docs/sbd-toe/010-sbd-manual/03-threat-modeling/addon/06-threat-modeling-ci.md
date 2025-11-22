@@ -2,7 +2,7 @@
 id: threat-modeling-ci
 title: Threat Modeling em CI/CD
 description: Requisitos e validações práticas para garantir a existência, integridade e impacto do threat modeling no ciclo de vida CI/CD
-tags: [ci, cd, devsecops, threat modeling, automação, validação, iriusrisk]
+tags: [automação, cd, ci, devsecops, iriusrisk, threat modeling, validacao]
 ---
 
 # ⚙️ Threat Modeling em CI/CD

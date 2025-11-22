@@ -2,7 +2,7 @@
 id: indice
 title: Exemplos de Suporte aos Playbooks
 description: Templates e exemplos práticos reutilizáveis para implementar princípios do SbD-ToE em qualquer framework normativo
-tags: [playbook, exemplos, dora, nis2, iso27001, cra, gdpr, templates]
+tags: [cra, dora, exemplos, gdpr, iso27001, nis2, playbook, templates]
 ---
 
 # Exemplos de Suporte aos Playbooks

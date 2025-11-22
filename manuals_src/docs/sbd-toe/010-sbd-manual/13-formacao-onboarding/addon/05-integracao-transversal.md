@@ -2,7 +2,7 @@
 id: integracao-transversal
 title: Integração da Formação com os Capítulos Técnicos
 description: Estratégias para associar a formação contínua aos restantes capítulos do SbD-ToE.
-tags: [formacao, integracao, capitulos, cultura, aprendizagem continua]
+tags: [aprendizagem continua, capitulos, cultura, formacao, integracao]
 ---
 
 

@@ -3,7 +3,7 @@ id: 22-quiz-terceiros
 title: Quiz de Validação - Formação para Terceiros
 sidebar_position: 22
 description: Questionário mínimo para validar conhecimento de colaboradores externos com permissões técnicas
-tags: [formacao, terceiros, quiz, validacao, onboarding, contratados, segurança]
+tags: [contratados, formacao, onboarding, quiz, seguranca, terceiros, validacao]
 ---
 
 

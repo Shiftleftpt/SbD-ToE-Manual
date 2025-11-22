@@ -3,7 +3,7 @@ id: ameacas-mitigadas
 title: Ameaças Mitigadas - Infraestrutura como Código (IaC)
 sidebar_position: 50
 description: Ameaças específicas mitigadas pelas práticas prescritas no capítulo, com base em fontes como OSC&R, CAPEC e SSDF.
-tags: [ameaças, mitigação, segurança, iac, osc&r, capec, ssdf]
+tags: [ameacas, capec, iac, mitigacao, osc-r, seguranca, ssdf]
 ---
 
 # 🔐 Ameaças Mitigadas - Capítulo 08: IaC e Infraestrutura como Código

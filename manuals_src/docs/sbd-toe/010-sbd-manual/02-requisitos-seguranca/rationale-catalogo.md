@@ -2,7 +2,7 @@
 id: rationale-catalogo
 title: ℹ️ Fundamentação
 description: Fundamentação e estrutura lógica dos temas de requisitos usados no catálogo
-tags: [estrutura, requisitos, temas, asvs, rastreabilidade]
+tags: [asvs, estrutura, rastreabilidade, requisitos, temas]
 sidebar_position: 2
 ---
 

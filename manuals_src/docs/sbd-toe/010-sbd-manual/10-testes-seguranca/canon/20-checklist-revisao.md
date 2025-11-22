@@ -2,7 +2,7 @@
 id: checklist-revisao
 title: Checklist - Testes de Segurança
 description: Instrumento de verificação binária e auditável da adoção prática das práticas de validação contínua de segurança.
-tags: [checklist, revisão, testes, segurança, conformidade, rastreabilidade]
+tags: [checklist, conformidade, rastreabilidade, revisão, seguranca, testes]
 sidebar_position: 20
 ---
 

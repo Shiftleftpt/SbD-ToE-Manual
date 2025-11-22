@@ -2,7 +2,7 @@
 id: intro
 title: Certificação ENISA/CSA (EUCC, EUCS, EU5G) — Nota de Enquadramento
 description: Quando usar e como mapear ao SbD-ToE (evidências, decisão e reaproveitamento)
-tags: [certificacao, enisa, csa, eucc, eucs, eu5g, procurement]
+tags: [certificacao, csa, enisa, eu5g, eucc, eucs, procurement]
 sidebar_position: 9
 ---
 

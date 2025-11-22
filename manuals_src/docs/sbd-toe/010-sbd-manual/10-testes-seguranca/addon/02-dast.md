@@ -2,7 +2,7 @@
 id: dast
 title: Validação Dinâmica de Aplicações (DAST)
 description: Testes dinâmicos em runtime para deteção de vulnerabilidades através da simulação de interações externas.
-tags: [dast, testes dinâmicos, runtime, segurança]
+tags: [dast, runtime, seguranca, testes dinâmicos]
 sidebar_position: 3
 ---
 

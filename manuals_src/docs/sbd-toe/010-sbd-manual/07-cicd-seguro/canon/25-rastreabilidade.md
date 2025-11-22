@@ -2,7 +2,7 @@
 id: rastreabilidade
 title: Rastreabilidade Top-Down - Capítulo 07
 description: Mapeamento entre as práticas do capítulo e os requisitos normativos de segurança em CI/CD
-tags: [rastreabilidade, normativo, cicd, pipelines, frameworks, dsomm, ssdf]
+tags: [cicd, dsomm, frameworks, normativo, pipelines, rastreabilidade, ssdf]
 sidebar_position: 25
 ---
 

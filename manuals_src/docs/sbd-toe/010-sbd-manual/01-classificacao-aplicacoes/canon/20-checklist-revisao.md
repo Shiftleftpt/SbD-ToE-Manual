@@ -2,7 +2,7 @@
 id: checklist-revisao
 title: Checklist de Revisão - Capítulo 01
 sidebar_position: 20
-tags: [canon, checklist, controlo, projeto, aplicacao]
+tags: [aplicacao, canon, checklist, controlo, projeto]
 ---
 
 # ✅ Checklist de Revisão - Classificação da Criticidade Aplicacional

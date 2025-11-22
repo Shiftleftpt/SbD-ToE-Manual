@@ -2,7 +2,7 @@
 id: adopcao-drp-bia
 title: Alternativa - adoção de DRP, BIA ou outras Classificações Existentes
 sidebar_position: 7
-tags: [tipo:ligacao, tema:drp, bia, classificacao, risco]
+tags: [bia, classificacao, risco, tema:drp, tipo:ligacao]
 ---
 <!--template: sbdtoe-addon -->
 

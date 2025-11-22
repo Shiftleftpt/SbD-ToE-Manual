@@ -2,7 +2,7 @@
 id: manual-formacao-capitulos
 title: Manual de Formação por Capítulo do SbD-ToE
 description: Guia técnico de formação contínua com ligação direta a cada capítulo do manual.
-tags: [formacao, manual, por capitulo, sbdtoe, referencia cruzada]
+tags: [formacao, manual, por capitulo, referencia cruzada, sbdtoe]
 ---
 
 

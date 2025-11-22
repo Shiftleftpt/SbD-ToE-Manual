@@ -3,7 +3,7 @@ id: rastreabilidade
 title: Rastreabilidade Top-Down - Capítulo 12
 sidebar_position: 25
 description: Mapeamento das práticas de monitorização e resposta face a frameworks como NIST SSDF, SAMM, ISO e CIS Controls.
-tags: [rastreabilidade, frameworks, normativo, monitorizacao, resposta, deteccao]
+tags: [deteção, frameworks, monitorizacao, normativo, rastreabilidade, resposta]
 ---
 
 

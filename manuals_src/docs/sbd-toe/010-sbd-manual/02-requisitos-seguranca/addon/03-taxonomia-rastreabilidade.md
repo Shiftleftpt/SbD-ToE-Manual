@@ -2,7 +2,7 @@
 id: taxonomia-rastreabilidade
 title: Taxonomia de Rastreabilidade de Requisitos
 description: Organização dos requisitos por domínio técnico e tipo de rastreio necessário
-tags: [taxonomia, rastreabilidade, requisitos, domínios, ALM]
+tags: [ALM, domínios, rastreabilidade, requisitos, taxonomia]
 ---
 
 # 🏷️ Taxonomia e Rastreabilidade de Requisitos de Segurança

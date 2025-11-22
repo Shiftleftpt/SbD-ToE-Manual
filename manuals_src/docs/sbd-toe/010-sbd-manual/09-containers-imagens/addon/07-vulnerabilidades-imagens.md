@@ -2,7 +2,7 @@
 id: vulnerabilidades-imagens
 title: Deteção e Tratamento de Vulnerabilidades em Imagens
 description: Identificação, triagem e mitigação de vulnerabilidades em *containers* com base em SBOM e scanners automatizados
-tags: [containers, vulnerabilidades, cve, sca, trivy, syft, imagem]
+tags: [containers, cve, imagem, sca, syft, trivy, vulnerabilidades]
 ---
 
 # 🧨 Deteção e Tratamento de Vulnerabilidades em Imagens

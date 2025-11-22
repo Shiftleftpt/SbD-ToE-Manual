@@ -2,7 +2,7 @@
 id: programa-champions
 title: Programa de Security Champions
 description: Estrutura e responsabilidades do programa de Security Champions para reforço da cultura de segurança aplicada.
-tags: [champions, cultura, formacao, responsabilidade, apoio]
+tags: [apoio, champions, cultura, formacao, responsabilidade]
 ---
 
 

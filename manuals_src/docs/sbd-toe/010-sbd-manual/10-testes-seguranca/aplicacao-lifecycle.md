@@ -2,7 +2,7 @@
 id: aplicacao-lifecycle
 title: Como Fazer
 description: Integração prática das práticas de validação contínua nas diferentes fases do ciclo de vida da aplicação
-tags: [tipo:aplicacao, ciclo-vida, testes, seguranca, integracao, validacao]
+tags: [ciclo-vida, integracao, seguranca, testes, tipo:aplicacao, validacao]
 genia: us-format-normalization
 ---
 

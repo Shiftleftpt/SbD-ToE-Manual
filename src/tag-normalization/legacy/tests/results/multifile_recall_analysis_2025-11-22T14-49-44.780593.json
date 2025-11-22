@@ -1,0 +1,66 @@
+{
+  "timestamp": "2025-11-22T14:49:44.780624",
+  "test_type": "multifile_recall_quality_test",
+  "summary": {
+    "files_analyzed": 1,
+    "total_existing_tags": 0,
+    "total_re_detected": 0,
+    "total_missed": 0,
+    "average_recall_percentage": 0,
+    "total_new_suggestions": 5
+  },
+  "files": [
+    {
+      "filepath": "../../manuals_src/docs/sbd-toe/010-sbd-manual/03-threat-modeling/canon/50-ameacas-mitigadas.md",
+      "filename": "50-ameacas-mitigadas.md",
+      "content_length": 8948,
+      "existing_tags": [],
+      "existing_count": 0,
+      "re_detected": [],
+      "re_detected_count": 0,
+      "missed_tags": [],
+      "missed_count": 0,
+      "recall_percentage": 0,
+      "new_suggestions": [
+        {
+          "tag": "arquitetura",
+          "confidence": 0.99,
+          "reason": "tag keyword; context: parent chapter"
+        },
+        {
+          "tag": "dsomm",
+          "confidence": 0.99,
+          "reason": "tag keyword; context: parent chapter"
+        },
+        {
+          "tag": "requisitos",
+          "confidence": 0.99,
+          "reason": "tag keyword; context: parent chapter"
+        },
+        {
+          "tag": "risco",
+          "confidence": 0.99,
+          "reason": "tag keyword; context: parent chapter"
+        },
+        {
+          "tag": "samm",
+          "confidence": 0.99,
+          "reason": "tag keyword; context: parent chapter"
+        }
+      ],
+      "new_suggestions_count": 5,
+      "recommendation_action": {
+        "keep": [],
+        "review": [],
+        "add": [
+          "arquitetura",
+          "dsomm",
+          "requisitos",
+          "risco",
+          "samm"
+        ],
+        "total_optimized": 5
+      }
+    }
+  ]
+}

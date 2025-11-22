@@ -2,7 +2,7 @@
 id: playbook
 title: "SbD-ToE 4 GDPR: Playbook de Implementação"
 description: Roadmap prático para alinhar o SbD-ToE aos requisitos técnicos do RGPD
-tags: [playbook, gdpr, implementacao, privacy-by-design, art32]
+tags: [art32, gdpr, implementacao, playbook, privacy-by-design]
 sidebar_position: 8
 ---
 

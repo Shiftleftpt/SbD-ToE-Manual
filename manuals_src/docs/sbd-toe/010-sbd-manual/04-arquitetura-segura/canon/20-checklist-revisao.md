@@ -2,7 +2,7 @@
 id: checklist-revisao
 title: Checklist de Revisão - Arquitetura Segura
 description: Lista de verificação binária e auditável para controlo da aplicação dos requisitos de arquitetura segura
-tags: [checklist, arquitetura, validação, requisitos]
+tags: [arquitetura, checklist, requisitos, validacao]
 sidebar_position: 20
 ---
 

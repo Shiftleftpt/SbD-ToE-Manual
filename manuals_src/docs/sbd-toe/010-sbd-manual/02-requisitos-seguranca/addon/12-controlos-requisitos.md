@@ -2,7 +2,7 @@
 id: controlos-requisitos
 title: Catálogo de Requisitos Aplicacionais
 description: Lista essencial de requisitos de segurança organizados por categoria e nível de risco
-tags: [requisitos, catalogo, rastreabilidade, criticidade, ASVS]
+tags: [ASVS, catalogo, criticidade, rastreabilidade, requisitos]
 ---
 
 

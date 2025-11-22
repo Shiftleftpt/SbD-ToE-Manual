@@ -2,7 +2,7 @@
 id: intro
 title: Validação Contínua de Segurança
 description: Estratégias e práticas para validar continuamente a segurança de aplicações através de testes automatizados, manuais e ofensivos.
-tags: [testes, segurança, validação contínua, SAST, DAST, fuzzing, pentesting, DSOMM, SAMM, SSDF, SLSA]
+tags: [DAST, DSOMM, SAMM, SAST, SLSA, SSDF, fuzzing, pentesting, seguranca, testes, validação contínua]
 sidebar_position: 0
 ---
 

@@ -2,7 +2,7 @@
 id: aplicacao-lifecycle
 title: Como Fazer
 description: Integração prática das prescrições de gestão de dependências, geração de SBOM e execução de SCA ao longo do ciclo de vida da aplicação
-tags: [tipo:aplicacao, ciclo-vida, dependencias, sbom, sca, supply-chain, governance]
+tags: [ciclo-vida, dependencias, governance, sbom, sca, supply-chain, tipo:aplicacao]
 genia: us-format-normalization
 ---
 

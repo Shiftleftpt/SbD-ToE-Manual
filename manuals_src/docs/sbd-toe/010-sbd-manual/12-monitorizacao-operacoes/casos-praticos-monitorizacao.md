@@ -2,7 +2,7 @@
 id: casos-praticos-monitorizacao
 title: Casos Práticos de Monitorização e Deteção
 description: Exemplos aplicados de logging, alertas e correlação em contextos reais
-tags: [caso de estudo, exemplos, logging, alertas, deteção, correlação, telemetria, sbd-toe]
+tags: [alertas, caso de estudo, correlação, deteção, exemplos, logging, sbd-toe, telemetria]
 ---
 
 # 📊 Casos Práticos de Monitorização e Deteção

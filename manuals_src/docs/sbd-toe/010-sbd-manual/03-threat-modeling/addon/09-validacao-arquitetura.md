@@ -2,7 +2,7 @@
 id: validacao-arquitetura
 title: Integração do Threat Modeling na Validação de Arquitetura
 description: Como integrar práticas de threat modeling nos artefactos de arquitetura técnica e processos de aprovação
-tags: [arquitetura, threat modeling, validação, revisão técnica, rastreabilidade]
+tags: [arquitetura, rastreabilidade, revisão técnica, threat modeling, validacao]
 ---
 
 # 🏗️ Integração do Threat Modeling na Validação de Arquitetura

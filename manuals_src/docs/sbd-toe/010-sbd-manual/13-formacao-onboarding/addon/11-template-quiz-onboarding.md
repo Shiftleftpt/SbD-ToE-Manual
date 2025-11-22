@@ -2,7 +2,7 @@
 id: quiz-onboarding
 title: Template de Quiz para Validação de Onboarding
 description: Exemplo de quiz técnico usado para validação de conhecimentos no processo de onboarding.
-tags: [onboarding, quiz, validacao, conhecimento, rastreabilidade]
+tags: [conhecimento, onboarding, quiz, rastreabilidade, validacao]
 ---
 
 

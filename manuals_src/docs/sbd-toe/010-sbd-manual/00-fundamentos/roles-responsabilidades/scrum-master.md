@@ -3,7 +3,7 @@ id: scrum-master
 title: Scrum Master / Team Lead
 sidebar_label: 🧭 Scrum Master / Team Lead
 description: Responsabilidades do Scrum Master/Team Lead no SbD-ToE
-tags: [scrum-master, team-lead, agile, responsabilidades]
+tags: [agile, responsabilidades, scrum-master, team-lead]
 sidebar_position: 9
 ---
 

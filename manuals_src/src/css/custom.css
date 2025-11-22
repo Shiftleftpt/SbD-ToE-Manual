@@ -325,3 +325,44 @@ html[data-theme='dark'] {
   }
 }
 
+/* =========================
+   admonition personalizada: basilar
+   ========================= */
+/* Wrapper do bloco basilar */
+.basilar-admonition {
+  margin: 1.5rem 0;
+  border-radius: 0.5rem;
+}
+
+/* Cabeçalho clicável */
+.basilar-admonition > summary {
+  cursor: pointer;
+  font-weight: 600;
+  padding: 0.5rem 0.75rem;
+  /* cor do texto do summary – podes ajustar */
+  color: var(--ifm-color-warning);
+  list-style: none;
+  outline: none;
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+/* Remover o marcador feio default do <summary> */
+.basilar-admonition > summary::-webkit-details-marker {
+  display: none;
+}
+
+/* Pequeno “chevron” para sensação de colapso/expansão, opcional */
+.basilar-admonition > summary::after {
+  content: "▾";
+  margin-left: auto;
+  font-size: 0.8em;
+  transition: transform 0.15s ease-out;
+}
+
+/* Rodar o chevron quando aberto */
+.basilar-admonition[open] > summary::after {
+  transform: rotate(180deg);
+}
+

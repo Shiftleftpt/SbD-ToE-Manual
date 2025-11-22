@@ -2,7 +2,7 @@
 id: recomendacoes-avancadas
 title: Recomendações Avançadas - Formação e Onboarding Seguro
 description: Recomendações para organizações com maior maturidade em formação contínua, automação e segurança comportamental.
-tags: [formacao, maturidade, lms, cicd, feedback, gamificacao, terceiros]
+tags: [cicd, feedback, formacao, gamificacao, lms, maturidade, terceiros]
 sidebar_position: 30
 ---
 

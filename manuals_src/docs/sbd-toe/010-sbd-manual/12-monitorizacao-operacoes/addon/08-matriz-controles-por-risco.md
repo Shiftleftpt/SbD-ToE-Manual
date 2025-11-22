@@ -3,7 +3,7 @@ id: matriz-controles-por-risco
 title: Matriz de Controles por Nível de Risco
 sidebar_position: 8
 description: Aplicação proporcional dos controlos de monitorização e resposta conforme a classificação de risco da aplicação.
-tags: [proporcionalidade, risco, matriz, controles, L1, L2, L3]
+tags: [L1, L2, L3, controles, matriz, proporcionalidade, risco]
 ---
 
 # 📈 Matriz de Controlos por Nível de Risco - Monitorização e Operações

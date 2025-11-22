@@ -2,7 +2,7 @@
 id: criterios-aceitacao-risco
 title: Critérios para Aceitação de Risco
 sidebar_position: 3
-tags: [tipo:criterios, aceitacao, excecao, rastreabilidade]
+tags: [aceitacao, excecao, rastreabilidade, tipo:criterios]
 ---
 
 <!--template: sbdtoe-core -->

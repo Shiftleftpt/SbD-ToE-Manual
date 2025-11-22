@@ -2,7 +2,7 @@
 id: policies-relevantes
 title: Policies
 description: Políticas organizacionais que sustentam a aplicação prática deste capítulo
-tags: [policy, organizacional, sbom, sca, dependencias]
+tags: [dependencias, organizacional, policy, sbom, sca]
 sidebar_position: 60
 
 ---

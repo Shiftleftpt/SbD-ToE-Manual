@@ -2,7 +2,7 @@
 id: catalogo-requisitos
 title: Definir o catálogo de Requisitos Aplicacionais
 description: Lista essencial de requisitos de segurança organizados por categoria e nível de risco
-tags: [tipo:catalogo, tema:requisitos, rastreabilidade, criticidade, ASVS]
+tags: [ASVS, criticidade, rastreabilidade, tema:requisitos, tipo:catalogo]
 ---
 
 <!--template: sbdtoe-addon -->

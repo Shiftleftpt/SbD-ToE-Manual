@@ -2,7 +2,7 @@
 id: 02-praticas-release-management
 title: Práticas de Release Management
 description: Estratégias para gestão segura de releases e segregação de funcionalidades durante a entrega contínua.
-tags: [tipo:anexo, grupo:execucao, tema:release, segurança, staging]
+tags: [grupo:execucao, seguranca, staging, tema:release, tipo:anexo]
 ---
 
 

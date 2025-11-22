@@ -1,7 +1,7 @@
 ---
 id: recomendacoes-avancadas
 title: Recomendações Avançadas para Classificação de Risco
-tags: [canon, recomendacoes, maturidade, risco]
+tags: [canon, maturidade, recomendacoes, risco]
 ---
 
 

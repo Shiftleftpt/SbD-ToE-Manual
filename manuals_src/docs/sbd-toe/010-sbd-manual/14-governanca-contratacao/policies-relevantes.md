@@ -3,7 +3,7 @@ id: policies-relevantes
 title: Policies
 sidebar_position: 60
 description: Políticas formais que sustentam as práticas de governação, exceções e gestão de fornecedores descritas neste capítulo
-tags: [policy, organizacional, governance, excecoes, fornecedores, contratacao]
+tags: [contratacao, excecoes, fornecedores, governance, organizacional, policy]
 ---
 
 

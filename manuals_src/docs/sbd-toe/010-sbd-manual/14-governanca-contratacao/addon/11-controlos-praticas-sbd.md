@@ -3,7 +3,7 @@ id: controlos-praticas-sbd
 title: Controlos de Governança sobre as Práticas do SbD-ToE
 sidebar_position: 11
 description: Formas de validar, reforçar e governar a aplicação dos controlos definidos noutros capítulos do SbD-ToE
-tags: [governanca, controlo, validacao, enforcement]
+tags: [controlo, enforcement, governanca, validacao]
 ---
 
 

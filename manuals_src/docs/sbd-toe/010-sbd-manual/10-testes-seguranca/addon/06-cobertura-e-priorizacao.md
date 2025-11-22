@@ -2,7 +2,7 @@
 id: cobertura-e-priorizacao
 title: Cobertura e Priorização de Testes de Segurança
 description: Estratégias para priorizar testes com base no risco e assegurar cobertura eficaz dos requisitos.
-tags: [cobertura, testes, segurança, priorização, risco]
+tags: [cobertura, priorização, risco, seguranca, testes]
 sidebar_position: 7
 ---
 

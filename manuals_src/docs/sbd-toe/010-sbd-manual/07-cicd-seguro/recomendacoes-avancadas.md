@@ -2,7 +2,7 @@
 id: recomendacoes-avancadas
 title: Recomendações Avançadas para Segurança de CI/CD
 description: Práticas de maturidade elevada para proteção de pipelines, com foco em governação, ataque simulado e Zero Trust
-tags: [avançado, cicd, pipelines, devsecops, zero trust, deteção, simulação]
+tags: [avancado, cicd, deteção, devsecops, pipelines, simulação, zero trust]
 sidebar_position: 30
 ---
 

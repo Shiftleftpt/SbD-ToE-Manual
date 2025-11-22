@@ -2,7 +2,7 @@
 id: metodologias-e-ferramentas
 title: Metodologias e Ferramentas de Threat Modeling
 description: Comparação prática de abordagens e ferramentas recomendadas
-tags: [stride, pasta, linddun, ferramentas, tooling, metodologias]
+tags: [ferramentas, linddun, metodologias, pasta, stride, tooling]
 ---
 
 # 🛡️ Metodologias e Ferramentas de Threat Modeling

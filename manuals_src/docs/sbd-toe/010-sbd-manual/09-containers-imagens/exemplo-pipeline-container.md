@@ -2,7 +2,7 @@
 id: exemplo-pipeline-container
 title: Caso Prático - Pipeline Containerizado com Execução Segura
 description: Exemplo completo de pipeline CI/CD com execução de *containers* em ambiente seguro e validado
-tags: [exemplo, pipeline, containers, cicd, segurança, execucao]
+tags: [cicd, containers, execucao, exemplos, pipelines, seguranca]
 ---
 
 # 💪 Caso Prático - Pipeline Containerizado com Execução Segura

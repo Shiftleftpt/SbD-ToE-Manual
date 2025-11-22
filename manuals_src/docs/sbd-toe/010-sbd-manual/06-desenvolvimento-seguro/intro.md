@@ -2,15 +2,15 @@
 id: intro
 title: Introdução - Desenvolvimento Seguro
 description: Práticas de codificação segura, curadoria e seleção de guidelines, validação automatizada e governação durante o desenvolvimento
-tags: [desenvolvimento, segurança, guidelines de código, linters, SAST, governação]
+tags: [SAST, cat_basilar, desenvolvimento, governanca, grp_implementacao_automacao, guidelines de código, implementacao-automacao, linters, seguranca]
 sidebar_position: 0
 ---
 
-:::tip Capítulo Operacional
-Este capítulo é considerado **operacional** no modelo *Security by Design - Theory of Everything (SbD-ToE)*.  
-A sua função é **aplicar, automatizar e validar** as práticas definidas nos capítulos basilares, garantindo a sua execução contínua e mensurável.  
+:::caution Capítulo Basilar
+Este capítulo é considerado **basilar** no modelo *Security by Design - Theory of Everything (SbD-ToE)*.  
+A sua aplicação é **obrigatória** para garantir a coerência, rastreabilidade e eficácia das restantes práticas de segurança.  
 
-Os capítulos operacionais implementam o SbD-ToE em contextos técnicos específicos. Estes capítulos traduzem as prescrições basilares em práticas de **execução verificável**, promovendo a **integração contínua da segurança** ao longo do ciclo de vida do software.
+Os capítulos basilares constituem a **fundação técnica e metodológica** do modelo, a ausência ou aplicação parcial de qualquer um destes compromete a **integridade global** do SbD-ToE, tornando inviável a adoção coerente das práticas operacionais e de governação.
 :::
 
 # Desenvolvimento Seguro

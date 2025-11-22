@@ -2,7 +2,7 @@
 id: recomendacoes-avancadas
 title: Recomendações Avançadas
 description: Práticas avançadas para reforçar a segurança, rastreabilidade e auditabilidade de deploys críticos.
-tags: [tipo:avancado, grupo:execucao, tema:deploy, validação, reversibilidade, maturidade]
+tags: [grupo:execucao, maturidade, reversibilidade, tema:deploy, tipo:avancado, validacao]
 sidebar_position: 30
 ---
 

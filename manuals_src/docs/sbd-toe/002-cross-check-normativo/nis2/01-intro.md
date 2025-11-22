@@ -2,7 +2,7 @@
 id: intro
 title: NIS2 - Cross-check normativo
 description: Como o SbD-ToE cobre, deixa em aberto deliberadamente e pode integrar rapidamente os requisitos da Diretiva NIS2 (UE 2022/2555)
-tags: [cross-check, nis2, diretiva, ciberseguranca, incident-reporting, governance]
+tags: [ciberseguranca, cross-check, diretiva, governance, incident-reporting, nis2]
 sidebar_position: 3
 ---
 

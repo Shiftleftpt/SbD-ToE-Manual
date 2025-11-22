@@ -4,7 +4,7 @@ title: Checklist de Revisão - Infraestrutura como Código (IaC)
 sidebar_position: 20
 sidebar_label: Checklist de Revisão
 description: Checklist binário e auditável para verificar a aplicação prática das prescrições de segurança para IaC.
-tags: [checklist, validação, revisão, iac, infraestrutura como código, controlo]
+tags: [checklist, controlo, iac, infraestrutura como código, revisão, validacao]
 ---
 
 

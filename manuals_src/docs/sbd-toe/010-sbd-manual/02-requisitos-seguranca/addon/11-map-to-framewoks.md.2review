@@ -2,7 +2,7 @@
 id: map-to-framewoks
 title: Rastreabilidade do Catalogo com Frameworks de Segurança
 description: Mapeamento dos temas de requisitos do catálogo com frameworks normativas e de maturidade
-tags: [rastreabilidade, frameworks, asvs, samm, nist, cis, slsa, dsomm]
+tags: [asvs, cis, dsomm, frameworks, nist, rastreabilidade, samm, slsa]
 sidebar_position: 3
 ---
 

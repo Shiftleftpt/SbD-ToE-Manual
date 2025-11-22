@@ -2,7 +2,7 @@
 id: policies-relevantes
 title: Policies Relevantes
 description: Políticas que sustentam a definição, exceção e validação de requisitos
-tags: [políticas, requisitos, exceções, validação, rastreabilidade]
+tags: [exceções, políticas, rastreabilidade, requisitos, validacao]
 sidebar_position: 60
 ---
 

@@ -2,7 +2,7 @@
 id: achievable-maturity
 title: Mapeamento de Maturidade - Capítulo 05
 sidebar_position: 10
-tags: [canon, maturidade, SAMM, SSDF, SLSA, DSOMM]
+tags: [DSOMM, SAMM, SLSA, SSDF, canon, maturidade]
 ---
 
 # 📈 Maturidade - Dependências, SBOM e SCA

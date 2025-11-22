@@ -2,15 +2,21 @@
 id: intro
 title: Classificação da Criticidade Aplicacional
 description: Determinação da criticidade de aplicações para aplicar proporcionalidade nos controlos de segurança
-tags: [base, classificacao, risco, proporcionalidade, ciclo-vida]
+tags: [base, cat_basilar, ciclo-vida, classificacao, fundamentos, grp_fundamentos_contexto, proporcionalidade, risco]
 ---
 
-:::caution Capítulo Basilar
-Este capítulo é considerado **basilar** no modelo *Security by Design - Theory of Everything (SbD-ToE)*.  
-A sua aplicação é **obrigatória** para garantir a coerência, rastreabilidade e eficácia das restantes práticas de segurança.  
+<details className="basilar-admonition">
+  <summary>⚠️ Capítulo basilar – o que significa?</summary>
 
-Os capítulos basilares constituem a **fundação técnica e metodológica** do modelo, a ausência ou aplicação parcial de qualquer um destes compromete a **integridade global** do SbD-ToE, tornando inviável a adoção coerente das práticas operacionais e de governação.
-:::
+  :::warning[Capítulo basilar]
+  Este capítulo é considerado **basilar** no modelo *Security by Design - Theory of Everything (SbD-ToE)*.  
+  A sua aplicação é **obrigatória** para garantir a coerência, rastreabilidade e eficácia das restantes práticas de segurança.  
+
+  Os capítulos basilares constituem a **fundação técnica e metodológica** do modelo; a ausência ou aplicação parcial
+  de qualquer um destes compromete a **integridade global** do SbD-ToE, tornando inviável a adoção coerente das práticas
+  operacionais e de governação.
+  :::
+</details>
 
 
 # Classificação da Criticidade Aplicacional

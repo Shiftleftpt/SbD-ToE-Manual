@@ -3,7 +3,7 @@ id: modelo-validacao-fornecedores
 title: Modelo de Validação de Fornecedores
 sidebar_position: 3
 description: Processo para validação de segurança em fornecedores, contratados e terceiros técnicos
-tags: [fornecedores, validacao, terceiros, contratacao]
+tags: [contratacao, fornecedores, terceiros, validacao]
 ---
 
 

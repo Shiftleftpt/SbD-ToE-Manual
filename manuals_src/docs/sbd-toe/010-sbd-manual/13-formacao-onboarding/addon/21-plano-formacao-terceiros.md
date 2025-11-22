@@ -2,7 +2,7 @@
 id: plano-formacao-terceiros
 title: Plano de Formação para Terceiros
 description: Plano técnico de capacitação mínima obrigatória para fornecedores, contractors e parceiros com acesso técnico.
-tags: [formacao, terceiros, fornecedores, plano, acesso seguro]
+tags: [acesso seguro, formacao, fornecedores, plano, terceiros]
 ---
 
 

@@ -2,7 +2,7 @@
 id: aplicacao-lifecycle
 title: Como Fazer
 description: Como aplicar as práticas de CI/CD seguro ao longo do ciclo de vida da aplicação, com proporcionalidade por risco, user stories normalizadas e evidências auditáveis
-tags: [tipo:aplicacao, ciclo-vida, cicd, devsecops, pipelines, seguranca, rastreabilidade]
+tags: [cicd, ciclo-vida, devsecops, pipelines, rastreabilidade, seguranca, tipo:aplicacao]
 genia: us-format-normalization
 ---
 

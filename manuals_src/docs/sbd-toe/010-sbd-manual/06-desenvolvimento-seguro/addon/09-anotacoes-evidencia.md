@@ -3,7 +3,7 @@ id: anotacoes-evidencia
 title: Anotações e Evidência de Validações
 sidebar_position: 9
 description: Estratégias para anotar decisões e evidências de validação de segurança no próprio código ou ciclo de desenvolvimento
-tags: [evidência, anotação, validação, rastreabilidade, SDLC]
+tags: [SDLC, anotação, evidência, rastreabilidade, validacao]
 ---
 
 # 🏷️ Anotações e Evidência de Validações

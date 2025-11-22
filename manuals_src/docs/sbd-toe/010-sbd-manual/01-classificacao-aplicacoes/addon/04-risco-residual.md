@@ -2,7 +2,7 @@
 id: risco-residual
 title: Análise de Risco Residual e Decisão de Aceitação
 sidebar_position: 4
-tags: [tipo:analise, risco-residual, aceitacao, excecao]
+tags: [aceitacao, excecao, risco-residual, tipo:analise]
 ---
 
 <!--template: sbdtoe-core -->

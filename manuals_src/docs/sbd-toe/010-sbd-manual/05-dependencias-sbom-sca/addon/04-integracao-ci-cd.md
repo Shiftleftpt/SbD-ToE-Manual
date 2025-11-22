@@ -2,7 +2,7 @@
 id: integracao-ci-cd
 title: Integração com Pipelines CI/CD
 description: Integração automatizada de SBOM, SCA e controlo de exceções no ciclo de build e release
-tags: [dependencias, sbom, sca, supply-chain, ci-cd]
+tags: [ci-cd, dependencias, sbom, sca, supply-chain]
 ---
 
 # ⚙️ Integração com Pipelines CI/CD

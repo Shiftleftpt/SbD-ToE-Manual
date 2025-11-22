@@ -2,7 +2,7 @@
 id: ameacas-mitigadas
 title: Ameaças Mitigadas - Containers e Imagens
 description: Ameaças mitigadas pelas práticas deste capítulo, com mapeamento a OWASP/OSC&R, CAPEC, SSDF, SLSA, CIS e outras referências
-tags: [ameaças, containers, imagens, supply chain, kubernetes, proveniência, hardening]
+tags: [ameacas, containers, hardening, imagens, kubernetes, proveniência, supply chain]
 sidebar_position: 50
 ---
 

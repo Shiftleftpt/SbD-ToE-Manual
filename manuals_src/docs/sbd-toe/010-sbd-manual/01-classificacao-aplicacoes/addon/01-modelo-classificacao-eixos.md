@@ -2,7 +2,7 @@
 id: modelo-classificacao-eixos
 title: Modelo de Classificação
 sidebar_position: 1
-tags: [tipo:modelo, tema:criticidade, eixo, risco]
+tags: [eixo, risco, tema:criticidade, tipo:modelo]
 ---
 <!--template: sbdtoe-core -->
 

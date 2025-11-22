@@ -2,7 +2,7 @@
 id: feedback-equipa
 title: Integração de Findings com as Equipas
 description: Mecanismos de feedback contínuo dos resultados dos testes de segurança às equipas de desenvolvimento e produto.
-tags: [feedback, findings, comunicação, equipas, segurança]
+tags: [comunicação, equipas, feedback, findings, seguranca]
 sidebar_position: 10
 ---
 

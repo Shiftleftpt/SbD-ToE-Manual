@@ -2,7 +2,7 @@
 id: policies-relevantes
 title: Policies
 description: Conjunto de políticas recomendadas para sustentar e legitimar as práticas de segurança CI/CD descritas no capítulo
-tags: [políticas, cicd, pipelines, governança, segurança organizacional]
+tags: [cicd, governança, pipelines, políticas, segurança organizacional]
 sidebar_position: 60
 ---
 

@@ -2,7 +2,7 @@
 id: 01-modelo-controle-execucao
 title: Modelo de Controlo de Execução
 description: Estratégia para garantir que todo o código executado em produção foi previamente validado e autorizado.
-tags: [tipo:anexo, grupo:execucao, tema:pipeline, segurança, deploy]
+tags: [deploy, grupo:execucao, seguranca, tema:pipeline, tipo:anexo]
 ---
 
 

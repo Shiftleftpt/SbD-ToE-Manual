@@ -2,7 +2,7 @@
 id: inclusao-terceiros
 title: Modelo de Inclusão de Terceiros e Fornecedores
 description: Procedimento padronizado para onboarding seguro de terceiros, com formação mínima exigida.
-tags: [terceiros, onboarding, formacao, rastreabilidade, inclusao]
+tags: [formacao, inclusao, onboarding, rastreabilidade, terceiros]
 ---
 
 

@@ -1,0 +1,419 @@
+#!/usr/bin/env python3
+"""
+MANUAL RAG SYSTEM - Beyond Tags + Local LLM
+
+Analysis of what a RAG system could do for your SbD-ToE manual,
+including local LLM options and use cases beyond tagging.
+"""
+
+analysis = """
+
+╔════════════════════════════════════════════════════════════════════════════════════════════╗
+║           COMPREHENSIVE MANUAL RAG SYSTEM: What You Could Build                          ║
+╚════════════════════════════════════════════════════════════════════════════════════════════╝
+
+TUA PERGUNTA: "Esse RAG poderia dar apoio a outras coisas para além de tags? 
+              E podemos usar um LLM local?"
+
+RESPOSTA: SIM e SIM! Aqui está o potencial completo:
+
+
+═══════════════════════════════════════════════════════════════════════════════════════════
+
+PARTE 1: USES CASES BEYOND TAGS (O que o RAG poderia fazer)
+
+┌─ USE CASE 1: AUTO-CLASSIFICATION ─────────────────────────────────────────────────────┐
+│                                                                                          │
+│  Novo ficheiro: "Implementação do controlo de acesso baseado em papéis"                │
+│                                                                                          │
+│  RAG pode:                                                                               │
+│  ├─ Sugerir capítulo correto (010-sbd-manual/13-formacao-onboarding?)                  │
+│  ├─ Propor subcapítulo (policies? governance? deployment?)                             │
+│  ├─ Recomendar estrutura de headings (baseado em docs similares)                       │
+│  ├─ Sugerir relação com outros ficheiros                                               │
+│  └─ Indicar se falta contexto/introdução                                               │
+│                                                                                          │
+│  Benefício: Onboarding de novos autores - "onde encaixa isto no manual?"              │
+│                                                                                          │
+└──────────────────────────────────────────────────────────────────────────────────────────┘
+
+
+┌─ USE CASE 2: CONTENT VALIDATION & GAPS ───────────────────────────────────────────────┐
+│                                                                                          │
+│  Ficheiro: "Threat modeling para containers"                                           │
+│                                                                                          │
+│  RAG pode:                                                                               │
+│  ├─ "Este ficheiro refere 'STRIDE' 8 vezes"                                           │
+│  ├─ "Mas não menciona 'LINDDUN' (related topic em doc XXX)"                           │
+│  ├─ "Sugiro adicionar: privacy threats, adversary modeling"                           │
+│  ├─ "3 outros docs mencionam Kubernetes security - considere referenciar"             │
+│  ├─ "Faltam exemplos práticos (doc YYY tem 5 exemplos similares)"                     │
+│  └─ Gerar resumo de "o que falta neste capítulo"                                       │
+│                                                                                          │
+│  Benefício: Quality assurance automático - identifica gaps antes de publish            │
+│                                                                                          │
+└──────────────────────────────────────────────────────────────────────────────────────────┘
+
+
+┌─ USE CASE 3: SMART CROSS-REFERENCING ──────────────────────────────────────────────────┐
+│                                                                                          │
+│  Documento atual: "04-arquitetura-segura/01-intro.md"                                 │
+│                                                                                          │
+│  RAG pode:                                                                               │
+│  ├─ "Vejo que mencionas 'supply chain risks'"                                         │
+│  ├─ "Doc 05-dependencias-sbom/02-sbom-intro.md trata isto em detalhe"                 │
+│  ├─ "Sugerido: 'Ver também Capítulo 5: SBOM and Supply Chain'"                       │
+│  ├─ "3 outros capítulos também mencionam isto - criar cross-references"               │
+│  └─ "Adicionar links bidirecionais automáticos"                                        │
+│                                                                                          │
+│  Benefício: Manual mais coeso - leitores encontram contexto relacionado                │
+│                                                                                          │
+└──────────────────────────────────────────────────────────────────────────────────────────┘
+
+
+┌─ USE CASE 4: TERMINOLOGY & CONSISTENCY ───────────────────────────────────────────────┐
+│                                                                                          │
+│  Novo doc: "DevSecOps Best Practices"                                                  │
+│                                                                                          │
+│  RAG pode:                                                                               │
+│  ├─ "Detecta: 'CI/CD pipeline' (13 docs), 'CI-CD' (2 docs), 'pipeline CI/CD' (5 docs)"│
+│  ├─ "Recomenda padronizar para: 'CI/CD pipeline' (usado 13x)"                         │
+│  ├─ "Aviso: 'threat modeling' vs 'threat-modelling' (br vs en)"                       │
+│  ├─ "Sugiro usar: 'threat modeling' (consistente com doc XXX, YYY)"                   │
+│  └─ "Mantém glossário automático de termos"                                            │
+│                                                                                          │
+│  Benefício: Manual com linguagem consistente, fácil de traduzir                        │
+│                                                                                          │
+└──────────────────────────────────────────────────────────────────────────────────────────┘
+
+
+┌─ USE CASE 5: VERSIONING & CHANGE TRACKING ────────────────────────────────────────────┐
+│                                                                                          │
+│  Commit: "Updated 03-threat-modeling/01-intro.md"                                      │
+│                                                                                          │
+│  RAG pode:                                                                               │
+│  ├─ "Mudança semântica detectada: '+30% conteúdo sobre STRIDE'"                       │
+│  ├─ "Potencial impacto: 8 outros docs que referenciam STRIDE"                         │
+│  ├─ "Alerta: Cap 04-arquitetura podem precisar revisão (mencionam ameaças)"           │
+│  ├─ "Sugestão: Atualizar exemplos em cap 10-testes-seguranca"                         │
+│  └─ "Gerar change summary: 'Major: Expanded threat types, Minor: Added examples'"     │
+│                                                                                          │
+│  Benefício: Rastreia impacto de mudanças em tempo real                                │
+│                                                                                          │
+└──────────────────────────────────────────────────────────────────────────────────────────┘
+
+
+┌─ USE CASE 6: INTELLIGENT SEARCH ──────────────────────────────────────────────────────┐
+│                                                                                          │
+│  User query: "Como implemento autenticação em microserviços?"                          │
+│                                                                                          │
+│  RAG pode:                                                                               │
+│  ├─ (CTRL+F apenas encontra: "autenticação" em 5 docs)                               │
+│  ├─ (RAG encontra: "OAuth, OIDC, JWT, mTLS, service meshes")                         │
+│  ├─ Retorna:                                                                            │
+│  │  1. Cap 13-formacao: "Identity and Access Management"                              │
+│  │  2. Cap 04-arquitetura: "Zero-trust architecture"                                  │
+│  │  3. Cap 09-containers: "Service mesh security (mTLS)"                              │
+│  │  4. Doc 10-testes: "Testing auth in microservices"                                │
+│  ├─ Com sumário: "Implementação típica: OAuth2 + mTLS entre serviços"                │
+│  └─ Com exemplos diretos dos docs                                                      │
+│                                                                                          │
+│  Benefício: Search semântico (não apenas keywords)                                    │
+│                                                                                          │
+└──────────────────────────────────────────────────────────────────────────────────────────┘
+
+
+┌─ USE CASE 7: TRAINING & ONBOARDING ──────────────────────────────────────────────────┐
+│                                                                                          │
+│  Novo membro da equipa: "Como começo a estudar este manual?"                          │
+│                                                                                          │
+│  RAG pode:                                                                               │
+│  ├─ "Tu trabalhas em CI/CD? Comece por: Cap 7 > Depois Cap 6 > Depois Cap 10"        │
+│  ├─ "Tu és architect? Comece por: Cap 0 teoria > Cap 4 > Cap 8 IaC > Cap 9 Containers"│
+│  ├─ "Gerar 'learning path' personalizados por role"                                   │
+│  ├─ "Quiz automático: 'Qual é o objetivo do threat modeling?' (com resposta do manual)"│
+│  └─ "Tracking: 'Já leu capítulo 4 (87% cobertura)' 'Próximo: Capítulo 5'"           │
+│                                                                                          │
+│  Benefício: Manual interativo com guias de aprendizagem                                │
+│                                                                                          │
+└──────────────────────────────────────────────────────────────────────────────────────────┘
+
+
+┌─ USE CASE 8: COMPLIANCE & AUDIT ──────────────────────────────────────────────────────┐
+│                                                                                          │
+│  Pergunta: "O manual cobre todos os requisitos ISO 27001?"                            │
+│                                                                                          │
+│  RAG pode:                                                                               │
+│  ├─ Mapear cada controlo ISO 27001 → capítulos relevantes                            │
+│  ├─ Identificar gaps: "Controlo A.14.1.1 pouco coberto (1 ref)"                      │
+│  ├─ Gerar compliance matrix: "GDPR Artigo 32 → Caps 4, 6, 7, 10"                     │
+│  ├─ Audit trail: "Última actualização deste requisito: 2024-10-15"                   │
+│  └─ Exportar relatório: "Manual cobre 94% de ISO 27001"                              │
+│                                                                                          │
+│  Benefício: Compliance tracking automático                                             │
+│                                                                                          │
+└──────────────────────────────────────────────────────────────────────────────────────────┘
+
+
+═══════════════════════════════════════════════════════════════════════════════════════════
+
+PARTE 2: LOCAL LLM OPTIONS (Sem depender de APIs externas)
+
+┌─ OPTION A: OLLAMA (RECOMENDADO - Mais fácil) ──────────────────────────────────────────┐
+│                                                                                          │
+│  O que é: Local LLM runtime (como Docker mas para LLMs)                               │
+│  Setup: brew install ollama (Mac) ou download Linux/Windows                           │
+│  Modelos disponíveis:                                                                   │
+│                                                                                          │
+│  ├─ mistral (7B) - 4GB RAM - Bom para português                                      │
+│  ├─ llama2 (7B) - 4GB RAM - Popular, bem documentado                                 │
+│  ├─ neural-chat (7B) - 4GB RAM - Otimizado para Q&A                                  │
+│  └─ dolphin-mixtral (26B) - 16GB RAM - Melhor qualidade                              │
+│                                                                                          │
+│  Vantagens:                                                                             │
+│  ✓ Zero setup complexity (literalmente: ollama pull mistral && ollama serve)          │
+│  ✓ Corre no teu Mac/servidor local                                                    │
+│  ✓ Sem limite de rate limits                                                          │
+│  ✓ Sem custos (open source)                                                           │
+│  ✓ API OpenAI-compatible (muda 1 linha de código)                                    │
+│  ✓ Latência: 1-3 segundos por resposta (7B model)                                    │
+│                                                                                          │
+│  Exemplo de uso:                                                                        │
+│  ```python                                                                              │
+│  from openai import OpenAI                                                             │
+│  client = OpenAI(base_url="http://localhost:11434/v1", api_key="ollama")             │
+│  response = client.chat.completions.create(                                           │
+│      model="mistral",                                                                  │
+│      messages=[{"role": "user", "content": "..."}]                                   │
+│  )                                                                                      │
+│  ```                                                                                    │
+│                                                                                          │
+└──────────────────────────────────────────────────────────────────────────────────────────┘
+
+
+┌─ OPTION B: LLAMACPP (MAIS RÁPIDO para embeddings) ─────────────────────────────────────┐
+│                                                                                          │
+│  O que é: Runtime de LLM otimizado em C++ (muito mais rápido)                        │
+│  Setup: pip install llama-cpp-python                                                  │
+│  Modelos: Qualquer modelo GGUF format (convertido para executável)                    │
+│                                                                                          │
+│  Vantagens:                                                                             │
+│  ✓ 2-5x mais rápido que Ollama                                                        │
+│  ✓ Funciona em CPU (não precisa GPU)                                                  │
+│  ✓ Excelente para embeddings (sentence-transformers local)                           │
+│  ✓ Python library (integração direta)                                                │
+│                                                                                          │
+│  Quando usar:                                                                           │
+│  ├─ Embeddings para RAG (USE THIS)                                                    │
+│  └─ LLM para análise: Ollama é mais simples                                          │
+│                                                                                          │
+└──────────────────────────────────────────────────────────────────────────────────────────┘
+
+
+┌─ OPTION C: LANGCHAIN + LOCAL LLM (COMPLETO) ────────────────────────────────────────────┐
+│                                                                                          │
+│  Framework completo para RAG + LLM local                                               │
+│                                                                                          │
+│  Stack:                                                                                 │
+│  ├─ Embeddings: sentence-transformers (local)                                        │
+│  ├─ Vector store: Chroma (local, sqlite)                                             │
+│  ├─ LLM: Ollama (local)                                                              │
+│  └─ Framework: LangChain (orquestra tudo)                                            │
+│                                                                                          │
+│  Resultado: Sistema 100% local, zero cloud dependencies                               │
+│                                                                                          │
+└──────────────────────────────────────────────────────────────────────────────────────────┘
+
+
+═══════════════════════════════════════════════════════════════════════════════════════════
+
+PARTE 3: ARQUITETURA COMPLETA (Local + RAG + LLM)
+
+┌─────────────────────────────────────────────────────────────────────────────────────────┐
+│                                                                                         │
+│   MANUAL (294 MD files)                                                               │
+│         │                                                                              │
+│         ├─> EMBEDDINGS (sentence-transformers)                                       │
+│         │        │                                                                    │
+│         │        └─> VECTOR STORE (Chroma - local SQLite)                           │
+│         │                │                                                           │
+│         │                └─> SIMILARITY SEARCH (instant)                            │
+│         │                                                                             │
+│         └─> INDEXING LAYER                                                           │
+│              ├─ Tags index                                                           │
+│              ├─ Terms index                                                          │
+│              ├─ Compliance matrix                                                    │
+│              └─ Cross-references                                                     │
+│                                                                                       │
+│   USER QUERY                                                                          │
+│         │                                                                              │
+│         ├─> RAG RETRIEVAL                                                             │
+│         │   ├─ Find similar docs                                                     │
+│         │   ├─ Extract context                                                       │
+│         │   └─ Prepare prompt                                                        │
+│         │                                                                              │
+│         ├─> LOCAL LLM (Ollama/LlamaCPP)                                              │
+│         │   ├─ Analyze with context                                                  │
+│         │   ├─ Generate response                                                     │
+│         │   └─ Return explanation                                                    │
+│         │                                                                              │
+│         └─> OUTPUT                                                                    │
+│             ├─ Answer with source references                                        │
+│             ├─ Related docs suggested                                                │
+│             └─ Confidence level                                                      │
+│                                                                                       │
+└─────────────────────────────────────────────────────────────────────────────────────────┘
+
+
+═══════════════════════════════════════════════════════════════════════════════════════════
+
+PARTE 4: CASOS DE USO COM LLM LOCAL (Sem custo)
+
+┌─ Auto-tagging (atual) ─────────────────────────────────────┐
+│  Prompt: "Given this document, suggest tags from [list]"  │
+│  LLM: "Based on content analysis... suggest: [tags]"     │
+│  Local LLM: ✓ Perfeito (2-3 seg)                          │
+│  Cost: $0                                                   │
+└────────────────────────────────────────────────────────────┘
+
+┌─ Gap Analysis ─────────────────────────────────────────────┐
+│  Prompt: "Compare this doc vs 5 similar docs. What's missing?"│
+│  LLM: "Missing: X, Y, Z. Recommend: adding sections on..."│
+│  Local LLM: ✓ Excelente (3-5 seg)                          │
+│  Cost: $0                                                   │
+└────────────────────────────────────────────────────────────┘
+
+┌─ Content Validation ───────────────────────────────────────┐
+│  Prompt: "Check if this content covers all ISO 27001 A.14.1"│
+│  LLM: "Covers: 1,2,3. Missing: 4,5. Recommend adding..."  │
+│  Local LLM: ✓ Muito bom (2-4 seg)                          │
+│  Cost: $0                                                   │
+└────────────────────────────────────────────────────────────┘
+
+┌─ Terminology Consistency ──────────────────────────────────┐
+│  Prompt: "Normalize terminology in this doc"               │
+│  LLM: "Found: 3 variants. Recommend: use 'CI/CD pipeline'" │
+│  Local LLM: ✓ Excelente (2-3 seg)                          │
+│  Cost: $0                                                   │
+└────────────────────────────────────────────────────────────┘
+
+
+═══════════════════════════════════════════════════════════════════════════════════════════
+
+PARTE 5: IMPLEMENTAÇÃO PRÁTICA (Pseudocódigo)
+
+```python
+from sentence_transformers import SentenceTransformer
+from chroma import Chroma  # Vector store
+from ollama import Client  # Local LLM
+from pathlib import Path
+
+# 1. SETUP (one-time)
+embedder = SentenceTransformer('multilingual-MiniLM-L6-v2')
+vector_store = Chroma(persist_directory='./manual_index')
+llm = Client(base_url='http://localhost:11434')
+
+# 2. INDEX MANUAL
+for md_file in Path('docs').rglob('*.md'):
+    content = md_file.read_text()
+    embedding = embedder.encode(content)
+    vector_store.add(
+        documents=[content],
+        embeddings=[embedding],
+        metadatas=[{'path': str(md_file)}]
+    )
+
+# 3. QUERY WITH RAG + LLM
+def smart_analysis(query, filepath):
+    # Retrieve similar docs
+    results = vector_store.query(query, n_results=3)
+    context = "\\n".join(results['documents'])
+    
+    # Ask LLM with context
+    prompt = f"""
+    Based on these similar manual sections:
+    {context}
+    
+    {query}
+    """
+    
+    response = llm.generate(prompt, model='mistral')
+    return response
+
+# 4. EXAMPLE USAGE
+tags = smart_analysis(
+    "Suggest tags for this document",
+    filepath="new_doc.md"
+)
+
+gaps = smart_analysis(
+    "What content is missing compared to similar docs?",
+    filepath="03-threat-modeling/01-intro.md"
+)
+```
+
+Result: Completo sistema RAG local, zero API calls, zero custos, 100% privado
+
+
+═══════════════════════════════════════════════════════════════════════════════════════════
+
+PARTE 6: DEPLOYMENT NO TEU MAC
+
+```bash
+# 1. Install Ollama
+brew install ollama
+
+# 2. Download model (first time)
+ollama pull mistral  # ~4GB
+
+# 3. Start LLM server (background)
+ollama serve &
+
+# 4. Create Python environment
+python3 -m venv rag_env
+source rag_env/bin/activate
+pip install sentence-transformers chroma-db openai
+
+# 5. Run RAG system
+python3 manual_rag_system.py
+
+# Done! Sistema rodando 100% local
+```
+
+
+═══════════════════════════════════════════════════════════════════════════════════════════
+
+RESUMO: O que consegues construir
+
+✅ IMMEDIATE (dia 1):
+   • Auto-tagger com padrões + embeddings
+   • Smart search (semantic)
+   • Cross-reference suggester
+   • Cost: $0
+
+✅ WEEK 1:
+   • Add LLM local (Ollama)
+   • Auto-classification system
+   • Gap analyzer
+   • Terminology consistency checker
+   • Cost: $0
+
+✅ WEEK 2:
+   • Compliance matrix generator
+   • Version change analyzer
+   • Learning paths generator
+   • Manual quality dashboard
+   • Cost: $0
+
+TOTAL INVESTMENT:
+   • Setup time: 4-6 horas
+   • Code: ~300 linhas (re-usable)
+   • Running cost: $0 (local)
+   • Maintenance: Minimal
+
+
+SER-TE-HÁ ÚTIL AGORA UM MANUAL RAG LOCAL COMPLETO?
+
+"""
+
+print(analysis)

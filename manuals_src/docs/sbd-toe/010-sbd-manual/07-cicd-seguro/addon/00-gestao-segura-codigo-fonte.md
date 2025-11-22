@@ -3,7 +3,7 @@ id: gestao-codigo-fonte
 title: Gestão Segura de Código-Fonte
 sidebar_position: 0
 description: Práticas para proteger branches, controlar alterações e garantir versionamento rastreável do código usado em pipelines.
-tags: [cicd, código-fonte, scm, revisão, branches, pipelines]
+tags: [branches, cicd, código-fonte, pipelines, revisão, scm]
 ---
 
 

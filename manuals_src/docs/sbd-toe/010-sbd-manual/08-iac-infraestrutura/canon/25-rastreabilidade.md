@@ -3,7 +3,7 @@ id: rastreabilidade
 title: Rastreabilidade - Infraestrutura como Código (IaC)
 sidebar_position: 25
 description: Mapeamento entre as práticas de segurança prescritas no capítulo e os requisitos de frameworks e normas reconhecidas.
-tags: [rastreabilidade, normas, frameworks, iac, infraestrutura como código]
+tags: [frameworks, iac, infraestrutura como código, normas, rastreabilidade]
 ---
 
 # 📎 Rastreabilidade contra Frameworks - Capítulo 08: IaC e Infraestrutura como Código

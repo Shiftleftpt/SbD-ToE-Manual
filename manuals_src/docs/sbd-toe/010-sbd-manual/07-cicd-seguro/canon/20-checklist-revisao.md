@@ -3,7 +3,7 @@ id: checklist-revisao
 title: Checklist - CI/CD Seguro
 sidebar_label: Checklist de Revisão
 description: Lista de verificação objetiva da adoção das práticas de segurança em pipelines CI/CD
-tags: [checklist, auditoria, cicd, devsecops, pipelines]
+tags: [auditoria, checklist, cicd, devsecops, pipelines]
 sidebar_position: 20
 ---
 

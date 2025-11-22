@@ -3,7 +3,7 @@ id: ameacas-mitigadas
 title: Ameaças Mitigadas pelas Práticas de Monitorização e Operações
 sidebar_position: 50
 description: Tabela de ameaças mitigadas pelas práticas de logging, correlação e resposta descritas neste capítulo.
-tags: [ameacas, deteccao, resposta, logging, osc&r, ameaças, mitigação, visibilidade]
+tags: [ameacas, deteção, logging, mitigacao, osc-r, resposta, visibilidade]
 ---
 
 

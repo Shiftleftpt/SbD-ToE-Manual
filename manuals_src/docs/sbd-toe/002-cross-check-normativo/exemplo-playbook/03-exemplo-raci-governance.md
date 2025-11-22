@@ -2,7 +2,7 @@
 id: exemplo-raci-governance
 title: "Exemplo: RACI e Governança"
 description: Template exemplar de RACI (Responsible, Accountable, Consulted, Informed) para implementação SbD
-tags: [exemplos, raci, governanca, responsabilidades, organizacao]
+tags: [exemplos, governanca, organizacao, raci, responsabilidades]
 ---
 
 # Exemplo: RACI de Governança

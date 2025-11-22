@@ -2,7 +2,7 @@
 id: intro
 title: Dependências, SBOM e SCA
 description: Princípios, práticas e controlos para garantir gestão segura de dependências, geração de SBOM e análise automatizada de composição de software
-tags: [dependencias, sbom, sca, supply-chain, oss, cicd, governance]
+tags: [cat_operacional, cicd, dependencias, engenharia-segura, governance, grp_engenharia_segura, oss, sbom, sca, supply-chain]
 sidebar_position: 0
 ---
 

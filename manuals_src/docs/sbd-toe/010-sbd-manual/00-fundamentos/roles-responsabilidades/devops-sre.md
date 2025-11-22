@@ -3,7 +3,7 @@ id: devops-sre
 title: DevOps / SRE
 sidebar_label: ⚙️ DevOps / SRE
 description: Responsabilidades de DevOps/SRE no SbD-ToE
-tags: [devops, sre, cicd, responsabilidades]
+tags: [cicd, devops, responsabilidades, sre]
 sidebar_position: 4
 ---
 

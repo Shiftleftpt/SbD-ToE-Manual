@@ -2,7 +2,7 @@
 id: 06-controle-versao-e-rollback
 title: Controlo de Versão e Estratégias de Rollback
 description: Técnicas para garantir versões rastreáveis e reversíveis com rollback automático, testado e documentado.
-tags: [tipo:anexo, grupo:execucao, tema:rollback, versionamento, reversibilidade]
+tags: [grupo:execucao, reversibilidade, tema:rollback, tipo:anexo, versionamento]
 ---
 
 

@@ -3,7 +3,7 @@ id: grc-compliance
 title: GRC / Compliance
 sidebar_label: 📑 GRC / Compliance
 description: Responsabilidades de GRC/Compliance no SbD-ToE
-tags: [grc, compliance, governance, responsabilidades]
+tags: [compliance, governance, grc, responsabilidades]
 sidebar_position: 11
 ---
 

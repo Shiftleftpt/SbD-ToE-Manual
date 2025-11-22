@@ -2,7 +2,7 @@
 id: intro
 title: GDPR - Cross-Check Normativo
 description: Como o SbD-ToE cobre requisitos técnicos do RGPD (UE 2016/679)
-tags: [cross-check, gdpr, privacidade, protecao-dados, art32, privacy-by-design]
+tags: [art32, cross-check, gdpr, privacidade, privacy-by-design, protecao-dados]
 sidebar_position: 7
 ---
 

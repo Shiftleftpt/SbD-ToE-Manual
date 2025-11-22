@@ -2,7 +2,7 @@
 id: rastreabilidade
 title: Rastreabilidade Normativa - Requisitos de Segurança
 description: Correspondência entre as práticas de requisitos e frameworks como SSDF, SAMM, ISO, DSOMM
-tags: [rastreabilidade, frameworks, SSDF, SAMM, DSOMM, ISO]
+tags: [DSOMM, ISO, SAMM, SSDF, frameworks, rastreabilidade]
 sidebar_position: 25
 ---
 

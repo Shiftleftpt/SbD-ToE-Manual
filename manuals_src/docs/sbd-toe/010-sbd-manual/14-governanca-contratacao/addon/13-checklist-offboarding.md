@@ -2,7 +2,7 @@
 id: checklist-offboarding
 title: Checklist de Offboarding Seguro
 description: Procedimento formalizado e executável para rescisão segura de contractors e fornecedores
-tags: [governanca, contractors, offboarding, rescisao, seguranca, auditoria]
+tags: [auditoria, contractors, governanca, offboarding, rescisao, seguranca]
 ---
 
 # ✅ Checklist de Offboarding Seguro

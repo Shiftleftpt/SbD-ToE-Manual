@@ -2,7 +2,7 @@
 id: policies-runtime-opa
 title: Enforcement de Políticas no Runtime com OPA e Kyverno
 description: Aplicação de políticas formais e automáticas para validar *containers* e execuções em tempo real
-tags: [opa, kyverno, policies, enforcement, kubernetes, runtime, containers]
+tags: [containers, enforcement, kubernetes, kyverno, opa, policies, runtime]
 ---
 
 # 📜 Enforcement de Políticas no Runtime com OPA e Kyverno

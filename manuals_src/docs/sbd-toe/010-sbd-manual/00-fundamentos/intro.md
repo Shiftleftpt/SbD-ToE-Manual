@@ -3,7 +3,7 @@ id: intro
 title: Fundamentos do Manual Técnico
 sidebar_label: Introdução
 description: Índice de navegação para fundamentos do manual estrutura, papéis, baseline obrigatório
-tags: [fundamentos, introducao, manual, estrutura, roles, baseline]
+tags: [baseline, cat_basilar, estrutura, fundamentos, grp_fundamentos_contexto, introducao, manual, roles]
 sidebar_position: 0
 ---
 

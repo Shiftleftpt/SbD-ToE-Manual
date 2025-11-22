@@ -3,7 +3,7 @@ id: case-study-inception-apply-sbd-iac
 title: Caso de Estudo - Aplicação do SbD-ToE a um Projeto IaC
 sidebar_position: 10
 description: Estudo de caso completo demonstrando a aplicação das práticas de segurança de IaC desde o início de projeto até à sua execução em produção.
-tags: [caso de estudo, iac, inception, segurança, aplicação prática]
+tags: [aplicação prática, caso de estudo, iac, inception, seguranca]
 ---
 
 

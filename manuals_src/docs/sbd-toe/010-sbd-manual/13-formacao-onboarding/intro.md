@@ -2,7 +2,7 @@
 id: intro
 title: Formação e Capacitação
 description: Estratégias e práticas para garantir que equipas, perfis e stakeholders estão preparados para aplicar o Security by Design
-tags: [formacao, capacitacao, onboarding, champions, aprendizagem, DSOMM, SAMM, ]
+tags: [DSOMM, SAMM, aprendizagem, capacitacao, cat_organizacional, champions, formacao, fundamentos, grp_fundamentos_contexto, onboarding]
 sidebar_position: 0
 ---
 

@@ -2,7 +2,7 @@
 id: estudo-caso
 title: Caso de Estudo - Validação Contínua de Segurança numa Aplicação Crítica
 description: Exemplo prático da aplicação das práticas de testes de segurança a uma aplicação classificada como L3, com integração completa no pipeline e gestão de findings.
-tags: [estudo de caso, testes, segurança, integração, devsecops, aplicação crítica]
+tags: [aplicação crítica, devsecops, estudo de caso, integracao, seguranca, testes]
 sidebar_position: 12
 ---
 

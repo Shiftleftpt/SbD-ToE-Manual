@@ -3,7 +3,7 @@ id: recomendacoes-avancadas
 title: Recomendações Avançadas - Governança e Contratação
 sidebar_position: 30
 description: Práticas avançadas de governação aplicáveis a contextos de elevada maturidade ou requisitos regulatórios
-tags: [avancado, governance, excecoes, contratos, auditoria, rastreabilidade]
+tags: [auditoria, avancado, contratos, excecoes, governance, rastreabilidade]
 ---
 
 

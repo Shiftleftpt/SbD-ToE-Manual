@@ -3,7 +3,7 @@ id: qa
 title: Quality Assurance (QA)
 sidebar_label: 🧪 Quality Assurance (QA)
 description: Responsabilidades de QA no SbD-ToE
-tags: [qa, quality-assurance, testes, responsabilidades]
+tags: [qa, quality-assurance, responsabilidades, testes]
 sidebar_position: 3
 ---
 

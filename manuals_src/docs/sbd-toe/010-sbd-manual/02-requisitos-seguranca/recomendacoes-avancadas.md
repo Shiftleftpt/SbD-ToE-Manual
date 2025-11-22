@@ -2,7 +2,7 @@
 id: recomendacoes-avancadas
 title: Práticas Avançadas em Requisitos de Segurança
 description: Recomendações reforçadas para ambientes com maior exigência regulatória ou maturidade
-tags: [avançado, requisitos, rastreabilidade, validação, políticas]
+tags: [avancado, políticas, rastreabilidade, requisitos, validacao]
 sidebar_position: 30
 ---
 

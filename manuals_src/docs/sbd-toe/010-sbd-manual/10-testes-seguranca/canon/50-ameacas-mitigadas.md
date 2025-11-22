@@ -2,7 +2,7 @@
 id: ameacas-mitigadas
 title: Ameaças Mitigadas - Testes de Segurança
 description: Visão bottom-up das ameaças mitigadas pelas práticas de testes de segurança deste capítulo.
-tags: [ameaças, mitigação, segurança, testes, osc&r, stride, capec, ssdf]
+tags: [ameacas, capec, mitigacao, osc-r, seguranca, ssdf, stride, testes]
 sidebar_position: 50
 ---
 

@@ -2,7 +2,7 @@
 id: hardening-containers
 title: Hardening e Restrições de Execução em *containers*
 description: Minimização, reforço e controlo de permissões em imagens e ambientes containerizados
-tags: [containers, hardening, permissões, runtime, isolamento, segurança]
+tags: [containers, hardening, isolamento, permissões, runtime, seguranca]
 ---
 
 # 🛡️ Hardening e Restrições de Execução em *containers*

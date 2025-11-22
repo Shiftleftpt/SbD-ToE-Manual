@@ -2,7 +2,7 @@
 id: intro
 title: Requisitos de Segurança
 description: Definição, aplicação, validação e rastreabilidade de requisitos de segurança aplicacionais por nível de risco
-tags: [tipo:prescricao, tema:requisitos, segurança, rastreabilidade, validação, proporcionalidade, SSDF, SAMM, DSOMM, ASVS]
+tags: [ASVS, DSOMM, SAMM, SSDF, cat_basilar, engenharia-segura, grp_engenharia_segura, proporcionalidade, rastreabilidade, seguranca, tema:requisitos, tipo:prescricao, validacao]
 sidebar_position: 1
 ---
 

@@ -2,7 +2,7 @@
 id: sbom-containers
 title: SBOM de *containers* e Rastreabilidade de Runtime
 description: Geração, versionamento e validação de SBOMs específicos de imagens e ambientes containerizados
-tags: [sbom, containers, rastreabilidade, supply chain, assinatura]
+tags: [assinatura, containers, rastreabilidade, sbom, supply chain]
 ---
 
 # 🧬 SBOM de *containers* e Rastreabilidade de Runtime

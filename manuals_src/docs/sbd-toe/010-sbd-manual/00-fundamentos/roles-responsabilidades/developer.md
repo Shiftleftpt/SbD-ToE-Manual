@@ -3,7 +3,7 @@ id: developer
 title: Developer
 sidebar_label: 👨‍💻 Developer
 description: Responsabilidades do Developer no SbD-ToE
-tags: [developer, dev, codigo, responsabilidades]
+tags: [codigo, dev, developer, responsabilidades]
 sidebar_position: 2
 ---
 

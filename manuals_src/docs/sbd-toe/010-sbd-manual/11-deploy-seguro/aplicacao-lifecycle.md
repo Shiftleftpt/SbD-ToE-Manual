@@ -2,7 +2,7 @@
 id: aplicacao-lifecycle
 title: Como Fazer
 description: Integração prática das práticas de release e deploy seguro no ciclo de vida de software
-tags: [tipo:aplicacao, ciclo-vida, deploy, release, rollback, gates, producao]
+tags: [ciclo-vida, deploy, gates, producao, release, rollback, tipo:aplicacao]
 genia: us-format-normalization
 ---
 

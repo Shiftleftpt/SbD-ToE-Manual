@@ -3,7 +3,7 @@ id: gestao-segredos-pipeline
 title: Gestão e Injeção Segura de Segredos
 sidebar_position: 3
 description: Estratégias para proteger segredos em pipelines, evitar hardcoded e garantir injeção segura via vaults ou variáveis.
-tags: [segredos, cicd, vault, pipelines, segurança, variáveis]
+tags: [cicd, pipelines, segredos, seguranca, variáveis, vault]
 ---
 
 

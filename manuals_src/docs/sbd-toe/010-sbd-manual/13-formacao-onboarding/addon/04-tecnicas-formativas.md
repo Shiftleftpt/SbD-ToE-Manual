@@ -2,7 +2,7 @@
 id: tecnicas-formativas
 title: Técnicas Formativas Adaptadas à Realidade Técnica
 description: Conjunto de abordagens pedagógicas eficazes para promover retenção, aplicabilidade e motivação.
-tags: [formacao, tecnicas, pedagogia, segurança aplicada, exemplos]
+tags: [exemplos, formacao, pedagogia, segurança aplicada, tecnicas]
 ---
 
 

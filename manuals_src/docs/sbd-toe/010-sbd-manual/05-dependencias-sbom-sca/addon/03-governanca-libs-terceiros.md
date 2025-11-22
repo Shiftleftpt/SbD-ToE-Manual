@@ -2,7 +2,7 @@
 id: governanca-libs-terceiros
 title: Governaça de Bibliotecas e Componentes de Terceiros
 description: Práticas de controlo, aprovação e rastreabilidade de bibliotecas externas e pacotes de terceiros
-tags: [dependencias, sbom, sca, supply-chain, governance]
+tags: [dependencias, governance, sbom, sca, supply-chain]
 ---
 
 # 📄 Governaça de Bibliotecas e Componentes de Terceiros

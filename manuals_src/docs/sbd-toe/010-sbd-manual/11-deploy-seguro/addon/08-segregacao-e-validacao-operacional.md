@@ -2,7 +2,7 @@
 id: 08-segregacao-e-validacao-operacional
 title: Validação Operacional com Ambientes Segregados
 description: Estratégias para validação em ambientes staging e pre-prod que garantem readiness e segurança operacional.
-tags: [tipo:anexo, grupo:execucao, tema:validacao, staging, segregacao, readiness]
+tags: [grupo:execucao, readiness, segregacao, staging, tema:validacao, tipo:anexo]
 ---
 
 

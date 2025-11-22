@@ -2,7 +2,7 @@
 id: intro
 title: Infraestrutura como Código (IaC)
 description: Práticas de segurança para definição, validação e gestão de infraestrutura como código
-tags: [infraestrutura, iac, terraform, segurança, automatização, DSOMM, SAMM, SLSA, SSDF]
+tags: [DSOMM, SAMM, SLSA, SSDF, automatização, cat_operacional, grp_implementacao_automacao, iac, implementacao-automacao, infraestrutura, seguranca, terraform]
 sidebar_position: 0
 ---
 

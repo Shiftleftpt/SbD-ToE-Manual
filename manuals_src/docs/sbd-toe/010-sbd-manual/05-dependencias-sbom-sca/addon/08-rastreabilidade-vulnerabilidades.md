@@ -2,7 +2,7 @@
 id: rastreabilidade-vulnerabilidades
 title: Rastreabilidade entre Vulnerabilidades, Componentes e Ações
 description: Modelo de ligação entre findings SCA, SBOM, backlog e releases
-tags: [dependencias, sbom, sca, supply-chain, rastreabilidade]
+tags: [dependencias, rastreabilidade, sbom, sca, supply-chain]
 ---
 
 # 🔍 Rastreabilidade entre Vulnerabilidades, Componentes e Ações

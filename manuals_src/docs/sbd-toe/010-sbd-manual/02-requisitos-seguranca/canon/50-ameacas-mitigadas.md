@@ -2,7 +2,7 @@
 id: ameacas-mitigadas
 title: Ameaças Mitigadas
 description: Ameaças mitigadas pela definição e validação estruturada de requisitos de segurança
-tags: [ameaças, mitigação, requisitos, rastreabilidade, exceções, validação, SSDF, DSOMM, OSC&R, CAPEC]
+tags: [CAPEC, DSOMM, OSC&R, SSDF, ameacas, exceções, mitigacao, rastreabilidade, requisitos, validacao]
 sidebar_position: 50
 ---
 

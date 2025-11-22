@@ -3,7 +3,7 @@
 id: avaliacao-semiquantitativa
 title: Alternativa - Avaliação Semiquantitativa do Risco
 sidebar_position: 8
-tags: [tipo:avaliacao, tema:risco, metodologia, criticidade]
+tags: [criticidade, metodologia, tema:risco, tipo:avaliacao]
 ---
 
 # 🛠️ Modelo Alternativo : Avaliação Semiquantitativa

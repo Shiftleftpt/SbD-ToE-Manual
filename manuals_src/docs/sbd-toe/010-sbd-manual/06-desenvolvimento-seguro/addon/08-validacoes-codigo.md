@@ -3,7 +3,7 @@ id: validacoes-codigo
 title: Validações de Segurança no Código
 sidebar_position: 8
 description: Técnicas e ferramentas para garantir a presença de controlos de segurança diretamente no código-fonte
-tags: [validação, código, segurança, automação, integração contínua]
+tags: [automação, código, integração contínua, seguranca, validacao]
 ---
 
 

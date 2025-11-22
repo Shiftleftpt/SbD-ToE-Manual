@@ -3,7 +3,7 @@ id: governancao-maturidade
 title: Governança de Segurança e Maturidade
 sidebar_position: 7
 description: Como o modelo de governação contribui para evolução da maturidade de segurança
-tags: [maturidade, governanca, compliance, evolucao]
+tags: [compliance, evolucao, governanca, maturidade]
 ---
 
 

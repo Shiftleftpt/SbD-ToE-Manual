@@ -2,7 +2,7 @@
 id: intro
 title: Deploy Seguro
 description: Princípios e controlos para garantir um processo de deploy seguro, validado e rastreável em ambientes de produção
-tags: [deploy, segurança, produção, rollback, gates, sdlc]
+tags: [cat_operacional, deploy, gates, grp_operacao_melhoria, operacao-continuidade, produção, rollback, sdlc, seguranca]
 sidebar_position: 0
 ---
 

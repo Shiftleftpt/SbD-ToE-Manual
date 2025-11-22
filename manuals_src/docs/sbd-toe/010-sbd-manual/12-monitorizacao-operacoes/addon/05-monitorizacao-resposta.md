@@ -3,7 +3,7 @@ id: monitorizacao-operacoes
 title: Integração da Monitorização com Resposta a Incidentes
 sidebar_position: 5
 description: Ligação entre mecanismos de deteção e os processos de resposta operacionais e automatizados.
-tags: [resposta a incidentes, IRP, SOAR, integração, playbooks]
+tags: [IRP, SOAR, integracao, playbooks, resposta a incidentes]
 ---
 
 # 🛡️ Monitorização como Suporte à Resposta

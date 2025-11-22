@@ -2,7 +2,7 @@
 id: rastreabilidade
 title: Rastreabilidade Top-Down - Capítulo 04
 description: Mapeamento das práticas deste capítulo face a frameworks normativos e requisitos de segurança reconhecidos
-tags: [rastreabilidade, arquitetura, frameworks, ssdf, samm, slsa, iso, dsomm]
+tags: [arquitetura, dsomm, frameworks, iso, rastreabilidade, samm, slsa, ssdf]
 sidebar_position: 25
 ---
 

@@ -2,7 +2,7 @@
 id: kubernetes-execucao
 title: Execução Segura de *containers* em Clusters Kubernetes
 description: Aplicação de práticas de segurança, isolamento e validação para workloads containerizados em Kubernetes
-tags: [kubernetes, containers, execução segura, isolation, runtime, segurança]
+tags: [containers, execução segura, isolation, kubernetes, runtime, seguranca]
 ---
 
 # ☸️ Execução Segura de *containers* em Clusters Kubernetes

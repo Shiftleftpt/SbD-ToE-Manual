@@ -3,7 +3,7 @@ id: controle-enforcement
 title: Controlo de Execução e Enforcement de Políticas em IaC
 sidebar_position: 6
 description: Mecanismos técnicos e organizacionais para garantir o enforcement automático de políticas de segurança em pipelines IaC.
-tags: [enforcement, controlo, políticas, iac, pipelines, segurança]
+tags: [controlo, enforcement, iac, pipelines, políticas, seguranca]
 ---
 
 

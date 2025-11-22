@@ -2,7 +2,7 @@
 id: policies-relevantes
 title: Policies
 description: Políticas formais necessárias para legitimar e operacionalizar a validação contínua da segurança das aplicações.
-tags: [policy, organizacional, testes, segurança, validação, dsoom, ssdf, samm]
+tags: [dsoom, organizacional, policy, samm, seguranca, ssdf, testes, validacao]
 sidebar_position: 60
 ---
 

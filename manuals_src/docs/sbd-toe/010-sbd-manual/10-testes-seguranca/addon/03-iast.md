@@ -2,7 +2,7 @@
 id: iast
 title: Validação Interativa com Instrumentação (IAST)
 description: Instrumentação da aplicação para observação em tempo real de vulnerabilidades durante a execução.
-tags: [iast, testes interativos, instrumentação, runtime]
+tags: [iast, instrumentação, runtime, testes interativos]
 sidebar_position: 4
 ---
 

@@ -3,7 +3,7 @@ id: governanca-legada
 title: Governação em Sistemas Legados
 sidebar_position: 10
 description: Estratégias para aplicar governação formal de segurança em sistemas e contratos legados
-tags: [legado, governanca, excecoes, migração]
+tags: [excecoes, governanca, legado, migração]
 ---
 
 

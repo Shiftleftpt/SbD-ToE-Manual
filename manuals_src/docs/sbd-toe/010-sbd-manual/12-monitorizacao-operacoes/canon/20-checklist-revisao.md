@@ -4,7 +4,7 @@ title: Checklist - Monitorização e Operações
 sidebar_label: Checklist de Revisão
 sidebar_position: 20
 description: Checklist de controlo binário da adoção das práticas de monitorização, alerta e resposta a incidentes.
-tags: [checklist, controlo, validacao, monitorizacao, deteccao, resposta]
+tags: [checklist, controlo, deteção, monitorizacao, resposta, validacao]
 ---
 
 

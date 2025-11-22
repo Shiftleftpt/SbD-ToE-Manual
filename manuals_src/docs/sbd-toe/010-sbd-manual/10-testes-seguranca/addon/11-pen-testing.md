@@ -2,7 +2,7 @@
 id: pen-testing
 title: Testes Ofensivos (PenTesting)
 description: Execução de testes manuais controlados para identificação de vulnerabilidades não detetadas por mecanismos automatizados.
-tags: [pentesting, testes manuais, segurança ofensiva, grey-box, black-box]
+tags: [black-box, grey-box, pentesting, segurança ofensiva, testes manuais]
 sidebar_position: 12
 ---
 

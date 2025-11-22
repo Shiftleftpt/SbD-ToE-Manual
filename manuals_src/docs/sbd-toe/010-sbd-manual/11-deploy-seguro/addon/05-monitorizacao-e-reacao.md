@@ -2,7 +2,7 @@
 id: 05-monitorizacao-e-reacao
 title: Monitorização Pós-Deploy e Ações de Reação
 description: Práticas de observabilidade, métricas de runtime e mecanismos automáticos de rollback após o deploy.
-tags: [tipo:anexo, grupo:execucao, tema:monitorizacao, rollback, observabilidade]
+tags: [grupo:execucao, observabilidade, rollback, tema:monitorizacao, tipo:anexo]
 ---
 
 # 📊 Monitorização e Reação a Incidentes de Runtime

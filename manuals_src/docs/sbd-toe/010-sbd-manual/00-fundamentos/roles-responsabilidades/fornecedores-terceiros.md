@@ -3,7 +3,7 @@ id: fornecedores-terceiros
 title: Fornecedores / Terceiros
 sidebar_label: 🤝 Fornecedores / Terceiros
 description: Responsabilidades de Fornecedores e Terceiros no SbD-ToE
-tags: [fornecedores, terceiros, supply-chain, responsabilidades]
+tags: [fornecedores, responsabilidades, supply-chain, terceiros]
 sidebar_position: 13
 ---
 

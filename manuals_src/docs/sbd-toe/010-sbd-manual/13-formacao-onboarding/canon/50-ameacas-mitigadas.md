@@ -2,7 +2,7 @@
 id: ameacas-mitigadas
 title: Ameaças Mitigadas - Formação e Onboarding Seguro
 description: Ameaças mitigadas pela aplicação sistemática das práticas de capacitação, onboarding e cultura técnica segura.
-tags: [ameacas, mitigacao, osc&r, cultura, onboarding, terceiros, segurança humana]
+tags: [ameacas, cultura, mitigacao, onboarding, osc-r, segurança humana, terceiros]
 sidebar_position: 50
 ---
 

@@ -2,7 +2,7 @@
 id: rastreabilidade
 title: Rastreabilidade Top-Down - Desenvolvimento Seguro
 description: Rastreabilidade entre as práticas deste capítulo e os requisitos dos principais frameworks de segurança de software
-tags: [rastreabilidade, frameworks, desenvolvimento, SAMM, SSDF, DSOMM]
+tags: [DSOMM, SAMM, SSDF, desenvolvimento, frameworks, rastreabilidade]
 sidebar_position: 25
 ---
 

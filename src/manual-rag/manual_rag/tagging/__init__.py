@@ -347,3 +347,12 @@ class FileTagUpdater:
             FileTagUpdater.write_frontmatter(file_path, frontmatter, content)
         
         return changes
+
+
+# Export key classes for use by tools and scripts
+__all__ = [
+    'AutoTagger',
+    'CanonicalTags',
+    'FileTagUpdater',
+    'TagSuggestion',
+]

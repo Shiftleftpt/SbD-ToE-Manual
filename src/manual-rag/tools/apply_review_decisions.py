@@ -10,7 +10,8 @@ from typing import Dict
 import sys
 import csv
 
-sys.path.insert(0, str(Path(__file__).parent.parent.parent / "tag-normalization"))
+# Add parent directory to path
+sys.path.insert(0, str(Path(__file__).parent.parent))
 
 from manual_rag.tagging import FileTagUpdater
 from manual_rag.config import MANUAL_ROOT

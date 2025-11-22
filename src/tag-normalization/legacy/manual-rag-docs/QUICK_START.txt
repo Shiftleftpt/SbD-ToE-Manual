@@ -1,0 +1,173 @@
+╔════════════════════════════════════════════════════════════════════════════╗
+║                    MANUAL RAG SYSTEM - QUICK START                         ║
+╚════════════════════════════════════════════════════════════════════════════╝
+
+✅ System built and ready for deployment
+
+📁 Location: src/manual-rag/
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+PREREQUISITES
+  1. macOS with brew installed
+  2. Python 3.10+ (already have it)
+  3. 4GB RAM minimum (8GB recommended for LLM)
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+SETUP (ONE-TIME)
+
+Step 1: Install Ollama and Mistral
+  $ brew install ollama
+  $ ollama pull mistral
+
+Step 2: Setup Python environment
+  $ cd src/manual-rag
+  $ bash setup.sh
+
+Step 3: Build the index (~2 minutes)
+  $ source rag_env/bin/activate
+  $ python3 build_index.py
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+USAGE (EVERY SESSION)
+
+Always start in a new terminal:
+
+Terminal 1: Start Ollama (runs continuously)
+  $ ollama serve
+
+Terminal 2: Use the RAG system
+  $ cd src/manual-rag
+  $ source rag_env/bin/activate
+
+Then run commands:
+
+  # Search for related documents
+  $ python3 __main__.py search "secure coding practices"
+
+  # Get tag suggestions for a file
+  $ python3 __main__.py tag "010-sbd-manual/06-desenvolvimento-seguro/01-intro.md"
+
+  # Analyze gaps in a document
+  $ python3 __main__.py gaps "010-sbd-manual/06-desenvolvimento-seguro/01-intro.md"
+
+  # Find cross-references to a topic
+  $ python3 __main__.py xref "authentication"
+
+  # Check system health
+  $ python3 __main__.py health
+
+  # Get help
+  $ python3 __main__.py --help
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+DOCUMENTATION
+
+  README.md           - User guide and features
+  IMPLEMENTATION.md   - Technical architecture
+  DEPLOYMENT.md       - Setup and deployment info
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+SYSTEM OVERVIEW
+
+Local Retrieval-Augmented Generation System for SbD-ToE Manual
+
+  Component        Technology           Why
+  ───────────────────────────────────────────────────────────
+  Embeddings       sentence-transformers  Multilingual, local
+  Vector Store     Chroma                 Simple, persistent
+  Local LLM        Ollama + Mistral       Zero cost, offline
+  CLI              Python argparse        Built-in, scriptable
+
+  ✅ 100% local (no API calls)
+  ✅ Zero cost ($0/month)
+  ✅ Privacy first (manual never leaves disk)
+  ✅ Offline capable (after indexing)
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+FILES CREATED
+
+  Core Package:
+    manual_rag/
+      ├── config.py              - Configuration & paths
+      ├── local_llm/__init__.py   - Ollama integration
+      ├── indexing/__init__.py    - Index builder
+      └── query/__init__.py       - Semantic search & RAG
+
+  Utilities:
+    ├── build_index.py           - Index builder script
+    ├── __main__.py              - CLI interface
+    ├── setup.sh                 - Setup automation
+    └── requirements.txt         - Python dependencies
+
+  Documentation:
+    ├── README.md                - User guide
+    ├── IMPLEMENTATION.md        - Technical details
+    ├── DEPLOYMENT.md            - Setup instructions
+    └── QUICK_START.txt          - This file
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+TROUBLESHOOTING
+
+  "Cannot connect to Ollama"
+    → Is ollama serve running in another terminal?
+    → Check: curl http://localhost:11434/api/tags
+    → Fix: brew install ollama && ollama pull mistral
+
+  "Index not found"
+    → Run: python3 build_index.py
+    → Wait for ~2 minutes to complete
+
+  "ModuleNotFoundError"
+    → Activate venv: source rag_env/bin/activate
+    → Reinstall: pip install -r requirements.txt
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+CAPABILITIES
+
+  ✓ Semantic search across 294 manual files
+  ✓ Tag suggestions based on content similarity
+  ✓ Gap analysis (identify missing content)
+  ✓ Cross-reference finding
+  ✓ JSON output for scripting
+  ✓ Health checks and diagnostics
+
+FUTURE
+
+  ○ Web UI for manual browsing
+  ○ Compliance coverage checking
+  ○ Bulk tagging operations
+  ○ Learning path generation
+  ○ Git integration
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+PERFORMANCE
+
+  Operation           Time        Memory    Cost
+  ────────────────────────────────────────────────
+  Index build         ~2 min      4-8GB     $0
+  Semantic search     100-200ms   2GB       $0
+  LLM analysis        2-3s        3GB       $0
+  Index storage       -           200MB     $0
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+READY TO GO! 🚀
+
+Start with:
+  1. brew install ollama && ollama pull mistral
+  2. cd src/manual-rag && bash setup.sh
+  3. In new terminal: ollama serve
+  4. In original terminal: python3 build_index.py
+
+Questions? Check README.md or IMPLEMENTATION.md
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━

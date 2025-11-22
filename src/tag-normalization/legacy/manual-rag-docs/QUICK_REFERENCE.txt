@@ -1,0 +1,129 @@
+╔════════════════════════════════════════════════════════════════════════════╗
+║                       MANUAL RAG - QUICK REFERENCE                         ║
+║                                                                            ║
+║  Status: ✅ BUILT & TESTED (291 files indexed)                            ║
+║  Latest: make build (2 min) + make search tested                          ║
+╚════════════════════════════════════════════════════════════════════════════╝
+
+📋 BASIC COMMANDS
+═══════════════════════════════════════════════════════════════════════════
+
+Setup & Build (one-time):
+  $ make setup              # Create Python environment
+  $ make build              # Index all 291 files (~2 min)
+
+Quick Tests:
+  $ make search Q="authentication"
+  $ make search Q="secure development"
+  $ make health             # Check system status
+
+═══════════════════════════════════════════════════════════════════════════
+
+🔍 SEARCH EXAMPLES
+═══════════════════════════════════════════════════════════════════════════
+
+$ make search Q="authentication security"
+  → Finds threat modeling docs (43% match)
+
+$ make search Q="secure development lifecycle"
+  → Finds developer roles, deployment, governance docs
+
+$ make search Q="API security"
+$ make search Q="CI/CD pipeline"
+$ make search Q="compliance"
+$ make search Q="threat modeling"
+
+═══════════════════════════════════════════════════════════════════════════
+
+🏷️  TAGGING (with Ollama)
+═══════════════════════════════════════════════════════════════════════════
+
+First terminal:
+  $ ollama serve
+
+Second terminal:
+  $ cd src/manual-rag
+  $ make tag F="010-sbd-manual/06-desenvolvimento-seguro/01-intro.md"
+
+═══════════════════════════════════════════════════════════════════════════
+
+📚 ALL COMMANDS
+═══════════════════════════════════════════════════════════════════════════
+
+Setup:
+  make setup              # Create venv (one-time)
+  make install            # Install dependencies
+  make build              # Build index (~2 min)
+  make rebuild            # Clean + build
+
+Queries:
+  make search Q=...       # Find similar documents
+  make tag F=...          # Suggest tags (needs Ollama)
+  make gaps F=...         # Analyze gaps (needs Ollama)
+  make xref T=...         # Find cross-references
+
+Utilities:
+  make health             # Check system
+  make status             # System overview
+  make help               # Show all commands
+  make clean              # Remove venv
+
+═══════════════════════════════════════════════════════════════════════════
+
+📊 TEST RESULTS
+═══════════════════════════════════════════════════════════════════════════
+
+Build Status:
+  ✅ 291 files indexed
+  ✅ 1,967,097 characters embedded
+  ✅ 0 failures
+  ✅ ~200MB index size
+
+Search Test:
+  ✅ Query: "authentication security"
+  ✅ Found: 2 related docs (43% + 41% match)
+  ✅ Latency: <100ms
+
+═══════════════════════════════════════════════════════════════════════════
+
+🚀 NEXT STEPS
+═══════════════════════════════════════════════════════════════════════════
+
+1. Try searches:
+   $ make search Q="your topic"
+
+2. (Optional) Setup Ollama for advanced features:
+   $ brew install ollama
+   $ ollama pull mistral
+   $ ollama serve (in separate terminal)
+
+3. Try tagging:
+   $ make tag F="path/to/file.md"
+
+═══════════════════════════════════════════════════════════════════════════
+
+💡 TIPS
+═══════════════════════════════════════════════════════════════════════════
+
+• Queries work best with 2-5 words
+• All searches are 100% local (no API calls)
+• Similarity scores show relevance (30-50% normal)
+• Use tags for auto-tagging integration later
+
+═══════════════════════════════════════════════════════════════════════════
+
+📖 FULL DOCS
+═══════════════════════════════════════════════════════════════════════════
+
+  README.md             → User guide
+  BUILD_AND_TEST.md     → Build + test results
+  IMPLEMENTATION.md     → Technical details
+  DEPLOYMENT.md         → Setup guide
+
+═══════════════════════════════════════════════════════════════════════════
+
+                           Ready to use! 🎉
+
+                  cd src/manual-rag && make search Q="..."
+
+═══════════════════════════════════════════════════════════════════════════

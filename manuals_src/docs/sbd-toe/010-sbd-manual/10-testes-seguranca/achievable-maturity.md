@@ -1,6 +1,6 @@
 ---
 id: achievable-maturity
-title: Mapeamento de Maturidade – Capítulo 10
+title: Mapeamento de Maturidade - Capítulo 10
 sidebar_position: 10
 tags: [canon, maturidade, SAMM, SSDF, SLSA, DSOMM]
 ---
@@ -45,7 +45,7 @@ Este mapeamento avalia o **nível de completude e integração** das práticas p
 
 ---
 
-## 🧱 OWASP SAMM – Verification → Security Testing
+## 🧱 OWASP SAMM - Verification → Security Testing
 
 | Nível | Descrição SAMM                                  | Cobertura pelo Cap. 10                                 |
 |-------|--------------------------------------------------|--------------------------------------------------------|
@@ -57,7 +57,7 @@ Este mapeamento avalia o **nível de completude e integração** das práticas p
 
 ---
 
-## 🧱 OWASP DSOMM – Domínios Testing + Design & Development
+## 🧱 OWASP DSOMM - Domínios Testing + Design & Development
 
 | Domínio               | Nível | Justificação técnica                                              |
 |-----------------------|-------|-------------------------------------------------------------------|
@@ -66,7 +66,7 @@ Este mapeamento avalia o **nível de completude e integração** das práticas p
 
 ---
 
-## 🧱 NIST SSDF – Requisitos de Validação
+## 🧱 NIST SSDF - Requisitos de Validação
 
 | Controlos NIST SSDF | Descrição                                        | Alinhamento com Cap. 10                       |
 |---------------------|--------------------------------------------------|-----------------------------------------------|
@@ -77,7 +77,7 @@ Este mapeamento avalia o **nível de completude e integração** das práticas p
 
 ---
 
-## 🧱 BSIMM – Práticas Observadas em Organizações Reais
+## 🧱 BSIMM - Práticas Observadas em Organizações Reais
 
 | Prática BSIMM | Alinhamento com Cap. 10                                               |
 |---------------|------------------------------------------------------------------------|
@@ -89,7 +89,7 @@ Este mapeamento avalia o **nível de completude e integração** das práticas p
 
 ---
 
-## 🧱 SLSA – Build/Test Coverage
+## 🧱 SLSA - Build/Test Coverage
 
 | Nível | Requisitos principais                                             | Cobertura pelo Cap. 10                                 |
 |-------|------------------------------------------------------------------|--------------------------------------------------------|

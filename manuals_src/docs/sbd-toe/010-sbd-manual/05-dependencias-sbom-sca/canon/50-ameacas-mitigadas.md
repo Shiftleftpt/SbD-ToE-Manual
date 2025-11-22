@@ -17,18 +17,18 @@ As ameaças identificadas foram analisadas com base em **OSC&R**, **CAPEC**, **B
 
 ---
 
-## 📦 Categoria 1 – Uso de componentes vulneráveis
+## 📦 Categoria 1 - Uso de componentes vulneráveis
 
 | Ameaça                                   | Fonte                                 | Como surge                                           | Como a prática mitiga                                                              | Controlos associados                        | 🧩 Mitigada apenas por este capítulo? |
 |------------------------------------------|----------------------------------------|------------------------------------------------------|-------------------------------------------------------------------------------------|---------------------------------------------|----------------------------------------|
 | Inclusão de bibliotecas com CVEs ativos  | OWASP A06 / CAPEC-469 / DSOMM (Hardening) | Falta de scanner ou inventário                      | SCA automatizado em pipeline, com bloqueios por política                           | `addon/02-analise-sca.md`                  | ✅                                     |
-| Dependências desatualizadas              | BSIMM13 – SFD1.2 / OSC&R VUL-2 / DSOMM | Bibliotecas não atualizadas                         | Política formal de atualização + revisão periódica                                 | `addon/05-politica-atualizacoes.md`        | ✅                                     |
+| Dependências desatualizadas              | BSIMM13 - SFD1.2 / OSC&R VUL-2 / DSOMM | Bibliotecas não atualizadas                         | Política formal de atualização + revisão periódica                                 | `addon/05-politica-atualizacoes.md`        | ✅                                     |
 | Ausência de registo de versões           | SLSA / SSDF PW.3 / ISO 27034           | Versão da biblioteca não rastreada                  | SBOM com versão + hash em CI/CD                                                    | `addon/01-inventario-sbom.md`              | ✅                                     |
 | Inclusão de bibliotecas não auditadas    | SAMM / BSIMM / DSOMM (Policy)          | Biblioteca adicionada sem processo de aprovação     | Governação formal com critérios e registo de aceitação                             | `addon/03-governanca-libs-terceiros.md`    | ✅                                     |
 
 ---
 
-## 🔗 Categoria 2 – Rastreabilidade e visibilidade técnica
+## 🔗 Categoria 2 - Rastreabilidade e visibilidade técnica
 
 | Ameaça                                       | Fonte                                 | Como surge                                               | Como a prática mitiga                                                     | Controlos associados                          | 🧩 Mitigada apenas por este capítulo? |
 |----------------------------------------------|----------------------------------------|----------------------------------------------------------|------------------------------------------------------------------------------|------------------------------------------------|----------------------------------------|
@@ -38,7 +38,7 @@ As ameaças identificadas foram analisadas com base em **OSC&R**, **CAPEC**, **B
 
 ---
 
-## 🔁 Categoria 3 – Supply Chain e proveniência de artefactos
+## 🔁 Categoria 3 - Supply Chain e proveniência de artefactos
 
 | Ameaça                                        | Fonte                                | Como surge                                               | Como a prática mitiga                                                       | Controlos associados                        | 🧩 Mitigada apenas por este capítulo? |
 |-----------------------------------------------|---------------------------------------|----------------------------------------------------------|--------------------------------------------------------------------------------|---------------------------------------------|----------------------------------------|
@@ -48,17 +48,17 @@ As ameaças identificadas foram analisadas com base em **OSC&R**, **CAPEC**, **B
 
 ---
 
-## 🚨 Categoria 4 – Falhas na gestão de exceções e aceitação de risco
+## 🚨 Categoria 4 - Falhas na gestão de exceções e aceitação de risco
 
 | Ameaça                                      | Fonte                             | Como surge                                              | Como a prática mitiga                                                          | Controlos associados                         | 🧩 Mitigada apenas por este capítulo? |
 |---------------------------------------------|------------------------------------|---------------------------------------------------------|----------------------------------------------------------------------------------|----------------------------------------------|----------------------------------------|
 | CVEs ignoradas sem justificação             | CAPEC-1003 / SSDF RM.2 / DSOMM (Policy) | Biblioteca mantida mesmo após alerta                    | Processo de exceção com owner, impacto, justificação e prazo                    | `addon/09-excecoes-e-aceitacao-risco.md`     | ❌ Cap. 14                             |
-| Mitigações aplicadas sem rastreio           | BSIMM13 – CMVM / SSDF RV.3        | Workaround ou patch sem rasto                            | Registo de decisão + impacto + revisão posterior em backlog                     | `addon/09-excecoes-e-aceitacao-risco.md`     | ✅                                     |
+| Mitigações aplicadas sem rastreio           | BSIMM13 - CMVM / SSDF RV.3        | Workaround ou patch sem rasto                            | Registo de decisão + impacto + revisão posterior em backlog                     | `addon/09-excecoes-e-aceitacao-risco.md`     | ✅                                     |
 | Falta de ciclo de revisão de exceções       | NIST 800-30 / ISO 27005            | CVEs abertas por tempo indefinido                       | Ciclo de vida com reavaliação forçada por tempo ou nova versão                 | `15-aplicacao-lifecycle.md`            | ❌ Cap. 01                             |
 
 ---
 
-## 🏛️ Categoria 5 – Ausência de governação de bibliotecas e políticas de uso
+## 🏛️ Categoria 5 - Ausência de governação de bibliotecas e políticas de uso
 
 | Ameaça                                    | Fonte                              | Como surge                                           | Como a prática mitiga                                                              | Controlos associados                        | 🧩 Mitigada apenas por este capítulo? |
 |-------------------------------------------|-------------------------------------|------------------------------------------------------|-------------------------------------------------------------------------------------|---------------------------------------------|----------------------------------------|

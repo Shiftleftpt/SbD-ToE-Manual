@@ -1,6 +1,6 @@
 ---
 id: achievable-maturity
-title: Mapeamento de Maturidade – Capítulo 06
+title: Mapeamento de Maturidade - Capítulo 06
 sidebar_position: 10
 tags: [canon, maturidade, SAMM, SSDF, SLSA, DSOMM]
 ---
@@ -45,7 +45,7 @@ Este mapeamento **não avalia equipas ou organizações**, mas sim o **grau de c
 
 ---
 
-## 🧱 OWASP SAMM – Implementation
+## 🧱 OWASP SAMM - Implementation
 
 | Nível | Descrição SAMM                                      | Cobertura pelo Cap. 06                           |
 |-------|------------------------------------------------------|--------------------------------------------------|
@@ -57,7 +57,7 @@ Este mapeamento **não avalia equipas ou organizações**, mas sim o **grau de c
 
 ---
 
-## 🧱 OWASP DSOMM – Design & Development, Tooling, Metrics
+## 🧱 OWASP DSOMM - Design & Development, Tooling, Metrics
 
 | Domínio         | Nível | Justificação técnica                                              |
 |------------------|-------|-------------------------------------------------------------------|
@@ -67,7 +67,7 @@ Este mapeamento **não avalia equipas ou organizações**, mas sim o **grau de c
 
 ---
 
-## 🧱 NIST SSDF – Desenvolvimento e Verificação
+## 🧱 NIST SSDF - Desenvolvimento e Verificação
 
 | Controlos NIST SSDF | Descrição                                          | Alinhamento com Cap. 06 |
 |---------------------|----------------------------------------------------|--------------------------|
@@ -79,7 +79,7 @@ Este mapeamento **não avalia equipas ou organizações**, mas sim o **grau de c
 
 ---
 
-## 🧱 BSIMM – Code Review, Policy & Ownership
+## 🧱 BSIMM - Code Review, Policy & Ownership
 
 | Prática BSIMM   | Alinhamento com Cap. 06                                 |
 |-----------------|---------------------------------------------------------|
@@ -89,7 +89,7 @@ Este mapeamento **não avalia equipas ou organizações**, mas sim o **grau de c
 
 ---
 
-## 🧱 SLSA – Build Validation & Provenance
+## 🧱 SLSA - Build Validation & Provenance
 
 | Nível | Requisitos principais                               | Cobertura pelo Cap. 06                       |
 |-------|------------------------------------------------------|----------------------------------------------|

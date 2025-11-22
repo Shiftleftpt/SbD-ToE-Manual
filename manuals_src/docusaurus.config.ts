@@ -98,6 +98,7 @@ const config: Config = {
         srcDark: 'img/brand/Shiftleft_LogoHorizontal_V5.png' 
       },
       items: [
+        // === ESQUERDA ===
         {
           type: 'docSidebar',
           sidebarId: 'manualAtual',
@@ -106,34 +107,33 @@ const config: Config = {
         },
         {
           type: 'docSidebar',
-          sidebarId: 'toeOverview',
-          position: 'left',
-          label: 'ToE',
-        },
-        {
-          type: 'docSidebar',
-          sidebarId: 'toeHowTo',
-          position: 'left',
-          label: 'Como usar',
-        },
-        {
-          type: 'docSidebar',
           sidebarId: 'toeCrossCheck',
           position: 'left',
           label: 'Cross-check',
         },
-
-        /* {
+        
+        // === DIREITA ===
+        {
           type: 'docSidebar',
-          docsPluginId: 'sbd-toe',
-          sidebarId: 'toePolicies',
-          docId: '003-policies-globals/intro',
-          position: 'left',
-          label: 'Políticas',
-        }, */
-
-        { to: '/licenciamento', label: 'Licença', position: 'right' },
-        { to: '/about', label: 'Sobre', position: 'right' },
+          sidebarId: 'toeOverview',
+          position: 'right',
+          label: 'ToE',
+        },
+        {
+          to: '/about',
+          label: 'Sobre',
+          position: 'right',
+        },
+        {
+          to: '/faq',
+          label: 'FAQ',
+          position: 'right',
+        },
+        { 
+          to: '/licenciamento', 
+          label: 'Licença', 
+          position: 'right' 
+        },
         {
           href: 'https://github.com/Shiftleftpt/SbD-ToE-Manual',
           label: 'GitHub',

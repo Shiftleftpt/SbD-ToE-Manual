@@ -18,15 +18,15 @@ Este documento estabelece a **rastreabilidade entre as práticas prescritas nest
 
 | Requisito / Domínio (Framework)                                | Prática do Capítulo 04 que responde                              | Nível de Cobertura |
 |----------------------------------------------------------------|------------------------------------------------------------------|--------------------|
-| **NIST SSDF** – PW.1 / PW.4 / RV.1                             | Requisitos de arquitetura, validação formal e rastreabilidade     | ✅ Completo         |
-| **OWASP SAMM v2.1** – Design → Architecture & Design           | Zonas de confiança, padrões, validação técnica                   | ✅ Nível 3          |
-| **BSIMM13** – Architecture Analysis (AA1–AA3)                  | Modelação, validação formal e documentação de arquitetura         | ✅ Nível 2          |
-| **ISO/IEC 27001** – A.14.2.1 / A.14.2.5                        | Definição, revisão e validação técnica da arquitetura             | ✅ Completo         |
-| **ISO/IEC 27034** – Application Security Architecture          | Referenciais, práticas e rastreabilidade de controlos de arquitetura | ✅ Completo       |
-| **SLSA v1.0** – Build Design Integrity (Nível 2–3)             | Segmentação e isolamento por design, definição da arquitetura segura| ✅ Parcial          |
-| **CIS Controls v8** – Control 4.1 / 4.3 / 16.1                 | Definição da arquitetura, separação de funções e controlo de execução| ✅ Completo         |
-| **ENISA SDLC / DevSecOps** – Secure Architecture & Review      | Validação formal, zonas de risco, diagramas e documentação        | ✅ Completo         |
-| **OWASP DSOMM** – Design & Development                         | Práticas formais de arquitetura, validações, rastreabilidade      | ✅ Nível 3          |
+| **NIST SSDF** - PW.1 / PW.4 / RV.1                             | Requisitos de arquitetura, validação formal e rastreabilidade     | ✅ Completo         |
+| **OWASP SAMM v2.1** - Design → Architecture & Design           | Zonas de confiança, padrões, validação técnica                   | ✅ Nível 3          |
+| **BSIMM13** - Architecture Analysis (AA1–AA3)                  | Modelação, validação formal e documentação de arquitetura         | ✅ Nível 2          |
+| **ISO/IEC 27001** - A.14.2.1 / A.14.2.5                        | Definição, revisão e validação técnica da arquitetura             | ✅ Completo         |
+| **ISO/IEC 27034** - Application Security Architecture          | Referenciais, práticas e rastreabilidade de controlos de arquitetura | ✅ Completo       |
+| **SLSA v1.0** - Build Design Integrity (Nível 2–3)             | Segmentação e isolamento por design, definição da arquitetura segura| ✅ Parcial          |
+| **CIS Controls v8** - Control 4.1 / 4.3 / 16.1                 | Definição da arquitetura, separação de funções e controlo de execução| ✅ Completo         |
+| **ENISA SDLC / DevSecOps** - Secure Architecture & Review      | Validação formal, zonas de risco, diagramas e documentação        | ✅ Completo         |
+| **OWASP DSOMM** - Design & Development                         | Práticas formais de arquitetura, validações, rastreabilidade      | ✅ Nível 3          |
 
 ---
 

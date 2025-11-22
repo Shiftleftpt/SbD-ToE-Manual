@@ -16,7 +16,7 @@ Define requisitos de **formação por perfil**, **onboarding técnico rastreáve
 
 ---
 
-## 📚 Categoria 1 – Erros humanos evitáveis
+## 📚 Categoria 1 - Erros humanos evitáveis
 
 | Ameaça                                           | Fonte                                                                 | Como surge                                                                 | Como a prática mitiga                                                                  | Controlos associados                              |
 |--------------------------------------------------|------------------------------------------------------------------------|------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------|----------------------------------------------------|
@@ -25,7 +25,7 @@ Define requisitos de **formação por perfil**, **onboarding técnico rastreáve
 
 ---
 
-## 🔐 Categoria 2 – Acesso indevido ou onboarding negligente
+## 🔐 Categoria 2 - Acesso indevido ou onboarding negligente
 
 | Ameaça                                         | Fonte                                                   | Como surge                                                                 | Como a prática mitiga                                                                 | Controlos associados                                          |
 |------------------------------------------------|----------------------------------------------------------|------------------------------------------------------------------------------|----------------------------------------------------------------------------------------|--------------------------------------------------------------|
@@ -34,7 +34,7 @@ Define requisitos de **formação por perfil**, **onboarding técnico rastreáve
 
 ---
 
-## 🧠 Categoria 3 – Cultura e motivação fraca para segurança
+## 🧠 Categoria 3 - Cultura e motivação fraca para segurança
 
 | Ameaça                                            | Fonte                                                          | Como surge                                                                 | Como a prática mitiga                                                           | Controlos associados                      |
 |---------------------------------------------------|-----------------------------------------------------------------|------------------------------------------------------------------------------|----------------------------------------------------------------------------------|--------------------------------------------|
@@ -43,7 +43,7 @@ Define requisitos de **formação por perfil**, **onboarding técnico rastreáve
 
 ---
 
-## 📉 Categoria 4 – Falta de rastreabilidade e cobertura
+## 📉 Categoria 4 - Falta de rastreabilidade e cobertura
 
 | Ameaça                                             | Fonte                                              | Como surge                                                                 | Como a prática mitiga                                                       | Controlos associados                                      |
 |----------------------------------------------------|-----------------------------------------------------|------------------------------------------------------------------------------|--------------------------------------------------------------------------------|------------------------------------------------------------|
@@ -52,7 +52,7 @@ Define requisitos de **formação por perfil**, **onboarding técnico rastreáve
 
 ---
 
-## 🔗 Categoria 5 – Formação sem ligação à prática real
+## 🔗 Categoria 5 - Formação sem ligação à prática real
 
 | Ameaça                                          | Fonte                                                      | Como surge                                                                 | Como a prática mitiga                                                           | Controlos associados                                         |
 |-------------------------------------------------|-------------------------------------------------------------|------------------------------------------------------------------------------|----------------------------------------------------------------------------------|---------------------------------------------------------------|

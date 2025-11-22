@@ -1,5 +1,5 @@
 ---
-id: como-usar-este-manual
+id: como-usar
 title: Como Usar Este Manual
 hide_title: false
 hide_table_of_contents: false
@@ -130,12 +130,33 @@ O manual está dividido em 14 capítulos, com aplicação independente, mas que 
 ---
 
 ## 🧭 Como navegar
-Cada capitulo é composto por três partes principais:
-- **Introdução** : resume os aspetos importantes "o quê, como, quem, quando e porquê", o sumário do capitulo. 
-- Aplicação no ciclo de vida: User stories para aplicação, detalhe de quem faz o quê quando.
-- detalhe técnico: explicação sobre cada um dos aspetos suportando por exemplos, sugestões alternativas, entre outros.
 
-Depois para cada capitulo existe mais informação, como checklists, rastreabilidade das praticas com as frameworks de referencia, que vulnerabilidades são mitigadas com a aplicação das práticas recomendadas, etc. Esta informação aparece no manual de forma agrupada, fora do manual prescritivo, sendo mais util para processos de auditoria ou priorização da aplicação.
+Cada capítulo (01–14) segue o mesmo padrão:
+
+- **Resumo** — Propósito e contexto 
+- **Como Fazer** — O que fazer e quando por quem sob a forma de _user stories_ normalizadas
+- **Policies** — descreve que policies têm que ser instituidas para fazer _enforce_ das praticas na organização
+- **Complemento Técnico** — Explicação com detalhe sobre as praticas prescritas com exemplos, ferramentas, cenários
+- **Recomendações Avançadas** — Em alguns casos e para contextos especializados
+
+### 🏷️ Símbolos e Ícones
+
+- **⭐** — Basilar (obrigatório em todos os níveis)
+- **⚙️** — Operacional (dependes do nível e contexto)
+- **🏛️** — Organizacional (governance e compliance)
+- **📚** — Complemento Técnico (aprofundamento opcional)
+- **US** — User Story (activity para um role específico)
+
+### 🔄 Proporcionalidade (L1–L3)
+
+O SbD-ToE adapta-se ao risco:
+
+- **L1** — Baixo risco (protótipos, sistemas internos)
+- **L2** — Risco moderado (maioria das aplicações em produção)
+- **L3** — Crítico (dados sensíveis, infraestrutura crítica)
+
+Cada capítulo considera para cada nivel o que prescreve, assegurando a porpocionalidade da prescrição ao "risco" da aplicação.
+
 
 ---
 
@@ -185,15 +206,3 @@ Este manual pode ser usado como:
 - Material de formação para programas de Champions e mentoring
 
 ---
-
-## 🔗 Capítulos basilares
-
-Consulta a [Tabela da estrutura contextual dos capitulos](/sbd-toe/how-to-manual/estrutura-capitulos) para saber quais os domínios que **devem ser tratados e com que prioridade**.
-
----
-
-## 💬 Feedback e evolução
-
-Este manual é **vivo e aberto** à evolução contínua.
-
-Sugestões, melhorias ou contributos podem ser submetidos via GitHub, pull request, ou contacto com a equipa editorial da ShiftLeft.

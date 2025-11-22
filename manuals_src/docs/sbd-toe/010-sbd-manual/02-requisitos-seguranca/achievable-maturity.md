@@ -1,6 +1,6 @@
 ---
 id: achievable-maturity
-title: Mapeamento de Maturidade – Capítulo 02
+title: Mapeamento de Maturidade - Capítulo 02
 sidebar_position: 10
 tags: [canon, maturidade, SAMM, SSDF, DSOMM, SLSA]
 ---
@@ -41,7 +41,7 @@ As avaliações aqui descritas foram realizadas com base numa leitura técnico-c
 
 ---
 
-## 🧱 OWASP SAMM – Design → Security Requirements
+## 🧱 OWASP SAMM - Design → Security Requirements
 
 | Nível | Descrição SAMM                                                                 | Cobertura pelo Cap. 02                      |
 |-------|----------------------------------------------------------------------------------|----------------------------------------------|
@@ -53,7 +53,7 @@ As avaliações aqui descritas foram realizadas com base numa leitura técnico-c
 
 ---
 
-## 🧱 OWASP DSOMM – Requirements, Architecture, Verification
+## 🧱 OWASP DSOMM - Requirements, Architecture, Verification
 
 | Domínio                  | Níveis cobertos | Justificação técnica                                                    |
 |--------------------------|----------------|-------------------------------------------------------------------------|
@@ -65,7 +65,7 @@ As avaliações aqui descritas foram realizadas com base numa leitura técnico-c
 
 ---
 
-## 🧱 NIST SSDF – Produce Well-Secured Software & Review (PW, RV)
+## 🧱 NIST SSDF - Produce Well-Secured Software & Review (PW, RV)
 
 | Controlos NIST SSDF | Descrição                                     | Alinhamento com Cap. 02 |
 |---------------------|-----------------------------------------------|--------------------------|
@@ -78,7 +78,7 @@ As avaliações aqui descritas foram realizadas com base numa leitura técnico-c
 
 ---
 
-## 🧱 BSIMM – Intelligence → Requirements and Attack Models
+## 🧱 BSIMM - Intelligence → Requirements and Attack Models
 
 | Prática BSIMM       | Alinhamento com Cap. 02                                |
 |---------------------|--------------------------------------------------------|
@@ -90,7 +90,7 @@ As avaliações aqui descritas foram realizadas com base numa leitura técnico-c
 
 ---
 
-## 🧱 SLSA – Build & Verification Requirements
+## 🧱 SLSA - Build & Verification Requirements
 
 | Nível | Requisitos principais                     | Cobertura pelo Cap. 02              |
 |-------|--------------------------------------------|-------------------------------------|

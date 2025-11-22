@@ -1,6 +1,6 @@
 ---
 id: rastreabilidade
-title: Rastreabilidade Top-Down – Capítulo 12
+title: Rastreabilidade Top-Down - Capítulo 12
 sidebar_position: 25
 description: Mapeamento das práticas de monitorização e resposta face a frameworks como NIST SSDF, SAMM, ISO e CIS Controls.
 tags: [rastreabilidade, frameworks, normativo, monitorizacao, resposta, deteccao]
@@ -19,14 +19,14 @@ Este documento estabelece a **rastreabilidade entre as práticas de monitorizaç
 
 | Framework / Requisito                                     | Prática do Capítulo 12 que responde                          | Avaliação         |
 |-----------------------------------------------------------|--------------------------------------------------------------|--------------------|
-| **NIST SSDF v1.1** – RV.1.2 / RV.1.3 / DE.1.2              | Logging estruturado, alertas, correlação e resposta           | ✅ Completo         |
-| **OWASP SAMM v2.1** – Operations → Incident Management     | Logging técnico, deteção, métricas operacionais               | ✅ Nível 3          |
-| **BSIMM13** – Deployment → TDI1.1 / TDI2.2 / IR1.4         | Logging, alertas, integração com IRP                          | ✅ 3 práticas        |
-| **SLSA v1.0** – Observability                              | Logging e alertas em runtime, sem proveniência completa       | ⚠️ Parcial (2/4)    |
-| **OWASP DSOMM** – Operations (5 práticas)                  | Logging seguro, alertas, correlação, IR e métricas            | ✅ 5/5              |
-| **ISO/IEC 27001** – A.12.4.x / A.16.1.x                    | Logging, deteção, resposta a incidentes                       | ✅ Completo         |
-| **CIS Controls v8** – Controlos 8, 17, 18                  | Logs protegidos, deteção e resposta automatizada              | ✅ Completo         |
-| **ENISA DevSecOps** – Logging / Observabilidade / IR       | Integração contínua com telemetria e resposta                 | ✅ Completo         |
+| **NIST SSDF v1.1** - RV.1.2 / RV.1.3 / DE.1.2              | Logging estruturado, alertas, correlação e resposta           | ✅ Completo         |
+| **OWASP SAMM v2.1** - Operations → Incident Management     | Logging técnico, deteção, métricas operacionais               | ✅ Nível 3          |
+| **BSIMM13** - Deployment → TDI1.1 / TDI2.2 / IR1.4         | Logging, alertas, integração com IRP                          | ✅ 3 práticas        |
+| **SLSA v1.0** - Observability                              | Logging e alertas em runtime, sem proveniência completa       | ⚠️ Parcial (2/4)    |
+| **OWASP DSOMM** - Operations (5 práticas)                  | Logging seguro, alertas, correlação, IR e métricas            | ✅ 5/5              |
+| **ISO/IEC 27001** - A.12.4.x / A.16.1.x                    | Logging, deteção, resposta a incidentes                       | ✅ Completo         |
+| **CIS Controls v8** - Controlos 8, 17, 18                  | Logs protegidos, deteção e resposta automatizada              | ✅ Completo         |
+| **ENISA DevSecOps** - Logging / Observabilidade / IR       | Integração contínua com telemetria e resposta                 | ✅ Completo         |
 
 ---
 

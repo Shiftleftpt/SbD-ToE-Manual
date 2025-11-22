@@ -1,6 +1,6 @@
 ---
 id: rastreabilidade
-title: Rastreabilidade Top-Down – Capítulo 03
+title: Rastreabilidade Top-Down - Capítulo 03
 sidebar_position: 25
 ---
 
@@ -16,18 +16,18 @@ Este ficheiro estabelece a **rastreabilidade entre as práticas prescritas neste
 
 | Requisito / Domínio (Framework)                       | Prática do Capítulo 03 que responde                         | Nível de Cobertura |
 |-------------------------------------------------------|--------------------------------------------------------------|--------------------|
-| **NIST SSDF** – PW.2 (Threat Modeling)                | Metodologias de threat modeling sistemático                  | ✅ Completo         |
-| **NIST SSDF** – PW.4 (Revisão de requisitos)          | Ligação explícita entre ameaças e requisitos (Addon 07)      | ✅ Parcial          |
-| **OWASP SAMM v2.1** – Design → Threat Assessment      | Processo estruturado de threat modeling com integração contínua no SDLC | ✅ Nível 3          |
-| **BSIMM13** – Architecture Analysis (AA1.1–AA1.3)     | Modelação contínua, estruturada e metodologias específicas (STRIDE, OCTAVE) | ✅ Nível 3          |
-| **BSIMM13** – Architecture Analysis (AA2.1–AA2.2)     | Validação formal e documentada da segurança da arquitetura (Addon 09) | ✅ Completo         |
-| **ISO/IEC 27034** – Application Security Control      | Validação formal e técnica da arquitetura resultante de TM   | ✅ Parcial          |
-| **OWASP ASVS v5** – V1.1–V1.9 (Threat Modeling)       | Modelação de ameaças para derivação e validação de requisitos de segurança | ✅ Parcial          |
-| **NIST SP 800-53** – SA-11 (Security Testing)         | Validação e teste contínuo baseado em modelos de ameaça      | ✅ Completo         |
-| **NIST SP 800-53** – SA-17 (Architecture & Design)    | Modelação e validação contínua da arquitetura segura (Addon 09) | ✅ Completo         |
-| **CIS Controls v8** – Control 16.8                    | Threat modeling formal e sistemático                         | ✅ Completo         |
-| **ENISA DevSecOps** – Threat Modeling em CI/CD        | Integração contínua do TM em pipelines de desenvolvimento (Addon 06) | ✅ Completo         |
-| **OWASP DSOMM** – Design & Development | Modelação de ameaças integrada no SDLC e rastreabilidade com controlos e requisitos | ✅ Completo |
+| **NIST SSDF** - PW.2 (Threat Modeling)                | Metodologias de threat modeling sistemático                  | ✅ Completo         |
+| **NIST SSDF** - PW.4 (Revisão de requisitos)          | Ligação explícita entre ameaças e requisitos (Addon 07)      | ✅ Parcial          |
+| **OWASP SAMM v2.1** - Design → Threat Assessment      | Processo estruturado de threat modeling com integração contínua no SDLC | ✅ Nível 3          |
+| **BSIMM13** - Architecture Analysis (AA1.1–AA1.3)     | Modelação contínua, estruturada e metodologias específicas (STRIDE, OCTAVE) | ✅ Nível 3          |
+| **BSIMM13** - Architecture Analysis (AA2.1–AA2.2)     | Validação formal e documentada da segurança da arquitetura (Addon 09) | ✅ Completo         |
+| **ISO/IEC 27034** - Application Security Control      | Validação formal e técnica da arquitetura resultante de TM   | ✅ Parcial          |
+| **OWASP ASVS v5** - V1.1–V1.9 (Threat Modeling)       | Modelação de ameaças para derivação e validação de requisitos de segurança | ✅ Parcial          |
+| **NIST SP 800-53** - SA-11 (Security Testing)         | Validação e teste contínuo baseado em modelos de ameaça      | ✅ Completo         |
+| **NIST SP 800-53** - SA-17 (Architecture & Design)    | Modelação e validação contínua da arquitetura segura (Addon 09) | ✅ Completo         |
+| **CIS Controls v8** - Control 16.8                    | Threat modeling formal e sistemático                         | ✅ Completo         |
+| **ENISA DevSecOps** - Threat Modeling em CI/CD        | Integração contínua do TM em pipelines de desenvolvimento (Addon 06) | ✅ Completo         |
+| **OWASP DSOMM** - Design & Development | Modelação de ameaças integrada no SDLC e rastreabilidade com controlos e requisitos | ✅ Completo |
 
 
 ---

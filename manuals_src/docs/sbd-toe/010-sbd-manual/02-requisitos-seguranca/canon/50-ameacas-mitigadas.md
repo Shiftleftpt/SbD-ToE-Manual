@@ -16,31 +16,31 @@ As ameaças mitigadas estão diretamente ligadas à **ausência, má definição
 
 ---
 
-## 📚 Categoria 1 – Falha na definição ou ausência de requisitos
+## 📚 Categoria 1 - Falha na definição ou ausência de requisitos
 
 | Ameaça                                 | Fonte                                                  | Como surge                                         | Como a prática mitiga                                                            | Controlos associados                      | 🧩 Mitigada apenas por este capítulo? |
 |----------------------------------------|---------------------------------------------------------|----------------------------------------------------|-----------------------------------------------------------------------------------|-------------------------------------------|----------------------------------------|
-| Ausência de requisitos de segurança    | DSOMM – Design & Development / SSDF PW.1 / ASVS V1.1    | Segurança não está incluída nas histórias ou specs | Catálogo completo, taxonomia clara, rastreável por categoria e risco             | `addon/01-catalogo-requisitos.md`        | ✅                                     |
+| Ausência de requisitos de segurança    | DSOMM - Design & Development / SSDF PW.1 / ASVS V1.1    | Segurança não está incluída nas histórias ou specs | Catálogo completo, taxonomia clara, rastreável por categoria e risco             | `addon/01-catalogo-requisitos.md`        | ✅                                     |
 | Definição ambígua ou não testável      | OWASP SAMM / ISO 27034                                  | Requisitos não permitem validação ou medição       | Requisitos SMART, com critérios de aceitação, testabilidade e mapeamento técnico | `addon/07-validacao-requisitos.md`       | ✅                                     |
-| Requisitos genéricos não específicos   | BSIMM13 – Requirements                                  | Políticas ou ideias vagas de "deveria ser seguro"  | Cada requisito mapeado a domínio técnico específico e controlos concretos        | `addon/09-taxonomia-rastreabilidade.md`  | ✅                                     |
-| Falta de requisitos em sistemas legados| OSC&R – Requirements / SSDF                             | Equipa não aplica catálogos em manutenção          | Aplicação sistemática por risco, com exceções formalizadas                       | `addon/08-gestao-excecoes.md`            | ❌ Cap. 14                             |
-| Requisitos não alinhados com risco     | DSOMM – Design & Development / SSDF PW.1 / ISO 27005    | Mesmos requisitos para todas as apps               | Matriz de requisitos ajustada por classificação de risco                         | `addon/06-matriz-controlos-por-risco.md` | ✅                                     |
+| Requisitos genéricos não específicos   | BSIMM13 - Requirements                                  | Políticas ou ideias vagas de "deveria ser seguro"  | Cada requisito mapeado a domínio técnico específico e controlos concretos        | `addon/09-taxonomia-rastreabilidade.md`  | ✅                                     |
+| Falta de requisitos em sistemas legados| OSC&R - Requirements / SSDF                             | Equipa não aplica catálogos em manutenção          | Aplicação sistemática por risco, com exceções formalizadas                       | `addon/08-gestao-excecoes.md`            | ❌ Cap. 14                             |
+| Requisitos não alinhados com risco     | DSOMM - Design & Development / SSDF PW.1 / ISO 27005    | Mesmos requisitos para todas as apps               | Matriz de requisitos ajustada por classificação de risco                         | `addon/06-matriz-controlos-por-risco.md` | ✅                                     |
 
 ---
 
-## 🧪 Categoria 2 – Validação deficiente de requisitos
+## 🧪 Categoria 2 - Validação deficiente de requisitos
 
 | Ameaça                                    | Fonte                                                           | Como surge                                        | Como a prática mitiga                                                              | Controlos associados                      | 🧩 Mitigada apenas por este capítulo? |
 |-------------------------------------------|------------------------------------------------------------------|---------------------------------------------------|-------------------------------------------------------------------------------------|-------------------------------------------|----------------------------------------|
-| Requisitos definidos mas nunca verificados| DSOMM – Design & Development / SSDF PW.4 / ASVS V1.13            | Falta de integração com testes ou revisões       | Catálogo inclui critérios de validação + plano de verificação                      | `addon/10-validacao-requisitos.md`       | ✅                                     |
-| Validações inconsistentes entre projetos  | DSOMM – Design & Development / BSIMM13 – Intelligence I1.6       | Cada equipa valida à sua maneira                 | Definição unificada de validação por domínio técnico e ciclo de vida               | `addon/07-validacao-requisitos.md`       | ✅                                     |
+| Requisitos definidos mas nunca verificados| DSOMM - Design & Development / SSDF PW.4 / ASVS V1.13            | Falta de integração com testes ou revisões       | Catálogo inclui critérios de validação + plano de verificação                      | `addon/10-validacao-requisitos.md`       | ✅                                     |
+| Validações inconsistentes entre projetos  | DSOMM - Design & Development / BSIMM13 - Intelligence I1.6       | Cada equipa valida à sua maneira                 | Definição unificada de validação por domínio técnico e ciclo de vida               | `addon/07-validacao-requisitos.md`       | ✅                                     |
 | Ausência de rastreio entre requisito e teste| ISO 27034 / OWASP SAMM                                         | Sem rastreabilidade entre o que é exigido e o que é testado | Taxonomia + estrutura ALM permitem bidirecionalidade                              | `addon/04-rastreabilidade-controlo.md`   | ✅                                     |
 | Requisitos não verificados em CI/CD       | SLSA / OSC&R Build & Policy                                     | Pipelines não integram verificação de requisitos | Integração com Cap. 07 (CI/CD) para enforcement automático                         | `addon/10-validacao-requisitos.md`       | ❌ Cap. 07                             |
 | Risco aceite sem validação documental     | CAPEC-1003 / SSDF RM.2                                          | Requisito omitido sob pretexto de "não aplicável"| Política de exceções com rastreabilidade e obrigatoriedade de justificação         | `addon/08-gestao-excecoes.md`            | ❌ Cap. 14                             |
 
 ---
 
-## 🧾 Categoria 3 – Gestão deficiente de exceções e escopo
+## 🧾 Categoria 3 - Gestão deficiente de exceções e escopo
 
 | Ameaça                                 | Fonte                          | Como surge                                              | Como a prática mitiga                                                            | Controlos associados                       | 🧩 Mitigada apenas por este capítulo? |
 |----------------------------------------|---------------------------------|---------------------------------------------------------|-----------------------------------------------------------------------------------|--------------------------------------------|----------------------------------------|
@@ -51,11 +51,11 @@ As ameaças mitigadas estão diretamente ligadas à **ausência, má definição
 
 ---
 
-## 🔄 Categoria 4 – Falhas de rastreabilidade e cobertura
+## 🔄 Categoria 4 - Falhas de rastreabilidade e cobertura
 
 | Ameaça                                  | Fonte                                                  | Como surge                                           | Como a prática mitiga                                                             | Controlos associados                      | 🧩 Mitigada apenas por este capítulo? |
 |-----------------------------------------|---------------------------------------------------------|------------------------------------------------------|------------------------------------------------------------------------------------|-------------------------------------------|----------------------------------------|
-| Não saber se requisitos foram aplicados | DSOMM – Design & Development / SSDF PW.5 / OWASP SAMM   | Falta de mapeamento entre requisito e código         | Rastreabilidade entre requisito, validação, código e risco                        | `addon/04-rastreabilidade-controlo.md`   | ✅                                     |
+| Não saber se requisitos foram aplicados | DSOMM - Design & Development / SSDF PW.5 / OWASP SAMM   | Falta de mapeamento entre requisito e código         | Rastreabilidade entre requisito, validação, código e risco                        | `addon/04-rastreabilidade-controlo.md`   | ✅                                     |
 | Requisitos aplicados mas não testados  | BSIMM / SLSA / ENISA DevSecOps                          | Existe definição mas ausência de verificação         | Validação associada a cada item do catálogo + teste no ciclo de vida              | `addon/07-validacao-requisitos.md`       | ✅                                     |
 | Mudanças de requisitos não propagadas  | OSC&R / ISO 27034                                        | Alteração ao requisito sem atualização de impacto    | Modelo de versionamento e rastreio de alterações aplicados ao catálogo            | `addon/01-catalogo-requisitos.md`        | ✅                                     |
 | Ambiguidade entre requisito e controlo | STRIDE / NIST 800-53                                     | Confusão entre o que é exigido e o que é implementado| Matriz de rastreabilidade requisito → controlo técnico                            | `addon/04-rastreabilidade-controlo.md`   | ✅                                     |

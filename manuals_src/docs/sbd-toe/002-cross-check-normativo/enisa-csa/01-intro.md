@@ -21,9 +21,9 @@ O **Cybersecurity Act** é o **Regulamento (UE) 2019/881** (CELEX: [32019R0881](
 
 No âmbito deste quadro, estão a ser desenvolvidos vários **esquemas europeus de certificação**, nomeadamente:
 
-- **EUCC** – para produtos de TIC (substituto evolutivo dos Common Criteria a nível europeu);
-- **EUCS** – para serviços de computação em nuvem;
-- **EU5G** – para redes e serviços 5G.
+- **EUCC** - para produtos de TIC (substituto evolutivo dos Common Criteria a nível europeu);
+- **EUCS** - para serviços de computação em nuvem;
+- **EU5G** - para redes e serviços 5G.
 
 > 📅 **Estado em 2025.**  
 > Em 2025, o EUCC encontra-se num estado mais maduro e próximo de operacionalização, enquanto o EUCS e o EU5G ainda se encontram em diferentes fases de desenvolvimento e aprovação.  

@@ -24,7 +24,7 @@ As frameworks consideradas são:
 | ASVS        | OWASP Application Security Verification Standard         | v5.0         |
 | SAMM        | OWASP Software Assurance Maturity Model                  | v2.1         |
 | BSIMM       | Building Security In Maturity Model                      | v13          |
-| NIST        | NIST SP 800-53 – Security and Privacy Controls           | Rev. 5       |
+| NIST        | NIST SP 800-53 - Security and Privacy Controls           | Rev. 5       |
 | SLSA        | Supply-chain Levels for Software Artifacts               | v1.0         |
 | CIS         | CIS Controls (Center for Internet Security)              | v8           |
 

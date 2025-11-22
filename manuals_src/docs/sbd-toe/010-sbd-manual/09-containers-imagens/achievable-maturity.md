@@ -1,13 +1,13 @@
 ---
 id: achievable-maturity
-title: Mapeamento de Maturidade – Capítulo 09
+title: Mapeamento de Maturidade - Capítulo 09
 sidebar_position: 10
 tags: [canon, maturidade, SAMM, SSDF, SLSA, DSOMM, CIS, ENISA]
 ---
 
-# 📈 Maturidade – Containers e Imagens
+# 📈 Maturidade - Containers e Imagens
 
-Este documento apresenta o **grau de alinhamento entre as práticas descritas no Capítulo 09 do SbD-ToE – *Containers e Imagens*** e os principais frameworks de segurança e maturidade de software:
+Este documento apresenta o **grau de alinhamento entre as práticas descritas no Capítulo 09 do SbD-ToE - *Containers e Imagens*** e os principais frameworks de segurança e maturidade de software:
 
 - **OWASP SAMM**
 - **BSIMM**
@@ -56,7 +56,7 @@ Este mapeamento **não mede equipas ou ferramentas**, mas sim o **nível de matu
 
 ---
 
-## 🧱 OWASP SAMM – Deployment, Verification e Governance
+## 🧱 OWASP SAMM - Deployment, Verification e Governance
 
 | Nível | Descrição SAMM | Cobertura pelo Cap. 09 |
 |-------|----------------|------------------------|
@@ -68,7 +68,7 @@ Este mapeamento **não mede equipas ou ferramentas**, mas sim o **nível de matu
 
 ---
 
-## 🧱 OWASP DSOMM – Build & Deploy / Supply Chain / Ops Monitoring
+## 🧱 OWASP DSOMM - Build & Deploy / Supply Chain / Ops Monitoring
 
 | Domínio | Nível | Justificação técnica |
 |----------|-------|----------------------|
@@ -78,7 +78,7 @@ Este mapeamento **não mede equipas ou ferramentas**, mas sim o **nível de matu
 
 ---
 
-## 🧱 NIST SSDF v1.1 – Desenvolvimento e Verificação
+## 🧱 NIST SSDF v1.1 - Desenvolvimento e Verificação
 
 | Controlos | Descrição | Alinhamento |
 |------------|------------|--------------|
@@ -89,7 +89,7 @@ Este mapeamento **não mede equipas ou ferramentas**, mas sim o **nível de matu
 
 ---
 
-## 🧱 BSIMM 13 – CMVM / SE / ST
+## 🧱 BSIMM 13 - CMVM / SE / ST
 
 | Prática BSIMM | Alinhamento com Cap. 09 |
 |---------------|--------------------------|
@@ -99,7 +99,7 @@ Este mapeamento **não mede equipas ou ferramentas**, mas sim o **nível de matu
 
 ---
 
-## 🧱 SLSA v1.0 – Build Integrity & Provenance
+## 🧱 SLSA v1.0 - Build Integrity & Provenance
 
 | Nível | Requisitos | Cobertura pelo Cap. 09 |
 |-------|-------------|-------------------------|

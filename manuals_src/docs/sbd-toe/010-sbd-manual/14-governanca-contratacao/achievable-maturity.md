@@ -1,6 +1,6 @@
 ---
 id: achievable-maturity
-title: Mapeamento de Maturidade – Capítulo 14
+title: Mapeamento de Maturidade - Capítulo 14
 sidebar_position: 10
 tags: [canon, maturidade, SAMM, SSDF, SLSA, DSOMM]
 ---
@@ -38,12 +38,12 @@ As práticas cobrem papéis críticos, exceções, contratos, rastreabilidade or
 | **SAMM v2.1** | Governance, Education, Incident Management | Ownership, exceções, rastreabilidade, formação             | **2 / 3**                                        |
 | **BSIMM13**   | Governance & Compliance                   | Formalização de exceções, cláusulas contratuais, reviewers  | **SE2, CP1**                                     |
 | **SSDF**      | PO.1, PO.3, RV.1, RV.2                    | Papéis críticos, requisitos formais, onboarding, validação | **Completamente coberto**                        |
-| **SLSA v1.0** | Supply Chain Governance                   | Requisitos contratuais, aceitação de risco, rastreabilidade| **Contributo indireto – Nível 2 / 4**            |
+| **SLSA v1.0** | Supply Chain Governance                   | Requisitos contratuais, aceitação de risco, rastreabilidade| **Contributo indireto - Nível 2 / 4**            |
 | **DSOMM**     | Governance, 3rd Party, Tooling, Training, Metrics | Exceções, KPIs, onboarding, validação, maturidade       | **4 / 5**                                        |
 
 ---
 
-## 🧱 OWASP SAMM – Governance e Education
+## 🧱 OWASP SAMM - Governance e Education
 
 | Domínio               | Nível | Implementação no Cap. 14                                 |
 |-----------------------|-------|----------------------------------------------------------|
@@ -64,7 +64,7 @@ As práticas cobrem papéis críticos, exceções, contratos, rastreabilidade or
 
 ---
 
-## 🧱 NIST SSDF – Controlos Cumpridos
+## 🧱 NIST SSDF - Controlos Cumpridos
 
 | Controlos NIST SSDF | Descrição                                       | Alinhamento com Cap. 14                    |
 |---------------------|--------------------------------------------------|--------------------------------------------|
@@ -75,7 +75,7 @@ As práticas cobrem papéis críticos, exceções, contratos, rastreabilidade or
 
 ---
 
-## 🧱 BSIMM – Governance & Compliance
+## 🧱 BSIMM - Governance & Compliance
 
 | Prática BSIMM | Alinhamento com Cap. 14                                       |
 |---------------|---------------------------------------------------------------|
@@ -84,13 +84,13 @@ As práticas cobrem papéis críticos, exceções, contratos, rastreabilidade or
 
 ---
 
-## 🧱 SLSA – Supply Chain
+## 🧱 SLSA - Supply Chain
 
 | Nível | Requisitos principais                            | Cobertura pelo Cap. 14                       |
 |-------|--------------------------------------------------|----------------------------------------------|
 | 1     | Cadeia de fornecimento minimamente identificada  | ✅ Papéis e terceiros registados              |
 | 2     | Requisitos contratuais definidos                 | ✅ Cláusulas de segurança formais             |
-| 3     | Verificação independente                         | ❌ Parcial – validações sem atestado externo |
+| 3     | Verificação independente                         | ❌ Parcial - validações sem atestado externo |
 | 4     | Governação contínua e auditável                  | ❌ Não aplicável                             |
 
 **🔐 Nível suportado por este capítulo: SLSA 2 / 4**

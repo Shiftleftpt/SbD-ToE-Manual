@@ -19,14 +19,14 @@ Este ficheiro estabelece a **rastreabilidade entre as práticas prescritas neste
 
 | Requisito / Domínio (Framework)                          | Prática do Capítulo 10 que responde                            | Nível de Cobertura |
 |----------------------------------------------------------|----------------------------------------------------------------|--------------------|
-| **NIST SSDF** – PW.7 / RV.1 / RV.3                       | Validação automatizada, gestão de findings, cobertura por risco | ✅ Completo         |
-| **OWASP SAMM v2.1** – Verification → Security Testing    | Estratégia de testes, cobertura, testes dinâmicos e manuais    | ✅ Nível 3          |
-| **BSIMM13** – Security Testing (ST1–ST3)                 | Integração com CI/CD, testes múltiplos, correlação findings     | ✅ Nível 2          |
-| **ISO/IEC 27001** – A.14.2.8 / A.12.6.1                  | Testes técnicos de segurança e gestão de vulnerabilidades       | ✅ Completo         |
-| **ISO/IEC 27034** – Security Testing                     | Validação dos requisitos de segurança e rastreabilidade         | ✅ Completo         |
-| **CIS Controls v8** – Control 16.8 / 18.3                | Testes contínuos, gestão de findings, correções proporcionais   | ✅ Completo         |
-| **ENISA DevSecOps** – Secure Testing & Automation        | Validação contínua, cobertura por risco, gates e automação      | ✅ Completo         |
-| **OWASP DSOMM** – Testing / Design & Development         | Testes automáticos, regressão, gates, rastreabilidade           | ✅ Nível 2/3        |
+| **NIST SSDF** - PW.7 / RV.1 / RV.3                       | Validação automatizada, gestão de findings, cobertura por risco | ✅ Completo         |
+| **OWASP SAMM v2.1** - Verification → Security Testing    | Estratégia de testes, cobertura, testes dinâmicos e manuais    | ✅ Nível 3          |
+| **BSIMM13** - Security Testing (ST1–ST3)                 | Integração com CI/CD, testes múltiplos, correlação findings     | ✅ Nível 2          |
+| **ISO/IEC 27001** - A.14.2.8 / A.12.6.1                  | Testes técnicos de segurança e gestão de vulnerabilidades       | ✅ Completo         |
+| **ISO/IEC 27034** - Security Testing                     | Validação dos requisitos de segurança e rastreabilidade         | ✅ Completo         |
+| **CIS Controls v8** - Control 16.8 / 18.3                | Testes contínuos, gestão de findings, correções proporcionais   | ✅ Completo         |
+| **ENISA DevSecOps** - Secure Testing & Automation        | Validação contínua, cobertura por risco, gates e automação      | ✅ Completo         |
+| **OWASP DSOMM** - Testing / Design & Development         | Testes automáticos, regressão, gates, rastreabilidade           | ✅ Nível 2/3        |
 
 ---
 
@@ -35,7 +35,7 @@ Este ficheiro estabelece a **rastreabilidade entre as práticas prescritas neste
 ### 🛠️ NIST SSDF
 
 Cobertura total de:
-- **PW.7**: testes automáticos integrados (SAST, DAST, IAST, fuzzing – Addons 01–04);
+- **PW.7**: testes automáticos integrados (SAST, DAST, IAST, fuzzing - Addons 01–04);
 - **RV.1**: identificação e rastreio de vulnerabilidades (Addon 08);
 - **RV.3**: correção, validação e aceitação formal (Addon 08).
 

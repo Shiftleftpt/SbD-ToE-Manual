@@ -15,7 +15,7 @@ As ameaças mitigadas dizem respeito à **ausência de controlo sobre fronteiras
 
 ---
 
-## 🧱 Categoria 1 – Falhas de segmentação e isolamento da arquitetura
+## 🧱 Categoria 1 - Falhas de segmentação e isolamento da arquitetura
 
 | Ameaça                                        | Fonte                           | Como surge                                                    | Como a prática mitiga                                                             | Controlos associados                         | 🧩 Mitigada apenas por este capítulo? |
 |-----------------------------------------------|----------------------------------|----------------------------------------------------------------|------------------------------------------------------------------------------------|----------------------------------------------|----------------------------------------|
@@ -26,7 +26,7 @@ As ameaças mitigadas dizem respeito à **ausência de controlo sobre fronteiras
 
 ---
 
-## 🔎 Categoria 2 – Deficiências na modelação da arquitetura
+## 🔎 Categoria 2 - Deficiências na modelação da arquitetura
 
 | Ameaça                                        | Fonte                          | Como surge                                               | Como a prática mitiga                                                            | Controlos associados                          | 🧩 Mitigada apenas por este capítulo? |
 |-----------------------------------------------|---------------------------------|----------------------------------------------------------|-----------------------------------------------------------------------------------|------------------------------------------------|----------------------------------------|
@@ -37,18 +37,18 @@ As ameaças mitigadas dizem respeito à **ausência de controlo sobre fronteiras
 
 ---
 
-## 🧪 Categoria 3 – Validação e evolução da arquitetura negligenciada
+## 🧪 Categoria 3 - Validação e evolução da arquitetura negligenciada
 
 | Ameaça                                         | Fonte                              | Como surge                                             | Como a prática mitiga                                                          | Controlos associados                      | 🧩 Mitigada apenas por este capítulo? |
 |------------------------------------------------|-------------------------------------|--------------------------------------------------------|---------------------------------------------------------------------------------|-------------------------------------------|----------------------------------------|
 | Arquitetura nunca revista                     | ISO 27034 / SSDF PW.5              | Uma vez desenhada, nunca mais é validada              | Integração com ciclo de vida e validações periódicas por risco                 | `15-aplicacao-lifecycle.md`        | ❌ Cap. 01                             |
 | Alterações estruturais sem revalidação        | CAPEC-137 / OWASP SAMM             | Mudança crítica de fluxo não revê modelo da arquitetura | Validação da arquitetura forçada por evento ou por sprint                        | `addon/05-validacao.md`                  | ✅                                     |
-| Design informal ou ad hoc                     | BSIMM13 – Architecture Analysis    | Arquitetura emerge do código                           | Templates de validação e checklist mínimo de revisão                            | `addon/05-validacao.md`                  | ✅                                     |
-| Exceções de arquitetura sem rasto              | SSDF RM.1 / ISO 27005 / DSOMM – Documentation           | Casos “especiais” não são revistos ou documentados     | Gestão formal de exceções com validação técnica e aprovação                      | `addon/03-excecoes.md`                   | ❌ Cap. 14                             |
+| Design informal ou ad hoc                     | BSIMM13 - Architecture Analysis    | Arquitetura emerge do código                           | Templates de validação e checklist mínimo de revisão                            | `addon/05-validacao.md`                  | ✅                                     |
+| Exceções de arquitetura sem rasto              | SSDF RM.1 / ISO 27005 / DSOMM - Documentation           | Casos “especiais” não são revistos ou documentados     | Gestão formal de exceções com validação técnica e aprovação                      | `addon/03-excecoes.md`                   | ❌ Cap. 14                             |
 
 ---
 
-## 🔄 Categoria 4 – Ausência de rastreabilidade e requisitos de arquitetura
+## 🔄 Categoria 4 - Ausência de rastreabilidade e requisitos de arquitetura
 
 | Ameaça                                       | Fonte                             | Como surge                                            | Como a prática mitiga                                                      | Controlos associados                         | 🧩 Mitigada apenas por este capítulo? |
 |----------------------------------------------|------------------------------------|-------------------------------------------------------|------------------------------------------------------------------------------|----------------------------------------------|----------------------------------------|
@@ -58,7 +58,7 @@ As ameaças mitigadas dizem respeito à **ausência de controlo sobre fronteiras
 
 ---
 
-## 🧠 Categoria 5 – Incoerência entre arquitetura e risco
+## 🧠 Categoria 5 - Incoerência entre arquitetura e risco
 
 | Ameaça                                      | Fonte                             | Como surge                                           | Como a prática mitiga                                                              | Controlos associados                       | 🧩 Mitigada apenas por este capítulo? |
 |---------------------------------------------|------------------------------------|------------------------------------------------------|-------------------------------------------------------------------------------------|--------------------------------------------|----------------------------------------|

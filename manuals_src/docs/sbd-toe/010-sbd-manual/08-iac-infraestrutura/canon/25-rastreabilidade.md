@@ -18,14 +18,14 @@ Este ficheiro estabelece a **rastreabilidade entre as práticas prescritas neste
 
 | Requisito / Domínio (Framework)                             | Prática do Capítulo 08 que responde                              | Nível de Cobertura |
 |-------------------------------------------------------------|------------------------------------------------------------------|--------------------|
-| **NIST SSDF** – PW.3 / PW.6 / RV.3                          | Validação IaC, controlo de risco, rastreabilidade e exceções     | ✅ Completo         |
-| **OWASP SAMM v2.1** – Implementation → Environment Hardening | Templates validados, segregação de ambientes, enforcement político | ✅ Nível 3          |
-| **BSIMM13** – Configuration & Deployment (CD1–CD3)          | IaC versionado, revisão formal, tagging e rastreabilidade         | ✅ Nível 2          |
-| **SLSA v1.0** – Provenance, Build Policies                  | IaC auditável, tagging de versões, enforcement e controlo         | ✅ Completo         |
-| **ISO/IEC 27001** – A.12.1.2 / A.14.2.5 / A.14.2.7           | Validação técnica da infraestrutura e gestão de ambientes         | ✅ Completo         |
-| **CIS Controls v8** – Control 4.4 / 11.1 / 16.11             | Gestão segura de configuração e validação automatizada            | ✅ Completo         |
-| **ENISA DevSecOps** – IaC Security & Governance              | Rastreabilidade, requisitos IaC, segregação de ambientes, automação | ✅ Completo         |
-| **OWASP DSOMM** – Design & Development / Build & Test       | Política como código, enforcement, validação, gestão de segredos | ✅ Nível 2 / 3      |
+| **NIST SSDF** - PW.3 / PW.6 / RV.3                          | Validação IaC, controlo de risco, rastreabilidade e exceções     | ✅ Completo         |
+| **OWASP SAMM v2.1** - Implementation → Environment Hardening | Templates validados, segregação de ambientes, enforcement político | ✅ Nível 3          |
+| **BSIMM13** - Configuration & Deployment (CD1–CD3)          | IaC versionado, revisão formal, tagging e rastreabilidade         | ✅ Nível 2          |
+| **SLSA v1.0** - Provenance, Build Policies                  | IaC auditável, tagging de versões, enforcement e controlo         | ✅ Completo         |
+| **ISO/IEC 27001** - A.12.1.2 / A.14.2.5 / A.14.2.7           | Validação técnica da infraestrutura e gestão de ambientes         | ✅ Completo         |
+| **CIS Controls v8** - Control 4.4 / 11.1 / 16.11             | Gestão segura de configuração e validação automatizada            | ✅ Completo         |
+| **ENISA DevSecOps** - IaC Security & Governance              | Rastreabilidade, requisitos IaC, segregação de ambientes, automação | ✅ Completo         |
+| **OWASP DSOMM** - Design & Development / Build & Test       | Política como código, enforcement, validação, gestão de segredos | ✅ Nível 2 / 3      |
 
 ---
 

@@ -16,7 +16,7 @@ As ameaças mitigadas surgem no momento mais sensível do SDLC: **a passagem rea
 
 ---
 
-## 🚨 Categoria 1 – Execução de código não validado
+## 🚨 Categoria 1 - Execução de código não validado
 
 | Ameaça                                  | Fonte                           | Como surge                                              | Como a prática mitiga                                                                 | Controlos associados                          |
 |-----------------------------------------|----------------------------------|----------------------------------------------------------|----------------------------------------------------------------------------------------|------------------------------------------------|
@@ -26,7 +26,7 @@ As ameaças mitigadas surgem no momento mais sensível do SDLC: **a passagem rea
 
 ---
 
-## 🔁 Categoria 2 – Ausência de rollback e reversibilidade
+## 🔁 Categoria 2 - Ausência de rollback e reversibilidade
 
 | Ameaça                            | Fonte                             | Como surge                                      | Como a prática mitiga                                                           | Controlos associados                       |
 |-----------------------------------|------------------------------------|------------------------------------------------|----------------------------------------------------------------------------------|--------------------------------------------|
@@ -36,7 +36,7 @@ As ameaças mitigadas surgem no momento mais sensível do SDLC: **a passagem rea
 
 ---
 
-## 🧪 Categoria 3 – Validação deficiente em produção
+## 🧪 Categoria 3 - Validação deficiente em produção
 
 | Ameaça                                   | Fonte                              | Como surge                                         | Como a prática mitiga                                                              | Controlos associados                          |
 |------------------------------------------|-------------------------------------|---------------------------------------------------|-------------------------------------------------------------------------------------|------------------------------------------------|
@@ -46,7 +46,7 @@ As ameaças mitigadas surgem no momento mais sensível do SDLC: **a passagem rea
 
 ---
 
-## 📉 Categoria 4 – Falta de monitorização e resposta a falhas
+## 📉 Categoria 4 - Falta de monitorização e resposta a falhas
 
 | Ameaça                                  | Fonte                              | Como surge                                       | Como a prática mitiga                                                            | Controlos associados                      |
 |-----------------------------------------|-------------------------------------|--------------------------------------------------|-----------------------------------------------------------------------------------|-------------------------------------------|
@@ -56,7 +56,7 @@ As ameaças mitigadas surgem no momento mais sensível do SDLC: **a passagem rea
 
 ---
 
-## 🔒 Categoria 5 – Exposição acidental de funcionalidades
+## 🔒 Categoria 5 - Exposição acidental de funcionalidades
 
 | Ameaça                                    | Fonte                              | Como surge                                       | Como a prática mitiga                                                              | Controlos associados                          |
 |-------------------------------------------|-------------------------------------|--------------------------------------------------|-------------------------------------------------------------------------------------|------------------------------------------------|
@@ -78,5 +78,5 @@ O Capítulo 11 mitiga ameaças diretamente associadas ao **momento mais sensíve
 
 > 🎯 Pelo menos **12 ameaças são mitigadas exclusivamente por este capítulo**, o que o torna **essencial para runtime seguro e controlado**.
 
-> 🔐 Integra práticas obrigatórias para cumprir **SSDF**, **SLSA**, **OWASP SAMM**, **BSIMM13**, **ENISA DevSecOps**, **CIS Controls**, **ISO 27001**, e domínios do **DSOMM – Design & Development**.
+> 🔐 Integra práticas obrigatórias para cumprir **SSDF**, **SLSA**, **OWASP SAMM**, **BSIMM13**, **ENISA DevSecOps**, **CIS Controls**, **ISO 27001**, e domínios do **DSOMM - Design & Development**.
 

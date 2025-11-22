@@ -1,6 +1,6 @@
 ---
 id: achievable-maturity
-title: Mapeamento de Maturidade – Capítulo 13
+title: Mapeamento de Maturidade - Capítulo 13
 sidebar_position: 10
 tags: [canon, maturidade, SAMM, SSDF, DSOMM]
 ---
@@ -54,7 +54,7 @@ Este mapeamento avalia a completude, rastreabilidade e sofisticação das práti
 
 ---
 
-## 🧱 OWASP DSOMM – Education & Training
+## 🧱 OWASP DSOMM - Education & Training
 
 | Domínio             | Nível | Justificação técnica                                                      |
 |---------------------|-------|---------------------------------------------------------------------------|
@@ -62,7 +62,7 @@ Este mapeamento avalia a completude, rastreabilidade e sofisticação das práti
 
 ---
 
-## 🧱 NIST SSDF – PS.2.x
+## 🧱 NIST SSDF - PS.2.x
 
 | Controlos NIST SSDF | Descrição                                           | Alinhamento com Cap. 13                      |
 |---------------------|-----------------------------------------------------|----------------------------------------------|
@@ -72,7 +72,7 @@ Este mapeamento avalia a completude, rastreabilidade e sofisticação das práti
 
 ---
 
-## 🧱 BSIMM – Training e Gestão de Software
+## 🧱 BSIMM - Training e Gestão de Software
 
 | Prática BSIMM | Alinhamento com Cap. 13                                   |
 |---------------|------------------------------------------------------------|

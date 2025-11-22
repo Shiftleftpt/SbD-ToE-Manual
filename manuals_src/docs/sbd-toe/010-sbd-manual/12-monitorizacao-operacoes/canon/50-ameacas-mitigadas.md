@@ -17,7 +17,7 @@ A referência principal é o modelo **OWASP OSC&R** (Open Software Supply Chain 
 
 ---
 
-## 🔍 Categoria 1 – Ausência de logging e visibilidade operacional
+## 🔍 Categoria 1 - Ausência de logging e visibilidade operacional
 
 | Ameaça                            | Fonte                        | Como surge                                    | Como a prática mitiga                                                | Controlos associados                       |
 |----------------------------------|-------------------------------|-----------------------------------------------|------------------------------------------------------------------------|--------------------------------------------|
@@ -27,7 +27,7 @@ A referência principal é o modelo **OWASP OSC&R** (Open Software Supply Chain 
 
 ---
 
-## 🚨 Categoria 2 – Alertas inexistentes ou ineficazes
+## 🚨 Categoria 2 - Alertas inexistentes ou ineficazes
 
 | Ameaça                         | Fonte                           | Como surge                                  | Como a prática mitiga                                                   | Controlos associados                    |
 |--------------------------------|----------------------------------|---------------------------------------------|--------------------------------------------------------------------------|-----------------------------------------|
@@ -37,7 +37,7 @@ A referência principal é o modelo **OWASP OSC&R** (Open Software Supply Chain 
 
 ---
 
-## 🧯 Categoria 3 – Resposta ineficaz ou descoordenada
+## 🧯 Categoria 3 - Resposta ineficaz ou descoordenada
 
 | Ameaça                         | Fonte                              | Como surge                                | Como a prática mitiga                                                   | Controlos associados                    |
 |--------------------------------|-------------------------------------|-------------------------------------------|--------------------------------------------------------------------------|-----------------------------------------|
@@ -47,7 +47,7 @@ A referência principal é o modelo **OWASP OSC&R** (Open Software Supply Chain 
 
 ---
 
-## 📊 Categoria 4 – Falta de métricas e capacidade de medição
+## 📊 Categoria 4 - Falta de métricas e capacidade de medição
 
 | Ameaça                             | Fonte                              | Como surge                                | Como a prática mitiga                                                   | Controlos associados                    |
 |------------------------------------|-------------------------------------|-------------------------------------------|--------------------------------------------------------------------------|-----------------------------------------|
@@ -57,7 +57,7 @@ A referência principal é o modelo **OWASP OSC&R** (Open Software Supply Chain 
 
 ---
 
-## 🔄 Categoria 5 – Integração deficiente no ciclo de vida
+## 🔄 Categoria 5 - Integração deficiente no ciclo de vida
 
 | Ameaça                                  | Fonte                            | Como surge                              | Como a prática mitiga                                                   | Controlos associados                    |
 |-----------------------------------------|-----------------------------------|-----------------------------------------|--------------------------------------------------------------------------|-----------------------------------------|

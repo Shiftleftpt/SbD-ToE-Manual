@@ -1,6 +1,6 @@
 ---
 id: achievable-maturity
-title: Mapeamento de Maturidade – Capítulo 12
+title: Mapeamento de Maturidade - Capítulo 12
 sidebar_position: 10
 tags: [canon, maturidade, SAMM, SSDF, SLSA, DSOMM]
 ---
@@ -45,7 +45,7 @@ Este mapeamento avalia o **grau de completude e sofisticação** das práticas p
 
 ---
 
-## 🧱 OWASP SAMM – Operations → Incident Management
+## 🧱 OWASP SAMM - Operations → Incident Management
 
 | Nível | Descrição SAMM                                  | Implementação no Cap. 12                          |
 |-------|--------------------------------------------------|---------------------------------------------------|
@@ -57,7 +57,7 @@ Este mapeamento avalia o **grau de completude e sofisticação** das práticas p
 
 ---
 
-## 🧱 OWASP DSOMM – Operations
+## 🧱 OWASP DSOMM - Operations
 
 | Domínio     | Nível | Justificação técnica                                              |
 |-------------|-------|-------------------------------------------------------------------|
@@ -65,7 +65,7 @@ Este mapeamento avalia o **grau de completude e sofisticação** das práticas p
 
 ---
 
-## 🧱 NIST SSDF – Controlos de Monitorização
+## 🧱 NIST SSDF - Controlos de Monitorização
 
 | Controlos NIST SSDF | Descrição                                       | Alinhamento com Cap. 12                  |
 |---------------------|--------------------------------------------------|------------------------------------------|
@@ -75,7 +75,7 @@ Este mapeamento avalia o **grau de completude e sofisticação** das práticas p
 
 ---
 
-## 🧱 BSIMM – Práticas Observadas
+## 🧱 BSIMM - Práticas Observadas
 
 | Prática BSIMM | Alinhamento com Cap. 12                                  |
 |---------------|-----------------------------------------------------------|
@@ -85,7 +85,7 @@ Este mapeamento avalia o **grau de completude e sofisticação** das práticas p
 
 ---
 
-## 🧱 SLSA – Observabilidade
+## 🧱 SLSA - Observabilidade
 
 | Nível | Requisitos principais                                | Cobertura pelo Cap. 12                             |
 |-------|------------------------------------------------------|----------------------------------------------------|

@@ -1,6 +1,6 @@
 ---
 id: achievable-maturity
-title: Mapeamento de Maturidade – Capítulo 11
+title: Mapeamento de Maturidade - Capítulo 11
 sidebar_position: 10
 tags: [canon, maturidade, SAMM, SSDF, SLSA, DSOMM]
 ---
@@ -45,7 +45,7 @@ Este mapeamento avalia o **grau de completude e sofisticação prática** face a
 
 ---
 
-## 🧱 OWASP SAMM – Verification → Security Testing
+## 🧱 OWASP SAMM - Verification → Security Testing
 
 | Nível | Descrição SAMM                                | Implementação no Cap. 11                           |
 |-------|------------------------------------------------|----------------------------------------------------|
@@ -57,7 +57,7 @@ Este mapeamento avalia o **grau de completude e sofisticação prática** face a
 
 ---
 
-## 🧱 OWASP DSOMM – Deploy Seguro como Domínio Técnico
+## 🧱 OWASP DSOMM - Deploy Seguro como Domínio Técnico
 
 | Domínio               | Nível | Justificação técnica                                              |
 |-----------------------|-------|-------------------------------------------------------------------|
@@ -65,7 +65,7 @@ Este mapeamento avalia o **grau de completude e sofisticação prática** face a
 
 ---
 
-## 🧱 NIST SSDF – Requisitos de Execução Autorizada
+## 🧱 NIST SSDF - Requisitos de Execução Autorizada
 
 | Controlos NIST SSDF | Descrição                                      | Alinhamento com Cap. 11                  |
 |---------------------|------------------------------------------------|------------------------------------------|
@@ -75,7 +75,7 @@ Este mapeamento avalia o **grau de completude e sofisticação prática** face a
 
 ---
 
-## 🧱 BSIMM – Práticas de Governança de Deployment
+## 🧱 BSIMM - Práticas de Governança de Deployment
 
 | Prática BSIMM | Alinhamento com Cap. 11                                         |
 |---------------|------------------------------------------------------------------|
@@ -85,7 +85,7 @@ Este mapeamento avalia o **grau de completude e sofisticação prática** face a
 
 ---
 
-## 🧱 SLSA – Controlo de Build e Proveniência
+## 🧱 SLSA - Controlo de Build e Proveniência
 
 | Nível | Requisitos principais                                      | Cobertura pelo Cap. 11                                |
 |-------|------------------------------------------------------------|--------------------------------------------------------|

@@ -14,7 +14,7 @@ Este capítulo define práticas seguras para projetos de **Infraestrutura como C
 
 ---
 
-## ⚙️ Categoria 1 – Erros de configuração e falhas de validação
+## ⚙️ Categoria 1 - Erros de configuração e falhas de validação
 
 | Ameaça                                         | Fonte                                 | Como surge                                                | Como a prática mitiga                                                              | Controlos associados                            | 🧩 Mitigada apenas por este capítulo? |
 |-----------------------------------------------|----------------------------------------|-----------------------------------------------------------|-------------------------------------------------------------------------------------|--------------------------------------------------|----------------------------------------|
@@ -25,7 +25,7 @@ Este capítulo define práticas seguras para projetos de **Infraestrutura como C
 
 ---
 
-## 🏗️ Categoria 2 – Falhas na definição e controlo de arquitetura de IaC
+## 🏗️ Categoria 2 - Falhas na definição e controlo de arquitetura de IaC
 
 | Ameaça                                        | Fonte                               | Como surge                                           | Como a prática mitiga                                                             | Controlos associados                        | 🧩 Mitigada apenas por este capítulo? |
 |-----------------------------------------------|--------------------------------------|------------------------------------------------------|------------------------------------------------------------------------------------|---------------------------------------------|----------------------------------------|
@@ -35,7 +35,7 @@ Este capítulo define práticas seguras para projetos de **Infraestrutura como C
 
 ---
 
-## 🔐 Categoria 3 – Exposição de dados, chaves ou permissões excessivas
+## 🔐 Categoria 3 - Exposição de dados, chaves ou permissões excessivas
 
 | Ameaça                                        | Fonte                                     | Como surge                                          | Como a prática mitiga                                                            | Controlos associados                        | 🧩 Mitigada apenas por este capítulo? |
 |-----------------------------------------------|--------------------------------------------|-----------------------------------------------------|-----------------------------------------------------------------------------------|---------------------------------------------|----------------------------------------|
@@ -46,7 +46,7 @@ Este capítulo define práticas seguras para projetos de **Infraestrutura como C
 
 ---
 
-## 🔁 Categoria 4 – Falta de rastreabilidade e visibilidade de alterações
+## 🔁 Categoria 4 - Falta de rastreabilidade e visibilidade de alterações
 
 | Ameaça                                     | Fonte                                 | Como surge                                          | Como a prática mitiga                                                                | Controlos associados                          | 🧩 Mitigada apenas por este capítulo? |
 |--------------------------------------------|----------------------------------------|-----------------------------------------------------|---------------------------------------------------------------------------------------|------------------------------------------------|----------------------------------------|
@@ -56,7 +56,7 @@ Este capítulo define práticas seguras para projetos de **Infraestrutura como C
 
 ---
 
-## 📉 Categoria 5 – Falta de enforcement e exceções não geridas
+## 📉 Categoria 5 - Falta de enforcement e exceções não geridas
 
 | Ameaça                                     | Fonte                                   | Como surge                                      | Como a prática mitiga                                                            | Controlos associados                        | 🧩 Mitigada apenas por este capítulo? |
 |--------------------------------------------|------------------------------------------|-------------------------------------------------|-----------------------------------------------------------------------------------|---------------------------------------------|----------------------------------------|

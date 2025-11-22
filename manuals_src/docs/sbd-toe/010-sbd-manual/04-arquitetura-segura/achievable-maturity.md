@@ -1,6 +1,6 @@
 ---
 id: achievable-maturity
-title: Mapeamento de Maturidade – Capítulo 04
+title: Mapeamento de Maturidade - Capítulo 04
 sidebar_position: 10
 tags: [canon, maturidade, SAMM, SSDF, SLSA, DSOMM]
 ---
@@ -47,7 +47,7 @@ Este documento **não mede a maturidade de uma organização**, mas sim o **grau
 
 ---
 
-## 🧱 OWASP SAMM – Design → Architecture & Design
+## 🧱 OWASP SAMM - Design → Architecture & Design
 
 | Nível | Descrição SAMM                                             | Cobertura pelo Cap. 04                              |
 |-------|------------------------------------------------------------|-----------------------------------------------------|
@@ -59,7 +59,7 @@ Este documento **não mede a maturidade de uma organização**, mas sim o **grau
 
 ---
 
-## 🧱 OWASP DSOMM – Architecture, Requirements, Risk
+## 🧱 OWASP DSOMM - Architecture, Requirements, Risk
 
 | Domínio       | Níveis cobertos | Justificação técnica                                               |
 |---------------|----------------|----------------------------------------------------------------------|
@@ -71,7 +71,7 @@ Este documento **não mede a maturidade de uma organização**, mas sim o **grau
 
 ---
 
-## 🧱 NIST SSDF – Design Review and Architecture
+## 🧱 NIST SSDF - Design Review and Architecture
 
 | Controlos NIST SSDF | Descrição                                         | Alinhamento com Cap. 04 |
 |---------------------|---------------------------------------------------|--------------------------|
@@ -80,7 +80,7 @@ Este documento **não mede a maturidade de uma organização**, mas sim o **grau
 
 ---
 
-## 🧱 BSIMM – Architecture & CMVM
+## 🧱 BSIMM - Architecture & CMVM
 
 | Prática BSIMM   | Alinhamento com Cap. 04                                         |
 |-----------------|-----------------------------------------------------------------|
@@ -92,7 +92,7 @@ Este documento **não mede a maturidade de uma organização**, mas sim o **grau
 
 ---
 
-## 🧱 SLSA – Provenance & Isolation
+## 🧱 SLSA - Provenance & Isolation
 
 | Nível | Requisitos principais                          | Cobertura pelo Cap. 04                  |
 |-------|-------------------------------------------------|-----------------------------------------|

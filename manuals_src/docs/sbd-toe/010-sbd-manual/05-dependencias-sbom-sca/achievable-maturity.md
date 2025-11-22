@@ -1,6 +1,6 @@
 ---
 id: achievable-maturity
-title: Mapeamento de Maturidade – Capítulo 05
+title: Mapeamento de Maturidade - Capítulo 05
 sidebar_position: 10
 tags: [canon, maturidade, SAMM, SSDF, SLSA, DSOMM]
 ---
@@ -45,19 +45,19 @@ Este ficheiro **não avalia organizações**, mas sim o grau de maturidade e com
 
 ---
 
-## 🧱 OWASP SAMM – Construction → Dependency Management
+## 🧱 OWASP SAMM - Construction → Dependency Management
 
 | Nível | Descrição SAMM                                                     | Cobertura pelo Cap. 05                                |
 |-------|--------------------------------------------------------------------|--------------------------------------------------------|
 | 1     | Identificação e listagem manual de dependências                    | ✅ SBOM obrigatória por build                          |
 | 2     | Processo formal de aceitação, rastreio e controlo de risco         | ✅ Políticas, exceções e integração com SCA            |
-| 3     | Automação e integração contínua                                    | ❌ Parcial – ferramentas integráveis, mas não automatizado no core |
+| 3     | Automação e integração contínua                                    | ❌ Parcial - ferramentas integráveis, mas não automatizado no core |
 
 **🧮 Maturidade atingida: 2 / 3**
 
 ---
 
-## 🧱 OWASP DSOMM – Policy, Build & Deploy, Tooling
+## 🧱 OWASP DSOMM - Policy, Build & Deploy, Tooling
 
 | Domínio        | Nível | Justificação técnica                                               |
 |----------------|-------|--------------------------------------------------------------------|
@@ -67,7 +67,7 @@ Este ficheiro **não avalia organizações**, mas sim o grau de maturidade e com
 
 ---
 
-## 🧱 NIST SSDF – Dependências e Validação
+## 🧱 NIST SSDF - Dependências e Validação
 
 | Controlos NIST SSDF | Descrição                                        | Alinhamento com Cap. 05 |
 |---------------------|--------------------------------------------------|--------------------------|
@@ -77,7 +77,7 @@ Este ficheiro **não avalia organizações**, mas sim o grau de maturidade e com
 
 ---
 
-## 🧱 BSIMM – Software Environment e Segurança Operacional
+## 🧱 BSIMM - Software Environment e Segurança Operacional
 
 | Prática BSIMM   | Alinhamento com Cap. 05                                |
 |-----------------|--------------------------------------------------------|
@@ -87,7 +87,7 @@ Este ficheiro **não avalia organizações**, mas sim o grau de maturidade e com
 
 ---
 
-## 🧱 SLSA – Provenance & Dependency Control
+## 🧱 SLSA - Provenance & Dependency Control
 
 | Nível | Requisitos principais                                  | Cobertura pelo Cap. 05                    |
 |-------|---------------------------------------------------------|-------------------------------------------|

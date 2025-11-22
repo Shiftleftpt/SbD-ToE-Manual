@@ -15,7 +15,7 @@ Este capítulo define a estratégia, técnicas e ferramentas de **validação co
 
 ---
 
-## 🧪 Categoria 1 – Vulnerabilidades no código ou lógica de aplicação
+## 🧪 Categoria 1 - Vulnerabilidades no código ou lógica de aplicação
 
 | Ameaça                            | Fonte                              | Como surge                                            | Como a prática mitiga                                                  | Controlos associados                        | 🧹 Mitigada apenas por este capítulo? |
 |-----------------------------------|-------------------------------------|-------------------------------------------------------|-------------------------------------------------------------------------|---------------------------------------------|----------------------------------------|
@@ -25,7 +25,7 @@ Este capítulo define a estratégia, técnicas e ferramentas de **validação co
 
 ---
 
-## 🔍 Categoria 2 – Defeitos regressivos e falhas reintroduzidas
+## 🔍 Categoria 2 - Defeitos regressivos e falhas reintroduzidas
 
 | Ameaça                            | Fonte                              | Como surge                                         | Como a prática mitiga                                                    | Controlos associados                         | 🧹 Mitigada apenas por este capítulo? |
 |-----------------------------------|-------------------------------------|----------------------------------------------------|----------------------------------------------------------------------------|----------------------------------------------|----------------------------------------|
@@ -35,7 +35,7 @@ Este capítulo define a estratégia, técnicas e ferramentas de **validação co
 
 ---
 
-## ⚠️ Categoria 3 – Falta de visibilidade sobre falhas de segurança
+## ⚠️ Categoria 3 - Falta de visibilidade sobre falhas de segurança
 
 | Ameaça                               | Fonte                                | Como surge                                      | Como a prática mitiga                                                       | Controlos associados                          | 🧹 Mitigada apenas por este capítulo? |
 |--------------------------------------|---------------------------------------|-------------------------------------------------|--------------------------------------------------------------------------------|------------------------------------------------|----------------------------------------|
@@ -45,7 +45,7 @@ Este capítulo define a estratégia, técnicas e ferramentas de **validação co
 
 ---
 
-## 🛠️ Categoria 4 – Falta de integração no ciclo de vida
+## 🛠️ Categoria 4 - Falta de integração no ciclo de vida
 
 | Ameaça                                     | Fonte                             | Como surge                                          | Como a prática mitiga                                                           | Controlos associados                          | 🧹 Mitigada apenas por este capítulo? |
 |--------------------------------------------|------------------------------------|-----------------------------------------------------|----------------------------------------------------------------------------------|------------------------------------------------|----------------------------------------|
@@ -55,7 +55,7 @@ Este capítulo define a estratégia, técnicas e ferramentas de **validação co
 
 ---
 
-## 🧐 Categoria 5 – Incapacidade de detetar novas classes de vulnerabilidades
+## 🧐 Categoria 5 - Incapacidade de detetar novas classes de vulnerabilidades
 
 | Ameaça                                     | Fonte                              | Como surge                                           | Como a prática mitiga                                                              | Controlos associados                          | 🧹 Mitigada apenas por este capítulo? |
 |--------------------------------------------|-------------------------------------|------------------------------------------------------|-------------------------------------------------------------------------------------|------------------------------------------------|----------------------------------------|

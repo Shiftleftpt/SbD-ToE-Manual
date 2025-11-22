@@ -1,6 +1,6 @@
 ---
 id: rastreabilidade
-title: Rastreabilidade Top-Down – Capítulo 01
+title: Rastreabilidade Top-Down - Capítulo 01
 sidebar_position: 25
 tags: [canon, rastreabilidade, frameworks, alinhamento]
 ---
@@ -17,13 +17,13 @@ Este ficheiro estabelece a **rastreabilidade entre as práticas de classificaç�
 
 | Requisito / Domínio (Framework)                       | Prática do Capítulo 01 que responde                             | Nível de Cobertura |
 |-------------------------------------------------------|------------------------------------------------------------------|--------------------|
-| **NIST SSDF** – PO.1.1 / PO.1.2 / PO.3.2              | Classificação de risco, tratamento proporcional, risco residual | ✅ Completo         |
-| **OWASP SAMM v2.1** – Governance → Risk Management    | Avaliação formal, aplicação por tipo de aplicação, ciclo de vida| ✅ Nível 3          |
-| **OWASP DSOMM** – Governance / Risk / Requirements    | Classificação e priorização, rastreabilidade, aceitação formal  | ✅ Nível 2          |
-| **BSIMM13** – Strategy & Metrics (SM1–SM3)            | Classificação formal, exceções justificadas, rastreabilidade    | ✅ Nível 2          |
-| **ISO/IEC 27001** – A.6.1.2 / A.8.2.1 / A.18.2.3       | Avaliação de risco de ativos, aceitação formal, exceções        | ✅ Completo         |
-| **CIS Controls v8** – Control 4.1 / 4.3 / 17.1         | Classificação de sistemas, priorização de controlos, auditoria   | ✅ Completo         |
-| **ENISA SDLC / Risk** – Risk Profiling & Governance   | Aplicação de criticidade, decisão de segurança proporcional     | ✅ Completo         |
+| **NIST SSDF** - PO.1.1 / PO.1.2 / PO.3.2              | Classificação de risco, tratamento proporcional, risco residual | ✅ Completo         |
+| **OWASP SAMM v2.1** - Governance → Risk Management    | Avaliação formal, aplicação por tipo de aplicação, ciclo de vida| ✅ Nível 3          |
+| **OWASP DSOMM** - Governance / Risk / Requirements    | Classificação e priorização, rastreabilidade, aceitação formal  | ✅ Nível 2          |
+| **BSIMM13** - Strategy & Metrics (SM1–SM3)            | Classificação formal, exceções justificadas, rastreabilidade    | ✅ Nível 2          |
+| **ISO/IEC 27001** - A.6.1.2 / A.8.2.1 / A.18.2.3       | Avaliação de risco de ativos, aceitação formal, exceções        | ✅ Completo         |
+| **CIS Controls v8** - Control 4.1 / 4.3 / 17.1         | Classificação de sistemas, priorização de controlos, auditoria   | ✅ Completo         |
+| **ENISA SDLC / Risk** - Risk Profiling & Governance   | Aplicação de criticidade, decisão de segurança proporcional     | ✅ Completo         |
 
 ---
 

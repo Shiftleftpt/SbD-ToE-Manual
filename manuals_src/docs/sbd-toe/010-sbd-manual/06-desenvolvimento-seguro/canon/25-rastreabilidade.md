@@ -18,14 +18,14 @@ Este ficheiro estabelece a **rastreabilidade entre as práticas prescritas neste
 
 | Requisito / Domínio (Framework)                          | Práticas do Capítulo 06 que respondem                          | Nível de Cobertura |
 |----------------------------------------------------------|----------------------------------------------------------------|--------------------|
-| **NIST SSDF** – PW.5 / PW.7                              | Revisão de código, linters, validação automatizada             | ✅ Completo         |
-| **OWASP SAMM v2.1** – Implementation → Secure Build / Review | Guidelines, práticas seguras, controlo automático e humano     | ✅ Nível 3          |
-| **BSIMM13** – Code Review (CR1–CR3)                      | Revisão formal, integração com requisitos, evidência            | ✅ Nível 2          |
-| **ISO/IEC 27001** – A.14.2.5 / A.14.2.6                   | Revisão técnica e validação de segurança                       | ✅ Completo         |
-| **ISO/IEC 27034** – Coding Principles                    | Guidelines de codificação segura e verificação                 | ✅ Completo         |
-| **CIS Controls v8** – Control 16.3 / 16.11 / 16.12        | Linters, scanners, revisão de código estruturada               | ✅ Completo         |
-| **ENISA DevSecOps** – Secure Coding & CI Integration     | Linters, automação, rastreabilidade e revisão contínua         | ✅ Completo         |
-| **OWASP DSOMM** – Design & Development                   | Build seguro, validação contínua, rastreabilidade e evidência  | ✅ Nível 2/3        |
+| **NIST SSDF** - PW.5 / PW.7                              | Revisão de código, linters, validação automatizada             | ✅ Completo         |
+| **OWASP SAMM v2.1** - Implementation → Secure Build / Review | Guidelines, práticas seguras, controlo automático e humano     | ✅ Nível 3          |
+| **BSIMM13** - Code Review (CR1–CR3)                      | Revisão formal, integração com requisitos, evidência            | ✅ Nível 2          |
+| **ISO/IEC 27001** - A.14.2.5 / A.14.2.6                   | Revisão técnica e validação de segurança                       | ✅ Completo         |
+| **ISO/IEC 27034** - Coding Principles                    | Guidelines de codificação segura e verificação                 | ✅ Completo         |
+| **CIS Controls v8** - Control 16.3 / 16.11 / 16.12        | Linters, scanners, revisão de código estruturada               | ✅ Completo         |
+| **ENISA DevSecOps** - Secure Coding & CI Integration     | Linters, automação, rastreabilidade e revisão contínua         | ✅ Completo         |
+| **OWASP DSOMM** - Design & Development                   | Build seguro, validação contínua, rastreabilidade e evidência  | ✅ Nível 2/3        |
 
 ---
 
@@ -34,8 +34,8 @@ Este ficheiro estabelece a **rastreabilidade entre as práticas prescritas neste
 ### 🛠️ NIST SSDF
 
 Cobertura direta de:
-- **PW.5** – Práticas de codificação segura formalizadas (Addon `01`, `07`);
-- **PW.7** – Validação automatizada e sistemática com linters e anotadores (Addon `02`, `08`, `09`).
+- **PW.5** - Práticas de codificação segura formalizadas (Addon `01`, `07`);
+- **PW.7** - Validação automatizada e sistemática com linters e anotadores (Addon `02`, `08`, `09`).
 
 ---
 
@@ -50,7 +50,7 @@ Atinge **nível 3 de maturidade** nos domínios:
 ### 📊 BSIMM13
 
 Práticas alinhadas com:
-- **CR1–CR3** – Revisão estruturada com critérios de segurança e integração com requisitos técnicos (Addon `08`);
+- **CR1–CR3** - Revisão estruturada com critérios de segurança e integração com requisitos técnicos (Addon `08`);
 - Evidência formal através de anotação, justificação e rastreabilidade (`09`, `05`).
 
 ---
@@ -58,8 +58,8 @@ Práticas alinhadas com:
 ### 🏛️ ISO/IEC 27001
 
 Cobertura dos controlos:
-- **A.14.2.5** – Revisão técnica orientada à segurança das alterações de código;
-- **A.14.2.6** – Validação formal, justificação de exceções, registo e conformidade.
+- **A.14.2.5** - Revisão técnica orientada à segurança das alterações de código;
+- **A.14.2.6** - Validação formal, justificação de exceções, registo e conformidade.
 
 ---
 
@@ -74,9 +74,9 @@ Aplicação clara de:
 ### 📐 CIS Controls v8
 
 Contempla:
-- **16.3** – Uso de linters, análise estática e validadores sintáticos (Addon `02`);
-- **16.11** – Validação formal de requisitos e controlos de segurança no código (`08`);
-- **16.12** – Revisão manual com critérios formais, anotação e evidenciação (`09`).
+- **16.3** - Uso de linters, análise estática e validadores sintáticos (Addon `02`);
+- **16.11** - Validação formal de requisitos e controlos de segurança no código (`08`);
+- **16.12** - Revisão manual com critérios formais, anotação e evidenciação (`09`).
 
 ---
 
@@ -92,10 +92,10 @@ Cobertura total dos princípios:
 ### 🧬 OWASP DSOMM
 
 Domínio *Design & Development* coberto por:
-- **Secure Build** – Linters (`02`), validação de dependências (`03`) e controlo formal no processo de build (`08`);
-- **Security Testing** – Testes estruturados com anotação e evidência (`08`, `09`);
-- **Developer Guidance** – Diretrizes internas, formação e regras de exceção (`05`, `07`);
-- **Feedback Loops** – Evidência de falhas e registos que alimentam ciclos de melhoria.
+- **Secure Build** - Linters (`02`), validação de dependências (`03`) e controlo formal no processo de build (`08`);
+- **Security Testing** - Testes estruturados com anotação e evidência (`08`, `09`);
+- **Developer Guidance** - Diretrizes internas, formação e regras de exceção (`05`, `07`);
+- **Feedback Loops** - Evidência de falhas e registos que alimentam ciclos de melhoria.
 
 ---
 
@@ -103,11 +103,11 @@ Domínio *Design & Development* coberto por:
 
 O Capítulo 06 depende e contribui para os seguintes capítulos:
 
-- **Capítulo 01 – Gestão de Risco**: define a exigência proporcional das práticas com base no nível L1–L3;
-- **Capítulo 02 – Requisitos de Segurança**: estabelece os REQ-XXX validados e implementados neste capítulo;
-- **Capítulo 05 – Dependências e SCA**: garante que os componentes usados em desenvolvimento são seguros e rastreáveis;
-- **Capítulo 07 – CI/CD Seguro**: onde estas práticas se integram como passos automatizados na pipeline;
-- **Capítulo 10 – Testes e Coverage de Segurança**: validação final e cruzamento com testes e métricas de segurança.
+- **Capítulo 01 - Gestão de Risco**: define a exigência proporcional das práticas com base no nível L1–L3;
+- **Capítulo 02 - Requisitos de Segurança**: estabelece os REQ-XXX validados e implementados neste capítulo;
+- **Capítulo 05 - Dependências e SCA**: garante que os componentes usados em desenvolvimento são seguros e rastreáveis;
+- **Capítulo 07 - CI/CD Seguro**: onde estas práticas se integram como passos automatizados na pipeline;
+- **Capítulo 10 - Testes e Coverage de Segurança**: validação final e cruzamento com testes e métricas de segurança.
 
 ---
 

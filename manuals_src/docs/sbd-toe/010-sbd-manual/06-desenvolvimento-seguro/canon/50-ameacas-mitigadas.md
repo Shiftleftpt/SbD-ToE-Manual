@@ -15,7 +15,7 @@ Este capítulo prescreve práticas de **codificação segura, validações autom
 
 ---
 
-## 🧑‍💻 Categoria 1 – Práticas inseguras de desenvolvimento
+## 🧑‍💻 Categoria 1 - Práticas inseguras de desenvolvimento
 
 | Ameaça                                    | Fonte                               | Como surge                                         | Como a prática mitiga                                                             | Controlos associados                          | 🧩 Mitigada apenas por este capítulo? |
 |-------------------------------------------|--------------------------------------|----------------------------------------------------|------------------------------------------------------------------------------------|------------------------------------------------|----------------------------------------|
@@ -25,7 +25,7 @@ Este capítulo prescreve práticas de **codificação segura, validações autom
 
 ---
 
-## 📉 Categoria 2 – Ausência de validação contínua e rastreável
+## 📉 Categoria 2 - Ausência de validação contínua e rastreável
 
 | Ameaça                                        | Fonte                             | Como surge                                              | Como a prática mitiga                                                                | Controlos associados                          | 🧩 Mitigada apenas por este capítulo? |
 |-----------------------------------------------|------------------------------------|---------------------------------------------------------|----------------------------------------------------------------------------------------|------------------------------------------------|----------------------------------------|
@@ -35,7 +35,7 @@ Este capítulo prescreve práticas de **codificação segura, validações autom
 
 ---
 
-## 🔁 Categoria 3 – Gestão informal de exceções técnicas
+## 🔁 Categoria 3 - Gestão informal de exceções técnicas
 
 | Ameaça                                       | Fonte                             | Como surge                                               | Como a prática mitiga                                                             | Controlos associados                          | 🧩 Mitigada apenas por este capítulo? |
 |----------------------------------------------|------------------------------------|----------------------------------------------------------|------------------------------------------------------------------------------------|------------------------------------------------|----------------------------------------|
@@ -45,7 +45,7 @@ Este capítulo prescreve práticas de **codificação segura, validações autom
 
 ---
 
-## 🤖 Categoria 4 – Risco associado a uso inseguro de GenAI
+## 🤖 Categoria 4 - Risco associado a uso inseguro de GenAI
 
 | Ameaça                                     | Fonte                              | Como surge                                          | Como a prática mitiga                                                           | Controlos associados                          | 🧩 Mitigada apenas por este capítulo? |
 |--------------------------------------------|-------------------------------------|-----------------------------------------------------|----------------------------------------------------------------------------------|------------------------------------------------|----------------------------------------|
@@ -55,7 +55,7 @@ Este capítulo prescreve práticas de **codificação segura, validações autom
 
 ---
 
-## 🧬 Categoria 5 – Ameaças detetáveis por SBOM, mas mitigáveis antecipadamente
+## 🧬 Categoria 5 - Ameaças detetáveis por SBOM, mas mitigáveis antecipadamente
 
 | Ameaça                                         | Fonte                          | Como surge                                                   | Como a prática mitiga                                                                 | Controlos associados                    | 🧩 Mitigada apenas por este capítulo? |
 |------------------------------------------------|---------------------------------|----------------------------------------------------------------|----------------------------------------------------------------------------------------|------------------------------------------|----------------------------------------|
@@ -65,7 +65,7 @@ Este capítulo prescreve práticas de **codificação segura, validações autom
 
 ---
 
-## 🧠 Categoria 6 – Falta de cultura e normalização de práticas seguras
+## 🧠 Categoria 6 - Falta de cultura e normalização de práticas seguras
 
 | Ameaça                                      | Fonte                             | Como surge                                             | Como a prática mitiga                                                         | Controlos associados                         | 🧩 Mitigada apenas por este capítulo? |
 |---------------------------------------------|------------------------------------|--------------------------------------------------------|--------------------------------------------------------------------------------|----------------------------------------------|----------------------------------------|

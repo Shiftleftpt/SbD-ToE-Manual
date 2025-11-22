@@ -41,7 +41,7 @@ As avaliações aqui descritas foram realizadas com base numa leitura técnico-c
 
 ---
 
-## 🧱 OWASP SAMM – Design → Threat Assessment
+## 🧱 OWASP SAMM - Design → Threat Assessment
 
 | Nível | Descrição SAMM                                                            | Cobertura pelo Cap. 03                     |
 |------:|---------------------------------------------------------------------------|--------------------------------------------|
@@ -53,7 +53,7 @@ As avaliações aqui descritas foram realizadas com base numa leitura técnico-c
 
 ---
 
-## 🧱 OWASP DSOMM – Architecture, Risk Analysis, Requirements
+## 🧱 OWASP DSOMM - Architecture, Risk Analysis, Requirements
 
 | Domínio       | Níveis cobertos | Justificação técnica                                                   |
 |---------------|-----------------|------------------------------------------------------------------------|
@@ -65,7 +65,7 @@ As avaliações aqui descritas foram realizadas com base numa leitura técnico-c
 
 ---
 
-## 🧱 NIST SSDF – Identify, Review & Validate in Design
+## 🧱 NIST SSDF - Identify, Review & Validate in Design
 
 | Controlos NIST SSDF | Descrição                                        | Alinhamento com Cap. 03 |
 |---------------------|--------------------------------------------------|--------------------------|
@@ -77,7 +77,7 @@ As avaliações aqui descritas foram realizadas com base numa leitura técnico-c
 
 ---
 
-## 🧱 BSIMM – Architecture Analysis (AA1, AA2)
+## 🧱 BSIMM - Architecture Analysis (AA1, AA2)
 
 | Prática BSIMM | Alinhamento com Cap. 03                                        |
 |---------------|----------------------------------------------------------------|
@@ -89,7 +89,7 @@ As avaliações aqui descritas foram realizadas com base numa leitura técnico-c
 
 ---
 
-## 🧱 SLSA – Supply Chain Risk Awareness
+## 🧱 SLSA - Supply Chain Risk Awareness
 
 | Nível | Requisitos principais                              | Cobertura pelo Cap. 03                   |
 |------:|-----------------------------------------------------|------------------------------------------|

@@ -13,19 +13,19 @@ As ameaças mitigadas por este capítulo são maioritariamente de natureza **est
 
 ---
 
-## 🧠 Categoria 1 – Ausência de identificação sistemática de ameaças
+## 🧠 Categoria 1 - Ausência de identificação sistemática de ameaças
 
 | Ameaça                                      | Fonte                             | Como surge                                          | Como a prática mitiga                                                    | Controlos associados                     | 🧩 Mitigada apenas por este capítulo? |
 |---------------------------------------------|------------------------------------|-----------------------------------------------------|---------------------------------------------------------------------------|------------------------------------------|----------------------------------------|
 | Ameaças desconhecidas e não tratadas        | STRIDE / CAPEC-137                 | Nenhuma análise formal de segurança ao design       | Modelação sistemática por tipo de ameaça e zona de ataque                 | `addon/01-metodologias-e-ferramentas.md`| ✅                                     |
 | Prioridades de segurança mal definidas      | MITRE / BSIMM AA1.3               | Equipa não conhece os riscos prioritários           | Identificação e classificação de ameaças com impacto por risco            | `addon/07-mapeamento-threats-requisitos.md` | ✅                                  |
-| Requisitos definidos sem base em ameaças    | SSDF PW.1 / ISO 27034 / DSOMM – Design & Development             | Requisitos genéricos ou não relacionados com riscos | Mapeamento direto entre ameaças e requisitos                              | `addon/07-mapeamento-threats-requisitos.md` | ✅                                  |
+| Requisitos definidos sem base em ameaças    | SSDF PW.1 / ISO 27034 / DSOMM - Design & Development             | Requisitos genéricos ou não relacionados com riscos | Mapeamento direto entre ameaças e requisitos                              | `addon/07-mapeamento-threats-requisitos.md` | ✅                                  |
 | Ameaças a privacidade ignoradas             | LINDDUN / ENISA Privacy Threats    | Dados pessoais tratados sem avaliação de risco      | Threat modeling específico de privacidade (ex: LINDDUN)                   | `addon/08-exemplo-privacidade.md`       | ✅                                     |
-| Falta de cobertura de ameaças não técnicas  | ENISA SDLC / OSC&R / DSOMM – Design & Development                 | Foco apenas em exploits ou CVEs                     | Modelos incluem sociais, organizacionais, insiders                         | `addon/01-metodologias-e-ferramentas.md`| ✅                                     |
+| Falta de cobertura de ameaças não técnicas  | ENISA SDLC / OSC&R / DSOMM - Design & Development                 | Foco apenas em exploits ou CVEs                     | Modelos incluem sociais, organizacionais, insiders                         | `addon/01-metodologias-e-ferramentas.md`| ✅                                     |
 
 ---
 
-## 🔎 Categoria 2 – Falhas na modelação e revisão de arquitetura
+## 🔎 Categoria 2 - Falhas na modelação e revisão de arquitetura
 
 | Ameaça                                      | Fonte                             | Como surge                                          | Como a prática mitiga                                                    | Controlos associados                       | 🧩 Mitigada apenas por este capítulo? |
 |---------------------------------------------|------------------------------------|-----------------------------------------------------|---------------------------------------------------------------------------|--------------------------------------------|----------------------------------------|
@@ -36,7 +36,7 @@ As ameaças mitigadas por este capítulo são maioritariamente de natureza **est
 
 ---
 
-## 🔄 Categoria 3 – Integração deficiente no ciclo de vida
+## 🔄 Categoria 3 - Integração deficiente no ciclo de vida
 
 | Ameaça                                      | Fonte                             | Como surge                                              | Como a prática mitiga                                                        | Controlos associados                         | 🧩 Mitigada apenas por este capítulo? |
 |---------------------------------------------|------------------------------------|---------------------------------------------------------|--------------------------------------------------------------------------------|----------------------------------------------|----------------------------------------|
@@ -47,7 +47,7 @@ As ameaças mitigadas por este capítulo são maioritariamente de natureza **est
 
 ---
 
-## 🧰 Categoria 4 – Ferramentas, automação e gestão de conhecimento
+## 🧰 Categoria 4 - Ferramentas, automação e gestão de conhecimento
 
 | Ameaça                                      | Fonte                             | Como surge                                          | Como a prática mitiga                                                    | Controlos associados                       | 🧩 Mitigada apenas por este capítulo? |
 |---------------------------------------------|------------------------------------|-----------------------------------------------------|---------------------------------------------------------------------------|--------------------------------------------|----------------------------------------|

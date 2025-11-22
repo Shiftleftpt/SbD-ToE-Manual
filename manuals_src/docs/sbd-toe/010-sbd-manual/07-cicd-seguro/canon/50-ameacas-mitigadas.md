@@ -15,7 +15,7 @@ Este capítulo define práticas para **segurança de pipelines CI/CD**, incluind
 
 ---
 
-## 🧨 Categoria 1 – Ataques à infraestrutura da pipeline
+## 🧨 Categoria 1 - Ataques à infraestrutura da pipeline
 
 | Ameaça                                       | Fonte                                         | Como surge                                             | Como a prática mitiga                                                            | Controlos associados                          | 🧩 Mitigada apenas por este capítulo? |
 |----------------------------------------------|-----------------------------------------------|--------------------------------------------------------|-----------------------------------------------------------------------------------|------------------------------------------------|----------------------------------------|
@@ -25,7 +25,7 @@ Este capítulo define práticas para **segurança de pipelines CI/CD**, incluind
 
 ---
 
-## 🔐 Categoria 2 – Comprometimento do código-fonte
+## 🔐 Categoria 2 - Comprometimento do código-fonte
 
 | Ameaça                                      | Fonte                                         | Como surge                                          | Como a prática mitiga                                                        | Controlos associados                          | 🧩 Mitigada apenas por este capítulo? |
 |---------------------------------------------|-----------------------------------------------|-----------------------------------------------------|--------------------------------------------------------------------------------|------------------------------------------------|----------------------------------------|
@@ -35,7 +35,7 @@ Este capítulo define práticas para **segurança de pipelines CI/CD**, incluind
 
 ---
 
-## 📦 Categoria 3 – Risco de injeção de artefactos ou builds falsificados
+## 📦 Categoria 3 - Risco de injeção de artefactos ou builds falsificados
 
 | Ameaça                                       | Fonte                                             | Como surge                                              | Como a prática mitiga                                                            | Controlos associados                          | 🧩 Mitigada apenas por este capítulo? |
 |----------------------------------------------|----------------------------------------------------|---------------------------------------------------------|-----------------------------------------------------------------------------------|------------------------------------------------|----------------------------------------|
@@ -45,7 +45,7 @@ Este capítulo define práticas para **segurança de pipelines CI/CD**, incluind
 
 ---
 
-## 🔑 Categoria 4 – Gestão insegura de segredos
+## 🔑 Categoria 4 - Gestão insegura de segredos
 
 | Ameaça                                 | Fonte                                 | Como surge                                           | Como a prática mitiga                                                          | Controlos associados                        | 🧩 Mitigada apenas por este capítulo? |
 |----------------------------------------|----------------------------------------|------------------------------------------------------|----------------------------------------------------------------------------------|---------------------------------------------|----------------------------------------|
@@ -55,7 +55,7 @@ Este capítulo define práticas para **segurança de pipelines CI/CD**, incluind
 
 ---
 
-## 🧾 Categoria 5 – Falta de validação e controlo sistemático
+## 🧾 Categoria 5 - Falta de validação e controlo sistemático
 
 | Ameaça                                   | Fonte                                     | Como surge                                               | Como a prática mitiga                                                          | Controlos associados                        | 🧩 Mitigada apenas por este capítulo? |
 |------------------------------------------|--------------------------------------------|----------------------------------------------------------|---------------------------------------------------------------------------------|---------------------------------------------|----------------------------------------|
@@ -65,7 +65,7 @@ Este capítulo define práticas para **segurança de pipelines CI/CD**, incluind
 
 ---
 
-## 🕵️ Categoria 6 – Exceções e visibilidade negligenciadas
+## 🕵️ Categoria 6 - Exceções e visibilidade negligenciadas
 
 | Ameaça                                     | Fonte                                   | Como surge                                           | Como a prática mitiga                                                            | Controlos associados                         | 🧩 Mitigada apenas por este capítulo? |
 |--------------------------------------------|------------------------------------------|------------------------------------------------------|-----------------------------------------------------------------------------------|----------------------------------------------|----------------------------------------|

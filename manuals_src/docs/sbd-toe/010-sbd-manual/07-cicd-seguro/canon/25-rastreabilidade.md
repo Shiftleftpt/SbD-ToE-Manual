@@ -1,6 +1,6 @@
 ---
 id: rastreabilidade
-title: Rastreabilidade Top-Down – Capítulo 07
+title: Rastreabilidade Top-Down - Capítulo 07
 description: Mapeamento entre as práticas do capítulo e os requisitos normativos de segurança em CI/CD
 tags: [rastreabilidade, normativo, cicd, pipelines, frameworks, dsomm, ssdf]
 sidebar_position: 25
@@ -19,14 +19,14 @@ Este ficheiro estabelece a **rastreabilidade entre as práticas prescritas neste
 
 | Requisito / Domínio (Framework)                           | Prática do Capítulo 07 que responde                             | Nível de Cobertura |
 |-----------------------------------------------------------|------------------------------------------------------------------|--------------------|
-| **NIST SSDF** – PW.7 / RV.3 / RV.4                        | Validações automáticas, gates, rastreabilidade de artefactos     | ✅ Completo         |
-| **OWASP SAMM v2.1** – Implementation → Secure Build       | Design seguro do pipeline, runners isolados, controlo de execução| ✅ Nível 3          |
-| **BSIMM13** – Deployment & Build (SE1–SE3, CM1)           | Proteção do pipeline, execução rastreável e controlada           | ✅ Nível 2          |
-| **SLSA v1.0** – Levels 1–3 (Build Integrity & Provenance) | Proveniência, isolamento de execução, assinatura de artefactos   | ✅ Completo         |
-| **DSOMM** – Build, Test, Release, Govern, Operate         | Segurança automatizada ponta-a-ponta em pipelines CI/CD          | ✅ Nível 3–4        |
-| **ISO/IEC 27001** – A.12.1.2 / A.14.2.2 / A.14.2.5         | Gestão segura de pipelines e validação antes de entrega          | ✅ Completo         |
-| **CIS Controls v8** – Control 16.4 / 16.5 / 16.8           | Controlo de execução e validações de segurança contínuas         | ✅ Completo         |
-| **ENISA DevSecOps** – Pipeline Security & Enforcement     | Validações CI/CD, gates, segregação de runners, rastreabilidade  | ✅ Completo         |
+| **NIST SSDF** - PW.7 / RV.3 / RV.4                        | Validações automáticas, gates, rastreabilidade de artefactos     | ✅ Completo         |
+| **OWASP SAMM v2.1** - Implementation → Secure Build       | Design seguro do pipeline, runners isolados, controlo de execução| ✅ Nível 3          |
+| **BSIMM13** - Deployment & Build (SE1–SE3, CM1)           | Proteção do pipeline, execução rastreável e controlada           | ✅ Nível 2          |
+| **SLSA v1.0** - Levels 1–3 (Build Integrity & Provenance) | Proveniência, isolamento de execução, assinatura de artefactos   | ✅ Completo         |
+| **DSOMM** - Build, Test, Release, Govern, Operate         | Segurança automatizada ponta-a-ponta em pipelines CI/CD          | ✅ Nível 3–4        |
+| **ISO/IEC 27001** - A.12.1.2 / A.14.2.2 / A.14.2.5         | Gestão segura de pipelines e validação antes de entrega          | ✅ Completo         |
+| **CIS Controls v8** - Control 16.4 / 16.5 / 16.8           | Controlo de execução e validações de segurança contínuas         | ✅ Completo         |
+| **ENISA DevSecOps** - Pipeline Security & Enforcement     | Validações CI/CD, gates, segregação de runners, rastreabilidade  | ✅ Completo         |
 
 ---
 

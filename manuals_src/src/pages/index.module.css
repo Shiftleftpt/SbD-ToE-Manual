@@ -95,3 +95,18 @@
 html[data-theme='dark'] .card {
   border-color: var(--ifm-color-emphasis-300);
 }
+
+.diagramLink {
+  display: inline-block;
+  text-decoration: none;
+}
+
+.diagramLink:hover svg {
+  transform: scale(1.02);
+  transition: transform 150ms ease-out;
+}
+
+.diagramLink:focus-visible {
+  outline: 2px solid var(--ifm-color-primary);
+  outline-offset: 4px;
+}

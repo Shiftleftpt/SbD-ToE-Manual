@@ -14,7 +14,7 @@ sidebar_position: 5
 
 ## Âmbito
 
-### 🧩 CRA – Cyber Resilience Act
+### 🧩 CRA - Cyber Resilience Act
 
 O **Cyber Resilience Act (CRA)** é o **Regulamento (UE) 2024/2847** (CELEX: [32024R2847](https://eur-lex.europa.eu/legal-content/PT/TXT/?uri=CELEX:32024R2847)), que estabelece requisitos horizontais para a conceção, desenvolvimento, produção e suporte de produtos com elementos digitais.
 

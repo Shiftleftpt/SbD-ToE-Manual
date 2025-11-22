@@ -20,14 +20,14 @@ Este ficheiro estabelece a **rastreabilidade entre as práticas prescritas neste
 
 | Requisito / Domínio (Framework)                          | Prática do Capítulo 13 que responde                            | Nível de Cobertura |
 |----------------------------------------------------------|----------------------------------------------------------------|--------------------|
-| **NIST SSDF** – PO.2.1 / PO.2.2                          | Formação mínima por função, validação de conhecimento          | ✅ Completo         |
-| **NIST SSDF** – PW.1 / RV.1                              | Formação ligada à definição e validação de requisitos          | ✅ Parcial          |
-| **OWASP SAMM v2.1** – Governance → Education & Guidance  | Programas de formação contínua, champions, onboarding seguro   | ✅ Nível 3          |
-| **OWASP DSOMM** – Education & Training                   | Formação adaptativa, rastreável, com feedback e KPIs           | ✅ Nível 3          |
-| **BSIMM13** – Training & Culture (T1–T3)                 | Formação estruturada, gamificação, rastreabilidade             | ✅ Práticas-chave   |
-| **ISO/IEC 27001** – A.7.2.x / A.8.2.2 / A.13.2.4          | Qualificação para acesso, onboarding de terceiros              | ✅ Completo         |
-| **CIS Controls v8** – Control 14.1 / 14.2 / 14.3          | Formação proporcional ao risco, validação de acesso            | ✅ Completo         |
-| **ENISA DevSecOps** – Awareness & Security Culture        | Programas formais, integração com ciclo de vida, educação por papel | ✅ Completo    |
+| **NIST SSDF** - PO.2.1 / PO.2.2                          | Formação mínima por função, validação de conhecimento          | ✅ Completo         |
+| **NIST SSDF** - PW.1 / RV.1                              | Formação ligada à definição e validação de requisitos          | ✅ Parcial          |
+| **OWASP SAMM v2.1** - Governance → Education & Guidance  | Programas de formação contínua, champions, onboarding seguro   | ✅ Nível 3          |
+| **OWASP DSOMM** - Education & Training                   | Formação adaptativa, rastreável, com feedback e KPIs           | ✅ Nível 3          |
+| **BSIMM13** - Training & Culture (T1–T3)                 | Formação estruturada, gamificação, rastreabilidade             | ✅ Práticas-chave   |
+| **ISO/IEC 27001** - A.7.2.x / A.8.2.2 / A.13.2.4          | Qualificação para acesso, onboarding de terceiros              | ✅ Completo         |
+| **CIS Controls v8** - Control 14.1 / 14.2 / 14.3          | Formação proporcional ao risco, validação de acesso            | ✅ Completo         |
+| **ENISA DevSecOps** - Awareness & Security Culture        | Programas formais, integração com ciclo de vida, educação por papel | ✅ Completo    |
 
 ---
 
@@ -59,7 +59,7 @@ Cobertura completa do domínio **Education & Training**:
 - Feedback contínuo com KPIs, atualização pós-incidente, integração com ciclos DevSecOps (Addon 90);
 - Cultura de champions e curadoria contínua como reforço organizacional (Addon 03).
 
-> ✅ Atinge **nível 3** no domínio DSOMM – Education & Training.
+> ✅ Atinge **nível 3** no domínio DSOMM - Education & Training.
 
 ---
 

@@ -1,6 +1,6 @@
 ---
 id: achievable-maturity
-title: Mapeamento de Maturidade – Capítulo 08
+title: Mapeamento de Maturidade - Capítulo 08
 sidebar_position: 10
 tags: [canon, maturidade, SAMM, SSDF, SLSA, DSOMM]
 ---
@@ -45,7 +45,7 @@ O objetivo deste mapeamento é demonstrar **completude e maturidade das prática
 
 ---
 
-## 🧱 OWASP SAMM – Secure Build para IaC
+## 🧱 OWASP SAMM - Secure Build para IaC
 
 | Nível | Descrição SAMM                                       | Cobertura pelo Cap. 08                              |
 |-------|-------------------------------------------------------|-----------------------------------------------------|
@@ -57,7 +57,7 @@ O objetivo deste mapeamento é demonstrar **completude e maturidade das prática
 
 ---
 
-## 🧱 OWASP DSOMM – Aplicação a Projetos IaC
+## 🧱 OWASP DSOMM - Aplicação a Projetos IaC
 
 | Domínio             | Nível | Justificação técnica                                               |
 |---------------------|-------|--------------------------------------------------------------------|
@@ -67,7 +67,7 @@ O objetivo deste mapeamento é demonstrar **completude e maturidade das prática
 
 ---
 
-## 🧱 NIST SSDF – Validação e Governação de IaC
+## 🧱 NIST SSDF - Validação e Governação de IaC
 
 | Controlos NIST SSDF | Descrição                                         | Alinhamento com Cap. 08         |
 |---------------------|---------------------------------------------------|----------------------------------|
@@ -78,7 +78,7 @@ O objetivo deste mapeamento é demonstrar **completude e maturidade das prática
 
 ---
 
-## 🧱 BSIMM – Gestão de Configuração e Compliance
+## 🧱 BSIMM - Gestão de Configuração e Compliance
 
 | Prática BSIMM   | Alinhamento com Cap. 08                                      |
 |-----------------|--------------------------------------------------------------|
@@ -88,7 +88,7 @@ O objetivo deste mapeamento é demonstrar **completude e maturidade das prática
 
 ---
 
-## 🧱 SLSA – Fonte, Build e Proveniência
+## 🧱 SLSA - Fonte, Build e Proveniência
 
 | Nível | Requisitos principais                                      | Cobertura pelo Cap. 08                              |
 |-------|-------------------------------------------------------------|-----------------------------------------------------|

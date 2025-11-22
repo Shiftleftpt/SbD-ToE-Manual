@@ -1,6 +1,6 @@
 ---
 id: achievable-maturity
-title: Mapeamento de Maturidade – Capítulo 07
+title: Mapeamento de Maturidade - Capítulo 07
 sidebar_position: 10
 tags: [canon, maturidade, SAMM, SSDF, SLSA, DSOMM]
 ---
@@ -45,7 +45,7 @@ Este mapeamento **não mede a maturidade da organização**, mas sim o **nível 
 
 ---
 
-## 🧱 OWASP SAMM – Build & Deployment Automation
+## 🧱 OWASP SAMM - Build & Deployment Automation
 
 | Nível | Descrição SAMM                                                  | Cobertura pelo Cap. 07                                  |
 |-------|------------------------------------------------------------------|----------------------------------------------------------|
@@ -57,7 +57,7 @@ Este mapeamento **não mede a maturidade da organização**, mas sim o **nível 
 
 ---
 
-## 🧱 OWASP DSOMM – Build, Test, Release, Operate
+## 🧱 OWASP DSOMM - Build, Test, Release, Operate
 
 | Domínio  | Nível | Justificação técnica                                              |
 |----------|-------|-------------------------------------------------------------------|
@@ -68,7 +68,7 @@ Este mapeamento **não mede a maturidade da organização**, mas sim o **nível 
 
 ---
 
-## 🧱 NIST SSDF – Pipeline e Proveniência
+## 🧱 NIST SSDF - Pipeline e Proveniência
 
 | Controlos NIST SSDF | Descrição                                           | Alinhamento com Cap. 07               |
 |---------------------|-----------------------------------------------------|----------------------------------------|
@@ -79,7 +79,7 @@ Este mapeamento **não mede a maturidade da organização**, mas sim o **nível 
 
 ---
 
-## 🧱 BSIMM – Software Environment, Compliance
+## 🧱 BSIMM - Software Environment, Compliance
 
 | Prática BSIMM   | Alinhamento com Cap. 07                                        |
 |-----------------|----------------------------------------------------------------|
@@ -89,7 +89,7 @@ Este mapeamento **não mede a maturidade da organização**, mas sim o **nível 
 
 ---
 
-## 🧱 SLSA – Provenance & CI/CD Control
+## 🧱 SLSA - Provenance & CI/CD Control
 
 | Nível | Requisitos principais                                  | Cobertura pelo Cap. 07                              |
 |-------|---------------------------------------------------------|-----------------------------------------------------|

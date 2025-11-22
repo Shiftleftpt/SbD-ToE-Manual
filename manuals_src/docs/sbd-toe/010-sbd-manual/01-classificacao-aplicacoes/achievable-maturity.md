@@ -1,6 +1,6 @@
 ---
 id: achievable-maturity
-title: Mapeamento de Maturidade – Capítulo 01
+title: Mapeamento de Maturidade - Capítulo 01
 tags: [canon, maturidade, SAMM, SSDF, DSOMM]
 ---
 
@@ -40,7 +40,7 @@ As avaliações aqui descritas foram realizadas com base numa leitura técnico-c
 
 ---
 
-## 🧱 OWASP SAMM – Governance → Risk Management
+## 🧱 OWASP SAMM - Governance → Risk Management
 
 | Nível | Descrição SAMM                                                           | Cobertura pelo Cap. 01                  |
 |-------|--------------------------------------------------------------------------|------------------------------------------|
@@ -52,7 +52,7 @@ As avaliações aqui descritas foram realizadas com base numa leitura técnico-c
 
 ---
 
-## 🧱 OWASP DSOMM – Governance, Risk Management, Requirements
+## 🧱 OWASP DSOMM - Governance, Risk Management, Requirements
 
 | Domínio                  | Níveis cobertos | Justificação técnica                                                   |
 |--------------------------|----------------|------------------------------------------------------------------------|
@@ -65,7 +65,7 @@ As avaliações aqui descritas foram realizadas com base numa leitura técnico-c
 
 ---
 
-## 🧱 NIST SSDF – Risk Management (RM)
+## 🧱 NIST SSDF - Risk Management (RM)
 
 | Controlos NIST SSDF | Descrição                                             | Alinhamento com Cap. 01 |
 |---------------------|--------------------------------------------------------|--------------------------|
@@ -77,7 +77,7 @@ As avaliações aqui descritas foram realizadas com base numa leitura técnico-c
 
 ---
 
-## 🧱 BSIMM – Strategy and Metrics
+## 🧱 BSIMM - Strategy and Metrics
 
 | Prática BSIMM       | Alinhamento com Cap. 01                                |
 |---------------------|--------------------------------------------------------|
@@ -89,7 +89,7 @@ As avaliações aqui descritas foram realizadas com base numa leitura técnico-c
 
 ---
 
-## 🧱 SLSA – Supply Chain Levels for Software Artifacts
+## 🧱 SLSA - Supply Chain Levels for Software Artifacts
 
 | Nível | Requisitos principais                   | Cobertura pelo Cap. 01         |
 |-------|------------------------------------------|--------------------------------|

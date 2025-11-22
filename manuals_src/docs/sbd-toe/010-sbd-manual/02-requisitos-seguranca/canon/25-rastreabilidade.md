@@ -18,14 +18,14 @@ Este ficheiro estabelece a **rastreabilidade entre as práticas de definição, 
 
 | Requisito / Domínio (Framework)                          | Prática do Capítulo 02 que responde                            | Nível de Cobertura |
 |----------------------------------------------------------|----------------------------------------------------------------|--------------------|
-| **NIST SSDF** – PW.1 / PW.4                              | Catálogo de requisitos, critérios, validação estruturada       | ✅ Completo         |
-| **OWASP SAMM v2.1** – Design → Security Requirements     | Requisitos por risco e tipo de aplicação, rastreabilidade      | ✅ Nível 3          |
-| **BSIMM13** – Requirements & Attack Models (AM1–AM2)     | Requisitos funcionais de segurança, ligados a ameaças          | ✅ Nível 2          |
-| **OWASP ASVS v5** – All levels (V1–V14)                  | Base para o catálogo de requisitos REQ-XXX                     | ✅ Completo         |
-| **ISO/IEC 27034** – Security Control Specification       | Requisitos testáveis, rastreáveis e auditáveis                 | ✅ Completo         |
-| **CIS Controls v8** – Múltiplos                          | Aplicação prática dos requisitos por controlo específico       | ✅ Completo         |
-| **ENISA SDLC / DevSecOps** – Security Requirements       | Integração de requisitos no ciclo de vida, backlog, validação  | ✅ Completo         |
-| **OWASP DSOMM** – Design & Development                   | Requisitos estruturados, reutilizáveis e alinhados a práticas de maturidade | ⚠️ Parcial      |
+| **NIST SSDF** - PW.1 / PW.4                              | Catálogo de requisitos, critérios, validação estruturada       | ✅ Completo         |
+| **OWASP SAMM v2.1** - Design → Security Requirements     | Requisitos por risco e tipo de aplicação, rastreabilidade      | ✅ Nível 3          |
+| **BSIMM13** - Requirements & Attack Models (AM1–AM2)     | Requisitos funcionais de segurança, ligados a ameaças          | ✅ Nível 2          |
+| **OWASP ASVS v5** - All levels (V1–V14)                  | Base para o catálogo de requisitos REQ-XXX                     | ✅ Completo         |
+| **ISO/IEC 27034** - Security Control Specification       | Requisitos testáveis, rastreáveis e auditáveis                 | ✅ Completo         |
+| **CIS Controls v8** - Múltiplos                          | Aplicação prática dos requisitos por controlo específico       | ✅ Completo         |
+| **ENISA SDLC / DevSecOps** - Security Requirements       | Integração de requisitos no ciclo de vida, backlog, validação  | ✅ Completo         |
+| **OWASP DSOMM** - Design & Development                   | Requisitos estruturados, reutilizáveis e alinhados a práticas de maturidade | ⚠️ Parcial      |
 
 ---
 

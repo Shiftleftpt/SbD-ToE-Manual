@@ -14,7 +14,7 @@ Este capítulo prescreve práticas de **construção segura de imagens, assinatu
 
 ---
 
-## 📦 Categoria 1 – Cadeia de fornecimento de imagens (build & base images)
+## 📦 Categoria 1 - Cadeia de fornecimento de imagens (build & base images)
 
 | Ameaça | Fonte | Como surge | Como a prática mitiga | Controlos associados | 🧩 Mitigada apenas por este capítulo? |
 |---|---|---|---|---|---|
@@ -25,7 +25,7 @@ Este capítulo prescreve práticas de **construção segura de imagens, assinatu
 
 ---
 
-## 🔏 Categoria 2 – Integridade, assinatura e proveniência
+## 🔏 Categoria 2 - Integridade, assinatura e proveniência
 
 | Ameaça | Fonte | Como surge | Como a prática mitiga | Controlos associados | 🧩 Mitigada apenas por este capítulo? |
 |---|---|---|---|---|---|
@@ -34,7 +34,7 @@ Este capítulo prescreve práticas de **construção segura de imagens, assinatu
 | Falta de trilho de auditoria (quem construiu o quê) | BSIMM CMVM 1.3 | Ausência de registo entre commit → build → imagem → deploy | CI/CD com evidência imutável; correlação commit/SHA/pipeline/deploy | *Checklist 14–15*, *Rastreabilidade: DSOMM Ops* | ✅ |
 
 ---
-## 🧰 Categoria 3 – Registos e Repositórios de Containers
+## 🧰 Categoria 3 - Registos e Repositórios de Containers
 
 | Ameaça                               | Como surge                               | Como a prática mitiga                                                                 | Controlos associados                                         | 🧩 Mitigada apenas por este capítulo? |
 |-------------------------------------|-------------------------------------------|----------------------------------------------------------------------------------------|--------------------------------------------------------------|--------------------------------------|
@@ -43,7 +43,7 @@ Este capítulo prescreve práticas de **construção segura de imagens, assinatu
 | Upload de imagens sem controlo      | Qualquer equipa publica artefactos        | _Ownership_ formal, _review_ e aprovação de publicação                                 | *Policies: Governação de Repositórios*                      | ✅ |
 
 
-## 🖧 Categoria 4 – Configuração insegura de runtime (Docker/Kubernetes)
+## 🖧 Categoria 4 - Configuração insegura de runtime (Docker/Kubernetes)
 
 | Ameaça | Fonte | Como surge | Como a prática mitiga | Controlos associados | 🧩 Mitigada apenas por este capítulo? |
 |---|---|---|---|---|---|
@@ -54,7 +54,7 @@ Este capítulo prescreve práticas de **construção segura de imagens, assinatu
 
 ---
 
-## 🔐 Categoria 5 – Segredos e informação sensível
+## 🔐 Categoria 5 - Segredos e informação sensível
 
 | Ameaça | Fonte | Como surge | Como a prática mitiga | Controlos associados | 🧩 Mitigada apenas por este capítulo? |
 |---|---|---|---|---|---|
@@ -63,7 +63,7 @@ Este capítulo prescreve práticas de **construção segura de imagens, assinatu
 
 ---
 
-## 📜 Categoria 6 – Manifestos e _policy-as-code_ (deploy seguro)
+## 📜 Categoria 6 - Manifestos e _policy-as-code_ (deploy seguro)
 
 | Ameaça | Fonte | Como surge | Como a prática mitiga | Controlos associados | 🧩 Mitigada apenas por este capítulo? |
 |---|---|---|---|---|---|
@@ -72,7 +72,7 @@ Este capítulo prescreve práticas de **construção segura de imagens, assinatu
 
 ---
 
-## 📡 Categoria 7 – Observabilidade, _drift_ e *shadow containers*
+## 📡 Categoria 7 - Observabilidade, _drift_ e *shadow containers*
 
 | Ameaça | Fonte | Como surge | Como a prática mitiga | Controlos associados | 🧩 Mitigada apenas por este capítulo? |
 |---|---|---|---|---|---|

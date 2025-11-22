@@ -1,4 +1,4 @@
-.PHONY: help setup install build search tag gaps xref health clean rebuild
+.PHONY: help setup install build search tag gaps xref health auto-tag auto-tag-dry tag-validate clean rebuild
 
 # Colors for output
 BLUE := \033[0;34m
@@ -25,6 +25,11 @@ help:
 	@echo "  make gaps F=...     - Analyze gaps in a file"
 	@echo "  make xref T=...     - Find cross-references (e.g. make xref T='authentication')"
 	@echo ""
+	@echo "$(GREEN)Auto-tagging (Phase B):$(NC)"
+	@echo "  make auto-tag-dry   - Preview auto-tagging changes (dry run)"
+	@echo "  make auto-tag       - Apply auto-tagging to all files"
+	@echo "  make tag-validate   - Validate all tags against canonical"
+	@echo ""
 	@echo "$(GREEN)Utilities:$(NC)"
 	@echo "  make health         - Check system status (Ollama, index, etc)"
 	@echo "  make clean          - Remove virtual environment & cache"
@@ -35,8 +40,8 @@ help:
 	@echo "  $$ make build                    # Build index (~2 min)"
 	@echo "  $$ make search Q='authentication in microservices'"
 	@echo "  $$ make tag F='010-sbd-manual/06-desenvolvimento-seguro/01-intro.md'"
-	@echo "  $$ make gaps F='010-sbd-manual/06-desenvolvimento-seguro/01-intro.md'"
-	@echo "  $$ make xref T='secure development'"
+	@echo "  $$ make auto-tag-dry             # Preview all changes"
+	@echo "  $$ make auto-tag                 # Apply auto-tagging"
 
 # Setup Python virtual environment (one-time)
 setup: $(VENV)
@@ -113,6 +118,30 @@ check_index:
 		echo "$(YELLOW)Build it first: make build$(NC)"; \
 		exit 1; \
 	fi
+
+# Auto-tagging
+auto-tag-dry: $(VENV) check_index
+	@echo "$(BLUE)Auto-tagging all files (DRY RUN)...$(NC)"
+	@echo "$(YELLOW)Preview changes without modifying files$(NC)"
+	$(PYTHON) __main__.py auto-tag --dry-run --verbose --report auto-tag-preview.json
+	@echo ""
+	@echo "$(GREEN)✓ Dry run complete. Review report: auto-tag-preview.json$(NC)"
+
+auto-tag: $(VENV) check_index
+	@echo "$(BLUE)Auto-tagging all files...$(NC)"
+	@echo "$(YELLOW)This will update frontmatter tags in all 294 files$(NC)"
+	@read -p "Continue? [y/N] " confirm; \
+	if [ "$$confirm" = "y" ]; then \
+		$(PYTHON) __main__.py auto-tag --strategy balanced --verbose --report auto-tag-report.json; \
+		echo ""; \
+		echo "$(GREEN)✓ Auto-tagging complete$(NC)"; \
+	else \
+		echo "$(YELLOW)Cancelled$(NC)"; \
+	fi
+
+tag-validate: $(VENV) check_index
+	@echo "$(BLUE)Validating tags against canonical...$(NC)"
+	$(PYTHON) __main__.py tag-validate
 
 # Clean up (remove venv and cache)
 clean:

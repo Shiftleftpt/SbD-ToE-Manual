@@ -1,0 +1,932 @@
+[
+  {
+    "file": "docs/sbd-toe/002-cross-check-normativo/01-intro.md",
+    "filename": "01-intro.md",
+    "size": 9887,
+    "existing_tags": [
+      "compliance",
+      "cross-check",
+      "dora",
+      "gdpr",
+      "hipaa",
+      "iso27001",
+      "nis2",
+      "normativos",
+      "pci-dss",
+      "soc2"
+    ],
+    "existing_count": 10,
+    "human": {
+      "high_confidence": [],
+      "medium_confidence": [
+        {
+          "tag": "auditoria",
+          "confidence": 0.689231312274933,
+          "source": "rag"
+        },
+        {
+          "tag": "cross-check",
+          "confidence": 0.689231312274933,
+          "source": "rag"
+        },
+        {
+          "tag": "dora",
+          "confidence": 0.689231312274933,
+          "source": "rag"
+        },
+        {
+          "tag": "gdpr",
+          "confidence": 0.689231312274933,
+          "source": "rag"
+        },
+        {
+          "tag": "hipaa",
+          "confidence": 0.689231312274933,
+          "source": "rag"
+        },
+        {
+          "tag": "iso27001",
+          "confidence": 0.689231312274933,
+          "source": "rag"
+        },
+        {
+          "tag": "nis2",
+          "confidence": 0.689231312274933,
+          "source": "rag"
+        },
+        {
+          "tag": "normativos",
+          "confidence": 0.689231312274933,
+          "source": "rag"
+        },
+        {
+          "tag": "pci-dss",
+          "confidence": 0.689231312274933,
+          "source": "rag"
+        },
+        {
+          "tag": "soc2",
+          "confidence": 0.689231312274933,
+          "source": "rag"
+        },
+        {
+          "tag": "arquitetura",
+          "confidence": 0.6,
+          "source": "pattern"
+        },
+        {
+          "tag": "segurança",
+          "confidence": 0.5698914813995363,
+          "source": "rag"
+        },
+        {
+          "tag": "excecoes",
+          "confidence": 0.5600885629653931,
+          "source": "rag"
+        },
+        {
+          "tag": "exemplos",
+          "confidence": 0.5600885629653931,
+          "source": "rag"
+        },
+        {
+          "tag": "governance",
+          "confidence": 0.5600885629653931,
+          "source": "rag"
+        },
+        {
+          "tag": "formacao",
+          "confidence": 0.5600885629653931,
+          "source": "rag"
+        },
+        {
+          "tag": "controlo",
+          "confidence": 0.5578182220458985,
+          "source": "rag"
+        },
+        {
+          "tag": "enforcement",
+          "confidence": 0.5578182220458985,
+          "source": "rag"
+        },
+        {
+          "tag": "governação",
+          "confidence": 0.5578182220458985,
+          "source": "rag"
+        },
+        {
+          "tag": "validação",
+          "confidence": 0.5578182220458985,
+          "source": "rag"
+        },
+        {
+          "tag": "boas práticas",
+          "confidence": 0.5433294773101807,
+          "source": "rag"
+        },
+        {
+          "tag": "desenvolvimento",
+          "confidence": 0.5433294773101807,
+          "source": "rag"
+        },
+        {
+          "tag": "requisitos",
+          "confidence": 0.5433294773101807,
+          "source": "rag"
+        },
+        {
+          "tag": "secure coding",
+          "confidence": 0.5433294773101807,
+          "source": "rag"
+        },
+        {
+          "tag": "dast",
+          "confidence": 0.5421781063079835,
+          "source": "rag"
+        },
+        {
+          "tag": "dsomm",
+          "confidence": 0.5421781063079835,
+          "source": "rag"
+        },
+        {
+          "tag": "samm",
+          "confidence": 0.5421781063079835,
+          "source": "rag"
+        },
+        {
+          "tag": "sast",
+          "confidence": 0.5421781063079835,
+          "source": "rag"
+        },
+        {
+          "tag": "slsa",
+          "confidence": 0.5421781063079835,
+          "source": "rag"
+        },
+        {
+          "tag": "ssdf",
+          "confidence": 0.5421781063079835,
+          "source": "rag"
+        },
+        {
+          "tag": "cat_operacional",
+          "confidence": 0.5421781063079835,
+          "source": "rag"
+        },
+        {
+          "tag": "fuzzing",
+          "confidence": 0.5421781063079835,
+          "source": "rag"
+        },
+        {
+          "tag": "grp_implementacao_automacao",
+          "confidence": 0.5421781063079835,
+          "source": "rag"
+        },
+        {
+          "tag": "implementacao-automacao",
+          "confidence": 0.5421781063079835,
+          "source": "rag"
+        },
+        {
+          "tag": "pentesting",
+          "confidence": 0.5421781063079835,
+          "source": "rag"
+        },
+        {
+          "tag": "testes",
+          "confidence": 0.5421781063079835,
+          "source": "rag"
+        },
+        {
+          "tag": "validação contínua",
+          "confidence": 0.5421781063079835,
+          "source": "rag"
+        }
+      ],
+      "count": 0,
+      "error": null
+    },
+    "robot": {
+      "high_confidence": [],
+      "medium_confidence": [],
+      "count": 0,
+      "error": "Standard engine not available"
+    },
+    "metrics": {
+      "human_recall": 0.0,
+      "robot_recall": 0.0,
+      "human_robot_agreement": 0.0,
+      "human_edge": 0.0,
+      "human_new": [],
+      "robot_new": [],
+      "both_new": []
+    }
+  },
+  {
+    "file": "docs/sbd-toe/002-cross-check-normativo/cra/01-intro.md",
+    "filename": "01-intro.md",
+    "size": 12469,
+    "existing_tags": [
+      "cra",
+      "cross-check",
+      "produtos-digitais",
+      "regulamentacao",
+      "sbom",
+      "vulnerabilidades"
+    ],
+    "existing_count": 6,
+    "human": {
+      "high_confidence": [
+        {
+          "tag": "dependencias",
+          "confidence": 0.8706696331501008,
+          "source": "rag+pattern"
+        },
+        {
+          "tag": "vulnerabilidades",
+          "confidence": 0.7206696331501008,
+          "source": "rag"
+        }
+      ],
+      "medium_confidence": [
+        {
+          "tag": "regulamentacao",
+          "confidence": 0.6834864659607411,
+          "source": "rag"
+        },
+        {
+          "tag": "cra",
+          "confidence": 0.6588179732859136,
+          "source": "rag"
+        },
+        {
+          "tag": "produtos-digitais",
+          "confidence": 0.6588179732859136,
+          "source": "rag"
+        },
+        {
+          "tag": "cross-check",
+          "confidence": 0.6445298575200141,
+          "source": "rag"
+        },
+        {
+          "tag": "certificacao",
+          "confidence": 0.6074739456176759,
+          "source": "rag"
+        },
+        {
+          "tag": "csa",
+          "confidence": 0.6074739456176759,
+          "source": "rag"
+        },
+        {
+          "tag": "enisa",
+          "confidence": 0.6074739456176759,
+          "source": "rag"
+        },
+        {
+          "tag": "eu5g",
+          "confidence": 0.6074739456176759,
+          "source": "rag"
+        },
+        {
+          "tag": "eucc",
+          "confidence": 0.6074739456176759,
+          "source": "rag"
+        },
+        {
+          "tag": "eucs",
+          "confidence": 0.6074739456176759,
+          "source": "rag"
+        },
+        {
+          "tag": "procurement",
+          "confidence": 0.6074739456176759,
+          "source": "rag"
+        },
+        {
+          "tag": "cicd",
+          "confidence": 0.6,
+          "source": "pattern"
+        },
+        {
+          "tag": "arquitetura",
+          "confidence": 0.6,
+          "source": "pattern"
+        },
+        {
+          "tag": "testes",
+          "confidence": 0.6,
+          "source": "pattern"
+        },
+        {
+          "tag": "dora",
+          "confidence": 0.5812093496322632,
+          "source": "rag"
+        },
+        {
+          "tag": "finanças",
+          "confidence": 0.5812093496322632,
+          "source": "rag"
+        },
+        {
+          "tag": "ict-risk",
+          "confidence": 0.5812093496322632,
+          "source": "rag"
+        },
+        {
+          "tag": "resiliencia",
+          "confidence": 0.5812093496322632,
+          "source": "rag"
+        },
+        {
+          "tag": "art32",
+          "confidence": 0.544189453125,
+          "source": "rag"
+        },
+        {
+          "tag": "gdpr",
+          "confidence": 0.544189453125,
+          "source": "rag"
+        },
+        {
+          "tag": "privacidade",
+          "confidence": 0.544189453125,
+          "source": "rag"
+        },
+        {
+          "tag": "privacy-by-design",
+          "confidence": 0.544189453125,
+          "source": "rag"
+        },
+        {
+          "tag": "protecao-dados",
+          "confidence": 0.544189453125,
+          "source": "rag"
+        },
+        {
+          "tag": "implementacao",
+          "confidence": 0.5342217445373535,
+          "source": "rag"
+        },
+        {
+          "tag": "playbook",
+          "confidence": 0.5342217445373535,
+          "source": "rag"
+        },
+        {
+          "tag": "roadmap",
+          "confidence": 0.5342217445373535,
+          "source": "rag"
+        }
+      ],
+      "count": 2,
+      "error": null
+    },
+    "robot": {
+      "high_confidence": [],
+      "medium_confidence": [],
+      "count": 0,
+      "error": "Standard engine not available"
+    },
+    "metrics": {
+      "human_recall": 0.167,
+      "robot_recall": 0.0,
+      "human_robot_agreement": 0.0,
+      "human_edge": 0.167,
+      "human_new": [
+        "dependencias"
+      ],
+      "robot_new": [],
+      "both_new": []
+    }
+  },
+  {
+    "file": "docs/sbd-toe/002-cross-check-normativo/dora/01-intro.md",
+    "filename": "01-intro.md",
+    "size": 25385,
+    "existing_tags": [
+      "cross-check",
+      "dora",
+      "finanças",
+      "ict-risk",
+      "regulamentacao",
+      "resiliencia"
+    ],
+    "existing_count": 6,
+    "human": {
+      "high_confidence": [
+        {
+          "tag": "finanças",
+          "confidence": 0.714501827955246,
+          "source": "rag"
+        },
+        {
+          "tag": "ict-risk",
+          "confidence": 0.714501827955246,
+          "source": "rag"
+        },
+        {
+          "tag": "resiliencia",
+          "confidence": 0.714501827955246,
+          "source": "rag"
+        },
+        {
+          "tag": "dependencias",
+          "confidence": 0.7063166856765748,
+          "source": "rag+pattern"
+        }
+      ],
+      "medium_confidence": [
+        {
+          "tag": "dora",
+          "confidence": 0.6699526427686214,
+          "source": "rag"
+        },
+        {
+          "tag": "regulamentacao",
+          "confidence": 0.667179719656706,
+          "source": "rag"
+        },
+        {
+          "tag": "cross-check",
+          "confidence": 0.6381025344394149,
+          "source": "rag"
+        },
+        {
+          "tag": "arquitetura",
+          "confidence": 0.6,
+          "source": "pattern"
+        },
+        {
+          "tag": "threat-modeling",
+          "confidence": 0.6,
+          "source": "pattern"
+        },
+        {
+          "tag": "testes",
+          "confidence": 0.6,
+          "source": "pattern"
+        },
+        {
+          "tag": "certificacao",
+          "confidence": 0.5936626434326172,
+          "source": "rag"
+        },
+        {
+          "tag": "csa",
+          "confidence": 0.5936626434326172,
+          "source": "rag"
+        },
+        {
+          "tag": "enisa",
+          "confidence": 0.5936626434326172,
+          "source": "rag"
+        },
+        {
+          "tag": "eu5g",
+          "confidence": 0.5936626434326172,
+          "source": "rag"
+        },
+        {
+          "tag": "eucc",
+          "confidence": 0.5936626434326172,
+          "source": "rag"
+        },
+        {
+          "tag": "eucs",
+          "confidence": 0.5936626434326172,
+          "source": "rag"
+        },
+        {
+          "tag": "procurement",
+          "confidence": 0.5936626434326172,
+          "source": "rag"
+        },
+        {
+          "tag": "implementacao",
+          "confidence": 0.5615984439849854,
+          "source": "rag"
+        },
+        {
+          "tag": "playbook",
+          "confidence": 0.5615984439849854,
+          "source": "rag"
+        },
+        {
+          "tag": "roadmap",
+          "confidence": 0.5615984439849854,
+          "source": "rag"
+        },
+        {
+          "tag": "cra",
+          "confidence": 0.5563166856765748,
+          "source": "rag"
+        },
+        {
+          "tag": "produtos-digitais",
+          "confidence": 0.5563166856765748,
+          "source": "rag"
+        },
+        {
+          "tag": "vulnerabilidades",
+          "confidence": 0.5563166856765748,
+          "source": "rag"
+        },
+        {
+          "tag": "art32",
+          "confidence": 0.5482536792755127,
+          "source": "rag"
+        },
+        {
+          "tag": "gdpr",
+          "confidence": 0.5482536792755127,
+          "source": "rag"
+        },
+        {
+          "tag": "privacidade",
+          "confidence": 0.5482536792755127,
+          "source": "rag"
+        },
+        {
+          "tag": "privacy-by-design",
+          "confidence": 0.5482536792755127,
+          "source": "rag"
+        },
+        {
+          "tag": "protecao-dados",
+          "confidence": 0.5482536792755127,
+          "source": "rag"
+        }
+      ],
+      "count": 4,
+      "error": null
+    },
+    "robot": {
+      "high_confidence": [],
+      "medium_confidence": [],
+      "count": 0,
+      "error": "Standard engine not available"
+    },
+    "metrics": {
+      "human_recall": 0.5,
+      "robot_recall": 0.0,
+      "human_robot_agreement": 0.0,
+      "human_edge": 0.5,
+      "human_new": [
+        "dependencias"
+      ],
+      "robot_new": [],
+      "both_new": []
+    }
+  },
+  {
+    "file": "docs/sbd-toe/002-cross-check-normativo/enisa-csa/01-intro.md",
+    "filename": "01-intro.md",
+    "size": 9018,
+    "existing_tags": [
+      "certificacao",
+      "csa",
+      "enisa",
+      "eu5g",
+      "eucc",
+      "eucs",
+      "procurement"
+    ],
+    "existing_count": 7,
+    "human": {
+      "high_confidence": [
+        {
+          "tag": "certificacao",
+          "confidence": 0.7840206980705262,
+          "source": "rag"
+        },
+        {
+          "tag": "csa",
+          "confidence": 0.7840206980705262,
+          "source": "rag"
+        },
+        {
+          "tag": "enisa",
+          "confidence": 0.7840206980705262,
+          "source": "rag"
+        },
+        {
+          "tag": "eu5g",
+          "confidence": 0.7840206980705262,
+          "source": "rag"
+        },
+        {
+          "tag": "eucc",
+          "confidence": 0.7840206980705262,
+          "source": "rag"
+        },
+        {
+          "tag": "eucs",
+          "confidence": 0.7840206980705262,
+          "source": "rag"
+        },
+        {
+          "tag": "procurement",
+          "confidence": 0.7840206980705262,
+          "source": "rag"
+        },
+        {
+          "tag": "dependencias",
+          "confidence": 0.7475926160812378,
+          "source": "rag+pattern"
+        }
+      ],
+      "medium_confidence": [
+        {
+          "tag": "regulamentacao",
+          "confidence": 0.6021036672592164,
+          "source": "rag"
+        },
+        {
+          "tag": "testes",
+          "confidence": 0.6,
+          "source": "pattern"
+        },
+        {
+          "tag": "cra",
+          "confidence": 0.5975926160812378,
+          "source": "rag"
+        },
+        {
+          "tag": "produtos-digitais",
+          "confidence": 0.5975926160812378,
+          "source": "rag"
+        },
+        {
+          "tag": "vulnerabilidades",
+          "confidence": 0.5975926160812378,
+          "source": "rag"
+        },
+        {
+          "tag": "cross-check",
+          "confidence": 0.5796554649163038,
+          "source": "rag"
+        },
+        {
+          "tag": "art32",
+          "confidence": 0.5642205715179444,
+          "source": "rag"
+        },
+        {
+          "tag": "gdpr",
+          "confidence": 0.5642205715179444,
+          "source": "rag"
+        },
+        {
+          "tag": "privacidade",
+          "confidence": 0.5642205715179444,
+          "source": "rag"
+        },
+        {
+          "tag": "privacy-by-design",
+          "confidence": 0.5642205715179444,
+          "source": "rag"
+        },
+        {
+          "tag": "protecao-dados",
+          "confidence": 0.5642205715179444,
+          "source": "rag"
+        },
+        {
+          "tag": "dora",
+          "confidence": 0.5492715120315552,
+          "source": "rag"
+        },
+        {
+          "tag": "finanças",
+          "confidence": 0.5492715120315552,
+          "source": "rag"
+        },
+        {
+          "tag": "ict-risk",
+          "confidence": 0.5492715120315552,
+          "source": "rag"
+        },
+        {
+          "tag": "resiliencia",
+          "confidence": 0.5492715120315552,
+          "source": "rag"
+        }
+      ],
+      "count": 8,
+      "error": null
+    },
+    "robot": {
+      "high_confidence": [],
+      "medium_confidence": [],
+      "count": 0,
+      "error": "Standard engine not available"
+    },
+    "metrics": {
+      "human_recall": 1.0,
+      "robot_recall": 0.0,
+      "human_robot_agreement": 0.0,
+      "human_edge": 1.0,
+      "human_new": [
+        "dependencias"
+      ],
+      "robot_new": [],
+      "both_new": []
+    }
+  },
+  {
+    "file": "docs/sbd-toe/002-cross-check-normativo/exemplo-playbook/01-exemplo-toolchain-options.md",
+    "filename": "01-exemplo-toolchain-options.md",
+    "size": 33099,
+    "existing_tags": [
+      "exemplos",
+      "ferramentas",
+      "iac",
+      "logs",
+      "toolchain",
+      "vulnerabilidades"
+    ],
+    "existing_count": 6,
+    "human": {
+      "high_confidence": [
+        {
+          "tag": "ferramentas",
+          "confidence": 0.7731172442436218,
+          "source": "rag"
+        },
+        {
+          "tag": "toolchain",
+          "confidence": 0.7731172442436218,
+          "source": "rag"
+        },
+        {
+          "tag": "vulnerabilidades",
+          "confidence": 0.7731172442436218,
+          "source": "rag"
+        }
+      ],
+      "medium_confidence": [
+        {
+          "tag": "monitorizacao",
+          "confidence": 0.6991514512896538,
+          "source": "rag"
+        },
+        {
+          "tag": "exemplos",
+          "confidence": 0.6500433236584069,
+          "source": "rag"
+        },
+        {
+          "tag": "iac",
+          "confidence": 0.6195664998231456,
+          "source": "rag"
+        },
+        {
+          "tag": "cicd",
+          "confidence": 0.6,
+          "source": "pattern"
+        },
+        {
+          "tag": "arquitetura",
+          "confidence": 0.6,
+          "source": "pattern"
+        },
+        {
+          "tag": "testes",
+          "confidence": 0.6,
+          "source": "pattern"
+        },
+        {
+          "tag": "containers",
+          "confidence": 0.6,
+          "source": "pattern"
+        },
+        {
+          "tag": "dependencias",
+          "confidence": 0.6,
+          "source": "pattern"
+        },
+        {
+          "tag": "segurança",
+          "confidence": 0.5639833563566209,
+          "source": "rag"
+        },
+        {
+          "tag": "kpis",
+          "confidence": 0.5585998058319092,
+          "source": "rag"
+        },
+        {
+          "tag": "metricas",
+          "confidence": 0.5585998058319092,
+          "source": "rag"
+        },
+        {
+          "tag": "targets",
+          "confidence": 0.5585998058319092,
+          "source": "rag"
+        },
+        {
+          "tag": "dora",
+          "confidence": 0.5390263080596924,
+          "source": "rag"
+        },
+        {
+          "tag": "incidentes",
+          "confidence": 0.5390263080596924,
+          "source": "rag"
+        },
+        {
+          "tag": "reporte",
+          "confidence": 0.5390263080596924,
+          "source": "rag"
+        },
+        {
+          "tag": "template",
+          "confidence": 0.5390263080596924,
+          "source": "rag"
+        },
+        {
+          "tag": "dsomm",
+          "confidence": 0.5377694606781006,
+          "source": "rag"
+        },
+        {
+          "tag": "samm",
+          "confidence": 0.5377694606781006,
+          "source": "rag"
+        },
+        {
+          "tag": "slsa",
+          "confidence": 0.5377694606781006,
+          "source": "rag"
+        },
+        {
+          "tag": "ssdf",
+          "confidence": 0.5377694606781006,
+          "source": "rag"
+        },
+        {
+          "tag": "automatização",
+          "confidence": 0.5377694606781006,
+          "source": "rag"
+        },
+        {
+          "tag": "cat_operacional",
+          "confidence": 0.5377694606781006,
+          "source": "rag"
+        },
+        {
+          "tag": "grp_implementacao_automacao",
+          "confidence": 0.5377694606781006,
+          "source": "rag"
+        },
+        {
+          "tag": "implementacao-automacao",
+          "confidence": 0.5377694606781006,
+          "source": "rag"
+        },
+        {
+          "tag": "infraestrutura",
+          "confidence": 0.5377694606781006,
+          "source": "rag"
+        },
+        {
+          "tag": "aplicação prática",
+          "confidence": 0.5364845514297486,
+          "source": "rag"
+        },
+        {
+          "tag": "caso de estudo",
+          "confidence": 0.5364845514297486,
+          "source": "rag"
+        },
+        {
+          "tag": "inception",
+          "confidence": 0.5364845514297486,
+          "source": "rag"
+        }
+      ],
+      "count": 3,
+      "error": null
+    },
+    "robot": {
+      "high_confidence": [],
+      "medium_confidence": [],
+      "count": 0,
+      "error": "Standard engine not available"
+    },
+    "metrics": {
+      "human_recall": 0.5,
+      "robot_recall": 0.0,
+      "human_robot_agreement": 0.0,
+      "human_edge": 0.5,
+      "human_new": [],
+      "robot_new": [],
+      "both_new": []
+    }
+  }
+]

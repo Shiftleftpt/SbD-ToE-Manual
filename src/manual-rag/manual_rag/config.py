@@ -4,10 +4,14 @@ import os
 from pathlib import Path
 
 # Paths
-REPO_ROOT = Path(__file__).parent.parent.parent.parent  # src/manual-rag/../..
+# File location: src/manual-rag/manual_rag/config.py
+# Repository root: /SbD-ToE-Manual (two levels up from src)
+CURRENT_FILE = Path(__file__).resolve()  # src/manual-rag/manual_rag/config.py
+REPO_ROOT = CURRENT_FILE.parent.parent.parent.parent  # Up 4 levels: root
+
 MANUAL_ROOT = REPO_ROOT / "manuals_src" / "docs" / "sbd-toe"
-INDEX_DIR = Path(__file__).parent.parent / "index"
-TAGS_FILE = REPO_ROOT / "tag-normalization" / "canonical-tags.yml"
+INDEX_DIR = CURRENT_FILE.parent.parent / "index"
+TAGS_FILE = REPO_ROOT / "src" / "tag-normalization" / "canonical-tags.yml"
 
 # Embedding model
 # Using all-MiniLM-L6-v2 instead - more reliable and faster

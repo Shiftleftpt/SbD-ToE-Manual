@@ -1,0 +1,457 @@
+[
+  {
+    "file": "sbd-toe/002-cross-check-normativo/01-intro.md",
+    "chapter": "002-cross-check-normativo",
+    "summary": "A segurança do software não acontece num vácuo técnico. | Organizações de diferentes setores estão sujeitas a **regulações, normas e frame",
+    "existing_tags": [
+      "compliance",
+      "cross-check",
+      "dora",
+      "gdpr",
+      "hipaa",
+      "iso27001",
+      "nis2",
+      "normativos",
+      "pci-dss",
+      "soc2"
+    ],
+    "existing_count": 10,
+    "proposed_tags": [
+      "arquitetura",
+      "auditoria",
+      "cross-check",
+      "dora",
+      "gdpr",
+      "hipaa",
+      "iso27001",
+      "nis2",
+      "normativos",
+      "pci-dss",
+      "soc2"
+    ],
+    "proposed_count": 11,
+    "added": [
+      "arquitetura",
+      "auditoria"
+    ],
+    "added_count": 2,
+    "added_rationale": {
+      "auditoria": {
+        "confidence": "69%",
+        "source": "rag",
+        "reasoning": "Found in 68% of similar documents"
+      },
+      "arquitetura": {
+        "confidence": "60%",
+        "source": "pattern",
+        "reasoning": "Content keywords match pattern"
+      }
+    },
+    "removed": [
+      "compliance"
+    ],
+    "removed_count": 1,
+    "retained": [
+      "cross-check",
+      "dora",
+      "gdpr",
+      "hipaa",
+      "iso27001",
+      "nis2",
+      "normativos",
+      "pci-dss",
+      "soc2"
+    ],
+    "retained_count": 9,
+    "approval_status": "PENDING"
+  },
+  {
+    "file": "sbd-toe/002-cross-check-normativo/cra/01-intro.md",
+    "chapter": "cra",
+    "summary": "> Para implementação prática, consulte o [Playbook SbD-ToE 4 CRA](/sbd-toe/cross | >",
+    "existing_tags": [
+      "cra",
+      "cross-check",
+      "produtos-digitais",
+      "regulamentacao",
+      "sbom",
+      "vulnerabilidades"
+    ],
+    "existing_count": 6,
+    "proposed_tags": [
+      "arquitetura",
+      "certificacao",
+      "cicd",
+      "cra",
+      "cross-check",
+      "csa",
+      "dependencias",
+      "enisa",
+      "eu5g",
+      "eucc",
+      "eucs",
+      "procurement",
+      "produtos-digitais",
+      "regulamentacao",
+      "testes",
+      "vulnerabilidades"
+    ],
+    "proposed_count": 16,
+    "added": [
+      "arquitetura",
+      "certificacao",
+      "cicd",
+      "csa",
+      "dependencias",
+      "enisa",
+      "eu5g",
+      "eucc",
+      "eucs",
+      "procurement",
+      "testes"
+    ],
+    "added_count": 11,
+    "added_rationale": {
+      "dependencias": {
+        "confidence": "87%",
+        "source": "rag+pattern",
+        "reasoning": "RAG + keyword pattern agreement"
+      },
+      "certificacao": {
+        "confidence": "61%",
+        "source": "rag",
+        "reasoning": "Found in 60% of similar documents"
+      },
+      "csa": {
+        "confidence": "61%",
+        "source": "rag",
+        "reasoning": "Found in 60% of similar documents"
+      },
+      "enisa": {
+        "confidence": "61%",
+        "source": "rag",
+        "reasoning": "Found in 60% of similar documents"
+      },
+      "eu5g": {
+        "confidence": "61%",
+        "source": "rag",
+        "reasoning": "Found in 60% of similar documents"
+      },
+      "eucc": {
+        "confidence": "61%",
+        "source": "rag",
+        "reasoning": "Found in 60% of similar documents"
+      },
+      "eucs": {
+        "confidence": "61%",
+        "source": "rag",
+        "reasoning": "Found in 60% of similar documents"
+      },
+      "procurement": {
+        "confidence": "61%",
+        "source": "rag",
+        "reasoning": "Found in 60% of similar documents"
+      },
+      "cicd": {
+        "confidence": "60%",
+        "source": "pattern",
+        "reasoning": "Content keywords match pattern"
+      },
+      "arquitetura": {
+        "confidence": "60%",
+        "source": "pattern",
+        "reasoning": "Content keywords match pattern"
+      },
+      "testes": {
+        "confidence": "60%",
+        "source": "pattern",
+        "reasoning": "Content keywords match pattern"
+      }
+    },
+    "removed": [
+      "sbom"
+    ],
+    "removed_count": 1,
+    "retained": [
+      "cra",
+      "cross-check",
+      "produtos-digitais",
+      "regulamentacao",
+      "vulnerabilidades"
+    ],
+    "retained_count": 5,
+    "approval_status": "PENDING"
+  },
+  {
+    "file": "sbd-toe/002-cross-check-normativo/cra/02-playbook.md",
+    "chapter": "cra",
+    "summary": "Objetivo: Transformar requisitos CRA em ações concretas usando controlos existen | Princípio: Reutilizar > Inventar. Muitas capacidades (SBOM, patching, testes) já",
+    "existing_tags": [
+      "cra",
+      "implementacao",
+      "playbook",
+      "produtos-digitais",
+      "roadmap"
+    ],
+    "existing_count": 5,
+    "proposed_tags": [
+      "arquitetura",
+      "art32",
+      "cicd",
+      "cra",
+      "dependencias",
+      "dora",
+      "gdpr",
+      "implementacao",
+      "nis2",
+      "playbook",
+      "privacy-by-design",
+      "produtos-digitais",
+      "roadmap",
+      "testes"
+    ],
+    "proposed_count": 14,
+    "added": [
+      "arquitetura",
+      "art32",
+      "cicd",
+      "dependencias",
+      "dora",
+      "gdpr",
+      "nis2",
+      "privacy-by-design",
+      "testes"
+    ],
+    "added_count": 9,
+    "added_rationale": {
+      "dora": {
+        "confidence": "71%",
+        "source": "rag",
+        "reasoning": "Found in 70% of similar documents"
+      },
+      "nis2": {
+        "confidence": "67%",
+        "source": "rag",
+        "reasoning": "Found in 67% of similar documents"
+      },
+      "art32": {
+        "confidence": "61%",
+        "source": "rag",
+        "reasoning": "Found in 61% of similar documents"
+      },
+      "gdpr": {
+        "confidence": "61%",
+        "source": "rag",
+        "reasoning": "Found in 61% of similar documents"
+      },
+      "privacy-by-design": {
+        "confidence": "61%",
+        "source": "rag",
+        "reasoning": "Found in 61% of similar documents"
+      },
+      "cicd": {
+        "confidence": "60%",
+        "source": "pattern",
+        "reasoning": "Content keywords match pattern"
+      },
+      "arquitetura": {
+        "confidence": "60%",
+        "source": "pattern",
+        "reasoning": "Content keywords match pattern"
+      },
+      "testes": {
+        "confidence": "60%",
+        "source": "pattern",
+        "reasoning": "Content keywords match pattern"
+      },
+      "dependencias": {
+        "confidence": "60%",
+        "source": "pattern",
+        "reasoning": "Content keywords match pattern"
+      }
+    },
+    "removed": [],
+    "removed_count": 0,
+    "retained": [
+      "cra",
+      "implementacao",
+      "playbook",
+      "produtos-digitais",
+      "roadmap"
+    ],
+    "retained_count": 5,
+    "approval_status": "PENDING"
+  },
+  {
+    "file": "sbd-toe/002-cross-check-normativo/dora/01-intro.md",
+    "chapter": "dora",
+    "summary": "> Para implementação prática, consulte o [Playbook SbD-ToE 4 DORA](/sbd-toe/cros | >",
+    "existing_tags": [
+      "cross-check",
+      "dora",
+      "finanças",
+      "ict-risk",
+      "regulamentacao",
+      "resiliencia"
+    ],
+    "existing_count": 6,
+    "proposed_tags": [
+      "arquitetura",
+      "cross-check",
+      "dependencias",
+      "dora",
+      "finanças",
+      "ict-risk",
+      "regulamentacao",
+      "resiliencia",
+      "testes",
+      "threat-modeling"
+    ],
+    "proposed_count": 10,
+    "added": [
+      "arquitetura",
+      "dependencias",
+      "testes",
+      "threat-modeling"
+    ],
+    "added_count": 4,
+    "added_rationale": {
+      "arquitetura": {
+        "confidence": "60%",
+        "source": "pattern",
+        "reasoning": "Content keywords match pattern"
+      },
+      "threat-modeling": {
+        "confidence": "60%",
+        "source": "pattern",
+        "reasoning": "Content keywords match pattern"
+      },
+      "testes": {
+        "confidence": "60%",
+        "source": "pattern",
+        "reasoning": "Content keywords match pattern"
+      },
+      "dependencias": {
+        "confidence": "60%",
+        "source": "pattern",
+        "reasoning": "Content keywords match pattern"
+      }
+    },
+    "removed": [],
+    "removed_count": 0,
+    "retained": [
+      "cross-check",
+      "dora",
+      "finanças",
+      "ict-risk",
+      "regulamentacao",
+      "resiliencia"
+    ],
+    "retained_count": 6,
+    "approval_status": "PENDING"
+  },
+  {
+    "file": "sbd-toe/002-cross-check-normativo/dora/02-playbook.md",
+    "chapter": "dora",
+    "summary": "Este playbook mapeia **requisitos DORA (Regulamento UE 2022/2554) para ações SbD | **Princípio:** Implementar SbD-ToE = Cumprir DORA. Não é complementar, é direto.",
+    "existing_tags": [
+      "dora",
+      "implementacao",
+      "playbook",
+      "roadmap"
+    ],
+    "existing_count": 4,
+    "proposed_tags": [
+      "art32",
+      "cicd",
+      "cra",
+      "dependencias",
+      "dora",
+      "gdpr",
+      "implementacao",
+      "nis2",
+      "playbook",
+      "privacy-by-design",
+      "produtos-digitais",
+      "roadmap",
+      "testes",
+      "threat-modeling"
+    ],
+    "proposed_count": 14,
+    "added": [
+      "art32",
+      "cicd",
+      "cra",
+      "dependencias",
+      "gdpr",
+      "nis2",
+      "privacy-by-design",
+      "produtos-digitais",
+      "testes",
+      "threat-modeling"
+    ],
+    "added_count": 10,
+    "added_rationale": {
+      "produtos-digitais": {
+        "confidence": "65%",
+        "source": "rag",
+        "reasoning": "Found in 64% of similar documents"
+      },
+      "nis2": {
+        "confidence": "65%",
+        "source": "rag",
+        "reasoning": "Found in 64% of similar documents"
+      },
+      "cra": {
+        "confidence": "63%",
+        "source": "rag",
+        "reasoning": "Found in 63% of similar documents"
+      },
+      "art32": {
+        "confidence": "61%",
+        "source": "rag",
+        "reasoning": "Found in 61% of similar documents"
+      },
+      "privacy-by-design": {
+        "confidence": "61%",
+        "source": "rag",
+        "reasoning": "Found in 61% of similar documents"
+      },
+      "gdpr": {
+        "confidence": "61%",
+        "source": "rag",
+        "reasoning": "Found in 61% of similar documents"
+      },
+      "cicd": {
+        "confidence": "60%",
+        "source": "pattern",
+        "reasoning": "Content keywords match pattern"
+      },
+      "threat-modeling": {
+        "confidence": "60%",
+        "source": "pattern",
+        "reasoning": "Content keywords match pattern"
+      },
+      "testes": {
+        "confidence": "60%",
+        "source": "pattern",
+        "reasoning": "Content keywords match pattern"
+      },
+      "dependencias": {
+        "confidence": "60%",
+        "source": "pattern",
+        "reasoning": "Content keywords match pattern"
+      }
+    },
+    "removed": [],
+    "removed_count": 0,
+    "retained": [
+      "dora",
+      "implementacao",
+      "playbook",
+      "roadmap"
+    ],
+    "retained_count": 4,
+    "approval_status": "PENDING"
+  }
+]

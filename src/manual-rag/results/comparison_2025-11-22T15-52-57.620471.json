@@ -1,0 +1,282 @@
+[
+  {
+    "file": "docs/sbd-toe/002-cross-check-normativo/01-intro.md",
+    "filename": "01-intro.md",
+    "size": 9887,
+    "existing_tags": [
+      "compliance",
+      "cross-check",
+      "dora",
+      "gdpr",
+      "hipaa",
+      "iso27001",
+      "nis2",
+      "normativos",
+      "pci-dss",
+      "soc2"
+    ],
+    "existing_count": 10,
+    "human": {
+      "high_confidence": [],
+      "medium_confidence": [
+        {
+          "tag": "arquitetura",
+          "confidence": 0.6,
+          "source": "pattern"
+        }
+      ],
+      "count": 0,
+      "error": null
+    },
+    "robot": {
+      "high_confidence": [],
+      "medium_confidence": [],
+      "count": 0,
+      "error": "Standard engine not available"
+    },
+    "metrics": {
+      "human_recall": 0.0,
+      "robot_recall": 0.0,
+      "human_robot_agreement": 0.0,
+      "human_edge": 0.0,
+      "human_new": [],
+      "robot_new": [],
+      "both_new": []
+    }
+  },
+  {
+    "file": "docs/sbd-toe/002-cross-check-normativo/cra/01-intro.md",
+    "filename": "01-intro.md",
+    "size": 12469,
+    "existing_tags": [
+      "cra",
+      "cross-check",
+      "produtos-digitais",
+      "regulamentacao",
+      "sbom",
+      "vulnerabilidades"
+    ],
+    "existing_count": 6,
+    "human": {
+      "high_confidence": [],
+      "medium_confidence": [
+        {
+          "tag": "cicd",
+          "confidence": 0.6,
+          "source": "pattern"
+        },
+        {
+          "tag": "arquitetura",
+          "confidence": 0.6,
+          "source": "pattern"
+        },
+        {
+          "tag": "testes",
+          "confidence": 0.6,
+          "source": "pattern"
+        },
+        {
+          "tag": "dependencias",
+          "confidence": 0.5350993156433106,
+          "source": "rag+pattern"
+        }
+      ],
+      "count": 0,
+      "error": null
+    },
+    "robot": {
+      "high_confidence": [],
+      "medium_confidence": [],
+      "count": 0,
+      "error": "Standard engine not available"
+    },
+    "metrics": {
+      "human_recall": 0.0,
+      "robot_recall": 0.0,
+      "human_robot_agreement": 0.0,
+      "human_edge": 0.0,
+      "human_new": [],
+      "robot_new": [],
+      "both_new": []
+    }
+  },
+  {
+    "file": "docs/sbd-toe/002-cross-check-normativo/dora/01-intro.md",
+    "filename": "01-intro.md",
+    "size": 25385,
+    "existing_tags": [
+      "cross-check",
+      "dora",
+      "finanças",
+      "ict-risk",
+      "regulamentacao",
+      "resiliencia"
+    ],
+    "existing_count": 6,
+    "human": {
+      "high_confidence": [],
+      "medium_confidence": [
+        {
+          "tag": "arquitetura",
+          "confidence": 0.6,
+          "source": "pattern"
+        },
+        {
+          "tag": "threat-modeling",
+          "confidence": 0.6,
+          "source": "pattern"
+        },
+        {
+          "tag": "testes",
+          "confidence": 0.6,
+          "source": "pattern"
+        },
+        {
+          "tag": "dependencias",
+          "confidence": 0.6,
+          "source": "pattern"
+        }
+      ],
+      "count": 0,
+      "error": null
+    },
+    "robot": {
+      "high_confidence": [],
+      "medium_confidence": [],
+      "count": 0,
+      "error": "Standard engine not available"
+    },
+    "metrics": {
+      "human_recall": 0.0,
+      "robot_recall": 0.0,
+      "human_robot_agreement": 0.0,
+      "human_edge": 0.0,
+      "human_new": [],
+      "robot_new": [],
+      "both_new": []
+    }
+  },
+  {
+    "file": "docs/sbd-toe/002-cross-check-normativo/enisa-csa/01-intro.md",
+    "filename": "01-intro.md",
+    "size": 9018,
+    "existing_tags": [
+      "certificacao",
+      "csa",
+      "enisa",
+      "eu5g",
+      "eucc",
+      "eucs",
+      "procurement"
+    ],
+    "existing_count": 7,
+    "human": {
+      "high_confidence": [],
+      "medium_confidence": [
+        {
+          "tag": "testes",
+          "confidence": 0.6,
+          "source": "pattern"
+        },
+        {
+          "tag": "dependencias",
+          "confidence": 0.6,
+          "source": "pattern"
+        }
+      ],
+      "count": 0,
+      "error": null
+    },
+    "robot": {
+      "high_confidence": [],
+      "medium_confidence": [],
+      "count": 0,
+      "error": "Standard engine not available"
+    },
+    "metrics": {
+      "human_recall": 0.0,
+      "robot_recall": 0.0,
+      "human_robot_agreement": 0.0,
+      "human_edge": 0.0,
+      "human_new": [],
+      "robot_new": [],
+      "both_new": []
+    }
+  },
+  {
+    "file": "docs/sbd-toe/002-cross-check-normativo/exemplo-playbook/01-exemplo-toolchain-options.md",
+    "filename": "01-exemplo-toolchain-options.md",
+    "size": 33099,
+    "existing_tags": [
+      "exemplos",
+      "ferramentas",
+      "iac",
+      "logs",
+      "toolchain",
+      "vulnerabilidades"
+    ],
+    "existing_count": 6,
+    "human": {
+      "high_confidence": [],
+      "medium_confidence": [
+        {
+          "tag": "cicd",
+          "confidence": 0.6,
+          "source": "pattern"
+        },
+        {
+          "tag": "arquitetura",
+          "confidence": 0.6,
+          "source": "pattern"
+        },
+        {
+          "tag": "testes",
+          "confidence": 0.6,
+          "source": "pattern"
+        },
+        {
+          "tag": "containers",
+          "confidence": 0.6,
+          "source": "pattern"
+        },
+        {
+          "tag": "dependencias",
+          "confidence": 0.6,
+          "source": "pattern"
+        },
+        {
+          "tag": "roadmap",
+          "confidence": 0.534895985841751,
+          "source": "rag"
+        },
+        {
+          "tag": "implementacao",
+          "confidence": 0.5202220668375492,
+          "source": "rag"
+        },
+        {
+          "tag": "produtos-digitais",
+          "confidence": 0.5171264171600342,
+          "source": "rag"
+        }
+      ],
+      "count": 0,
+      "error": null
+    },
+    "robot": {
+      "high_confidence": [],
+      "medium_confidence": [],
+      "count": 0,
+      "error": "Standard engine not available"
+    },
+    "metrics": {
+      "human_recall": 0.0,
+      "robot_recall": 0.0,
+      "human_robot_agreement": 0.0,
+      "human_edge": 0.0,
+      "human_new": [],
+      "robot_new": [],
+      "both_new": []
+    }
+  }
+]

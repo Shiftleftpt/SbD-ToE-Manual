@@ -51,60 +51,24 @@ def cmd_search(args):
 
 
 def cmd_tag(args):
-    """Suggest tags for a file"""
-    searcher = SemanticSearch()
-    result = searcher.suggest_tags(args.file, query=args.query)
-    
-    if args.json:
-        print(json.dumps(result, indent=2))
-    else:
-        print(f"Suggested tags for: {args.file}\n")
-        print(f"Tags: {', '.join(result['suggested_tags'])}")
-        print(f"Confidence: {result['confidence']:.1%}\n")
-        print("Reasoning:")
-        print(result['reasoning'])
+    """Suggest tags for a file (REMOVED - use rag_tools.tagging.AutoTagger instead)"""
+    print("❌ Tag suggestion has been moved to rag_tools.tagging.AutoTagger")
+    print("   Use: from rag_tools.tagging import AutoTagger")
+    sys.exit(1)
 
 
 def cmd_gaps(args):
-    """Analyze gaps in document"""
-    searcher = SemanticSearch()
-    result = searcher.analyze_gaps(args.file)
-    
-    if args.json:
-        print(json.dumps(result, indent=2))
-    else:
-        print(f"Gap analysis for: {args.file}\n")
-        print("Potential gaps:")
-        print(result['potential_gaps'])
-        print(f"\nCompared with similar documents:")
-        for doc in result['similar_documents']:
-            print(f"  - {doc}")
+    """Analyze gaps in document (REMOVED - analysis functions moved to separate module)"""
+    print("❌ Gap analysis is not part of the core RAG module")
+    print("   SemanticSearch.search() provides the query functionality")
+    sys.exit(1)
 
 
 def cmd_xref(args):
-    """Find cross-references for a topic"""
-    searcher = SemanticSearch()
-    result = searcher.cross_reference(args.topic)
-    
-    if args.json:
-        print(json.dumps({
-            "query": result["query"],
-            "total_related": result["total_related"],
-            "by_chapter": {
-                chapter: [{"path": d["path"], "similarity": d["similarity"]} 
-                         for d in docs]
-                for chapter, docs in result["by_chapter"].items()
-            }
-        }, indent=2))
-    else:
-        print(f"Cross-references for: {result['query']}\n")
-        print(f"Total related documents: {result['total_related']}\n")
-        
-        for chapter, docs in sorted(result["by_chapter"].items()):
-            print(f"{chapter}/")
-            for doc in docs:
-                print(f"  - {doc['path']} ({doc['similarity']:.1%})")
-            print()
+    """Find cross-references for a topic (REMOVED - use SemanticSearch.search() directly)"""
+    print("❌ Cross-reference analysis is not part of the core RAG module")
+    print("   Use: SemanticSearch.search(topic, top_k=10)")
+    sys.exit(1)
 
 
 def cmd_health(args):
@@ -230,19 +194,19 @@ if __name__ == "__main__":
     search_parser.add_argument("--top-k", type=int, default=5, help="Number of results")
     search_parser.set_defaults(func=cmd_search)
     
-    # Tag command
-    tag_parser = subparsers.add_parser("tag", help="Suggest tags for a file")
+    # Tag command (REMOVED - functionality moved to rag_tools.tagging)
+    tag_parser = subparsers.add_parser("tag", help="[DEPRECATED] Use rag_tools.tagging.AutoTagger")
     tag_parser.add_argument("file", help="File path")
     tag_parser.add_argument("--query", help="Optional query")
     tag_parser.set_defaults(func=cmd_tag)
     
-    # Gaps command
-    gaps_parser = subparsers.add_parser("gaps", help="Analyze gaps in document")
+    # Gaps command (REMOVED - not part of core RAG)
+    gaps_parser = subparsers.add_parser("gaps", help="[DEPRECATED] Gap analysis removed")
     gaps_parser.add_argument("file", help="File path to analyze")
     gaps_parser.set_defaults(func=cmd_gaps)
     
-    # Cross-reference command
-    xref_parser = subparsers.add_parser("xref", help="Find cross-references")
+    # Cross-reference command (REMOVED - use search() directly)
+    xref_parser = subparsers.add_parser("xref", help="[DEPRECATED] Use SemanticSearch.search()")
     xref_parser.add_argument("topic", help="Topic to find references for")
     xref_parser.set_defaults(func=cmd_xref)
     

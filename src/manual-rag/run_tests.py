@@ -8,8 +8,9 @@ Usage:
     python run_tests.py rag -v             # Verbose RAG tests
     python run_tests.py rag --coverage     # With coverage
     
-This maintains separation between RAG and tagging contexts.
-Each context runs independently without interference.
+Tests are organized by module:
+- rag_core/tests/ → Infrastructure tests
+- rag_tools/tests/ → Tagging tests
 """
 
 import subprocess
@@ -18,7 +19,7 @@ from pathlib import Path
 
 
 def main():
-    """Run tests with pytest, respecting context separation"""
+    """Run tests with pytest, respecting module organization"""
     try:
         import pytest
     except ImportError:
@@ -48,29 +49,39 @@ def main():
     cmd = ["pytest"]
     
     if test_context == "rag":
-        cmd.append("tests/rag/")
-        print("🧪 Running RAG Core tests (context isolation)")
-        print("   Location: tests/rag/")
-        print("   Coverage: rag_core only\n")
+        cmd.append("rag_core/tests/")
+        print("🧪 Running RAG Core tests")
+        print("   Location: rag_core/tests/")
+        print("   Module: rag_core\n")
     elif test_context == "tagging":
-        cmd.append("tests/tagging/")
-        print("🏷️  Running Tagging tests (context isolation)")
-        print("   Location: tests/tagging/")
-        print("   Coverage: rag_tools only\n")
+        cmd.append("rag_tools/tests/")
+        print("🏷️  Running Tagging tests")
+        print("   Location: rag_tools/tests/")
+        print("   Module: rag_tools\n")
     else:
-        # Run all, but separately for clarity
+        # Run all
         print("🧪 Running all tests")
-        print("   - RAG Core (tests/rag/)")
-        print("   - Tagging (tests/tagging/)\n")
+        print("   - rag_core/tests/")
+        print("   - rag_tools/tests/\n")
     
     # Add pytest arguments
     if "--coverage" in pytest_args:
         pytest_args.remove("--coverage")
-        cmd.extend([
-            "--cov=rag_core" if not test_context or test_context == "rag" else "--cov=rag_tools",
-            "--cov-report=html",
-            "--cov-report=term"
-        ])
+        cov_module = "rag_core" if test_context == "rag" else "rag_tools" if test_context == "tagging" else ""
+        if cov_module:
+            cmd.extend([
+                f"--cov={cov_module}",
+                "--cov-report=html",
+                "--cov-report=term"
+            ])
+        else:
+            # No context specified, measure both
+            cmd.extend([
+                "--cov=rag_core",
+                "--cov=rag_tools",
+                "--cov-report=html",
+                "--cov-report=term"
+            ])
         print("📊 Coverage report will be saved to: htmlcov/index.html\n")
     
     # Add remaining args

@@ -1,6 +1,8 @@
 """Query interface - Semantic search only
 
 Responsibility: Pure semantic search - query the index for similar documents.
+The index_dir path is injected from rag_tools.config to keep rag_core independent.
+
 This module does NOT handle:
 - Tag suggestion (belongs to rag_tools.tagging.AutoTagger)
 - Gap analysis (belongs to analysis tools)
@@ -9,7 +11,8 @@ This module does NOT handle:
 """
 
 import json
-from typing import List, Dict
+from pathlib import Path
+from typing import List, Dict, Optional
 from sentence_transformers import SentenceTransformer
 import chromadb
 
@@ -17,13 +20,26 @@ from ..config import INDEX_DIR, EMBEDDING_MODEL, TOP_K, MIN_SIMILARITY
 
 
 class SemanticSearch:
-    """Semantic search interface - query similar documents from the index"""
+    """Semantic search interface - query similar documents from the index
     
-    def __init__(self):
+    The index_dir is injected to keep rag_core independent from application paths.
+    """
+    
+    def __init__(self, index_dir: Optional[Path] = None):
+        """Initialize semantic search
+        
+        Args:
+            index_dir: Directory containing the Chroma index.
+                      If None, uses rag_core.config.INDEX_DIR (for dev/testing)
+        """
+        if index_dir is None:
+            index_dir = INDEX_DIR
+        
+        self.index_dir = Path(index_dir)
         self.embedding_model = SentenceTransformer(EMBEDDING_MODEL)
         
         # Connect to persistent index (new Chroma API)
-        self.client = chromadb.PersistentClient(path=str(INDEX_DIR / "chroma"))
+        self.client = chromadb.PersistentClient(path=str(self.index_dir / "chroma"))
         self.collection = self.client.get_collection("manual")
     
     @staticmethod

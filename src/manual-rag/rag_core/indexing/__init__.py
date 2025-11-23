@@ -1,40 +1,49 @@
-"""Indexing module - Build and manage manual index"""
+"""Indexing module - Build and manage RAG indexes
+
+Pure RAG infrastructure containing:
+- ManualIndexer: Simple full-document indexing (fast, easy)
+- ChunkedIndexBuilder: Advanced chunked indexing (better retrieval, more metadata)
+
+No application-specific concerns.
+"""
 
 import os
 import json
 from pathlib import Path
-from typing import List, Dict
+from typing import List, Dict, Optional
 from sentence_transformers import SentenceTransformer
 import chromadb
 import yaml
 
-from ..config import MANUAL_ROOT, INDEX_DIR, EMBEDDING_MODEL, TOP_K, TAGS_FILE
+from ..config import EMBEDDING_MODEL, TOP_K
+from .chunked import (
+    DocumentChunker,
+    JSONLDatasetBuilder,
+    ChunkedIndexBuilder,
+)
+
 
 class ManualIndexer:
-    def __init__(self):
+    """Build and manage semantic search index"""
+    
+    def __init__(self, manual_root: Path, index_dir: Path):
+        """Initialize indexer with paths
+        
+        Args:
+            manual_root: Root directory containing markdown files
+            index_dir: Directory to store the index
+        """
+        self.manual_root = Path(manual_root)
+        self.index_dir = Path(index_dir)
+        
         self.embedding_model = SentenceTransformer(EMBEDDING_MODEL)
         
         # Setup Chroma with new API (persistent storage)
-        self.client = chromadb.PersistentClient(path=str(INDEX_DIR / "chroma"))
+        self.index_dir.mkdir(parents=True, exist_ok=True)
+        self.client = chromadb.PersistentClient(path=str(self.index_dir / "chroma"))
         self.collection = self.client.get_or_create_collection("manual")
-        
-        # Load canonical tags
-        self.tags = self._load_tags()
-        
-    def _load_tags(self) -> Dict[str, any]:
-        """Load canonical tags from YAML"""
-        if not TAGS_FILE.exists():
-            print(f"Warning: Tags file not found at {TAGS_FILE}")
-            return {}
-        
-        try:
-            with open(TAGS_FILE, 'r', encoding='utf-8') as f:
-                return yaml.safe_load(f) or {}
-        except Exception as e:
-            print(f"Error loading tags: {e}")
-            return {}
     
-    def _read_file(self, path: Path) -> Dict:
+    def _read_file(self, path: Path) -> Optional[Dict]:
         """Read markdown file and extract metadata"""
         try:
             with open(path, 'r', encoding='utf-8') as f:
@@ -52,7 +61,7 @@ class ManualIndexer:
                         pass
             
             return {
-                "path": str(path.relative_to(MANUAL_ROOT)),
+                "path": str(path.relative_to(self.manual_root)),
                 "content": content.strip(),
                 "frontmatter": frontmatter,
                 "title": frontmatter.get("title", path.stem),
@@ -76,7 +85,7 @@ class ManualIndexer:
             self.collection = self.client.get_or_create_collection("manual")
         
         # Find all markdown files
-        md_files = list(MANUAL_ROOT.rglob("*.md"))
+        md_files = list(self.manual_root.rglob("*.md"))
         md_files = [f for f in md_files if not f.name.endswith(".2review")]
         
         stats = {
@@ -127,13 +136,12 @@ class ManualIndexer:
         
         return stats
 
-if __name__ == "__main__":
-    import sys
-    
-    force_rebuild = "--rebuild" in sys.argv
-    
-    print(f"Building index from: {MANUAL_ROOT}")
-    indexer = ManualIndexer()
-    stats = indexer.index_all(force_rebuild=force_rebuild)
-    
-    print(f"\nIndex saved to: {INDEX_DIR}")
+
+__all__ = [
+    "ManualIndexer",
+    "DocumentChunker",
+    "JSONLDatasetBuilder",
+    "ChunkedIndexBuilder",
+]
+
+

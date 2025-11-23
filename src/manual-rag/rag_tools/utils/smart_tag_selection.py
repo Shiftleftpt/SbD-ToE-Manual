@@ -15,7 +15,7 @@ from dataclasses import dataclass
 sys.path.insert(0, str(Path(__file__).parent.parent.parent / "tag-normalization"))
 
 from manual_rag.tagging import AutoTagger, FileTagUpdater
-from rag_tools.config import MANUAL_ROOT
+from rag_core.config import MANUAL_ROOT
 
 
 @dataclass

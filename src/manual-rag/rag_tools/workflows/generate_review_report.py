@@ -16,7 +16,7 @@ sys.path.insert(0, str(Path(__file__).parent.parent.parent.parent))
 
 from rag_tools.tagging import AutoTagger, FileTagUpdater
 from rag_tools.utils.smart_tag_selection import select_tags_for_display
-from rag_tools.config import MANUAL_ROOT
+from rag_core.config import MANUAL_ROOT
 
 
 def get_document_summary(file_path: Path, content: str) -> str:

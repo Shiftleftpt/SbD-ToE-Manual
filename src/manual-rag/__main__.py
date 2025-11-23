@@ -6,27 +6,22 @@ import json
 import sys
 from pathlib import Path
 
-from manual_rag.query import SemanticSearch
-from manual_rag.indexing import ManualIndexer
-from manual_rag.local_llm import OllamaClient
-from manual_rag.batch import BatchAutoTagger
+from rag_core import SemanticSearch, ManualIndexer, OllamaClient
+from rag_core.config import MANUAL_ROOT, INDEX_DIR
 
 
 def cmd_index(args):
     """Build the manual index"""
-    print("Building manual index...")
-    indexer = ManualIndexer()
-    stats = indexer.index_all(force_rebuild=args.rebuild)
+    from rag_core.indexing.build import main as build_index
     
-    if args.json:
-        print(json.dumps(stats, indent=2))
-    else:
-        print(f"✓ Indexed {stats['indexed']} documents")
+    # Pass rebuild flag as sys.argv for the build script
+    sys.argv = ["index", "--rebuild"] if args.rebuild else ["index"]
+    return build_index()
 
 
 def cmd_search(args):
     """Search for similar documents"""
-    searcher = SemanticSearch()
+    searcher = SemanticSearch(INDEX_DIR)
     results = searcher.search(args.query, top_k=args.top_k)
     
     if not results:

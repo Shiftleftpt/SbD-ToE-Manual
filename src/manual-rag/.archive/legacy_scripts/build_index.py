@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 """Build index for Manual RAG system"""
 
-from manual_rag.indexing import ManualIndexer
-from rag_tools.config import MANUAL_ROOT
+from rag_core import ManualIndexer
+from rag_core.config import MANUAL_ROOT, INDEX_DIR
 
 if __name__ == "__main__":
     import sys
@@ -13,7 +13,7 @@ if __name__ == "__main__":
     print(f"Manual location: {MANUAL_ROOT}")
     print()
     
-    indexer = ManualIndexer()
+    indexer = ManualIndexer(MANUAL_ROOT, INDEX_DIR)
     stats = indexer.index_all(force_rebuild=force_rebuild)
     
     print(f"\n✓ Index ready for queries")

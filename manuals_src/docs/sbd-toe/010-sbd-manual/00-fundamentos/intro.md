@@ -10,10 +10,12 @@ tags:
 - fundamentos
 - introducao
 - manual
+- responsabilidades
 title: Fundamentos do Manual Técnico
 categoria: basilar
 group: fundamentos_contexto
 ---
+
 
 
 # Fundamentos do Manual Técnico

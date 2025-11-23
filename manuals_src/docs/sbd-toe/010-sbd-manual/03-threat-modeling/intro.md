@@ -2,15 +2,18 @@
 description: Identificação e mitigação estruturada de ameaças durante o ciclo de desenvolvimento
 id: intro
 tags:
-- DSOMM
-- SAMM
-- SLSA
-- SSDF
+- threat-modeling
+- segurança
+- cicd
+- dsomm
+- samm
+- ssdf
 - arquitetura
 title: 📘 Capítulo 3 - Threat Modeling
 categoria: basilar
 group: engenharia_segura
 ---
+
 
 
 

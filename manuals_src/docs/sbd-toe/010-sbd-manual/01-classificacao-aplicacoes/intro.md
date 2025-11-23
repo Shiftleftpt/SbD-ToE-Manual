@@ -3,6 +3,8 @@ description: Determinação da criticidade de aplicações para aplicar proporci
   nos controlos de segurança
 id: intro
 tags:
+- arquitetura
+- threat-modeling
 - base
 - ciclo-vida
 - classificacao
@@ -12,6 +14,7 @@ title: Classificação da Criticidade Aplicacional
 categoria: basilar
 group: fundamentos_contexto
 ---
+
 
 
 <details className="basilar-admonition">

@@ -4,15 +4,18 @@ description: Práticas de segurança para pipelines de integração e entrega co
 id: intro
 sidebar_position: 0
 tags:
-- automação
 - cicd
-- devsecops
+- dependencias
+- containers
 - implementacao-automacao
-- pipelines
+- segurança
+- dsomm
+- slsa
 title: CI/CD Seguro
 categoria: operacional
 group: implementacao_automacao
 ---
+
 
 
 :::tip Capítulo Operacional

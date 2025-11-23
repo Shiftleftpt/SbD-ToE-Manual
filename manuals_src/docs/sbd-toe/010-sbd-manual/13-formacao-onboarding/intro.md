@@ -4,15 +4,18 @@ description: Estratégias e práticas para garantir que equipas, perfis e stakeh
 id: intro
 sidebar_position: 0
 tags:
-- DSOMM
-- SAMM
+- cicd
+- formacao
+- fundamentos
 - aprendizagem
 - capacitacao
 - champions
+- kpis
 title: Formação e Capacitação
 categoria: organizacional
 group: fundamentos_contexto
 ---
+
 
 
 :::note Capítulo Organizacional

@@ -4,15 +4,18 @@ description: Princípios e práticas para assegurar visibilidade, deteção e re
 id: intro
 sidebar_position: 0
 tags:
-- deteção
-- incidentes
-- logs
-- monitorizacao
-- métricas
+- cicd
+- dependencias
+- implementacao-automacao
+- segurança
+- dsomm
+- slsa
+- ssdf
 title: Monitorização & Operações
 categoria: operacional
 group: operacao_melhoria
 ---
+
 
 
 :::tip Capítulo Operacional

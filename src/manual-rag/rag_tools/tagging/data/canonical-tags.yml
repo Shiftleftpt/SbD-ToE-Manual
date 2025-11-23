@@ -690,33 +690,17 @@ supply chain:
   label: supply chain
   description: Supply chain security
   aliases: []
-cat_basilar:
-  label: cat_basilar
-  description: 'Category: Basilar (foundational)'
-  aliases: []
-cat_operacional:
-  label: cat_operacional
-  description: 'Category: Operacional (operational)'
-  aliases: []
 deteção:
   label: deteção
   description: Detection capabilities
   aliases:
   - deteccao
-grp_fundamentos_contexto:
-  label: grp_fundamentos_contexto
-  description: 'Group: Fundamentos e Contexto Organizacional'
-  aliases: []
 policy:
   label: policy
   description: Policy-related content
   aliases:
   - policies
   - politicas
-grp_implementacao_automacao:
-  label: grp_implementacao_automacao
-  description: 'Group: Implementação e Automação'
-  aliases: []
 tema:requisitos:
   label: tema:requisitos
   description: 'Topic: Requisitos'
@@ -724,10 +708,6 @@ tema:requisitos:
 validação contínua:
   label: validação contínua
   description: validação contínua related content
-  aliases: []
-grp_engenharia_segura:
-  label: grp_engenharia_segura
-  description: 'Group: Engenharia Segura'
   aliases: []
 SAST:
   label: SAST
@@ -868,14 +848,6 @@ versionamento:
 ci-cd:
   label: ci-cd
   description: ci-cd related content
-  aliases: []
-grp_operacao_melhoria:
-  label: grp_operacao_melhoria
-  description: 'Group: Operação e Melhoria Contínua'
-  aliases: []
-cat_organizacional:
-  label: cat_organizacional
-  description: 'Category: Organizacional (organizational)'
   aliases: []
 introducao:
   label: introducao

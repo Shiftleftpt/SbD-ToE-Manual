@@ -4,15 +4,18 @@ description: Práticas de codificação segura, curadoria e seleção de guideli
 id: intro
 sidebar_position: 0
 tags:
-- SAST
-- desenvolvimento
-- governanca
-- guidelines de código
-- implementacao-automacao
+- arquitetura
+- dependencias
+- segurança
+- cicd
+- dsomm
+- samm
+- ssdf
 title: Introdução - Desenvolvimento Seguro
 categoria: basilar
 group: implementacao_automacao
 ---
+
 
 
 :::caution Capítulo Basilar

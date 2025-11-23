@@ -5,14 +5,17 @@ description: Fundamentos, objetivos e enquadramento do capítulo dedicado à arq
   segura no ciclo de vida de software
 tags:
 - arquitetura
-- engenharia-segura
-- introducao
-- requisitos
-- seguranca
+- threat-modeling
+- segurança
+- cicd
+- dsomm
+- samm
+- ssdf
 sidebar_position: 4
 categoria: basilar
 group: engenharia_segura
 ---
+
 
 :::caution Capítulo Basilar
 Este capítulo é considerado **basilar** no modelo *Security by Design - Theory of Everything (SbD-ToE)*.  

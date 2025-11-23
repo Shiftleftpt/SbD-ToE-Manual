@@ -4,15 +4,18 @@ description: Definição, aplicação, validação e rastreabilidade de requisit
 id: intro
 sidebar_position: 1
 tags:
-- ASVS
-- DSOMM
-- SAMM
-- tema:requisitos
-- tipo:prescricao
+- arquitetura
+- threat-modeling
+- dependencias
+- segurança
+- cicd
+- dsomm
+- samm
 title: Requisitos de Segurança
 categoria: basilar
 group: engenharia_segura
 ---
+
 
 
 :::caution Capítulo Basilar

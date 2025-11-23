@@ -4,15 +4,18 @@ description: Estruturas, políticas e práticas para assegurar governação orga
 id: intro
 sidebar_position: 0
 tags:
-- KPIs
-- conformidade
-- contratacao
-- excecoes
-- fornecedores
+- cicd
+- formacao
+- fundamentos
+- aprendizagem
+- capacitacao
+- champions
+- kpis
 title: Governança & Contratação
 categoria: organizacional
 group: fundamentos_contexto
 ---
+
 
 
 :::note Capítulo Organizacional

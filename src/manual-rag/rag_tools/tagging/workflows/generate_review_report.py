@@ -15,7 +15,7 @@ sys.path.insert(0, str(Path(__file__).parent.parent.parent))
 sys.path.insert(0, str(Path(__file__).parent.parent.parent.parent))
 
 from rag_tools.tagging import AutoTagger, FileTagUpdater
-from rag_tools.utils.smart_tag_selection import select_tags_for_display
+from rag_tools.tagging.utils import select_tags_for_display
 from rag_core.config import MANUAL_ROOT
 
 

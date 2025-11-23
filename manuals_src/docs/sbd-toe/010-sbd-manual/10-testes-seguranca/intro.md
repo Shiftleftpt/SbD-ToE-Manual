@@ -4,15 +4,18 @@ description: Estratégias e práticas para validar continuamente a segurança de
 id: intro
 sidebar_position: 0
 tags:
-- DAST
-- DSOMM
-- SAMM
-- SAST
-- SLSA
+- cicd
+- testes
+- dependencias
+- implementacao-automacao
+- segurança
+- dsomm
+- slsa
 title: Testes de Segurança
 categoria: operacional
 group: implementacao_automacao
 ---
+
 
 
 :::tip Capítulo Operacional

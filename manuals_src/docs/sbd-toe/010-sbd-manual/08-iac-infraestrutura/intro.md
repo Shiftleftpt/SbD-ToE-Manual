@@ -4,15 +4,18 @@ description: Práticas de segurança para definição, validação e gestão de 
 id: intro
 sidebar_position: 0
 tags:
-- DSOMM
-- SAMM
-- SLSA
-- SSDF
-- automatização
+- cicd
+- dependencias
+- implementacao-automacao
+- segurança
+- dsomm
+- slsa
+- ssdf
 title: Infraestrutura como Código (IaC)
 categoria: operacional
 group: implementacao_automacao
 ---
+
 
 
 :::tip Capítulo Operacional

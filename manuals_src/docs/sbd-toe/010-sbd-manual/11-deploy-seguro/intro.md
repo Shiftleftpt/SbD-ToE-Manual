@@ -4,15 +4,18 @@ description: Princípios e controlos para garantir um processo de deploy seguro,
 id: intro
 sidebar_position: 0
 tags:
-- deploy
-- gates
-- operacao-continuidade
-- produção
-- rollback
+- cicd
+- testes
+- dependencias
+- implementacao-automacao
+- segurança
+- dsomm
+- slsa
 title: Deploy Seguro
 categoria: operacional
 group: operacao_melhoria
 ---
+
 
 
 :::tip Capítulo Operacional

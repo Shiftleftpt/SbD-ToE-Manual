@@ -4,24 +4,18 @@ title: Containers e Execução Isolada
 description: Princípios, práticas e controlos para construir, assinar, validar e executar
   imagens de forma segura e rastreável
 tags:
-- implementacao-automacao
-- containers
-- imagens
-- supply-chain
-- proveniencia
-- assinatura
-- slsa
-- ssdf
-- registry
-- runtime-hardening
-- admission-control
-- kubernetes
 - cicd
-- dSOMM
+- dependencias
+- containers
+- implementacao-automacao
+- segurança
+- dsomm
+- slsa
 sidebar_position: 0
 categoria: operacional
 group: implementacao_automacao
 ---
+
 
 :::tip Capítulo Operacional
 Este capítulo é considerado **operacional** no modelo *Security by Design - Theory of Everything (SbD-ToE)*.  

@@ -6,13 +6,16 @@ sidebar_position: 0
 tags:
 - cicd
 - dependencias
-- engenharia-segura
-- governance
-- oss
+- containers
+- testes
+- implementacao-automacao
+- segurança
+- dsomm
 title: Dependências, SBOM e SCA
 categoria: operacional
 group: engenharia_segura
 ---
+
 
 
 :::tip Capítulo Operacional

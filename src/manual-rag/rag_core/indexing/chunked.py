@@ -194,6 +194,8 @@ class JSONLDatasetBuilder:
                     # Extract frontmatter data
                     title = frontmatter.get('title', file_path.stem)
                     file_tags = frontmatter.get('tags', [])
+                    categoria = frontmatter.get('categoria')
+                    group = frontmatter.get('group')
                     
                     # Split into chunks
                     chunks = self.chunker.chunk_content(content)
@@ -204,14 +206,21 @@ class JSONLDatasetBuilder:
                             chunk_idx, len(chunks), file_metadata, chunk_content
                         )
                         
+                        # Build frontmatter with categoria and group if present
+                        frontmatter_record = {
+                            "title": title,
+                            "tags": file_tags,
+                        }
+                        if categoria:
+                            frontmatter_record["categoria"] = categoria
+                        if group:
+                            frontmatter_record["group"] = group
+                        
                         record = {
                             "id": f"{file_metadata['file_path'].replace('/', '_').replace('.md', '')}_{chunk_idx}",
                             "text": chunk_content,
                             "metadata": chunk_metadata,
-                            "frontmatter": {
-                                "title": title,
-                                "tags": file_tags,
-                            }
+                            "frontmatter": frontmatter_record
                         }
                         
                         jsonl_file.write(json.dumps(record, ensure_ascii=False) + "\n")
@@ -296,12 +305,15 @@ class ChunkedIndexBuilder:
                     # Embed the chunk text
                     embedding = self.embedding_model.encode(record["text"]).tolist()
                     
-                    # Prepare metadata (include frontmatter tags)
+                    # Prepare metadata (include frontmatter tags, categoria, group)
                     metadata = record.get("metadata", {})
-                    metadata["title"] = record.get("frontmatter", {}).get("title", "")
-                    metadata["tags"] = json.dumps(
-                        record.get("frontmatter", {}).get("tags", [])
-                    )
+                    frontmatter = record.get("frontmatter", {})
+                    metadata["title"] = frontmatter.get("title", "")
+                    metadata["tags"] = json.dumps(frontmatter.get("tags", []))
+                    if "categoria" in frontmatter:
+                        metadata["categoria"] = frontmatter["categoria"]
+                    if "group" in frontmatter:
+                        metadata["group"] = frontmatter["group"]
                     
                     # Add to collection
                     collection.add(

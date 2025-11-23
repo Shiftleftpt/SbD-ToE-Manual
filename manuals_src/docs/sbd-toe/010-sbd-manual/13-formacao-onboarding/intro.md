@@ -8,10 +8,10 @@ tags:
 - SAMM
 - aprendizagem
 - capacitacao
-- cat_organizacional
 - champions
-- grp_fundamentos_contexto
 title: Formação e Capacitação
+categoria: organizacional
+group: fundamentos_contexto
 ---
 
 

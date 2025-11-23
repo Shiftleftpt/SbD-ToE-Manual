@@ -1,11 +1,26 @@
 ---
 id: intro
 title: Containers e Execução Isolada
-description: Princípios, práticas e controlos para construir, assinar, validar e executar imagens de forma segura e rastreável
+description: Princípios, práticas e controlos para construir, assinar, validar e executar
+  imagens de forma segura e rastreável
 tags:
-  [implementacao-automacao, containers, imagens, supply-chain, proveniencia, assinatura, slsa, ssdf,
-   registry, runtime-hardening, admission-control, kubernetes, cicd, dSOMM, cat_operacional, grp_implementacao_automacao]
+- implementacao-automacao
+- containers
+- imagens
+- supply-chain
+- proveniencia
+- assinatura
+- slsa
+- ssdf
+- registry
+- runtime-hardening
+- admission-control
+- kubernetes
+- cicd
+- dSOMM
 sidebar_position: 0
+categoria: operacional
+group: implementacao_automacao
 ---
 
 :::tip Capítulo Operacional

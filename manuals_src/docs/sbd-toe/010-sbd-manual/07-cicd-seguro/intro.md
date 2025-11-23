@@ -5,13 +5,13 @@ id: intro
 sidebar_position: 0
 tags:
 - automação
-- cat_operacional
 - cicd
 - devsecops
-- grp_implementacao_automacao
 - implementacao-automacao
 - pipelines
 title: CI/CD Seguro
+categoria: operacional
+group: implementacao_automacao
 ---
 
 

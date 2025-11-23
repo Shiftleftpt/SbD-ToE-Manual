@@ -9,9 +9,9 @@ tags:
 - SAMM
 - SAST
 - SLSA
-- cat_operacional
-- grp_implementacao_automacao
 title: Testes de Segurança
+categoria: operacional
+group: implementacao_automacao
 ---
 
 

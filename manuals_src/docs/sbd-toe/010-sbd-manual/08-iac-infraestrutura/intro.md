@@ -9,9 +9,9 @@ tags:
 - SLSA
 - SSDF
 - automatização
-- cat_operacional
-- grp_implementacao_automacao
 title: Infraestrutura como Código (IaC)
+categoria: operacional
+group: implementacao_automacao
 ---
 
 

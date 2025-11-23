@@ -7,11 +7,11 @@ tags:
 - ASVS
 - DSOMM
 - SAMM
-- cat_basilar
-- grp_engenharia_segura
 - tema:requisitos
 - tipo:prescricao
 title: Requisitos de Segurança
+categoria: basilar
+group: engenharia_segura
 ---
 
 

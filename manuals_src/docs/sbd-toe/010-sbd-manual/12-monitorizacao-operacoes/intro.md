@@ -4,14 +4,14 @@ description: Princípios e práticas para assegurar visibilidade, deteção e re
 id: intro
 sidebar_position: 0
 tags:
-- cat_operacional
 - deteção
-- grp_operacao_melhoria
 - incidentes
 - logs
 - monitorizacao
 - métricas
 title: Monitorização & Operações
+categoria: operacional
+group: operacao_melhoria
 ---
 
 

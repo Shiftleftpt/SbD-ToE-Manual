@@ -1,9 +1,17 @@
 ---
 id: intro
 title: Capítulo 4 - Arquitetura Segura
-description: Fundamentos, objetivos e enquadramento do capítulo dedicado à arquitetura segura no ciclo de vida de software
-tags: [arquitetura, cat_basilar, engenharia-segura, grp_engenharia_segura, introducao, requisitos, seguranca]
+description: Fundamentos, objetivos e enquadramento do capítulo dedicado à arquitetura
+  segura no ciclo de vida de software
+tags:
+- arquitetura
+- engenharia-segura
+- introducao
+- requisitos
+- seguranca
 sidebar_position: 4
+categoria: basilar
+group: engenharia_segura
 ---
 
 :::caution Capítulo Basilar

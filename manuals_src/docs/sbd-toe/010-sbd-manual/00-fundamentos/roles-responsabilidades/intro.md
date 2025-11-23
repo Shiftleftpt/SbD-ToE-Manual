@@ -5,14 +5,14 @@ id: intro
 sidebar_label: Papéis e Responsabilidades
 sidebar_position: 0
 tags:
-- cat_basilar
 - dora
 - governance
-- grp_fundamentos_contexto
 - nis2
 - organizacao
 - responsabilidades
 title: Papéis e Responsabilidades Organizacionais
+categoria: basilar
+group: fundamentos_contexto
 ---
 
 

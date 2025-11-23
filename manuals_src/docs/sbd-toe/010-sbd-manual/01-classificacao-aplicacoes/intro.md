@@ -4,13 +4,13 @@ description: Determinação da criticidade de aplicações para aplicar proporci
 id: intro
 tags:
 - base
-- cat_basilar
 - ciclo-vida
 - classificacao
 - fundamentos
-- grp_fundamentos_contexto
 - proporcionalidade
 title: Classificação da Criticidade Aplicacional
+categoria: basilar
+group: fundamentos_contexto
 ---
 
 

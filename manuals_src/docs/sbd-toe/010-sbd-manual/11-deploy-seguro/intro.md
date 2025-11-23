@@ -4,14 +4,14 @@ description: Princípios e controlos para garantir um processo de deploy seguro,
 id: intro
 sidebar_position: 0
 tags:
-- cat_operacional
 - deploy
 - gates
-- grp_operacao_melhoria
 - operacao-continuidade
 - produção
 - rollback
 title: Deploy Seguro
+categoria: operacional
+group: operacao_melhoria
 ---
 
 

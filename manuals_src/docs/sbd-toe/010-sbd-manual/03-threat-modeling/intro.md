@@ -7,9 +7,9 @@ tags:
 - SLSA
 - SSDF
 - arquitetura
-- cat_basilar
-- grp_engenharia_segura
 title: 📘 Capítulo 3 - Threat Modeling
+categoria: basilar
+group: engenharia_segura
 ---
 
 

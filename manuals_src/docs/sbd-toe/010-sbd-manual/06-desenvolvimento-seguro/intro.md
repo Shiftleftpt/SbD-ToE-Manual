@@ -5,13 +5,13 @@ id: intro
 sidebar_position: 0
 tags:
 - SAST
-- cat_basilar
 - desenvolvimento
 - governanca
-- grp_implementacao_automacao
 - guidelines de código
 - implementacao-automacao
 title: Introdução - Desenvolvimento Seguro
+categoria: basilar
+group: implementacao_automacao
 ---
 
 

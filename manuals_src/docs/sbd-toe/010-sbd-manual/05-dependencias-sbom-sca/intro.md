@@ -4,14 +4,14 @@ description: Princípios, práticas e controlos para garantir gestão segura de 
 id: intro
 sidebar_position: 0
 tags:
-- cat_operacional
 - cicd
 - dependencias
 - engenharia-segura
 - governance
-- grp_engenharia_segura
 - oss
 title: Dependências, SBOM e SCA
+categoria: operacional
+group: engenharia_segura
 ---
 
 

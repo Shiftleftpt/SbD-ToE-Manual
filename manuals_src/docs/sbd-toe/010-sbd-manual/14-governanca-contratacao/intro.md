@@ -5,13 +5,13 @@ id: intro
 sidebar_position: 0
 tags:
 - KPIs
-- cat_organizacional
 - conformidade
 - contratacao
 - excecoes
 - fornecedores
-- grp_fundamentos_contexto
 title: Governança & Contratação
+categoria: organizacional
+group: fundamentos_contexto
 ---
 
 

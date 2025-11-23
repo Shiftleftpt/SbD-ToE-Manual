@@ -6,13 +6,13 @@ sidebar_label: Introdução
 sidebar_position: 0
 tags:
 - baseline
-- cat_basilar
 - estrutura
 - fundamentos
-- grp_fundamentos_contexto
 - introducao
 - manual
 title: Fundamentos do Manual Técnico
+categoria: basilar
+group: fundamentos_contexto
 ---
 
 

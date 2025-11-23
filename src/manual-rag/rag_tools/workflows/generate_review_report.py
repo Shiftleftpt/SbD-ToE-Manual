@@ -10,12 +10,13 @@ from typing import Dict, List, Tuple
 import sys
 from datetime import datetime
 
-# Add parent directory to path
-sys.path.insert(0, str(Path(__file__).parent.parent))
+# Add parent directories to path
+sys.path.insert(0, str(Path(__file__).parent.parent.parent))
+sys.path.insert(0, str(Path(__file__).parent.parent.parent.parent))
 
-from manual_rag.tagging import AutoTagger, FileTagUpdater
+from rag_tools.tagging import AutoTagger, FileTagUpdater
+from rag_tools.utils.smart_tag_selection import select_tags_for_display
 from manual_rag.config import MANUAL_ROOT
-from scripts.utils.smart_tag_selection import select_tags_for_display
 
 
 def get_document_summary(file_path: Path, content: str) -> str:

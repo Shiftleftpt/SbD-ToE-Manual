@@ -10,10 +10,11 @@ from typing import Dict
 import sys
 import csv
 
-# Add parent directory to path
-sys.path.insert(0, str(Path(__file__).parent.parent))
+# Add parent directories to path
+sys.path.insert(0, str(Path(__file__).parent.parent.parent))
+sys.path.insert(0, str(Path(__file__).parent.parent.parent.parent))
 
-from manual_rag.tagging import FileTagUpdater
+from rag_tools.tagging import FileTagUpdater
 from manual_rag.config import MANUAL_ROOT
 
 

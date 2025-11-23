@@ -1,22 +1,15 @@
-# 🚀 Getting Started - New Machine Setup
+# 🚀 Getting Started - Setup with Make
 
 Complete guide to set up the RAG system on a new machine or fresh checkout.
 
-## Quick Start (Automated)
+## Quick Start (One Command)
 
-### Option 1: Bash Script (macOS/Linux)
 ```bash
 cd src/manual-rag
-bash setup.sh
+make setup
 ```
 
-### Option 2: Python Script (All Platforms - Recommended)
-```bash
-cd src/manual-rag
-python3 setup.py
-```
-
-**That's it!** The script will:
+**That's it!** Make will:
 1. ✅ Create virtual environment
 2. ✅ Install all dependencies
 3. ✅ Build the RAG index (2-3 minutes)
@@ -26,48 +19,31 @@ python3 setup.py
 
 ## Manual Setup (Step by Step)
 
-If you prefer to do it yourself or the scripts don't work:
+If you prefer to do it yourself:
 
 ### Step 1: Create Virtual Environment
 ```bash
 cd src/manual-rag
-python3 -m venv rag_env
+make install  # This also creates venv if needed
 ```
 
-### Step 2: Activate Virtual Environment
+### Step 2: Build the Index
 ```bash
-# macOS/Linux
-source rag_env/bin/activate
-
-# Windows
-rag_env\Scripts\activate
-```
-
-### Step 3: Install Dependencies
-```bash
-pip install --upgrade pip setuptools wheel
-pip install -r requirements.txt
-```
-
-### Step 4: Build the Index
-```bash
-python3 -m rag_core.indexing.chunked_build
+make build
 ```
 
 **⏱️ This takes 2-3 minutes**
 
 Output should show:
 ```
-📊 Document Statistics:
-  Total files: 276
-  Total chunks: 5066
-  Average chunk size: 450 tokens
-✅ Index built successfully
+Building RAG index (advanced chunked)...
+This may take 2-3 minutes...
+✓ Index built successfully
 ```
 
-### Step 5: Verify Setup
+### Step 3: Verify Setup
 ```bash
-python3 -m pytest rag_core/tests/ -v
+make test
 ```
 
 **Should show: `26 passed` ✅**
@@ -95,51 +71,58 @@ Once setup is complete:
 
 ```bash
 # Generate suggestions (1-2 minutes)
-python3 -m rag_tools.workflows.generate_review_report --max-tags 7
+make generate-tags
 
 # Review the CSV, then apply
-python3 -m rag_tools.workflows.apply_review_decisions review_report_*.csv
+make apply-tags CSV=review_report_*.csv
 ```
 
 ### Running Tests
 
 ```bash
 # All tests
-python3 -m pytest
+make test
 
 # Specific module
-python3 -m pytest rag_core/tests/ -v
-python3 -m pytest rag_tools/tagging/tests/ -v
+make test-core
 
 # With coverage
-pytest --cov=rag_core --cov=rag_tools --cov-report=html
+make test-cov
+```
+
+### Other Make Commands
+
+```bash
+# Build index
+make build              # Advanced (recommended)
+make build-simple       # Simple indexing
+
+# Show all commands
+make help
 ```
 
 ---
 
 ## Troubleshooting
 
-### "Python 3 not found"
-Install Python 3.8+:
-- **macOS:** `brew install python@3.11`
-- **Windows:** Download from [python.org](https://www.python.org/downloads/)
-- **Linux:** `sudo apt install python3.11`
+### "make: command not found"
+Install make:
+- **macOS:** `brew install make`
+- **Windows:** Use WSL or `make` from MinGW
+- **Linux:** `sudo apt install make`
 
 ### "venv already exists, want to recreate?"
 If something went wrong with dependencies:
 ```bash
-rm -rf rag_env
-python3 setup.py  # or bash setup.sh
+make clean
+make setup
 ```
 
 ### "Module not found" errors
 Make sure venv is activated:
 ```bash
-# Check if venv is active (should see "rag_env" in prompt)
 source rag_env/bin/activate
-
-# Reinstall if needed
-pip install -r requirements.txt
+make install
 ```
 
 ### "Ollama not running" (non-fatal warning)
@@ -153,8 +136,8 @@ ollama serve &
 ### Tests are failing
 Try a clean setup:
 ```bash
-rm -rf rag_env
-python3 setup.py
+make clean
+make setup
 ```
 
 ---
@@ -169,7 +152,7 @@ git checkout feature-branch
 
 # Setup that specific checkout
 cd src/manual-rag
-python3 setup.py
+make setup
 
 # Now that checkout is ready to use
 ```
@@ -230,7 +213,7 @@ manual-rag/
 2. **Understand the architecture:** [README.md](README.md)
 3. **Review infrastructure:** [rag_core/README.md](rag_core/README.md)
 4. **Learn about tools:** [rag_tools/README.md](rag_tools/README.md)
-5. **Start tagging:** `python3 -m rag_tools.workflows.generate_review_report --max-tags 7`
+5. **Start tagging:** `make generate-tags`
 
 ---
 
@@ -238,20 +221,23 @@ manual-rag/
 
 ```bash
 # Setup (one time)
-python3 setup.py
+make setup
 
 # Activate (every session)
 source rag_env/bin/activate
 
 # Build index (after file changes)
-python3 -m rag_core.indexing.chunked_build
+make build
 
 # Generate tags
-python3 -m rag_tools.workflows.generate_review_report --max-tags 7
+make generate-tags
 
 # Apply tags
-python3 -m rag_tools.workflows.apply_review_decisions review_report_*.csv
+make apply-tags CSV=review_report_*.csv
 
 # Run tests
-python3 -m pytest
+make test
+
+# See all commands
+make help
 ```

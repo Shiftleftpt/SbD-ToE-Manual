@@ -44,54 +44,45 @@ manual-rag/
 
 ## 🚀 Quick Start
 
-### Setup Environment
+### Setup Environment (First Time)
 ```bash
-# Create and activate virtual environment
-python3 -m venv rag_env
-source rag_env/bin/activate
-
-# Install dependencies
-pip install -r requirements.txt
-
-# Optional: Start Ollama for LLM fallback
-ollama pull mistral
-ollama serve &
+cd src/manual-rag
+make setup
 ```
 
-### Build Index
-```bash
-# Simple indexing (all files at once)
-python3 -m rag_core.indexing.build
+**⏱️ This takes ~10 minutes and does everything:**
+- Creates virtual environment
+- Installs dependencies
+- Builds RAG index
+- Runs tests to verify
 
-# Advanced chunked indexing (with JSONL dataset)
-python3 -m rag_core.indexing.chunked_build
+### Activate Environment (Every Session)
+```bash
+source rag_env/bin/activate
 ```
 
 ### Run Auto-Tagging Workflow
 ```bash
 # 1. Generate tag suggestions
-python3 -m rag_tools.workflows.generate_review_report --max-tags 7
+make generate-tags
 
 # 2. Review the CSV (edit and mark PENDING → OK)
 
 # 3. Apply approved changes
-python3 -m rag_tools.workflows.apply_review_decisions review_report_TIMESTAMP.csv
+make apply-tags CSV=review_report_*.csv
 ```
 
 ## 🧪 Testing
 
 ```bash
 # All tests
-python3 -m pytest
+make test
 
 # RAG core tests only (26 tests)
-python3 -m pytest rag_core/tests/ -v
-
-# Tagging tests only
-python3 -m pytest rag_tools/tagging/tests/ -v
+make test-core
 
 # With coverage report
-python3 -m pytest --cov=rag_core --cov=rag_tools --cov-report=html
+make test-cov
 ```
 
 ## 📊 Results
@@ -103,7 +94,9 @@ python3 -m pytest --cov=rag_core --cov=rag_tools --cov-report=html
 
 ## 📚 Documentation
 
-- **[rag_core/README.md](rag_core/README.md)** - Infrastructure details & API
+- **[SETUP_GUIDE.md](SETUP_GUIDE.md)** - Setup instructions
+- **[EXECUTION_GUIDE.md](EXECUTION_GUIDE.md)** - Tagging workflow guide
+- **[rag_core/README.md](rag_core/README.md)** - Infrastructure API
 - **[rag_tools/README.md](rag_tools/README.md)** - Tools & workflows
 - **[rag_tools/tagging/README.md](rag_tools/tagging/README.md)** - Auto-tagging system
 - **[rag_core/config.py](rag_core/config.py)** - Configuration options

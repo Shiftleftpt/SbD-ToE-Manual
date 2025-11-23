@@ -11,7 +11,7 @@ REPO_ROOT = CURRENT_FILE.parent.parent.parent.parent  # Up 4 levels: root
 
 MANUAL_ROOT = REPO_ROOT / "manuals_src" / "docs" / "sbd-toe"
 INDEX_DIR = CURRENT_FILE.parent.parent / "index"
-TAGS_FILE = REPO_ROOT / "src" / "tag-normalization" / "canonical-tags.yml"
+TAGS_FILE = CURRENT_FILE.parent.parent / "canonical-tags.yml"
 
 # Embedding model
 # Using all-MiniLM-L6-v2 instead - more reliable and faster

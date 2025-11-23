@@ -21,7 +21,7 @@ cd rag_tools/tagging/workflows
 python3 analyze_tag_changes.py [OPTIONS]
 ```
 
-**Output:** `tag_analysis_TIMESTAMP.json`
+**Output:** `reports/tag_analysis_TIMESTAMP.json` (saved in isolated `reports/` folder)
 
 **Contains for each file:**
 - Current tags (with breakdown by type)
@@ -101,9 +101,9 @@ grep "INVESTIGATE" my_analysis.json
 python3 generate_review_report.py [OPTIONS]
 ```
 
-**Output:** 
-- `review_report_TIMESTAMP.csv` - For review and editing
-- `review_report_TIMESTAMP.json` - For programmatic processing
+**Output (in `reports/` folder):**
+- `reports/review_report_TIMESTAMP.csv` - For review and editing
+- `reports/review_report_TIMESTAMP.json` - For programmatic processing
 
 **CSV Format:**
 
@@ -337,6 +337,29 @@ A: Yes! Edit PROPOSED_TAGS in the CSV to include them.
 
 **Q: How many tags should each file have?**
 A: Target: 5-7 tags. The system enforces a max of 7 to keep UI clean.
+
+---
+
+## 🗑️ Managing Reports
+
+All generated reports are saved in isolated `reports/` folder for easy management:
+
+```bash
+# View all reports
+ls -la reports/
+
+# Remove old reports
+rm reports/tag_analysis_2025-11-23*.json
+rm reports/review_report_2025-11-23*.csv
+
+# Clean all reports
+rm reports/*
+
+# Find reports by timestamp
+ls reports/*2025-11-23*
+```
+
+The `reports/` folder is isolated so you can safely delete old reports without affecting the tools.
 
 **Q: What's the difference between analyze and review?**
 A: Analyze shows ALL considerations. Review creates the CSV for human approval.

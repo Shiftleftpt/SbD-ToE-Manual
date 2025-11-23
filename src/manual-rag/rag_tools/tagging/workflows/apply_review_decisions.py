@@ -119,14 +119,22 @@ def apply_csv_decisions(csv_file: Path):
 def main():
     import argparse
     parser = argparse.ArgumentParser()
-    parser.add_argument('report_file', help='CSV review report file to process')
+    parser.add_argument('report_file', help='CSV review report file to process (from reports/ or full path)')
     args = parser.parse_args()
     
-    report_path = Path(__file__).parent / args.report_file
+    report_path = Path(args.report_file)
     
-    if not report_path.exists():
-        # Try without directory
-        report_path = Path(args.report_file)
+    # Try different locations
+    if not report_path.is_absolute():
+        # Try in reports/ first
+        reports_path = Path(__file__).parent / "reports" / args.report_file
+        if reports_path.exists():
+            report_path = reports_path
+        else:
+            # Try in workflows/ directory
+            workflows_path = Path(__file__).parent / args.report_file
+            if workflows_path.exists():
+                report_path = workflows_path
     
     apply_csv_decisions(report_path)
 

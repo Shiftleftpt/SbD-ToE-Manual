@@ -174,7 +174,9 @@ def main():
     
     # Generate CSV report
     timestamp = datetime.now().strftime("%Y-%m-%dT%H-%M-%S")
-    report_file = Path(__file__).parent / f"review_report_{timestamp}.csv"
+    reports_dir = Path(__file__).parent / "reports"
+    reports_dir.mkdir(exist_ok=True)
+    report_file = reports_dir / f"review_report_{timestamp}.csv"
     
     print(f"📝 Generating review report...\n")
     
@@ -209,7 +211,7 @@ def main():
     print(f"✅ CSV Report generated: {report_file}\n")
     
     # Also generate JSON for programmatic processing
-    json_file = Path(__file__).parent / f"review_report_{timestamp}.json"
+    json_file = reports_dir / f"review_report_{timestamp}.json"
     with open(json_file, 'w') as f:
         json.dump(reviews, f, indent=2, ensure_ascii=False)
     

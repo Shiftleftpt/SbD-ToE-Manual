@@ -368,7 +368,9 @@ Confidence Distribution of All Suggestions:
     
     # Save full report
     output_file = args.output or f"tag_analysis_{datetime.now().strftime('%Y-%m-%dT%H-%M-%S')}.json"
-    output_path = Path(__file__).parent / output_file
+    reports_dir = Path(__file__).parent / "reports"
+    reports_dir.mkdir(exist_ok=True)
+    output_path = reports_dir / output_file
     
     report = {
         'metadata': {

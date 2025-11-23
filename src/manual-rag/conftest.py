@@ -1,34 +1,49 @@
 """Root conftest for pytest
 
-Global pytest configuration and auto-marking.
-Tests live in their respective modules:
-- rag_core/tests/ → for rag_core infrastructure
-- rag_tools/tests/ → for rag_tools workflows
+Automatic marking of tests based on their location within modules.
+Tests should live in the module they test (not in a root tests/ folder).
 """
 
 import pytest
 
 
 def pytest_collection_modifyitems(config, items):
-    """Automatically mark tests based on their location"""
+    """Automatically mark tests based on their module location
+    
+    This keeps tests organized within their modules:
+    - rag_core/tests/ → marked with @pytest.mark.rag_core
+    - rag_tools/tagging/tests/ → marked with @pytest.mark.tagging
+    - rag_tools/workflows/tests/ → marked with @pytest.mark.workflows
+    - rag_tools/utils/tests/ → marked with @pytest.mark.utils
+    """
     for item in items:
-        if "rag_core/tests/" in str(item.fspath):
-            item.add_marker(pytest.mark.rag)
-        elif "rag_tools/tests/" in str(item.fspath):
+        path_str = str(item.fspath)
+        
+        if "rag_core/tests/" in path_str:
+            item.add_marker(pytest.mark.rag_core)
+        elif "rag_tools/tagging/tests/" in path_str:
             item.add_marker(pytest.mark.tagging)
+        elif "rag_tools/workflows/tests/" in path_str:
+            item.add_marker(pytest.mark.workflows)
+        elif "rag_tools/utils/tests/" in path_str:
+            item.add_marker(pytest.mark.utils)
 
 
 def pytest_configure(config):
-    """Configure pytest markers"""
+    """Configure pytest with module markers"""
     config.addinivalue_line(
         "markers", 
-        "rag: Tests for rag_core infrastructure"
+        "rag_core: RAG core infrastructure tests (indexing, query, metadata)"
     )
     config.addinivalue_line(
         "markers",
-        "tagging: Tests for rag_tools tagging"
+        "tagging: RAG tools tagging workflow tests"
     )
     config.addinivalue_line(
         "markers",
-        "integration: Integration tests"
+        "workflows: RAG tools workflow tests"
+    )
+    config.addinivalue_line(
+        "markers",
+        "utils: RAG tools utilities tests"
     )

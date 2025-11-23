@@ -17,7 +17,7 @@ REPO_ROOT = WORKSPACE_DIR.parent.parent  # SbD-ToE-Manual/
 
 MANUAL_ROOT = REPO_ROOT / "manuals_src" / "docs" / "sbd-toe"
 INDEX_DIR = WORKSPACE_DIR / "index"
-TAGS_FILE = WORKSPACE_DIR / "canonical-tags.yml"
+TAGS_FILE = WORKSPACE_DIR / "rag_tools" / "tagging" / "data" / "canonical-tags.yml"
 
 # Embedding model
 EMBEDDING_MODEL = "all-MiniLM-L6-v2"

@@ -12,7 +12,7 @@ _root_dir = _rag_tools_dir.parent.parent
 
 sys.path.insert(0, str(_root_dir))
 
-from manual_rag.config import TAGS_FILE
+from rag_tools.config import TAGS_FILE
 
 
 class CanonicalTags:

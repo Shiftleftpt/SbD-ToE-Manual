@@ -12,7 +12,7 @@ import yaml
 sys.path.insert(0, str(Path(__file__).parent.parent.parent))
 sys.path.insert(0, str(Path(__file__).parent.parent.parent.parent))
 
-from manual_rag.config import MANUAL_ROOT, INDEX_DIR, TAGS_FILE
+from rag_tools.config import MANUAL_ROOT, INDEX_DIR, TAGS_FILE
 from rag_core import ManualIndexer
 
 class ChaptersMetadata:

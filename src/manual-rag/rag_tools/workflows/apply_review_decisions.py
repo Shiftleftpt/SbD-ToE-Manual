@@ -15,7 +15,7 @@ sys.path.insert(0, str(Path(__file__).parent.parent.parent))
 sys.path.insert(0, str(Path(__file__).parent.parent.parent.parent))
 
 from rag_tools.tagging import FileTagUpdater
-from manual_rag.config import MANUAL_ROOT
+from rag_tools.config import MANUAL_ROOT
 
 
 def apply_csv_decisions(csv_file: Path):

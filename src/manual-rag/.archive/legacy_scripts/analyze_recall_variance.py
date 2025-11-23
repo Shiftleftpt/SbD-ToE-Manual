@@ -11,7 +11,7 @@ import sys
 sys.path.insert(0, str(Path(__file__).parent.parent.parent / "tag-normalization"))
 
 from manual_rag.tagging import AutoTagger, FileTagUpdater
-from manual_rag.config import MANUAL_ROOT
+from rag_tools.config import MANUAL_ROOT
 
 
 def analyze_file(file_path: Path) -> Dict:

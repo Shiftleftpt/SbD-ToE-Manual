@@ -181,7 +181,7 @@ def cmd_auto_tag(args):
 def cmd_tag_validate(args):
     """Validate tags in all files"""
     from manual_rag.tagging import CanonicalTags
-    from manual_rag.config import MANUAL_ROOT
+    from rag_core.config import MANUAL_ROOT
     
     canonical = CanonicalTags()
     issues = []

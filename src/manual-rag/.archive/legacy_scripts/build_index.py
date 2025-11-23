@@ -2,7 +2,7 @@
 """Build index for Manual RAG system"""
 
 from manual_rag.indexing import ManualIndexer
-from manual_rag.config import MANUAL_ROOT
+from rag_tools.config import MANUAL_ROOT
 
 if __name__ == "__main__":
     import sys

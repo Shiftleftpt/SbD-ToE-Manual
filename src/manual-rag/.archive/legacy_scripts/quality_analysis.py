@@ -7,7 +7,7 @@ from collections import defaultdict
 import yaml
 
 from manual_rag.tagging import FileTagUpdater, CanonicalTags
-from manual_rag.config import MANUAL_ROOT
+from rag_tools.config import MANUAL_ROOT
 
 
 class TagQualityAnalyzer:

@@ -1,4 +1,12 @@
-"""Fixtures and utilities for RAG core tests"""
+"""Fixtures and utilities for RAG core tests
+
+This conftest.py is SPECIFIC TO RAG CONTEXT.
+It should NOT be used by tagging tests or other contexts.
+
+Location: tests/rag/conftest.py
+Context: RAG Core Infrastructure (indexing, chunking, querying)
+Isolation: Uses temporary directories to avoid production data corruption
+"""
 
 import tempfile
 from pathlib import Path

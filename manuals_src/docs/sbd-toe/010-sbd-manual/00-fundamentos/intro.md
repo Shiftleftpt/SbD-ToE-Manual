@@ -1,4 +1,5 @@
 ---
+<<<<<<< HEAD
 description: Índice de navegação para fundamentos do manual estrutura, papéis, baseline
   obrigatório
 id: intro
@@ -18,6 +19,16 @@ group: fundamentos_contexto
 
 
 
+=======
+id: intro
+title: Fundamentos do Manual Técnico
+sidebar_label: Introdução
+description: Índice de navegação para fundamentos do manual estrutura, papéis, baseline obrigatório
+tags: [fundamentos, introducao, manual, estrutura, roles, baseline]
+sidebar_position: 0
+---
+
+>>>>>>> master
 # Fundamentos do Manual Técnico
 
 Este capítulo é o índice de navegação do manual. Contém:

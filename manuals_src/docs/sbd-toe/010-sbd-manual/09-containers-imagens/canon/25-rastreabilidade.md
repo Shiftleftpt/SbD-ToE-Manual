@@ -2,6 +2,12 @@
 description: Rastreabilidade entre as práticas deste capítulo e os requisitos dos
   principais frameworks de segurança aplicáveis a containers, imagens e registos
 id: rastreabilidade
+<<<<<<< HEAD
+=======
+title: Rastreabilidade Top-Down - Containers e Imagens
+description: Rastreabilidade entre as práticas deste capítulo e os requisitos dos principais frameworks de segurança aplicáveis a containers, imagens e registos
+tags: [rastreabilidade, frameworks, containers, imagens, SAMM, SSDF, SLSA, DSOMM, CIS]
+>>>>>>> master
 sidebar_position: 25
 tags:
 - CIS

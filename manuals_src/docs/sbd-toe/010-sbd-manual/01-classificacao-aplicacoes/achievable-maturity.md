@@ -1,5 +1,6 @@
 ---
 id: achievable-maturity
+<<<<<<< HEAD
 tags:
 - DSOMM
 - SAMM
@@ -9,6 +10,10 @@ tags:
 - maturidade
 - samm
 title: Mapeamento de Maturidade - Capítulo 01
+=======
+title: Mapeamento de Maturidade - Capítulo 01
+tags: [canon, maturidade, SAMM, SSDF, DSOMM]
+>>>>>>> master
 ---
 
 

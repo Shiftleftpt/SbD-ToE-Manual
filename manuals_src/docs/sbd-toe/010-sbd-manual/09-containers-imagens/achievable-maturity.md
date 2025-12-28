@@ -1,5 +1,9 @@
 ---
 id: achievable-maturity
+<<<<<<< HEAD
+=======
+title: Mapeamento de Maturidade - Capítulo 09
+>>>>>>> master
 sidebar_position: 10
 tags:
 - CIS
@@ -12,9 +16,14 @@ tags:
 title: Mapeamento de Maturidade - Capítulo 09
 ---
 
+<<<<<<< HEAD
 
 # 📈 Maturidade - Containers e Imagens
 
+=======
+# 📈 Maturidade - Containers e Imagens
+
+>>>>>>> master
 Este documento apresenta o **grau de alinhamento entre as práticas descritas no Capítulo 09 do SbD-ToE - *Containers e Imagens*** e os principais frameworks de segurança e maturidade de software:
 
 - **OWASP SAMM**

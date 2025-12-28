@@ -1,4 +1,5 @@
 ---
+<<<<<<< HEAD
 description: Os 13 papéis que intervêm na implementação do SbD-ToE, com responsabilidades
   mapeadas aos capítulos técnicos e regulamentos (NIS2, DORA, GDPR)
 id: intro
@@ -16,6 +17,16 @@ group: fundamentos_contexto
 ---
 
 
+=======
+id: intro
+title: Papéis e Responsabilidades Organizacionais
+sidebar_label: Papéis e Responsabilidades
+description: Os 13 papéis que intervêm na implementação do SbD-ToE, com responsabilidades mapeadas aos capítulos técnicos e regulamentos (NIS2, DORA, GDPR)
+tags: [roles, responsabilidades, governance, organizacao, nis2, dora]
+sidebar_position: 0
+---
+
+>>>>>>> master
 # Papéis e Responsabilidades Organizacionais
 
 ## Estrutura e Escopo

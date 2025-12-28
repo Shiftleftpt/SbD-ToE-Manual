@@ -1,5 +1,9 @@
 ---
 id: achievable-maturity
+<<<<<<< HEAD
+=======
+title: Mapeamento de Maturidade - Capítulo 06
+>>>>>>> master
 sidebar_position: 10
 tags:
 - DSOMM

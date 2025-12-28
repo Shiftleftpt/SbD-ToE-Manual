@@ -3,7 +3,11 @@ id: baseline
 title: Obrigações Mínimas Transversais
 sidebar_label: 🛡️ Baseline Obrigatório
 description: O núcleo duro de práticas que todas as aplicações devem cumprir, independentemente do nível de risco
+<<<<<<< HEAD
 tags: [baseline, dora, gdpr, minimo, must, nis2, obrigacoes]
+=======
+tags: [obrigacoes, baseline, minimo, must, nis2, dora, gdpr]
+>>>>>>> master
 sidebar_position: 4
 ---
 

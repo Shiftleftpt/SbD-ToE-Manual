@@ -93,83 +93,6 @@ def cmd_health(args):
     print("\n✓ System ready")
 
 
-def cmd_auto_tag(args):
-    """Auto-tag files using RAG suggestions"""
-    processor = BatchAutoTagger()
-    
-    if args.file:
-        # Single file
-        file_path = Path(args.file)
-        if not file_path.exists():
-            print(f"Error: File not found: {args.file}")
-            sys.exit(1)
-        
-        result = processor.process_file(file_path, strategy=args.strategy, 
-                                       dry_run=args.dry_run, verbose=True)
-        
-        if args.json:
-            print(json.dumps(result, indent=2, ensure_ascii=False))
-        else:
-            if result['status'] == 'updated':
-                print(f"\n✓ Updated: {result['file']}")
-                if result['added']:
-                    print(f"  + Added: {', '.join(result['added'])}")
-                if result['removed']:
-                    print(f"  - Removed: {', '.join(result['removed'])}")
-            elif result['status'] == 'unchanged':
-                print(f"~ {result['file']} (no changes needed)")
-            else:
-                print(f"✗ {result['file']}: {result.get('error', 'Unknown error')}")
-    else:
-        # Batch processing
-        sample_size = args.sample if args.sample else None
-        stats = processor.process_all(strategy=args.strategy, 
-                                     dry_run=args.dry_run,
-                                     verbose=args.verbose,
-                                     sample_size=sample_size)
-        
-        processor.print_summary()
-        
-        if args.report:
-            processor.save_report(Path(args.report))
-        
-        if args.json:
-            print(json.dumps(stats, indent=2, ensure_ascii=False, default=str))
-
-
-def cmd_tag_validate(args):
-    """Validate tags in all files"""
-    from manual_rag.tagging import CanonicalTags
-    from rag_core.config import MANUAL_ROOT
-    
-    canonical = CanonicalTags()
-    issues = []
-    
-    md_files = sorted(MANUAL_ROOT.rglob("*.md"))
-    md_files = [f for f in md_files if not f.name.endswith(".2review")]
-    
-    for file_path in md_files:
-        frontmatter, _ = __import__('manual_rag.tagging', fromlist=['FileTagUpdater']).FileTagUpdater.read_frontmatter(file_path)
-        tags = frontmatter.get('tags', [])
-        
-        for tag in tags:
-            if not canonical.is_valid(tag):
-                issues.append({
-                    'file': str(file_path.relative_to(MANUAL_ROOT)),
-                    'invalid_tag': tag,
-                    'closest_match': None
-                })
-    
-    if issues:
-        print(f"Found {len(issues)} invalid tags:\n")
-        for issue in issues[:20]:  # Show first 20
-            print(f"  {issue['file']}: {issue['invalid_tag']}")
-        if len(issues) > 20:
-            print(f"  ... and {len(issues)-20} more")
-    else:
-        print("✓ All tags are valid")
-
-
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(
         description="Manual RAG System - Query the SbD-ToE manual"
@@ -208,21 +131,6 @@ if __name__ == "__main__":
     # Health command
     health_parser = subparsers.add_parser("health", help="Check system health")
     health_parser.set_defaults(func=cmd_health)
-    
-    # Auto-tag command
-    autotag_parser = subparsers.add_parser("auto-tag", help="Auto-tag files using RAG")
-    autotag_parser.add_argument("--file", help="Tag single file")
-    autotag_parser.add_argument("--strategy", choices=['conservative', 'balanced', 'aggressive'],
-                               default='balanced', help="Tagging strategy")
-    autotag_parser.add_argument("--dry-run", action="store_true", help="Don't modify files")
-    autotag_parser.add_argument("--sample", type=int, help="Process only N files (for testing)")
-    autotag_parser.add_argument("--report", help="Save report to file")
-    autotag_parser.add_argument("--verbose", action="store_true", help="Verbose output")
-    autotag_parser.set_defaults(func=cmd_auto_tag)
-    
-    # Tag validation command
-    validate_parser = subparsers.add_parser("tag-validate", help="Validate all tags")
-    validate_parser.set_defaults(func=cmd_tag_validate)
     
     args = parser.parse_args()
     

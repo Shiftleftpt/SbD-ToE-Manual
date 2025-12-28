@@ -2,18 +2,12 @@
 """
 Run tests for RAG system with module-based organization.
 
-Tests are now located within their respective modules:
-- rag_core/tests/          - RAG infrastructure tests
-- rag_tools/tagging/tests/ - Tagging workflow tests
-- rag_tools/workflows/tests/ - Workflow orchestration tests
-- rag_tools/utils/tests/   - Utility function tests
+Tests are located in:
+- rag_core/tests/          - RAG infrastructure tests (26 tests)
 
 Usage:
     python run_tests.py                    # Run all tests
     python run_tests.py rag_core           # Run only RAG core tests
-    python run_tests.py tagging            # Run only tagging tests
-    python run_tests.py workflows          # Run only workflow tests
-    python run_tests.py utils              # Run only utils tests
     python run_tests.py -v                 # Run all tests verbose
     python run_tests.py rag_core -v        # Run RAG core tests verbose
 """
@@ -27,9 +21,6 @@ def get_test_path(module: str) -> Path:
     """Get test path for a module."""
     paths = {
         "rag_core": Path("rag_core/tests"),
-        "tagging": Path("rag_tools/tagging/tests"),
-        "workflows": Path("rag_tools/workflows/tests"),
-        "utils": Path("rag_tools/utils/tests"),
     }
     return paths.get(module)
 

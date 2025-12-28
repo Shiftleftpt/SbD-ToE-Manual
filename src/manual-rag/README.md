@@ -23,19 +23,21 @@ manual-rag/
 │   └── README.md          # Infrastructure details
 │
 ├── rag_tools/             # RAG Usage (USE RAG for tasks)
-│   ├── tagging/           # Auto-tagging system
-│   │   ├── tests/         # Tagging tests
-│   │   ├── data/          # canonical-tags.yml
-│   │   ├── *.py
-│   │   └── README.md      # Auto-tagging documentation
-│   ├── workflows/         # Business workflows
-│   │   ├── generate_review_report.py
-│   │   ├── apply_review_decisions.py
-│   │   └── tests/         # Workflow tests (ready)
+│   ├── tagging_tools/     # Tag suggestion & comparison tools
+│   │   ├── data/          # Canonical tags & embeddings
+│   │   ├── reports/       # Generated reports
+│   │   ├── suggest_tags.py           # Main tagging script
+│   │   ├── suggest_tags_canonical.py # Canonical-based tagging
+│   │   ├── compare_tags.py           # Tag comparison
+│   │   ├── generate_report.py        # Report generation
+│   │   └── README.md                 # Tagging documentation
 │   ├── utils/             # Utilities
-│   │   ├── smart_tag_selection.py
-│   │   └── tests/         # Utils tests (ready)
+│   │   └── smart_tag_selection.py    # Tag selection logic
 │   └── README.md          # Tools documentation
+│
+├── ollama/                # Ollama LLM setup
+│   ├── OLLAMA_GUIDE.md    # Setup guide
+│   └── install_ollama.sh  # Installation script
 │
 ├── pytest.ini             # Global test configuration
 ├── conftest.py            # Pytest fixtures
@@ -63,13 +65,16 @@ source rag_env/bin/activate
 
 ### Run Auto-Tagging Workflow
 ```bash
-# 1. Generate tag suggestions
-make generate-tags
+# Generate tag suggestions for a chapter
+python3 rag_tools/tagging_tools/suggest_tags.py "002-cross-check" --top-n 15
 
-# 2. Review the CSV (edit and mark PENDING → OK)
+# Or with canonical tag matching
+python3 rag_tools/tagging_tools/suggest_tags_canonical.py "010-sbd" --subfolder "04-arquitetura"
 
-# 3. Apply approved changes
-make apply-tags CSV=review_report_*.csv
+# Compare tag suggestions
+python3 rag_tools/tagging_tools/compare_tags.py
+
+# See full options in rag_tools/tagging_tools/README.md
 ```
 
 ## 🧪 Testing
@@ -94,11 +99,10 @@ make test-cov
 
 ## 📚 Documentation
 
-- **[SETUP_GUIDE.md](SETUP_GUIDE.md)** - Setup instructions
-- **[EXECUTION_GUIDE.md](EXECUTION_GUIDE.md)** - Tagging workflow guide
 - **[rag_core/README.md](rag_core/README.md)** - Infrastructure API
-- **[rag_tools/README.md](rag_tools/README.md)** - Tools & workflows
-- **[rag_tools/tagging/README.md](rag_tools/tagging/README.md)** - Auto-tagging system
+- **[rag_tools/README.md](rag_tools/README.md)** - Tools overview
+- **[rag_tools/tagging_tools/README.md](rag_tools/tagging_tools/README.md)** - Tagging tools guide
+- **[ollama/OLLAMA_GUIDE.md](ollama/OLLAMA_GUIDE.md)** - Ollama setup
 - **[rag_core/config.py](rag_core/config.py)** - Configuration options
 
 ## 📦 Dependencies

@@ -244,84 +244,38 @@ html[data-theme='dark'] {
   accent-color: var(--sl-us-fg);
 }
 /* =========================
-   Matriz do ToE
+   Theory of Everything (ToE) — Diagrama SVG
    ========================= */
-/* ====== Layout do ToE (global) ====== */
-
 .toe-layout {
-  position: relative;
-  max-width: 960px;
+  max-width: 1200px;
   margin: 1.75rem auto 2.5rem;
-}
-
-.toe-layout-grid {
-  display: grid;
-  grid-template-areas:
-    ". top ."
-    "left . right"
-    ". bottom .";
-  grid-template-columns: minmax(0, 1fr) minmax(260px, 300px) minmax(0, 1fr);
-  grid-auto-rows: auto;
-  gap: 1rem 1.25rem;
-  justify-items: center;
-  align-items: center;
-}
-
-.toe-card {
-  background: var(--ifm-background-surface-color);
-  border-radius: 0.75rem;
-  padding: 1.1rem 1.3rem;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.03);
-}
-
-.toe-card-top    { grid-area: top;    max-width: 380px; }
-.toe-card-bottom { grid-area: bottom; max-width: 380px; }
-.toe-card-left   { grid-area: left;   max-width: 280px; justify-self: end; }
-.toe-card-right  { grid-area: right;  max-width: 280px; justify-self: start; }
-
-/* diagrama sobreposto e a poder crescer/overlap */
-.toe-layout-diagram {
-  position: absolute;
-  inset: 0;
   display: flex;
-  align-items: center;
   justify-content: center;
-  pointer-events: none;
-  overflow: visible;
+}
+
+.toe-layout-diagram {
+  width: 100%;
+  display: flex;
+  justify-content: center;
 }
 
 .toe-diagram-svg {
   display: block;
-  /* antes: clamp(340px, 65%, 520px) */
-  width: clamp(320px, 55%, 460px);
-  max-width: none;
+  width: 100%;
+  max-width: clamp(340px, 90%, 1000px);
   height: auto;
 }
 
-
-/* garantir cartões por cima do halo, se quiseres */
-.toe-card {
-  position: relative;
-  z-index: 1;
-}
-.toe-layout-diagram {
-  z-index: 2;
-}
-
-/* responsivo */
+/* Responsive: tamanhos ajustados por viewport */
 @media (max-width: 768px) {
-  .toe-layout-grid {
-    grid-template-areas:
-      "top"
-      "left"
-      "right"
-      "bottom";
-    grid-template-columns: 1fr;
-    gap: 1rem;
-  }
-
   .toe-diagram-svg {
-    width: clamp(240px, 65%, 340px);
+    max-width: clamp(280px, 95%, 600px);
+  }
+}
+
+@media (max-width: 480px) {
+  .toe-diagram-svg {
+    max-width: clamp(240px, 98%, 400px);
   }
 }
 

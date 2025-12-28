@@ -13,55 +13,19 @@ O **Security by Design – Theory of Everything (SbD–ToE)** é a filosofia que
 - **Regulação e legislação**
 - **Normas técnicas e frameworks de referência**
 - **Ameaças e incidentes reais**
-- **Prática diária na engenharia de software seguro (“from the trenches”)**
+- **Prática diária na engenharia de software seguro ("from the trenches")**
 
 O SbD–ToE fornece uma **linguagem comum** e um **quadro prescritivo, proporcional ao risco e evidenciável**, permitindo a qualquer organização pensar, desenhar e operar software de forma segura, coerente e verificável — desde o CEO até às equipas técnicas.
 
 ---
 <div className="toe-layout">
-  {/* 1) TEXTO EM CRUZ */}
-  <div className="toe-layout-grid">
-    <div className="toe-card toe-card-top">
-      <h4>Regulação &amp; Legislação (Top-Down)</h4>
-      <p>
-        Regulamentos como NIS2, DORA, CRA ou GDPR estabelecem obrigações formais
-        e requisitos de governação: definem o que “tem de existir”.
-      </p>
-    </div>
-
-    <div className="toe-card toe-card-left">
-      <h4>Ameaças &amp; Threat Intelligence</h4>
-      <p>
-        Taxonomias de ataques, vulnerabilidades recorrentes e incidentes reais
-        revelam onde os sistemas falham e o que é crítico proteger primeiro.
-      </p>
-    </div>
-
-    <div className="toe-card toe-card-right">
-      <h4>Normas &amp; Frameworks</h4>
-      <p>
-        Normas e modelos de maturidade traduzem obrigações legais em capacidades
-        concretas: processos, controlos e práticas esperadas.
-      </p>
-    </div>
-
-    <div className="toe-card toe-card-bottom">
-      <h4>Experiência “from the trenches”</h4>
-      <p>
-        Auditorias, post-mortems e prática diária revelam o que realmente funciona
-        no terreno e onde a teoria falha.
-      </p>
-    </div>
-  </div>
-
-  {/* 2) DIAGRAMA CENTRADO POR CIMA */}
   <div className="toe-layout-diagram">
     <svg
       className="toe-diagram-svg"
-      viewBox="0 0 800 360"
+      viewBox="0 0 1000 600"
       preserveAspectRatio="xMidYMid meet"
       role="img"
-      aria-label="Diagrama conceptual da Theory of Everything"
+      aria-label="Diagrama conceptual da Theory of Everything com 5 satélites"
     >
       <defs>
         <radialGradient id="toeGlow" cx="50%" cy="50%" r="50%">
@@ -69,43 +33,115 @@ O SbD–ToE fornece uma **linguagem comum** e um **quadro prescritivo, proporcio
           <stop offset="60%" stopColor="var(--ifm-color-primary)" stopOpacity="0.07" />
           <stop offset="100%" stopColor="transparent" stopOpacity="0" />
         </radialGradient>
+        <style>{`
+          .toe-title { font-weight: bold; font-size: 18px; fill: var(--ifm-font-color-base); }
+          .toe-text { font-size: 14px; fill: var(--ifm-color-emphasis-700); }
+          .toe-tspan { dominant-baseline: hanging; }
+        `}</style>
       </defs>
 
-      {/* halo maior */}
-      <circle cx="400" cy="180" r="170" fill="url(#toeGlow)" />
+      {/* Centro: C = (500,300); halo = 200; anel = 170; satélite = 28; núcleo = 70 */}
+      <g>
+        {/* halo maior */}
+        <circle cx="500" cy="300" r="200" fill="url(#toeGlow)" />
 
-      {/* anel */}
-      <circle
-        cx="400"
-        cy="180"
-        r="145"
-        fill="none"
-        stroke="var(--ifm-color-emphasis-400)"
-        strokeWidth="1.8"
-        strokeDasharray="4 3"
-      />
+        {/* anel */}
+        <circle
+          cx="500"
+          cy="300"
+          r="170"
+          fill="none"
+          stroke="var(--ifm-color-emphasis-400)"
+          strokeWidth="2"
+          strokeDasharray="5 3"
+        />
 
-      {/* núcleo */}
-      <circle
-        cx="400"
-        cy="180"
-        r="60"
-        fill="var(--ifm-background-surface-color)"
-        stroke="var(--ifm-color-primary)"
-        strokeWidth="2"
-      />
+        {/* núcleo */}
+        <circle
+          cx="500"
+          cy="300"
+          r="70"
+          fill="var(--ifm-background-surface-color)"
+          stroke="var(--ifm-color-primary)"
+          strokeWidth="2.5"
+        />
 
-      {/* orbitas (já bem afastadas do centro) */}
-      <circle cx="400" cy="28"  r="26" fill="var(--ifm-background-surface-color)" stroke="var(--ifm-color-emphasis-400)" />
-      <circle cx="700" cy="180" r="26" fill="var(--ifm-background-surface-color)" stroke="var(--ifm-color-emphasis-400)" />
-      <circle cx="400" cy="332" r="26" fill="var(--ifm-background-surface-color)" stroke="var(--ifm-color-emphasis-400)" />
-      <circle cx="100" cy="180" r="26" fill="var(--ifm-background-surface-color)" stroke="var(--ifm-color-emphasis-400)" />
+        {/* 5 satélites igualmente espaçados (72°) */}
+        {/* Coordenadas: R=170 em ângulos -90°, -18°, 54°, 126°, 198° */}
+        {/*
+          Top (0°):   (500.0,  130.0)   — Regulação
+          NE (72°):   (674.1, 219.8)    — Normas
+          SE (144°):  (638.2, 464.1)    — Experiência
+          SW (216°):  (361.8, 464.1)    — Ameaças
+          NW (288°):  (325.9, 219.8)    — Cross-Cutting
+        */}
 
-      {/* linhas */}
-      <line x1="400" y1="92"  x2="400" y2="60"  stroke="var(--ifm-color-emphasis-400)" strokeWidth="1" />
-      <line x1="460" y1="180" x2="674" y2="180" stroke="var(--ifm-color-emphasis-400)" strokeWidth="1" />
-      <line x1="400" y1="268" x2="400" y2="304" stroke="var(--ifm-color-emphasis-400)" strokeWidth="1" />
-      <line x1="340" y1="180" x2="126" y2="180" stroke="var(--ifm-color-emphasis-400)" strokeWidth="1" />
+        {/* Linhas do núcleo para satélites */}
+        <line x1="500" y1="300" x2="500" y2="158"  stroke="var(--ifm-color-emphasis-400)" strokeWidth="1.2" />
+        <line x1="500" y1="300" x2="656" y2="231"  stroke="var(--ifm-color-emphasis-400)" strokeWidth="1.2" />
+        <line x1="500" y1="300" x2="630" y2="451"  stroke="var(--ifm-color-emphasis-400)" strokeWidth="1.2" />
+        <line x1="500" y1="300" x2="370" y2="451"  stroke="var(--ifm-color-emphasis-400)" strokeWidth="1.2" />
+        <line x1="500" y1="300" x2="344" y2="231"  stroke="var(--ifm-color-emphasis-400)" strokeWidth="1.2" />
+
+        {/* Satélites */}
+        <circle cx="500" cy="130" r="28" fill="var(--ifm-background-surface-color)" stroke="var(--ifm-color-emphasis-400)" strokeWidth="2" />
+        <circle cx="674" cy="220" r="28" fill="var(--ifm-background-surface-color)" stroke="var(--ifm-color-emphasis-400)" strokeWidth="2" />
+        <circle cx="638" cy="464" r="28" fill="var(--ifm-background-surface-color)" stroke="var(--ifm-color-emphasis-400)" strokeWidth="2" />
+        <circle cx="362" cy="464" r="28" fill="var(--ifm-background-surface-color)" stroke="var(--ifm-color-emphasis-400)" strokeWidth="2" />
+        <circle cx="326" cy="220" r="28" fill="var(--ifm-background-surface-color)" stroke="var(--ifm-color-emphasis-400)" strokeWidth="2" />
+
+        {/* TEXTOS integrados no SVG */}
+        
+        {/* TOP — Regulação & Legislação */}
+        <text x="500" y="90" textAnchor="middle" className="toe-title">
+          Regulação &amp; Legislação
+        </text>
+        <text x="500" y="40" textAnchor="middle" className="toe-text">
+          <tspan x="500" dy="0">Regulamentos como NIS2, DORA,</tspan>
+          <tspan x="500" dy="18">CRA ou GDPR estabelecem</tspan>
+          <tspan x="500" dy="18">obrigações formais.</tspan>
+        </text>
+
+        {/* NE — Normas & Frameworks */}
+        <text x="750" y="180" className="toe-title">
+          Normas &amp; Frameworks
+        </text>
+        <text x="750" y="210" className="toe-text">
+          <tspan x="750" dy="0">Normas traduzem</tspan>
+          <tspan x="750" dy="18">obrigações legais em</tspan>
+          <tspan x="750" dy="18">capacidades concretas.</tspan>
+        </text>
+
+        {/* SE — Experiência from the trenches */}
+        <text x="750" y="510" className="toe-title">
+          Experiência "from the trenches"
+        </text>
+        <text x="750" y="540" className="toe-text">
+          <tspan x="750" dy="0">Auditorias, post-mortems</tspan>
+          <tspan x="750" dy="18">revelam o que realmente</tspan>
+          <tspan x="750" dy="18">funciona no terreno.</tspan>
+        </text>
+
+        {/* SW — Ameaças & Threat Intelligence */}
+        <text x="250" y="510" textAnchor="end" className="toe-title">
+          Ameaças &amp; Threat Intelligence
+        </text>
+        <text x="250" y="540" textAnchor="end" className="toe-text">
+          <tspan x="250" dy="0">Taxonomias de ataques</tspan>
+          <tspan x="250" dy="18">revelam onde os sistemas</tspan>
+          <tspan x="250" dy="18">falham.</tspan>
+        </text>
+
+        {/* NW — Cross-Cutting Concerns */}
+        <text x="250" y="180" textAnchor="end" className="toe-title">
+          Cross-Cutting Concerns
+        </text>
+        <text x="250" y="210" textAnchor="end" className="toe-text">
+          <tspan x="250" dy="0">Preocupações normativas</tspan>
+          <tspan x="250" dy="18">que atravessam domínios</tspan>
+          <tspan x="250" dy="18">e fases do SDLC.</tspan>
+        </text>
+      </g>
     </svg>
   </div>
 </div>
@@ -192,7 +228,7 @@ Apesar da sua importância, partilham limitações estruturais que são crítica
 
 O SbD–ToE preenche estas lacunas através de um modelo unificado, proporcional e prescritivo que atravessa toda a organização — da gestão à engenharia, da governação ao pipeline, da operação aos fornecedores.
 
-> O ToE é o ***“plano unificador”*** que transforma estes referenciais num corpo prescritivo, prático e proporcional ao risco.
+> O ToE é o ***"plano unificador"*** que transforma estes referenciais num corpo prescritivo, prático e proporcional ao risco.
 
 O SbD–ToE reúne, num modelo unificado:
 

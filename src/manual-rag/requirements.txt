@@ -1,9 +1,0 @@
-sentence-transformers>=2.2.0
-chromadb>=0.3.21
-requests>=2.31.0
-pyyaml>=6.0
-numpy<2
-
-# Testing
-pytest>=7.0.0
-pytest-cov>=4.0.0

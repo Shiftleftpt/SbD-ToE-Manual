@@ -139,3 +139,5 @@ pnpm-debug.log*
 
 # Work drafts and auxiliary documents (REVIEW_, SÍNTESE, etc.)
 .work-drafts/
+# Independent projects (manual-rag, etc.)
+src/manual-rag/

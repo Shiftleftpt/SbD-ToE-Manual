@@ -29,13 +29,13 @@ O SbD–ToE fornece uma **linguagem comum** e um **quadro prescritivo, proporcio
     >
       <defs>
         <radialGradient id="toeGlow" cx="50%" cy="50%" r="50%">
-          <stop offset="0%" stopColor="var(--ifm-color-primary)" stopOpacity="0.25" />
-          <stop offset="60%" stopColor="var(--ifm-color-primary)" stopOpacity="0.07" />
+          <stop offset="0%" stopColor="var(--ifm-color-primary)" stopOpacity="0.18" />
+          <stop offset="60%" stopColor="var(--ifm-color-primary)" stopOpacity="0.05" />
           <stop offset="100%" stopColor="transparent" stopOpacity="0" />
         </radialGradient>
         <style>{`
-          .toe-title { font-weight: bold; font-size: 18px; fill: var(--ifm-font-color-base); }
-          .toe-text { font-size: 14px; fill: var(--ifm-color-emphasis-700); }
+          .toe-title { font-weight: bold; font-size: 19px; fill: var(--ifm-font-color-base); }
+          .toe-text { font-size: 15px; fill: var(--ifm-color-emphasis-700); }
           .toe-tspan { dominant-baseline: hanging; }
         `}</style>
       </defs>
@@ -53,7 +53,7 @@ O SbD–ToE fornece uma **linguagem comum** e um **quadro prescritivo, proporcio
           fill="none"
           stroke="var(--ifm-color-emphasis-400)"
           strokeWidth="2"
-          strokeDasharray="5 3"
+          strokeDasharray="6 6"
         />
 
         {/* núcleo */}
@@ -84,62 +84,62 @@ O SbD–ToE fornece uma **linguagem comum** e um **quadro prescritivo, proporcio
         <line x1="500" y1="300" x2="344" y2="231"  stroke="var(--ifm-color-emphasis-400)" strokeWidth="1.2" />
 
         {/* Satélites */}
-        <circle cx="500" cy="130" r="28" fill="var(--ifm-background-surface-color)" stroke="var(--ifm-color-emphasis-400)" strokeWidth="2" />
-        <circle cx="674" cy="220" r="28" fill="var(--ifm-background-surface-color)" stroke="var(--ifm-color-emphasis-400)" strokeWidth="2" />
-        <circle cx="638" cy="464" r="28" fill="var(--ifm-background-surface-color)" stroke="var(--ifm-color-emphasis-400)" strokeWidth="2" />
-        <circle cx="362" cy="464" r="28" fill="var(--ifm-background-surface-color)" stroke="var(--ifm-color-emphasis-400)" strokeWidth="2" />
-        <circle cx="326" cy="220" r="28" fill="var(--ifm-background-surface-color)" stroke="var(--ifm-color-emphasis-400)" strokeWidth="2" />
+        <circle cx="500" cy="130" r="30" fill="var(--ifm-background-surface-color)" stroke="var(--ifm-color-emphasis-400)" strokeWidth="2" />
+        <circle cx="674" cy="220" r="30" fill="var(--ifm-background-surface-color)" stroke="var(--ifm-color-emphasis-400)" strokeWidth="2" />
+        <circle cx="638" cy="464" r="30" fill="var(--ifm-background-surface-color)" stroke="var(--ifm-color-emphasis-400)" strokeWidth="2" />
+        <circle cx="362" cy="464" r="30" fill="var(--ifm-background-surface-color)" stroke="var(--ifm-color-emphasis-400)" strokeWidth="2" />
+        <circle cx="326" cy="220" r="30" fill="var(--ifm-background-surface-color)" stroke="var(--ifm-color-emphasis-400)" strokeWidth="2" />
 
         {/* TEXTOS integrados no SVG */}
         
         {/* TOP — Regulação & Legislação */}
-        <text x="500" y="90" textAnchor="middle" className="toe-title">
+        <text x="500" y="70" textAnchor="middle" className="toe-title">
           Regulação &amp; Legislação
         </text>
-        <text x="500" y="40" textAnchor="middle" className="toe-text">
+        <text x="500" y="30" textAnchor="middle" className="toe-text">
           <tspan x="500" dy="0">Regulamentos como NIS2, DORA,</tspan>
           <tspan x="500" dy="18">CRA ou GDPR estabelecem</tspan>
           <tspan x="500" dy="18">obrigações formais.</tspan>
         </text>
 
         {/* NE — Normas & Frameworks */}
-        <text x="750" y="180" className="toe-title">
+        <text x="720" y="185" className="toe-title">
           Normas &amp; Frameworks
         </text>
-        <text x="750" y="210" className="toe-text">
-          <tspan x="750" dy="0">Normas traduzem</tspan>
-          <tspan x="750" dy="18">obrigações legais em</tspan>
-          <tspan x="750" dy="18">capacidades concretas.</tspan>
+        <text x="720" y="215" className="toe-text">
+          <tspan x="720" dy="0">Normas traduzem</tspan>
+          <tspan x="720" dy="18">obrigações legais em</tspan>
+          <tspan x="720" dy="18">capacidades concretas.</tspan>
         </text>
 
         {/* SE — Experiência from the trenches */}
-        <text x="750" y="510" className="toe-title">
+        <text x="690" y="490" className="toe-title">
           Experiência "from the trenches"
         </text>
-        <text x="750" y="540" className="toe-text">
-          <tspan x="750" dy="0">Auditorias, post-mortems</tspan>
-          <tspan x="750" dy="18">revelam o que realmente</tspan>
-          <tspan x="750" dy="18">funciona no terreno.</tspan>
+        <text x="690" y="520" className="toe-text">
+          <tspan x="690" dy="0">Auditorias, post-mortems</tspan>
+          <tspan x="690" dy="18">revelam o que realmente</tspan>
+          <tspan x="690" dy="18">funciona no terreno.</tspan>
         </text>
 
         {/* SW — Ameaças & Threat Intelligence */}
-        <text x="250" y="510" textAnchor="end" className="toe-title">
+        <text x="340" y="490" textAnchor="end" className="toe-title">
           Ameaças &amp; Threat Intelligence
         </text>
-        <text x="250" y="540" textAnchor="end" className="toe-text">
-          <tspan x="250" dy="0">Taxonomias de ataques</tspan>
-          <tspan x="250" dy="18">revelam onde os sistemas</tspan>
-          <tspan x="250" dy="18">falham.</tspan>
+        <text x="340" y="520" textAnchor="end" className="toe-text">
+          <tspan x="340" dy="0">Taxonomias de ataques</tspan>
+          <tspan x="340" dy="18">revelam onde os sistemas</tspan>
+          <tspan x="340" dy="18">falham.</tspan>
         </text>
 
         {/* NW — Cross-Cutting Concerns */}
-        <text x="250" y="180" textAnchor="end" className="toe-title">
+        <text x="280" y="190" textAnchor="end" className="toe-title">
           Cross-Cutting Concerns
         </text>
-        <text x="250" y="210" textAnchor="end" className="toe-text">
-          <tspan x="250" dy="0">Preocupações normativas</tspan>
-          <tspan x="250" dy="18">que atravessam domínios</tspan>
-          <tspan x="250" dy="18">e fases do SDLC.</tspan>
+        <text x="280" y="220" textAnchor="end" className="toe-text">
+          <tspan x="280" dy="0">Preocupações normativas</tspan>
+          <tspan x="280" dy="18">que atravessam domínios</tspan>
+          <tspan x="280" dy="18">e fases do SDLC.</tspan>
         </text>
       </g>
     </svg>

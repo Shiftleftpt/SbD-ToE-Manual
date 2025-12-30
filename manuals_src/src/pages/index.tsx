@@ -72,11 +72,11 @@ function ToeDiagram() {
       }}
     >
       <svg
-        viewBox="0 0 600 260"
+        viewBox="0 0 1407 704"
         role="img"
         aria-label="Diagrama conceptual da Theory of Everything"
         style={{
-          maxWidth: '720px', // ligeiramente maior
+          maxWidth: '1690px',
           width: '100%',
           height: 'auto',
         }}
@@ -87,225 +87,265 @@ function ToeDiagram() {
             <stop
               offset="0%"
               stopColor="var(--ifm-color-primary)"
-              stopOpacity="0.25"
+              stopOpacity="0.18"
             />
             <stop
               offset="60%"
               stopColor="var(--ifm-color-primary)"
-              stopOpacity="0.06"
+              stopOpacity="0.05"
             />
             <stop offset="100%" stopColor="transparent" stopOpacity="0" />
           </radialGradient>
+          <style>{`
+            .toe-home-title { font-weight: bold; font-size: 27px; fill: currentColor; }
+            .toe-home-text { font-size: 21px; fill: var(--ifm-color-emphasis-700); }
+          `}</style>
         </defs>
 
         {/* halo */}
-        <circle cx="300" cy="130" r="110" fill="url(#toeGlow)" />
+        <circle cx="704" cy="353" r="260" fill="url(#toeGlow)" />
 
-        {/* anel */}
+        {/* anel — 5 satélites a 72° intervalo */}
         <circle
-          cx="300"
-          cy="130"
-          r="90"
+          cx="704"
+          cy="353"
+          r="224"
           fill="none"
           stroke="var(--ifm-color-emphasis-400)"
-          strokeWidth="1.5"
-          strokeDasharray="4 3"
+          strokeWidth="3.6"
+          strokeDasharray="6 6"
         />
 
         {/* núcleo */}
         <circle
-          cx="300"
-          cy="130"
-          r="48"
+          cx="704"
+          cy="353"
+          r="113"
           fill="var(--ifm-background-surface-color)"
           stroke="var(--ifm-color-primary)"
-          strokeWidth="1.5"
+          strokeWidth="3.6"
         />
         <text
-          x="300"
-          y="124"
+          x="704"
+          y="338"
           textAnchor="middle"
-          fontSize="12"
+          fontSize="29"
           fontWeight="bold"
           fill="currentColor"
         >
           Security by Design
         </text>
         <text
-          x="300"
-          y="140"
+          x="704"
+          y="375"
           textAnchor="middle"
-          fontSize="11"
+          fontSize="27"
           fill="currentColor"
         >
           Theory of Everything
         </text>
 
-        {/* quatro “órbitas” */}
-        {/* top */}
+        {/* cinco satélites a 72° intervalo */}
+        {/* Top (0°) */}
         <circle
-          cx="300"
-          cy="40"
-          r="18"
+          cx="704"
+          cy="129"
+          r="47"
           fill="var(--ifm-background-surface-color)"
         />
         <circle
-          cx="300"
-          cy="40"
-          r="18"
+          cx="704"
+          cy="129"
+          r="47"
           fill="none"
           stroke="var(--ifm-color-emphasis-400)"
         />
         <text
-          x="300"
-          y="38"
+          x="704"
+          y="120"
           textAnchor="middle"
-          fontSize="9"
-          fill="currentColor"
+          className="toe-home-title"
         >
           Normativos
         </text>
         <text
-          x="300"
-          y="48"
+          x="704"
+          y="149"
           textAnchor="middle"
-          fontSize="9"
-          fill="currentColor"
+          className="toe-home-text"
         >
           &amp; Regulação
         </text>
 
-        {/* right */}
+        {/* NE (72°) */}
         <circle
-          cx="500"
-          cy="130"
-          r="18"
+          cx="915"
+          cy="284"
+          r="47"
           fill="var(--ifm-background-surface-color)"
         />
         <circle
-          cx="500"
-          cy="130"
-          r="18"
+          cx="915"
+          cy="284"
+          r="47"
           fill="none"
           stroke="var(--ifm-color-emphasis-400)"
         />
         <text
-          x="500"
-          y="128"
-          textAnchor="middle"
-          fontSize="9"
-          fill="currentColor"
+          x="984"
+          y="270"
+          textAnchor="start"
+          className="toe-home-title"
         >
           Normas &
         </text>
         <text
-          x="500"
-          y="138"
-          textAnchor="middle"
-          fontSize="9"
-          fill="currentColor"
+          x="984"
+          y="299"
+          textAnchor="start"
+          className="toe-home-text"
         >
           Frameworks
         </text>
 
-        {/* bottom */}
+        {/* SE (144°) */}
         <circle
-          cx="300"
-          cy="220"
-          r="18"
+          cx="834"
+          cy="533"
+          r="47"
           fill="var(--ifm-background-surface-color)"
         />
         <circle
-          cx="300"
-          cy="220"
-          r="18"
+          cx="834"
+          cy="533"
+          r="47"
           fill="none"
           stroke="var(--ifm-color-emphasis-400)"
         />
         <text
-          x="300"
-          y="218"
+          x="834"
+          y="579"
           textAnchor="middle"
-          fontSize="9"
-          fill="currentColor"
+          className="toe-home-title"
         >
           Ameaças
         </text>
         <text
-          x="300"
-          y="228"
+          x="834"
+          y="608"
           textAnchor="middle"
-          fontSize="9"
-          fill="currentColor"
+          className="toe-home-text"
         >
           &amp; incidentes
         </text>
 
-        {/* left */}
+        {/* SW (216°) */}
         <circle
-          cx="100"
-          cy="130"
-          r="18"
+          cx="572"
+          cy="533"
+          r="47"
           fill="var(--ifm-background-surface-color)"
         />
         <circle
-          cx="100"
-          cy="130"
-          r="18"
+          cx="572"
+          cy="533"
+          r="47"
           fill="none"
           stroke="var(--ifm-color-emphasis-400)"
         />
         <text
-          x="100"
-          y="128"
+          x="572"
+          y="579"
           textAnchor="middle"
-          fontSize="9"
-          fill="currentColor"
+          className="toe-home-title"
+        >
+          Engenharia
+        </text>
+        <text
+          x="572"
+          y="608"
+          textAnchor="middle"
+          className="toe-home-text"
+        >
+          &amp; ciclo de vida
+        </text>
+
+        {/* NW (288°) */}
+        <circle
+          cx="494"
+          cy="284"
+          r="47"
+          fill="var(--ifm-background-surface-color)"
+        />
+        <circle
+          cx="494"
+          cy="284"
+          r="47"
+          fill="none"
+          stroke="var(--ifm-color-emphasis-400)"
+        />
+        <text
+          x="422"
+          y="270"
+          textAnchor="end"
+          className="toe-home-title"
         >
           SDLC,
         </text>
         <text
-          x="100"
-          y="138"
-          textAnchor="middle"
-          fontSize="9"
-          fill="currentColor"
+          x="422"
+          y="299"
+          textAnchor="end"
+          className="toe-home-text"
         >
-          pipelines
+          CI/CD, deploy
         </text>
 
-        {/* ligações */}
+        {/* ligações — 5 satélites */}
+        {/* top */}
         <line
-          x1="300"
-          y1="82"
-          x2="300"
-          y2="58"
+          x1="704"
+          y1="240"
+          x2="704"
+          y2="177"
           stroke="var(--ifm-color-emphasis-400)"
-          strokeWidth="1"
+          strokeWidth="3.6"
         />
+        {/* NE */}
         <line
-          x1="348"
-          y1="130"
-          x2="478"
-          y2="130"
+          x1="812"
+          y1="317"
+          x2="870"
+          y2="299"
           stroke="var(--ifm-color-emphasis-400)"
-          strokeWidth="1"
+          strokeWidth="3.6"
         />
+        {/* SE */}
         <line
-          x1="300"
-          y1="178"
-          x2="300"
-          y2="202"
+          x1="770"
+          y1="443"
+          x2="807"
+          y2="495"
           stroke="var(--ifm-color-emphasis-400)"
-          strokeWidth="1"
+          strokeWidth="3.6"
         />
+        {/* SW */}
         <line
-          x1="252"
-          y1="130"
-          x2="122"
-          y2="130"
+          x1="638"
+          y1="443"
+          x2="600"
+          y2="495"
           stroke="var(--ifm-color-emphasis-400)"
-          strokeWidth="1"
+          strokeWidth="3.6"
+        />
+        {/* NW */}
+        <line
+          x1="597"
+          y1="317"
+          x2="537"
+          y2="299"
+          stroke="var(--ifm-color-emphasis-400)"
+          strokeWidth="3.6"
         />
       </svg>
 

@@ -8,14 +8,15 @@ sidebar_position: 1
 
 # 🌍 Security by Design – Theory of Everything
 
-O **Security by Design – Theory of Everything (SbD–ToE)** é a filosofia que unifica, num modelo operativo único, quatro domínios que tradicionalmente funcionam de forma isolada:
+O **Security by Design – Theory of Everything (SbD–ToE)** é uma filosofia e um modelo operativo que unifica, de forma coerente, **cinco pilares estruturantes** que, na prática, tendem a existir em silos:
 
 - **Regulação e legislação**
 - **Normas técnicas e frameworks de referência**
 - **Ameaças e incidentes reais**
-- **Prática diária na engenharia de software seguro ("from the trenches")**
+- **Prática diária na engenharia de software seguro (“from the trenches”)**
+- **Propriedades transversais do sistema (cross-cutting concerns)**
 
-O SbD–ToE fornece uma **linguagem comum** e um **quadro prescritivo, proporcional ao risco e evidenciável**, permitindo a qualquer organização pensar, desenhar e operar software de forma segura, coerente e verificável — desde o CEO até às equipas técnicas.
+A proposta do SbD–ToE é transformar estes pilares num **corpo prescritivo**, **proporcional ao risco** e **orientado a evidência**, capaz de guiar decisões desde a gestão e governação até à execução técnica no ciclo de vida de desenvolvimento e operação. O resultado pretendido é um sistema de engenharia em que **coerência**, **verificabilidade** e **defensibilidade** não dependem de intenções, mas de mecanismos observáveis e repetíveis.
 
 ---
 <div className="toe-layout">
@@ -77,21 +78,21 @@ O SbD–ToE fornece uma **linguagem comum** e um **quadro prescritivo, proporcio
         */}
 
         {/* Linhas do núcleo para satélites */}
-        <line x1="500" y1="300" x2="500" y2="158"  stroke="var(--ifm-color-emphasis-400)" strokeWidth="1.2" />
-        <line x1="500" y1="300" x2="656" y2="231"  stroke="var(--ifm-color-emphasis-400)" strokeWidth="1.2" />
-        <line x1="500" y1="300" x2="630" y2="451"  stroke="var(--ifm-color-emphasis-400)" strokeWidth="1.2" />
-        <line x1="500" y1="300" x2="370" y2="451"  stroke="var(--ifm-color-emphasis-400)" strokeWidth="1.2" />
-        <line x1="500" y1="300" x2="344" y2="231"  stroke="var(--ifm-color-emphasis-400)" strokeWidth="1.2" />
+        <line x1="500" y1="300" x2="500" y2="160"  stroke="var(--ifm-color-emphasis-400)" strokeWidth="1.2" />
+        <line x1="500" y1="300" x2="633" y2="257"  stroke="var(--ifm-color-emphasis-400)" strokeWidth="1.2" />
+        <line x1="500" y1="300" x2="582" y2="413"  stroke="var(--ifm-color-emphasis-400)" strokeWidth="1.2" />
+        <line x1="500" y1="300" x2="418" y2="413"  stroke="var(--ifm-color-emphasis-400)" strokeWidth="1.2" />
+        <line x1="500" y1="300" x2="367" y2="257"  stroke="var(--ifm-color-emphasis-400)" strokeWidth="1.2" />
 
         {/* Satélites */}
         <circle cx="500" cy="130" r="30" fill="var(--ifm-background-surface-color)" stroke="var(--ifm-color-emphasis-400)" strokeWidth="2" />
-        <circle cx="674" cy="220" r="30" fill="var(--ifm-background-surface-color)" stroke="var(--ifm-color-emphasis-400)" strokeWidth="2" />
-        <circle cx="638" cy="464" r="30" fill="var(--ifm-background-surface-color)" stroke="var(--ifm-color-emphasis-400)" strokeWidth="2" />
-        <circle cx="362" cy="464" r="30" fill="var(--ifm-background-surface-color)" stroke="var(--ifm-color-emphasis-400)" strokeWidth="2" />
-        <circle cx="326" cy="220" r="30" fill="var(--ifm-background-surface-color)" stroke="var(--ifm-color-emphasis-400)" strokeWidth="2" />
+        <circle cx="662" cy="247" r="30" fill="var(--ifm-background-surface-color)" stroke="var(--ifm-color-emphasis-400)" strokeWidth="2" />
+        <circle cx="600" cy="438" r="30" fill="var(--ifm-background-surface-color)" stroke="var(--ifm-color-emphasis-400)" strokeWidth="2" />
+        <circle cx="400" cy="438" r="30" fill="var(--ifm-background-surface-color)" stroke="var(--ifm-color-emphasis-400)" strokeWidth="2" />
+        <circle cx="338" cy="247" r="30" fill="var(--ifm-background-surface-color)" stroke="var(--ifm-color-emphasis-400)" strokeWidth="2" />
 
         {/* TEXTOS integrados no SVG */}
-        
+
         {/* TOP — Regulação & Legislação */}
         <text x="500" y="70" textAnchor="middle" className="toe-title">
           Regulação &amp; Legislação
@@ -113,23 +114,23 @@ O SbD–ToE fornece uma **linguagem comum** e um **quadro prescritivo, proporcio
         </text>
 
         {/* SE — Experiência from the trenches */}
-        <text x="690" y="490" className="toe-title">
+        <text x="650" y="460" className="toe-title">
           Experiência "from the trenches"
         </text>
-        <text x="690" y="520" className="toe-text">
-          <tspan x="690" dy="0">Auditorias, post-mortems</tspan>
-          <tspan x="690" dy="18">revelam o que realmente</tspan>
-          <tspan x="690" dy="18">funciona no terreno.</tspan>
+        <text x="650" y="490" className="toe-text">
+          <tspan x="650" dy="0">Auditorias, post-mortems</tspan>
+          <tspan x="650" dy="18">revelam o que realmente</tspan>
+          <tspan x="650" dy="18">funciona no terreno.</tspan>
         </text>
 
         {/* SW — Ameaças & Threat Intelligence */}
-        <text x="340" y="490" textAnchor="end" className="toe-title">
+        <text x="370" y="460" textAnchor="end" className="toe-title">
           Ameaças &amp; Threat Intelligence
         </text>
-        <text x="340" y="520" textAnchor="end" className="toe-text">
-          <tspan x="340" dy="0">Taxonomias de ataques</tspan>
-          <tspan x="340" dy="18">revelam onde os sistemas</tspan>
-          <tspan x="340" dy="18">falham.</tspan>
+        <text x="370" y="490" textAnchor="end" className="toe-text">
+          <tspan x="370" dy="0">Taxonomias de ataques</tspan>
+          <tspan x="370" dy="18">revelam onde os sistemas</tspan>
+          <tspan x="370" dy="18">falham.</tspan>
         </text>
 
         {/* NW — Cross-Cutting Concerns */}
@@ -137,7 +138,7 @@ O SbD–ToE fornece uma **linguagem comum** e um **quadro prescritivo, proporcio
           Cross-Cutting Concerns
         </text>
         <text x="280" y="220" textAnchor="end" className="toe-text">
-          <tspan x="280" dy="0">Preocupações normativas</tspan>
+          <tspan x="280" dy="0">Propriedades estruturais</tspan>
           <tspan x="280" dy="18">que atravessam domínios</tspan>
           <tspan x="280" dy="18">e fases do SDLC.</tspan>
         </text>
@@ -146,49 +147,49 @@ O SbD–ToE fornece uma **linguagem comum** e um **quadro prescritivo, proporcio
   </div>
 </div>
 
-
 ---
 
 ## 🔄 Integração Top-Down e Bottom-Up
 
-As perspetivas **Top-Down** estabelecem expectativas externas (regulamentos, normas, políticas, controlos e maturidade).  
-As perspetivas **Bottom-Up** revelam a realidade técnica (ameaças, incidentes, vulnerabilidades recorrentes).
+O SbD–ToE assume explicitamente duas perspetivas complementares:
 
-O SbD–ToE faz a síntese:
+- **Top-Down**: estabelece expectativas externas — regulamentos, normas, políticas, controlos e objetivos de maturidade — e define critérios de conformidade e de governação.
+- **Bottom-Up**: descreve a realidade técnica — ameaças, incidentes, padrões de falha e classes recorrentes de vulnerabilidades — e orienta mitigação baseada em evidência empírica.
 
-- cumpre normas e regulamentos;  
-- responde a ameaças reais;  
-- define práticas aplicáveis ao SDLC;  
+A síntese ToE resulta da integração disciplinada destas perspetivas em práticas aplicáveis ao ciclo de vida:
+
+- cumpre normas e regulamentos;
+- responde a ameaças observadas e plausíveis;
+- define práticas operacionais e técnicas no SDLC e no CI/CD;
 - produz evidência verificável e rastreável.
 
 ---
 
 ## 🏛️ Princípios fundadores
 
-A filosofia ToE assenta em cinco princípios operativos:
+A filosofia ToE assenta em cinco princípios operativos, definidos para garantir propriedades transversais de coerência, rastreabilidade e defensibilidade em todos os domínios do manual:
 
-- **1. Proporcionalidade ao risco** - Práticas aplicadas por criticidade (L1–L3), com rigor e evidência ajustados ao impacto.
+- **1. Proporcionalidade ao risco** — Práticas aplicadas por criticidade (L1–L3), com rigor e evidência ajustados ao impacto.
 
-- **2. Modularidade** - Capítulos autónomos por domínio técnico, permitindo adoção progressiva e melhoria contínua.
+- **2. Modularidade** — Capítulos autónomos por domínio técnico, permitindo adoção progressiva e melhoria contínua.
 
-- **3. Prescritividade útil** - Define **o que fazer, quando, como e por quem** — com requisitos, critérios, user stories e validações.
+- **3. Prescritividade útil** — Define **o que fazer, quando, como e por quem**, com requisitos, critérios, user stories e validações.
 
-- **4. Responsabilidade partilhada** - Segurança distribuída entre gestão, risco, arquitetura, engenharia, QA, operações e terceiros.
+- **4. Responsabilidade partilhada** — Segurança distribuída entre gestão, risco, arquitetura, engenharia, QA, operações e terceiros.
 
--  **5. Rastreabilidade e evidência** - Cada prática é mapeada a normas, regulamentos, ameaças e validações técnicas.  
-O *cross-check* demonstra como cada capítulo garante conformidade.
+- **5. Rastreabilidade e evidência** — Cada prática é mapeada a normas, regulamentos, ameaças e validações técnicas. O *cross-check* demonstra como cada capítulo sustenta conformidade e eficácia.
 
 ---
 
 ## 🧩 Como o SbD–ToE se posiciona perante os referenciais
 
-Nenhum referencial cobre o *Security by Design* end-to-end com detalhe prescritivo, proporcionalidade ao risco, user stories, papéis, validações CI/CD e evidência técnica.
+Nenhum referencial, por si só, cobre o *Security by Design* end-to-end com detalhe prescritivo, proporcionalidade ao risco, papéis operacionais, validações CI/CD e evidência técnica.
 
 O SbD–ToE:
 
-- usa cada framework **onde é mais forte**  
-- preenche lacunas **onde são abstratas**  
-- unifica tudo num **modelo operativo único**
+- usa cada framework **onde é mais forte**;
+- preenche lacunas **onde é abstrata**;
+- unifica tudo num **modelo operativo único**.
 
 ### Referências do manual
 
@@ -212,23 +213,23 @@ Cada uma contribui com valor específico:
 - ISO estabelece sistemas de gestão e enquadramento organizacional.  
 - ENISA recomenda práticas modernas para SDLC e supply chain.  
 - CIS define salvaguardas operacionais priorizadas.  
-- SLSA foca-se na proveniência e integridade da cadeia de build.  
+- SLSA foca-se na proveniência e integridade da cadeia de build.
 
 **Todas são essenciais — mas nenhuma é suficiente por si só.**
 
-Apesar da sua importância, partilham limitações estruturais que são críticas para a adoção prática:
+Apesar da sua importância, partilham limitações estruturais relevantes para adoção prática:
 
-- **não definem papéis e responsabilidades operacionais** no SDLC  
-- **não fornecem user stories**, critérios BDD ou artefactos concretos  
-- **não integram requisitos com threat modeling** de forma coerente por domínio  
-- **não tratam formação por função**, onboarding de internos e terceiros, nem caminhos de capacitação  
-- **não prescrevem práticas contratuais** ou due diligence operacional sobre fornecedores  
-- **não garantem proporcionalidade ao risco (L1–L3)**  
-- **não oferecem rastreabilidade bidirecional completa** entre requisitos, normas e ameaças
+- **não definem papéis e responsabilidades operacionais** no SDLC;  
+- **não fornecem user stories**, critérios BDD ou artefactos concretos;  
+- **não integram requisitos com threat modeling** de forma coerente por domínio;  
+- **não tratam formação por função**, onboarding de internos e terceiros, nem caminhos de capacitação;  
+- **não prescrevem práticas contratuais** ou due diligence operacional sobre fornecedores;  
+- **não garantem proporcionalidade ao risco (L1–L3)**;  
+- **não oferecem rastreabilidade bidirecional completa** entre requisitos, normas e ameaças.
 
 O SbD–ToE preenche estas lacunas através de um modelo unificado, proporcional e prescritivo que atravessa toda a organização — da gestão à engenharia, da governação ao pipeline, da operação aos fornecedores.
 
-> O ToE é o ***"plano unificador"*** que transforma estes referenciais num corpo prescritivo, prático e proporcional ao risco.
+> O ToE é o ***“plano unificador”*** que transforma estes referenciais num corpo prescritivo, prático e proporcional ao risco.
 
 O SbD–ToE reúne, num modelo unificado:
 
@@ -238,8 +239,7 @@ O SbD–ToE reúne, num modelo unificado:
 4. **Salvaguardas operacionais**  
 5. **Integridade da cadeia de fornecimento**
 
-Cada perspetiva é essencial;  
-o ToE integra-as num modelo único, prescritivo e aplicável ao SDLC real.
+Cada perspetiva é essencial; o ToE integra-as num modelo único, prescritivo e aplicável ao SDLC real.
 
 ---
 
@@ -268,7 +268,6 @@ o ToE integra-as num modelo único, prescritivo e aplicável ao SDLC real.
 | **MITRE CWE** | Fraquezas estruturais | Não define práticas de engenharia | Mapeia CWE para requisitos de código, arquitetura e testes |
 | **OSC&R** | Ameaças à supply chain | Descritivo; focado em cenários | Integra OSC&R nos capítulos de CI/CD, SBOM e IaC |
 | **CNCF Secure Supply Chain** | Cloud-native supply chain | Parcial; orientado a ecossistemas específicos | Define validações, políticas e gates em ambientes cloud-native |
-
 </details>
 
 ---

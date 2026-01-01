@@ -1,102 +1,130 @@
 ---
 id: mapeamento-ameacas-risco
-title: Mapeamento de Ameaças por Nível de Risco
+title: Mapeamento de Ameaças para Validação do Risco
 sidebar_position: 6
-tags: [tipo:mapeamento, ameaças, risco, controlo]
+tags: [tipo:mapeamento, ameacas, risco, validacao, controlo]
 ---
 
 <!--template: sbdtoe-core -->
 
-# 🛠️ Mapeamento de Ameaças por Nível de Risco
+# 🛠️ Mapeamento de Ameaças para Validação do Risco
 
-A integração de **modelos de ameaças estruturados** na análise de risco é fundamental para garantir que os riscos considerados representam efetivamente a realidade técnica e operativa. Este ficheiro estabelece um modelo de referência para mapear ameaças conhecidas (como STRIDE ou MITRE ATT\&CK) aos riscos analisados no contexto de aplicações.
+O mapeamento de ameaças conhecidas é um **mecanismo essencial de validação da análise de risco**, garantindo que os riscos identificados refletem **vetores de ataque reais, plausíveis e documentados**.
 
----
+No *Security by Design – Theory of Everything (SbD-ToE)*, as ameaças **não determinam o nível de risco da aplicação**, mas são usadas para:
 
-## 🛡️ Porquê mapear ameaças?
-
-* Ajuda a **validar se os riscos analisados cobrem ameaças reais**.
-* Permite uma abordagem sistemática e rastreável.
-* Suporta a priorização de controlos baseados em exposição concreta.
-* Facilita auditorias e revisões de arquitetura e threat modeling.
+- validar a classificação de risco efetuada (E/D/I);
+- identificar lacunas na análise ou nos controlos aplicados;
+- justificar reforços de controlo ou rejeição de aceitação de risco;
+- fundamentar decisões com base em catálogos reconhecidos.
 
 ---
 
-## 🧩 Modelos de ameaças relevantes
+## 🧠 Enquadramento no modelo SbD-ToE
 
-| Modelo        | Características principais                                                                          | Relevância para risco aplicacional                    |
-| ------------- | --------------------------------------------------------------------------------------------------- | ----------------------------------------------------- |
-| STRIDE        | Spoofing, Tampering, Repudiation, Information Disclosure, Denial of Service, Elevation of Privilege | Ideal para modelar aplicações desde o design          |
-| MITRE ATT\&CK | Técnicas de ataque em sistemas reais (enterprise/cloud)                                             | Excelente para avaliar exposição e controle de ataque |
-| CAPEC         | Catálogo de padrões de exploração de vulnerabilidades                                               | Bom para mapear controlos específicos                 |
+O papel do mapeamento de ameaças no SbD-ToE é **complementar e validatório**:
 
-> Em contexto aplicacional, STRIDE é ideal para threat modeling e ATT\&CK para validação de exposição e resposta.
+1. A aplicação é classificada segundo o modelo **E/D/I**.
+2. São identificados riscos relevantes e respetivos atributos.
+3. As ameaças conhecidas são mapeadas para esses riscos.
+4. Os controlos são definidos ou ajustados.
+5. O risco residual é avaliado e, se aplicável, aceite.
 
----
-
-## 📝 Exemplo de Mapeamento STRIDE → Risco
-
-| Categoria STRIDE       | Exemplo de Ameaça                | Risco Potencial                           | Controlos sugeridos                    |
-| ---------------------- | -------------------------------- | ----------------------------------------- | -------------------------------------- |
-| Spoofing               | Falsificação de identidade       | Acesso não autorizado a funções sensíveis | MFA, validação JWT, controle de sessão |
-| Tampering              | Manipulação de dados em trânsito | Perda de integridade de informação        | TLS, HMAC, assinatura digital          |
-| Information Disclosure | Exfiltração de dados sensíveis   | Violacão de confidencialidade             | Encriptação, RBAC, mascaramento        |
-| Denial of Service      | Envio de tráfego malicioso       | Indisponibilidade de serviço              | Rate limiting, WAF, circuit breakers   |
+> 📌 A ausência de ameaças mapeáveis para um risco identificado  
+> é um **sinal de alerta** que exige revisão da análise.
 
 ---
 
-## 📝 Mapeamento com MITRE ATT\&CK (resumo)
+## 🛡️ Porque mapear ameaças
 
-| Técnica ATT\&CK           | Vetor de risco                 | Possível resposta / controlo                          |
-| ------------------------- | ------------------------------ | ----------------------------------------------------- |
-| Initial Access: Phishing  | Comprometimento de credenciais | Filtro SPF/DKIM, awareness, isolamento de credenciais |
-| Execution: Scripting      | Execução de código remoto      | Controlo de macro, validação de input                 |
-| Discovery: Cloud Services | Enumeração de recursos         | Hardening IAM, logging, segmentação                   |
-| Impact: Data Destruction  | Perda deliberada de dados      | Backups protegidos, controlo de alterações            |
+O mapeamento sistemático de ameaças permite:
 
-> A seleção das técnicas ATT\&CK deve refletir o contexto da aplicação (web, cloud, API, CI/CD, etc.).
+- confirmar que os riscos analisados **correspondem a cenários reais**;
+- reduzir subjetividade na avaliação de risco;
+- aumentar rastreabilidade entre risco, ameaça e controlo;
+- suportar auditorias, revisões de arquitetura e decisões de exceção.
 
 ---
 
-## 📝 Mapeamento com OSC\&R (exemplos)
+## 🧩 Catálogos de ameaças relevantes
 
-| Tática OSC\&R     | Técnica ofensiva                             | Risco Aplicacional              | Controlos sugeridos                      |
-| ----------------- | -------------------------------------------- | ------------------------------- | ---------------------------------------- |
-| Initial Access    | Injeção de código em aplicação local         | Execução arbitrária no cliente  | Validação estrita de input, sandboxing   |
-| Persistence       | Modificação de ficheiros locais persistentes | Injeção de DLL ou hooks         | File integrity monitoring, assinaturas   |
-| Defense Evasion   | Inversão de execução ou nome de processo     | Bypass de controlos de execução | AppArmor, exec restrictions              |
-| Credential Access | Dumping de credenciais em runtime            | Acesso a segredos em memória    | Proteção de segredos, encriptação em uso |
+Os seguintes modelos são reconhecidos no SbD-ToE como fontes válidas de ameaça:
 
-> OSC\&R é especialmente últil para aplicações com runtime local, agentes ou módulos instalados.
+| Modelo        | Papel no SbD-ToE                                              | Quando usar                                   |
+|---------------|---------------------------------------------------------------|-----------------------------------------------|
+| **STRIDE**    | Modelação de ameaças ao nível da aplicação                    | Design, arquitetura, threat modeling inicial  |
+| **MITRE ATT&CK** | Validação de vetores de ataque reais e exposição operacional | Aplicações expostas, cloud, APIs, enterprise  |
+| **CAPEC**     | Padrões de exploração de vulnerabilidades                     | Justificação de controlos técnicos específicos|
+| **OSC&R**     | Técnicas ofensivas contra software                            | Runtime local, agentes, clientes, SDKs        |
+| **D3FEND**    | Técnicas defensivas associadas a ameaças                      | Planeamento e justificação de controlos       |
 
----
-
-## 🔐 Ligacão com Risco Residual e Controlos
-
-* Cada ameaça identificada deve resultar na avaliação de um risco associado.
-* Esse risco pode ser mitigado parcialmente → gerando **risco residual**.
-* O controlo aplicado deve ser **rastreável para a ameaça e para o risco**.
+> Estes catálogos **não são mutuamente exclusivos** e devem ser usados conforme o contexto técnico.
 
 ---
 
-## 🧩 Extensões para Contextos Específicos
+## 🧩 Exemplo: STRIDE como validação de risco
 
-| Modelo      | Foco                                         | Quando usar                                                      |
-| ----------- | -------------------------------------------- | ---------------------------------------------------------------- |
-| **OSC\&R**  | Técnicas ofensivas contra software           | Aplicações em runtime, segurança ofensiva de aplicações          |
-| **D3FEND**  | Técnicas defensivas documentadas             | Planeamento de controlos defensivos com base em ameaças          |
-| **MASTR-S** | Ameaças à cadeia de fornecimento de software | Aplicações com pipelines CI/CD, dependências externas, automação |
+| Categoria STRIDE       | Ameaça típica                    | Risco validado                       | Controlos associados                |
+|------------------------|----------------------------------|--------------------------------------|------------------------------------|
+| Spoofing               | Falsificação de identidade       | Acesso indevido a funções críticas   | MFA, gestão de sessão              |
+| Tampering              | Manipulação de dados             | Perda de integridade                 | Assinatura, validação de input     |
+| Information Disclosure | Exfiltração de dados             | Violação de confidencialidade        | Encriptação, RBAC                  |
+| Denial of Service      | Saturação de recursos            | Indisponibilidade                    | Rate limiting, proteção perimetral |
 
-> Estes modelos são especialmente relevantes para equipas com capacidades de threat modeling maduras ou ambientes com elevado risco técnico.
+Este mapeamento confirma que os riscos identificados **têm correspondência direta com vetores de ataque conhecidos**.
 
 ---
 
-## 🚀 Recomendações para adoção
+## 🧩 Uso de ATT&CK para validação de exposição
 
-* Usar STRIDE como modelo base em threat modeling.
-* Usar ATT\&CK para validação de exposição e definição de prioridades.
-* Usar OSC\&R para aplicações com componentes nativos, agentes ou execução local.
-* Associar cada entrada na matriz de risco a pelo menos uma ameaça conhecida.
-* Rever ameaças conhecidas com cada alteração de arquitetura.
+| Técnica ATT&CK            | Vetor de ataque                | Risco associado                 | Controlos típicos                 |
+|---------------------------|-------------------------------|----------------------------------|----------------------------------|
+| Initial Access: Phishing  | Compromisso de credenciais     | Acesso não autorizado            | MFA, awareness                   |
+| Execution: Scripting      | Execução remota                | Execução arbitrária              | Hardening, validação             |
+| Discovery: Cloud Services | Enumeração de recursos         | Exposição excessiva              | IAM restritivo, logging          |
+| Impact: Data Destruction  | Sabotagem de dados             | Perda de integridade             | Backups, controlo de alterações  |
 
-> O mapeamento de ameaças não é apenas uma prática de threat modeling, mas um **instrumento fundamental para fundamentar e justificar a análise de risco**.
+ATT&CK é particularmente útil para validar se **a exposição assumida no modelo E/D/I é realista**.
+
+---
+
+## 🔐 Ligação com controlos e risco residual
+
+Cada ameaça mapeada deve resultar em:
+
+- um ou mais **riscos associados**;
+- definição de **controlos mitigadores**;
+- avaliação do **risco residual** após controlo.
+
+Quando uma ameaça relevante **não tem controlo eficaz**, o risco residual:
+- aumenta,
+- ou torna-se **não aceitável**, especialmente em aplicações L3.
+
+---
+
+## ⚠️ Regras normativas
+
+- Todo o risco identificado **deve ser validável** por pelo menos uma ameaça conhecida.
+- A aceitação de risco **não é válida** se ameaças plausíveis permanecerem sem controlo eficaz.
+- Em aplicações L3, ameaças mapeadas em catálogos reconhecidos **exigem mitigação explícita ou justificação formal de exceção**.
+
+---
+
+## 🔄 Integração no ciclo de vida
+
+O mapeamento de ameaças deve ser revisto:
+
+- sempre que haja alterações de arquitetura, dados ou exposição;
+- quando são introduzidos novos mecanismos de automação ou delegação;
+- após incidentes ou descobertas relevantes;
+- antes de decisões formais de aceitação de risco residual.
+
+---
+
+## 📌 Nota final
+
+O mapeamento de ameaças não serve para “listar ataques”,  
+serve para **ancorar a análise de risco na realidade técnica**.
+
+No SbD-ToE, ameaças são **instrumentos de validação**,  
+não mecanismos de classificação automática de risco.

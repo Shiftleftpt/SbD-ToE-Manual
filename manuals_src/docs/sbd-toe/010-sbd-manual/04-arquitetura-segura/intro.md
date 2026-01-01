@@ -18,7 +18,7 @@ Os capítulos basilares constituem a **fundação técnica e metodológica** do 
 
 Este capítulo define as práticas para garantir que a arquitetura de uma aplicação **atua como contenção e mitigação do risco estrutural**, através de:
 
-- Delimitação de **zonas de confiança (ZTC)** e respetivas fronteiras
+- Delimitação de **zonas de confiança** e respetivas fronteiras
 - **Segmentação lógica e física** de componentes e dados
 - Controlo e validação de **fluxos interzonais**
 - Suporte a **threat modeling, autenticação, controlo de acesso, validação e operações seguras**

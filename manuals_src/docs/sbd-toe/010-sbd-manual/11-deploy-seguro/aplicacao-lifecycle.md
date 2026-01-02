@@ -553,6 +553,109 @@ Procedimentos de rollback (1 por tipo), logs de testes trimestrais, evidência d
 
 ---
 
+### US-23 - Deploy com Decisão Estruturada (Separação Sugestão/Decisão)
+
+Sem um framework claro de aprovação, gates automáticos bloqueiam ou liberam sem contexto humano, criando efetivamente decisões implícitas.
+
+**Contexto.** Deployments necessitam separação clara entre validação técnica automática (sugestão) e aprovação humana (decisão).
+
+:::userstory
+**História.**  
+Como **Líder Técnico / AppSec**, quero **documentar e executar um processo de decisão estruturado para aprovação de deploy** (checklist de readiness, decisão com opções claras, escalation em caso de conflito), para **assegurar que cada deployment em produção é conscientemente aprovado por autoridade competente**.
+
+**Critérios de aceitação (BDD).**  
+- **Dado** um deployment pronto (all gates passou, staging validado)  
+  **Quando** iniciamos processo de aprovação  
+  **Então**:
+    - Checklist C1 com 4 perguntas críticas é preenchido (validações técnicas? rollback pronto? impacto negócio? monitorização ativa?)
+    - Decision template T1 com 4 opções é explícito: APPROVE-NOW-PROD / APPROVE-CANARY-FIRST / DEFER-NEXT-RELEASE / BLOCK-UNTIL-FIXED
+    - Se conflito entre risco técnico e pressão de negócio, escalation template T2 documenta posições e resolução
+    - Decisor qualificado (por matriz L1/L2/L3 × severidade) assina decisão com justificativa
+
+**Checklist.**  
+- [ ] Matriz de decisores definida (quem aprova o quê em função de L1/L2/L3 × severidade)  
+- [ ] Checklist C1 com 4 perguntas preenchido antes de T1  
+- [ ] Template T1 com 4 opções e justificativa documentado  
+- [ ] Template T2 de escalation ready para conflitos  
+- [ ] SLA de decisão definido (CRÍTICA: 4h, outra: 24h)  
+- [ ] Decisor autorizado e treinado no processo  
+- [ ] Rastreio de todas as decisões (C1, T1, T2) em auditoria  
+- [ ] KPIs monitorados: % deploys com C1, tempo C1→T1, rate de escalations, SLA compliance  
+
+:::
+
+**Artefactos & evidências.**  
+Checklist C1 preenchido por deployment, Decision Template T1 assinado, Escalation logs (quando T2 foi usado), Matriz de decisores versionada, KPI dashboard (time-to-decision, block rate, escalation rate).
+
+**Proporcionalidade L1–L3.**  
+| L1 | L2 | L3 |
+|----|----|----|
+| C1 + T1 manual, todas 4 Q's = SIM | C1 com tolerância RISCO se mitigado, T1 com canary option | C1 com tolerância maior para risks monitoráveis, T1 preferência APPROVE-NOW |
+| Escalation raro | Escalation moderado | Escalation raro (confiança alta) |
+
+**Integração no SDLC.**  
+| Fase | Trigger | Responsável | SLA |
+|------|---------|-------------|-----|
+| Pré-deploy / Aprovação | Gates all passed, pronto para produção | Líder Técnico + AppSec | CRÍTICA: 4h, ALTA: 24h |
+
+**Ligações úteis.** [Addon 11: Framework de Decisão para Deployment](/sbd-toe/sbd-manual/deploy-seguro/addon/addon-11-deploy-decision-cap11); [Cap 06-US-14: Decisão estruturada em SAST](/sbd-toe/sbd-manual/sast/aplicacao-lifecycle#us-14---decisão-estruturada-em-sast-findings)
+
+---
+
+### US-24 - Validação Empírica de Deployment (Evidência acima de Plausibilidade)
+
+Staging pode passar mas produção falhar por diferenças não reproduzidas (escala, tráfego real, dependências externas, race conditions).
+
+**Contexto.** Decidir go-live (canary → GA) baseado apenas em staging passing é insuficiente; validação empírica em produção é crítica.
+
+:::userstory
+**História.**  
+Como **DevOps / On-Call Engineer**, quero **executar validação empírica multi-fase em canary e pós-deploy (smoke tests funcionais, health checks, rollback verification, monitorização contínua)**, para **confirmar que deployment é seguro, saudável e reversível em produção real, não apenas staging**.
+
+**Critérios de aceitação (BDD).**  
+- **Dado** um deployment em canary (1% traffic)  
+  **Quando** executamos T1-T5 (Pre-deploy health checks, Smoke tests, Post-GA health, Rollback verification, Monitoring)  
+  **Então**:
+    - T1 (Pre-deploy): DB, cache, APIs respond, baselines registados
+    - T2 (Canary smoke): 5+ happy-path tests executam OK, latência dentro ±10% baseline, error rate < 1%
+    - T3 (Post-GA health): All instances healthy, latência/error rate em range, business metrics OK
+    - T4 (Rollback test): Rollback executado com sucesso em staging pre-deploy, time < 5 min, procedure documentada
+    - T5 (Monitoring): Contínuo, dashboards + alertas ativas, nenhuma anomalia detectada em 4-24h
+  - E caso desvio detectado:
+    - S1 template: Falso positivo (staging pass, prod safe, nada acontece) → documentar por que staging era representative
+    - S2 template: Falso negativo (staging pass, prod anomaly) → RCA, learning, melhoria de staging/testing
+
+**Checklist.**  
+- [ ] T1 pré-deploy: Health checks de dependências críticas, baselines de latência/CPU/mem registados  
+- [ ] T2 canary: Mínimo 5 smoke tests funcionais, latência dentro ±10% baseline, error rate < 1%, duração 20-30 min  
+- [ ] T3 pós-GA: All instances healthy (0 restarts), latência/error rate em range ±15%, business metrics > 95% success  
+- [ ] T4 rollback: Dry-run em staging antes de canary, validado < 5 min, procedure escrito em produção  
+- [ ] T5 monitorização: Dashboards ativas, alertas de latência/error rate/business metrics, SLA < 2 min de detecção  
+- [ ] S1 template: Falso positivo analysis—por que staging foi representative?  
+- [ ] S2 template: Falso negativo RCA—o que staging não capturou? Melhoria futura?  
+- [ ] Métricas monitoradas: % T1-T5 executions completed, mean canary duration, mean time-to-GA decision, % anomalies detected in canary  
+
+:::
+
+**Artefactos & evidências.**  
+T1 pre-deploy health check log, T2 smoke test results (5+ tests, latency/error rate), T3 post-GA health dashboard snapshot, T4 rollback dry-run procedure + test results, T5 monitoring logs (4-24h post-GA), S1/S2 templates filled (if anomaly occurred), KPI dashboard (T1-T5 completion, detection latency).
+
+**Proporcionalidade L1–L3.**  
+| L1 | L2 | L3 |
+|----|----|----|
+| T1-T5 manual, canary 30+ min | T1-T5 semi-automated, canary 20 min | T1-T5 automated, canary 10 min, auto-promotion on metrics |
+| Tolerância latência ±20% | Tolerância latência ±15% | Tolerância latência ±10% |
+| Rollback manual documented | Rollback automated (binário+config) | Rollback automated all types |
+
+**Integração no SDLC.**  
+| Fase | Trigger | Responsável | SLA |
+|------|---------|-------------|-----|
+| Canary / Deploy | Go-live decision, antes de GA | DevOps/SRE + On-call | T1: < 15 min, T2-T5: 2-4h |
+
+**Ligações úteis.** [Addon 12: Validação Empírica de Deployment](/sbd-toe/sbd-manual/deploy-seguro/addon/addon-12-validacao-empirica-deploy); [Cap 10-US-22: Validação empírica de testes](/sbd-toe/sbd-manual/testes-seguranca/aplicacao-lifecycle#us-22---validação-empírica-achados-de-teste)
+
+---
+
 ## 📦 Artefactos esperadosCada prática deve deixar um **rasto verificável**.  
 Estes artefactos constituem a evidência objetiva necessária para auditorias e conformidade:
 

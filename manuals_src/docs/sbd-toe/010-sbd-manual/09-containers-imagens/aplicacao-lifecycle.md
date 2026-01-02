@@ -528,6 +528,139 @@ Como **DevOps + AppSec**, quero ***enforce* uso de ServiceAccounts dedicadas com
 
 ---
 
+### US-21 - Decisão Assistida para Findings de Scanners de Containers
+
+**Contexto.**  
+Scanners de vulnerabilidades (Trivy, Grype, Clair) reportam centenas de CVEs por imagem, bloqueando pipelines sem análise de contexto. Sem framework de decisão, equipas aceitam riscos "às cegas" ou bloqueiam deploys desnecessariamente, perdendo janelas de negócio críticas.
+
+:::userstory
+**História.**   
+Como **AppSec + DevOps**, quero framework de decisão estruturado para findings de scanners de container, para separar sugestão (scanner) de decisão (humano), documentar rationale e escalar conflitos entre timeline e segurança.
+
+**Critérios de aceitação (BDD).**  
+- **Dado** que scanner reporta CVE CRITICAL em imagem  
+  **Quando** DevOps analisa com checklist C1 (exploitabilidade, mitigações, remediação, negócio)  
+  **Então** decisão é documentada em template T1 (BLOQUEAR/REMEDIAR/ACEITAR/DEFER) com justificação rastreável
+- **Dado** um CVE HIGH em L3  
+  **Quando** DevOps propõe ACEITAR-risco mas AppSec discorda  
+  **Então** conflito é escalado com template T2 para CISO/Tech Lead, com resolução em SLA 4h
+- **Dado** decisão de REMEDIAR-IMAGEM  
+  **Quando** nova versão é construída  
+  **Então** nova análise C1 valida que CVE foi resolvido e nenhum novo CVE CRITICAL foi introduzido
+- **Dado** métrica de scanner  
+  **Quando** revisão trimestral  
+  **Então** >95% CVEs têm C1 documentado, tempo-de-resolução CRITICAL <2h, taxa de bloqueio <10%
+
+**Checklist.**  
+- [ ] Checklist C1 integrado em pipeline CI/CD (4 perguntas: exploitabilidade, mitigações, remediação, negócio)
+- [ ] Template T1 de decisão (BLOQUEAR/REMEDIAR/ACEITAR/DEFER) com campos obrigatórios (CVE ID, CVSS, análise, decisão, rationale, implementação, aprovador)
+- [ ] Template T2 de escalação para conflitos (Timeline vs. Segurança, FP disputes, Compensating controls)
+- [ ] Matriz de decisores por severidade CVE (CRITICAL/HIGH/MEDIUM/LOW) × nível L1/L2/L3
+- [ ] SLA por severidade: 2h CRITICAL, 4h HIGH, 8h MEDIUM, 24h LOW
+- [ ] Repositório de decisões (Git) linkado a CVE ID + imagem digest
+- [ ] Dashboard KPIs: % CVEs documentados, tempo-de-resolução, taxa bloqueio deploy, taxa aceitação risco
+- [ ] Integração com notification system (Slack/Teams) para escalações
+
+:::
+
+**🧾 Artefactos & evidências.**  
+- Checklist C1 aplicado em análise de CVE (exploitabilidade, mitigações, remediação, negócio)
+- Template T1 preenchido para cada decisão (BLOQUEAR/REMEDIAR/ACEITAR/DEFER)
+- Template T2 de escalação para conflitos documentado (timeline vs. segurança, FP disputes)
+- Matriz de decisores por severidade CVE × nível (L1/L2/L3)
+- Repositório Git de decisões com linkagem CVE ID → imagem digest
+- Dashboard de KPIs de decisão (cobertura C1, tempo-resolução, bloqueio, aceitação risco)
+- Logs de escalação com timestamps e resolução
+
+**⚖️ Proporcionalidade.**  
+| Nível | Obrigatório? | Ajustes |
+|---|---:|---|
+| L1 | Recomendado | Checklist simplificado para CVEs HIGH+, sem SLA rígido |
+| L2 | Sim | Checklist C1 obrigatório para CRITICAL+HIGH, template T1, decisores definidos, SLA 4h HIGH |
+| L3 | Sim | Checklist C1 para todas CVEs ≥MEDIUM, template T1+T2, escalação formal, SLA 2h CRITICAL |
+
+**Integração no SDLC.**  
+| Fase | Trigger | Responsável | SLA |
+|------|---------|-------------|-----|
+| CI/CD | Scanner reporta CVE | DevOps + AppSec | 2h CRITICAL, 4h HIGH, 8h MEDIUM |
+| Deploy | Gate bloqueado por CVE | DevOps | Decisão com C1 antes de override |
+| Revisão | Trimestral | GRC + AppSec | Análise KPIs (cobertura, tempo-resolução) |
+
+**Ligações úteis.**  
+[Addon 11 — Decisão para Findings de Scanners de Containers](/sbd-toe/sbd-manual/containers-imagens/addon/scanner-decision-containers)  
+[Addon 12 — Validação Empírica de CVEs em Containers](/sbd-toe/sbd-manual/containers-imagens/addon/validacao-empirica-containers)
+
+---
+
+### US-22 - Validação Empírica de Exploitabilidade de CVEs em Containers
+
+**Contexto.**  
+Scanners reportam CVEs mas não validam se são exploráveis no contexto runtime (ex: CVE em biblioteca não-usada, CVE bloqueado por hardening). Falsos positivos bloqueam pipelines desnecessariamente; falsos negativos deixam vulnerabilidades críticas em produção.
+
+:::userstory
+**História.**   
+Como **AppSec + DevOps**, quero framework de validação empírica de CVEs em containers, para testar exploitabilidade em staging, documentar falsos positivos/negativos com evidência reproduzível, e otimizar scanner.
+
+**Critérios de aceitação (BDD).**  
+- **Dado** que scanner reporta CVE CRITICAL em pacote OS (ex: glibc DNS resolver)  
+  **Quando** DevOps executa teste T1 (reachability: strace app, verifica se DNS é usado)  
+  **Então** se não-usado, CVE marcado como FP com template S1 (supressão + VEX) e excluído de futuras análises
+- **Dado** CVE em dependência de aplicação (ex: express.js prototype pollution)  
+  **Quando** executa teste T2 (deploy staging + exploit PoC + verificação input validation)  
+  **Então** se bloqueado, documenta controlo compensatório; se exploitável, escala CRITICAL
+- **Dado** CVE em biblioteca dinâmica (ex: libxml2 XXE)  
+  **Quando** executa teste T3 (verifica configuração parser: external entities disabled?)  
+  **Então** se mitigado, documenta em S1; se não, escala para remediação
+- **Dado** CVE de configuração (ex: hardcoded secret em layer)  
+  **Quando** executa teste T4 (docker history, verifica acessibilidade)  
+  **Então** se acessível, escala CRITICAL; se isolado, documenta isolamento em S1
+- **Dado** métrica de qualidade  
+  **Quando** revisão mensal  
+  **Então** FP <20%, FN <5%, tempo-validação <4h (L2) ou <2h (L3)
+
+**Checklist.**  
+- [ ] Taxonomia T1-T5 definida (OS packages, App deps, Dynamic libs, Config, Runtime behavior)
+- [ ] Procedimentos de teste T1 (reachability: strace/lsof), T2 (exploit PoC em staging), T3 (config parser), T4 (secret extraction), T5 (container escape com CAP_SYS_ADMIN)
+- [ ] Template S1 de supressão FP com campos obrigatórios (CVE ID, categoria, teste executado, resultado, evidência, aprovador, data expiração)
+- [ ] Template S2 de RCA para FN (CVE não detectado mas exploitável) com root cause analysis
+- [ ] Repositório de exploits PoC versionado (ex: CVE-2024-XXXX-poc.py)
+- [ ] Staging environment isolado para testes de exploitação (network segmentado, logs completos)
+- [ ] Documentos VEX (Vulnerability Exploitability eXchange) gerados automaticamente para FP
+- [ ] Dashboard de métricas qualidade: FP rate, FN rate, tempo-validação, cobertura testes
+- [ ] Integração com scanner para supressão automática de FP validados (whitelist)
+
+:::
+
+**🧾 Artefactos & evidências.**  
+- Taxonomia T1-T5 aplicada (OS packages, App deps, Dynamic libs, Config, Runtime)
+- Testes de exploitação executados em staging (T1: reachability, T2: exploit PoC, T3: config, T4: secret extraction, T5: container escape)
+- Template S1 de supressão FP preenchido (CVE ID, categoria, teste, resultado, evidência)
+- Template S2 de RCA para FN documentado (CVE não-detectado, causa raiz, correção)
+- Repositório de exploits PoC versionado em Git
+- Documentos VEX gerados para FP (Vulnerability Exploitability eXchange)
+- Dashboard de métricas: FP rate <20%, FN rate <5%, tempo-validação <4h
+- Logs de testes de exploitação com timestamping e evidência reproduzível
+
+**⚖️ Proporcionalidade.**  
+| Nível | Obrigatório? | Ajustes |
+|---|---:|---|
+| L1 | Opcional | Testes para CVEs CRITICAL apenas, sem exigência de tempo-validação |
+| L2 | Sim | Testes T1-T5 para CRITICAL+HIGH, template S1 obrigatório, métricas FP <30%, tempo <4h |
+| L3 | Sim | Testes T1-T5 para todas CVEs ≥MEDIUM, template S1+S2, VEX obrigatório, FP <20%, FN <5%, tempo <2h |
+
+**Integração no SDLC.**  
+| Fase | Trigger | Responsável | SLA |
+|------|---------|-------------|-----|
+| CI/CD | Scanner reporta CVE | AppSec + DevOps | 4h HIGH (L2), 2h CRITICAL (L3) |
+| Staging | Deploy de nova versão | AppSec | Testes T1-T5 antes de produção |
+| Revisão | Mensal | AppSec + GRC | Análise métricas (FP, FN, cobertura) |
+
+**Ligações úteis.**  
+[Addon 12 — Validação Empírica de CVEs em Containers](/sbd-toe/sbd-manual/containers-imagens/addon/validacao-empirica-containers)  
+[Addon 11 — Decisão para Findings de Scanners de Containers](/sbd-toe/sbd-manual/containers-imagens/addon/scanner-decision-containers)
+
+---
+
 ### US-10 - Segmentação de Rede e NetworkPolicy
 
 **Contexto.**  

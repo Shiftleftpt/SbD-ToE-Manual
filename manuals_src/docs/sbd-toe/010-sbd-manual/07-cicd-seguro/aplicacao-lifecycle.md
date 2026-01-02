@@ -526,6 +526,118 @@ Hashes de imagens; logs de validação; relatórios de drift; correção de imag
 
 ---
 
+### US-17 - Decisão Assistida em Gates de Pipeline
+
+**Contexto.**  
+Gates bloqueiam releases automaticamente baseado em thresholds, mas a decisão sobre aceitar bloqueio, remediar ou contornar deve ser **explícita, documentada e auditável**. Sem decisão documentada, gates criam frustração ou são contornados sem rastreabilidade.
+
+:::userstory
+**História.**   
+Como **Developer ou AppSec Engineer**, quero **validar sistematicamente se um gate block é justified** (aplicando Checklist C1), para tomar decisão informada entre ACEITAR-bloqueio, REMEDIAR ou CONTORNAR-com-justificativa.
+
+**Critérios de aceitação (BDD).**
+- **Dado** que gate bloqueia build  
+  **Quando** Developer inicia análise  
+  **Então** sistema apresenta Checklist C1 (4 questões de validação).  
+- **Dado** que Checklist C1 é completado  
+  **Quando** todas 4 questões têm resposta com evidência  
+  **Então** Developer/AppSec documenta Decision Template T1 (ACEITAR/REMEDIAR/CONTORNAR).  
+- **Dado** que decisão envolver conflito (timeline vs. security, policy dispute, FP disputed)  
+  **Quando** escalation flag é acionada  
+  **Então** Escalation Template T2 entra em ação com responsáveis definidos.  
+
+**Checklist.**
+- [ ] Checklist C1 respondido (4 questões obrigatórias)
+- [ ] Decision Template T1 documentado (decisor, justificativa, data)
+- [ ] Matriz Decisores respeitada (approver correto por severity + level)
+- [ ] Escalation T2 se needed (conflito de timeline, policy, ou FP disputed)
+- [ ] SLA respeitado (8h HIGH L2, 4h CRITICAL L3)
+- [ ] Implementação de ação (fix, suppress, override com auditoria)
+- [ ] Gate re-run após ação (verificar se resolve block)
+- [ ] Rastreabilidade (PR, commits, decision log correlacionado)
+
+**Integração com addon-11:**
+- Checklist C1: Is policy justified? Are findings real? Is remediation feasible? Is risk acceptance documented?
+- Decision tipos: ACEITAR-bloqueio (gate permanece), REMEDIAR (fix antes merge), CONTORNAR-com-justificativa (override com risk acceptance)
+- Matriz Decisores por severity × level
+- Escalation para Type A (timeline vs. deadline), Type B (policy disputed), Type C (FP disputed)
+- KPIs: 100% gates com C1 documented, <8h decision time, <15% FP rate
+
+:::
+
+**🧾 Artefactos & evidências.**  
+Completed Checklist C1; Decision Template T1 (com assinaturas); Escalation Template T2 se applicable; SLA tracking; KPI dashboard.  
+
+> **Referência:** Este US implementa o **Invariante I1 (Separação sugestão/decisão)** via [Cap 07 addon-11: Decisão Assistida em Gates](./addon/11-decisao-gates-pipeline.md).  
+> Cross-referência: Similar ao [Cap 06 US-15](../../06-desenvolvimento-seguro/aplicacao-lifecycle.md#us-15---validação-assistida-de-findings-sast) que operacionaliza addon-11 para SAST findings.
+
+**⚖️ Proporcionalidade.**  
+| Nível | Obrigatório? | Ajustes |
+|---|---|---|
+| L1 | Opcional | Checklist para CRITICAL/HIGH only |
+| L2 | Sim | Checklist C1 obrigatório para MEDIUM+, AppSec validation requerida |
+| L3 | Sim | Checklist C1 para todas findings, AppSec Lead approval para CRITICAL/HIGH, 4h SLA |
+
+---
+
+### US-18 - Validação Empírica de Findings Bloqueados
+
+**Contexto.**  
+Scanners produzem falsos positivos (findings não-reais) e falsos negativos (vulnerabilidades não-detectadas). Sem validação empírica, gates não podem ser confiados a distinguir risco real de noise. Resultado: FPs bloqueiam releases inutilmente (pressão a contornar gates) ou FNs deixam vulnerabilidades passar.
+
+:::userstory
+**História.**   
+Como **DevOps Engineer ou AppSec Engineer**, quero **validar empiricamente** (via exploit PoC, reachability test, ou regressão) **se cada finding bloqueado é real**, para confirmar se gate block é justified ou se finding é FP (falso positivo).
+
+**Critérios de aceitação (BDD).**
+- **Dado** que gate bloqueia por container vulnerability (ex: Trivy)  
+  **Quando** DevOps executa Procedimento T1  
+  **Então** vulnerability é testada empiricamente (build image, attempt exploit) para confirmar exploitability.  
+- **Dado** que gate bloqueia por hardcoded secret (ex: TruffleHog)  
+  **Quando** AppSec executa Procedimento T3  
+  **Então** secret é testado (attempt to authenticate com extracted secret) para confirmar if valid ou dummy value.  
+- **Dado** que finding é confirmado como FALSE POSITIVE  
+  **Quando** suppression é justificada  
+  **Então** VEX document é criado com 6-month review cycle.  
+- **Dado** que FALSE NEGATIVE é descoberto (vulnerability após pentest)  
+  **Quando** RCA é executada  
+  **Então** custom rule é criada e regression test é adicionado para evitar reincidência.  
+
+**Checklist.**
+- [ ] Taxonomia de 5 categorias aplicada (Container vulns, Policy violations, Hardcoded secrets, IaC misconfigs, SBOM gaps)
+- [ ] Procedimento apropriado executado (T1-T5 conforme categoria)
+- [ ] Exploitabilidade confirmada ou refutada com evidência
+- [ ] Se TP (true positive): remediation rastreada
+- [ ] Se FP (false positive): VEX document criado com justificativa técnica + 6-month expiry
+- [ ] Se FN (false negative) descoberto: RCA + custom rule + regression test
+- [ ] Métricas rastreadas: FP rate, FN rate, time-to-validation
+- [ ] Targets respeitados: FP <20%, FN <5%, time <24h CRITICAL
+
+**Integração com addon-12:**
+- Taxonomia: Container vulns (T1), Policy violations (T2), Hardcoded secrets (T3), IaC misconfigs (T4), SBOM gaps (T5)
+- Procedimentos com exploit PoC, tools command, expected results
+- FP management: VEX suppression + 6-month review (Template S1)
+- FN management: RCA + custom rule creation (Template S2)
+- Quality metrics: FP <20% (if >25% replace tool), FN <5%, time-to-validation <24h CRITICAL
+- Proporcionalidade: L1 (test ≥50% CRITICAL), L2 (100% CRITICAL + ≥70% HIGH), L3 (100% MEDIUM+)
+
+:::
+
+**🧾 Artefactos & evidências.**  
+Completed Procedures T1-T5 com resultado (TP/FP); VEX documents (para FPs); RCA reports (para FNs); Custom rules criadas; Regression tests; Métricas rastreadas.  
+
+> **Referência:** Este US implementa o **Invariante I2 (Evidência acima de plausibilidade)** via [Cap 07 addon-12: Validação Empírica de Findings](./addon/12-validacao-empirica-gates.md).  
+> Cross-referência: Similar ao [Cap 06 US-16](../../06-desenvolvimento-seguro/aplicacao-lifecycle.md#us-16---validação-empírica-de-findings) que operacionaliza addon-12 para manual testing findings.
+
+**⚖️ Proporcionalidade.**  
+| Nível | Obrigatório? | Ajustes |
+|---|---|---|
+| L1 | Opcional | Validação empírica para CRITICAL findings only |
+| L2 | Sim | Procedimentos T1-T5 obrigatório para CRITICAL/HIGH, AppSec valida FP/FN |
+| L3 | Sim | Procedimentos T1-T5 para todas findings (MEDIUM+), multi-method validation, <24h SLA |
+
+---
+
 ## 📦 Artefactos esperados
 
 Cada prática deixa pegadas técnicas. Sem elas, não há prova de conformidade:

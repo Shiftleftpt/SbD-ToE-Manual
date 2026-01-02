@@ -635,6 +635,123 @@ Como **Gestor Técnico / AppSec Engineer**, quero **visualizar dashboard de mét
 
 ---
 
+### US-15 - Validação Assistida de Findings SAST
+
+```
+**História.**  
+Como **Developer**, quero **validar se um finding de SAST (Semgrep, SonarQube, Snyk Code) é real e requer fix**, usando checklist padronizada e tomando decisão explícita (ACEITAR/ADAPTAR/REJEITAR), para garantir que correções são tecnicament corretas e rastreáveis.
+
+**Critérios de aceitação (BDD).**
+- **Dado** que SAST reportou finding com severidade ≥ MEDIUM
+  **Quando** Developer aplica Checklist C1 (5 questões de validação)
+  **Então** documenta decisão (ACEITAR/ADAPTAR/REJEITAR) com justificativa técnica
+
+- **Dado** que finding é severidade CRITICAL ou HIGH em L2/L3
+  **Quando** Developer completa Checklist C1
+  **Então** AppSec Engineer valida decision antes de merge (revisão obrigatória)
+
+- **Dado** que existe conflito entre Developer e AppSec (ex: "não é vulnerável")
+  **Quando** escalada é acionada
+  **Então** decisão final tomada por AppSec Lead com rastreabilidade completa
+
+**Checklist.**
+- [ ] Checklist C1 completado (5 questões: Vulnerability real? Severity correct? Fix adequate? Context? Requirements mapping?)
+- [ ] Decision Template T1 preenchido (entrada: finding, saída: decisão com justificativa)
+- [ ] Para CRITICAL/HIGH em L2/L3: AppSec Engineer validation signature
+- [ ] Documentação rastreável em Git ou issue tracking (ex: PR comments, decision docs)
+- [ ] SLA cumprido: <3d para HIGH, <48h para CRITICAL
+- [ ] Escalation procedures definidas e aplicadas se conflito (3 tipos: Breaks Functionality, Incomplete Fix, Finding Disputed)
+- [ ] Integration com addon-12 para empirical testing (L3 CRITICAL/HIGH requerem teste manual)
+
+**Artefactos & evidências.**
+- Artefatos: Checklist C1 template, Decision Template T1, Escalation Workflow T2
+- Evidência: PR comments com C1 completado, signed decision docs, AppSec approval stamps
+- Integração: References para addon-11 (full framework), addon-12 (empirical testing)
+- Rastreabilidade: Commit message referencia Decision ID (ex: "Fix SQL injection per SAST-2026-01-16-001, ACEITAR com C1 validation")
+
+**Proporcionalidade.**
+| Nível | Checklist C1 Obrigatória? | AppSec Review? | SLA |
+|-------|---------------------------|--------------|-----|
+| L1 | Optional (CRITICAL only) | No | 7 days |
+| L2 | MEDIUM+ (mandatory) | HIGH/CRITICAL | 3-5 days |
+| L3 | ALL findings | ALL findings | <48h CRITICAL, <3d HIGH |
+
+**Integração no SDLC.**
+| Fase | Trigger | Responsável | SLA |
+|---|---|---|---|
+| Desenvolvimento | Cada PR com findings SAST ≥ MEDIUM | Developer + Reviewer + AppSec (L2/L3) | <5 days |
+
+**Ligações úteis.**
+- [addon-11: Validação Assistida de Findings SAST](./addon/11-validacao-sast-assistida.md) — Framework completo (Checklist C1, Decision T1, Escalation T2, Matriz Decisores)
+- [addon-12: Validação Manual de Findings](./addon/12-validacao-manual-findings.md) — Empirical testing (T1-T6 procedures, FP/FN management)
+- US-09 (Gate de Segurança Pré-release) — Final gate before production
+- Cap. 05 addon-20 — Similar framework para CVEs em dependências
+
+---
+
+### US-16 - Validação Empírica e Gestão de Falsos Positivos/Negativos
+
+```
+**História.**  
+Como **AppSec Engineer**, quero **validar empiricamente se um finding é exploitável** (não é falso positivo), e **rastrear falsos negativos** (vulnerabilidades não-detetadas) para melhorar qualidade de SAST, para garantir que equipa gasta tempo em vulnerabilidades reais e que SAST não deixa passar riscos.
+
+**Critérios de aceitação (BDD).**
+- **Dado** que SAST reportou finding de alto risco (SQLi, XSS, CSRF, Hardcoded Secret, Deserialization, Path Traversal)
+  **Quando** AppSec Engineer executa teste empírico (PoC)
+  **Então** confirma se exploitável (TRUE POSITIVE) ou falso positivo (FP)
+
+- **Dado** que é FP (falso positivo)
+  **Quando** AppSec Engineer documenta justificativa + cria VEX
+  **Então** finding suprimido com rastreabilidade (não é "ruído" sem razão técnica)
+
+- **Dado** que vulnerabilidade real foi descoberta (pentest, incident) mas SAST não detectou
+  **Quando** AppSec realiza RCA (Root Cause Analysis)
+  **Então** custom rule criada para SAST, regressão test adicionada, processo melhorado
+
+**Checklist.**
+- [ ] **Para CRITICAL/HIGH em L2/L3:** Empirical test obrigatório (procedures T1-T6 de addon-12)
+- [ ] **Para MEDIUM em L3:** Empirical test obrigatório
+- [ ] **T1 (SQLi):** Payload injection test + sqlmap
+- [ ] **T2 (XSS):** Payload injection + browser validation + CSP check
+- [ ] **T3 (CSRF):** PoC form submission + SameSite flag check
+- [ ] **T4 (Hardcoded Secrets):** Attempt to use secret (AWS CLI, API call) + check if valid/revoked
+- [ ] **T5 (Deserialization):** Gadget chain exploit (ysoserial) + RCE confirmation
+- [ ] **T6 (Path Traversal):** Traversal payload + canonical path check
+- [ ] **FP Management:** VEX document (Template S1) + suppression annotation + 6-month review
+- [ ] **FN Management:** RCA document (Template S2) + custom rule creation + regression test
+- [ ] **Metrics tracking:** FP rate, FN rate, time-to-validation logged and reviewed monthly
+- [ ] **Quality gate:** If FP >40% or FN >10%, escalate tool effectiveness review
+
+**Artefactos & evidências.**
+- Artefatos: Test procedures T1-T6 (with commands/tools), FP template S1, FN template S2
+- Evidência: Test execution logs, PoC results, VEX documents, RCA reports, custom rules, regression test cases
+- Integração: Cross-reference addon-11 (which findings validated empirically) + addon-12 (detailed procedures)
+- Rastreabilidade: FP/FN tracked in `falsos-positivos/` e `falsos-negativos/` folders + metrics dashboard
+
+**Proporcionalidade.**
+| Nível | Empirical Test for CRITICAL | Empirical Test for HIGH | Empirical Test for MEDIUM | FN RCA Required? |
+|-------|---------------------------|------------------------|--------------------------|-----------------|
+| L1 | Recommended | Recommended | Optional | Recommended |
+| L2 | Mandatory | Mandatory | Optional | Mandatory for discovered vulns |
+| L3 | Mandatory + multi-method | Mandatory | Mandatory | Mandatory + full RCA |
+
+**Integração no SDLC.**
+| Fase | Trigger | Responsável | SLA |
+|---|---|---|---|
+| Code Review / Pre-release | CRITICAL/HIGH findings (L2/L3) | AppSec Engineer | <48h CRITICAL, <5d HIGH |
+| Incident Response | Vulnerability discovered in production | AppSec + Security team | Immediate RCA + mitigation |
+| Governance (Monthly) | FP/FN metrics review | AppSec Lead | Monthly metrics report |
+
+**Ligações úteis.**
+- [addon-12: Validação Manual de Findings](./addon/12-validacao-manual-findings.md) — Taxonomia completa (6 categorias), procedures T1-T6, FP/FN templates, quality metrics
+- [addon-11: Validação Assistida de SAST](./addon/11-validacao-sast-assistida.md) — Decision framework (referencia which findings need empirical validation)
+- US-15 (Validação Assistida) — Checklist + decision, coordinated with empirical testing
+- Cap. 12 (Monitorização e Operação) — FN discovery via monitoring, incident response
+
+```
+
+---
+
 ## 📦 Artefactos Esperados
 
 | Artefacto               | Evidência auditável                                   |

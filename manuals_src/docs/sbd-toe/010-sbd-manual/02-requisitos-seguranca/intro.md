@@ -157,3 +157,23 @@ Este capítulo define um conjunto essencial e transversal de requisitos aplicaci
 
 [📎 Ver detalhe das políticas recomendadas para este capítulo](./policies-relevantes)
 Para a versão impressa, ver o **anexo de políticas do manual**.
+
+---
+
+## 🤖 Validação de Requisitos Assistida por Ferramentas
+
+Os requisitos de segurança descritos neste capítulo podem ser **sugeridos, gerados ou adaptados por ferramentas automatizadas** (ex: extração de ASVS/OWASP, análise de arquitetura, threat modeling assistido, adaptação automática por risco L1/L2/L3).
+
+**Este manual adota os 5 Invariantes Canónicos de [agent.md](https://github.com/your-org/agent-spec)** para garantir que a automação **acelera mas não substitui a decisão humana**:
+
+- **I1 — Separação sugestão vs. decisão**: Ferramenta sugere requisitos, humano decide aplicar/rejeitar/adaptar
+- **I2 — Evidência acima de plausibilidade**: Requisitos validados contra ameaças reais, não apenas "parece adequado"
+- **I3 — Reprodutibilidade e auditabilidade**: Decisões de requisitos versionadas e rastreáveis
+- **I4 — Proteção de ativos críticos**: Catálogo de requisitos com controlo de acesso (risco supply chain)
+- **I5 — Rastreabilidade de decisão e execução**: Cada requisito tem trilho: sugestão → decisão → implementação → validação
+
+**Para procedimentos operacionais, checklists e templates:**  
+👉 Ver [addon-11: Validação de Requisitos Assistida por Ferramentas](./addon/11-validacao-requisitos-assistida)  
+👉 Integração obrigatória em [US-01](./aplicacao-lifecycle#us-01), [US-05](./aplicacao-lifecycle#us-05), [US-09](./aplicacao-lifecycle#us-09)
+
+**Paralelo conceptual**: Este addon é equivalente a [Cap 01 - addon-11 (Validação Assistida para Classificação)](/sbd-toe/sbd-manual/classificacao-aplicacoes/addon/11-validacao-assistida-ferramentas), mas aplicado ao ciclo de vida de requisitos.

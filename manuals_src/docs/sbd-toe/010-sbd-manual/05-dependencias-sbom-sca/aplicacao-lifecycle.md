@@ -625,6 +625,147 @@ Como **Developer**, quero **validar automaticamente a compatibilidade de licenç
 
 ---
 
+### US-13 - Validação assistida de atualizações de dependências (I1)
+**Contexto.**  
+Bots de atualização (Dependabot, Renovate) sugerem updates mas requerem validação humana antes de merge, especialmente para breaking changes ou CVEs críticos.
+
+:::userstory
+**História.**   
+Como **Developer**, quero validar propostas de atualização de bots com checklist I1 e decisores explícitos, para garantir separação entre sugestão e decisão (Invariante I1).
+
+**Critérios de aceitação (BDD).**
+- **Dado** que bot abre PR de atualização  
+  **Quando** executo Checklist I1  
+  **Então** decisão é registada com decisores explícitos (Developer, AppSec, Product Owner) e justificação documentada
+
+**Checklist I1 — Validação de Proposta de Atualização.**
+- [ ] **Relevância:** Breaking changes? Team expertise? Custos aceitáveis?
+- [ ] **Evidência empírica:** Testes cobrem? PoC/staging validado? Rollback plan?
+- [ ] **Controlo existente:** Se CVE, vulnerabilidade real? Exploitável no contexto?
+- [ ] **Novos requisitos:** Mapeia a DEP-XXX ou cria novo?
+- [ ] **Decisão:** ACEITAR (auto-merge) / ADAPTAR (migration plan) / REJEITAR (postpone com VEX)
+
+**Decisão documentada em PR:**
+- Decisores: Proponente (Bot), Validador técnico (Developer, data), Validador segurança (AppSec, data), Aprovador impacto (Product Owner, data)
+- Justificação: Breaking changes, CVE severity, esforço migration, risco residual
+- Plano: Migration steps, staging validation, rollback plan, SLA completion
+- Evidências: PoC logs, tests added, approval emails
+
+**Escalation para conflitos:**
+- Segurança (CVE CRITICAL) vs. Estabilidade (Breaking) → Product Owner + AppSec + CTO (L3)
+- Update vs. Freeze de produção → AppSec Lead + Product Owner (deploy emergencial?)
+- Supply chain risk → Arquiteto + AppSec + Product Owner (fork interno? alternativa?)
+
+:::
+
+**Artefactos & evidências.**  
+- PR comment com template decisão I1 completo
+- `dependencies/proposals/proposal-XXX.md` (sugestão bot)
+- Checklist I1 preenchido
+- VEX document (se postpone)
+
+**Proporcionalidade.**
+| Nível | Obrigatório? | Ajustes |
+|---|---|---|
+| L1 | Recomendado | Checklist para MAJOR/CVE HIGH+, auto-merge PATCH |
+| L2 | Sim | Checklist obrigatório MINOR+, decisores explícitos CVE MEDIUM+ |
+| L3 | Sim | Checklist obrigatório todas atualizações, PoC para MAJOR/CVE CRITICAL |
+
+**Matriz de decisores.**
+| Severidade Update | Decisor Técnico | Validador Segurança | Aprovador Impacto | SLA |
+|---|---|---|---|---|
+| PATCH (bug fix) | Developer | - | - | Auto-merge (CI green) |
+| MINOR sem breaking | Developer | - | - | 2 dias |
+| MINOR com hints breaking | Developer | AppSec (deps críticas) | - | 5 dias |
+| MAJOR (breaking) | Developer + Arquiteto | AppSec | Product Owner | 10 dias |
+| CVE CRITICAL | Developer | AppSec Lead | Product Owner | 48h (L3) |
+| CVE HIGH | Developer | AppSec | - | 7 dias (L2) |
+
+**KPIs.**
+- % PRs com decisor explícito: 100% (L2/L3)
+- Tempo médio decisão: <5d (MINOR), <48h (CVE CRITICAL)
+- % auto-merge seguros: >95%
+- % CVE com SLA cumprido: >90%
+
+**Integração no SDLC.**
+| Fase | Trigger | Responsável | SLA |
+|---|---|---|---|
+| Continuous | Bot detecta nova versão | Developer + AppSec | <7 dias (ALTA) |
+| Go-live | Validação ADR completo | QA + AppSec | Antes release |
+
+**Ligações úteis.**
+- 🔗 [Addon 20 - Framework I1 para Bots](addon/20-validacao-atualizacoes-assistida.md)
+- 🔗 [US-04 - Exceções a CVEs](#us-04---exceções-a-cves-formais-e-temporárias)
+
+---
+
+### US-14 - Validação manual e empírica de CVEs (I2)
+**Contexto.**  
+CVEs reportados por SCA devem ser validados tecnicamente para confirmar exploitabilidade antes de priorizar mitigação (evitar FP, detectar FN).
+
+:::userstory
+**História.**   
+Como **AppSec Engineer**, quero validar empiricamente CVEs reportados por SCA com testes técnicos, para confirmar exploitabilidade real antes de priorizar mitigação (Invariante I2).
+
+**Critérios de aceitação (BDD).**
+- **Dado** que CVE foi reportado por scanner  
+  **Quando** executo teste empírico por categoria  
+  **Então** confirmo ou refuto exploitabilidade, registo FP/FN, e priorizo mitigação
+
+**Taxonomia de CVEs (6 categorias com testes):**
+- **A. RCE (Remote Code Execution):** Exploit PoC + code analysis (input deserializado?)
+- **B. SQLi (SQL Injection):** SQL payloads + sqlmap (query dinâmica com user input?)
+- **C. XSS (Cross-Site Scripting):** XSS payloads + Burp Suite (output escapado?)
+- **D. Authentication Bypass:** JWT manipulation + replay attacks (algoritmo "none" aceite?)
+- **E. Path Traversal:** ../ payloads + file read (whitelist existe?)
+- **F. DoS (Denial of Service):** ReDoS payloads + load test (rate limiting adequado?)
+
+**Gestão de Falsos Positivos/Negativos:**
+- **FP (CVE não exploitável):** Análise técnica → VEX "not_affected" → Suppressão temporária → Revisão 6 meses
+- **FN (CVE não detectado):** Discovery manual → Root cause (DB outdated?) → Mitigação imediata → Adicionar custom check
+
+**Qualidade de validação:**
+- FP rate: <20% (se >30% → scanner mal configurado)
+- FN rate: <3% (se >10% → scanner inadequado)
+- Tempo validação: <24h (CRITICAL)
+- Cobertura: 100% CVEs CRITICAL (L2/L3)
+- EPSS prioritization: >90% CVEs com EPSS >0.5 priorizados
+
+:::
+
+**Artefactos & evidências.**  
+- `dependencies/validation-results/CVE-2023-XXXX-validation.md` (resultado EXPLOITÁVEL/NÃO_APLICÁVEL/MITIGADO)
+- Evidência técnica: Exploit PoC logs, screenshots, comandos executados
+- VEX document (se FP)
+- `dependencies/falsos-negativos/FN-2026-XXX.md` (se FN descoberto)
+
+**Proporcionalidade.**
+| Nível | Obrigatório? | Ajustes |
+|---|---|---|
+| L1 | Recomendado | Validação manual ≥50% CVEs CRITICAL, teste manual |
+| L2 | Sim | Validação obrigatória 100% CRITICAL + ≥70% HIGH, manual + exploit PoC |
+| L3 | Sim | Validação obrigatória 100% MEDIUM+, manual + PoC + automated regression |
+
+**KPIs.**
+- FP rate: <20%
+- FN rate: <3%
+- % CVEs CRITICAL testados: 100% (L2/L3)
+- Tempo validação: <24h (CRITICAL)
+- EPSS correlation: >90%
+
+**Integração no SDLC.**
+| Fase | Trigger | Responsável | SLA |
+|---|---|---|---|
+| SCA scan | CVE reportado | AppSec + Developer | <24h (CRITICAL) |
+| Post-incident | FN descoberto | AppSec + QA | 48h para mitigação |
+| Quarterly | Revisão FP/FN | AppSec Lead | Trimestral |
+
+**Ligações úteis.**
+- 🔗 [Addon 21 - Taxonomia e Testes de CVEs](addon/21-validacao-manual-cves.md)
+- 🔗 [Addon 02 - Análise SCA](addon/02-analise-sca.md)
+
+---
+
 ## 🧩 Nota complementar — Inventário contínuo de componentes e alertas em produção
 
 A gestão de dependências não termina no build.  
@@ -670,9 +811,13 @@ Ums dos aspetos fundamentais no  **Cap. 12 — Monitorização & Operação Segu
 | `repo-config.yaml` | Repositórios internos configurados |
 | `.audit-libs.json` / `.audit-libs.yaml` | Resultados de auditoria periódica de libs copiadas |
 | `licenses-whitelist.yaml` | Lista branca de licenças aprovadas |
-| **PRs de bots** | *Labels* de impacto, logs e testes |
+| **PRs de bots** | *Labels* de impacto, logs e testes + comentário decisão I1 |
 | **Relatórios de drift** | Diferenças entre SBOM e runtime |
 | **Tickets ITSM / Incidentes** | Evidência de tratamento de CVE e SLA cumprido |
+| `dependencies/proposals/proposal-XXX.md` | Proposta bot para validação I1 (US-13) |
+| `dependencies/validation-results/CVE-XXX-validation.md` | Resultado validação empírica (EXPLOITÁVEL/FP/FN) (US-14) |
+| `dependencies/falsos-positivos/FP-CVE-XXX.md` | VEX + análise técnica FP (US-14) |
+| `dependencies/falsos-negativos/FN-2026-XXX.md` | RCA + mitigação FN (US-14) |
 
 ---
 

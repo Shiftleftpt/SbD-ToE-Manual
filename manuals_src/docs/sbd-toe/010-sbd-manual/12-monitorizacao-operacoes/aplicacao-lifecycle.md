@@ -546,6 +546,109 @@ Matriz de rastreabilidade (controlo → regulação), evidência técnica por co
 
 ---
 
+### US-25 - Decisão Estruturada em Resposta a Alertas (Separação Sugestão/Decisão)
+
+Sem um framework claro de aprovação, alertas disparam e geram resposta automática ou caótica, sem contexto humano estruturado.
+
+**Contexto.** Alertas necessitam separação clara entre detecção automática (sugestão) e aprovação humana (decisão de ação).
+
+:::userstory
+**História.**  
+Como **On-Call Engineer / Ops Lead**, quero **documentar e executar um processo de decisão estruturado para resposta a alertas** (checklist de validação, decisão com 4 opções claras, escalation em caso de conflito), para **assegurar que cada resposta a incidente é conscientemente aprovada por autoridade competente**.
+
+**Critérios de aceitação (BDD).**  
+- **Dado** um alerta de segurança/operacional disparado  
+  **Quando** iniciamos processo de resposta  
+  **Então**:
+    - Checklist D1 com 4 perguntas críticas é preenchido (alerta é válido? impacto é real? remédio é testado? timing é apropriado?)
+    - Response template R1 com 4 opções é explícito: REMEDIATE-NOW / ESCALATE-INVESTIGATE / DEFER-MONITOR / FALSE-POSITIVE
+    - Se conflito entre Ops e Security (ex: "remediemos agora" vs. "investigar primeiro"), escalation template E1 documenta posições e resolução
+    - Decisor qualificado (por matriz L1/L2/L3 × severidade) assina decisão com justificativa
+
+**Checklist.**  
+- [ ] Matriz de decisores definida (quem aprova o quê em função de L1/L2/L3 × severidade)  
+- [ ] Checklist D1 com 4 perguntas preenchido antes de R1 (para >90% de alertas)  
+- [ ] Template R1 com 4 opções e justificativa documentado  
+- [ ] Template E1 de escalation ready para conflitos  
+- [ ] SLA de decisão definido (CRÍTICA: 1h, ALTA: 4h, MÉDIA: 24h)  
+- [ ] Decisor autorizado e treinado no processo  
+- [ ] Rastreio de todas as decisões (D1, R1, E1) em auditoria  
+- [ ] KPIs monitorados: % alertas com D1, tempo D1→R1, rate escalations, remediation success  
+
+:::
+
+**Artefactos & evidências.**  
+Checklist D1 preenchido por alerta, Response Template R1 assinado, Escalation logs (quando E1 foi usado), Matriz de decisores versionada, KPI dashboard (time-to-decision, remediation success rate, escalation rate).
+
+**Proporcionalidade L1–L3.**  
+| L1 | L2 | L3 |
+|----|----|----|
+| D1 + R1 manual, todas 4 Q's = SIM | D1 com tolerância INCERTO se mitigado, R1 com 4 opções | D1 com tolerância para riscos monitoráveis, R1 preferência REMEDIATE-NOW |
+| Escalation moderado | Escalation moderado | Escalation raro (confiança alta) |
+
+**Integração no SDLC.**  
+| Fase | Trigger | Responsável | SLA |
+|------|---------|-------------|-----|
+| Resposta a Alerta | Alerta disparado, confirmado válido | On-Call / Ops Lead | CRÍTICA: 1h, ALTA: 4h, MÉDIA: 24h |
+
+**Ligações úteis.** [Addon 11: Framework de Decisão para Alertas](/sbd-toe/sbd-manual/monitorizacao-operacoes/addon/addon-11-alerta-decisao-cap12); [Cap 11-US-23: Deploy com Decisão Estruturada](/sbd-toe/sbd-manual/deploy-seguro/aplicacao-lifecycle#us-23---deploy-com-decisão-estruturada-separação-sugestãodecisão)
+
+---
+
+### US-26 - Tuning Empírico de Alertas (Evidência acima de Plausibilidade)
+
+Alertas podem ser configurados teoricamente mas falhar em produção: falsos positivos causam alert fatigue, falsos negativos deixam ameaças passar.
+
+**Contexto.** Decidir sobre resposta a alerta baseado apenas em configuração estática é insuficiente; validação empírica em produção é crítica.
+
+:::userstory
+**História.**  
+Como **Security / Operations**, quero **executar framework de tuning empírico para alertas** (estabelecer baseline de produção, gerar ameaças teste, validar detecção, medir FP/FN, tuning contínuo), para **confirmar que alertas detectam ameaças reais em produção, não apenas baseadas em configuração teórica**.
+
+**Critérios de aceitação (BDD).**  
+- **Dado** um conjunto de alertas configurados  
+  **Quando** executamos framework de 5 fases (P1-P5)  
+  **Então**:
+    - P1 (Baseline): Recolhemos p50/p95/p99 de produção normal (2-4 semanas)
+    - P2 (Synthetic tests): Geramos 5-10 tipos de ameaça, validamos alertas disparam
+    - P3 (Production validation): Executamos testes em canary (1% traffic), medimos latências
+    - P4 (FP measurement): Recolhemos alertas reais, classificamos TP/FP, calculamos taxa
+    - P5 (Continuous tuning): Monthly review, whitelist + rule tuning baseado em dados
+  - E caso FP/FN descoberto:
+    - V1 template: FP (alerta disparou, não era ameaça) → documentar, tuning
+    - V2 template: FN (ameaça real, alerta não disparou) → RCA, melhoria
+
+**Checklist.**  
+- [ ] P1: Baseline recolhido de 2-4 semanas clean, p50/p95/p99 documentados  
+- [ ] P2: 5-10 cenários de ameaça definidos e testados em staging  
+- [ ] P3: Testes executados em canary production, latências de detecção medidas  
+- [ ] P4: Alertas reais de 1 semana classificados TP/FP, taxa de FP calculada  
+- [ ] P5: Monthly alert review, tuning log documentado (whitelist, thresholds, rules)  
+- [ ] V1/V2: Templates preenchidos quando FP/FN descobertos  
+- [ ] Métricas: FP rate, FN rate, alert accuracy, detection latency monitorados  
+- [ ] Quarterly synthetic test re-run para revalidação  
+
+:::
+
+**Artefactos & evidências.**  
+Baseline document (p50/p95/p99), P2 synthetic test scenarios + results, P3 canary test logs (latencies), P4 FP/FN classification report, P5 monthly alert metrics + tuning changes, V1/V2 RCA templates (when FP/FN found), KPI dashboard (FP rate, alert accuracy, detection latency).
+
+**Proporcionalidade L1–L3.**  
+| L1 | L2 | L3 |
+|----|----|----|
+| P1-P5 manual, baseline simple, tests quarterly | P1-P5 semi-automated, baseline detailed, tests monthly | P1-P5 automated, continuous baseline, tests weekly/continuous |
+| Tolerância FP rate: 20% | Tolerância FP rate: 10% | Tolerância FP rate: 5% |
+| Monthly tuning review | Monthly tuning review | Continuous tuning + ML suggestions |
+
+**Integração no SDLC.**  
+| Fase | Trigger | Responsável | SLA |
+|------|---------|-------------|-----|
+| Tuning / Maintenance | Alerta disparado (validação), revisão periódica | AppSec + Ops | Monthly review, Quarterly tests |
+
+**Ligações úteis.** [Addon 12: Tuning Empírico de Alertas](/sbd-toe/sbd-manual/monitorizacao-operacoes/addon/addon-12-empirical-alert-tuning-cap12); [Cap 10-US-22: Validação Empírica de Achados](/sbd-toe/sbd-manual/testes-seguranca/aplicacao-lifecycle#us-22---validação-empírica-achados-de-teste)
+
+---
+
 ## 📦 Artefactos esperados
 
 Cada prática deixa rastos verificáveis.  

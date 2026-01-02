@@ -833,6 +833,144 @@ Como **Security Champion + Tech Lead**, quero **recolher feedback estruturado p�
 
 ---
 
+### US-16 - Decisão Estruturada em Aprovação de Exceções de Risco
+
+:::userstory
+**História.**
+
+Como **AppSec / CISO**, quero **implementar um framework decisório estruturado** (validação prévia V1 → D1 checklist → R1 decision → E1 escalation) para aprovação de exceções, para **garantir que exceções de risco são aprovadas conscientemente, com compensações adequadas ao nível, e revalidadas periodicamente**.
+
+**Critérios de aceitação (BDD).**
+- **Dado** que exceção é registada em GRC
+  **Quando** passa por V1 (validação prévia: dados completos?)
+  **Então** dados estão documentados (app, requisito, compensação, prazo)
+
+- **Dado** V1 aprovada
+  **Quando** D1 checklist executada (4 questões sobre risco)
+  **Então** resultado codificado como GREEN/AMBER/ORANGE/RED
+
+- **Dado** D1 resultado
+  **Quando** R1 decisão tomada
+  **Então** é formalizada (APPROVE/CONDITIONAL/DEFER/DENY) e assinada
+
+- **Dado** conflito (técnico vs. negócio)
+  **Quando** E1 escalation acionada
+  **Então** enviada para CISO com critério de resolução e SLA 10 dias
+
+**Checklist.**
+- [ ] Template V1 (validação prévia) implementado em GRC
+- [ ] Matriz D1 (4 questões + risk profiling) documentada
+- [ ] Template R1 (4 decisões + justificativa) em uso
+- [ ] Template E1 (escalation log) criado e monitorizado
+- [ ] Alçada matrix por L1/L2/L3 definida (AppSec/CISO/CFO)
+- [ ] SLA por nível comunicado (2-10 dias úteis)
+- [ ] KPI-1 (% D1 documentado ≥95%) rastreado
+- [ ] KPI-2 (tempo D1→R1 ≤5 dias) em dashboard
+- [ ] KPI-3 (escalation rate ≤15%) monitorizado
+- [ ] KPI-4 (cumprimento compensações ≥90%) validado
+- [ ] KPI-5 (exceções removidas ≥30%) rastreado
+- [ ] Training para approvers (AppSec, CISO, CFO) — 2h workshop
+- [ ] Audit mensal de 10+ exceções para qualidade D1
+
+:::
+
+**Proporcionalidade L1–L3.**
+| L1 | L2 | L3 |
+|----|----|----|
+| AppSec Engineer (se D1 GREEN) | AppSec Lead + Manager | CISO + AppSec Lead |
+| SLA 3-5 dias | SLA 5-7 dias | SLA 1-3 dias |
+| Revalidação anual | Revalidação 6-12 meses | Revalidação 3 meses |
+
+**Integração no SDLC.**
+| Fase | Trigger | Responsável | SLA |
+|------|---------|-------------|-----|
+| Planning | Controlo não viável | Dev + AppSec | Sugestão em 1 semana |
+| Design Review | Exceção pendente | AppSec | D1 avaliação em 3-5 dias |
+| Development | Exceção aprovada | Dev | Implementar compensações |
+| Testing | Compensação validação | QA + AppSec | Confirmar ativas (alerts, audit) |
+| Deployment | Pre-release final | AppSec | Validação final |
+| Revalidação | 3-12 meses | AppSec + GRC | Renovação/denial/modificação |
+
+**Artefactos & evidências.** Documento `decisoes_excecoes.md` com template V1/R1/E1, amostra de 10+ decisões mensais, quadro "Exceções Pendentes" em GRC, SLA compliance report, D1 qualidade audit.
+
+**Ligações úteis.**
+[Decisão Estruturada em Exceções](governanca-contratacao/addon/addon-11-decisao-estruturada-excecoes-cap14)
+[Validação Empírica de Governação](governanca-contratacao/addon/addon-12-validacao-empirica-governanca-cap14)
+[Política de Exceções](/governanca-contratacao/policies-relevantes)
+
+---
+
+### US-17 - Validação Empírica da Eficácia de Compensações de Exceção
+
+:::userstory
+**História.**
+
+Como **AppSec / GRC**, quero **implementar um ciclo de validação empírica** (P1-P5: baseline → compensation testing → production monitoring → incident RCA → continuous review) para confirmar que **compensações de exceção realmente funcionam em produção** e reduzem risco (não apenas aprovadas teoricamente).
+
+**Critérios de aceitação (BDD).**
+- **Dado** exceção com compensação aprovada
+  **Quando** P1 baseline recolhida (pré-exceção)
+  **Então** métricas documentadas (incidentes, controlo status, compensation adequacy)
+
+- **Dado** P1 completa
+  **Quando** P2 compensation testing executada (lab/staging)
+  **Então** compensação validada: funciona? latência? cobertura?
+
+- **Dado** P2 passou
+  **Quando** P3 production monitoring (canary 1-5% tráfico)
+  **Então** métricas recolhidas: FP%, FN%, alert latency
+
+- **Dado** P3 em progresso
+  **Quando** P4 incident RCA (3-6 meses pós-exceção)
+  **Então** templates V1/V2 preenchidos: compensação efetiva? ou falhou?
+
+- **Dado** P4 métricas coletadas
+  **Quando** P5 monthly/trimestral review agendado
+  **Então** exceção renovada, modificada, ou negada baseado em eficácia real
+
+**Checklist.**
+- [ ] P1 baseline procedure documentada (métricas, coleta, archiving)
+- [ ] P1 baseline recolhida para cada exceção L2+ (registro em GRC)
+- [ ] P2 compensation test procedure definida (lab/staging validation)
+- [ ] P2 tests executados antes aprovação R1 (funciona? latência? cobertura?)
+- [ ] P3 production canary setup (1-5% tráfico com monitorização)
+- [ ] P3 métricas recolhidas (FP%, FN%, alert latency, SOC response time)
+- [ ] P4 V1 template (compensação efetiva) documentado
+- [ ] P4 V2 template (compensação falha/RCA) documentado
+- [ ] P4 RCA procedure (mensal L2, trimestral L1, semanal L3)
+- [ ] P5 review cycle agenda fixa (data, participantes, template decisão)
+- [ ] P5 decisão framework (RENEW/MODIFY/DENY baseado em P4 dados)
+- [ ] 5 KPIs rastreados em dashboard (effectiveness%, latency, FP%, FN%, removal_rate)
+- [ ] Proporcionalidade L1/L2/L3 aplicada (frequência P1-P5 diferente)
+- [ ] Training para AppSec/GRC em P1-P5 framework — 2h workshop
+
+:::
+
+**Proporcionalidade L1–L2–L3.**
+| Nivel | P1 Baseline | P2 Testing | P3 Monitoring | P4 RCA | P5 Review |
+|-------|------------|-----------|---------------|--------|-----------|
+| **L1** | Yearly | Yearly | 3-month | Quarterly | Quarterly |
+| **L2** | Quarterly | Quarterly | Monthly | Monthly | Monthly |
+| **L3** | Monthly | Monthly | Monthly | Weekly | Weekly |
+
+**Integração no SDLC.**
+| Fase | Trigger | Responsável | SLA |
+|------|---------|-------------|-----|
+| Planning | Exceção prevista | AppSec | P1 baseline em 2 semanas |
+| Approval | Pre-approval validation | DevOps | P2 compensation testing em lab |
+| Deployment | Produção com monitorização | SOC + AppSec | P3 canary setup com alerts |
+| Operations | Incidente em exceção | AppSec + GRC | P4 RCA mensal/trimestral (V1/V2) |
+| Audit | Revalidação periódica | GRC | P5 trimestral review (RENEW/MODIFY/DENY) |
+
+**Artefactos & evidências.** P1: `baseline_[app]_[req]_[date].md`; P2: `compensation_test_[app].md` com resultados; P3: canary metrics export; P4: `rca_register_[month].csv` com V1/V2 análises; P5: monthly review minutes com decisões (RENEW/MODIFY/DENY); KPI dashboard export; effectiveness report.
+
+**Ligações úteis.**
+[Validação Empírica Framework](governanca-contratacao/addon/addon-12-validacao-empirica-governanca-cap14)
+[Decisão Estruturada em Exceções](governanca-contratacao/addon/addon-11-decisao-estruturada-excecoes-cap14)
+[KPIs de Governação](governanca-contratacao/kpis-governanca) — Reporte integrado
+
+---
+
 ## ⚖️ Matriz de proporcionalidade L1–L3
 
 | Prática | L1 | L2 | L3 |

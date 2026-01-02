@@ -86,6 +86,115 @@ Como **Arquitetos de Software** e **Team Lead / Scrum Master**, quero criar um m
 
 ---
 
+### US-04 - Validação assistida de ameaças com decisão documentada
+
+**Contexto.**  
+Ferramentas sugerem ameaças, mas decisão final (aceitar, rejeitar, adaptar) deve ser sempre humana e registada.
+
+:::userstory
+**História.**   
+Como **Arquiteto de Software** e **AppSec Engineer**, quero **validar e documentar cada ameaça sugerida**, para garantir rastreabilidade e separação entre sugestão (ferramenta) e decisão (humano).
+
+**Critérios de aceitação (BDD).**
+- **Dado** que ferramenta sugere ameaça TM-GEN-XXX  
+  **Quando** executo checklist I1 (separação sugestão/decisão)  
+  **Então** decido e documento: ACEITAR, ADAPTAR ou REJEITAR (com justificação)
+
+**Checklist.**
+- [ ] Ameaça é relevante para esta aplicação?
+- [ ] DFD contém componentes mencionados na ameaça?
+- [ ] Fluxo de dados descrito existe no design?
+- [ ] Controlo mitigador já existe na arquitetura?
+- [ ] Aplicação realmente está exposta a este risco?
+- [ ] Propor decisão (ACEITAR/ADAPTAR/REJEITAR) com justificação
+- [ ] Mapeamento para REQ-XXX (se ACEITAR)
+- [ ] Aprovações necessárias (AppSec Lead, Product Owner conforme severidade)
+- [ ] Decisão documentada em `threat-model/decisions/TM-GEN-XXX-decision.md`
+
+:::
+
+**Artefactos & evidências.**
+- Artefacto: template de decisão de ameaça (ver [addon-14](./addon/14-validacao-ameacas-assistida))  
+- Evidência: ficheiro `decisions/*.md`, ligação a issue/commit no backlog
+
+**Proporcionalidade por risco.**
+| Nível | Obrigatório? | Ajustes |
+|---|---|---|
+| L1 | Opcional | Apenas ameaças CRÍTICA |
+| L2 | Sim | Todas as ameaças sugeridas |
+| L3 | Sim | Todas as ameaças, com teste técnico |
+
+**Integração no SDLC.**
+| Fase | Trigger | Responsável | SLA |
+|---|---|---|---|
+| Design / Validação | Ferramenta sugere ameaça | Arquitetos de Software + AppSec Engineer | <5 dias (CRÍTICA), <10 dias (ALTA) |
+
+**Ligações úteis.**
+- 🔗 [addon-14: Validação Assistida — Framework I1](./addon/14-validacao-ameacas-assistida)  
+- 🔗 [Matriz de Decisores](./addon/14-validacao-ameacas-assistida#-matriz-de-decisores-por-tipo-de-ameaça)  
+- 🔗 [Template de Decisão de Ameaça](./addon/14-validacao-ameacas-assistida#fase-3-decisão-documentada-e-aprovada)
+
+---
+
+### US-05 - Validação manual e empírica de ameaças
+
+**Contexto.**  
+Ameaças não são aceites apenas porque "parecem plausíveis" — Requerem validação técnica com testes (manual, SAST, DAST).
+
+:::userstory
+**História.**   
+Como **QA Engineer** e **AppSec Engineer**, quero **validar empiricamente cada ameaça CRÍTICA/ALTA**, para confirmar que é real antes de exigir mitigação.
+
+**Critérios de aceitação (BDD).**
+- **Dado** que ameaça foi aceita em I1 (US-04)  
+  **Quando** executo teste empírico (manual + SAST + DAST)  
+  **Então** confirmo se vulnerabilidade existe (VALIDADO) ou é falso positivo (FP)
+
+**Checklist.**
+- [ ] Categorizei ameaça (A: Input Validation, B: Auth, C: Authorization, D: Crypto, E: Data, F: Config)
+- [ ] Executei teste técnico apropriado para categoria
+  - [ ] Teste manual (ex: SQL injection payload, JWT bypass)
+  - [ ] SAST (ex: Semgrep, SonarQube deteta padrão vulnerável?)
+  - [ ] DAST (ex: OWASP ZAP, Burp Scanner)
+  - [ ] Code review (ex: validação de assinatura está presente?)
+- [ ] Documentei resultado: VALIDADO, FALSO_POSITIVO, ou FALSO_NEGATIVO
+- [ ] Se VALIDADO: requisito já associado? Requisito em backlog?
+- [ ] Se FALSO_POSITIVO: Registei em `threat-model/falsos-positivos/FP-TM-XXX.md`, suppressed em ferramenta
+- [ ] Se FALSO_NEGATIVO: RCA, PR crítico, documentei em `threat-model/falsos-negativos/FN-2026-XXX.md`
+- [ ] Aprovação AppSec: Resultado validado por AppSec Lead
+
+:::
+
+**Artefactos & evidências.**
+- Artefacto: relatório de validação `threat-model/validation-results/TM-GEN-XXX-validation.md`  
+- Evidência: testes executados (screenshots, logs SAST/DAST, code review), resultado FP/FN registado
+
+**Proporcionalidade por risco.**
+| Nível | Obrigatório? | Cobertura |
+|---|---|---|
+| L1 | Recomendado | ≥50% ameaças CRÍTICA |
+| L2 | Sim | 100% CRÍTICA, ≥70% ALTA |
+| L3 | Sim | 100% todas ameaças com >1 método (manual + SAST + DAST) |
+
+**Integração no SDLC.**
+| Fase | Trigger | Responsável | SLA |
+|---|---|---|---|
+| Validação / Pre-release | Ameaça CRÍTICA/ALTA aceita | QA Engineer + AppSec Engineer | <2 dias CRÍTICA, <5 dias ALTA |
+
+**KPIs esperados.**
+- % ameaças validadas empiricamente: 100% (L2/L3)
+- FP rate: <15% (se >30%, avaliar qualidade ferramenta)
+- FN rate: <5% (se >10%, melhorar modelo DFD)
+- Tempo validação: <5 dias (meta)
+
+**Ligações úteis.**
+- 🔗 [addon-15: Validação Manual — Framework I2](./addon/15-validacao-manual-ameacas)  
+- 🔗 [Taxonomia de Ameaças (6 Categorias)](./addon/15-validacao-manual-ameacas#fase-1-categorizar-ameaça-por-tipo-de-validação)  
+- 🔗 [Testes Empíricos por Categoria](./addon/15-validacao-manual-ameacas#fase-2-teste-empírico-por-categoria)  
+- 🔗 [Gestão de Falsos Positivos/Negativos](./addon/15-validacao-manual-ameacas#fase-4-gestão-de-falsos-positivos-e-falsos-negativos)
+
+---
+
 ### US-02 - Validação de arquitetura com threat modeling
 
 **Contexto.**  

@@ -571,6 +571,151 @@ Como **Gestão Executiva/CISO** e **GRC/Compliance**, quero publicar a política
 
 ---
 
+### US-14 - Validação de Requisitos Assistidos por Ferramentas
+
+**Contexto.**  
+Quando requisitos são sugeridos, gerados ou adaptados por ferramentas automatizadas (ASVS, OWASP, threat modeling tools, análise de arquitetura), é necessário **validação humana obrigatória** antes de aprovação.
+
+:::userstory
+**História.**  
+Como **AppSec Engineer**, quero **validar requisitos sugeridos por ferramentas** antes da aprovação final, para garantir que requisitos são contextuais, proporcionais e não contêm lacunas ou duplicações.
+
+**Critérios de aceitação (BDD).**
+- **Dado** que ferramenta sugeriu lista de requisitos (ex: 30 requisitos ASVS extraídos)  
+  **Quando** aplico checklist de validação (C1/C2/C3 de addon-11)  
+  **Então** obtenho lista final **aprovada por humano**, com decisões documentadas (aceitar/rejeitar/adaptar)
+
+**Critérios de aceitação (DoD).**
+- [ ] **Ferramenta identificada**: Nome, versão, data de execução documentados  
+- [ ] **Output completo anexado**: Lista de requisitos sugeridos + raciocínio (se disponível)  
+- [ ] **Validação por especialistas**:
+  - [ ] **Developer/Team Lead** revisa aplicabilidade técnica de cada requisito
+  - [ ] **AppSec Engineer** valida proporcionalidade ao risco e cobertura de ameaças
+  - [ ] **GRC/Compliance** adiciona requisitos regulatórios não-detetados (GDPR, NIS2, DORA)
+  - [ ] **Arquitetos** validam requisitos de infraestrutura/plataforma
+- [ ] **Checklist C1/C2/C3 cumprida** (de [addon-11](./addon/11-validacao-requisitos-assistida)):
+  - [ ] C1: Validação de seleção de requisitos (US-01)
+  - [ ] C2: Validação de critérios de aceitação (US-05)
+  - [ ] C3: Validação de evidências de teste (US-09)
+- [ ] **Decisões documentadas com templates**:
+  - [ ] Requisitos rejeitados: Template 1 (Decisão) com justificação técnica
+  - [ ] Requisitos adaptados: Template 1 com versão original vs. adaptada
+  - [ ] Requisitos adicionados manualmente: Template 3 (Lacuna) registando gap da ferramenta
+- [ ] **Conflitos resolvidos**: Se Developer discorda de ferramenta, procedimento de escalação aplicado (seção 6 de addon-11)
+- [ ] **Aprovação final**: AppSec Engineer aprova lista final com registo datado e assinado
+- [ ] **Rastreabilidade**: Matriz `requisito_sugerido | decisão | justificação | aprovador | data` versionada
+
+:::
+
+**Artefactos & evidências.**
+- Ficheiro: `requisitos-validacao-assistida.md` com matriz de decisões  
+- Templates aplicados: `REQ-DECISAO-*.md` (um por requisito rejeitado/adaptado)
+- Output ferramenta: Anexado em `tools-output/` (ex: `asvs-suggestions-2026-01-15.json`)
+- Aprovação: Email, issue comentada, ou commit com tag `appsec-approved`
+
+**Proporcionalidade por risco.**
+| Nível | Obrigatório? | Ajustes |
+|---|---|---|
+| L1 | Recomendado | Validação simplificada (apenas requisitos críticos) |
+| L2 | Obrigatório | Validação completa com checklist C1/C2/C3 |
+| L3 | Obrigatório | Validação reforçada + aprovação adicional por GRC/Compliance |
+
+**Integração no SDLC.**
+| Fase | Trigger | Responsáveis | SLA |
+|---|---|---|---|
+| Planeamento | Após ferramenta sugerir requisitos | **AppSec Engineer (valida) + Developer (input técnico) + GRC/Compliance (requisitos regulatórios) + Arquitetos (infraestrutura)** | 5 dias úteis antes de entrada em backlog |
+
+**Ligações úteis.**
+- 🔗 [addon-11: Validação de Requisitos Assistida por Ferramentas](./addon/11-validacao-requisitos-assistida) — Procedimentos completos, checklists, templates
+- 🔗 [US-01: Seleção de Requisitos](#us-01---seleção-de-requisitos-por-criticidade) — Integração com checklist C1
+- 🔗 [US-05: Critérios de Aceitação](#us-05---definição-de-critérios-de-validação) — Integração com checklist C2
+- 🔗 [US-09: Validação por Requisito](#us-09---validação-por-requisitodomínio-req-xxx--evidência) — Integração com checklist C3
+- 🔗 [agent.md: Invariantes I1-I5](https://github.com/your-org/agent-spec) — Fundamento normativo
+- 🔗 [07-roles.md](/sbd-toe/000-teory-of-everything/07-roles)
+
+---
+
+### US-15 - Rastreabilidade de Decisões de Requisitos (Audit Trail)
+
+**Contexto.**  
+Para conformidade regulatória (NIS2, DORA, ISO 27001) e auditabilidade, é necessário **trilho completo de decisões** sobre requisitos: quem sugeriu, quem decidiu, por quê, quando, com que evidência.
+
+:::userstory
+**História.**  
+Como **GRC/Compliance**, quero registar **audit trail de todas as decisões de requisitos** (aceitação, rejeição, adaptação, versioning), para demonstrar conformidade e rastreabilidade em auditorias.
+
+**Critérios de aceitação (BDD).**
+- **Dado** que um requisito foi sugerido, decidido, implementado e testado  
+  **Quando** consulto o audit trail  
+  **Então** vejo **histórico completo**: origem → validação → decisão → implementação → teste → aprovação
+
+**Critérios de aceitação (DoD).**
+- [ ] **Repositório centralizado de decisões**: Directório `requisitos-audit-trail/` ou ferramenta GRC
+- [ ] **Template de decisão aplicado** (Template 1 de addon-11) para cada requisito:
+  - [ ] Origem: Ferramenta X versão Y | Especialista Z | Regulamento W
+  - [ ] Data sugestão: YYYY-MM-DD
+  - [ ] Validador: Nome do revisor técnico
+  - [ ] Decisão: Aceitar | Rejeitar | Adaptar (com justificação técnica)
+  - [ ] Aprovador: Nome do AppSec Engineer
+  - [ ] Data aprovação: YYYY-MM-DD
+- [ ] **Versionamento de requisitos**:
+  - [ ] Cada requisito tem versão (REQ-XXX-v1, REQ-XXX-v2)
+  - [ ] Alterações documentadas: "v1 → v2 porque critério de teste mudou"
+  - [ ] Git commit ou ferramenta de versionamento com tag `req-version-change`
+- [ ] **Rastreabilidade de implementação**:
+  - [ ] Requisito → Issue/PR no backlog
+  - [ ] Issue/PR → Commit SHA
+  - [ ] Commit → Artefacto deployado (imagem, binário assinado)
+- [ ] **Rastreabilidade de validação**:
+  - [ ] Requisito → Critérios de teste (US-05)
+  - [ ] Critérios → Resultado de teste (pass/fail)
+  - [ ] Resultado → Evidência (relatório SAST, log de teste manual, aprovação QA)
+  - [ ] Evidência → Aprovação AppSec (timestamp, assinatura)
+- [ ] **Imutabilidade**: Decisões não podem ser editadas após aprovação (append-only log)
+- [ ] **Controlo de acesso**: Apenas GRC/Compliance + AppSec + Auditores podem aceder audit trail completo
+- [ ] **Retenção**: Dados retidos por mínimo 5 anos (ou conforme regulamento aplicável)
+- [ ] **Alertas de expiração**: Se requisito tem TTL (exceções), alerta 15 dias antes de expiração
+
+:::
+
+**Artefactos & evidências.**
+- Directório: `requisitos-audit-trail/` com estrutura:
+  ```
+  requisitos-audit-trail/
+  ├── REQ-AUTH-001/
+  │   ├── decisao-v1.md (Template 1)
+  │   ├── decisao-v2.md (alteração de critério)
+  │   ├── implementacao.md (links para commits)
+  │   ├── validacao.md (resultados de testes)
+  │   └── aprovacao-appsec.pdf (assinatura digital)
+  ├── REQ-DATA-005/
+  │   └── ...
+  ```
+- Ferramenta GRC: Registos em sistema de compliance (ex: ServiceNow, Jira Advanced Roadmaps)
+- Git: Commits com tags `req-decision`, `req-implementation`, `req-validation`
+
+**Proporcionalidade por risco.**
+| Nível | Obrigatório? | Ajustes |
+|---|---|---|
+| L1 | Recomendado | Audit trail simplificado (apenas decisões críticas) |
+| L2 | Obrigatório | Audit trail completo com versionamento |
+| L3 | Obrigatório | Audit trail reforçado + imutabilidade + assinatura digital + retenção 7 anos |
+
+**Integração no SDLC.**
+| Fase | Trigger | Responsáveis | SLA |
+|---|---|---|---|
+| Contínuo | Cada decisão, implementação, validação de requisito | **GRC/Compliance (registra) + Developer (documenta implementação) + QA (documenta validação) + AppSec Engineer (aprova)** | Registo: 1 dia útil após evento; Auditoria: trimestral (L2/L3) |
+
+**Ligações úteis.**
+- 🔗 [addon-11: Template 1 (Decisão de Requisito)](./addon/11-validacao-requisitos-assistida#template-1-registo-de-decisão-de-requisito) — Estrutura obrigatória
+- 🔗 [US-14: Validação Assistida](#us-14---validação-de-requisitos-assistidos-por-ferramentas) — Origem das decisões
+- 🔗 [I3: Reprodutibilidade e auditabilidade](./addon/11-validacao-requisitos-assistida#i3-reprodutibilidade-e-auditabilidade) — Fundamento normativo
+- 🔗 [I5: Rastreabilidade de decisão](./addon/11-validacao-requisitos-assistida#i5-rastreabilidade-de-decisão-e-execução) — Invariante aplicado
+- 🔗 [Cap 14 - Governança e Auditoria](/sbd-toe/sbd-manual/governanca-auditoria/intro) — Conformidade organizacional
+- 🔗 [07-roles.md](/sbd-toe/000-teory-of-everything/07-roles)
+
+---
+
 ## ⚖️ Aplicação proporcional por nível de risco (L1–L2–L3)
 
 | Prática                    | L1 (baixo risco)          | L2 (médio risco)                     | L3 (alto risco)                                  |

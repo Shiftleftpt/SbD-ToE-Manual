@@ -726,6 +726,152 @@ Como **Gestão Executiva/CISO + Arquitetos de Software**, quero estabelecer proc
 - 🔗 [Cap. 14 - Governação](/sbd-toe/sbd-manual/governanca-contratacao/intro)
 ---
 
+### US-18 - Validação assistida de decisões de arquitetura (I1)
+**Contexto.**  
+Ferramentas sugerem padrões (microservices, API Gateway, service mesh), mas requerem validação humana antes de aceitar.
+
+:::userstory
+**História.**   
+Como **Arquiteto de Software**, quero validar decisões de arquitetura sugeridas por ferramentas com checklist I1 e registar decisores explícitos em ADR, para garantir separação entre sugestão e decisão (Invariante I1).
+
+**Critérios de aceitação (BDD).**
+- **Dado** que ferramenta sugere padrão arquitetural (ex: AWS Well-Architected Tool sugere microservices)  
+  **Quando** efetuo validação com Checklist I1  
+  **Então** decisão é registada em ADR com decisores explícitos (Proponente, Validador técnico, Aprovador impacto, Aprovador segurança) e justificação documentada
+
+**Checklist I1 — Validação de Proposta Arquitetural.**
+- [ ] Relevância: Complexidade justificada? Team expertise? Custos aceitáveis?
+- [ ] Evidência empírica: PoC executado? Alternativas comparadas? AppSec confirma controlos viáveis?
+- [ ] Controlo existente: Arquitetura atual já alcança objetivo?
+- [ ] Novos requisitos: Mapeia a ARC-XXX ou cria novo?
+- [ ] Decisão proposta: ACEITAR (criar ADR) / ADAPTAR (simplificar/modificar) / REJEITAR (over-engineering/custo)
+
+**Decisão documentada em ADR.**
+- Decisores explícitos: Proponente (nome, data), Validador técnico (AppSec, data), Aprovador impacto (Product Owner, data), Aprovador segurança (CISO para L3, data)
+- Contexto: Estado atual, problemas, opções analisadas (3 alternativas)
+- Decisão: ACEITAR/ADAPTAR/REJEITAR com justificação
+- Consequências: Benefícios (+) e trade-offs (-)
+- Controlos de segurança: ARC-XXX mapeados
+- Risco residual: BAIXO/MÉDIO/ALTO
+- Evidência de validação: PoC, SAST, DAST, code review
+- Rastreabilidade: GitHub issue, Jira, commits
+- Próxima revisão: Data (3-6 meses)
+
+**Escalation para conflitos.**
+- Viável vs. over-engineering: Arquiteto decide
+- Segurança vs. pragmatismo: AppSec + Arquiteto + Product Owner
+- Decisão vs. execução demorada: Arquiteto + Gestão
+
+:::
+
+**Artefactos & evidências.**  
+- `adr/ADR-XXX.md` com template decisores completo
+- `proposals/proposal-XXX.md` (sugestão ferramenta)
+- Checklist I1 preenchido
+- Evidência de PoC (se aplicável)
+
+**Proporcionalidade.**
+| Nível | Obrigatório? | Ajustes |
+|---|---|---|
+| L1 | Recomendado | Checklist recomendado (high-impact only), PoC opcional, aprovação não formal |
+| L2 | Sim | Checklist obrigatório (todas decisões estruturais), PoC recomendado, aprovação AppSec obrigatória |
+| L3 | Sim | Checklist obrigatório (todas decisões), PoC obrigatório, aprovação AppSec + CISO obrigatória |
+
+**Matriz de decisores.**
+| Severidade/Impacto | Aprovador | SLA |
+|---|---|---|
+| CRÍTICA | Arquiteto + AppSec + CISO | 5 dias |
+| ALTA | Arquiteto + AppSec | 7 dias |
+| MÉDIA | Arquiteto + peer review | 10 dias |
+| BAIXA | Arquiteto | 14 dias |
+
+**KPIs.**
+- % ADRs com decisores explícitos: 100%
+- Tempo médio de decisão: <7 dias (ALTA)
+- % propostas rejeitadas: 20-40% (saudável)
+- % decisões com validação técnica (PoC/SAST/DAST): 100% (CRÍTICA/ALTA)
+- % aprovações formais: 100% (L2/L3)
+
+**Integração no SDLC.**
+| Fase | Trigger | Responsável | SLA |
+|---|---|---|---|
+| Design | Proposta arquitetural | Arquiteto + AppSec | <7 dias (ALTA) |
+| Go-live | Validação ADR completo | QA + AppSec | Antes release |
+
+**Ligações úteis.**
+- 🔗 [Addon 18 - Framework I1 para ADR](addon/18-validacao-decisoes-arquitetura.md)
+- 🔗 [Cap. 2 - Requisitos ARC-XXX](/sbd-toe/sbd-manual/requisitos-seguranca/intro)
+
+---
+
+### US-19 - Validação manual e empírica de controlos de arquitetura (I2)
+**Contexto.**  
+Controlos arquiteturais (rate limiting, circuit breakers, mTLS) devem ser testados tecnicamente antes de go-live para garantir que funcionam (não apenas "parecem adequados").
+
+:::userstory
+**História.**   
+Como **QA Engineer**, quero validar empiricamente controlos de arquitetura com testes técnicos, para confirmar eficácia antes de go-live (Invariante I2).
+
+**Critérios de aceitação (BDD).**
+- **Dado** que controlo foi especificado em ADR  
+  **Quando** executo teste empírico por categoria  
+  **Então** confirmo ou refuto se controlo é eficaz, registo FP/FN, e aprovo com AppSec
+
+**Taxonomia de controlos (8 categorias).**
+- **A. Rate Limiting**: Load test (ab, curl 1000× rapidamente), verificar 429 Too Many Requests
+- **B. Circuit Breaker**: Chaos test (derrubar dependência), verificar fallback triggers
+- **C. Authentication (mTLS, OAuth)**: Teste manual (curl sem certificado → 401), scan TLS (openssl s_client)
+- **D. Authorization (RBAC)**: Teste manual (user tenta DELETE com role insuficiente → 403), DAST (Burp Suite)
+- **E. Encryption in Transit (TLS)**: Scan (nmap ssl-enum-ciphers), verificar TLS 1.3, cipher suites fortes
+- **F. Logging & Observability**: Gerar evento crítico, verificar logs centralizados (ELK correlation ID)
+- **G. Isolation (Network Policies)**: Teste lateral movement (kubectl exec pod-A → curl service-B → timeout)
+- **H. Input Validation (Schema)**: Fuzzing (wfuzz), payloads malformados → 400 Bad Request
+
+**Gestão de Falsos Positivos/Negativos.**
+- **FP (controlo bloqueia legítimo)**: Análise técnica → Tuning configuração → Registo `falsos-positivos/FP-CTRL-XXX.md` → Revisão 6 meses
+- **FN (controlo não implementado/eficaz)**: Análise causa raiz → PR crítico imediato → Mitigação manual → Adicionar teste regressão CI/CD → Revisão 3 meses
+
+**Qualidade de validação.**
+- FP rate: <15% (se >30% → tuning necessário)
+- FN rate: <5% (se >10% → melhorar validação CI/CD)
+- Tempo validação: <7 dias (CRÍTICA)
+- Cobertura: 100% controlos CRÍTICA/ALTA (L2/L3)
+
+:::
+
+**Artefactos & evidências.**  
+- `architecture/validation-results/CTRL-XXX-validation.md` com resultado (VALIDADO/FP/FN)
+- Evidência técnica: Logs, screenshots, comandos executados
+- `architecture/falsos-positivos/FP-CTRL-XXX.md` (se aplicável)
+- `architecture/falsos-negativos/FN-2026-XXX.md` (se aplicável)
+
+**Proporcionalidade.**
+| Nível | Obrigatório? | Ajustes |
+|---|---|---|
+| L1 | Recomendado | Validação manual (≥50% controlos CRÍTICA), teste manual |
+| L2 | Sim | Validação obrigatória (100% CRÍTICA, ≥70% ALTA), manual + load testing |
+| L3 | Sim | Validação obrigatória (100% todos controlos), manual + load + chaos + fuzzing |
+
+**KPIs.**
+- FP rate: <15%
+- FN rate: <5%
+- % controlos CRÍTICA testados: 100% (L2/L3)
+- Tempo validação: <7 dias (CRÍTICA)
+- % controlos com >1 método teste: >70%
+
+**Integração no SDLC.**
+| Fase | Trigger | Responsável | SLA |
+|---|---|---|---|
+| Testing | Controlo implementado | QA + AppSec | Antes release |
+| CI/CD | Daily regression | DevOps | Automático |
+| Post-incident | FN descoberto | AppSec + QA | 48h para mitigação |
+
+**Ligações úteis.**
+- 🔗 [Addon 19 - Taxonomia e Testes de Controlos](addon/19-validacao-manual-controlos.md)
+- 🔗 [Addon 05 - Critérios de Validação](addon/05-validacao.md)
+
+---
+
 ## 📑 Artefactos Esperados
 
 | Artefacto                       | Origem / US | Evidência associada                      |
@@ -737,12 +883,16 @@ Como **Gestão Executiva/CISO + Arquitetos de Software**, quero estabelecer proc
 | `ci-pipeline.yml`               | US-05       | Logs CI/CD                               |
 | `impacto-arquitetura.md`        | US-06       | Backlog atualizado                       |
 | `checklist-arquitetura.md`      | US-07       | Assinatura QA/AppSec/Arquiteto           |
-| `adr/ADR-xxxx.md`               | US-08       | *Template* ADR + revisão AppSec          |
+| `adr/ADR-xxxx.md`               | US-08, US-18 | *Template* ADR + revisão AppSec + decisores explícitos |
 | `trust-boundaries.md`           | US-09       | Matriz de confiança + integrações        |
 | `integration-review.md`         | US-09       | Lista de controlos por integração        |
 | `tm-sync-arquitetura.md`        | US-10       | Rastreabilidade ameaça ↔ controlo        |
 | `excecao-da arquitetura.md`       | US-11       | Decisão, compensações, prazo, *owner*    |
 | `arquitetura-triggers.md`       | US-12       | Lista de triggers + ações e evidências   |
+| `proposals/proposal-XXX.md`     | US-18       | Proposta ferramenta para validação I1    |
+| `validation-results/CTRL-XXX.md` | US-19      | Resultado validação empírica (VALIDADO/FP/FN) |
+| `falsos-positivos/FP-CTRL-XXX.md` | US-19     | Análise técnica FP + tuning              |
+| `falsos-negativos/FN-2026-XXX.md` | US-19     | RCA + PR crítico + mitigação             |
 
 ---
 

@@ -671,6 +671,141 @@ Como **AppSec Engineer / RH**, quero **definir os formatos de entrega e o DoD m�
 
 ---
 
+### US-16 - Decisão Estruturada em Atribuição de Formação
+
+:::userstory
+**História.**
+
+Como **AppSec Engineer / Gestão**, quero **implementar um framework decisório estruturado** (sugestão → D1 checklist → R1 decision → E1 escalation), para **garantir que atribuição de formação respeita proporcionalidade, aloca recursos conscientemente, e rastreia decisões**.
+
+**Critérios de aceitação (BDD).**
+- **Dado** que formação é sugerida
+  **Quando** passa por V1 (validação prévia)
+  **Então** dados estão completos (candidato, trilho, justificativa, timing)
+
+- **Dado** V1 aprovada
+  **Quando** D1 checklist executada (4 questões)
+  **Então** resultado codificado como GREEN/AMBER/ORANGE/RED
+
+- **Dado** D1 resultado
+  **Quando** R1 decisão tomada
+  **Então** é documentada com justificativa (ASSIGN/DEFER/ESCALATE/HOLD) e assinada
+
+- **Dado** conflito de timing/orçamento
+  **Quando** E1 escalation acionada
+  **Então** enviada a GRC com critério de resolução e SLA 5-10 dias
+
+**Checklist.**
+- [ ] Template V1 (validação prévia) implementado em LMS/wiki
+- [ ] Matriz D1 (4 questões + risk profiling) documentada
+- [ ] Template R1 (4 decisões + justificativa) em uso
+- [ ] Template E1 (escalation log) criado e monitorizad
+- [ ] Decisor matrix por papel/nível definida
+- [ ] SLA por L1/L2/L3 comunicado (5-10 dias úteis)
+- [ ] KPI-1 (% D1 documentado ≥95%) rastreado
+- [ ] KPI-2 (tempo D1→R1 ≤5 dias) em dashboard
+- [ ] KPI-3 (escalation rate ≤10%) monitorizado
+- [ ] KPI-4 (cumprimento execução ≥90%) validado
+- [ ] Training para decision-makers concluído (AppSec, GRC, Managers)
+- [ ] Audit trimestral de 10+ decisões agendado
+
+:::
+
+**Proporcionalidade L1–L3.**
+| L1 | L2 | L3 |
+|----|----|----|
+| Decisão por Manager + RH (se GREEN) | Decisão por AppSec + Manager | Decisão por GRC + Exec (mesmo se GREEN) |
+| SLA 5 dias (onboarding) | SLA 5 dias (contínua) | SLA 3 dias (prioritário) |
+| Escalation em orçamento <€500 | Escalation em orçamento >€1000 | Escalation em conflito prioridade |
+
+**Integração no SDLC.**
+| Fase | Trigger | Responsável | SLA |
+|------|---------|-------------|-----|
+| Onboarding | New hire atribuído | RH + AppSec | Decisão 2 dias antes começo |
+| Promoção | Dev promovido L1→L2 | Manager + AppSec | Decisão na semana da promoção |
+| Formação contínua | Gap identificado em code review | AppSec | Decisão até próxima semana |
+| Audit/Compliance | Annual review | GRC | Validação trimestral |
+
+**Artefactos & evidências.** Documento `decisoes_formacao.md` com template V1/R1/E1, amostra de 10+ decisões mensais, quadro "Decisões Pendentes" em Jira/ADO, SLA compliance report.
+
+**Ligações úteis.**
+[Decisão Estruturada em Atribuição](formacao-onboarding/addon/addon-11-decisao-estruturada-formacao-cap13)
+[Validação Empírica](formacao-onboarding/addon/addon-12-validacao-empirica-formacao-cap13)
+
+---
+
+### US-17 - Validação Empírica de Eficácia de Formação
+
+:::userstory
+**História.**
+
+Como **AppSec / RH**, quero **implementar um ciclo de validação empírica** (P1-P5: baseline → synthetic → production → FP/FN → continuous) para **confirmar que formação realmente reduz vulnerabilidades em código e não apenas aumenta quiz scores**.
+
+**Critérios de aceitação (BDD).**
+- **Dado** trilho formativo definido
+  **Quando** P1 baseline recolhida (2-4 semanas pré-formação)
+  **Então** métricas documentadas: vulnerabilidades, MTTR, taxa aprovação code review
+
+- **Dado** P1 completa
+  **Quando** P2 synthetic threats executadas em staging (5-10 cenários)
+  **Então** detecção rate registada por ameaça (tempo, método, sucesso/falha)
+
+- **Dado** P2 validada (≥80% detecção)
+  **Quando** P3 canary executada em produção (1-5% tráfico)
+  **Então** métricas de error rate, latência, alerts monitoradas (vs. baseline)
+
+- **Dado** P3 passou (sem degradação)
+  **Quando** P4 classificação FP/FN realizada (1 semana pós-formação, 20-30 casos)
+  **Então** V1/V2 templates preenchidos, taxa calculada (target FP <20% L1)
+
+- **Dado** P4 métricas coletadas
+  **Quando** P5 monthly review agendado
+  **Então** trilho atualizado com gaps identificados, retest agendado
+
+**Checklist.**
+- [ ] P1 baseline procedure documentada (métricas: vulns, MTTR, code review rate)
+- [ ] P1 resultado arquivado para cada trilho (L1/L2/L3)
+- [ ] P2 synthetic threat catalog definido (T1-T8 ou equivalent com dificuldade/tempo)
+- [ ] P2 staging environment com vulns injetadas pronto
+- [ ] P2 procedimento de teste (30min per dev per threat) definido
+- [ ] P3 canary framework setup (1% → 5% → 10% → 50% → 100% expansão)
+- [ ] P3 métricas monitorizadas (error rate ≤baseline, latência ≤200ms, alerts trend)
+- [ ] P4 V1 template (false positive analysis) documentado
+- [ ] P4 V2 template (false negative/RCA) documentado
+- [ ] P4 classification procedure (manual, 20-30 casos/mês) definida
+- [ ] P4 KPIs calculados (FP%, FN%, correlation quiz-code)
+- [ ] P5 monthly review agenda fixa (WEEK 1-4 ciclo: coleta, análise, decisão, retest)
+- [ ] P5 trilho update checklist implementado
+- [ ] 5 KPIs rastreados em dashboard (eficácia%, FP%, FN%, MTTR reduction, incident rate)
+- [ ] Proporcionalidade L1/L2/L3 aplicada (P1-P5 frequência diferente)
+
+:::
+
+**Proporcionalidade L1–L2–L3.**
+| Nivel | P1 Frequency | P2 Freq | P3 Freq | P4 Freq | P5 Freq |
+|-------|-----|---------|---------|---------|---------|
+| **L1** | Quarterly | Quarterly | Quarterly | Monthly | Monthly |
+| **L2** | Biweekly | Monthly | Monthly | Weekly | Weekly |
+| **L3** | Weekly | Weekly | Weekly | Daily | Daily |
+
+**Integração no SDLC.**
+| Fase | Trigger | Responsável | SLA |
+|------|---------|-------------|-----|
+| Planning | Trilho novo atribuído | AppSec | P1 baseline em 2 semanas |
+| Development | Code review feedback loop | AppSec | P4 FP/FN classification semanal (L2+) |
+| Testing | CI/CD improvements | DevOps | P3 canary validation em staging |
+| Audit | Monthly/Quarterly review | GRC | P5 metrics audit e trilho updates |
+| Training Update | P4/P5 identifies gaps | AppSec | Trilho update + retest (monthly L1, weekly L2, daily L3) |
+
+**Artefactos & evidências.** Arquivos P1: `baseline_[trilho]_[data].md`; P2: `synthetic_scenarios.yaml` + `results_[cohort].md`; P3: canary metrics export; P4: `fp_fn_register_[mes].csv` com V1/V2 análises; P5: monthly review minutes + trilho changelog; KPI dashboard export.
+
+**Ligações úteis.**
+[Validação Empírica Framework](formacao-onboarding/addon/addon-12-validacao-empirica-formacao-cap13)
+[Decisão Estruturada em Atribuição](formacao-onboarding/addon/addon-11-decisao-estruturada-formacao-cap13)
+[KPIs de Capacitação](aplicacao-lifecycle.md#US-14) — Reporte integrado
+
+---
+
 ## 📦 Artefactos esperados
 
 | Artefacto | Evidência |
@@ -687,6 +822,9 @@ Como **AppSec Engineer / RH**, quero **definir os formatos de entrega e o DoD m�
 | **Checklist de onboarding validado** | **Registos formais por colaborador** |
 | **Registos de quizzes** | **Pontuações, datas e validadores** |
 | **Certificados de terceiros** | **Registos GRC de conformidade contratual** |
+| **D1 decisão register** | **Templates R1, templates V1/V2 FP/FN** |
+| **P1 baseline metrics** | **P2 synthetic results, P3 canary metrics** |
+| **KPI dashboard (eficácia, FP/FN, MTTR, incidents)** | **Monthly P5 review minutes** |
 
 ---
 

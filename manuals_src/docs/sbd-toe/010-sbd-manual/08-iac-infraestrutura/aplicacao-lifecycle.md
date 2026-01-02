@@ -587,6 +587,92 @@ Como **GRC / Compliance** e **AppSec Engineers**, quero **exceções registadas*
 
 ---
 
+### US-19 - Revisão Assistida de Plan com Decisão Explícita
+
+**Contexto.**  
+Implementa Invariante **I1 (Separação sugestão/decisão)** de agent.md. Terraform `plan` sugere mudanças, mas a decisão de `apply` deve ser **explícita, documentada e auditável**, com papéis bem definidos.
+
+:::userstory
+**História.**  
+Como **DevOps Engineer** ou **Architect**, quero **validar terraform plan com checklist estruturado** (C1: 4 questões), para tomar decisão informada entre ACEITAR-apply, REVISAR-plan, ou REJEITAR-plan.
+
+**Critérios de aceitação (BDD).**
+- **Dado** um terraform plan gerado  
+  **Quando** preciso decidir se aplico ou não  
+  **Então** executo Checklist C1 com 4 questões (business intent, tags, security, dependencies)  
+- **Dado** todas 4 questões respondidas com evidência  
+  **Quando** decisão é tomada  
+  **Então** documento Decision Template T1 com decisores explícitos (Analyzer → Reviewer → Approver)  
+- **Dado** conflitos na decisão (timeline, cost, policy)  
+  **Quando** não há consenso  
+  **Então** ativo Escalation Workflow T2 com SLAs (2h/4h/8h conforme impacto)  
+
+**Checklist.**
+- [ ] Plan Analysis: Checklist C1 completo (4 questões)
+- [ ] Risk Assessment: Low/Medium/High baseado em answers
+- [ ] Decision Documentation: Template T1 com decisores + SLA
+- [ ] Escalation triggers: Type A (timeline), Type B (cost), Type C (security policy)
+- [ ] Audit trail: Decision log versionado em Git + approval chain
+
+:::
+
+**🧾 Artefactos & evidências.**  
+Checklist C1 preenchido; Decision Template T1 assinado; Escalation docs (se aplicável); Decision logs em `iac-decisions/`.
+
+**⚖️ Proporcionalidade.**
+| Nível | Obrigatório? | Ajustes |
+|---|---:|---|
+| L1 | Recomendado | Checklist C1 para MEDIUM+ plans |
+| L2 | Sim | Checklist C1 obrigatório; Reviewer = Architect; SLA 4h |
+| L3 | Sim | Checklist C1 obrigatório; Reviewer = AppSec + Architect; Approver = Release Manager; SLA 2h/1h conforme impact |
+
+> **Referência:** Implementa [addon-11: Plan Review & Decisão de Apply](./addon/11-plan-review-decision.md) — Checklist C1, Decision Template T1, Escalation Workflow T2, KPIs de plan review.
+
+---
+
+### US-20 - Validação Empírica de IaC Violations
+
+**Contexto.**  
+Implementa Invariante **I2 (Evidência acima de plausibilidade)** de agent.md. Ferramentas de scanning (tfsec, checkov, OPA) produzem **falsos positivos** (alerts inválidos) e **falsos negativos** (vulnerabilities não-detectadas). A validação empírica confirma se violations são reais.
+
+:::userstory
+**História.**  
+Como **DevOps Engineer** ou **AppSec Engineer**, quero **validar empiricamente IaC violations** antes de acceptar ou suprimir, para confirmar se bloquear apply é justified.
+
+**Critérios de aceitação (BDD).**
+- **Dado** um IaC violation reportado (ex: "S3 bucket versioning not enabled")  
+  **Quando** preciso decidir se é real ou falso positivo  
+  **Então** executo teste empírico apropriado (T1-T5 conforme categoria)  
+- **Dado** teste empírico completo com evidência  
+  **Quando** valido resultado  
+  **Então** documento em FP (falso positivo) ou TP (verdadeiro positivo) com aprovação AppSec  
+- **Dado** falsos negativos descobertos (violation não-detectada)  
+  **Quando** ocorre incidente  
+  **Então** faço RCA, crio custom rule, testo em regressão  
+
+**Checklist.**
+- [ ] Violation Category Identified: Security config (T1), Policy violation (T2), Tagging (T3), IAM (T4), Resource limits (T5)
+- [ ] Empirical Test Executed: Deploy in staging, verify actual behavior
+- [ ] Result Documented: True Positive (remediate) or False Positive (suppress + VEX)
+- [ ] FP/FN Management: Suppression with justification OR RCA + custom rule
+- [ ] Quality Metrics: Track FP rate <20%, FN rate <5%, time-to-validation <2h
+
+:::
+
+**🧾 Artefactos & evidências.**  
+Test procedures (T1-T5 commands/outputs); FP suppression docs (Template S1) com VEX; FN RCA docs (Template S2) com custom rules; Quality metrics dashboard.
+
+**⚖️ Proporcionalidade.**
+| Nível | Obrigatório? | Ajustes |
+|---|---:|---|
+| L1 | Recomendado | Validação empírica para CRITICAL violations |
+| L2 | Sim | Validação empírica para CRITICAL + HIGH; FP suppression obrigatória |
+| L3 | Sim | Validação empírica para CRITICAL + HIGH + MEDIUM; FP/FN management obrigatório; Monthly quality metrics review |
+
+> **Referência:** Implementa [addon-12: Validação Empírica de Findings em IaC](./addon/12-validacao-empirica-iac.md) — Taxonomia T1-T5, FP/FN templates (S1/S2), Quality metrics, Proporcionalidade L1-L3.
+
+---
+
 ## 🛡️ Princípios de SbD Reforçados em IaC
 
 ### Fail Securely (Falhar com Segurança)

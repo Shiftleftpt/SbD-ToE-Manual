@@ -8,6 +8,7 @@ tags: [formacao, iac, terraform, tfsec, checkov, pipelines, devops, validacao, r
 
 
 # 🧱 Módulo Formativo - Infraestrutura como Código (IaC) Seguro
+O presente exemplo ilustra formação num contexto de elevada automação da infraestrutura, onde a compreensão humana dos mecanismos e limites continua a ser essencial.
 
 ## 🎯 Objetivo
 

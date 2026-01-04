@@ -139,5 +139,6 @@ A ferramenta usada (BuilderX) não suporta autenticação multifator. O risco fo
 - Devem ser associados aos artefactos de aplicação, fornecedor ou release
 - A existência destes registos suporta auditorias, governance e decisão executiva
 - A **formação obrigatória para funções críticas** (Cap. 13) deve ser verificada antes de validações formais
+- Sempre que parte do processo seja suportada por mecanismos automatizados, deve ficar explícito no registo quem validou e assumiu a decisão final.
 
 ---

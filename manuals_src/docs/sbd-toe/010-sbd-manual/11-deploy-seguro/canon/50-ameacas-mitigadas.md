@@ -41,7 +41,7 @@ As ameaças mitigadas surgem no momento mais sensível do SDLC: **a passagem rea
 | Ameaça                                   | Fonte                              | Como surge                                         | Como a prática mitiga                                                              | Controlos associados                          |
 |------------------------------------------|-------------------------------------|---------------------------------------------------|-------------------------------------------------------------------------------------|------------------------------------------------|
 | Release conjunta sem segmentação         | OWASP SAMM / BSIMM DR1             | Múltiplas features ativadas em simultâneo         | Práticas de release progressivo com rollout segmentado                             | `addon/02-praticas-release-management.md`      |
-| Feature exposta a todos os utilizadores  | CAPEC-112 / STRIDE (Elevation)     | Toggle sem escopo por grupo, região ou perfil     | Segmentação por utilizador, tempo, localização ou perfil                           | `addon/03-feature-flags-e-toggle.md`           |
+| Feature exposta a todos os utilizadores  | CAPEC-112 / STRIDE (Elevation)     | Toggle sem âmbito por grupo, região ou perfil     | Segmentação por utilizador, tempo, localização ou perfil                           | `addon/03-feature-flags-e-toggle.md`           |
 | Falta de validação operacional           | ISO 27001 A.14.2.4 / DSOMM Runtime | Código testado apenas em ambientes não representativos | Validação final em ambiente de staging espelho antes da promoção                  | `addon/08-segregacao-e-validacao-operacional.md` |
 
 ---

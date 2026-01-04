@@ -1,7 +1,7 @@
 ---
 id: intro
 title: Containers e Execução Isolada
-description: Princípios, práticas e controlos para construir, assinar, validar e executar imagens de forma segura e rastreável
+description: Princípios, práticas e controlos para construir, validar e executar imagens de forma segura, auditável e rastreável
 tags:
   [containers, imagens, supply-chain, proveniencia, assinatura, slsa, ssdf,
    registry, runtime-hardening, admission-control, kubernetes, cicd, dSOMM]
@@ -9,133 +9,138 @@ sidebar_position: 0
 ---
 
 :::tip Capítulo Operacional
-Este capítulo é considerado **operacional** no modelo *Security by Design - Theory of Everything (SbD-ToE)*.  
-A sua função é **aplicar, automatizar e validar** as práticas definidas nos capítulos basilares, garantindo a sua execução contínua e mensurável.  
+Este capítulo é considerado **operacional** no modelo *Security by Design – Theory of Everything (SbD-ToE)*.  
+A sua função é **aplicar, automatizar e validar** as práticas definidas nos capítulos basilares, garantindo a sua execução contínua, mensurável e auditável.
 
-Os capítulos operacionais implementam o SbD-ToE em contextos técnicos específicos. Estes capítulos traduzem as prescrições basilares em práticas de **execução verificável**, promovendo a **integração contínua da segurança** ao longo do ciclo de vida do software.
+Os capítulos operacionais assumem explicitamente o uso extensivo de automação no SSDLC moderno e tratam os **riscos introduzidos pelo próprio processo de execução**, não apenas pela tecnologia utilizada.
 :::
 
 
 # Containers e Execução Isolada
 
-A execução em containers transformou-se na norma em pipelines de CI/CD e em produção. Esta ubiquidade trouxe ganhos de agilidade, mas também riscos sérios quando as práticas de segurança não acompanham o ritmo.  
-Executar código em ambientes não isolados, com imagens adulteradas ou permissões excessivas, é um convite aberto ao compromisso.  
+A execução em containers tornou-se a norma em pipelines de CI/CD e em produção.  
+Esta ubiquidade trouxe ganhos significativos de agilidade e portabilidade, mas introduziu **novos riscos de processo** quando a construção, validação e promoção de imagens passam a ser fortemente mediadas por pipelines automatizados.
 
-Casos reais reforçam este alerta: falhas em registries levaram a ataques de *typosquatting* (imagens maliciosas mascaradas de oficiais), segredos hardcoded em containers expuseram credenciais em incidentes como o **Tesla Kubernetes breach (2018)**, e ataques à cadeia de fornecimento como o **SolarWinds** mostraram o impacto devastador de imagens sem proveniência validada.  
+Hoje, imagens são frequentemente **derivadas, geradas, recombinadas ou promovidas automaticamente**, muitas vezes sem intervenção humana direta.  
+Neste contexto, falhas de governação — e não apenas falhas técnicas — tornam-se o vetor dominante de compromisso.
 
-Por isso, este capítulo estabelece as bases para uma execução **confiável, rastreável e auditável**, unindo requisitos de proveniência, runtime hardening e governação de todo o ciclo. É aqui que a segurança “entra em runtime” e demonstra o seu valor científico e operacional.
+Casos reais ilustram este risco: ataques por *typosquatting* em registries públicos, segredos embebidos em imagens explorados em ambientes Kubernetes (como no **Tesla Kubernetes breach, 2018**), e incidentes de cadeia de fornecimento como o **SolarWinds** demonstram que **artefactos aparentemente válidos podem ser operacionalmente inseguros**.
+
+Este capítulo estabelece, por isso, as bases para uma execução **confiável, rastreável e auditável**, tratando containers como **artefactos de software completos**, sujeitos a decisão humana explícita, validação independente e evidência verificável ao longo de todo o ciclo.
+
+👉 O objetivo não é apenas garantir que “o container corre”, mas assegurar que **corre por decisão consciente, com risco conhecido e evidência suficiente**.
 
 
-Os requisitos aqui prescritos não são genéricos: tratam especificamente da **execução em containers como artefactos de software completos**.  
-Isto implica olhar tanto para imagens de pipeline (builders, runners) como para imagens aplicacionais em runtime (microserviços, jobs).  
+Os requisitos aqui prescritos aplicam-se tanto a:
+- imagens de pipeline (*builders*, *runners*, jobs técnicos),
+- como a imagens aplicacionais executadas em runtime (serviços, workloads, batch jobs).
 
-👉 O objetivo não é apenas “assegurar que corre”, mas garantir que **corre de forma confiável, validada e auditável**.  
+Em ambos os casos, a automação **produz sinais**, não decisões.  
+A aceitação do risco, a promoção entre ambientes e a autorização de execução são **responsabilidades humanas não delegáveis**.
 
-Este capítulo está intimamente ligado a:  
-- **Cap. 05 - Dependências, SBOM e SCA**, porque containers são também *supply chain artifacts*, exigindo inventário e rastreabilidade.  
-- **Cap. 07 - CI/CD Seguro**, que trata a segurança global do pipeline.  
-- **Cap. 12 - Monitorização & Operações**, que reforça a deteção e resposta em runtime.  
+Este capítulo articula-se diretamente com:
+- **Cap. 05 — Dependências, SBOM e SCA**, tratando imagens como *supply chain artifacts* com proveniência verificável;
+- **Cap. 07 — CI/CD Seguro**, onde o pipeline é reconhecido como ator crítico de risco;
+- **Cap. 12 — Monitorização & Operações**, que assegura deteção e resposta em runtime.
 
 ---
 
 ## 🧭 O que cobre tecnicamente
 
-Quando falamos de containers seguros, falamos de uma cadeia de controlos que começa antes do build e continua durante toda a execução.  
-Cada etapa tem de ser protegida porque, se uma falhar, o risco alastra.
+A segurança de containers depende de uma **cadeia contínua de controlos**, desde o desenho da pipeline até à execução em produção.  
+Qualquer quebra nesta cadeia compromete a confiança global.
 
-- Escolha e validação de imagens base seguras e **pinned**.  
-- Execução em ambientes controlados (runners, jobs, serviços).  
-- Assinatura e verificação de proveniência (SLSA, Sigstore).  
-- Hardening e minimização de runtime (non-root, capabilities mínimas, read-only FS).  
-- Políticas de execução (OPA, Kyverno, PSP).  
-- Integração com Kubernetes (RBAC, ServiceAccounts dedicadas, NetworkPolicy).  
-- Geração de SBOM e rastreabilidade commit→pipeline→deploy.  
+Este capítulo cobre, de forma integrada:
 
-Estes elementos, aplicados em conjunto, criam a “malha de confiança” que suporta a segurança de containers.
+- Seleção, validação e **fixação determinística** de imagens base.
+- Execução em ambientes controlados (builders, runners, clusters).
+- Assinatura e verificação de proveniência (ex.: SLSA, Sigstore).
+- Hardening de runtime (non-root, capacidades mínimas, FS read-only).
+- Políticas de execução e admissão (OPA, Kyverno).
+- Integração segura com Kubernetes (RBAC, ServiceAccounts dedicadas, NetworkPolicy).
+- Geração de SBOM e rastreabilidade **commit → pipeline → imagem → execução**.
+
+Estas práticas não substituem decisão humana; fornecem **evidência técnica** que suporta essa decisão.
 
 ---
 
 ## 🧪 Pilares de governação
 
-Para além da técnica, existe a governação: **o que é obrigatório, quem aprova e como se mantém atualizado**.  
-Sem governação, os controlos técnicos degradam-se e perdem eficácia.  
+Sem governação explícita, a automação degrada-se rapidamente em confiança implícita.  
+Este capítulo define pilares mínimos que garantem **disciplina operacional contínua**:
 
-👉 Pensa nestes pilares como a **espinha dorsal** do programa de segurança de containers: mesmo que outros controlos falhem, são eles que mantêm a organização de pé.
+1. **Allowlist de registries e execução por digest**, prevenindo substituições silenciosas.
+2. **Gestão de segredos fora da imagem**, com credenciais efémeras e auditáveis.
+3. **RBAC mínimo e ServiceAccounts dedicadas**, nunca o *default SA* em L2/L3.
+4. **NetworkPolicies com egress controlado**, limitando o *blast radius*.
+5. **Golden Base Images por stack**, com SLA de patching e descontinuação.
+6. **Builders e runners efémeros, mínimos e assinados**, protegendo a cadeia de build.
 
-1. **Allowlist de registries e digest-only** para bloquear fontes não confiáveis.  
-2. **Gestão de segredos** - fora da imagem, com credenciais efémeras e auditadas.  
-3. **RBAC mínimo e ServiceAccounts dedicadas**, nunca o *default SA* em L2/L3.  
-4. **NetworkPolicies** com egress controlado, reduzindo o “blast radius”.  
-5. **Golden Base Images** por stack, com SLA de patching e depreciação.  
-6. **Builders/runners ephemerais, mínimos e assinados** para proteger pipelines.  
-
-🔬 Em L3 (alto risco), entram controlos avançados como **sandboxes de alto isolamento (gVisor/Kata/Firecracker)**, deteção de *drift* e **promoção por estágios**.
+🔬 Em contextos L3, aplicam-se ainda controlos reforçados como **isolamento avançado (gVisor, Kata, Firecracker)**, deteção de *drift* e **promoção por estágios com aprovação explícita**.
 
 ---
 
 ## ⚙️ Como deve ser feito
 
-A prática exige tanto disciplina como automatização.  
-Não basta “confiar nos developers” ou “escolher imagens oficiais”: é necessário **mecanismos formais e repetíveis**.
+A prática segura exige mecanismos **formais, repetíveis e auditáveis**.  
+Resultados “plausíveis” ou “verdes” não substituem validação empírica.
 
-- Usar imagens base minimalistas (Distroless, Alpine) mantidas e verificadas.  
-- Assinar/verificar imagens (Cosign + Rekor), anexando proveniência SLSA.  
-- Integrar scanners de vulnerabilidades no CI/CD com gates por severidade.  
-- Correr containers com privilégios mínimos (non-root, drop capabilities, FS read-only).  
-- Definir e aplicar políticas (OPA/Kyverno) sobre origem, digest, RBAC e SA.  
-- Gerar SBOM em cada build, rastrear alterações e ligá-las ao pipeline.  
-- Rastrear execuções de forma auditável, do commit ao runtime.  
+De forma não exaustiva:
 
-Estes passos não são opcionais - são a base da confiança operacional.
+- Usar imagens base minimalistas, mantidas e verificadas.
+- Assinar imagens e verificar proveniência antes da execução.
+- Integrar scanners no CI/CD como **sinal**, com gates definidos por política.
+- Executar containers com privilégios mínimos.
+- Aplicar políticas de admissão sobre origem, digest, identidade e contexto.
+- Gerar SBOM em cada build e ligar resultados ao pipeline.
+- Manter registos auditáveis da decisão de aceitação e promoção.
+
+Estes passos são obrigatórios porque **reduzem incerteza**, não porque eliminam risco.
 
 ---
 
 ## 📆 Quando aplicar
 
-Os controlos devem ser pensados desde o desenho da pipeline, não apenas “em cima do deploy”.  
-Cada fase traz o seu gatilho:
+Os controlos devem existir desde o desenho da pipeline e manter-se ao longo do ciclo:
 
-- Durante o design da pipeline CI/CD.  
-- Na escolha de imagens base e definição de registries autorizados.  
-- Em cada build e release de imagem.  
-- Antes do deploy: verificação de assinatura e enforcement de policies.  
-- Após CVEs críticos ou mudanças de arquitetura.  
+- Design e evolução do CI/CD.
+- Seleção e manutenção de imagens base.
+- Cada build e release.
+- Antes de qualquer promoção ou deploy.
+- Após CVEs críticos ou alterações estruturais.
 
-👉 A aplicação contínua garante que o risco não se acumula até se tornar incontrolável.
+A aplicação contínua evita acumulação silenciosa de risco.
 
 ---
 
 ## 👥 Quem está envolvido
 
-Containers seguros não são responsabilidade exclusiva de uma equipa.  
-A sua proteção depende de uma **colaboração transversal**:
+A segurança de containers é transversal:
 
-| Papel                   | Contributo                                                                 |
-|-------------------------|-----------------------------------------------------------------------------|
-| **DevOps / Plataforma** | Define imagens aprovadas, runners seguros, enforcement (OPA/Kyverno)        |
-| **Equipa de Dev**       | Usa imagens validadas, aplica controlos nos manifests, integra SBOM         |
-| **AppSec / Segurança**  | Valida cadeia de confiança, controla execuções, analisa scanners            |
-| **Infraestrutura**      | Garante isolamento (cgroups, namespaces, policies) em Kubernetes            |
-| **GRC / Conformidade**  | Mantém rastreabilidade, políticas formais e evidências para auditoria       |
+| Papel                   | Responsabilidade principal |
+|-------------------------|----------------------------|
+| **DevOps / Plataforma** | Definir imagens aprovadas, runners seguros e enforcement |
+| **Equipa de Dev**       | Usar imagens validadas e integrar controlos nos manifests |
+| **AppSec / Segurança**  | Validar cadeia de confiança e analisar sinais técnicos |
+| **Infraestrutura**     | Garantir isolamento e políticas no cluster |
+| **GRC / Conformidade** | Manter evidência, rastreabilidade e políticas |
 
-Sem esta distribuição de papéis, a segurança degrada-se - e um elo fraco compromete toda a cadeia.
+A ausência de um destes papéis compromete toda a cadeia.
 
 ---
 
 ## 🎯 Para quê
 
-A pergunta central é: *por que investir em controlos tão rigorosos para containers?*  
-A resposta é simples: porque **containers inseguros comprometem diretamente a integridade da organização**.
+Containers inseguros comprometem diretamente a integridade organizacional.
 
-- Evitar execução de código adulterado ou não verificado.  
-- Reduzir a superfície de ataque em pipelines e produção.  
-- Aumentar a rastreabilidade e confiança em auditorias.  
-- Cumprir normativos como NIS2, SSDF e SLSA.  
-- Permitir resposta rápida e eficaz a incidentes em runtime.  
+Este capítulo permite:
+- Evitar execução de código adulterado.
+- Reduzir superfície de ataque em pipeline e produção.
+- Sustentar auditorias com evidência verificável.
+- Cumprir requisitos como NIS2, SSDF e SLSA.
+- Responder rapidamente a incidentes em runtime.
 
-Exemplos como o **Equifax (2017)** - em que logs e controlos deficientes atrasaram a deteção - ou fugas via segredos mal geridos em Docker Hub mostram que o custo de não aplicar estas práticas é sempre superior ao de as adotar.  
-
-Em última análise, trata-se de transformar agilidade em **agilidade com confiança**.
+Agilidade só é vantagem quando acompanhada de **confiança operacional**.
 
 ---
 
@@ -171,7 +176,5 @@ Elas garantem que não dependemos apenas da disciplina individual, mas de regras
 | Política de Rastreabilidade     | Recomendado | GRC/Auditoria | Logs commit→pipeline→deploy, retenção, export imutável |
 | Política de Golden Base Images  | Sim         | Plataforma, AppSec | Catálogo, SLA de patching, depreciação |
 | Política de Builders/Runners    | Recomendado | DevOps | Ephemerais, mínimos, assinados, cache controlada |
-
-Na versão impressa, consultar o **Anexo de Políticas Organizacionais do Manual**, onde estas políticas estão consolidadas transversalmente.
 
 ---

@@ -43,7 +43,7 @@ T-1 dia: Avisos finais
   └─ Equipamentos recolhidos agendados
 
 T+0 (Dia de Término):
-  └─ Acesso revogado (`<`24h depois)
+  └─ Acesso revogado em T+0 (imediato após fim do expediente), com verificação até T+1
   └─ Assets finais recuperados
 
 T+1 dia: Verificação
@@ -178,6 +178,17 @@ git clone https://github.com/[org]/[private-repo]
 | **Revogar biometric access** | Facilities | Remove fingerprint from system | [ ] | Badge reader rejects biometric |
 | **Revogar corporate device registration** | IT | Remove from MDM (Mobile Device Management) | [ ] | Device loses corporate mail, VPN |
 
+
+#### 4.6 Integrações, Automação e Acessos Indiretos
+
+| Item | Owner | Ação | Status | Verificação |
+|------|-------|------|--------|-------------|
+| **Inventariar integrações associadas ao utilizador** | DevOps | Listar apps/integrações ligadas a Git, CI/CD, ChatOps, ALM | [ ] | Lista anexada ao offboarding |
+| **Revogar tokens de aplicações e integrações** | DevOps | Revogar tokens OAuth, webhooks, apps instaladas, bots, runners | [ ] | Eventos/ações deixam de executar |
+| **Revogar credenciais em gestores de segredos e automação** | DevOps | Invalidar tokens/approles, remover bindings a pipelines | [ ] | Acesso falha / execuções falham |
+| **Remover configurações de sincronização/exportação** | IT/DevOps | Desativar sincronizações, forwards, ligações a storage externo | [ ] | Não existe export pós-T+0 |
+| **Validar que não existem permissões herdadas por grupos** | IT/Tech Lead | Rever grupos/roles indiretos em diretórios e plataformas | [ ] | Sem acesso residual via grupo |
+
 ---
 
 ### 5. Recuperação de Ativos Físicos
@@ -296,6 +307,7 @@ Contacto para follow-up: _________________
 | **Último acesso à cloud** | Cloud audit logs últimas 72h | Nenhuma ação após T+0 | [ ] |
 | **Comportamento suspeito** | SIEM alerts últimos 7 dias | Nenhum alert relacionado ao contractor | [ ] |
 | **Data exfiltration attempt** | DLP logs últimos 7 dias | Nenhuma tentativa de upload/download | [ ] |
+| **Atividade via integrações/bots** | Logs de automação/ChatOps/GitHub Apps/CI | Nenhuma execução associada ao utilizador após T+0 | [ ] |
 
 **Se anomalia encontrada:**
 - [ ] Alertar CISO imediatamente

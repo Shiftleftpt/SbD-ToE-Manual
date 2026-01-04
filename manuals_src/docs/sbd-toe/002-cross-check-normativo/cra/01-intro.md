@@ -119,7 +119,7 @@ Expandir além de software: firmware, módulos criptográficos, dispositivos int
 **Ação:** Checklist físico: origem componente, hash firmware, canal de atualização seguro.
 
 ### 11. Conformidade e Marcação CE
-Fora do escopo técnico do SbD-ToE. Requer processo documental legal.
+Fora do âmbito técnico do SbD-ToE. Requer processo documental legal.
 
 **Ação:** Criar swimlane separado GRC/Jurídico; manter referência dos controlos técnicos como evidência de segurança.
 

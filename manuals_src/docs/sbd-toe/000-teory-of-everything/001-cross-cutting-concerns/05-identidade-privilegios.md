@@ -43,7 +43,7 @@ O IAM como cross-cutting concern afeta:
 
 ### CI/CD (Cap. 07)
 - Identidade dos pipelines
-- Escopo de permissões de deploy
+- âmbito de permissões de deploy
 - Assinatura de artefatos
 
 ### Operações (Cap. 12)

@@ -1,121 +1,128 @@
 ---
 id: intro
 title: 📘 Capítulo 3 - Threat Modeling
-description: Identificação e mitigação estruturada de ameaças durante o ciclo de desenvolvimento
-tags: [threat-modeling, stride, requisitos, mitigação, risco, arquitetura, SAMM, SSDF, SLSA, DSOMM]
+description: Identificação, análise e mitigação estruturada de ameaças durante o ciclo de desenvolvimento
+tags: [threat-modeling, stride, linddun, requisitos, mitigacao, risco, arquitetura, SAMM, SSDF, SLSA, DSOMM]
 ---
-
 
 :::caution Capítulo Basilar
 Este capítulo é considerado **basilar** no modelo *Security by Design - Theory of Everything (SbD-ToE)*.  
-A sua aplicação é **obrigatória** para garantir a coerência, rastreabilidade e eficácia das restantes práticas de segurança.  
+A sua aplicação é **obrigatória** para garantir a coerência, rastreabilidade e eficácia das restantes práticas de segurança.
 
-Os capítulos basilares constituem a **fundação técnica e metodológica** do modelo, a ausência ou aplicação parcial de qualquer um destes compromete a **integridade global** do SbD-ToE, tornando inviável a adoção coerente das práticas operacionais e de governação.
+A ausência ou aplicação parcial do Threat Modeling compromete a **ligação formal entre risco, arquitetura e requisitos**, tornando inviável uma adoção consistente do SbD-ToE.
 :::
-
 
 # 📘 Capítulo 3 - Threat Modeling
 
 ## 1. 🧭 O que cobre tecnicamente
 
-O Threat Modeling é uma técnica essencial para antecipar ataques e falhas de segurança antes que estas aconteçam.  
-Permite identificar ameaças relevantes, validar controlos e garantir que os riscos são tratados de forma sistemática e proporcional ao impacto.
+O **Threat Modeling** é a prática que permite **antecipar ameaças reais** antes da implementação, com base na **arquitetura, fluxos de dados e contexto de risco** da aplicação. É tratado como um **processo decisional estruturado**, sujeito a validação humana e produção de evidência verificável.  
+A ausência de uma ameaça num modelo não constitui prova da sua inexistência, devendo os riscos de omissão e enviesamento ser assumidos e mitigados explicitamente.
+
+No SbD-ToE, o Threat Modeling constitui a **origem formal dos requisitos de mitigação**, ligando diretamente:
+- a classificação de risco (Cap. 1),
+- os requisitos de segurança (Cap. 2),
+- e as decisões de arquitetura (Cap. 4).
 
 Este capítulo cobre:
 
-- Integração de threat modeling no ciclo de desenvolvimento
-- Métodos como STRIDE, LINDDUN e PASTA
-- Criação e validação de modelos de ameaça (DFDs, trust boundaries)
-- Mapeamento de ameaças para requisitos e controlo aplicado
-- Integração com validação de arquitetura e revisão técnica
-- Substituição do modelo manual por plataformas como o IriusRisk
-- Reutilização segura de modelos em arquiteturas padronizadas
+- A integração sistemática do threat modeling no ciclo de desenvolvimento
+- Métodos estruturados de análise de ameaças (STRIDE, LINDDUN, PASTA)
+- Criação e manutenção de modelos de ameaça baseados em arquitetura (DFDs, trust boundaries)
+- Identificação de ameaças técnicas e de negócio relevantes
+- Derivação explícita de requisitos e controlos a partir das ameaças identificadas
+- Rastreabilidade entre ameaça → requisito → mitigação → validação
+- Reutilização controlada de modelos em arquiteturas padronizadas
 
 ---
 
 ## 2. 🧪 Prescrição prática: o quê, quem, como, quando, porquê e para quê
 
-### 🔐 Threat Modeling é a ponte entre risco, arquitetura e controlo aplicado
+### 🔐 Threat Modeling como elo entre risco, arquitetura e controlo
 
-> *"Sem Threat Modeling, o controlo aplicado perde contexto e os requisitos não têm origem validada."*
+> *Sem Threat Modeling, os requisitos de segurança perdem contexto  
+> e os controlos aplicados deixam de ter origem justificada.*
 
 ### 📌 O que deve ser feito
 
-- Realizar sessões de threat modeling com base no risco da aplicação
-- Mapear ameaças usando modelos como STRIDE, LINDDUN ou PASTA
-- Criar diagramas de fluxo de dados (DFDs) com trust boundaries
-- Associar cada ameaça a um controlo e plano de mitigação
-- Documentar decisões, ações futuras e justificar riscos aceites
-- Assegurar que o modelo se baseia em artefactos de arquitetura definidos (ver Capítulo 4)
-- Validar modelos de ameaça como parte da revisão de arquitetura formal
-- Integrar threat modeling com ferramentas automatizadas quando disponível
-- Garantir rastreabilidade entre ameaça identificada, requisito gerado e controlo aplicado
+- Realizar threat modeling com base no **nível de risco da aplicação**
+- Modelar fluxos de dados e limites de confiança com base em artefactos de arquitetura
+- Identificar ameaças relevantes usando modelos reconhecidos
+- Associar cada ameaça a:
+  - um ou mais requisitos de mitigação,
+  - controlos técnicos ou organizacionais,
+  - e critérios de validação
+- Documentar decisões, riscos aceites e ações futuras
+- Validar o modelo de ameaças como parte da revisão de arquitetura
 
 ### ⚙️ Como deve ser feito
 
-- Usar ferramentas como OWASP Threat Dragon, TMT, draw.io, ou IriusRisk
-- Integrar em rituais ágeis, refinamento ou revisão de arquitetura
-- Documentar e versionar os modelos
-- Gerar cartões no backlog por mitigação necessária
-- Considerar ameaças reais catalogadas (ex: OSC&R, CWE, OWASP Top 10)
-- Alinhar requisitos derivados das ameaças com o Catálogo de Requisitos (Cap. 2)
+- Utilizar diagramas claros e versionados (DFDs, context diagrams)
+- Aplicar metodologias como STRIDE, LINDDUN ou PASTA de forma proporcional
+- Integrar o exercício em rituais existentes (design review, refinamento técnico)
+- Criar itens rastreáveis no backlog para cada mitigação relevante
+- Alinhar requisitos derivados com o Catálogo de Requisitos (Cap. 2)
+- Reutilizar modelos apenas quando a arquitetura e o contexto forem equivalentes
+
+> Ferramentas especializadas podem **suportar** o processo,  
+> mas **não substituem a análise humana nem a validação técnica**.
 
 ### 📆 Quando aplicar
 
-- No início de um projeto ou épico
-- Antes de alterações significativas (ex: exposições, integrações)
-- Sempre que a análise de risco (ver Cap. 1) classificar a aplicação como L2 ou superior
+- No início de projetos ou épicos relevantes
+- Antes de integrações externas, exposições ou mudanças arquiteturais
+- Sempre que a aplicação seja classificada como **L2 ou L3**
+- Sempre que ocorram alterações que possam modificar o perfil de ameaça
 
 ### 👥 Quem está envolvido
 
-| Papel/Função             | Responsabilidades principais                                           |
-|--------------------------|------------------------------------------------------------------------|
-| DevSecOps / Arquitetura | Facilitar a sessão, manter documentação atualizada                   |
-| Equipa de Desenvolvimento| Identificar fluxos, pontos de entrada, lógica de negócio              |
-| Segurança / AppSec       | Ajudar a identificar ameaças relevantes e técnicas de ataque          |
-| Product Owner / Negócio  | Validar cenários de impacto, prioridades de mitigação                 |
+| Papel/Função              | Responsabilidades principais                                   |
+|---------------------------|----------------------------------------------------------------|
+| Arquitetura / DevSecOps   | Facilitar o processo e manter os modelos atualizados           |
+| Equipa de Desenvolvimento | Explicar fluxos, lógica e superfícies de ataque                |
+| Segurança / AppSec        | Identificar ameaças, vetores e técnicas de ataque relevantes   |
+| Product Owner / Negócio   | Validar impacto, prioridade e aceitabilidade do risco          |
 
 ---
 
-## 3. ⚠️ Caveats ou limitações da prescrição
+## 3. ⚠️ Caveats e limitações
 
-- Sessões mal facilitadas podem ser vagas ou não acionáveis
-- Documentação dispersa pode dificultar reutilização
-- Nem todas as equipas dominam diagramas e análise de ameaças
-- Ferramentas automatizadas ainda são limitadas em ambientes complexos
-
----
-
-## 5. 💡 Exemplos de aplicação
-
-- Ver [exemplo de aplicação de requisitos por nivel](exemplos-aplicacao-stride)
-- Ver [exemplo de aplicação de privacidade](exemplo-privacidade-lindunn)
-- Ver [exemplo uso de ferramentas, e.g., IriusRisk](/sbd-toe/sbd-manual/threat-modeling/addon/integracao-iriusrisk)
+- Modelos demasiado abstratos tornam-se inúteis
+- Documentação não versionada perde valor operacional
+- Ferramentas automatizadas não capturam contexto de negócio
+- A ausência de ligação a requisitos e backlog anula o valor do exercício
 
 ---
 
-## 6. 🔍 O que pode ser feito mais (e porquê)
+## 4. 💡 Exemplos e reutilização
 
-- Criar uma biblioteca interna de ameaças por tipo de aplicação
-- Automatizar sugestões de ameaça com base em diagramas
-- Incluir campos de ameaça e controlo nos cartões do backlog
-- Formar facilitadores técnicos em threat modeling leve e iterativo
+- Exemplos de aplicação de STRIDE por tipo de arquitetura
+- Exemplos de threat modeling focado em privacidade (LINDDUN)
+- Exemplos de integração com ferramentas de suporte (ex.: IriusRisk)
+
+---
+
+## 5. 🔍 O que pode ser feito mais (e porquê)
+
+- Criar bibliotecas internas de ameaças reutilizáveis por tipo de sistema
+- Integrar o threat modeling com pipelines de validação e gates de arquitetura
+- Usar o histórico de incidentes e findings para enriquecer os modelos
+- Formar facilitadores técnicos para sessões iterativas e leves
 
 ---
 
 ## 🧩 Ligações a outros capítulos
 
-| Capítulo relacionado         | Relação técnica e de processo                                 |
-|------------------------------|----------------------------------------------------------------|
-| `01-gestao-risco`            | Determina quando o threat modeling é obrigatório (L2 ou L3)    |
-| `02-requisitos-seguranca`   | Requisitos derivados do modelo de ameaça                      |
-| `04-arquitetura-segura`     | Fonte primária de artefactos usados no threat modeling        |
-| `06-desenvolvimento-seguro` | Integração de requisitos de segurança na implementação         |
-| `07-cicd-seguro`            | Validação e rastreabilidade dos modelos via CI/CD             |
-| `10-testes-seguranca`       | Cobertura de requisitos derivados de ameaças                  |
+| Capítulo | Relação técnica |
+|---------|-----------------|
+| Cap. 1 – Gestão de Risco | Determina quando o threat modeling é obrigatório |
+| Cap. 2 – Requisitos de Segurança | Recebe requisitos derivados das ameaças |
+| Cap. 4 – Arquitetura Segura | Fonte primária dos artefactos modelados |
+| Cap. 7 – CI/CD Seguro | Suporta rastreabilidade e validação |
+| Cap. 10 – Testes de Segurança | Valida requisitos derivados |
 
 ---
 
-> 📌 Este capítulo é obrigatório para qualquer aplicação com criticidade **L2 ou L3**.  
-> Ignorar o threat modeling anula a capacidade de rastrear riscos reais e mitigar ameaças com base na arquitetura e nos fluxos da aplicação.  
-> É o capítulo que **liga risco, arquitetura e requisitos**, sendo condição fundamental para a maturidade do modelo SbD-ToE.
+> 📌 Este capítulo é **obrigatório** para aplicações **L2 e L3**.  
+> É o mecanismo que garante que os requisitos de segurança **respondem a ameaças reais**,  
+> e que a arquitetura é avaliada **antes** de ser explorada em produção.

@@ -259,7 +259,7 @@ SbD-ToE Manual
 4. **Cap. 04 — Arquitetura**
    - Padrões: separação modelo/contexto/decisão/ação
    - Policy Enforcement Points (PEPs)
-   - Agentes com escopo limitado
+   - Agentes com âmbito limitado
 
 5. **Cap. 05 — Supply Chain**
    - AI-BOM: modelos, datasets, prompts, embeddings

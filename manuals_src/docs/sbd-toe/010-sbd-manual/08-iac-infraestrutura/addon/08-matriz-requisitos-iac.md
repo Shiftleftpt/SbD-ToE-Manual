@@ -1,70 +1,75 @@
 ---
+
 id: matriz-requisitos-iac
 title: Matriz de Requisitos Técnicos para Infraestrutura como Código
 sidebar_position: 8
-description: Mapeamento detalhado dos requisitos IAC-001 a IAC-010 com orientações práticas para validação e aplicação.
-tags: [matriz, requisitos, iac, validação, controlo, auditoria]
----
+description: Mapeamento detalhado dos requisitos IAC-001 a IAC-013 com orientação prática para validação, evidência e aplicação proporcional ao risco.
+tags: [matriz, requisitos, iac, validacao, controlo, auditoria]
+---------------------------------------------------------------
 
-# 📘️ Matriz de Requisitos Técnicos para Projetos IaC
+# 📘 Matriz de Requisitos Técnicos para Projetos IaC
 
-Este catálogo define requisitos de segurança **específicos para projetos de Infraestrutura como Código (IaC)**, que complementam os requisitos aplicacionais definidos no Capítulo 02.
+Este catálogo define **requisitos de segurança específicos para projetos de Infraestrutura como Código (IaC)**, complementando os requisitos aplicacionais definidos no **Capítulo 02 — Requisitos de Segurança**.
 
-Estes requisitos são aplicáveis diretamente ao **código, estrutura e práticas dos próprios projetos IaC**, e incluem aspetos tanto **aplicacionais** (ex: versionamento, validação) como **infraestruturais** (ex: controlo de estado, segregação de ambientes, enforcement de políticas).
+Os requisitos aqui descritos aplicam-se **ao próprio projeto IaC como produto de software**, incluindo:
+
+* código e estrutura do repositório;
+* pipelines CI/CD associados;
+* módulos, templates e dependências;
+* mecanismos de controlo, validação e enforcement.
+
+Esta matriz é **normativa**: cada requisito deve poder ser **validado objetivamente** e gerar **evidência auditável**.
 
 ---
 
 ## 📊 Requisitos por nível de risco
 
-| ID      | Requisito                                                                                               | L1 | L2 | L3 | Cap. 2? | Referências                         | Justificação                                                                     |
-| ------- | ------------------------------------------------------------------------------------------------------- | -- | -- | -- | ------- | ----------------------------------- | -------------------------------------------------------------------------------- |
-| IAC-001 | O projeto IaC deve usar backend remoto autenticado com locking ativado para controlo de estado          |    | X  | X  | -       | SSDF PW\.5, Terraform Docs          | Evita concorrência e drift em ambientes críticos                                 |
-| IAC-002 | Ambientes (dev, QA, prod) devem ser definidos de forma segregada e versionada                           | X  | X  | X  | REQ-004 | CIS 4.5, SSDF PM.2                  | Impede alterações acidentais e permite revisão por ambiente                      |
-| IAC-003 | Todas as alterações devem ser sujeitas a validações automáticas (syntax, lint, policy, segurança)       | X  | X  | X  | REQ-005 | SSDF PS.2, SLSA Build L2            | Reforça integridade e conformidade contínua                                      |
-| IAC-004 | Módulos reutilizados devem ter origem confiável (repositório interno, hash ou verificação manual)       |    | X  | X  | -       | SLSA Source L2, Terraform           | Protege contra código externo malicioso ou obsoleto                              |
-| IAC-005 | O histórico de alterações deve ser completo, com tagging e releases rastreáveis                         | X  | X  | X  | REQ-002 | GitOps, SSDF CM.1                   | Suporta rollback e auditoria                                                     |
-| IAC-006 | Devem existir convenções formais de nomeação, tagging e estrutura de diretórios                         |    | X  | X  | -       | Terraform Best Practices            | Facilita automação, rastreabilidade e revisão                                    |
-| IAC-007 | O plano (`terraform plan` ou equivalente) deve ser rastreado e aprovado antes do `apply`                |    | X  | X  | -       | SSDF PW\.6                          | Garante controlo de alterações aplicadas                                         |
-| IAC-008 | O projeto IaC deve ter rastreabilidade entre ficheiros e os ambientes/recursos que afetam               |    | X  | X  | -       | SSDF CM.5                           | Permite accountability e avaliação de impacto                                    |
-| IAC-009 | Devem existir políticas de enforcement aplicadas automaticamente (ex: OPA, Sentinel, Rego, Conftest)    |    |    | X  | -       | SSDF PW\.5, SLSA L3                 | Reduz risco de erro humano e aplica controlo em pipelines                        |
-| IAC-010 | Os artefactos gerados (ex: `plan`, `apply`, manifests) devem ser armazenados com versionamento e hash   |    | X  | X  | -       | SLSA Provenance, SSDF PW\.4         | Garante integridade e auditoria de mudanças em tempo                             |
-| IAC-011 | O projeto IaC não deve conter segredos hardcoded e deve integrar mecanismo seguro de gestão de segredos | X  | X  | X  | REQ-008 | SSDF PW\.6, Terraform Sec. Guide    | Protege contra exfiltração acidental e rastreia origem e uso de credenciais      |
-| IAC-012 | Deve existir mecanismo automatizado de deteção de drift entre infraestrutura real e definição em código |    | X  | X  | -       | Terraform plan, Driftctl, SSDF CM.5 | Garante que estado real reflete intenção e permite auditoria contínua            |
-| IAC-013 | Os templates e módulos IaC devem ser alvo de revisão formal e periódica por equipa AppSec ou DevSecOps  |    |    | X  | -       | SAMM AA2.2,  SR2.2             | A revisão periódica reduz risco de propagação de práticas obsoletas ou inseguras |
+| ID      | Requisito                                                              |  L1 |  L2 |  L3 | Rel. Cap. 2 | Referências                | Justificação                                         |
+| ------- | ---------------------------------------------------------------------- | :-: | :-: | :-: | :---------: | -------------------------- | ---------------------------------------------------- |
+| IAC-001 | Backend remoto autenticado com *locking* ativo para controlo de estado |     |  ✓  |  ✓  |      –      | SSDF PW.5, Terraform Docs  | Evita concorrência, corrupção de estado e *drift*    |
+| IAC-002 | Ambientes (`dev`, `staging`, `prod`) segregados e versionados          |  ✓  |  ✓  |  ✓  |   REQ-004   | CIS 4.5, SSDF PM.2         | Reduz impacto de erro e permite revisão por ambiente |
+| IAC-003 | Validações automáticas obrigatórias (syntax, lint, segurança, policy)  |  ✓  |  ✓  |  ✓  |   REQ-005   | SSDF PS.2, SLSA Build L2   | Garante integridade e bloqueia erro precoce          |
+| IAC-004 | Módulos reutilizados com origem confiável e versão imutável            |     |  ✓  |  ✓  |      –      | SLSA Source L2             | Mitiga risco de *supply chain*                       |
+| IAC-005 | Histórico completo com versionamento, *tags* e *releases*              |  ✓  |  ✓  |  ✓  |   REQ-002   | GitOps, SSDF CM.1          | Suporta rollback e auditoria                         |
+| IAC-006 | Convenções formais de naming, tagging e layout de diretórios           |     |  ✓  |  ✓  |      –      | Terraform Best Practices   | Facilita automação e revisão                         |
+| IAC-007 | *Plan* rastreável e aprovado antes de qualquer *apply*                 |     |  ✓  |  ✓  |      –      | SSDF PW.6                  | Garante controlo explícito de mudanças               |
+| IAC-008 | Rastreabilidade ficheiro → recurso → ambiente                          |     |  ✓  |  ✓  |      –      | SSDF CM.5                  | Permite avaliação de impacto e accountability        |
+| IAC-009 | Enforcement automático de políticas em pipeline                        |     |     |  ✓  |      –      | SSDF PW.5, SLSA L3         | Reduz dependência de revisão manual                  |
+| IAC-010 | Artefactos (`plan`, `apply`, manifests) versionados e com hash         |     |  ✓  |  ✓  |      –      | SLSA Provenance, SSDF PW.4 | Garante integridade e evidência                      |
+| IAC-011 | Gestão segura de segredos (sem *hardcoding*)                           |  ✓  |  ✓  |  ✓  |   REQ-008   | SSDF PW.6                  | Previne exfiltração e abuso de credenciais           |
+| IAC-012 | Deteção automatizada de *drift* entre IaC e estado real                |     |  ✓  |  ✓  |      –      | SSDF CM.5                  | Mantém coerência entre intenção e realidade          |
+| IAC-013 | Revisão periódica formal de módulos e templates IaC                    |     |     |  ✓  |      –      | SAMM AA2.2, SR2.2          | Evita propagação de práticas obsoletas               |
 
 ---
 
 ## 📌 Notas explicativas
 
-* **IAC-001**: aplica-se a projetos com múltiplos colaboradores e ambientes partilhados.
-* **IAC-004**: módulos não verificados podem conter configurações perigosas ou vulnerabilidades.
-* **IAC-007**: permite validar *o que será alterado* antes da execução e associar a change request.
-* **IAC-009**: enforcement automatizado evita drift organizacional e violações de política.
-* **IAC-010**: necessário para rastrear o impacto real do IaC aplicado em ambientes produtivos.
-* **IAC-011**: promove boas práticas de separação entre código e segredos sensíveis.
-* **IAC-012**: assegura integridade e deteção precoce de alterações fora do pipeline.
-* **IAC-013**: fomenta ciclos de revisão técnica contínua com base em risco e criticidade.
+* **IAC-001** aplica-se sempre que exista colaboração, *pipelines partilhados* ou múltiplos ambientes.
+* **IAC-004** considera qualquer dependência externa como **código não confiável por origem** até validação.
+* **IAC-007** materializa o princípio de *change control* técnico em IaC.
+* **IAC-009** é requisito estrutural para ambientes de risco elevado (L3).
+* **IAC-012** trata *drift* como falha de segurança, não exceção operacional.
 
 ---
 
 ## 🧾 Exemplos de evidência
 
-| Requisito | Evidência sugerida                                                               |
-| --------- | -------------------------------------------------------------------------------- |
-| IAC-001   | Configuração de backend remoto (`backend.tf`) com locking ativado                |
-| IAC-003   | Log de execução de linter + scanner (ex: TFLint, tfsec, Checkov)                 |
-| IAC-005   | Histórico Git com tags, releases e convenções de commits                         |
-| IAC-007   | Aprovação manual ou automática do `plan` via Pull Request com diff visível       |
-| IAC-009   | Política OPA/Rego em CI/CD + resultados visíveis e bloqueio se não conforme      |
-| IAC-011   | Ausência de segredos no código + integração com Vault/KMS/GitHub Actions Secrets |
-| IAC-012   | Relatórios de drift (`terraform plan`, `driftctl`, alarmes de divergência)       |
-| IAC-013   | Ata de revisão, calendarização no backlog, ou comentários de segurança nos PRs   |
+| Requisito | Evidência objetiva                               |
+| --------- | ------------------------------------------------ |
+| IAC-001   | `backend.tf` com *locking* + logs de lock        |
+| IAC-003   | Logs de CI com lint, scanners e policies         |
+| IAC-005   | Histórico Git com *tags* e *releases*            |
+| IAC-007   | PR com *plan* anexado e aprovações               |
+| IAC-009   | Regras OPA/Rego + logs de bloqueio               |
+| IAC-011   | Integração Vault/KMS/OIDC sem segredos em código |
+| IAC-012   | Relatórios periódicos de *drift*                 |
+| IAC-013   | Registos de revisão AppSec/DevSecOps             |
 
 ---
 
-## 🔗 Relacionado com outros capítulos
+## 🔗 Relação com outros capítulos
 
-* [Capítulo 02 - Requisitos de Segurança (REQ-XXX)](/sbd-toe/sbd-manual/requisitos-seguranca)
-* [Capítulo 06 - Desenvolvimento Seguro](/sbd-toe/sbd-manual/desenvolvimento-seguro)
-* [Capítulo 07 - CI/CD Seguro](/sbd-toe/sbd-manual/cicd-seguro)
-* [Capítulo 11 - Deploy e Controlo de Execução](/sbd-toe/sbd-manual/deploy-seguro)
+* Cap. 02 — Requisitos de Segurança (REQ-XXX)
+* Cap. 06 — Desenvolvimento Seguro
+* Cap. 07 — CI/CD Seguro
+* Cap. 11 — Deploy e Controlo de Execução

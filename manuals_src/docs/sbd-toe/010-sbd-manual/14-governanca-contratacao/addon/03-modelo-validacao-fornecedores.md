@@ -92,6 +92,8 @@ flowchart TD
 
 > Pode ser integrado em Forms, Excel, Confluence ou sistemas de procurement.
 
+Quando parte do processo de validação é suportado por mecanismos automatizados, deve ser possível identificar claramente quais os passos executados dessa forma, bem como o momento e o responsável pela decisão final de validação.
+
 ---
 
 ## ✅ Boas práticas

@@ -1,100 +1,146 @@
 ---
 id: hardening-containers
-title: Hardening e Restrições de Execução em *containers*
-description: Minimização, reforço e controlo de permissões em imagens e ambientes containerizados
-tags: [containers, hardening, permissões, runtime, isolamento, segurança]
+title: Hardening e Restrições de Execução em Containers
+description: Minimização, reforço e verificação efetiva de permissões em imagens e ambientes containerizados
+tags: [containers, hardening, permissoes, runtime, isolamento, seguranca]
 ---
 
-# 🛡️ Hardening e Restrições de Execução em *containers*
+# 🛡️ Hardening e Restrições de Execução em Containers
 
 ## 🌟 Objetivo
 
-Reforçar a segurança da execução em *containers* através da **redução da superfície de ataque**, **eliminação de componentes desnecessários** e **restrição explícita de permissões de runtime**. O objetivo é que cada *container* execute **apenas o necessário, com o mínimo de privilégios possível**.
+Reforçar a segurança da execução em containers através da **redução da superfície de ataque**, **eliminação de componentes desnecessários** e **restrição explícita de permissões em runtime**, garantindo que cada container executa **apenas o necessário, com o mínimo de privilégios possível**.
 
-Estas medidas complementam a escolha de imagens seguras e a verificação da sua origem, sendo essenciais para evitar escaladas de privilégio, execução de binários maliciosos ou exploração de vulnerabilidades em tempo de execução.
+No SSDLC moderno, o hardening **não pode ser tratado como intenção declarada**.  
+É necessário assegurar que as restrições definidas **são efetivamente aplicadas e verificáveis** no momento da execução.
+
+Estas medidas complementam a escolha de imagens seguras e a validação da sua proveniência, reduzindo o impacto de vulnerabilidades exploráveis, erros de configuração e abusos em runtime.
 
 ---
 
-## 🧬 O que significa fazer hardening de *containers*
+## 🧬 O que significa fazer hardening de containers
 
-**Hardening de *containers*** implica aplicar medidas que:
+**Hardening de containers** consiste na aplicação sistemática de medidas que:
 
-- **Eliminam binários e pacotes desnecessários** (ex: `curl`, `bash`, `ping`);
-- **Proíbem execução como `root`** (default insecure);
-- **Limitam capacidades do kernel (`capabilities`)** expostas ao *container*;
-- **Ativam controlo de namespaces, cgroups e seccomp/apparmor**;
-- **Aplicam diretivas de imutabilidade** ao sistema de ficheiros;
-- **Desativam interfaces perigosas** como `/proc`, `/sys`, Docker socket.
+- **Eliminam binários e pacotes desnecessários** (ex.: `curl`, `bash`, `ping`);
+- **Impedem execução como `root`**;
+- **Restringem capacidades do kernel (`capabilities`)** ao estritamente necessário;
+- **Limitam syscalls e interações com o host** (seccomp, AppArmor, SELinux);
+- **Aplicam imutabilidade ao sistema de ficheiros**;
+- **Bloqueiam interfaces perigosas** como `/proc`, `/sys` ou o Docker socket.
 
-> 🧱 Um *container* seguro **não é apenas uma imagem segura** - o contexto de execução é igualmente crítico.
+> 🧱 Um container só pode ser considerado hardened se **o estado efetivo em runtime** corresponder ao que foi definido no build e nos manifests.
+
+---
+
+## ⚠️ Hardening configurado ≠ hardening efetivo
+
+Um dos erros mais comuns em ambientes automatizados é assumir que:
+
+- um `Dockerfile` bem escrito,
+- um `securityContext` definido,
+- ou uma policy aplicada,
+
+garantem automaticamente um runtime seguro.
+
+Na prática, existem três estados distintos:
+
+1. **Hardening declarado**  
+   O que está definido em código ou configuração.
+2. **Hardening aplicado**  
+   O que a plataforma efetivamente tenta aplicar.
+3. **Hardening efetivo**  
+   O que pode ser empiricamente observado no container em execução.
+
+Este capítulo trata explicitamente o hardening como um **estado verificável**, não como uma propriedade assumida.
 
 ---
 
 ## 📘 Exemplos de práticas de hardening
 
-| Prática                           | Técnica ou ferramenta                          | Notas                          |
-|----------------------------------|------------------------------------------------|--------------------------------|
-| Utilizador não-root              | `USER nobody` no Dockerfile                    | Obrigatório para ambientes L2+|
-| Sistema de ficheiros read-only  | `readOnlyRootFilesystem: true` (K8s)           | Evita escrita não controlada   |
-| Capabilities mínimas             | `drop: ALL` + adicionar só o necessário        | Evita acesso a funções perigosas |
-| Seccomp                          | Perfil `runtime/default` ou personalizado      | Bloqueia syscalls perigosas    |
-| AppArmor / SELinux               | Perfis reforçados (`docker-default`, etc.)     | Requer suporte no host         |
-| Desativar montagem privilegiada | `--privileged=false`, `no /var/run/docker.sock`| Protege host e outros containers|
+| Prática                          | Técnica / Mecanismo                          | Observações operacionais                         |
+|---------------------------------|-----------------------------------------------|--------------------------------------------------|
+| Utilizador não-root             | `USER` no Dockerfile                          | Deve ser validado em runtime                     |
+| FS read-only                    | `readOnlyRootFilesystem: true` (K8s)          | Requer verificação de mounts                     |
+| Capabilities mínimas            | `drop: ALL` + add explícito                   | Evitar defaults permissivos                      |
+| Seccomp                         | Perfil `runtime/default` ou custom            | Confirmar perfil ativo                           |
+| AppArmor / SELinux              | Perfis restritivos                            | Depende do suporte do host                       |
+| Execução não privilegiada       | Sem `--privileged`, sem Docker socket         | Deve ser bloqueado por política                  |
 
 ---
 
-## 🛠️ Como aplicar no build e runtime
+## 🛠️ Como aplicar e verificar no build e runtime
 
-1. **No Dockerfile**:
-   - Usar `USER` para definir utilizador sem privilégios;
-   - Evitar `apt install`, `curl`, `bash`, etc.;
-   - Definir `CMD` ou `ENTRYPOINT` mínimos e claros;
-   - Adicionar `HEALTHCHECK` e `LABELS` com metadados de segurança.
+### 1️⃣ No build (imagem)
 
-2. **No Kubernetes / CI/CD**:
-   - Aplicar `securityContext` com:
-     - `runAsNonRoot: true`
-     - `readOnlyRootFilesystem: true`
-     - `allowPrivilegeEscalation: false`
-     - `capabilities: { drop: ["ALL"] }`
-   - Utilizar PodSecurity Standards ou Kyverno para enforcement;
-   - Validar políticas de runtime com OPA (ver `05-policies-runtime-opa.md`).
+- Definir utilizador não-root (`USER`);
+- Evitar instalação de ferramentas interativas;
+- Minimizar `ENTRYPOINT` e `CMD`;
+- Adicionar labels de segurança e contexto;
+- Validar Dockerfile com linters (ex.: Hadolint).
 
-3. **Na pipeline**:
-   - Validar Dockerfile com linters (ex: Hadolint);
-   - Integrar scanners de permissões e configuração (ex: Kubeaudit);
-   - Bloquear deploys de imagens com binários suspeitos (ex: shells interativos).
+> O build **define intenções**, não garante aplicação.
 
 ---
 
-## 📂 Onde configurar e aplicar enforcement
+### 2️⃣ No deploy (orquestração / CI/CD)
 
-- **Dockerfile**: baseline de segurança aplicável a qualquer ambiente;
-- **Templates de deployment (Helm, YAML)**: definições de `securityContext`, `PodSecurityPolicy`, etc.;
-- **CI/CD**: validadores automáticos que rejeitam configurações inseguras;
-- **Kubernetes Admission Controllers**: enforcement centralizado (OPA, Kyverno, PSP/PSA).
+- Definir `securityContext` explícito:
+  - `runAsNonRoot: true`
+  - `readOnlyRootFilesystem: true`
+  - `allowPrivilegeEscalation: false`
+  - `capabilities: drop: ["ALL"]`
+- Aplicar Pod Security Standards / PSA;
+- Enforce por OPA ou Kyverno (ver `05-policies-runtime-opa.md`).
+
+> O enforcement técnico **bloqueia configurações inseguras**, mas não valida o estado real.
+
+---
+
+### 3️⃣ Em runtime (verificação efetiva)
+
+- Verificar utilizador efetivo (`id`, `/proc/self/status`);
+- Validar mounts e permissões;
+- Confirmar perfil seccomp/AppArmor ativo;
+- Detetar desvios (*drift*) face à configuração esperada;
+- Registar resultados para auditoria.
+
+Sem esta verificação, o hardening é apenas **assumido**, não demonstrado.
+
+---
+
+## 📂 Onde configurar e controlar
+
+- **Dockerfile**: baseline mínima e reproduzível;
+- **Manifests / Helm charts**: definição declarativa de restrições;
+- **CI/CD**: validação automática de configurações inseguras;
+- **Admission Controllers**: enforcement centralizado;
+- **Monitorização runtime**: confirmação empírica do estado.
+
+Cada camada reduz a probabilidade de erro, mas **nenhuma é suficiente isoladamente**.
 
 ---
 
 ## ✅ Boas práticas
 
-- Criar catálogo de permissões mínimas por tipo de aplicação;
-- Proibir por política o uso de `root` ou *containers* privilegiados;
-- Isolar volumes e montar como `readOnly` sempre que possível;
-- Validar imagens em build quanto a comandos como `ADD`, `RUN` inseguros;
-- Utilizar perfis de seccomp reforçados, ajustados ao runtime real;
-- Automatizar a verificação contínua de segurança do ambiente de execução.
+- Definir perfis de hardening por tipo de workload;
+- Proibir por política containers privilegiados;
+- Validar hardening após deploy, não apenas antes;
+- Tratar exceções como decisões formais e temporárias;
+- Rever hardening após alterações de plataforma ou kernel;
+- Integrar verificação contínua de runtime em ambientes críticos.
 
 ---
 
 ## 📎 Referências cruzadas
 
-| Documento                      | Relação com hardening                          |
-|-------------------------------|------------------------------------------------|
-| `01-imagens-base.md`             | Imagens devem ser minimizadas e não incluir ferramentas desnecessárias |
-| `02-runners-isolamento.md`      | Ambientes de execução devem reforçar estas restrições |
-| `05-policies-runtime-opa.md`    | Pode forçar aplicação de perfis e restrições  |
-| `08-kubernetes-execucao.md`     | Exemplos de aplicação prática em K8s          |
-| `achievable-maturity`              | Aplicação de hardening é critério de maturidade intermédia a elevada |
+| Documento                         | Relação com hardening                          |
+|----------------------------------|------------------------------------------------|
+| `01-imagens-base.md`             | Minimização de superfície na imagem            |
+| `02-runners-isolamento.md`       | Isolamento do ambiente de execução             |
+| `05-policies-runtime-opa.md`     | Enforcement técnico de restrições              |
+| `08-kubernetes-execucao.md`      | Aplicação prática em clusters                  |
+| `09-riscos-processo-imagens.md`  | Diferença entre intenção e estado efetivo      |
 
-> 🔐 O runtime é um ponto de entrada tão crítico quanto o código. A ausência de hardening expõe *containers* a ataques triviais e escaladas de privilégio evitáveis.
+> 🔐 Hardening só existe quando pode ser **observado, reproduzido e auditado**.  
+> Configuração sem verificação é apenas suposição.

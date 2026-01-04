@@ -14,6 +14,10 @@ Reforçar a aprendizagem prática em segurança através de **métodos formativo
 
 Estas técnicas são especialmente úteis em organizações com equipas distribuídas ou com maturidade crescente, onde a formação tradicional não é suficiente.
 
+As técnicas formativas descritas visam reforçar a compreensão e a capacidade crítica das pessoas,
+complementando — e não substituindo — os mecanismos automatizados existentes.
+
+
 ---
 
 ## 🧬 O que são técnicas formativas avançadas

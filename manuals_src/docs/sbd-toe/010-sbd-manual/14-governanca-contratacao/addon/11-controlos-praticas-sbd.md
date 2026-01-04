@@ -39,6 +39,8 @@ Cada aplicação deve ter um **repositório de conformidade**, com:
 - Estado de aplicação por prática (sim / exceção / não se aplica)
 - Evidência de validação e aprovação
 - Histórico de alterações e decisões
+- Identificação do responsável pela aceitação do estado de cada prática, quando suportada por validações automatizadas.
+
 
 > ⚠️ Devem existir ficheiros rastreáveis e versionados (ex: `.yaml`, `.md`, dashboards GRC).
 

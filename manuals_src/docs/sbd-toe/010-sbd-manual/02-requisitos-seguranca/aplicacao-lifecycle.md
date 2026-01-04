@@ -575,41 +575,53 @@ Como **Gestão Executiva/CISO** e **GRC/Compliance**, quero publicar a política
 
 ---
 
-### US-CTX-01 — Processo fortemente automatizado: reforço de evidência e revisão (caso de uso adicional)
+### US-14 – Uso controlado de assistentes automatizados (incluindo IA) no desenvolvimento
 
 **Contexto.**  
-Em processos com elevado grau de automação, geração de artefactos ou forte dependência de terceiros, o risco de perda de rastreabilidade e validação insuficiente aumenta, mesmo sem alteração do risco intrínseco da aplicação.
+O uso de assistentes automatizados e ferramentas baseadas em IA pode acelerar o desenvolvimento, mas **não altera nem substitui** os requisitos de segurança aplicacionais. Todo o output gerado deve ser tratado como código de terceiros e sujeito a governação, validação e rastreabilidade explícitas.
 
 :::userstory
 **História.**  
-Como **Tech Lead/AppSec/QA**, quero reforçar a exigência de evidência, validação independente e revisão em pontos críticos quando o processo é fortemente automatizado, para garantir que decisões de segurança continuam rastreáveis e auditáveis.
+Como **Developer**, **Tech Lead** e **AppSec Engineer**, quero garantir que qualquer código, configuração ou teste gerado com recurso a assistentes automatizados (incluindo IA) é explicitamente revisto, validado e rastreável, para assegurar que o cumprimento dos requisitos de segurança é verificável e que a responsabilidade permanece humana.
 
 **Critérios de aceitação (BDD).**
-- **Dado** que o projeto utiliza um processo com elevado grau de automação
-  **Quando** são definidos requisitos e validações no backlog e pipeline
-  **Então** existem checkpoints explícitos de revisão/aceitação, evidência anexada por requisito e controlo reforçado de exceções
+- **Dado** que é utilizado um assistente automatizado para gerar código, configuração ou testes  
+  **Quando** o output é integrado no repositório  
+  **Então** o artefacto é sujeito a revisão humana, validação automática em CI/CD e ligado a requisitos `REQ-XXX` aplicáveis
 
-**Checklist.**
-- [ ] Existe responsável explícito por aceitação de requisitos e exceções
-- [ ] Evidência verificável ligada a cada requisito relevante (`SEC-Lx-*` / `REQ-XXX`)
-- [ ] Validação é independente do mecanismo de produção do artefacto
-- [ ] Checkpoints de revisão definidos (ex.: design review, release approval)
-- [ ] Exceções com TTL e revalidação não podem ser “permanentes por limitações de ferramenta”
+**Critérios de aceitação (DoD).**
+- [ ] Código/configuração gerada identificada no PR/MR (nota ou template de PR)
+- [ ] Revisão humana efetuada e aprovada (code review formal)
+- [ ] Gates de segurança em CI/CD executados (SAST, SCA e outros aplicáveis)
+- [ ] Requisitos `REQ-XXX` e tags `SEC-Lx-*` referenciados no PR/MR
+- [ ] Evidência de validação arquivada (logs de pipeline, relatórios, approvals)
+- [ ] Nenhum segredo, credencial ou dado sensível incluído em prompts ou artefactos gerados
 
 :::
 
 **Artefactos & evidências.**
-- Checklists de revisão; logs e relatórios de pipeline; registo de decisões; registo de exceções com TTL
+- PR/MR com referência a `REQ-XXX` e tags `SEC-Lx-*`
+- Logs de CI/CD (SAST, SCA, testes)
+- Aprovação de code review
+- Relatório de gates de segurança
 
 **Proporcionalidade por risco.**
-- L1: recomenda-se pelo menos um checkpoint e evidência mínima dos requisitos críticos  
-- L2: checkpoints e evidência obrigatórios; exceções formalizadas  
-- L3: checkpoints reforçados + validação independente e gates rigorosos
+| Nível | Obrigatório? | Ajustes |
+|---|---|---|
+| L1 | Recomendado | Revisão humana e SAST básico |
+| L2 | Sim | Revisão + SAST/SCA obrigatórios |
+| L3 | Sim | Revisão + SAST/SCA + validações reforçadas e AppSec review |
 
 **Integração no SDLC.**
 | Fase | Trigger | Responsável | SLA |
 |---|---|---|---|
-| Transversal | Identificação do contexto automatizado | Tech Lead + AppSec + QA | No kick-off e reavaliado por release |
+| PR/MR | Introdução de código/configuração gerada | Developer + Tech Lead | Antes do merge |
+| Release | Gate final de segurança | AppSec | Antes do go-live |
+
+**Ligações úteis.**
+- 🔗 [Governação do uso de automatismos](./addon/governanca-automatismos)
+- 🔗 [Gates automáticos em CI/CD](/sbd-toe/sbd-manual/cicd-seguro/addon/gates-seguranca)
+- 🔗 [Validação de requisitos](./addon/validacao-requisitos)
 
 ---
 

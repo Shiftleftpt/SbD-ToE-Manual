@@ -105,7 +105,7 @@ Domínio **Operations**:
 
 Este capítulo complementa:
 
-- **Capítulo 01** - classificação de risco determina escopo de monitorização;
+- **Capítulo 01** - classificação de risco determina âmbito de monitorização;
 - **Capítulo 02 / 03** - requisitos e ameaças que devem ser detetáveis via logging;
 - **Capítulo 07** - geração de logs e rastreabilidade nos pipelines CI/CD;
 - **Capítulo 09** - observabilidade e execução segura em ambientes containerizados;

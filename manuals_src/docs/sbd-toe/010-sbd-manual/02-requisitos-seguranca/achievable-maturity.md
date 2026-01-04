@@ -47,7 +47,7 @@ As avaliações aqui descritas foram realizadas com base numa leitura técnico-c
 |-------|----------------------------------------------------------------------------------|----------------------------------------------|
 | 1     | Definir requisitos de segurança mínimos                                         | ✅ Catálogo estruturado por domínio          |
 | 2     | Requisitos definidos com base em riscos                                         | ✅ Derivação por níveis L1–L3                |
-| 3     | Requisitos ligados a métricas e controlos de eficácia                          | ❌ Fora do escopo imediato                   |
+| 3     | Requisitos ligados a métricas e controlos de eficácia                          | ❌ Fora do âmbito imediato                   |
 
 **🧮 Maturidade atingida: 2 / 3**
 
@@ -72,7 +72,7 @@ As avaliações aqui descritas foram realizadas com base numa leitura técnico-c
 | PW.1                | Documentar requisitos de segurança            | ✅ Totalmente coberto    |
 | PW.4                | Estabelecer critérios de segurança            | ✅ Coberto               |
 | RV.1                | Rever requisitos com intervenientes técnicos  | ✅ Coberto               |
-| RV.2                | Rever requisitos com partes interessadas      | ❌ Fora do escopo        |
+| RV.2                | Rever requisitos com partes interessadas      | ❌ Fora do âmbito        |
 
 > A testabilidade e rastreabilidade dos requisitos são suportadas por práticas prescritivas com validação contínua.
 
@@ -84,7 +84,7 @@ As avaliações aqui descritas foram realizadas com base numa leitura técnico-c
 |---------------------|--------------------------------------------------------|
 | AM1.1               | ✅ Requisitos baseados em análise de risco             |
 | AM2.1               | ⚠️ Integração parcial com modelos de ameaça            |
-| AM3.x               | ❌ Fora do escopo técnico atual                         |
+| AM3.x               | ❌ Fora do âmbito técnico atual                         |
 
 > A prática de requisitos integra-se diretamente no ciclo de backlog, suportando histórias e aceitação baseada em risco.
 
@@ -95,7 +95,7 @@ As avaliações aqui descritas foram realizadas com base numa leitura técnico-c
 | Nível | Requisitos principais                     | Cobertura pelo Cap. 02              |
 |-------|--------------------------------------------|-------------------------------------|
 | 1     | Definição de critérios de validação        | ✅ Aplicação explícita de critérios |
-| 2     | Proveniência e rastreabilidade             | ❌ Fora do escopo                   |
+| 2     | Proveniência e rastreabilidade             | ❌ Fora do âmbito                   |
 | 3     | Verificação reforçada no pipeline          | ❌ Implementado noutros capítulos   |
 
 **🔐 Nível máximo suportado por este capítulo: SLSA 1 / 4**

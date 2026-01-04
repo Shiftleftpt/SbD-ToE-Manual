@@ -47,7 +47,7 @@ As avaliações aqui descritas foram realizadas com base numa leitura técnico-c
 |------:|---------------------------------------------------------------------------|--------------------------------------------|
 | 1     | Ameaças identificadas de forma sistemática                                | ✅ Processo baseado em STRIDE               |
 | 2     | Análise estruturada com modelos formais e rastreabilidade                 | ✅ DFD, *threat map*, aceitação de risco    |
-| 3     | Integração contínua e automação organizacional                            | ❌ Fora do escopo deste capítulo (ver `30`) |
+| 3     | Integração contínua e automação organizacional                            | ❌ Fora do âmbito deste capítulo (ver `30`) |
 
 **🧮 Maturidade atingida: 2 / 3**
 
@@ -94,7 +94,7 @@ As avaliações aqui descritas foram realizadas com base numa leitura técnico-c
 | Nível | Requisitos principais                              | Cobertura pelo Cap. 03                   |
 |------:|-----------------------------------------------------|------------------------------------------|
 | 1     | Consciência de risco e ameaça                       | ✅ Classificação e threat modeling        |
-| 2     | Requisitos formais de proveniência                   | ❌ Fora do escopo                         |
+| 2     | Requisitos formais de proveniência                   | ❌ Fora do âmbito                         |
 | 3+    | Controlo reforçado na cadeia de fornecimento        | ❌ Tratado noutros capítulos (CI/CD)      |
 
 **🔐 Nível máximo suportado por este capítulo: SLSA 1 / 4**

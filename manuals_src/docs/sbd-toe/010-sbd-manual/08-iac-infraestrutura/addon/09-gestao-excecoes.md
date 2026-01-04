@@ -1,80 +1,107 @@
 ---
+
 id: gestao-excecoes
 title: Gestão de Exceções e Justificações Formais em IaC
 sidebar_position: 9
 description: Procedimentos e critérios para tratamento de exceções às práticas prescritas de IaC Seguro.
-tags: [exceções, governação, iac, controlo, segurança, auditoria]
----
-
+tags: [excecoes, governacao, iac, controlo, seguranca, auditoria]
+-----------------------------------------------------------------
 
 # ⚠️ Gestão de Exceções e Não-Conformidades em Projetos IaC
 
 ## 🌟 Objetivo
 
-Definir uma abordagem formal para gerir **exceções a políticas, requisitos ou controlos de segurança** em projetos de Infraestrutura como Código (IaC), garantindo rastreabilidade, justificação e mitigação de riscos associados.
+Definir um **processo formal, auditável e temporário** para a gestão de exceções a políticas, requisitos ou controlos de segurança aplicáveis a projetos de Infraestrutura como Código (IaC).
 
-> A existência de exceções é legítima - a sua gestão deficiente é que compromete a segurança.
+Este mecanismo existe para **permitir continuidade operacional sem comprometer governação**, assegurando que qualquer desvio é:
+
+* explicitamente conhecido;
+* tecnicamente justificado;
+* mitigado;
+* limitado no tempo.
+
+> Exceções são um mecanismo legítimo de gestão de risco. **Exceções não controladas são falhas de segurança.**
 
 ---
 
 ## 📌 O que deve ser feito
 
-1. **Estabelecer critérios claros para a aceitação de exceções** a requisitos de segurança aplicáveis a IaC;
-2. **Definir processo de submissão e aprovação** com validação por segurança/AppSec;
-3. **Registar todas as exceções com metadados essenciais**: motivo, impacto, mitigação, duração e responsáveis;
-4. **Garantir visibilidade contínua de exceções ativas** e associá-las a artefactos (PRs, módulos, ambientes);
-5. **Aplicar controlo de expiração automática ou revisão periódica** para exceções temporárias;
-6. **Reavaliar exceções sempre que o contexto técnico ou organizacional se altere.**
+1. Definir **critérios objetivos** para aceitação de exceções em IaC;
+2. Estabelecer um **fluxo formal de submissão, análise e aprovação**;
+3. Registar todas as exceções com **metadados mínimos obrigatórios**;
+4. Garantir **ligação direta entre exceção, código, ambiente e requisito violado**;
+5. Aplicar **prazo de validade (TTL)** e revisão periódica obrigatória;
+6. Revogar automaticamente exceções expiradas ou não revalidadas;
+7. Reavaliar exceções sempre que haja **mudança relevante de contexto** (arquitetura, fornecedor, risco).
 
 ---
 
 ## ⚙️ Como deve ser feito
 
-| Elemento                    | Descrição                                                                      |
-| --------------------------- | ------------------------------------------------------------------------------ |
-| Formato                     | YAML, JSON, ou ficheiro `.md` com frontmatter normalizado                      |
-| Campos mínimos              | ID, data, autor, requisito violado, justificação, impacto, mitigação, validade |
-| Local de registo            | Diretório `exceptions/`, repositório dedicado, ou wiki técnica                 |
-| Ligação a código            | Comentário estruturado no código (`# exception: IAC-003`)                      |
-| Aprovação necessária        | Equipa de segurança ou autoridade designada                                    |
-| Validade máxima recomendada | 90 dias (renovável com nova justificação e validação)                          |
+| Elemento          | Prescrição                                                                                                     |
+| ----------------- | -------------------------------------------------------------------------------------------------------------- |
+| Formato           | YAML ou JSON versionado (preferencial); `.md` apenas para exceções documentais                                 |
+| Campos mínimos    | ID, requisito violado, descrição, justificação, impacto, mitigação, ambiente, responsável, aprovador, validade |
+| Local de registo  | Diretório `exceptions/` no repositório IaC ou repositório central dedicado                                     |
+| Ligação ao código | Comentário estruturado (`# iac-exception: IAC-003`) ou anotação Rego                                           |
+| Aprovação         | AppSec obrigatório; GRC adicional para L3                                                                      |
+| Validade          | Máx. 90 dias, renovação exige nova avaliação                                                                   |
 
 ---
 
 ## 🗒️ Exemplo de exceção formalizada
 
 ```yaml
-id: exception-iac-003-20250710
+id: IAC-EXC-003-2025-07-10
 requisito: IAC-003
-descricao: "Execução temporária de Terraform sem scanner tfsec devido a falha no repositório."
+descricao: Execução temporária sem scanner tfsec
 ambiente: staging
-modulo: network-baseline
-justificacao: "Deploy urgente para restauro de capacidade após incidente P1."
-mitigacao: "Execução posterior de tfsec em ambiente controlado."
-aprovado_por: "appsec@org"
-validade: "2025-07-20"
+artefacto_afetado: pipeline-iac-staging
+justificacao: Deploy urgente para restauro de capacidade após incidente P1
+impacto: Possível omissão temporária de deteção de más configurações
+mitigacao: Execução manual de tfsec pós-deploy + revisão AppSec
+aprovado_por: appsec@org
+validade: 2025-07-20
 ```
 
 ---
 
 ## 🗓️ Quando aplicar
 
-| Situação                              | Ação esperada                                                       |
-| ------------------------------------- | ------------------------------------------------------------------- |
-| Ferramenta de validação inoperacional | Submissão de exceção justificada                                    |
-| Requisito impossível de cumprir       | Formalização com mitigação aceitável                                |
-| Exceção técnica em repositório IaC    | Comentário visível + ficheiro associado                             |
-| Revisão de exceções                   | Tarefa periódica (mensal ou sprint) de revisão por equipa de AppSec |
+| Situação                             | Ação esperada                        |
+| ------------------------------------ | ------------------------------------ |
+| Ferramenta de validação indisponível | Submissão imediata de exceção formal |
+| Requisito tecnicamente impossível    | Exceção com mitigação compensatória  |
+| Desvio intencional em IaC            | Registo explícito e visível          |
+| Revisão periódica                    | Avaliação mensal ou por sprint       |
 
 ---
 
-## ✅ Benefícios
+## 🧩 Integração com enforcement
 
-* Garante que exceções são transparentes, justificadas e mitigadas;
-* Reduz risco organizacional ao evitar violações silenciosas;
-* Suporta auditoria e resposta a incidentes com registos completos;
-* Permite equilíbrio entre agilidade técnica e segurança formal.
+* Exceções **não desativam regras** globalmente;
+* São avaliadas **por regra e por contexto**;
+* Devem ser **interpretáveis por *policy engines*** (OPA/Sentinel);
+* Exceções expiradas resultam em **bloqueio automático** do pipeline.
 
 ---
 
-> 🔗 Este mecanismo está alinhado com os requisitos `IAC-010`, `REQ-005`, `REQ-006`, e boas práticas SSDF (RV.1), SAMM (AA2.4),  (SR2.2), SLSA (Build L3).
+## ✅ Benefícios diretos
+
+* Elimina desvios silenciosos e técnicos fora de governação;
+* Permite equilíbrio entre agilidade e segurança;
+* Fornece evidência clara para auditoria;
+* Reduz acumulação de dívida técnica e de risco.
+
+---
+
+## 🔗 Referências cruzadas
+
+| Documento                           | Relação                                            |
+| ----------------------------------- | -------------------------------------------------- |
+| `addon/06-controle-enforcement.md`  | Tratamento técnico de exceções em *policy-as-code* |
+| `addon/08-matriz-requisitos-iac.md` | Requisitos IAC e validação                         |
+| Cap. 14 — Governança e Contratação  | Processo organizacional de exceções                |
+| SSDF (RV.1)                         | Gestão de desvios e risco                          |
+| OWASP SAMM (AA2.4, SR2.2)           | Governação de risco técnico                        |
+| SLSA (Build L3)                     | Controlo e aprovação formal                        |

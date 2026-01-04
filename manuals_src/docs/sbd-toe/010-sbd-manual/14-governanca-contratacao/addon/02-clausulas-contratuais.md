@@ -35,6 +35,10 @@ São disposições formais incorporadas nos contratos com fornecedores, parceiro
 
 > 📎 Estas cláusulas são essenciais para transferir obrigações de segurança e alinhar o fornecedor com os princípios do SbD-ToE.
 
+A utilização de processos ou mecanismos técnicos automatizados para suportar o cumprimento destas cláusulas não altera nem reduz as responsabilidades contratuais do fornecedor.
+O fornecedor permanece integralmente responsável pela conformidade, evidência e resultados obtidos,independentemente do grau de automação utilizado.
+
+
 ---
 
 ## 🛠️ Como aplicar
@@ -101,6 +105,8 @@ Cada cláusula deve incluir:
 - Forma de validação esperada (evidência técnica, auditoria, testes);
 - Penalizações ou impacto contratual em caso de incumprimento;
 - Periodicidade de revisão (ex: em renovações, novas versões ou releases).
+- Identificação de processos ou mecanismos técnicos utilizados para suportar o cumprimento da cláusula, quando aplicável.
+
 
 ---
 

@@ -166,7 +166,7 @@ Independentemente do tipo de ferramenta ou fase do ciclo de vida, **todo o uso d
 **Checklist (DoD adicional)**:
 
 - [ ] **Ferramenta & versão**: Qual algoritmo? (ex: "Automated STRIDE Generator v2.1")
-- [ ] **Escopo correto**: Mapping inclui ameaças apropriadas para nível L1/L2/L3?
+- [ ] **âmbito correto**: Mapping inclui ameaças apropriadas para nível L1/L2/L3?
 - [ ] **Filtro de ruído**: Omitidas ameaças genéricas não-contextuais? (ex: filtrar "slow DDoS" se criticidade baixa)
 - [ ] **Validação por especialistas**: Arquitetos/AppSec Engineer validou:
   - Ameaças criticas não foram omitidas?

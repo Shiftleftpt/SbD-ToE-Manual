@@ -17,27 +17,28 @@ Inclui modelos reutilizáveis de user stories, ações por papel, artefactos esp
 
 ## 📅 Quando aplicar Threat Modeling
 
-| Fase / Evento              | Ação esperada                                  | Quem participa                     | Artefacto principal         |
-|----------------------------|------------------------------------------------|------------------------------------|-----------------------------|
-| Início de projeto / épico  | Realizar sessão inicial de threat modeling      | DevOps/SRE, Product Owner, Arquitetos de Software, AppSec Engineer | DFD + lista inicial de ameaças |
-| Grooming / Planeamento     | Atualizar modelos com base em novas features    | Developer + AppSec Engineer | Backlog + threats.yaml      |
-| Revisão de Arquitetura     | Validar ameaças antes de design final           | Arquitetos de Software + AppSec Engineer               | Ficha de solução + mitigations.md |
-| Alterações críticas        | Atualizar modelos após integrações/refactors   | Developer + QA / Test Engineer + AppSec Engineer               | Modelo atualizado           |
-| Release / Go-live          | Validar riscos e exceções aceites              | QA / Test Engineer + AppSec Engineer                        | Checklist + decisions.md    |
-| CI/CD pipeline             | Validar atualidade do modelo em build/release  | DevOps/SRE + AppSec Engineer                | Validação automática        |
+| Fase / Evento                    | Ação esperada                                                                 | Quem participa                                                     | Evidência mínima (artefacto principal) |
+|----------------------------------|------------------------------------------------------------------------------|--------------------------------------------------------------------|----------------------------------------|
+| Início de projeto / épico        | Criar baseline do Threat Model e definir âmbito/assunções                     | DevOps/SRE, Product Owner, Arquitetos, AppSec, Team Lead           | DFD + lista inicial de ameaças + registo de decisão (*baseline*) |
+| Grooming / Planeamento           | Rever impacto de novas user stories no Threat Model (delta)                   | Developer, Arquiteto (quando aplicável), AppSec                    | Atualização versionada + ligação a backlog (`THREAT-*`)          |
+| Revisão de Arquitetura / ADR     | Validar ameaças antes de decisões arquiteturais irreversíveis                 | Arquitetos, AppSec, Team Lead                                      | ADR + Threat Model revisto + decisões por ameaça                 |
+| Alterações críticas / refactors  | Revalidar o modelo quando há mudança estrutural (fluxos, trust boundaries, deps) | Developer, QA/Test, Arquiteto, AppSec                              | Modelo atualizado + diffs + justificações                         |
+| Release / Go-live                | Confirmar ameaças abertas, exceções, risco residual e compensações            | QA/Test, AppSec, Product Owner (impacto), Team Lead                | Decisões (mitigar/aceitar) + evidência de aprovação              |
+| CI/CD (gate de controlo)         | Verificar “frescura” do Threat Model face a mudanças relevantes (determinístico) | DevOps/SRE, AppSec                                                 | Resultado de verificação + link para versão do modelo             |
 
 ---
 
 ## 👥 Quem faz o quê
 
-| Papel / Função             | Responsabilidades-chave                                      |
-|----------------------------|--------------------------------------------------------------|
-| Arquitetos de Software     | Facilitar sessões, manter modelos atualizados e documentados  |
-| Developer                  | Identificar fluxos, pontos de entrada e lógica de negócio    |
-| QA / Test Engineer         | Validar critérios de aceitação derivados das ameaças         |
-| AppSec Engineer            | Identificar ameaças técnicas, apoiar mitigação e rever exceções |
-| Product Owner              | Priorizar mitigação e validar impacto no negócio             |
-| DevOps/SRE                 | Automatizar validações de threat modeling em pipelines       |
+| Papel / Função             | Responsabilidades-chave |
+|----------------------------|--------------------------|
+| Arquitetos de Software     | Facilitar sessões, manter modelos atualizados e garantir consistência arquitetural |
+| Team Lead / Tech Lead      | **Responsável pela decisão final do modelo** no contexto da equipa/projeto (aprovação do baseline e revisões) |
+| Developer                  | Identificar fluxos, pontos de entrada, regras de negócio e mudanças técnicas relevantes |
+| QA / Test Engineer         | Traduzir ameaças em critérios de aceitação e validar evidência de mitigação/testes |
+| AppSec Engineer            | Identificar ameaças técnicas, rever mitigação, validar risco residual e apoiar decisões de exceção |
+| Product Owner              | Priorizar mitigação pelo impacto no negócio e aceitar trade-offs explícitos |
+| DevOps/SRE                 | Implementar gates determinísticos, assegurar rastreabilidade e retenção de evidência |
 
 ---
 
@@ -54,7 +55,8 @@ Como **Arquitetos de Software** e **Team Lead / Scrum Master**, quero criar um m
 **Critérios de aceitação (BDD).**
 - **Dado** que o projeto inicia  
   **Quando** construo o modelo de ameaça com DFDs  
-  **Então** todas as ameaças são registadas e ligadas a controlos/requisitos
+  **Então** as ameaças identificadas ficam registadas com decisões explícitas e evidência mínima,
+  **e** as assunções/limites do modelo ficam documentados.
 
 **Checklist.**
 - [ ] Sessão de threat modeling realizada  
@@ -62,6 +64,8 @@ Como **Arquitetos de Software** e **Team Lead / Scrum Master**, quero criar um m
 - [ ] Ameaças catalogadas (STRIDE, LINDDUN, PASTA)  
 - [ ] Ameaças ligadas a requisitos de mitigação  
 - [ ] Evidência arquivada em repositório de arquitetura
+- [ ] Âmbito, assunções e limites do modelo documentados
+- [ ] Responsável pela aprovação do baseline identificado
 
 :::
 
@@ -212,46 +216,39 @@ Como **AppSec Engineer** e **GRC/Compliance**, quero documentar e aprovar formal
 
 ---
 
-### US-05 - Integração com CI/CD
+### US-05 - Gate de controlo de consistência no CI/CD
 
 **Contexto.**  
-O threat modeling deve ser integrado com pipelines CI/CD, garantindo que alterações significativas acionam revisão automática do modelo e validações associadas.
+O pipeline deve garantir que mudanças relevantes não passam sem atualização/revisão do Threat Model, mantendo rastreabilidade e evidência.
 
 :::userstory
-**História.**   
-Como **DevOps/SRE** e **AppSec Engineer**, quero integrar validações de threat modeling no pipeline, para que cada alteração relevante seja revista automaticamente.
+**História.**  
+Como **DevOps/SRE** e **AppSec Engineer**, quero aplicar um **gate determinístico** que verifique se o Threat Model está atualizado face a alterações relevantes, para impedir releases com modelo obsoleto.
 
 **Critérios de aceitação (BDD).**
-- **Dado** que uma alteração é feita  
+- **Dado** que uma alteração relevante é introduzida (ex.: novo fluxo, nova dependência, nova trust boundary)  
   **Quando** a pipeline é executada  
-  **Então** verificações de threat modeling são acionadas e resultados registados
+  **Então** o gate exige referência a uma versão atualizada do Threat Model ou uma justificação aprovada  
+- **E** a evidência do gate fica registada e auditável
 
 **Checklist.**
-- [ ] Pipeline CI/CD inclui job de threat modeling  
-- [ ] Resultados armazenados automaticamente  
-- [ ] Requisitos derivados atualizados no backlog  
-- [ ] Evidência disponível em logs de pipeline
+- [ ] Critérios objetivos de “alteração relevante” definidos e versionados
+- [ ] Gate implementado com verificação determinística (regras, metadados, diffs)
+- [ ] Saída do gate registada (logs + referência ao artefacto versionado)
+- [ ] Exceções seguem workflow de aprovação (quando aplicável)
 
 :::
 
 **Artefactos & evidências.**
-- Artefacto: pipelines CI/CD  
-- Evidência: logs de execução com validações
+- Artefacto: regra/versionamento de critérios + referência ao Threat Model aprovado
+- Evidência: logs de pipeline + link para commit/tag do modelo
 
 **Proporcionalidade por risco.**
 | Nível | Obrigatório? | Ajustes |
 |---|---|---|
-| L1 | Não aplicável | - |
-| L2 | Sim | Revisão periódica em pipeline |
-| L3 | Sim | Automação obrigatória e bloqueante |
-
-**Integração no SDLC.**
-| Fase | Trigger | Responsável | SLA |
-|---|---|---|---|
-| Implementação / CI | Execução de pipeline | DevOps/SRE | Em cada commit/release |
-
-**Ligações úteis.**
-- 🔗 [DSOMM - Automation](https://dsomm.owasp.org/)  
+| L1 | Não | Apenas revisão manual em releases maiores |
+| L2 | Sim | Gate não-bloqueante com alerta e obrigação de revisão |
+| L3 | Sim | Gate bloqueante com exceções formais e prazo |
 
 ---
 
@@ -293,51 +290,41 @@ Como **Product Owner**, quero priorizar as ameaças identificadas no modelo de a
 |---|---|---|---|
 | Planeamento / Grooming | Avaliação de impacto | Product Owner + Gestão Executiva/CISO | Antes de priorização de sprint |
 
-**Ligações úteis.**
-- 🔗 [ISO/IEC 27005 Risk Assessment](https://www.iso.org/standard/75281.html)  
-
 ---
-### US-07 - Automação e reutilização de modelos
+### US-07 - Reutilização controlada e revisão de modelos anteriores
 
 **Contexto.**  
-Ferramentas de threat modeling (ex.: OWASP Threat Dragon, Microsoft TMT, IriusRisk) devem ser usadas para automatizar e reutilizar modelos, garantindo consistência e eficiência.
+A reutilização de modelos anteriores é útil, mas introduz risco quando o contexto mudou. Deve existir revisão explícita antes de considerar um modelo como válido.
 
 :::userstory
-**História.**   
-Como **DevOps/SRE + AppSec Engineer**, quero usar ferramentas para automação e reutilização de modelos de ameaça, para garantir consistência e reduzir trabalho manual.
+**História.**  
+Como **Arquitetos de Software** e **AppSec Engineer**, quero reutilizar modelos anteriores apenas com revisão explícita de mudanças de contexto, para reduzir omissões e evitar decisões herdadas incorretas.
 
 **Critérios de aceitação (BDD).**
-- **Dado** que realizo threat modeling  
-  **Quando** uso ferramenta automatizada  
-  **Então** o modelo é gerado/reutilizado com consistência e armazenado
+- **Dado** que existe um modelo anterior semelhante  
+  **Quando** o reutilizo como base  
+  **Então** documento diferenças de contexto/arquitetura e valido novamente decisões críticas  
+- **E** registo um responsável pela aprovação da revisão
 
 **Checklist.**
-- [ ] Ferramenta definida e adotada  
-- [ ] Modelos armazenados em repositório central  
-- [ ] Reutilização de modelos em novos projetos validada  
-- [ ] Evidência de execução disponível
+- [ ] Modelo anterior identificado (referência versionada)
+- [ ] Diferenças de arquitetura/fluxos/dependências analisadas
+- [ ] Decisões críticas revalidadas (mitigar/aceitar/transferir)
+- [ ] Aprovação registada e auditável
 
 :::
 
 **Artefactos & evidências.**
-- Artefacto: modelos em ferramenta ou repositório central  
-- Evidência: relatórios automáticos exportados
+- Artefacto: delta de revisão + referência ao modelo aprovado
+- Evidência: PR/issue de revisão com aprovação
 
 **Proporcionalidade por risco.**
 | Nível | Obrigatório? | Ajustes |
 |---|---|---|
-| L1 | Opcional | Modelos simplificados |
-| L2 | Sim | Automação recomendada |
-| L3 | Sim | Automação obrigatória e reutilização padronizada |
+| L1 | Opcional | Revisão simplificada |
+| L2 | Sim | Revisão formal com diffs |
+| L3 | Sim | Revisão formal + revisão independente |
 
-**Integração no SDLC.**
-| Fase | Trigger | Responsável | SLA |
-|---|---|---|---|
-| Design / Grooming | Criação e manutenção de modelos | Arquitetos de Software + DevOps/SRE | Por projeto e atualização contínua |
-
-**Ligações úteis.**
-- 🔗 [OWASP Threat Dragon](https://owasp.org/www-project-threat-dragon/)  
-- 🔗 [IriusRisk](https://www.iriusrisk.com/)  
 
 ---
 
@@ -385,9 +372,80 @@ Como **Arquitetos de Software + AppSec Engineer**, quero aplicar **LINDDUN** qua
 - 🔗 [LINDDUN Framework](https://www.linddun.org/)  
 - 🔗 [ENISA - Privacy by Design Guidelines](https://www.enisa.europa.eu/)  
 
+---
+### US-09 - Aprovação formal do Threat Model (baseline e revisões)
 
+**Contexto.**  
+O Threat Modeling só é controlo de segurança quando existe um modelo aprovado, com responsável e evidência mínima.
 
-## ⚖️ Aplicação proporcional por nível de risco (L1–L2–L3)
+:::userstory
+**História.**  
+Como **Team Lead / Tech Lead** e **AppSec Engineer**, quero aprovar formalmente o Threat Model (baseline e revisões), para garantir decisão explícita, rastreabilidade e auditabilidade.
+
+**Critérios de aceitação (BDD).**
+- **Dado** que o Threat Model foi atualizado  
+  **Quando** concluo a revisão  
+  **Então** existe uma decisão formal de aprovação com responsável identificado  
+- **E** a evidência mínima obrigatória está presente e versionada
+
+**Checklist.**
+- [ ] Âmbito, assunções e limites documentados
+- [ ] Ameaças identificadas com decisão por item (mitigar/aceitar/transferir/rejeitar)
+- [ ] Ligações a requisitos/mitigações criadas (ex.: `REQ-*`, `THREAT-*`)
+- [ ] Evidência mínima anexada (diagramas/versionamento/decisão)
+- [ ] Aprovação registada (PR/issue/assinatura conforme processo)
+
+:::
+
+**Artefactos & evidências.**
+- Artefacto: Threat Model aprovado (versão/tag) + `decisions.md`
+- Evidência: registo de aprovação + links para backlog e requisitos
+
+**Proporcionalidade por risco.**
+| Nível | Obrigatório? | Ajustes |
+|---|---|---|
+| L1 | Opcional | Aprovação leve (registo simples) |
+| L2 | Sim | Aprovação formal por TL + AppSec |
+| L3 | Sim | Aprovação formal + revisão independente (segregação) |
+
+---
+
+### US-10 - Controlo de acesso, classificação e retenção dos artefactos de Threat Modeling
+
+**Contexto.**  
+Diagramas e decisões de threat modeling são ativos sensíveis e devem ter proteção proporcional ao risco.
+
+:::userstory
+**História.**  
+Como **Arquitetos de Software** e **DevOps/SRE**, quero controlar acesso e retenção dos artefactos de Threat Modeling, para reduzir risco de exposição de arquitetura e decisões críticas.
+
+**Critérios de aceitação (BDD).**
+- **Dado** que artefactos de Threat Modeling são produzidos  
+  **Quando** são armazenados e partilhados  
+  **Então** seguem regras de acesso mínimo, classificação e retenção definidas  
+- **E** existe evidência de onde estão guardados e quem tem acesso
+
+**Checklist.**
+- [ ] Local de armazenamento definido e versionado
+- [ ] Controlo de acesso aplicado (least privilege)
+- [ ] Classificação definida (sensibilidade/partilha interna)
+- [ ] Retenção e eliminação definidas (quando aplicável)
+- [ ] Evidência de acessos e alterações disponível/auditável
+
+:::
+
+**Artefactos & evidências.**
+- Artefacto: política/regras do repositório + estrutura de diretórios
+- Evidência: ACLs/grupos + registos de auditoria (quando aplicável)
+
+**Proporcionalidade por risco.**
+| Nível | Obrigatório? | Ajustes |
+|---|---|---|
+| L1 | Sim | Controlo básico e armazenamento interno |
+| L2 | Sim | Controlo formal + rastreio de alterações |
+| L3 | Sim | Controlo reforçado + segregação e auditoria |
+
+---
 ## ⚖️ Aplicação proporcional por nível de risco (L1–L2–L3)
 
 | Prática / Atividade              | L1 (baixo risco)                         | L2 (médio risco)                                | L3 (alto risco)                                                  |

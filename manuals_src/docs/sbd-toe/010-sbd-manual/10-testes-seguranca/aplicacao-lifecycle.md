@@ -581,7 +581,7 @@ Como **AppSec + DevOps**, quero **framework de decisão estruturado para finding
   **Então** revalidação confirma que finding desapareceu e nenhum novo finding CRITICAL foi introduzido
 - **Dado** métrica de decisão  
   **Quando** revisão trimestral  
-  **Então** >95% findings CRITICAL/HIGH têm C1 documentado, tempo-de-decisão <4h, taxa de bloqueio <10%
+  **Então** >95% findings CRITICAL/HIGH têm C1 documentado, tempo-de-decisão `<4h`, taxa de bloqueio `<10%`
 
 **Checklist.**  
 - [ ] Checklist C1 integrado em workflow de findings (4 perguntas: exploitabilidade, mitigações, remediação, negócio)
@@ -648,7 +648,7 @@ Como **AppSec + DevOps**, quero **framework de validação empírica de findings
   **Então** registo FN com template S2 (Root Cause Analysis), ajusto ferramentas, adiciono teste de regressão
 - **Dado** métrica de qualidade  
   **Quando** revisão mensal  
-  **Então** FP <20%, FN <5%, tempo-validação <4h (L2) ou <2h (L3)
+  **Então** FP `<20%`, FN `<5%`, tempo-validação `<4h` (L2) ou `<2h` (L3)
 
 **Checklist.**  
 - [ ] Taxonomia T1-T5 definida (SAST, DAST, IAST, Fuzzing, Pentesting) com procedimentos de teste por tipo
@@ -657,7 +657,7 @@ Como **AppSec + DevOps**, quero **framework de validação empírica de findings
 - [ ] Template S2 de RCA para FN (vulnerabilidade não-detetada, root cause, correção de ferramenta, prevenção futura)
 - [ ] Repositório de PoCs versionado em Git (pocs/FINDING-ID-poc.py)
 - [ ] Staging environment isolado para testes de exploração (network segmentado, dados não-produção)
-- [ ] Dashboard de métricas qualidade: FP rate <20%, FN rate <5%, tempo-validação, cobertura testes
+- [ ] Dashboard de métricas qualidade: FP rate `<20%`, FN rate `<5%`, tempo-validação, cobertura testes
 - [ ] Integração com ferramentas para supressão automática de FP validados (comentários inline + whitelist)
 
 :::
@@ -668,15 +668,15 @@ Como **AppSec + DevOps**, quero **framework de validação empírica de findings
 - Template S1 de supressão FP preenchido (Finding ID, razão técnica, evidência de teste não-exploitável)
 - Template S2 de RCA para FN documentado (vulnerabilidade missed, root cause, ajuste ferramenta)
 - Repositório de PoCs versionado em Git (pocs/*.py com payloads reproduzíveis)
-- Dashboard de métricas: FP rate <20%, FN rate <5%, tempo-validação <4h, confirmation rate >70%
+- Dashboard de métricas: FP rate `<`20%, FN rate `<`5%, tempo-validação `<`4h, confirmation rate \>70%
 - Logs de testes de exploração com timestamps e evidência (screenshots, HTTP logs, crash dumps)
 
 **⚖️ Proporcionalidade.**  
 | Nível | Obrigatório? | Ajustes |
 |---|---:|---|
 | L1 | Opcional | Testes para CRITICAL apenas, sem exigência de tempo-validação |
-| L2 | Sim | Testes T1-T5 para CRITICAL+HIGH, template S1 obrigatório, métricas FP <30%, tempo <4h |
-| L3 | Sim | Testes T1-T5 para todos findings ≥MEDIUM, template S1+S2, métricas FP <20%, FN <5%, tempo <2h |
+| L2 | Sim | Testes T1-T5 para CRITICAL+HIGH, template S1 obrigatório, métricas FP `<30%`, tempo `<4h` |
+| L3 | Sim | Testes T1-T5 para todos findings ≥MEDIUM, template S1+S2, métricas FP `<20%`, FN `<5%`, tempo `<2h` |
 
 **Integração no SDLC.**  
 | Fase | Trigger | Responsável | SLA |

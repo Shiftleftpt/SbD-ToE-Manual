@@ -21,7 +21,7 @@ Inclui também indicadores de **formação obrigatória** para funções crític
 | % de requisitos aplicados conforme risco                      | Cap. 2 + matriz Lx | %      |
 | % de exceções documentadas com owner e prazo                  | Cap. 14.1 + 14.5   | %      |
 | % de projetos com rastreabilidade completa (risco → controlo) | Cap. 14.4          | %      |
-| % de owners com formação SbD ativa (\<12 meses)                | Cap. 13 + Cap. 14  | %      |
+| % de owners com formação SbD ativa (`<`12 meses)                | Cap. 13 + Cap. 14  | %      |
 | Tempo médio para mitigar findings críticos                    | Cap. 12            | Tempo  |
 | Nº de findings críticos abertos por aplicação                 | Cap. 10 + 12       | Quant. |
 

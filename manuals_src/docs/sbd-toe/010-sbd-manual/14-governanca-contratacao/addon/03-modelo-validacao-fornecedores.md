@@ -52,7 +52,7 @@ flowchart TD
 | Validação por equipa AppSec               |     |  ✔️ |  ✔️ |
 | Evidência técnica (relatórios, políticas) |     |  ✔️ |  ✔️ |
 | SBOM ou inventário de componentes         |     |     |  ✔️ |
-| SLA de resposta a incidentes (\<24h)       |     |     |  ✔️ |
+| SLA de resposta a incidentes (`<`24h)       |     |     |  ✔️ |
 | Direito de auditoria                      |     |     |  ✔️ |
 
 > A matriz de criticidade do Cap. 01 deve ser usada como base para atribuição do nível de risco.

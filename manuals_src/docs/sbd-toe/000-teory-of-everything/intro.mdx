@@ -8,15 +8,23 @@ sidebar_position: 1
 
 # 🌍 Security by Design – Theory of Everything
 
-O **Security by Design – Theory of Everything (SbD–ToE)** é uma filosofia e um modelo operativo que unifica, de forma coerente, **cinco pilares estruturantes** que, na prática, tendem a existir em silos:
+O **Security by Design – Theory of Everything (SbD–ToE)** é uma filosofia e um modelo operativo que estabelece uma base unificada para a engenharia de software seguro, integrando de forma coerente dimensões que, na prática, tendem a existir isoladas ou em tensão permanente.
 
-- **Regulação e legislação**
-- **Normas técnicas e frameworks de referência**
-- **Ameaças e incidentes reais**
-- **Prática diária na engenharia de software seguro (“from the trenches”)**
-- **Propriedades transversais do sistema (cross-cutting concerns)**
+O SbD–ToE parte da constatação de que a segurança falha não por ausência de normas, ameaças conhecidas ou ferramentas, mas por **falta de integração disciplinada entre fontes de verdade heterogéneas**, aplicadas sem um modelo comum de decisão, validação e evidência.
 
-A proposta do SbD–ToE é transformar estes pilares num **corpo prescritivo**, **proporcional ao risco** e **orientado a evidência**, capaz de guiar decisões desde a gestão e governação até à execução técnica no ciclo de vida de desenvolvimento e operação. O resultado pretendido é um sistema de engenharia em que **coerência**, **verificabilidade** e **defensibilidade** não dependem de intenções, mas de mecanismos observáveis e repetíveis.
+---
+
+## 🧭 Os cinco eixos estruturantes
+
+O SbD–ToE integra **cinco eixos estruturantes**, que representam fontes distintas de constrangimento, conhecimento e validação no desenvolvimento e operação de sistemas de software:
+
+1. **Regulação e legislação**
+2. **Normas técnicas e frameworks de referência**
+3. **Ameaças e incidentes reais**
+4. **Prática diária da engenharia (“from the trenches”)**
+5. **Invariantes do processo de engenharia segura**
+
+Estes eixos **não são capítulos**, nem domínios isolados. São forças estruturais que moldam o *Security by Design* e que o SbD–ToE absorve num **núcleo agregador prescritivo**, orientado à execução prática e à produção de evidência.
 
 ---
 <div className="toe-layout">
@@ -74,7 +82,7 @@ A proposta do SbD–ToE é transformar estes pilares num **corpo prescritivo**, 
           NE (72°):   (674.1, 219.8)    — Normas
           SE (144°):  (638.2, 464.1)    — Experiência
           SW (216°):  (361.8, 464.1)    — Ameaças
-          NW (288°):  (325.9, 219.8)    — Cross-Cutting
+          NW (288°):  (325.9, 219.8)    — Invariantes
         */}
 
         {/* Linhas do núcleo para satélites */}
@@ -99,8 +107,8 @@ A proposta do SbD–ToE é transformar estes pilares num **corpo prescritivo**, 
         </text>
         <text x="500" y="30" textAnchor="middle" className="toe-text">
           <tspan x="500" dy="0">Regulamentos como NIS2, DORA,</tspan>
-          <tspan x="500" dy="18">CRA ou GDPR estabelecem</tspan>
-          <tspan x="500" dy="18">obrigações formais.</tspan>
+          <tspan x="500" dy="18">CRA ou GDPR definem</tspan>
+          <tspan x="500" dy="18">obrigações legais e responsabilidade.</tspan>
         </text>
 
         {/* NE — Normas & Frameworks */}
@@ -108,9 +116,9 @@ A proposta do SbD–ToE é transformar estes pilares num **corpo prescritivo**, 
           Normas &amp; Frameworks
         </text>
         <text x="720" y="215" className="toe-text">
-          <tspan x="720" dy="0">Normas traduzem</tspan>
+          <tspan x="720" dy="0">Normas e frameworks traduzem</tspan>
           <tspan x="720" dy="18">obrigações legais em</tspan>
-          <tspan x="720" dy="18">capacidades concretas.</tspan>
+          <tspan x="720" dy="18">capacidades e práticas esperadas.</tspan>
         </text>
 
         {/* SE — Experiência from the trenches */}
@@ -119,8 +127,8 @@ A proposta do SbD–ToE é transformar estes pilares num **corpo prescritivo**, 
         </text>
         <text x="650" y="490" className="toe-text">
           <tspan x="650" dy="0">Auditorias, post-mortems</tspan>
-          <tspan x="650" dy="18">revelam o que realmente</tspan>
-          <tspan x="650" dy="18">funciona no terreno.</tspan>
+          <tspan x="650" dy="18">e prática diária validam</tspan>
+          <tspan x="650" dy="18">o que funciona e expõem falhas.</tspan>
         </text>
 
         {/* SW — Ameaças & Threat Intelligence */}
@@ -128,19 +136,19 @@ A proposta do SbD–ToE é transformar estes pilares num **corpo prescritivo**, 
           Ameaças &amp; Threat Intelligence
         </text>
         <text x="370" y="490" textAnchor="end" className="toe-text">
-          <tspan x="370" dy="0">Taxonomias de ataques</tspan>
-          <tspan x="370" dy="18">revelam onde os sistemas</tspan>
-          <tspan x="370" dy="18">falham.</tspan>
+          <tspan x="370" dy="0">Ameaças, ataques e incidentes</tspan>
+          <tspan x="370" dy="18">reais revelam padrões de</tspan>
+          <tspan x="370" dy="18">falha e impacto sistémico.</tspan>
         </text>
 
-        {/* NW — Cross-Cutting Concerns */}
+        {/* NW — Invariantes do Processo */}
         <text x="280" y="190" textAnchor="end" className="toe-title">
-          Cross-Cutting Concerns
+          Invariantes do Processo
         </text>
         <text x="280" y="220" textAnchor="end" className="toe-text">
           <tspan x="280" dy="0">Propriedades estruturais</tspan>
-          <tspan x="280" dy="18">que atravessam domínios</tspan>
-          <tspan x="280" dy="18">e fases do SDLC.</tspan>
+          <tspan x="280" dy="18">do processo que garantem</tspan>
+          <tspan x="280" dy="18">decisão responsável e evidência.</tspan>
         </text>
       </g>
     </svg>
@@ -149,49 +157,155 @@ A proposta do SbD–ToE é transformar estes pilares num **corpo prescritivo**, 
 
 ---
 
-## 🔄 Integração Top-Down e Bottom-Up
 
-O SbD–ToE assume explicitamente duas perspetivas complementares:
+## 🏛️ Regulação & Legislação (Top-Down)
 
-- **Top-Down**: estabelece expectativas externas — regulamentos, normas, políticas, controlos e objetivos de maturidade — e define critérios de conformidade e de governação.
-- **Bottom-Up**: descreve a realidade técnica — ameaças, incidentes, padrões de falha e classes recorrentes de vulnerabilidades — e orienta mitigação baseada em evidência empírica.
+O eixo regulatório define **obrigações legais, deveres de diligência e responsabilidade formal**. Regulamentos como NIS2, DORA, CRA ou GDPR não descrevem como desenvolver software seguro, mas estabelecem **o que tem de existir**, **quem responde** e **o que tem de ser demonstrável**.
 
-A síntese ToE resulta da integração disciplinada destas perspetivas em práticas aplicáveis ao ciclo de vida:
+No SbD–ToE, este eixo traduz-se em:
 
-- cumpre normas e regulamentos;
+- requisitos de conformidade verificável;
+- necessidade de governação explícita;
+- mecanismos de atribuição de responsabilidade;
+- exigência de evidência auditável e rastreável.
+
+A regulação não é tratada como checklist jurídica, mas como **fonte de constrangimento estrutural** que condiciona decisões técnicas e organizacionais.
+
+---
+
+## 📐 Normas & Frameworks
+
+Normas e frameworks (OWASP, NIST, ISO, ENISA, CIS, SLSA, CNCF, entre outras) traduzem obrigações e boas práticas em **capacidades esperadas**, **modelos de maturidade** e **controlos de referência**.
+
+Este eixo fornece:
+
+- uma linguagem comum para avaliar maturidade;
+- catálogos de práticas e controlos reconhecidos;
+- critérios de alinhamento externo.
+
+No SbD–ToE, estas normas **não são adotadas de forma literal**. São usadas onde são mais fortes e operacionalizadas em práticas concretas, proporcionais ao risco, integradas no SDLC e acompanhadas de critérios de validação e evidência.
+
+---
+
+## 🔍 Ameaças & Incidentes Reais (Bottom-Up)
+
+Ameaças, taxonomias de ataque, vulnerabilidades recorrentes e incidentes reais descrevem **como e onde os sistemas falham**, quais os vetores de abuso plausíveis e qual o impacto observado no mundo real.
+
+Este eixo introduz uma correção essencial ao pensamento puramente normativo:
+
+- impede que a segurança se torne apenas conformidade abstrata;
+- força mitigação baseada em risco observável;
+- ancora a prescrição em falhas empiricamente demonstradas.
+
+No SbD–ToE, ameaças não são listas estáticas, mas **inputs ativos** para requisitos, arquitetura, testes, validações e priorização.
+
+---
+
+## ⚙️ Engenharia “from the trenches”
+
+A prática diária da engenharia — desenvolvimento, integração, operação, incident response, auditorias e post-mortems — revela **o que é exequível**, **onde a teoria falha** e **quais os constrangimentos reais** de pessoas, equipas, tooling e tempo.
+
+Este eixo garante que o SbD–ToE:
+
+- permanece aplicável em contextos reais;
+- evita prescrição irrealista ou meramente aspiracional;
+- incorpora aprendizagem empírica contínua.
+
+A engenharia “from the trenches” não é anedótica: é um **mecanismo de validação estrutural** do modelo.
+
+---
+
+## 🧱 Invariantes do processo de engenharia segura
+
+Os **invariantes do processo** são propriedades estruturais que **têm de permanecer verdadeiras** para que a segurança de um sistema seja defensável. Não são boas práticas opcionais nem recomendações metodológicas — são **condições necessárias** para decisão responsável, auditoria e governação eficaz.
+
+### Definição
+
+Um invariante de processo é uma propriedade que:
+
+- atravessa domínios técnicos e fases do SDLC;
+- é independente de tecnologias ou ferramentas específicas;
+- quando violada, torna o processo **não auditável**, **não atribuível** ou **não verificável**.
+
+### Conjunto canónico de invariantes
+
+- **Separação entre sugestão e decisão**  
+  Ferramentas e mecanismos automáticos podem apoiar, sugerir ou priorizar. A decisão final tem de ser explicitamente atribuída a um role humano.
+
+- **Evidência verificável acima de plausibilidade**  
+  Resultados plausíveis ou bem articulados não substituem execução observável, artefactos versionados e validação registada.
+
+- **Rastreabilidade de decisão e execução**  
+  Deve ser possível responder, a posteriori, a quem decidiu, com base em que informação, que validações ocorreram e que evidência suporta o resultado.
+
+- **Reprodutibilidade e auditabilidade**  
+  Um observador independente deve conseguir compreender e reavaliar o processo e os resultados, ou existir controlo compensatório explícito quando isso não é possível.
+
+- **Proteção de ativos críticos do processo**  
+  Segredos, dados sensíveis, IP e artefactos de build são ativos de segurança. Qualquer dependência externa é tratada como risco de supply chain.
+
+### Porque os invariantes são centrais no SbD–ToE
+
+Sem invariantes explícitos:
+
+- a conformidade torna-se declarativa;
+- a mitigação não é verificável;
+- a responsabilidade dilui-se;
+- a auditoria perde eficácia;
+- a melhoria contínua deixa de ser mensurável.
+
+Os invariantes são o **elemento estabilizador** que permite integrar todos os outros eixos num sistema coerente.
+
+---
+
+## 🤖 Automação extensiva e o reforço dos invariantes
+
+A evolução para processos altamente automatizados e assistidos (incluindo sistemas de apoio à decisão e geração de artefactos) **não cria novos princípios de segurança**, mas **aumenta drasticamente o custo de violar os invariantes existentes**.
+
+Em particular:
+
+- aumenta a produção de resultados plausíveis mas incorretos;
+- reduz a fricção para introduzir mudanças de alto impacto;
+- introduz não-determinismo e dependências opacas no processo;
+- amplia riscos de exfiltração de dados, IP e segredos;
+- facilita delegação implícita e não controlada de decisão.
+
+Neste contexto, os invariantes deixam de ser apenas boa engenharia e passam a ser **barreiras de segurança do próprio processo**.
+
+---
+
+## 🔄 Integração disciplinada dos eixos
+
+O SbD–ToE funciona como **núcleo agregador** que transforma os cinco eixos em práticas operacionais coerentes:
+
+- cumpre obrigações legais e normativas;
 - responde a ameaças observadas e plausíveis;
-- define práticas operacionais e técnicas no SDLC e no CI/CD;
-- produz evidência verificável e rastreável.
+- respeita constrangimentos reais de engenharia;
+- aplica invariantes que garantem decisão responsável, evidência e rastreabilidade.
+
+O resultado é um modelo **prescritivo, proporcional ao risco e orientado a evidência**, aplicável ao SDLC real e defensável perante auditoria técnica, organizacional e regulatória.
 
 ---
 
 ## 🏛️ Princípios fundadores
 
-A filosofia ToE assenta em cinco princípios operativos, definidos para garantir propriedades transversais de coerência, rastreabilidade e defensibilidade em todos os domínios do manual:
+A filosofia ToE assenta em cinco princípios operativos:
 
-- **1. Proporcionalidade ao risco** — Práticas aplicadas por criticidade (L1–L3), com rigor e evidência ajustados ao impacto.
-
-- **2. Modularidade** — Capítulos autónomos por domínio técnico, permitindo adoção progressiva e melhoria contínua.
-
-- **3. Prescritividade útil** — Define **o que fazer, quando, como e por quem**, com requisitos, critérios, user stories e validações.
-
-- **4. Responsabilidade partilhada** — Segurança distribuída entre gestão, risco, arquitetura, engenharia, QA, operações e terceiros.
-
-- **5. Rastreabilidade e evidência** — Cada prática é mapeada a normas, regulamentos, ameaças e validações técnicas. O *cross-check* demonstra como cada capítulo sustenta conformidade e eficácia.
+1. **Proporcionalidade ao risco** — Práticas aplicadas por criticidade (L1–L3), com rigor e evidência ajustados ao impacto.  
+2. **Modularidade** — Capítulos autónomos por domínio técnico, permitindo adoção progressiva.  
+3. **Prescritividade útil** — Define o que fazer, quando, como e por quem.  
+4. **Responsabilidade partilhada** — Segurança distribuída por funções e níveis organizacionais.  
+5. **Rastreabilidade e evidência** — Cada prática é justificável, verificável e auditável.
 
 ---
 
-## 🧩 Como o SbD–ToE se posiciona perante os referenciais
+## 🧩 Posicionamento do SbD–ToE face aos referenciais
 
-Nenhum referencial, por si só, cobre o *Security by Design* end-to-end com detalhe prescritivo, proporcionalidade ao risco, papéis operacionais, validações CI/CD e evidência técnica.
+Nenhum referencial cobre, por si só, o *Security by Design* end-to-end com prescrição operacional, proporcionalidade ao risco, validações CI/CD e evidência técnica.
 
-O SbD–ToE:
+O SbD–ToE usa cada framework onde é mais forte, preenche lacunas onde é abstrata e integra tudo num **modelo operativo único**, aplicável à realidade organizacional e técnica.
 
-- usa cada framework **onde é mais forte**;
-- preenche lacunas **onde é abstrata**;
-- unifica tudo num **modelo operativo único**.
-
-### Referências do manual
+> O SbD–ToE é o **plano unificador** que transforma normas, ameaças e prática de engenharia num sistema coerente, defensável e orientado à execução.
 
 O manual referencia e adota conceitos de várias fontes:
 

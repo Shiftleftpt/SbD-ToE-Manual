@@ -25,6 +25,8 @@ Um **Security Champion** é um elemento técnico da equipa que atua como **multi
 
 > 🎯 São o elo entre os princípios e a prática - com impacto técnico e cultural visível.
 
+Os champions desempenham um papel humano ativo na interpretação, aplicação e disseminação das práticas de segurança, não sendo substituídos por mecanismos automatizados, mesmo em contextos de elevada automação. 
+
 ---
 
 ## 👤 Perfil de um Champion

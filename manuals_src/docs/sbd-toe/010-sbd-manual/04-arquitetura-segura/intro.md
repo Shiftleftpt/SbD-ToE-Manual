@@ -16,9 +16,12 @@ Os capítulos basilares constituem a **fundação técnica e metodológica** do 
 
 # 🏛️ Arquitetura Segura
 
+No SbD-ToE, Arquitetura Segura é tratada como um **processo de decisão técnica explícita**, proporcional ao risco da aplicação (L1–L3).  
+Decisões arquiteturais materializam a resposta a ameaças identificadas e condicionam requisitos, desenvolvimento, testes e operação, devendo ser validadas, versionadas e suportadas por evidência verificável.
+
 Este capítulo define as práticas para garantir que a arquitetura de uma aplicação **atua como contenção e mitigação do risco estrutural**, através de:
 
-- Delimitação de **zonas de confiança (ZTC)** e respetivas fronteiras
+- Delimitação de **zonas de confiança** e respetivas fronteiras
 - **Segmentação lógica e física** de componentes e dados
 - Controlo e validação de **fluxos interzonais**
 - Suporte a **threat modeling, autenticação, controlo de acesso, validação e operações seguras**
@@ -30,6 +33,16 @@ Cobre diferentes estilos de arquitetura:
 - Microserviços e API-first
 - Ambientes híbridos e cloud-native
 - Serverless e pipelines como arquitetura
+
+---
+
+## 🧭 Arquitetura segura e componentes não determinísticos
+
+A Arquitetura Segura, no contexto do SbD-ToE, **não assume que todos os componentes do sistema sejam determinísticos**. Arquiteturas modernas podem integrar componentes cujo comportamento depende de processos probabilísticos, heurísticos ou inferenciais, introduzindo variabilidade nos resultados e desafios adicionais em termos de segurança, auditoria e controlo.
+
+Estes componentes **não são tratados como exceções**, mas como **elementos arquiteturais de primeira ordem**, devendo ser explicitamente identificados, isolados e governados. A sua presença implica decisões conscientes ao nível da arquitetura, incluindo definição de fronteiras de confiança, mecanismos de supervisão, *fallbacks* operacionais, evidência de decisão e rastreabilidade face a ameaças e requisitos de segurança.
+
+Este enquadramento aplica-se independentemente da tecnologia concreta utilizada. O foco do capítulo mantém-se na **governação arquitetural do risco**, assegurando que decisões não determinísticas permanecem controláveis, auditáveis e proporcionais ao nível de criticidade da aplicação.
 
 ---
 

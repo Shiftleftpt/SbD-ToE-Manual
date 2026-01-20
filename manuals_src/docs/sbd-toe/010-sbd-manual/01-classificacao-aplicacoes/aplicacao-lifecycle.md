@@ -19,7 +19,7 @@ Este capítulo detalha, de forma operacional e prescritiva, **quando e como impl
 |----------------------------------------|-----------------------------------------------------------------|-------------------------------------------------------------------------------------|
 | 🚧 Início de projeto                   | Classificar aplicação segundo modelo E+D+I                      | [Modelo de Classificação](/sbd-toe/sbd-manual/classificacao-aplicacoes/addon/modelo-classificacao-eixos) |
 | 🔄 Nova release ou integração          | Rever classificação com base em alterações relevantes           | [Ciclo de Vida do Risco](/sbd-toe/sbd-manual/classificacao-aplicacoes/addon/ciclo-vida-risco) |
-| 🛠️ Mudança nos dados ou exposição      | Reclassificar eixo D ou E; avaliar risco residual               | [Risco Residual](/sbd-toe/sbd-manual/classificacao-aplicacoes/addon/risco-residual) |
+| 🛠️ Mudança nos dados, exposição ou automação/assistência | Reclassificar eixos E/D/I conforme impacto; avaliar risco residual | [Risco Residual](/sbd-toe/sbd-manual/classificacao-aplicacoes/addon/risco-residual) |
 | 🧪 Revisão de arquitetura              | Aplicar avaliação semiquantitativa e validar controlo aplicado  | [Avaliação Quantitativa](/sbd-toe/sbd-manual/classificacao-aplicacoes/addon/avaliacao-semiquantitativa) |
 | 🚀 Go-live                             | Validar conformidade com matriz de controlos por risco          | [Matriz de controlos por Risco](/sbd-toe/sbd-manual/classificacao-aplicacoes/addon/matriz-controlos-por-risco) |
 | ⚠️ Ameaça emergente ou nova CVE        | Reavaliar criticidade e cobertura de ameaças                    | [Mapeamento Ameaças por Risco](/sbd-toe/sbd-manual/classificacao-aplicacoes/addon/mapeamento-ameacas-risco) |
@@ -64,9 +64,17 @@ Como **Developer / Team Lead**, quero **classificar a aplicação com base nos e
 - [ ] Modelo de classificação E+D+I aplicado à aplicação  
 - [ ] Nível de criticidade (L1–L3) definido e **validado por AppSec Engineer**  
 - [ ] Documento de classificação registado e versionado em repositório Git  
+- [ ] Ferramentas de automação/assistência (incl. IA) identificadas e refletidas nos eixos E/D/I  
 - [ ] Controlos mínimos extraídos da matriz de risco e associados à aplicação  
 - [ ] **Em L2/L3: Aprovação formal por AppSec Engineer documentada**  
 - [ ] **Product Owner notificado se classificação for L3**  
+- [ ] **Se assistida por ferramenta:**
+  - [ ] Output de ferramenta (scores E/D/I, raciocínio) anexado
+  - [ ] Justificação narrativa humana clara (por quê E=X, D=Y, I=Z)
+  - [ ] Validação de cada eixo por especialistas (Developer, Arquitetos)
+  - [ ] Aprovação final por AppSec Engineer com registo explícito
+  - [ ] Ferramenta, versão, data documentados
+  - [ ] Referência: [addon-11: Validação Assistida por Ferramentas](/sbd-toe/sbd-manual/classificacao-aplicacoes/addon/11-validacao-assistida-ferramentas)
 
 :::
 
@@ -162,6 +170,13 @@ Como **AppSec Engineer**, quero **rever a classificação de criticidade sempre 
 - [ ] **Se nível alterou: dispara revisão de matriz (US-02) e mapeamento de ameaças (US-06)**  
 - [ ] **Product Owner notificado se houver impacto de negócio** (especialmente em escalação L1→L3)  
 - [ ] GRC/Compliance registra alteração em auditable trail  
+- [ ] **Se assistida por ferramenta detetor:**
+  - [ ] Ferramenta & método de deteção documentados
+  - [ ] Trigger técnico validado (falso positivo excluído)
+  - [ ] Contexto de negócio confirmado (alteração realmente relevante)
+  - [ ] Impacto em E/D/I explicado
+  - [ ] Se nível alterou: trilho de escalação documentado
+  - [ ] Referência: [addon-11: Validação Assistida por Ferramentas](/sbd-toe/sbd-manual/classificacao-aplicacoes/addon/11-validacao-assistida-ferramentas)
 
 :::
 
@@ -210,7 +225,12 @@ Como **AppSec Engineer**, quero **rever a classificação com cadência fixa (L1
 - [ ] **Se nível alterado: dispara US-02 (matriz) e US-06 (ameaças)**  
 - [ ] **Product Owner notificado se houver impacto de negócio** (especialmente L1→L3)  
 - [ ] **GRC/Compliance registra em audit trail**  
-
+- [ ] **Se assistida por ferramenta de análise:**
+  - [ ] Ferramenta forneceu re-scoring de E/D/I?
+  - [ ] Comparação: score anterior vs. score novo documentada
+  - [ ] Se discordância (máquina vs. AppSec): trilho de resolução registado
+  - [ ] Validação temporal: revisão de dados, dependências, impacto esperado para próximos 12m
+  - [ ] Referência: [addon-11: Validação Assistida por Ferramentas](/sbd-toe/sbd-manual/classificacao-aplicacoes/addon/11-validacao-assistida-ferramentas)
 :::
 
 **Artefactos & evidências.**
@@ -494,6 +514,14 @@ Como **AppSec Engineer**, quero **verificar se as ameaças esperadas para o nív
 - [ ] **Arquitetos envolvidos para validação de contexto técnico**  
 - [ ] Resultados registados e rastreáveis  
 - [ ] **Se ameaça crítica não coberta: dispara US-04 (risco residual) ou mitigação obrigatória**  
+- [ ] **Se assistido por ferramenta de mapeamento:**
+  - [ ] Ferramenta & versão documentados
+  - [ ] Ameaças genéricas não-contextuais filtradas?
+  - [ ] Ameaças específicas de domínio adicionadas (validação especialistas)?
+  - [ ] Priorização (crítica vs. minor) correcta?
+  - [ ] Ameaças críticas não cobertas dispararam US-04 (risco residual)?
+  - [ ] Validação por Arquitetos + especialistas de domínio concluída
+  - [ ] Referência: [addon-11: Validação Assistida por Ferramentas](/sbd-toe/sbd-manual/classificacao-aplicacoes/addon/11-validacao-assistida-ferramentas)
 
 :::
 
@@ -732,4 +760,3 @@ Como **Gestão Executiva/CISO**, quero que existam **4 políticas organizacionai
 - Validar proporcionalidade no go-live e documentar evidências.  
 - Consolidar **KPIs** organizacionais para *compliance* e melhoria contínua.  
 - Alinhar práticas com as **políticas organizacionais** de classificação, exceções e revisão periódica.
-

@@ -46,7 +46,100 @@ Estas práticas são complementares: só fazem sentido quando atuam em conjunto,
 
 ---
 
-## 🧪 Prescrição prática
+## � Automação e Governação em Monitorização
+
+A monitorização segura combina **automação extensiva** com **governação explícita**, diferenciando:
+
+### Decisões Determinísticas (Automação Soberana)
+
+Quando critérios são **objetivos, reprodutíveis e isentos de contexto**, a automação pode operar sem intervenção:
+
+- **Alertas de threshold**: CPU >90% por 5 min → alerta automático
+- **Bloqueio de IP por rate limiting**: >1000 req/min → bloqueio automático
+- **Correlação temporal simples**: 5 logins falhados em 60s → alerta automático
+- **Ingestão em SIEM**: Log válido → parse e indexação automáticos
+
+**Princípio**: Automação determinística **pode operar sem aprovação humana** se critérios estão formalmente definidos e versionados.
+
+### Decisões Não-Determinísticas (Governação Obrigatória)
+
+⚠️ **CRÍTICO**: Automação não-determinística **NÃO PODE** operar sem governação humana.
+
+Quando decisões envolvem **contexto, heurísticas ou comportamento**, exigem validação humana:
+
+- **Correlação comportamental**: Padrão suspeito mas não confirmado → IR valida antes de ação
+- **Ajuste de thresholds**: Alerta com >30% falsos positivos → AppSec aprova novo threshold
+- **Exceções a alertas**: Padrão legítimo mas suspeito → Exceção formal com validade temporal
+- **Ações de alto impacto**: Isolar subnet completa → IR + Gestão aprovam
+
+**Princípio**: Decisões não-determinísticas **NÃO PODEM** ser automatizadas sem validação, aprovação e rastreabilidade humanas. A automação pode **assistir**, mas nunca **decidir sozinha**.
+
+### Guardrails de Automação em SOAR
+
+Mesmo playbooks automatizados têm **limites explícitos**:
+
+| Ação SOAR | Limite | Razão |
+|-----------|--------|-------|
+| Bloqueio de IPs | Máx 100 IPs/hora | Prevenir DoS self-inflicted |
+| Isolamento de máquinas | Máx 10 hosts/hora | Prevenir cascata de isolamentos |
+| Purga de logs | **NUNCA automático** | Evidência é irreversível |
+| Desativação de alertas | **NUNCA automático** | Cria blind spots |
+| Alteração de baselines | Sempre manual + aprovação | Impacto lateral em correlação |
+
+**Princípio**: Automação **NÃO PODE** executar ações irreversíveis ou com impacto operacional crítico sem intervenção humana. Mesmo em contextos determinísticos, ações de alto risco exigem aprovação.
+
+---
+
+## 🔐 Gestão de Exceções em Alertas
+
+Exceções a alertas (ex: padrão legítimo mas suspeito) seguem processo formal:
+
+1. **Template de exceção** (versionado em repo):
+   ```yaml
+   exception_id: ALERT-EX-2026-001
+   alert_id: CORR-BEHAVIOR-001
+   pattern: "User X downloads 10GB/dia (backup legítimo)"
+   justification: "Processo de backup automático, validado com Dev"
+   approved_by: "AppSec Lead (email@example.com)"
+   approved_date: "2026-01-04"
+   expiration_date: "2026-07-04"  # Máximo 6 meses
+   evidence: "link/to/ticket-JIRA-123"
+   ```
+
+2. **Aprovador por severidade de alerta**:
+   - CRITICAL: AppSec + IR Lead
+   - HIGH: AppSec Lead
+   - MEDIUM: IR Analyst
+
+3. **Validade temporal**: Exceções expiram automaticamente (máx 6 meses L2, 3 meses L3)
+
+4. **Reavaliação**: Antes de expiração, padrão é reavaliado
+
+---
+
+## 🚨 Kill Switch para Alertas Mal Calibrados
+
+Em caso de "alert storm" ou alerta mal calibrado:
+
+1. **Kill switch temporário**: IR pode desativar alerta por máx 2 horas
+2. **Notificação obrigatória**: Desativação notifica AppSec Lead automaticamente
+3. **Root cause analysis**: Obrigatória antes de reativar
+4. **Documentação**: Template de RCA + correção aplicada
+
+**Exemplo**:
+```yaml
+kill_switch_id: KS-2026-001
+alert_id: CORR-BEHAVIOR-001
+reason: "Falsos positivos em 80% dos alertas (threshold mal calibrado)"
+disabled_by: "IR Analyst (email@example.com)"
+disabled_at: "2026-01-04 14:30"
+expiration: "2026-01-04 16:30"  # Máx 2 horas
+rca_required: true
+```
+
+---
+
+## �🧪 Prescrição prática
 
 Na prática, aplicar este capítulo significa responder a quatro perguntas fundamentais:  
 

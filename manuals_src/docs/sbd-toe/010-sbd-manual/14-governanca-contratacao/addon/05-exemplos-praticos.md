@@ -67,7 +67,7 @@ Contrato de licenciamento de software de armazenamento em cloud, utilizado por s
 **Ações realizadas:**
 - [x] Atualização das cláusulas contratuais para refletir novos requisitos (REQ-DAT-004, REQ-BKP-002)
 - [x] Validação técnica do SBOM do agente de sincronização
-- [x] Aceitação formal de SLA de mitigação de CVEs em \<5 dias
+- [x] Aceitação formal de SLA de mitigação de CVEs em `<`5 dias
 - [x] Formação atualizada da PO e da equipa de IT Ops envolvida
 
 **Owner da renovação:** sofia.rodrigues@empresa  
@@ -128,7 +128,7 @@ A ferramenta usada (BuilderX) não suporta autenticação multifator. O risco fo
 | Compensação aplicada      | Alertas via SIEM + backup externo                             |
 | Owner e aprovação         | nuno.ferreira@empresa + CISO                                  |
 | Validade da decisão       | 3 meses + reavaliação programada                              |
-| Formação obrigatória      | ✔️ Ambos com certificação interna válida (\<12 meses)
+| Formação obrigatória      | ✔️ Ambos com certificação interna válida (`<`12 meses)
 
 ---
 
@@ -139,5 +139,6 @@ A ferramenta usada (BuilderX) não suporta autenticação multifator. O risco fo
 - Devem ser associados aos artefactos de aplicação, fornecedor ou release
 - A existência destes registos suporta auditorias, governance e decisão executiva
 - A **formação obrigatória para funções críticas** (Cap. 13) deve ser verificada antes de validações formais
+- Sempre que parte do processo seja suportada por mecanismos automatizados, deve ficar explícito no registo quem validou e assumiu a decisão final.
 
 ---

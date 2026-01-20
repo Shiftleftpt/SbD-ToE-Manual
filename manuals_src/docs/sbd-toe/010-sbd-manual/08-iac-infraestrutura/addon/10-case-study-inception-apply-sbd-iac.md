@@ -1,114 +1,141 @@
 ---
 id: case-study-inception-apply-sbd-iac
-title: Caso de Estudo - Aplicação do SbD-ToE a um Projeto IaC
+title: Caso de Estudo – Aplicação do SbD-ToE a um Projeto IaC
 sidebar_position: 10
-description: Estudo de caso completo demonstrando a aplicação das práticas de segurança de IaC desde o início de projeto até à sua execução em produção.
-tags: [caso de estudo, iac, inception, segurança, aplicação prática]
+description: Estudo de caso demonstrando a aplicação integrada, independente da autoria, das práticas de Segurança em Infraestrutura como Código ao longo de todo o ciclo de vida.
+tags: [caso-de-estudo, iac, sbd-toe, aplicacao-pratica, seguranca]
 ---
 
+# 🧪 Caso de Estudo – Aplicar o SbD-ToE a um Projeto de Infraestrutura como Código (IaC)
 
-# 🧪 Estudo de Caso - Aplicar o SbD-ToE a um Projeto de IaC
+Este estudo de caso descreve a **aplicação prática, integrada e rastreável** do manual **Security by Design – Theory of Everything (SbD-ToE)** a um projeto real de **Infraestrutura como Código (IaC)**.
 
-Este estudo de caso descreve a aplicação prática e transversal do manual **Security by Design - Theory of Everything (SbD-ToE)** a um **projeto real de Infraestrutura como Código (IaC)**. O objetivo foi aplicar as práticas prescritas no Capítulo 08 de forma sistemática, desde a estrutura do repositório até à auditoria e validação contínua.
+O objetivo não é ilustrar ferramentas, estilos de autoria ou processos criativos, mas demonstrar **como as prescrições do Capítulo 08 são aplicadas de forma objetiva e verificável**, desde a fase de *inception* até à operação contínua em produção.
 
-> O projeto tratado aqui é responsável pela definição de ambientes (dev, QA, prod) num cluster Kubernetes e respetivos serviços de rede, autenticação e logging. Foi considerado de **criticidade L3**.
+> **Nota fundamental:**  
+> Neste estudo assume-se explicitamente que **qualquer código IaC pode ter sido produzido total ou parcialmente com apoio de ferramentas automatizadas**, incluindo sistemas de geração de código.  
+> Por essa razão, **nenhuma confiança é atribuída à autoria ou origem do código**.  
+> Todos os artefactos são tratados como **input não confiável até validação técnica completa**, de acordo com o modelo SbD-ToE.
+
+O projeto analisado define ambientes `dev`, `staging` e `prod` para um cluster Kubernetes e respetivos serviços de rede, identidade e observabilidade. Foi classificado como **criticidade L3 (elevada)**.
 
 ---
 
 ## 🧭 Classificação de risco
 
-Através da metodologia do Capítulo 01 - Gestão de Risco, foi atribuída classificação **L3 (Elevado)** ao projeto IaC, com base em:
+A classificação foi realizada segundo o **Capítulo 01 — Gestão de Risco**, tendo resultado em **L3**, com base nos seguintes fatores:
 
-* Capacidade de impactar ambientes produtivos e múltiplas aplicações;
-* Acesso a recursos críticos (VPC, certificados, serviços core);
-* Potencial de causar interrupções e incidentes de segurança em larga escala.
+* Capacidade de impactar diretamente ambientes produtivos;
+* Controlo de recursos críticos (rede, identidade, certificados, logging);
+* Efeito transversal sobre múltiplas aplicações e equipas;
+* Potencial elevado de impacto operacional e reputacional.
+
+Esta classificação determinou a **aplicação integral dos requisitos, validações e gates de aceitação** previstos para L3 no Capítulo 08, independentemente da origem do código.
 
 ---
 
 ## 📐 Arquitetura e modelo de repositório
 
-* Uso de Terraform com estrutura modular por ambiente;
-* Separação física de repositórios: `iac-core`, `iac-prod`, `iac-nonprod`;
-* Pipelines CI/CD separados por ambiente e com controlos distintos;
-* Utilização de GitHub Actions com `OPA` e `Checkov` em todos os PRs;
-* Backend remoto com locking e encriptação (`S3 + DynamoDB + KMS`).
+O desenho técnico do projeto seguiu princípios de desacoplamento, segregação e controlo explícito:
+
+* Terraform como ferramenta declarativa principal;
+* Estrutura modular por domínio técnico;
+* Separação física de repositórios:
+
+  * `iac-core` (módulos e políticas comuns);
+  * `iac-nonprod` (ambientes não produtivos);
+  * `iac-prod` (produção, com controlos reforçados);
+* Pipelines CI/CD distintos por ambiente;
+* Backend remoto com *locking* e encriptação (`S3 + DynamoDB + KMS`).
+
+Esta estrutura assegura que **nenhuma alteração pode ser aplicada sem passar pelos mecanismos formais de validação, aprovação e evidência**, independentemente de quem ou do que produziu o código.
 
 ---
 
-## 🔍 Threat modeling
+## 🔍 Threat Modeling aplicado a IaC
 
-Aplicado conforme Capítulo 03 - Threat Modeling:
+O *threat modeling* foi conduzido de acordo com o **Capítulo 03 — Threat Modeling**, tratando o projeto IaC como um **ativo crítico**.
 
-* Análise STRIDE dos fluxos de aplicação da infraestrutura;
-* Identificação de ameaças como:
+Foram analisados os principais fluxos e superfícies de ataque, considerando explicitamente cenários de:
 
-  * **Tampering** (modificação maliciosa de módulos externos);
-  * **Information Disclosure** (exposição por permissões abertas ou tags inadequadas);
-  * **Repudiation** (alterações sem evidência ou accountability);
-* Mitigações mapeadas contra requisitos `IAC-XXX` e controlos no pipeline.
+* alterações introduzidas por automação;
+* reutilização de módulos externos;
+* geração de código a partir de templates ou sugestões.
+
+As ameaças identificadas incluíram:
+
+* **Tampering**: modificação maliciosa ou inadvertida de módulos ou *plans*;
+* **Information Disclosure**: exposição de topologia, permissões ou *tags* sensíveis;
+* **Repudiation**: alterações sem evidência ou responsabilização clara;
+* **Elevation of Privilege**: permissões IAM excessivas introduzidas por erro humano ou automatização.
+
+Cada ameaça foi mapeada para requisitos `IAC-XXX` e respetivos controlos técnicos no pipeline.
 
 ---
 
 ## 🧱 Aplicação dos requisitos de segurança
 
-Todos os requisitos `IAC-001` a `IAC-013` foram revistos e aplicados proporcionalmente:
+Todos os requisitos **IAC-001 a IAC-013** foram avaliados e aplicados segundo a matriz de proporcionalidade L3:
 
-* Drift detection ativa (`terraform plan`, `driftctl`, alarmes);
-* Validações automáticas (`tfsec`, `tflint`, `OPA`, `Conftest`);
-* Controlo de segredos via Vault (integração com `secrets.tf.json`);
-* Versionamento com tagging, releases e rastreabilidade de `plan`;
-* Separação clara de ambientes e políticas obrigatórias de tagging.
+* Backend remoto com *locking* obrigatório;
+* Validações automáticas completas (`tflint`, `tfsec`, `Checkov`, OPA/Conftest);
+* *Drift detection* ativa (`terraform plan`, `driftctl`, alertas);
+* Governação formal de módulos internos e externos;
+* Gestão de segredos via Vault e *workload identity*;
+* Rastreabilidade total entre código, *plan*, *apply* e ambiente;
+* Enforcement bloqueante de políticas em todos os *pipelines*.
 
----
-
-## 📊 Validações e evidência
-
-Com base no Capítulo 10:
-
-* Todos os `PRs` requerem validação automática e revisão humana;
-* Relatórios de validação são arquivados automaticamente por ambiente;
-* Foi implementada auditoria contínua sobre `plan vs apply`;
-* Exceções são documentadas e validadas por AppSec segundo Capítulo 14.
+Em nenhum momento a aceitação de alterações dependeu da autoria do código, mas **exclusivamente da evidência técnica produzida**.
 
 ---
 
-## 🔐 Integração com pipeline CI/CD
+## 📊 Validação, evidência e auditoria
 
-* Os pipelines são validados com política de branch restrita;
-* Cada `push` a `main` aciona validação + `terraform plan`, com bloqueio de `apply` sem aprovação;
-* A execução dos pipelines é feita em runners dedicados, com logs centralizados;
-* A assinatura dos artefactos `plan` é feita via hash e armazenada com metadados.
+A estratégia de validação seguiu o modelo definido no **Capítulo 10 — Validação**:
+
+* Todos os *Pull Requests* exigem validação automática e revisão humana;
+* Relatórios de validação são arquivados por ambiente e *build*;
+* Comparação contínua entre `plan` aprovado e `apply` executado;
+* Exceções formalizadas, temporárias e aprovadas por AppSec, conforme **Capítulo 14**.
+
+Este modelo garante que **qualquer contribuição — humana ou automatizada — é sujeita ao mesmo escrutínio técnico**.
 
 ---
 
-## 🎓 Formação e onboarding
+## 🔐 Integração com pipelines CI/CD
 
-Reconhecendo que o projeto IaC envolve práticas específicas e requisitos técnicos exigentes, foi criado um **módulo de formação dedicado à equipa responsável pelo desenvolvimento e manutenção do código de infraestrutura**. Este módulo cobre:
+Os pipelines CI/CD foram desenhados como **mecanismos de controlo e decisão**, não apenas de automação:
 
-* Os requisitos de segurança aplicáveis (`REQ-XXX`, `IAC-XXX`);
-* As ferramentas obrigatórias no pipeline (`tfsec`, `Checkov`, `OPA`, `driftctl`);
-* Boas práticas de segregação de ambientes e tagging;
-* Gestão de segredos via KMS/Vault;
-* Ciclo de validação e evidência;
-* Como interpretar falhas de conformidade e agir sobre elas;
-* Processo de exceções e governação associada.
+* *Branch protection* e regras de *merge* restritivas;
+* Execução obrigatória de `terraform plan` em PR;
+* *Apply* apenas permitido após aprovação explícita e validação de artefactos;
+* *Runners* dedicados e isolados;
+* Assinatura e hash dos artefactos (`plan`, relatórios, manifests).
 
-> A formação foi disponibilizada em formato síncrono e assíncrono, com exemplos baseados no próprio repositório do projeto.
+---
 
-Além disso:
+## 🎓 Formação e capacitação da equipa
 
-* Foram incluídas **user stories de segurança no backlog** técnico da equipa;
-* Foi criada uma **checklist de onboarding para novos elementos**, com foco nas práticas prescritas pelo Capítulo 08;
-* O processo de formação é considerado **requisito para contribuição com permissões de escrita no repositório**.
+Reconhecendo que IaC seguro exige competências específicas, foi criado um **programa de formação dedicado**, cobrindo:
+
+* Requisitos `REQ-XXX` e `IAC-XXX`;
+* Interpretação de *findings* e impactos reais;
+* Validação de alterações independentemente da autoria;
+* Gestão de segredos e identidade;
+* Ciclo completo de validação, evidência e exceções.
+
+A formação tornou-se **pré-requisito para permissões de escrita**, reforçando que **a responsabilidade final é sempre humana**, mesmo quando existem ferramentas de apoio automatizado.
 
 ---
 
 ## ✅ Conclusão
 
-Este caso demonstra a **aplicação coerente e sistemática do SbD-ToE a um projeto real de Infraestrutura como Código (IaC)**. A abordagem permitiu:
+Este caso de estudo demonstra que o **SbD-ToE aplica-se de forma uniforme e robusta a projetos IaC**, assumindo por defeito que **o código não é confiável até prova em contrário**.
 
-* Aumentar o controlo e previsibilidade das alterações;
-* Reduzir falhas causadas por erro humano ou prática obsoleta;
-* Estabelecer uma base sólida para governação, rastreabilidade e auditoria.
+A abordagem permite:
 
-> 💡 Este estudo pode ser reutilizado como modelo para novos projetos IaC, como base de formação ou como critério de aceitação organizacional.
+* Neutralizar riscos introduzidos por automação ou reutilização;
+* Manter critérios de aceitação estáveis ao longo do tempo;
+* Escalar IaC seguro sem depender de confiança implícita em pessoas ou ferramentas.
+
+> 💡 Este estudo constitui o **modelo canónico de aplicação do SbD-ToE a IaC**, válido independentemente da evolução das ferramentas de autoria.

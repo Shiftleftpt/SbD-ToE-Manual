@@ -26,7 +26,7 @@ Durante a fase de concepção de um novo serviço de autenticação (`auth-servi
 
 ---
 
-## 🔁 Modelação com OWASP Threat Dragon
+## 🔁 Modelação com DFD (representação do sistema)
 
 ### 🔷 Threat Model - auth-service (DFD em Mermaid)
 
@@ -132,6 +132,6 @@ Este exemplo ilustra um caso típico de arquitectura moderna com:
 - Falta de validações e controlos básicos
 
 > Mesmo em arquitecturas aparentemente simples, o **uso indevido de standards** (ex: JWT sem assinatura) pode introduzir **falhas críticas**.  
-> O uso de uma **abordagem estruturada (como STRIDE e OWASP Threat Dragon)** permite identificar e mitigar ameaças antes da entrada em produção.
+> O uso de uma abordagem estruturada (ex.: STRIDE) e de uma representação explícita dos fluxos (DFD) permite identificar e mitigar ameaças antes da entrada em produção.
 
 Este modelo de ameaça deve ser documentado, versionado e reutilizado noutros serviços com arquitectura idêntica, conforme descrito na secção “♻️ Reutilização de Threat Models”.

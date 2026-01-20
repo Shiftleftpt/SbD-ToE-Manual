@@ -15,6 +15,8 @@ O objetivo é garantir que a aprendizagem **não é paralela à execução real*
 
 > A formação torna-se sustentável quando é **ativa, rotativa, prática e visível**.
 
+> A integração da formação com outros domínios do SbD-ToE não pressupõe delegação de responsabilidade a mecanismos automatizados, mas sim capacitação para a sua utilização correta e consciente.
+
 ---
 
 ## 🧬 Princípios da aprendizagem transversal

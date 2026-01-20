@@ -13,6 +13,9 @@ Este ficheiro estabelece a **rastreabilidade entre as práticas prescritas neste
 
 > A rastreabilidade é feita de forma **top-down**, demonstrando como o SbD-ToE cobre sistematicamente os requisitos normativos e de maturidade técnica associados à gestão segura de dependências e supply chain.
 
+> **Nota:** O SbD-ToE reconhece que a completude de inventário de dependências é limitada por fatores técnicos e operacionais.  
+> As práticas deste capítulo mitigam esse risco através da definição explícita de fronteiras de inventário, deteção de desvios e governação de dependências emergentes, reforçando os objetivos de frameworks como SSDF e SLSA sem assumir inventários perfeitos.
+
 ---
 
 ## 📌 Tabela de Rastreabilidade

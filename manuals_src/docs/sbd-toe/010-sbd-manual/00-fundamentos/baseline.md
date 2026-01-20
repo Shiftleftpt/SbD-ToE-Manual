@@ -15,6 +15,10 @@ Sem esse alicerce, a organização fragmenta-se: algumas equipas aplicam prátic
 As **obrigações mínimas transversais** são, por isso, a base do SbD-ToE.  
 Não pretendem substituir a proporcionalidade L1–L3, mas antes criar uma camada uniforme que garante que, seja qual for a aplicação, existe sempre um conjunto de controlos elementares implementados.
 
+Estas obrigações não se aplicam apenas ao código ou à aplicação em si. Aplicam-se igualmente a **processos, pipelines, ambientes, automações e integrações externas** que participem no ciclo de vida do software.
+
+A não aplicação de qualquer obrigação mínima **não é uma escolha técnica**, mas uma **decisão organizacional formal**, que deve ser explicitamente justificada, aprovada e rastreável conforme o modelo de governação do SbD-ToE (Cap. 14).
+
 ---
 
 ## 🎯 O Núcleo Duro: 8 Obrigações Transversais
@@ -68,7 +72,7 @@ Independentemente do nível de risco, **todas as aplicações** devem implementa
 ### 5️⃣ **Pipelines CI/CD com Verificações Mínimas** (Cap. 07)
 **O what**: Executar pipelines CI/CD com gates mínimos de segurança (SAST, dependency scanning, secret scanning). Nunca fazer deploy sem validações.
 
-**Por quê**: Pipelines automáticos garantem que nenhum código vulnerável chega a produção por lapso humano.
+**Por quê**: Pipelines automáticos garantem que nenhum código vulnerável chega a produção por lapso humano. Estas verificações podem ser totalmente automatizadas,desde que os critérios de execução e bloqueio sejam objetivos, determinísticos e auditáveis.
 
 **Responsável**: DevOps, AppSec
 

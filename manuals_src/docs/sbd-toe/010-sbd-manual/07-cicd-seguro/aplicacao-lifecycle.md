@@ -8,49 +8,62 @@ genia: us-format-normalization
 
 # 📅 Aplicação no Ciclo de Vida - CI/CD Seguro
 
-Enquanto o `intro.md` explica **porque os pipelines são críticos** e que práticas devem ser aplicadas, este documento mostra **como transformar essas prescrições em ações concretas** dentro do ciclo de vida de desenvolvimento e entrega.  
-A lógica é simples mas poderosa: cada controlo deve ter um momento certo, um responsável definido, uma user story clara e uma evidência verificável.  
-Só assim a segurança em CI/CD deixa de ser teórica e passa a ser **prática operacional auditável**.
+Enquanto o `intro.md` explica **porque os pipelines são críticos** e que práticas devem ser aplicadas, este documento mostra **como transformar essas prescrições em ações concretas** ao longo do ciclo de vida de desenvolvimento e entrega.
+
+O princípio orientador é simples e não negociável:
+
+- o pipeline pode automatizar **execução** e produzir **sinais**;
+- mas a organização só ganha segurança quando existe **decisão humana atribuída**, **validação empírica** e **evidência auditável**.
+
+À medida que a automação se torna mais sofisticada, surgem riscos de processo adicionais: não-determinismo, “aprovação implícita” por outputs, evidência plausível sem execução real, fuga de contexto e diluição de responsabilidade.  
+Este documento operacionaliza essas preocupações sem “falar de tecnologia”: trata-as como **controlos de engenharia** e **governação do pipeline**.
 
 ---
 
 ## 🧭 Quando aplicar
 
-A segurança em pipelines não acontece apenas quando algo corre mal - ela é parte do seu ADN desde o primeiro commit.  
-Cada vez que se cria, altera ou promove um pipeline, existem triggers que exigem controlos específicos:
+A segurança em pipelines não acontece apenas quando algo corre mal — ela é parte do seu ADN desde o primeiro commit.  
+Sempre que se cria, altera, executa ou promove um pipeline, existem *triggers* que exigem controlos específicos:
 
-| Momento *trigger*                                 | Objetivo de segurança                                | Papéis principais        |
-|--------------------------------------------------|------------------------------------------------------|--------------------------|
-| Criação ou refactor do pipeline                   | Introduzir controlos base (proteção, scanners)       | Developers, DevOps / SRE         |
-| Alteração de tooling/infra (runners, secrets)     | Rever isolamento, injeção de segredos e permissões   | DevOps / SRE, AppSec Engineers           |
-| Introdução/atualização de scanners                | Aumentar cobertura e gates proporcionais ao risco    | Developers, AppSec Engineers         |
-| Preparação de release / promoção a produção       | Validar assinatura e proveniência dos artefactos     | DevOps / SRE, AppSec Engineers           |
-| Registo de exceção (*bypass* de gate)               | Aprovação formal, prazos e compensações              | GRC / Compliance, Auditores Internos, AppSec Engineers    |
-| Auditoria ou revisão periódica                    | Demonstrar rastreabilidade ponta-a-ponta             | GRC / Compliance, Auditores Internos, DevOps / SRE    |
+| Momento *trigger*                                                   | Objetivo de segurança                                                                 | Papéis principais                               |
+|--------------------------------------------------------------------|----------------------------------------------------------------------------------------|------------------------------------------------|
+| Criação ou refactor do pipeline                                    | Introduzir controlos base, garantir auditabilidade e evitar alterações “fora do PR”    | Developers, DevOps / SRE                       |
+| Alteração de regras de decisão (gates/thresholds)                  | Garantir separação entre sinal automático e decisão; evitar bypass implícito           | AppSec Engineers, DevOps / SRE, GRC / Compliance |
+| Alteração de tooling/infra (runners, permissões, segredos)         | Rever isolamento, injeção de segredos, blast radius e não-repúdio                      | DevOps / SRE, AppSec Engineers                 |
+| Introdução/atualização de validadores (scanners, testes, policies) | Aumentar cobertura e gates proporcionais ao risco; garantir evidência de execução real | Developers, AppSec Engineers, DevOps / SRE     |
+| Integração de serviços externos no pipeline                        | Tratar como dependência; minimizar contexto; mitigar risco de exfiltração              | DevOps / SRE, AppSec Engineers, GRC / Compliance |
+| Preparação de release / promoção a produção                        | Validar assinatura, proveniência, rastreabilidade e responsabilidade humana            | DevOps / SRE, AppSec Engineers                 |
+| Registo de exceção (*bypass* de gate)                              | Aprovação formal, prazos, compensações e reversão automática                            | GRC / Compliance, Auditores Internos, AppSec Engineers |
+| Auditoria ou revisão periódica                                     | Demonstrar rastreabilidade ponta-a-ponta e reprodutibilidade                            | GRC / Compliance, Auditores Internos, DevOps / SRE |
 
 ---
 
 ## 👥 Quem executa cada ação
 
 A responsabilidade em CI/CD é **partilhada**.  
-Um pipeline seguro resulta da soma de esforços: do programador que submete código com scanners ativos, ao DevOps que endurece runners, até ao GRC que valida exceções.
+Um pipeline seguro resulta da soma de esforços: do programador que submete código com validações ativas, ao DevOps que endurece runners e segredos, até ao GRC que controla exceções e evidencia governação.
 
-| Ação operacional                                                      | Responsável  | Apoio                | Evidência/Artefactos                          |
-|-----------------------------------------------------------------------|--------------|----------------------|-----------------------------------------------|
-| Definir/alterar pipeline versionado via PR                            | Developers     | DevOps / SRE               | `ci-pipeline.yml`, histórico de revisão       |
-| Endurecer runners (ephemerais, não-privilegiados, segregados)         | DevOps / SRE       | AppSec Engineers               | Configuração de runners, imagens base         |
-| Integrar scanners (SAST, secrets, IaC, containers, SBOM)              | Developers     | AppSec Engineers, DevOps / SRE       | Relatórios de scanners, configs no pipeline   |
-| Injeção segura de segredos (OIDC, TTL curto, masked logs)             | DevOps / SRE       | AppSec Engineers               | Políticas de segredos, logs de acesso         |
-| Assinar artefactos e gerar proveniência                               | DevOps / SRE       | AppSec Engineers               | Assinaturas, ficheiros de proveniência        |
-| Definir políticas/gates por risco (L1–L3)                             | AppSec Engineers       | DevOps / SRE, GRC / Compliance          | Regras de gates, thresholds                   |
-| Registar e aprovar exceções                                           | GRC / Compliance, Auditores Internos| AppSec Engineers               | Registo formal de exceções e aprovações       |
-| Garantir rastreabilidade ponta-a-ponta                                | DevOps / SRE       | GRC / Compliance, Auditores Internos        | Logs correlacionados commit→pipeline→release  |
+| Ação operacional                                                                 | Responsável                 | Apoio                                  | Evidência/Artefactos |
+|----------------------------------------------------------------------------------|-----------------------------|----------------------------------------|----------------------|
+| Definir/alterar pipeline versionado via PR                                        | Developers                  | DevOps / SRE                           | `ci-pipeline.yml`, histórico de revisão |
+| Definir regras de decisão (gates/thresholds) explícitas e binárias por risco      | AppSec Engineers            | DevOps / SRE, GRC / Compliance         | Regras de gates, critérios publicados, registos de alteração |
+| Endurecer runners (ephemerais, não-privilegiados, segregados)                     | DevOps / SRE                | AppSec Engineers                       | Configuração de runners, imagens base, evidência de isolamento |
+| Integrar validadores (SAST, secrets, IaC, containers, SBOM, DAST quando aplicável)| Developers                  | AppSec Engineers, DevOps / SRE         | Relatórios + logs de execução + *exit codes* |
+| Injeção segura de segredos (OIDC, TTL curto, masked logs)                         | DevOps / SRE                | AppSec Engineers                       | Políticas de segredos, logs de acesso, evidência de rotação/TTL |
+| Assinar artefactos e gerar proveniência                                           | DevOps / SRE                | AppSec Engineers                       | Assinaturas, proveniência, logs de verificação antes de promoção |
+| Aprovar promoção/deploy (ações irreversíveis) com owner explícito                 | DevOps / SRE                | AppSec Engineers (L2/L3), GRC (L3)     | Registo nominal de aprovação, contexto e evidência associada |
+| Registar e aprovar exceções (com prazo e compensações)                            | GRC / Compliance, Auditores Internos | AppSec Engineers                   | Registo formal de exceções e aprovações, TTL, plano compensatório |
+| Garantir rastreabilidade commit→pipeline→release                                  | DevOps / SRE                | GRC / Compliance, Auditores Internos   | Logs correlacionados, IDs, export imutável (quando aplicável) |
+| Garantir higiene de logs/outputs (minimização de contexto sensível)               | DevOps / SRE                | AppSec Engineers                       | Política de logging, evidência de mascaramento/redação, revisão periódica |
 
 ---
 
 ## 🧾 User Stories normalizadas
 
 Cada prática é expressa como **user story reutilizável**, com critérios verificáveis, artefactos concretos e proporcionalidade por nível de risco.
+
+> Nota editorial: estas user stories assumem explicitamente que **“output bonito” não é evidência** e que **sugestões nunca equivalem a decisão**.  
+> Sempre que existam sinais automáticos (scores, recomendações, flags), estes são tratados como *inputs* para uma decisão humana formal.
 
 ---
 
@@ -60,7 +73,7 @@ Cada prática é expressa como **user story reutilizável**, com critérios veri
 Sem controlo sobre o repositório, qualquer pipeline é vulnerável.
 
 :::userstory
-**História.**   
+**História.**  
 Como **Developers**, quero que todas as alterações ao repositório sejam protegidas por PR e revisão obrigatória, para garantir integridade.
 
 **Critérios de aceitação (BDD).**
@@ -68,8 +81,8 @@ Como **Developers**, quero que todas as alterações ao repositório sejam prote
   **Quando** submeto um PR para `main`  
   **Então** só é aceite após revisão obrigatória e todos os *checks* concluídos com sucesso.  
 - **Dado** que ocorre um *merge*  
-  **Quando** são detetados conflitos  
-  **Então** é exigida nova revisão e execução automática dos scanners de segurança.  
+  **Quando** são detetados conflitos ou alterações relevantes na superfície de ataque  
+  **Então** é exigida nova revisão e reexecução automática dos validadores definidos.  
 
 **Checklist.**
 - [ ] Branch protection ativa  
@@ -79,9 +92,9 @@ Como **Developers**, quero que todas as alterações ao repositório sejam prote
 :::
 
 **🧾 Artefactos & evidências.**  
-Políticas de branch protection; logs de revisão; histórico Git; auditoria de merges.  
+Políticas de branch protection; logs de revisão; histórico Git; auditoria de merges.
 
-**⚖️ Proporcionalidade.**  
+**⚖️ Proporcionalidade.**
 | Nível | Obrigatório? | Ajustes |
 |-------|---------------|----------|
 | L1 | Sim | Revisão simples e *build check* obrigatório |
@@ -90,91 +103,99 @@ Políticas de branch protection; logs de revisão; histórico Git; auditoria de 
 
 ---
 
-### US-02 - Design seguro dos pipelines
+### US-02 - Design seguro dos pipelines (versionamento, determinismo e revisão)
 
 **Contexto.**  
-Pipelines inseguros são alvos privilegiados de ataque.
+Pipelines inseguros são alvos privilegiados de ataque — e pipelines não reprodutíveis destroem auditoria.
 
 :::userstory
-**História.**   
-Como **DevOps / SRE**, quero pipelines versionados e aprovados por PR, para evitar alterações não auditadas.
+**História.**  
+Como **DevOps / SRE**, quero pipelines versionados e aprovados por PR, com comportamento determinístico, para evitar alterações não auditadas e resultados não reproduzíveis.
 
 **Critérios de aceitação (BDD).**
-- **Dado** que altero pipeline  
+- **Dado** que altero a definição do pipeline  
   **Quando** submeto PR  
-  **Então** só é aceite após revisão por DevOps e AppSec.  
-- **Dado** que há alteração de ferramentas  
+  **Então** só é aceite após revisão por DevOps e AppSec (em L2/L3).  
+- **Dado** que o pipeline depende de configuração ou parâmetros  
+  **Quando** é executado  
+  **Então** a configuração efetiva usada é registada como evidência (sem dados sensíveis).  
+- **Dado** que há alteração de ferramentas, etapas ou regras de execução  
   **Quando** o pipeline é modificado  
-  **Então** é criada nova versão rastreável.  
+  **Então** é criada nova versão rastreável e auditável (commit/hash + changelog no PR).  
 
 **Checklist.**
 - [ ] `ci-pipeline.yml` versionado  
 - [ ] PR obrigatório  
 - [ ] Triggers explícitos  
+- [ ] Configuração efetiva registada (sem segredos)  
 - [ ] Histórico de versões mantido
 :::
 
 **🧾 Artefactos & evidências.**  
-Histórico de commits; ficheiro `ci-pipeline.yml`; aprovação PR; logs de revisão.  
+Histórico de commits; ficheiro `ci-pipeline.yml`; aprovação PR; logs de revisão; registo de configuração efetiva.
 
-**⚖️ Proporcionalidade.**  
+**⚖️ Proporcionalidade.**
 | Nível | Obrigatório? | Ajustes |
 |---|---|---|
 | L1 | Sim | Versão única do pipeline com aprovação manual |
 | L2 | Sim | Versionamento e revisão obrigatória |
-| L3 | Sim | Controlo de alterações assinado e validação SLSA |
+| L3 | Sim | Controlo de alterações assinado e validação reforçada de proveniência |
 
 ---
 
-### US-03 - Scanners integrados
+### US-03 - Scanners integrados (validação empírica obrigatória)
 
 **Contexto.**  
-Detetar cedo é mais barato e eficaz.
+Detetar cedo é mais barato e eficaz — mas só conta se houver execução real.
 
 :::userstory
-**História.**   
-Como **Developers**, quero que o pipeline execute scanners de segurança, para impedir falhas graves em produção.
+**História.**  
+Como **Developers**, quero que o pipeline execute validadores de segurança com execução observável, para impedir falhas graves em produção.
 
 **Critérios de aceitação (BDD).**
 - **Dado** que submeto código  
-  **Quando** corre pipeline  
-  **Então** falhas críticas bloqueiam merge.  
+  **Quando** corre o pipeline  
+  **Então** os validadores obrigatórios são executados e produzem logs/artefactos rastreáveis.  
+- **Dado** que existem falhas críticas  
+  **Quando** os resultados são avaliados  
+  **Então** o merge/promoção é bloqueado de acordo com os gates definidos.  
 - **Dado** que é introduzido novo tipo de artefacto  
-  **Quando** o scanner não o cobre  
-  **Então** o AppSec define regra de deteção adicional.  
+  **Quando** o conjunto atual de validação não o cobre  
+  **Então** o AppSec define regra adicional e a mudança é versionada e aprovada.
 
 **Checklist.**
 - [ ] SAST ativo  
 - [ ] Secrets scanning ativo  
 - [ ] IaC scanning (quando aplicável)  
-- [ ] Falhas High bloqueiam merge
+- [ ] Logs/artefactos de execução guardados  
+- [ ] Falhas High bloqueiam merge (L2/L3)
 :::
 
 **🧾 Artefactos & evidências.**  
-Relatórios de scanners; logs CI/CD; registos de bloqueio de merges; dashboards de vulnerabilidades.  
+Relatórios de scanners; logs CI/CD; *exit codes*; registos de bloqueio; dashboards de vulnerabilidades.
 
-**⚖️ Proporcionalidade.**  
+**⚖️ Proporcionalidade.**
 | Nível | Obrigatório? | Ajustes |
 |---|---|---|
-| L1 | Sim | Scanners básicos (SAST, secrets) |
+| L1 | Sim | Validação base (SAST, secrets) |
 | L2 | Sim | Inclusão de IaC e análise de dependências |
-| L3 | Sim | Scanners completos com *coverage* de containers e SBOM |
+| L3 | Sim | Validação completa incluindo containers e SBOM |
 
 ---
 
 ### US-04 - Gestão de segredos
 
 **Contexto.**  
-Segredos estáticos expõem a organização.
+Segredos estáticos expõem a organização — e logs descuidados tornam-se um canal de fuga.
 
 :::userstory
-**História.**   
-Como **DevOps / SRE**, quero segredos injetados por OIDC com TTL curto, para reduzir risco de abuso.
+**História.**  
+Como **DevOps / SRE**, quero segredos injetados por OIDC com TTL curto e outputs mascarados, para reduzir risco de abuso e exposição indireta.
 
 **Critérios de aceitação (BDD).**
-- **Dado** que pipeline arranca  
+- **Dado** que o pipeline arranca  
   **Quando** credenciais são necessárias  
-  **Então** são emitidas JIT e mascaradas em logs.  
+  **Então** são emitidas *just-in-time*, com TTL curto e sem exposição em logs.  
 - **Dado** que o token expira  
   **Quando** é necessário novo acesso  
   **Então** é gerado token temporário novo sem reutilização.  
@@ -183,17 +204,18 @@ Como **DevOps / SRE**, quero segredos injetados por OIDC com TTL curto, para red
 - [ ] OIDC configurado  
 - [ ] TTL curto  
 - [ ] Variáveis mascaradas  
+- [ ] Logging revisto para não expor contexto sensível
 :::
 
 **🧾 Artefactos & evidências.**  
-Políticas de segredos; logs de acesso; configuração OIDC; histórico de tokens emitidos.  
+Políticas de segredos; logs de acesso; configuração OIDC; evidência de TTL/rotação.
 
-**⚖️ Proporcionalidade.**  
+**⚖️ Proporcionalidade.**
 | Nível | Obrigatório? | Ajustes |
 |---|---|---|
-| L1 | Opcional | Segredos armazenados encriptados |
+| L1 | Opcional | Segredos armazenados encriptados + masking |
 | L2 | Sim | OIDC implementado com TTL controlado |
-| L3 | Sim | Tokens efémeros automáticos e rotação diária |
+| L3 | Sim | Tokens efémeros automáticos e rotação frequente |
 
 ---
 
@@ -203,218 +225,219 @@ Políticas de segredos; logs de acesso; configuração OIDC; histórico de token
 Runners inseguros comprometem todo o ecossistema.
 
 :::userstory
-**História.**   
-Como **DevOps / SRE**, quero runners ephemerais e segregados, para reduzir persistência pós-compromisso.
+**História.**  
+Como **DevOps / SRE**, quero runners ephemerais e segregados, para reduzir persistência pós-compromisso e limitar blast radius.
 
 **Critérios de aceitação (BDD).**
-- **Dado** que job termina  
-  **Quando** runner encerra  
+- **Dado** que um job termina  
+  **Quando** o runner encerra  
   **Então** é destruído sem manter estado.  
-- **Dado** que são criados novos runners  
-  **Quando** há pipelines paralelos  
-  **Então** são isolados por namespace e permissões.  
+- **Dado** que há pipelines paralelos  
+  **Quando** são executados  
+  **Então** estão isolados por permissões, namespace e segmentação de rede.  
 
 **Checklist.**
 - [ ] Runners efémeros  
 - [ ] Sem privilégios excessivos  
 - [ ] Segmentação de rede  
+- [ ] Sem estado persistente entre jobs
 :::
 
 **🧾 Artefactos & evidências.**  
-Configuração de runners; logs de execução; registos de isolamento; scripts de provisionamento.  
+Configuração de runners; logs de execução; registos de isolamento; scripts de provisionamento.
 
-**⚖️ Proporcionalidade.**  
+**⚖️ Proporcionalidade.**
 | Nível | Obrigatório? | Ajustes |
 |---|---|---|
-| L1 | Opcional | Runners partilhados com limites |
+| L1 | Opcional | Runners partilhados com limites e hardening |
 | L2 | Sim | Segregação de runners por projeto |
-| L3 | Sim | Runners efémeros, rede isolada e destruição automática |
+| L3 | Sim | Runners efémeros + rede isolada + destruição automática |
 
 ---
 
 ### US-06 - Assinatura e proveniência
 
 **Contexto.**  
-Artefactos não assinados perdem legitimidade.
+Artefactos não assinados perdem legitimidade — e artefactos sem proveniência enfraquecem auditoria e confiança.
 
 :::userstory
-**História.**   
-Como **DevOps / SRE**, quero que todos os artefactos sejam assinados e tenham proveniência validada, para garantir confiança.
+**História.**  
+Como **DevOps / SRE**, quero que todos os artefactos sejam assinados e tenham proveniência validada, para garantir confiança e permitir verificação independente.
 
 **Critérios de aceitação (BDD).**
-- **Dado** que artefacto é produzido  
+- **Dado** que um artefacto é produzido  
   **Quando** é promovido  
-  **Então** assinatura e proveniência são verificadas.  
+  **Então** assinatura e proveniência são verificadas antes da promoção.  
 - **Dado** que falha verificação  
-  **Quando** assinatura não é válida  
-  **Então** o artefacto é rejeitado e alerta emitido.  
+  **Quando** a assinatura/proveniência não é válida  
+  **Então** o artefacto é rejeitado e é emitido alerta.
 
 **Checklist.**
 - [ ] Assinatura automática  
-- [ ] Proveniência SLSA  
+- [ ] Proveniência gerada  
 - [ ] Verificação antes de release  
+- [ ] Rejeição automática em falha (L2/L3)
 :::
 
 **🧾 Artefactos & evidências.**  
-Assinaturas digitais; ficheiros de proveniência; logs de promoção; auditoria de build.  
+Assinaturas digitais; ficheiros de proveniência; logs de promoção; auditoria de build.
 
-> **Referência:** Este US complementa [Cap 05-US-02: SBOM em cada build]
-> ao integrar assinatura e proveniência no pipeline de CI/CD. SBOM e assinatura devem ser geradas conjuntamente como artefactos da build.
+> **Referência:** Este US complementa o princípio de gerar SBOM por build, integrando assinatura e proveniência como artefactos de build.
 
-**⚖️ Proporcionalidade.**  
+**⚖️ Proporcionalidade.**
 | Nível | Obrigatório? | Ajustes |
 |---|---|---|
-| L1 | Sim | Assinatura manual recomendada |
-| L2 | Sim | Assinatura automática e validação SLSA L2 |
-| L3 | Sim | Validação obrigatória SLSA L3 e bloqueio automático |
-
-> **Padrão Comum:** Assinatura e verificação de proveniência ocorrem em **múltiplos contextos** (CI/CD, IaC, imagens, deploy).
-> Este US foca o contexto de **pipeline de CI/CD**; ver também **Cap 08-US-09** (módulos IaC),
-> **Cap 09-US-03** (imagens), **Cap 11-US-01** (deploy). Todos aplicam o **mesmo princípio** (sign → validate → use).
+| L1 | Sim | Assinatura recomendada + verificação manual em releases |
+| L2 | Sim | Assinatura automática + verificação obrigatória |
+| L3 | Sim | Bloqueio automático + validações reforçadas de proveniência |
 
 ---
 
-### US-07 - Gates por risco
+### US-07 - Gates por risco (separação sinal/decisão)
 
 **Contexto.**  
-Nem todas as apps exigem o mesmo rigor.
+Nem todas as apps exigem o mesmo rigor — mas em nenhuma app um “sinal” substitui decisão.
 
 :::userstory
-**História.**   
-Como **AppSec Engineers**, quero gates distintos por L1–L3, para aplicar segurança proporcional.
+**História.**  
+Como **AppSec Engineers**, quero gates distintos por L1–L3 e explicitamente binários, para aplicar segurança proporcional e evitar bypass implícito.
 
 **Critérios de aceitação (BDD).**
-- **Dado** que aplicação é L3  
-  **Quando** há falha High  
-  **Então** gate bloqueia promoção.  
-- **Dado** que aplicação é L1  
+- **Dado** que uma aplicação é L3  
+  **Quando** há falha High ou Critical  
+  **Então** o gate bloqueia a promoção e exige decisão humana formal para qualquer exceção.  
+- **Dado** que uma aplicação é L1  
   **Quando** há falha Medium  
-  **Então** alerta é registado sem bloqueio.  
+  **Então** é registado alerta sem bloqueio, mas com rastreabilidade e backlog de remediação.  
+- **Dado** que existe um output automático (score/recomendação)  
+  **Quando** é apresentado  
+  **Então** é tratado apenas como input, nunca como aprovação.
 
 **Checklist.**
 - [ ] Política publicada  
 - [ ] Gates configurados  
 - [ ] Thresholds definidos  
+- [ ] Separação entre sinal e decisão documentada
 :::
 
 **🧾 Artefactos & evidências.**  
-Políticas de gates; relatórios CI/CD; logs de bloqueio de promoção.  
+Políticas de gates; logs de bloqueio; registos de alteração de thresholds; evidência de decisão em exceções.
 
-**⚖️ Proporcionalidade.**  
+**⚖️ Proporcionalidade.**
 | Nível | Obrigatório? | Ajustes |
 |---|---|---|
-| L1 | Sim | Apenas bloqueio de falhas críticas |
-| L2 | Sim | Bloqueio de High e Critical, aprovação AppSec |
-| L3 | Sim | Bloqueio automático, revisão GRC |
+| L1 | Sim | Bloqueio apenas em Critical |
+| L2 | Sim | Bloqueio High/Critical + aprovação AppSec para exceções |
+| L3 | Sim | Bloqueio automático + governança reforçada (incl. GRC em exceções) |
 
 ---
 
-### US-08 - Cobertura ampliada
+### US-08 - Cobertura ampliada (containers e SBOM)
 
 **Contexto.**  
-Cobertura limitada cria pontos cegos.
+Cobertura limitada cria pontos cegos e fragiliza supply chain.
 
 :::userstory
-**História.**   
-Como **AppSec Engineers**, quero scanners de containers e SBOM em pipelines, para cobrir supply chain.
+**História.**  
+Como **AppSec Engineers**, quero validação de containers e SBOM em pipelines, para cobrir supply chain e permitir rastreabilidade de componentes.
 
 **Critérios de aceitação (BDD).**
-- **Dado** que imagem é construída  
-  **Quando** corre pipeline  
-  **Então** SBOM é gerado e anexado.  
-- **Dado** que imagem base muda  
+- **Dado** que uma imagem é construída  
+  **Quando** corre o pipeline  
+  **Então** o SBOM é gerado e anexado ao artefacto.  
+- **Dado** que uma imagem base muda  
   **Quando** vulnerabilidade é detetada  
-  **Então** é aberta tarefa de mitigação automática.  
+  **Então** é aberta tarefa de mitigação e o risco é rastreável ao release afetado.
 
 **Checklist.**
 - [ ] Container scanning ativo  
 - [ ] SBOM gerado  
 - [ ] Base images validadas  
+- [ ] Evidência de execução guardada
 :::
 
 **🧾 Artefactos & evidências.**  
-Relatórios de scanning; SBOM; auditoria de imagens; logs de builds.  
+Relatórios de scanning; SBOM; auditoria de imagens; logs de builds.
 
-**⚖️ Proporcionalidade.**  
+**⚖️ Proporcionalidade.**
 | Nível | Obrigatório? | Ajustes |
 |---|---|---|
-| L1 | Opcional | Scans de imagens base trimestrais |
-| L2 | Sim | SBOM obrigatório e validação de base images |
-| L3 | Sim | Scans contínuos e correlação automática de CVEs |
+| L1 | Opcional | Scans de imagens base periódicos |
+| L2 | Sim | SBOM obrigatório + validação de base images |
+| L3 | Sim | Scans contínuos + correlação de CVEs + bloqueios em risco crítico |
 
 ---
 
-### US-09 - Rastreabilidade ponta-a-ponta
+### US-09 - Rastreabilidade ponta-a-ponta (commit→pipeline→release)
 
 **Contexto.**  
-Sem rastreio, auditoria é impossível.
+Sem rastreio, auditoria é impossível — e investigação de incidentes torna-se especulativa.
 
 :::userstory
-**História.**   
-Como **GRC / Compliance**, quero rastrear commit→pipeline→release, para suportar auditorias.
+**História.**  
+Como **GRC / Compliance**, quero rastrear commit→pipeline→release, para suportar auditorias e investigação de incidentes.
 
 **Critérios de aceitação (BDD).**
-- **Dado** que ocorre incidente  
-  **Quando** analiso release  
-  **Então** consigo traçar origem.  
-- **Dado** que auditor pede evidências  
+- **Dado** que ocorre um incidente  
+  **Quando** analiso um release  
+  **Então** consigo traçar origem até commit e execução do pipeline.  
+- **Dado** que um auditor pede evidências  
   **Quando** executo consulta  
-  **Então** sistema exporta logs correlacionados.  
+  **Então** o sistema exporta logs correlacionados e verificáveis (sem dados sensíveis).
 
 **Checklist.**
 - [ ] IDs de correlação  
 - [ ] Logs retidos  
-- [ ] Export imutável  
+- [ ] Export imutável (quando aplicável)  
+- [ ] Ligação explícita entre artefactos e execução
 :::
 
 **🧾 Artefactos & evidências.**  
-Logs de pipelines; dashboards de rastreabilidade; registos de auditoria.  
+Logs de pipelines; dashboards; registos de auditoria; exports (imutáveis quando exigido).
 
-**⚖️ Proporcionalidade.**  
+**⚖️ Proporcionalidade.**
 | Nível | Obrigatório? | Ajustes |
 |---|---|---|
 | L1 | Sim | Logs básicos armazenados 30 dias |
 | L2 | Sim | Retenção 90 dias + correlação commit-build |
-| L3 | Sim | Retenção 1 ano + exportação imutável |
+| L3 | Sim | Retenção ≥1 ano + exportação imutável + auditoria reforçada |
 
 ---
 
-### US-10 - Gestão de exceções
+### US-10 - Gestão de exceções (bypass controlado)
 
 **Contexto.**  
-Exceções mal geridas tornam-se risco estrutural.
+Exceções mal geridas tornam-se risco estrutural e normalizam bypass.
 
 :::userstory
-**História.**   
-Como **GRC / Compliance**, quero exceções registadas, aprovadas e temporárias, para não acumular dívida técnica.
+**História.**  
+Como **GRC / Compliance**, quero exceções registadas, aprovadas e temporárias, para evitar acumulação de dívida e manter governação.
 
 **Critérios de aceitação (BDD).**
-- **Dado** que exceção é pedida  
+- **Dado** que uma exceção é pedida  
   **Quando** é analisada  
-  **Então** só é aprovada com prazo e compensações.  
+  **Então** só é aprovada com prazo, owner e compensações definidas.  
 - **Dado** que o prazo expira  
-  **Quando** exceção não é renovada  
-  **Então** é removida e pipeline volta ao modo de controlo normal.  
+  **Quando** não há renovação formal  
+  **Então** a exceção é removida e o pipeline volta ao modo normal de controlo.
 
 **Checklist.**
 - [ ] Owner registado  
 - [ ] Prazo definido  
-- [ ] Aprovação dupla (AppSec + GRC)  
+- [ ] Aprovação dupla (AppSec + GRC) em L2/L3  
 - [ ] Registo de compensações  
+- [ ] Reversão automática no fim do prazo
 :::
 
 **🧾 Artefactos & evidências.**  
-Registo de exceções; logs de aprovação; relatórios de revisão periódica; prazos automáticos no sistema de GRC.  
+Registo de exceções; logs de aprovação; relatórios de revisão; prazos automáticos no sistema de GRC.
 
-> **Referência:** Este US implementa [Cap 14-US-01: Processo formal de exceções]
-> no contexto de pipeline CI/CD. Aprovação dupla, TTL e revalidação automática devem seguir a política master de exceções em Cap 14.
-
-**⚖️ Proporcionalidade.**  
+**⚖️ Proporcionalidade.**
 | Nível | Obrigatório? | Ajustes |
 |---|---|---|
 | L1 | Sim | Registo simples com aprovação única |
-| L2 | Sim | Aprovação dupla e prazo máximo 60 dias |
-| L3 | Sim | Revisão automática a cada sprint e auditoria obrigatória |
+| L2 | Sim | Aprovação dupla e prazo máximo (ex.: 60 dias) |
+| L3 | Sim | Revisão frequente + auditoria obrigatória |
 
 ---
 
@@ -424,33 +447,33 @@ Registo de exceções; logs de aprovação; relatórios de revisão periódica; 
 Testes estáticos apenas cobrem parcialmente; DAST em staging valida comportamento real.
 
 :::userstory
-**História.**   
-Como **AppSec Engineers**, quero executar DAST em ambiente de staging após deployment, para validar vulnerabilidades comportamentais e corrigir antes de produção.
+**História.**  
+Como **AppSec Engineers**, quero executar DAST em staging após deployment, para validar vulnerabilidades comportamentais antes de produção.
 
 **Critérios de aceitação (BDD).**
-- **Dado** que nova build é promovida a staging  
+- **Dado** que uma build é promovida a staging  
   **Quando** inicia pipeline DAST  
-  **Então** são executadas análises de autenticação, autorização, injection e XSS.  
+  **Então** são executadas análises relevantes e os resultados são rastreáveis ao commit/release.  
 - **Dado** que DAST encontra falha High  
-  **Quando** resultado é disponibilizado  
-  **Então** bloqueia promoção a produção até correção validada.  
+  **Quando** o resultado é disponibilizado  
+  **Então** bloqueia promoção a produção até correção validada.
 
 **Checklist.**
 - [ ] DAST integrado no pipeline  
 - [ ] Credenciais de teste segregadas  
 - [ ] Relatório correlacionado com commit  
-- [ ] Bloqueio automático em High/Critical  
+- [ ] Bloqueio automático em High/Critical (L2/L3)
 :::
 
 **🧾 Artefactos & evidências.**  
-Relatórios DAST; logs de execução; evidências de correção; matriz de rastreabilidade.  
+Relatórios DAST; logs de execução; evidências de correção; rastreabilidade.
 
-**⚖️ Proporcionalidade.**  
+**⚖️ Proporcionalidade.**
 | Nível | Obrigatório? | Ajustes |
 |---|---|---|
-| L1 | Opcional | DAST manual trimestral |
+| L1 | Opcional | DAST manual periódico |
 | L2 | Sim | DAST em staging pré-release |
-| L3 | Sim | DAST contínuo com bloqueio automático e retry pós-correção |
+| L3 | Sim | DAST contínuo + bloqueio automático + revalidação pós-correção |
 
 ---
 
@@ -460,33 +483,33 @@ Relatórios DAST; logs de execução; evidências de correção; matriz de rastr
 Sem visibilidade centralizada, risco acumula-se invisível.
 
 :::userstory
-**História.**   
-Como **Gestão Executiva / CISO**, quero visualizar dashboard de métricas de CI/CD (cobertura de scanners, exceções ativas, gate blocks, tempo de remediação), para decisão informada e ação corretiva.
+**História.**  
+Como **Gestão Executiva / CISO**, quero visualizar métricas de CI/CD (cobertura, gates, exceções, bloqueios, MTTR), para decisão informada e ação corretiva.
 
 **Critérios de aceitação (BDD).**
-- **Dado** que pipeline executa  
-  **Quando** eventos ocorrem (merge, gate block, exceção)  
-  **Então** são automaticamente registados em base central com timestamp e atores.  
-- **Dado** que dashboard é consultado  
-  **Quando** métricas são renderizadas  
-  **Então** permitem slicing por project, team, período, severidade.  
+- **Dado** que o pipeline executa  
+  **Quando** ocorrem eventos (merge, bloqueio, exceção, promoção)  
+  **Então** são registados com timestamp, contexto e atores.  
+- **Dado** que consulto o dashboard  
+  **Quando** filtro por projeto/período/risco  
+  **Então** obtenho indicadores acionáveis e auditáveis.
 
 **Checklist.**
-- [ ] Eventos centralizados por telemetria  
+- [ ] Eventos centralizados  
 - [ ] Dashboard com KPIs (cobertura, MTTR, compliance rate)  
-- [ ] Alertas automáticos em anomalias  
-- [ ] Relatórios mensais para GRC  
+- [ ] Alertas em anomalias  
+- [ ] Relatórios periódicos para GRC
 :::
 
 **🧾 Artefactos & evidências.**  
-Dashboard de métricas; logs centralizados; relatórios de conformidade; alertas gerados.  
+Dashboard; logs centralizados; relatórios; alertas; evidência de retenção.
 
-**⚖️ Proporcionalidade.**  
+**⚖️ Proporcionalidade.**
 | Nível | Obrigatório? | Ajustes |
 |---|---|---|
-| L1 | Opcional | Relatórios manuais trimestrais |
+| L1 | Opcional | Relatórios manuais periódicos |
 | L2 | Sim | Dashboard com KPIs principais, atualizado diariamente |
-| L3 | Sim | Dashboard em tempo real com alertas automáticos e previsões de risco |
+| L3 | Sim | Dashboard quase em tempo real + alertas automáticos |
 
 ---
 
@@ -496,33 +519,219 @@ Dashboard de métricas; logs centralizados; relatórios de conformidade; alertas
 Imagens base comprometidas propagam risco a todo o ecossistema.
 
 :::userstory
-**História.**   
-Como **DevOps / SRE**, quero validar que imagens base não foram alteradas (hash, assinatura, drift) e correlacionar com CVEs, para evitar supply chain comprometido.
+**História.**  
+Como **DevOps / SRE**, quero validar integridade de imagens base (hash/assinatura/drift) e correlacionar com vulnerabilidades, para evitar supply chain comprometido.
 
 **Critérios de aceitação (BDD).**
-- **Dado** que imagem base é utilizada  
-  **Quando** pipeline inicia  
-  **Então** hash é validado contra registry confiável.  
-- **Dado** que CVE novo é publicado  
-  **Quando** afeta imagem em uso  
-  **Então** alerta é criado e equipa é notificada para ação.  
+- **Dado** que uma imagem base é usada  
+  **Quando** o pipeline inicia  
+  **Então** o identificador esperado é validado contra fonte confiável.  
+- **Dado** que surge vulnerabilidade relevante  
+  **Quando** afeta imagens em uso  
+  **Então** é criado alerta e aberta ação de mitigação rastreável ao release.
 
 **Checklist.**
-- [ ] Hash de imagens base armazenado  
+- [ ] Hash/assinatura de imagens base registado  
 - [ ] Validação automática no pull  
-- [ ] Rejeição se mismatch detectado  
-- [ ] Correlação contínua com CVE feeds  
+- [ ] Rejeição em mismatch (L2/L3)  
+- [ ] Correlação contínua com vulnerabilidades
 :::
 
 **🧾 Artefactos & evidências.**  
-Hashes de imagens; logs de validação; relatórios de drift; correção de imagens.  
+Registos de hashes/assinaturas; logs de validação; relatórios de drift; ações de mitigação.
 
-**⚖️ Proporcionalidade.**  
+**⚖️ Proporcionalidade.**
 | Nível | Obrigatório? | Ajustes |
 |---|---|---|
-| L1 | Opcional | Validação manual mensal |
-| L2 | Sim | Validação automática no pull com log |
-| L3 | Sim | Validação + assinatura de imagens + alertas automáticos em drift ou CVE |
+| L1 | Opcional | Validação manual periódica |
+| L2 | Sim | Validação automática no pull com logs |
+| L3 | Sim | Validação + assinatura + alertas automáticos em drift/vulnerabilidade |
+
+---
+
+## 🆕 User Stories adicionais (riscos de processo do CI/CD moderno)
+
+As user stories seguintes tornam explícitas as preocupações de processo que, na prática, mais degradam a segurança quando a automação aumenta: **não-determinismo, confusão sinal/decisão, evidência fraca, fuga de contexto e diluição de responsabilidade**.
+
+---
+
+### US-14 - Reprodutibilidade e determinismo do pipeline
+
+**Contexto.**  
+Sem reprodutibilidade, não há auditoria nem investigação de incidentes.
+
+:::userstory
+**História.**  
+Como **DevOps / SRE**, quero que execuções do pipeline sejam reprodutíveis e determinísticas (na medida do possível), para permitir verificação independente e auditoria.
+
+**Critérios de aceitação (BDD).**
+- **Dado** que um build é executado  
+  **Quando** volto a executar o mesmo pipeline sobre o mesmo commit  
+  **Então** obtenho resultados equivalentes (ou divergências justificadas e registadas).  
+- **Dado** que existem parâmetros/configuração  
+  **Quando** o pipeline corre  
+  **Então** a configuração efetiva usada é registada como evidência (sem segredos).  
+
+**Checklist.**
+- [ ] Definição do pipeline versionada  
+- [ ] Dependências e versões relevantes estabilizadas/identificadas  
+- [ ] Configuração efetiva registada  
+- [ ] Divergências documentadas quando inevitáveis
+:::
+
+**🧾 Artefactos & evidências.**  
+Execução rastreável (logs + config efetiva); ligação a commit; registos de divergência; artefactos produzidos.
+
+**⚖️ Proporcionalidade.**
+| Nível | Obrigatório? | Ajustes |
+|---|---|---|
+| L1 | Sim | Reprodutibilidade “boa-fé” com logging suficiente |
+| L2 | Sim | Reprodutibilidade como requisito; validação periódica |
+| L3 | Sim | Reprodutibilidade obrigatória + auditoria reforçada e retenção prolongada |
+
+---
+
+### US-15 - Separação formal entre sinal automático e decisão de promoção
+
+**Contexto.**  
+Um “score verde” não é uma decisão; uma decisão exige owner e evidência.
+
+:::userstory
+**História.**  
+Como **AppSec Engineers**, quero que qualquer recomendação/score/flag seja formalmente classificada como *sinal*, e que a promoção exija decisão humana explícita, para evitar aprovação implícita.
+
+**Critérios de aceitação (BDD).**
+- **Dado** que o pipeline produz sinais (scores/recomendações)  
+  **Quando** a promoção é considerada  
+  **Então** a decisão é registada com owner humano e evidência associada.  
+- **Dado** que alguém tenta promover sem decisão formal  
+  **Quando** o pipeline avalia a ação  
+  **Então** bloqueia e exige registo nominal de aprovação.
+
+**Checklist.**
+- [ ] Distinção “sinal” vs “decisão” documentada  
+- [ ] Promoção exige aprovação nominal  
+- [ ] Registo inclui evidência referenciada  
+- [ ] Bloqueio automático a promoções “sem owner”
+:::
+
+**🧾 Artefactos & evidências.**  
+Registo de aprovação; evidência associada; logs de bloqueio; política publicada.
+
+**⚖️ Proporcionalidade.**
+| Nível | Obrigatório? | Ajustes |
+|---|---|---|
+| L1 | Sim | Aprovação nominal para produção |
+| L2 | Sim | Aprovação nominal + regra de separação de funções |
+| L3 | Sim | Aprovação nominal + auditoria reforçada + regra estrACI (approval control integrity) |
+
+---
+
+### US-16 - Evidência empírica obrigatória (anti-“relatórios sem execução”)
+
+**Contexto.**  
+Resultados plausíveis não substituem execução real.
+
+:::userstory
+**História.**  
+Como **GRC / Compliance**, quero que qualquer evidência de controlo em CI/CD seja baseada em execução observável (logs, *exit codes*, artefactos), para impedir conformidade aparente sem validação real.
+
+**Critérios de aceitação (BDD).**
+- **Dado** que existe um relatório de validação  
+  **Quando** é usado como evidência  
+  **Então** contém referência verificável à execução (job/run id, logs, artefactos).  
+- **Dado** que não existe execução observável  
+  **Quando** alguém tenta registar um resultado como evidência  
+  **Então** é rejeitado como “não verificável”.
+
+**Checklist.**
+- [ ] Evidência liga a uma execução real  
+- [ ] Logs e *exit codes* disponíveis  
+- [ ] Artefactos preservados conforme retenção  
+- [ ] Rejeição de evidência não verificável
+:::
+
+**🧾 Artefactos & evidências.**  
+Run IDs; logs; *exit codes*; artefactos; política de evidência.
+
+**⚖️ Proporcionalidade.**
+| Nível | Obrigatório? | Ajustes |
+|---|---|---|
+| L1 | Sim | Evidência mínima por execução |
+| L2 | Sim | Evidência obrigatória + retenção reforçada |
+| L3 | Sim | Evidência obrigatória + export imutável e auditoria |
+
+---
+
+### US-17 - Contenção de contexto e higiene de logs/outputs
+
+**Contexto.**  
+O pipeline “vê” tudo — logo, é onde a fuga de contexto é mais provável.
+
+:::userstory
+**História.**  
+Como **DevOps / SRE**, quero que logs e outputs do pipeline sejam minimizados e higienizados, para impedir exposição de segredos, dados sensíveis ou propriedade intelectual.
+
+**Critérios de aceitação (BDD).**
+- **Dado** que o pipeline executa  
+  **Quando** gera logs  
+  **Então** segredos e identificadores sensíveis são mascarados/redigidos por defeito.  
+- **Dado** que é necessário debug  
+  **Quando** é ativado temporariamente  
+  **Então** exige aprovação, é limitado no tempo e produz evidência de desativação.
+
+**Checklist.**
+- [ ] Política de logging publicada  
+- [ ] Masking/redação ativa por defeito  
+- [ ] Debug temporário controlado e auditável  
+- [ ] Revisão periódica de logs e configurações
+:::
+
+**🧾 Artefactos & evidências.**  
+Configuração de logging; evidência de masking; registos de ativação/desativação de debug; relatórios de revisão.
+
+**⚖️ Proporcionalidade.**
+| Nível | Obrigatório? | Ajustes |
+|---|---|---|
+| L1 | Sim | Masking básico + revisão pontual |
+| L2 | Sim | Masking + controlo formal de debug |
+| L3 | Sim | Controlo formal + auditoria + retenção e export conforme exigência |
+
+---
+
+### US-18 - Não-repúdio e ownership de promoções (ações irreversíveis)
+
+**Contexto.**  
+Se ninguém “assina” a promoção, ninguém responde pelo incidente.
+
+:::userstory
+**História.**  
+Como **DevOps / SRE**, quero que qualquer promoção para produção tenha owner humano explícito e registo de decisão, para garantir não-repúdio e responsabilização.
+
+**Critérios de aceitação (BDD).**
+- **Dado** que uma promoção para produção é solicitada  
+  **Quando** é executada  
+  **Então** existe registo nominal de aprovação e contexto de decisão (evidência referenciada).  
+- **Dado** que não existe owner  
+  **Quando** alguém tenta promover  
+  **Então** o pipeline bloqueia a ação.
+
+**Checklist.**
+- [ ] Promoção exige owner humano  
+- [ ] Registo nominal e timestamp  
+- [ ] Evidência referenciada (runs, artefactos, relatórios)  
+- [ ] Bloqueio a promoções sem registo
+:::
+
+**🧾 Artefactos & evidências.**  
+Registo de aprovação; logs do pipeline; evidência associada; trilho de auditoria.
+
+**⚖️ Proporcionalidade.**
+| Nível | Obrigatório? | Ajustes |
+|---|---|---|
+| L1 | Sim | Aprovação nominal para produção |
+| L2 | Sim | Aprovação nominal + separação de funções |
+| L3 | Sim | Aprovação nominal + auditoria reforçada e retenção prolongada |
 
 ---
 
@@ -530,51 +739,54 @@ Hashes de imagens; logs de validação; relatórios de drift; correção de imag
 
 Cada prática deixa pegadas técnicas. Sem elas, não há prova de conformidade:
 
-| Artefacto / Evidência                | Dono             | Observações                        |
-|-------------------------------------|------------------|------------------------------------|
-| `ci-pipeline.yml`                   | Developers    | Versionado via PR (US-01, US-02)                  |
-| Assinaturas + Proveniência (SLSA)   | DevOps / SRE         | Validadas como gate (US-06)               |
-| Relatórios de scanners              | Developers / AppSec Engineers | Thresholds definidos (US-03)              |
-| SBOM por build                      | AppSec Engineers         | Anexado ao artefacto (US-08)               |
-| Registo de exceções                 | GRC / Compliance / Auditores Internos | Inclui prazo e compensações (US-10)       |
-| Logs de execuções/releases          | DevOps / SRE         | IDs de correlação armazenados (US-09)      |
-| Relatórios DAST                     | AppSec Engineers         | Correlacionados com commits (US-11)       |
-| Dashboard de métricas CI/CD          | Gestão Executiva / CISO         | KPIs de conformidade (US-12)                |
-| Hashes e validação de imagens base  | DevOps / SRE         | Correlação com CVEs e drift (US-13)      |
+| Artefacto / Evidência                              | Dono                         | Observações |
+|---------------------------------------------------|------------------------------|------------|
+| `ci-pipeline.yml`                                 | Developers                   | Versionado via PR (US-01, US-02) |
+| Registo de configuração efetiva (sem segredos)     | DevOps / SRE                 | Suporta reprodutibilidade (US-02, US-14) |
+| Regras de gates/thresholds publicadas              | AppSec Engineers             | Separação sinal/decisão (US-07, US-15) |
+| Logs + *exit codes* + artefactos de execução       | DevOps / SRE                 | Evidência empírica (US-03, US-16) |
+| Assinaturas + proveniência                         | DevOps / SRE                 | Verificação antes de promoção (US-06) |
+| Relatórios de validadores (SAST, secrets, etc.)    | Developers / AppSec Engineers| Sempre ligados a execução real (US-03, US-16) |
+| SBOM por build                                     | AppSec Engineers             | Anexado ao artefacto (US-08) |
+| Registo de exceções (TTL, compensações, approvals) | GRC / Compliance             | Governação de bypass (US-10) |
+| Logs correlacionados commit→pipeline→release        | DevOps / SRE                 | Rastreabilidade auditável (US-09) |
+| Política e evidência de higiene de logs            | DevOps / SRE                 | Minimização de contexto (US-17) |
+| Registos nominais de promoção/deploy               | DevOps / SRE                 | Não-repúdio (US-18) |
+| Dashboard de métricas e eventos                     | Gestão Executiva / CISO      | Visibilidade organizacional (US-12) |
 
 ---
 
 ## ⚖️ Matriz de proporcionalidade L1–L3
 
 Nem todas as apps exigem o mesmo nível de rigor.  
-A matriz assegura que **o esforço é proporcional ao risco**:
+A matriz assegura que o esforço é proporcional ao risco **sem nunca comprometer**: decisão humana, evidência empírica e rastreabilidade.
 
-| Categoria       | L1 (baixo)                 | L2 (médio)                          | L3 (crítico)                            |
-|-----------------|----------------------------|-------------------------------------|-----------------------------------------|
-| Branches/PR     | 1 reviewer + build check   | Reviewer + segurança                | ≥2 reviewers + code owners              |
-| Scanners        | SAST + secrets             | + IaC                               | + Containers + SBOM                     |
-| Segredos        | Variáveis mascaradas       | OIDC preferido                      | OIDC obrigatório + TTL curto            |
-| Runners         | Partilhados com guardrails | Segregados                          | Efémeros + segmentação de rede          |
-| Artefactos      | Assinatura recomendada     | Assinatura + proveniência obrigatória | Rejeição automática se inválido       |
-| Gates por risco | Aviso                      | Bloqueio High/Critical              | Bloqueio Medium+                        |
-| Exceções        | Registo simples            | Aprovação AppSec                    | Dupla aprovação + prazo curto           |
-| Rastreabilidade | Logs básicos               | IDs correlacionados                 | Export imutável + dashboards            |
-| DAST            | Manual trimestral          | Em staging pré-release              | Contínuo com bloqueio automático        |
-| Métricas        | Relatórios manuais         | Dashboard diário com KPIs           | Dashboard tempo real + alertas          |
-| Imagens base    | Validação manual mensal    | Validação automática no pull        | + Assinatura + alertas em drift/CVE     |
+| Categoria           | L1 (baixo)                        | L2 (médio)                                 | L3 (crítico) |
+|--------------------|-----------------------------------|--------------------------------------------|--------------|
+| Branches/PR         | 1 reviewer + build check          | Reviewer + validação de segurança           | ≥2 reviewers + code owners + AppSec |
+| Determinismo        | Logging suficiente                 | Reprodutibilidade como requisito            | Reprodutibilidade + auditoria reforçada |
+| Sinal vs decisão    | Aprovação nominal para produção    | Aprovação nominal + separação de funções    | Aprovação nominal + controlo reforçado + auditoria |
+| Evidência empírica  | Logs básicos + artefactos chave    | Logs + *exit codes* + retenção reforçada    | Evidência completa + export imutável (quando exigido) |
+| Scanners            | SAST + secrets                     | + IaC + dependências                        | + containers + SBOM + cobertura alargada |
+| Segredos            | Masking + armazenamento seguro     | OIDC preferido + TTL controlado             | OIDC obrigatório + TTL curto + rotação frequente |
+| Runners             | Partilhados com hardening          | Segregados por projeto                       | Efémeros + segmentação de rede + destruição automática |
+| Artefactos          | Assinatura recomendada             | Assinatura + verificação obrigatória        | Bloqueio automático em falha + proveniência reforçada |
+| Exceções            | Registo simples                    | Aprovação dupla + TTL                         | Aprovação dupla + revisão frequente + auditoria |
+| Rastreabilidade     | Logs 30 dias                       | Logs 90 dias + correlação commit-build        | ≥1 ano + export imutável + dashboards |
+| DAST                | Manual periódico                   | Em staging pré-release                       | Contínuo + bloqueio automático |
+| Métricas            | Relatórios manuais                 | Dashboard diário                              | Quase tempo real + alertas |
 
 ---
 
 ## 🏁 Recomendações finais
 
-A segurança de pipelines não é opcional: é **o coração da segurança por design**.  
-Um CI/CD seguro multiplica a confiança em todo o ciclo de vida, permitindo releases rápidas e auditáveis.
+A segurança de pipelines não é opcional: é o **mecanismo de confiança** de toda a entrega contínua.
 
-- **Prefere OIDC a segredos estáticos** — elimina chaves *long-lived*.  
-- **Usa runners efémeros e segregados** — reduz persistência de ataque.  
-- **Assina artefactos e regista proveniência** — cada *release* deve ser verificável.  
-- **Aplica gates proporcionais ao risco** — evita tanto o excesso como a negligência.  
-- **Controla exceções** — com prazo, dono e compensações, nunca em aberto.  
-- **Investe em rastreabilidade total** — *commit → pipeline → release* como linha de confiança.
+- **Versiona e revê o pipeline como código** — e exige determinismo suficiente para auditoria.  
+- **Define gates binários e governáveis** — e nunca confundas sinais automáticos com decisões.  
+- **Exige evidência empírica** — logs, *exit codes* e artefactos, não apenas relatórios.  
+- **Protege segredos e minimiza contexto** — o pipeline é um ponto privilegiado de exfiltração.  
+- **Atribui ownership às ações irreversíveis** — promoções sem owner são um risco estrutural.  
+- **Controla exceções com TTL e compensações** — bypass só existe quando é governado.
 
-Em suma: um pipeline seguro é **o garante silencioso** de que todo o trabalho de desenvolvimento chega a produção de forma íntegra, confiável e auditável.
+Um CI/CD seguro é o garante silencioso de que tudo o que chega a produção é **íntegro, verificável, rastreável e assumido por responsáveis reais**.

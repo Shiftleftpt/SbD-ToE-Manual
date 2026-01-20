@@ -35,7 +35,7 @@ As avaliações aqui descritas foram realizadas com base numa leitura técnico-c
 | OWASP SAMM v2.1  | Governance → Risk Management                 | Classificação de risco por eixos, integração no SDLC           | **2 / 3**                           |
 | OWASP DSOMM      | Risk, Security Requirements, Compliance      | Derivação de requisitos, rastreabilidade, decisão proporcional | **2 / 3** (média dos domínios)      |
 | NIST SSDF v1.1   | RM.1, RM.2                                   | Classificação e avaliação de risco                             | **✔️ RM.1, RM.2**                   |
-| BSIMM13          | Strategy and Metrics                         | SR1.1, SR1.5: decisão por criticidade                          | Contributo parcial, SR2 fora do escopo |
+| BSIMM13          | Strategy and Metrics                         | SR1.1, SR1.5: decisão por criticidade                          | Contributo parcial, SR2 fora do âmbito |
 | SLSA v1.0        | Supply Chain Risk Awareness                  | Definição proporcional de requisitos à criticidade             | **Nível 1 / 4**                     |
 
 ---
@@ -46,7 +46,7 @@ As avaliações aqui descritas foram realizadas com base numa leitura técnico-c
 |-------|--------------------------------------------------------------------------|------------------------------------------|
 | 1     | Realiza-se classificação básica dos riscos das aplicações                | ✅ Modelo de eixos aplicável             |
 | 2     | Integração com processos organizacionais e rastreabilidade               | ✅ Com suporte a versão e auditoria      |
-| 3     | Análise quantitativa e retroalimentação contínua                         | ❌ Fora do escopo do capítulo            |
+| 3     | Análise quantitativa e retroalimentação contínua                         | ❌ Fora do âmbito do capítulo            |
 
 **🧮 Maturidade atingida: 2 / 3**
 
@@ -71,7 +71,7 @@ As avaliações aqui descritas foram realizadas com base numa leitura técnico-c
 |---------------------|--------------------------------------------------------|--------------------------|
 | RM.1                | Classificar software por criticidade                   | ✅ Totalmente coberto    |
 | RM.2                | Avaliar o risco de segurança associado ao software     | ✅ Coberto               |
-| RM.3                | Gerir riscos identificados                             | ❌ Fora do escopo        |
+| RM.3                | Gerir riscos identificados                             | ❌ Fora do âmbito        |
 
 > O capítulo cobre os primeiros passos (classificação e avaliação), deixando a gestão para outros capítulos (ex: mitigação).
 
@@ -94,7 +94,7 @@ As avaliações aqui descritas foram realizadas com base numa leitura técnico-c
 | Nível | Requisitos principais                   | Cobertura pelo Cap. 01         |
 |-------|------------------------------------------|--------------------------------|
 | 1     | Consciência de risco                     | ✅ Classificação por eixos      |
-| 2     | Proveniência do software                 | ❌ Fora do escopo               |
+| 2     | Proveniência do software                 | ❌ Fora do âmbito               |
 | 3     | Build controlado                         | ❌ Coberto noutros capítulos    |
 | 4     | Cadeia totalmente verificável            | ❌ Coberto noutros capítulos    |
 

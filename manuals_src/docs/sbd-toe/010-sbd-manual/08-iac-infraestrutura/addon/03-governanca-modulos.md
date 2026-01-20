@@ -1,117 +1,186 @@
 ---
+
 id: governanca-modulos
 title: Governação de Módulos e Reutilização Segura
 sidebar_position: 3
-description: Práticas de gestão e aprovação de módulos reutilizáveis em projetos IaC, garantindo rastreabilidade e segurança.
-tags: [governação, módulos, iac, reutilização, segurança, rastreabilidade]
----
-
+description: Práticas prescritivas de governação, validação e controlo de módulos reutilizáveis em IaC, garantindo segurança, proveniência e rastreabilidade.
+tags: [governação, módulos, iac, reutilização, segurança, supply-chain, rastreabilidade]
+----------------------------------------------------------------------------------------
 
 # 🛡️ Governação de Módulos Reutilizáveis em IaC
 
 ## 🌟 Objetivo
 
-Assegurar que os módulos reutilizados em projetos de Infraestrutura como Código (IaC) - sejam internos ou externos - são:
+Assegurar que **todos os módulos reutilizados em projetos de Infraestrutura como Código (IaC)** — internos ou externos — são tratados como **componentes de supply chain**, sujeitos a governação formal, validação contínua e evidência auditável.
 
-* Provenientes de fontes confiáveis;
-* Versionados e rastreáveis;
-* Aprovados e auditáveis;
-* Documentados e mantidos com política de ciclo de vida definida.
+Em concreto, este ficheiro estabelece como garantir que os módulos são:
 
-> A reutilização sem governação formal de módulos representa um **risco sistémico**: uma única má prática pode propagar-se por múltiplos projetos e ambientes.
+* provenientes de **fontes confiáveis e identificáveis**;
+* **versionados, imutáveis e determinísticos**;
+* **validados antes da reutilização**;
+* **aprovados explicitamente** para uso por ambiente;
+* **rastreáveis** ao longo do ciclo de vida;
+* resistentes a riscos introduzidos por **automação e ferramentas assistidas**.
 
----
-
-## 📌 O que deve ser feito
-
-1. Registar os módulos internos com informação sobre origem, responsável e versão;
-2. Verificar a proveniência e integridade de módulos externos antes da adoção;
-3. Impedir o uso de módulos não validados em ambientes críticos (ex: produção);
-4. Controlar versões e reforçar imutabilidade - evitar `main`, `latest` ou referências flutuantes;
-5. Documentar uso, parâmetros, dependências e outputs esperados por módulo;
-6. Aplicar validações automáticas a módulos internos antes de os disponibilizar publicamente;
-7. Rever e atualizar periodicamente os módulos críticos em uso ativo.
+> A reutilização sem governação formal de módulos representa um **risco sistémico de supply chain**: uma única má prática pode propagar-se transversalmente por múltiplos projetos e ambientes.
 
 ---
 
-## ⚙️ Como aplicar
+## 🧩 Princípio base: módulos como código não confiável por origem
 
-| Ação                       | Prescrição                                                                  |
-| -------------------------- | --------------------------------------------------------------------------- |
-| **Módulos internos**       | Repositório central versionado, com CI/CD, tagging semântico e documentação |
-| **Módulos externos**       | Validar manualmente ou usar `source` com hash/versão fixa (`?ref=v1.2.0`)   |
-| **Trusted sources**        | Definir whitelist: `registry.terraform.io`, `github.com/org/`, etc.         |
-| **Controlo de versões**    | Impedir `main`, `latest`; definir `>=`, `~>` com precisão                   |
-| **Registo de aprovação**   | Associar cada módulo a análise de risco e aprovação explícita               |
-| **Validação automatizada** | Linters, testes e `terraform-docs` antes de `publish`                       |
-| **SBOM / inventário**      | Incluir lista de módulos nos artefactos de deploy                           |
+Independentemente de serem:
+
+* internos,
+* externos,
+* gerados automaticamente,
+* sugeridos por templates ou ferramentas assistidas,
+
+👉 **todo o módulo deve ser tratado como código não confiável por origem**.
+
+Consequentemente:
+
+* nenhum módulo pode ser consumido sem validação prévia;
+* a confiança não é implícita (nem pelo autor, nem pela ferramenta);
+* a decisão de reutilização deve ser **explícita, rastreável e evidenciada**.
+
+Este princípio alinha a governação de módulos IaC com práticas modernas de **segurança da cadeia de fornecimento de software**.
+
+---
+
+## 📌 O que deve ser feito (prescrição mínima)
+
+A organização **deve garantir**, no mínimo:
+
+1. Registo formal de módulos internos com:
+
+   * origem,
+   * responsável (*owner*),
+   * versão,
+   * estado de aprovação;
+2. Validação de **proveniência e integridade** de módulos externos antes da adoção;
+3. Definição de **fontes confiáveis (allowlist)** e bloqueio de origens não autorizadas;
+4. Controlo rigoroso de versões, evitando referências flutuantes (`main`, `latest`, ranges abertos);
+5. Documentação mínima obrigatória por módulo (inputs, outputs, dependências, efeitos);
+6. Validação automática de módulos internos antes de publicação;
+7. Inventário/SBOM de módulos efetivamente usados por ambiente;
+8. Revisão periódica de módulos críticos em uso ativo.
+
+---
+
+## ⚙️ Como aplicar (mecanismos técnicos)
+
+| Dimensão                 | Prescrição                                                                 |
+| ------------------------ | -------------------------------------------------------------------------- |
+| **Módulos internos**     | Repositório central versionado, CI/CD obrigatório, releases imutáveis      |
+| **Módulos externos**     | Referência com versão fixa ou digest (`?ref=v1.2.3` ou SHA)                |
+| **Fontes confiáveis**    | Allowlist explícita (ex.: `registry.terraform.io/org/`, `github.com/org/`) |
+| **Controlo de versões**  | Proibir `main`, `latest` e ranges abertos em L2/L3                         |
+| **Integridade**          | Verificação de hash/digest quando aplicável                                |
+| **Aprovação**            | Associação explícita a análise de risco e decisão de aprovação             |
+| **Validação automática** | Lint, segurança e documentação antes de `publish`                          |
+| **Inventário / SBOM**    | Lista de módulos usados por deploy/ambiente                                |
+
+---
+
+## 🔍 Validação e controlo reforçado para automação/assistência
+
+Quando módulos são:
+
+* gerados automaticamente,
+* alterados em massa,
+* sugeridos por ferramentas assistidas,
+
+devem aplicar-se **regras reforçadas**:
+
+* validação semântica do impacto do módulo (recursos, permissões, exposição);
+* revisão humana obrigatória antes de aprovação;
+* evidência explícita de decisão (quem aprovou, porquê, para que ambientes).
+
+> Este controlo evita que **erros sistemáticos ou defaults inseguros** se propaguem automaticamente.
 
 ---
 
 ## 🕒 Quando aplicar
 
-| Momento                               | Ação esperada                                                           |
-| ------------------------------------- | ----------------------------------------------------------------------- |
-| Inclusão de novo módulo externo       | Validar fonte, versionamento e conformidade                             |
-| Criação/atualização de módulo interno | Validar sintaxe, segurança e outputs antes de release                   |
-| Revisão de segurança                  | Verificar se módulos em uso são suportados e livres de vulnerabilidades |
-| Pipeline de build                     | Confirmar que os módulos referenciados são aprovados e atualizados      |
+| Momento                             | Ação esperada                                         |
+| ----------------------------------- | ----------------------------------------------------- |
+| Inclusão de módulo externo          | Validar origem, versão, integridade e conformidade    |
+| Criação/alteração de módulo interno | Validar sintaxe, segurança e outputs antes de release |
+| Pipeline de build/deploy            | Confirmar que apenas módulos aprovados são usados     |
+| Revisão periódica                   | Verificar manutenção, vulnerabilidades e uso ativo    |
+| Incidente ou alerta                 | Reavaliar todos os projetos dependentes do módulo     |
 
 ---
 
 ## 👥 Perfis envolvidos
 
-| Papel              | Responsabilidade técnica                                                 |
-| ------------------ | ------------------------------------------------------------------------ |
-| DevOps             | Integração dos módulos e verificação de conformidade técnica             |
-| Arquitetura        | Aprovação de padrões modulares e repositórios autorizados                |
-| Segurança          | Validação de origem, integridade e manutenção dos módulos externos       |
-| Cloud / Plataforma | Gestão do repositório interno e da política de ciclo de vida dos módulos |
+| Papel              | Responsabilidade                                    |
+| ------------------ | --------------------------------------------------- |
+| DevOps / Infra     | Integração técnica e consumo de módulos             |
+| Arquitetura        | Definição de padrões modulares e fontes autorizadas |
+| AppSec / Segurança | Validação de origem, integridade e risco            |
+| Cloud / Plataforma | Gestão do repositório interno e ciclo de vida       |
+| GRC / Compliance   | Supervisão de aprovação e rastreabilidade           |
 
 ---
 
 ## 🧪 Exemplos práticos
 
-* Utilização segura de módulo externo:
+**Referência segura a módulo externo**
 
-  ```hcl
-  source = "git::https://github.com/org/vpc-module.git?ref=v1.2.3"
-  ```
-* Definição de fontes confiáveis no pipeline:
+```hcl
+source = "git::https://github.com/org/vpc-module.git?ref=v1.2.3"
+```
 
-  ```bash
-  ALLOW_MODULES_FROM = ["registry.terraform.io/org/", "github.com/org/"]
-  ```
-* Pipeline de CI que publica módulo apenas após:
+**Bloqueio de fontes não autorizadas em pipeline**
 
-  * `tflint` (linting)
-  * `checkov` (segurança)
-  * `terraform-docs` (documentação atualizada)
-* Tabela interna de inventário:
+```bash
+ALLOW_MODULE_SOURCES = [
+  "registry.terraform.io/org/",
+  "github.com/org/"
+]
+```
 
-  * Nome do módulo, owner, versão, última atualização, ambientes afetados
+**Pipeline de publicação de módulo interno**
+
+* `tflint` (linting)
+* `checkov` ou `tfsec` (segurança)
+* `terraform-docs` (documentação atualizada)
+* aprovação explícita antes de `release`
+
+**Inventário interno (exemplo)**
+
+* Nome do módulo
+* Owner
+* Versão
+* Última validação
+* Ambientes onde é usado
 
 ---
 
-## ✅ Boas práticas
+## ⚖️ Proporcionalidade L1–L3
 
-* Centralizar módulos internos num repositório com regras de publicação;
-* Evitar dependência de módulos com manutenção descontinuada ou sem histórico confiável;
-* Estabelecer uma política formal de revisão e aprovação de módulos;
-* Monitorizar periodicamente o uso de módulos externos e a sua manutenção *upstream*;
-* Garantir que as equipas conhecem os critérios para uso e criação de módulos reutilizáveis.
+| Controlo              | L1          | L2          | L3                             |
+| --------------------- | ----------- | ----------- | ------------------------------ |
+| Allowlist de fontes   | Recomendado | Obrigatório | Obrigatório                    |
+| Pinning de versão     | Obrigatório | Obrigatório | Obrigatório                    |
+| Validação automática  | Recomendado | Obrigatório | Obrigatório                    |
+| Aprovação formal      | Recomendado | Obrigatório | Obrigatório (reforçada)        |
+| Inventário/SBOM       | Recomendado | Obrigatório | Obrigatório                    |
+| Revalidação periódica | Recomendado | Obrigatório | Obrigatório + frequência maior |
 
 ---
 
 ## 🔗 Referências cruzadas
 
-| Documento                     | Relação com esta prática                         |
-| ----------------------------- | ------------------------------------------------ |
-| `02-matriz-requisitos-iac.md` | Requisitos `IAC-004`, `REQ-006`, `REQ-007`       |
-| SSDF (PW\.4, CM.3)            | Governação de componentes reutilizados           |
-| SLSA (Source L2)              | Controlo de integridade e proveniência de código |
-| CIS Controls (2.3, 2.5, 8.6)  | Gestão segura de software e código reutilizado   |
+| Documento                                       | Relação                                    |
+| ----------------------------------------------- | ------------------------------------------ |
+| `addon/02-validacoes-e-checks.md`               | Validação e evidência de módulos           |
+| `addon/11-uso-ferramentas-automatizadas-iac.md` | Automação/assistência e riscos de processo |
+| SSDF (PW.4, CM.3)                               | Governação de componentes reutilizados     |
+| SLSA (Source L2+)                               | Proveniência e integridade de código       |
+| CIS Controls (2, 8)                             | Gestão segura de software reutilizado      |
 
 ---
 
-> 📌 A governação de módulos é um **elemento crítico de segurança em IaC**. Módulos inseguros, obsoletos ou mal mantidos podem comprometer múltiplos ambientes de forma transversal - exigindo políticas claras, validação contínua e rastreabilidade.
+> 📌 A governação de módulos é um **controlo estrutural de supply chain** em IaC. Sem validação, aprovação e evidência explícitas, a reutilização transforma-se num **multiplicador de risco**.

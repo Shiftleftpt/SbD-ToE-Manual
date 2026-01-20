@@ -625,6 +625,52 @@ Como **Developer**, quero **validar automaticamente a compatibilidade de licenç
 
 ---
 
+### US-13 — Inventário e controlo de dependências emergentes 
+
+**Contexto.**  
+Em arquiteturas modernas, nem todas as dependências entram por declaração explícita em manifests ou lockfiles. Ferramentas de build, pipelines, code generation, plugins e carregamento em runtime podem introduzir **dependências emergentes** que não são imediatamente visíveis.
+
+:::userstory
+**História.**  
+Como **Arquitetos de Software + AppSec Engineer**, quero identificar e controlar dependências emergentes (não explicitamente declaradas), para garantir que a composição real do software permanece governada, rastreável e alinhada com os requisitos de segurança.
+
+**Critérios de aceitação (BDD).**
+- **Dado** que um SBOM é gerado para a aplicação ou pipeline  
+  **Quando** comparo a composição atual com a baseline conhecida  
+  **Então** consigo identificar dependências novas, inesperadas ou fora da fronteira definida
+
+**Checklist.**
+- [ ] Fronteira de inventário (SBOM boundary) definida e documentada
+- [ ] Fontes de dependência identificadas (build tools, plugins, pipelines, runtime fetch)
+- [ ] Baseline de dependências aprovada e versionada
+- [ ] Deteção de *delta* de dependências implementada
+- [ ] Dependências emergentes sujeitas a revisão/aprovação
+- [ ] Evidência arquivada por release
+
+:::
+
+**Artefactos & evidências.**
+- `sbom-boundary.md`
+- `sbom-baseline.json`
+- Relatório de *delta* de dependências por build/release
+
+**Proporcionalidade por risco.**
+| Nível | Obrigatório? | Ajustes |
+|---|---|---|
+| L1 | Opcional | Análise manual pontual |
+| L2 | Sim | Deteção automática de *delta* |
+| L3 | Sim | *Gate* automático + aprovação formal |
+
+**Integração no SDLC.**
+| Fase | Trigger | Responsável | SLA |
+|---|---|---|---|
+| CI/CD | Build / Release | DevOps + AppSec | Em cada release |
+
+**Ligações úteis.**
+- 🔗 Cap. 04 — Arquitetura Segura: `/sbd-manual/arquitetura-segura/intro`
+- 🔗 Cap. 07 — CI/CD Seguro: `/sbd-manual/cicd-seguro/intro`
+
+---
 ## 🧩 Nota complementar — Inventário contínuo de componentes e alertas em produção
 
 A gestão de dependências não termina no build.  

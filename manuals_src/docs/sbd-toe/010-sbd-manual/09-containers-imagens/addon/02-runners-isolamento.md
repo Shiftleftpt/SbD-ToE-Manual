@@ -1,20 +1,24 @@
 ---
 id: runners-isolamento
 title: Runners, Execução Isolada e Ambientes Controlados
-description: Garantia de execução segura e controlada de *containers* em pipelines e ambientes partilhados
-tags: [runners, isolamento, pipelines, execucao, segurança, ci-cd]
+description: Garantia de execução segura e controlada de containers em pipelines e ambientes partilhados
+tags: [runners, isolamento, pipelines, execucao, seguranca, cicd]
 ---
 
 # 🏃‍♂️ Runners, Execução Isolada e Ambientes Controlados
 
 ## 🌟 Objetivo
 
-Garantir que todos os *containers* são executados em **ambientes isolados, controlados e auditáveis**, especialmente no contexto de **pipelines CI/CD** e execução automatizada de tarefas, mitigando riscos de:
+Garantir que todos os containers são executados em **ambientes isolados, controlados e auditáveis**, em especial no contexto de **pipelines CI/CD e execução automatizada**, mitigando riscos de processo e de compromisso técnico, nomeadamente:
 
 - Compromisso do host ou de outros jobs;
 - Escalada de privilégios;
-- Persistência de dados sensíveis entre execuções;
-- Utilização indevida de runners partilhados com permissões excessivas.
+- Persistência indevida de dados sensíveis entre execuções;
+- Execução de artefactos não avaliados em ambientes partilhados;
+- Aceitação implícita de risco por via da automação.
+
+Num SSDLC moderno, runners **não são apenas infraestrutura**:  
+são **pontos de materialização de confiança**, onde artefactos passam de “construídos” a “executados”.
 
 ---
 
@@ -28,72 +32,103 @@ Garantir que todos os *containers* são executados em **ambientes isolados, cont
 - Jenkins (`executors`)
 - Kubernetes Jobs, CronJobs ou pods temporários
 
-Um **ambiente isolado** deve garantir:
+Independentemente da plataforma, um runner representa sempre um **ambiente onde decisões implícitas ocorrem**:  
+qual imagem é executada, com que permissões, em que contexto e com que impacto.
+
+Um **ambiente de execução isolado** deve garantir, no mínimo:
 
 - Separação de namespaces (processo, rede, filesystem);
-- Zero persistência entre execuções;
+- Ausência de persistência entre execuções;
 - Execução com utilizador não-root e permissões mínimas;
-- Capacidade limitada (ex: CPU, memória, storage).
+- Limitação explícita de recursos (CPU, memória, storage);
+- Impossibilidade de afetar execuções paralelas ou futuras.
 
-> ⚠️ Runners partilhados e genéricos são **ponto crítico de ataque** se não forem isolados e verificados continuamente.
+> ⚠️ Runners partilhados e genéricos são **pontos críticos de risco de processo**, pois uma execução bem-sucedida pode ser interpretada, erradamente, como autorização implícita.
 
 ---
 
 ## 📘 Tipos de runners e níveis de risco
 
-| Tipo                    | Exemplos                  | Risco associado             | Notas                               |
-|-------------------------|---------------------------|-----------------------------|--------------------------------------|
-| Partilhado (multi-tenant)| GitHub hosted, GitLab shared | Elevado - superfície comum | Evitar em pipelines críticas         |
-| Autogerido (on-prem/cloud)| Azure DevOps agent, K8s pod | Moderado - depende do hardening | Ideal se gerido com boas práticas    |
-| Ephemeral e dedicados   | K8s jobs, ephemeral containers | Baixo - isolamento total   | Recriado por build, não partilhado   |
+| Tipo                     | Exemplos                               | Risco associado                       | Notas operacionais                                  |
+|--------------------------|----------------------------------------|---------------------------------------|-----------------------------------------------------|
+| Partilhado (multi-tenant)| GitHub hosted, GitLab shared            | Elevado – superfície comum            | Evitar em pipelines L2/L3                           |
+| Autogerido               | Azure DevOps agent, runners on-prem     | Moderado – depende de hardening       | Aceitável se isolado e auditável                    |
+| Efémero e dedicado       | K8s Jobs, runners temporários           | Baixo – isolamento forte              | Preferencial: recriado por execução                 |
+
+A escolha do tipo de runner **é uma decisão de risco**, não apenas de conveniência operacional.
 
 ---
 
 ## 🛠️ Como aplicar execução isolada
 
-1. **Evitar uso de runners partilhados** para projetos críticos (L3);
-2. **Executar *containers* em ambientes efémeros** - destruídos após uso;
-3. **Desativar privilégios no runtime** (`--privileged`, `--cap-add`, `--mount /var/run/docker.sock`);
-4. **Aplicar limites de recursos (`CPU`, `RAM`) e quotas**;
-5. **Validar que o utilizador de execução não tem permissões administrativas**;
-6. **Utilizar sandboxing (ex: gVisor, Kata Containers) quando aplicável**;
-7. **Controlar imagens utilizadas no runner** (ver `01-imagens-base.md`);
-8. **Impedir acesso direto à rede ou storage externo sem validação explícita**;
-9. **Monitorizar execuções e registar métricas de isolamento e falhas**.
+A execução segura exige que o runner **não introduza confiança implícita** nem amplifique erros a montante:
+
+1. **Evitar runners partilhados** em projetos críticos ou regulados (L3);
+2. **Executar containers em ambientes efémeros**, destruídos após cada execução;
+3. **Proibir execução privilegiada** (`--privileged`, `--cap-add`, acesso a `/var/run/docker.sock`);
+4. **Aplicar limites explícitos de recursos** (CPU, RAM, storage);
+5. **Garantir que o utilizador de execução não tem permissões administrativas**;
+6. **Aplicar sandboxing adicional** (ex.: gVisor, Kata Containers) quando o risco o justifica;
+7. **Restringir as imagens permitidas no runner** (ver `01-imagens-base.md`);
+8. **Controlar e justificar qualquer acesso a rede ou storage externo**;
+9. **Registar e monitorizar execuções**, incluindo falhas de isolamento e tentativas de evasão.
+
+Estes controlos não substituem decisão humana, mas **reduzem o impacto de decisões erradas ou implícitas**.
 
 ---
 
 ## 📂 Onde e como configurar
 
-| Plataforma       | Configuração de isolamento sugerida                       |
-|------------------|------------------------------------------------------------|
-| GitHub Actions   | Usar runners self-hosted com sandbox (ex: K8s), revogar após uso |
-| Azure DevOps     | Agentes em containers dedicados; evitar acesso a `host`    |
-| GitLab CI        | Runners Docker/Kubernetes com política de isolamento       |
-| Jenkins          | Docker plugin com `--rm`, `--read-only`, user não-root     |
-| Kubernetes       | Pods efémeros com `securityContext`, `PodSecurity` e `PSA` |
+| Plataforma       | Prática recomendada de isolamento                                  |
+|------------------|---------------------------------------------------------------------|
+| GitHub Actions   | Runners self-hosted em ambientes efémeros (ex.: Kubernetes)         |
+| Azure DevOps     | Agentes em containers dedicados; sem acesso ao host                 |
+| GitLab CI        | Runners Docker/Kubernetes com política de isolamento rígida         |
+| Jenkins          | Execução em containers efémeros com filesystem read-only            |
+| Kubernetes       | Pods temporários com `securityContext`, PSA e quotas                |
+
+Independentemente da plataforma, a regra é invariável:  
+**o runner não deve sobreviver à execução**.
+
+---
+
+## 🔍 Runners como ponto de decisão implícita
+
+Sempre que um runner executa um container:
+
+- uma imagem foi implicitamente aceite;
+- um contexto de permissões foi implicitamente autorizado;
+- um impacto potencial foi implicitamente assumido.
+
+Por isso:
+- a execução **deve ser rastreável**;
+- o contexto **deve ser reproduzível**;
+- a decisão **deve ser justificável a posteriori**.
+
+Sem estes elementos, a automação transforma-se em risco sistémico.
 
 ---
 
 ## ✅ Boas práticas
 
-- Isolar por projeto/cliente: um runner por repositório ou namespace;
-- Recriar runners a cada execução (não persistir imagens ou cache);
-- Monitorizar tempo de execução, uso de disco e falhas de segurança;
-- Proibir acesso à rede interna sem validação explícita;
-- Utilizar **labels e restrições** para forçar execução segura (ex: `no-root`, `trusted-image`);
-- Integrar com enforcement de política via OPA/Kyverno.
+- Isolar runners por projeto, domínio ou namespace;
+- Recriar runners a cada execução (sem cache persistente);
+- Monitorizar uso de recursos e anomalias de execução;
+- Proibir acesso à rede interna por omissão;
+- Usar labels e restrições para forçar execução segura;
+- Integrar enforcement técnico (OPA/Kyverno) sem substituir governação.
 
 ---
 
 ## 📎 Referências cruzadas
 
-| Documento                      | Relação com ambientes de execução         |
-|-------------------------------|--------------------------------------------|
-| `01-imagens-base.md`             | Runners devem usar imagens aprovadas       |
-| `05-policies-runtime-opa.md`    | Enforcement de políticas de execução segura|
-| `06-sbom-containers.md`         | SBOM pode incluir runtime e dependências do runner |
-| `09-exemplo-pipeline-container.md` | Caso prático de execução controlada         |
-| `achievable-maturity`              | Uso de ambientes isolados é indicador de maturidade |
+| Documento                         | Relação com runners e execução                  |
+|----------------------------------|-------------------------------------------------|
+| `01-imagens-base.md`             | Imagens permitidas nos ambientes de execução    |
+| `05-policies-runtime-opa.md`    | Enforcement técnico de políticas                |
+| `06-sbom-containers.md`         | Inventário do ambiente de execução              |
+| `09-riscos-processo-imagens.md` | Separação entre execução automática e decisão   |
+| `15-aplicacao-lifecycle.md`     | Aplicação operacional no ciclo de vida          |
 
-> 🧱 A segurança do pipeline começa na segurança da execução. Runners mal configurados são portas abertas para comprometimento da supply chain.
+> 🧱 A segurança do pipeline começa na execução.  
+> Um runner inseguro **não é apenas um risco técnico** — é um mecanismo de aceitação implícita de risco.

@@ -52,7 +52,7 @@ flowchart TD
 | Validação por equipa AppSec               |     |  ✔️ |  ✔️ |
 | Evidência técnica (relatórios, políticas) |     |  ✔️ |  ✔️ |
 | SBOM ou inventário de componentes         |     |     |  ✔️ |
-| SLA de resposta a incidentes (\<24h)       |     |     |  ✔️ |
+| SLA de resposta a incidentes (`<`24h)       |     |     |  ✔️ |
 | Direito de auditoria                      |     |     |  ✔️ |
 
 > A matriz de criticidade do Cap. 01 deve ser usada como base para atribuição do nível de risco.
@@ -91,6 +91,8 @@ flowchart TD
 | Transparência / SBOM    | Fornecem SBOM atualizado mediante pedido?                  | Sim (L3)            |
 
 > Pode ser integrado em Forms, Excel, Confluence ou sistemas de procurement.
+
+Quando parte do processo de validação é suportado por mecanismos automatizados, deve ser possível identificar claramente quais os passos executados dessa forma, bem como o momento e o responsável pela decisão final de validação.
 
 ---
 

@@ -35,6 +35,10 @@ São disposições formais incorporadas nos contratos com fornecedores, parceiro
 
 > 📎 Estas cláusulas são essenciais para transferir obrigações de segurança e alinhar o fornecedor com os princípios do SbD-ToE.
 
+A utilização de processos ou mecanismos técnicos automatizados para suportar o cumprimento destas cláusulas não altera nem reduz as responsabilidades contratuais do fornecedor.
+O fornecedor permanece integralmente responsável pela conformidade, evidência e resultados obtidos,independentemente do grau de automação utilizado.
+
+
 ---
 
 ## 🛠️ Como aplicar
@@ -46,7 +50,7 @@ São disposições formais incorporadas nos contratos com fornecedores, parceiro
 | Tema                    | Cláusula sugerida                                                                                 |
 |-------------------------|--------------------------------------------------------------------------------------------------|
 | Segurança mínima        | O fornecedor garante conformidade com os controlos definidos conforme o nível de risco da aplicação. |
-| Vulnerabilidades        | Compromisso de correção de CVEs críticos em \<72h após divulgação pública.                        |
+| Vulnerabilidades        | Compromisso de correção de CVEs críticos em `<`72h após divulgação pública.                        |
 | SBOM / transparência    | Disponibilização de SBOM atualizado com dependências críticas, mediante solicitação.             |
 | Incidentes              | Notificação de incidentes de segurança no prazo máximo de 24h após deteção.                      |
 | Auditoria / evidência   | Direito da organização a solicitar evidência de controlos ou realizar auditorias formais.         |
@@ -101,6 +105,8 @@ Cada cláusula deve incluir:
 - Forma de validação esperada (evidência técnica, auditoria, testes);
 - Penalizações ou impacto contratual em caso de incumprimento;
 - Periodicidade de revisão (ex: em renovações, novas versões ou releases).
+- Identificação de processos ou mecanismos técnicos utilizados para suportar o cumprimento da cláusula, quando aplicável.
+
 
 ---
 

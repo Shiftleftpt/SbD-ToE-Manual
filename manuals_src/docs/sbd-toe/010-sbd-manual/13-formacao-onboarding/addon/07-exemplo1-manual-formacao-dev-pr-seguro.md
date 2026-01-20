@@ -7,6 +7,7 @@ tags: [exemplo, formacao, pull request, dev, aplicacao]
 
 
 # 🛠️ Módulo Formativo - Pull Request Seguro
+Este exemplo assume um ambiente de desenvolvimento fortemente apoiado por ferramentas automatizadas, mantendo a responsabilidade final sobre decisões e práticas nas equipas envolvidas.
 
 ## 🎯 Objetivo
 

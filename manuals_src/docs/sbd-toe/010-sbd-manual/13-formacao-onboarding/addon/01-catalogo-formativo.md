@@ -18,6 +18,9 @@ Cruzar os **14 capítulos técnicos do manual SbD-ToE** com os **conteúdos de f
 
 Este catálogo serve de base para programas de formação, onboarding, labs e CTFs internos - e pode ser instanciado como estrutura curricular num LMS.
 
+
+> Os conteúdos formativos aqui descritos assumem um contexto de forte apoio por ferramentas automatizadas ao longo do ciclo de vida, sem que isso substitua a necessidade de compreensão humana dos processos, limites e responsabilidades associados.
+
 ---
 
 ## 🧬 O que contém

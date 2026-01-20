@@ -42,6 +42,22 @@ Cada papel contribui com uma parte da cadeia de confiança, e apenas a colabora�
 
 ---
 
+## ✅ Gates de decisão humana e evidência mínima
+
+Neste capítulo, os mecanismos automáticos (scanners, linters, policies, assinaturas, SBOM) produzem **sinais técnicos**.  
+A **autorização de uso**, a **promoção entre ambientes** e a **concessão de exceções** são sempre decisões humanas explícitas, rastreáveis e limitadas no tempo.
+
+**Regra canónica:** nenhuma imagem deve chegar a produção (L2/L3) sem existir evidência auditável de:
+- quem decidiu (role e identidade);
+- com base em que sinais (links para logs/relatórios);
+- qual o âmbito (imagem/digest, namespace, workload);
+- qual a validade (TTL / condição de expiração);
+- que medidas compensatórias foram aplicadas (se existir exceção).
+
+Os user stories US-15 a US-17 operacionalizam estes gates.
+
+---
+
 ## 📖 User Stories Reutilizáveis
 
 ### US-01 - Construção de imagens a partir de bases seguras, minimalistas e pinned por digest
@@ -795,7 +811,153 @@ Como **Infraestrutura + AppSec**, quero configurar sandboxes avançados (gVisor,
 **Ligações úteis.**  
 [Kubernetes e Execução](/sbd-toe/sbd-manual/containers-imagens/addon/kubernetes-execucao)
 
+---
 
+### US-15 - Aprovação, depreciação e revogação de Golden Base Images (catálogo organizacional)
+
+**Contexto.**  
+Imagens base aprovadas são **ativos de confiança organizacional**. A aprovação não é permanente: exige critérios, registo de decisão, cadência de revisão e mecanismo de revogação rápida.
+
+:::userstory
+**História.**  
+Como **Plataforma + AppSec**, quero gerir um catálogo de Golden Base Images com processo formal de **aprovação**, **revisão periódica**, **depreciação** e **revogação**, para garantir que a organização só constrói sobre bases com risco conhecido e governado.
+
+**Critérios de aceitação (BDD).**  
+- **Dado** que uma nova imagem base é proposta  
+  **Quando** é avaliada para entrada no catálogo  
+  **Então** existe decisão humana explícita (aprovada/rejeitada) com evidência associada
+- **Dado** uma imagem base aprovada  
+  **Quando** entra em depreciação (EOL, CVE crítico recorrente, mudança de critérios)  
+  **Então** existe registo de depreciação com prazo e alternativa recomendada
+- **Dado** um evento crítico (compromisso upstream, CVE explorável sem mitigação)  
+  **Quando** é decidido revogar  
+  **Então** a imagem é marcada como revogada e o uso é bloqueado por policy (L2/L3)
+
+**Checklist.**  
+- [ ] Catálogo versionado em Git (imagem, digest/tag, owner, data aprovação, revisão, estado: active/deprecated/revoked)
+- [ ] Critérios mínimos de aprovação documentados (SBOM, scan, proveniência quando aplicável, EOL conhecido)
+- [ ] Cadência de revisão definida (L2: trimestral; L3: mensal ou por evento)
+- [ ] Processo de revogação com gatilhos e comunicação (inclui rollback/patch plan)
+- [ ] Bloqueio automático em L2/L3 para bases revogadas (admission/pipeline gate)
+
+:::
+
+**🧾 Artefactos & evidências.**  
+- `golden-images-catalog.md` (ou equivalente) com histórico e estados  
+- PR de aprovação/depreciação/revogação com reviewers identificados  
+- Evidências anexas: SBOM, scan report, decisão (motivo + TTL se aplicável)
+
+**⚖️ Proporcionalidade.**  
+| Nível | Obrigatório? | Ajustes |
+|---|---:|---|
+| L1 | Recomendado | Catálogo simples + revisão ad-hoc |
+| L2 | Sim | Aprovação formal + revisão trimestral + depreciação com prazos |
+| L3 | Sim | Aprovação formal + revisão mensal/event-driven + revogação rápida bloqueante |
+
+**Integração no SDLC.**  
+| Fase | Trigger | Responsável | SLA |
+|------|---------|-------------|-----|
+| Design/Plataforma | Proposta de nova base | Plataforma + AppSec | 5 dias úteis |
+| Operação | CVE/EOL/incidente | Plataforma + AppSec + GRC | conforme severidade |
+
+---
+
+### US-16 - Promoção por estágios com aprovação explícita e revalidação por ambiente
+
+**Contexto.**  
+Promoções automáticas DEV→QA→PROD criam aceitação implícita de risco. Em L2/L3, cada promoção é uma decisão humana suportada por evidência, e a validação deve considerar o **contexto do ambiente**.
+
+:::userstory
+**História.**  
+Como **Release Manager/DevOps + AppSec**, quero que a promoção de uma imagem entre ambientes seja um gate explícito (com aprovação humana) e que revalide proveniência/policies no contexto do ambiente destino, para evitar propagação automática de risco.
+
+**Critérios de aceitação (BDD).**  
+- **Dado** uma imagem candidata a promoção  
+  **Quando** promove de DEV para QA/PROD (L2/L3)  
+  **Então** existe aprovação explícita registada, referenciando digest, sinais e justificativa
+- **Dado** o ambiente destino (QA/PROD)  
+  **Quando** a promoção é pedida  
+  **Então** a pipeline reexecuta validações mínimas (policy compliance, assinatura/proveniência quando aplicável, thresholds de CVE definidos)
+- **Dado** uma promoção aprovada  
+  **Quando** ocorre deploy  
+  **Então** a execução é bloqueada se o digest divergir do aprovado ou se as policies de destino falharem
+
+**Checklist.**  
+- [ ] Gate de aprovação (manual step) para L2/L3 com identidade do aprovador e comentário obrigatório
+- [ ] Promoção sempre por digest (imutável) e não por tag flutuante
+- [ ] Revalidação por ambiente: policies, allowlist, thresholds, proveniência quando aplicável
+- [ ] Evidência consolidada (links para logs, reports, entradas de policy/admission)
+- [ ] TTL da aprovação (ex.: 30 dias) e necessidade de reaprovação após alterações relevantes
+
+:::
+
+**🧾 Artefactos & evidências.**  
+- Registo de promoção (pipeline run + approval metadata + digest)  
+- Relatórios de validação por ambiente (scan/policy/proveniência)  
+- Manifest de deploy referenciando o digest aprovado
+
+**⚖️ Proporcionalidade.**  
+| Nível | Obrigatório? | Ajustes |
+|---|---:|---|
+| L1 | Recomendado | Promoção automatizada com logging e rastreabilidade |
+| L2 | Sim | Aprovação explícita + revalidação mínima por ambiente |
+| L3 | Sim | Aprovação explícita + revalidação reforçada + TTL curto + auditoria |
+
+**Integração no SDLC.**  
+| Fase | Trigger | Responsável | SLA |
+|------|---------|-------------|-----|
+| Pré-prod/Release | Pedido de promoção | DevOps + AppSec | Antes do go-live |
+
+---
+
+### US-17 - Exceções temporárias a findings/policies com TTL, compensações e revalidação
+
+**Contexto.**  
+Exceções são inevitáveis (false positives, constraints operacionais, janela de patch), mas são também um dos maiores vetores de falha de governação. Exceção sem TTL e sem evidência é aceitação implícita de risco.
+
+:::userstory
+**História.**  
+Como **AppSec + GRC**, quero gerir exceções a findings/policies como decisões formais, temporárias e auditáveis (TTL + compensações + revalidação), para permitir continuidade operacional sem perder controlo do risco.
+
+**Critérios de aceitação (BDD).**  
+- **Dado** um finding ou violação de policy que bloqueia release  
+  **Quando** é pedida exceção  
+  **Então** existe registo com: motivo, âmbito (imagem/digest/workload), severidade, risco, compensações e TTL
+- **Dado** uma exceção aprovada  
+  **Quando** TTL expira ou muda o contexto (novo CVE, alteração de exposição, incidente)  
+  **Então** a exceção é automaticamente invalidada e requer reaprovação
+- **Dado** uma exceção ativa  
+  **Quando** existe alternativa de mitigação (patch/config)  
+  **Então** existe plano e owner com prazos e evidência de execução
+
+**Checklist.**  
+- [ ] Registo de exceção versionado (ticket/PR) com owner e aprovador  
+- [ ] TTL obrigatório e curto em L3 (ex.: 7–30 dias); definido em L2 (ex.: 30–90 dias)  
+- [ ] Medidas compensatórias documentadas (ex.: restrição de egress, runtime sandbox, monitorização reforçada)  
+- [ ] Revalidação por evento (CVE novo, incidente, alteração de arquitetura/runtime)  
+- [ ] Relatório periódico de exceções ativas (inventário + risco agregado)
+
+:::
+
+**🧾 Artefactos & evidências.**  
+- Registo/ticket de exceção com TTL e assinatura de aprovação  
+- Evidência das compensações aplicadas (policies, alerts, configs)  
+- Plano de remediação e prova de execução (PRs, logs, releases)
+
+**⚖️ Proporcionalidade.**  
+| Nível | Obrigatório? | Ajustes |
+|---|---:|---|
+| L1 | Recomendado | Exceções registadas, TTL opcional mas incentivado |
+| L2 | Sim | TTL obrigatório + compensações mínimas + revisão mensal |
+| L3 | Sim | TTL curto + compensações reforçadas + revisão semanal/mensal + auditoria |
+
+**Integração no SDLC.**  
+| Fase | Trigger | Responsável | SLA |
+|------|---------|-------------|-----|
+| CI/CD/Release | Bloqueio por finding/policy | AppSec + GRC + DevOps | Antes do go-live |
+
+
+---
 ## 📦 Artefactos esperados
 
 Cada prática deixa uma pegada verificável - os artefactos.  

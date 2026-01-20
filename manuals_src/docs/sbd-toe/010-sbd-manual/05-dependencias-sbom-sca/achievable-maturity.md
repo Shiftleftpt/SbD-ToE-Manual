@@ -93,7 +93,7 @@ Este ficheiro **não avalia organizações**, mas sim o grau de maturidade e com
 |-------|---------------------------------------------------------|-------------------------------------------|
 | 1     | Listagem e rastreio básico de dependências              | ✅ SBOM gerado por build                   |
 | 2     | Proveniência e pinning de versões                       | ✅ Critérios de controlo formal            |
-| 3+    | Builds verificáveis e reprodutibilidade                 | ❌ Fora do escopo (ver Cap. 06 e 08)       |
+| 3+    | Builds verificáveis e reprodutibilidade                 | ❌ Fora do âmbito (ver Cap. 06 e 08)       |
 
 **🔐 Nível máximo suportado por este capítulo: SLSA 2 / 4**
 

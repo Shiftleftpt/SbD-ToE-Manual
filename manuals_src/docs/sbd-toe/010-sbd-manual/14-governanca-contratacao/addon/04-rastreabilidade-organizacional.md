@@ -21,6 +21,10 @@ Garantir que existe uma **ligação clara, documentada e auditável** entre:
 * A **documentação de exceções ou compensações** (Cap. 14.1);
 * E os **responsáveis nomeados** por cada decisão.
 
+Este modelo de rastreabilidade assume que toda a evidência, independentemente de ser produzida manualmente ou por processos técnicos automatizados, é sempre associada a um responsável organizacional explícito.
+
+A existência de evidência técnica não substitui a necessidade de decisão consciente e responsabilização formal.
+
 ---
 
 ## 📈 Estrutura de rastreabilidade recomendada
@@ -30,6 +34,8 @@ Garantir que existe uma **ligação clara, documentada e auditável** entre:
 | Ex: Portal RH        | L3            | REQ-001, REQ-002...  | REQ-017 justificada | Fornecedor ABC       | Teste CI + cláusula | joao.silva\@empresa |
 
 > 🔹 Esta estrutura pode ser mantida em Excel, SharePoint, Jira ou outra ferramenta ALM com suporte a traçabilidade.
+
+Quando aplicável, a coluna de evidência deve permitir identificar se a validação foi suportada por mecanismos automatizados, bem como o responsável pela aceitação dessa evidência.
 
 ---
 

@@ -53,7 +53,7 @@ Este documento **não mede a maturidade de uma organização**, mas sim o **grau
 |-------|------------------------------------------------------------|-----------------------------------------------------|
 | 1     | Arquitetura definida informalmente                         | ✅ Requisitos mínimos `ARC-001` a `ARC-004`         |
 | 2     | Documentação com validação proporcional                    | ✅ Validação rastreável, zonas de confiança         |
-| 3     | Integração contínua e revisão automatizada                 | ❌ Fora do escopo (requer automação e pipelines)    |
+| 3     | Integração contínua e revisão automatizada                 | ❌ Fora do âmbito (requer automação e pipelines)    |
 
 **🧮 Maturidade atingida: 2 / 3**
 
@@ -98,7 +98,7 @@ Este documento **não mede a maturidade de uma organização**, mas sim o **grau
 |-------|-------------------------------------------------|-----------------------------------------|
 | 1     | Princípios básicos de isolamento                | ✅ Segmentação e zonas de confiança      |
 | 2     | Arquitetura formal com proveniência             | ✅ Requisitos documentados               |
-| 3–4   | Cadeias verificáveis, builds isolados           | ❌ Fora do escopo (ver Cap. 06 e 08)     |
+| 3–4   | Cadeias verificáveis, builds isolados           | ❌ Fora do âmbito (ver Cap. 06 e 08)     |
 
 **🔐 Nível máximo suportado por este capítulo: SLSA 2 / 4**
 

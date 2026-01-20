@@ -1,108 +1,163 @@
 ---
 id: policies-runtime-opa
-title: Enforcement de Políticas no Runtime com OPA e Kyverno
-description: Aplicação de políticas formais e automáticas para validar *containers* e execuções em tempo real
+title: Enforcement Técnico de Políticas no Runtime com OPA e Kyverno
+description: Aplicação automática de políticas formais para bloquear execuções não conformes, sem substituir decisão humana
 tags: [opa, kyverno, policies, enforcement, kubernetes, runtime, containers]
 ---
 
-# 📜 Enforcement de Políticas no Runtime com OPA e Kyverno
+# 📜 Enforcement Técnico de Políticas no Runtime com OPA e Kyverno
 
 ## 🌟 Objetivo
 
-Garantir que apenas *containers* **conformes com políticas de segurança definidas** podem ser executados em ambientes controlados - nomeadamente **Kubernetes e pipelines CI/CD** - através de mecanismos formais de enforcement como:
+Garantir que *containers* **que não cumprem requisitos mínimos de segurança definidos pela organização não podem ser executados**, através de mecanismos formais e automáticos de enforcement, nomeadamente em **Kubernetes e pipelines CI/CD**.
 
-- OPA (Open Policy Agent)
-- Kyverno
-- Admission Controllers
+As políticas descritas neste capítulo **não decidem se um container é aceitável**.  
+Elas **impedem execuções manifestamente não conformes**, fornecendo um **mecanismo técnico de bloqueio** que suporta — mas não substitui — a governação e a decisão humana.
 
-Estas políticas asseguram a aplicação objetiva e automatizada de requisitos como:
-
-- Uso de imagens aprovadas e assinadas;
-- Execução com utilizador não-root;
-- Hardening do runtime (`securityContext`);
-- Proibição de execuções privilegiadas;
-- Conformidade com baseline organizacional.
+Este ficheiro define como usar OPA, Kyverno e mecanismos equivalentes **como guardrails técnicos**, não como autoridade de risco.
 
 ---
 
-## 🧬 O que são políticas de execução
+## 🧬 O que são políticas de execução (no modelo SbD-ToE)
 
-As **políticas de execução** são regras formais aplicadas automaticamente no momento da criação de um *container* ou workload. São utilizadas para:
+As **políticas de execução** são regras formais avaliadas automaticamente no momento da criação de um workload. No modelo SbD-ToE, elas servem para:
 
-- **Validar a conformidade de cada execução** com o baseline de segurança;
-- **Bloquear execuções não conformes** com regras pré-definidas;
-- **Auditar tentativas de execução fora de política**;
-- **Impor requisitos de assinatura, labels, annotations, permissões, imagens**.
+- **Bloquear configurações inseguras conhecidas**;
+- **Impor requisitos mínimos não negociáveis**;
+- **Produzir evidência objetiva de não conformidade**;
+- **Reduzir a margem de erro operacional** em ambientes automatizados.
 
-> 🔒 As políticas são o equivalente técnico à “governança runtime” - são o que transforma guidelines em enforcement real.
+> 🔒 Uma política **nunca concede autorização** — apenas **recusa ausência de requisitos mínimos**.
 
----
-
-## 📘 Ferramentas recomendadas
-
-| Ferramenta      | Descrição                                     | Contexto                           |
-|------------------|-----------------------------------------------|------------------------------------|
-| **OPA (Gatekeeper)** | Motor de políticas Rego para Kubernetes       | Regras flexíveis e expressivas     |
-| **Kyverno**      | Motor de políticas YAML nativas em Kubernetes | Mais simples e adaptado a devs     |
-| **Admission Webhooks** | Validação customizada de execuções           | Personalizável, mas requer dev     |
-| **Validadores CI/CD** | Checks na pipeline (ex: Checkov, OPA, Semgrep) | Complementam validação em runtime  |
+A aceitação de risco, a concessão de exceções e a promoção entre ambientes **são sempre decisões humanas explícitas**, tratadas fora do mecanismo de policy.
 
 ---
 
-## 🛠️ Como aplicar políticas no runtime
+## ⚠️ Enforcement não é aceitação de risco
 
-1. **Definir os requisitos mínimos de execução**:
-   - Sem `root`;
-   - Imagem validada e assinada;
-   - `readOnlyRootFilesystem`;
-   - `capabilities: drop: ALL`;
-   - Proveniência da imagem (registry autorizado).
+Um erro conceptual comum é assumir que:
 
-2. **Escrever políticas**:
-   - Em Rego (para OPA) ou YAML (para Kyverno);
-   - Versão e aplicar via GitOps (ArgoCD, Flux).
+- workload aprovado por policy = workload seguro
+- execução permitida = risco aceite
 
-3. **Instalar o motor de enforcement**:
-   - `Gatekeeper` para OPA;
-   - `Kyverno` como controller no cluster.
+No SbD-ToE, esta equivalência é **explicitamente proibida**.
 
-4. **Testar execuções contra as políticas** com modo `audit` + logs.
+As políticas:
+- validam **condições mínimas objetivas**;
+- não avaliam contexto, impacto ou risco residual;
+- não substituem análise nem responsabilidade.
 
-5. **Ativar modo `enforce`** após validação e aceitação da política.
-
-6. **Aplicar rótulos (labels), anotações e regras de âmbito** (por namespace, equipa, tipo de workload).
+Uma execução pode:
+- cumprir todas as políticas,
+- estar tecnicamente correta,
+- e ainda assim **não ser aceitável** para um determinado contexto (ex.: PROD, dados sensíveis, L3).
 
 ---
 
-## 📂 Onde manter políticas e como versionar
+## 📘 Ferramentas e mecanismos recomendados
 
-- Diretório `./policies/` em repositório Git controlado;
-- Versionar com a infraestrutura (IaC);
-- Validar via CI/CD antes de aplicar;
-- Aplicar por ambientes (`dev`, `pre-prod`, `prod`) com âmbito diferenciado;
-- Auditar logs de rejeições e execuções conformes.
+| Ferramenta              | Função técnica                                         | Papel no SbD-ToE                    |
+|-------------------------|--------------------------------------------------------|-------------------------------------|
+| **OPA (Gatekeeper)**    | Avaliação de regras Rego em admission time             | Bloqueio técnico                    |
+| **Kyverno**             | Políticas declarativas em YAML                         | Bloqueio e mutação controlada       |
+| **Admission Webhooks** | Validação customizada                                  | Enforcement específico              |
+| **Validadores CI/CD**  | Checks antecipados (ex.: OPA, Checkov, Semgrep)        | Redução de falhas antes do runtime  |
+
+Estas ferramentas **produzem decisões técnicas binárias (allow / deny)** — não decisões de risco.
+
+---
+
+## 🛠️ Como aplicar políticas de forma correta
+
+### 1️⃣ Definir requisitos mínimos não negociáveis
+
+Exemplos típicos:
+- Execução como utilizador não-root;
+- Proibição de containers privilegiados;
+- Uso de imagens provenientes de registries autorizados;
+- Verificação de assinatura (integridade);
+- Aplicação de `securityContext` mínimo.
+
+Estes requisitos devem ser:
+- claros,
+- objetivos,
+- tecnicamente verificáveis.
+
+---
+
+### 2️⃣ Implementar políticas como código
+
+- Usar Rego (OPA) ou YAML (Kyverno);
+- Versionar em Git, junto da infraestrutura;
+- Aplicar via GitOps;
+- Associar cada política a um requisito organizacional explícito.
+
+---
+
+### 3️⃣ Testar e aplicar enforcement progressivo
+
+- Iniciar em modo `audit`;
+- Analisar rejeições e falsos positivos;
+- Comunicar regras às equipas;
+- Ativar `enforce` apenas após validação.
+
+O objetivo é **reduzir erro**, não criar bloqueios opacos.
+
+---
+
+## 📂 Onde manter políticas e como governar
+
+- Repositório Git dedicado (`policies/`);
+- Versionamento e histórico de alterações;
+- Aplicação diferenciada por ambiente;
+- Logs imutáveis de rejeições e execuções conformes;
+- Processo formal para exceções temporárias.
+
+Qualquer exceção **fora da policy** deve ser:
+- explicitamente aprovada;
+- limitada no tempo;
+- rastreável.
+
+---
+
+## 🔍 Relação com decisão humana
+
+No modelo SbD-ToE:
+
+- **Policies** bloqueiam o que é objetivamente inseguro;
+- **Pessoas** decidem o que é aceitável.
+
+Esta separação garante:
+- responsabilidade clara;
+- auditabilidade real;
+- prevenção de confiança implícita induzida por automação.
+
+Sem esta distinção, a policy torna-se um substituto indevido da governação.
 
 ---
 
 ## ✅ Boas práticas
 
-- Começar em modo `audit` antes de `enforce`;
-- Comunicar regras às equipas para evitar quebras silenciosas;
-- Separar políticas por tipo de workload (apps, CI/CD, sidecars);
-- Manter documentação e exemplos com racional de cada regra;
-- Ligar políticas a requisitos formais do Capítulo 2 (`REQ-*`) e Capítulo 9 (`addon/`);
-- Validar compatibilidade entre políticas de OPA e PSP/PSA (caso coexistam).
+- Tratar políticas como *guardrails*, não como selo de aprovação;
+- Manter políticas simples, objetivas e justificadas;
+- Separar claramente:
+  - enforcement técnico,
+  - decisão de risco,
+  - exceção formal;
+- Rever políticas após incidentes ou mudanças de plataforma;
+- Documentar o racional de cada regra aplicada.
 
 ---
 
 ## 📎 Referências cruzadas
 
-| Documento                      | Relação com enforcement                      |
-|-------------------------------|----------------------------------------------|
-| `01-imagens-base.md`             | Pode ser exigido uso apenas de imagens aprovadas |
-| `03-assinatura-cadeia-trust.md` | Enforcement de imagens assinadas             |
-| `04-hardening-containers.md`    | Pode validar se `securityContext` é conforme |
-| `08-kubernetes-execucao.md`     | Execução segura com enforcement ativo        |
-| `achievable-maturity`              | Políticas automáticas são critério de maturidade avançada |
+| Documento                         | Relação com enforcement                        |
+|----------------------------------|------------------------------------------------|
+| `01-imagens-base.md`             | Bloqueio de imagens não aprovadas              |
+| `03-assinatura-cadeia-trust.md` | Verificação de integridade como evidência      |
+| `04-hardening-containers.md`    | Enforcement de restrições mínimas              |
+| `09-riscos-processo-imagens.md` | Separação entre sinal, bloqueio e decisão      |
+| `15-aplicacao-lifecycle.md`     | Integração operacional no ciclo de vida        |
 
-> 🧩 As políticas de runtime são a última linha de defesa. Se a pipeline falhar, o cluster não pode executar código fora de política - essa é a essência do enforcement.
+> 🧩 Policies são **limites técnicos**, não decisões de confiança.  
+> Quando uma policy decide por nós, a governação já falhou.

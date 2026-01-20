@@ -1,101 +1,153 @@
 ---
-id: kubernetes-execucao
-title: Execução Segura de *containers* em Clusters Kubernetes
-description: Aplicação de práticas de segurança, isolamento e validação para workloads containerizados em Kubernetes
-tags: [kubernetes, containers, execução segura, isolation, runtime, segurança]
----
 
-# ☸️ Execução Segura de *containers* em Clusters Kubernetes
+id: kubernetes-execucao
+title: Execução Segura de Containers em Clusters Kubernetes
+description: Aplicação e verificação efetiva de práticas de segurança, isolamento e controlo para workloads containerizados
+tags: [kubernetes, containers, execucao-segura, isolamento, runtime, seguranca]
+-------------------------------------------------------------------------------
+
+# ☸️ Execução Segura de Containers em Clusters Kubernetes
 
 ## 🌟 Objetivo
 
-Assegurar que a **execução de *containers* em ambientes Kubernetes** - seja para aplicações, pipelines, sidecars ou agentes - é feita com **controlo total de permissões, políticas e rastreabilidade**, evitando riscos como:
+Assegurar que a **execução de containers em ambientes Kubernetes** — aplicações, pipelines, sidecars ou agentes — ocorre com **restrições explícitas, enforcement técnico e evidência verificável**, reduzindo riscos como:
 
-- Execução de workloads com permissões excessivas;
-- Comprometimento de outros pods ou do próprio nó;
-- Acesso não autorizado a segredos, volumes ou rede;
-- Violação de políticas de segurança organizacionais.
+* Execução com privilégios excessivos;
+* Escalada de permissões ao nível do nó;
+* Acesso indevido a segredos, volumes ou rede;
+* Execuções fora do baseline organizacional.
+
+Kubernetes fornece **mecanismos**, não garantias.
+A segurança da execução depende de **configuração correta, enforcement ativo e verificação contínua**.
 
 ---
 
-## 🧬 O que significa execução segura em Kubernetes
+## 🧬 O que significa execução segura em Kubernetes (no SbD-ToE)
 
-Executar *containers* de forma segura em Kubernetes implica:
+No modelo SbD-ToE, executar containers de forma segura em Kubernetes implica:
 
-- **Aplicar restrições explícitas no `securityContext`**;
-- **Utilizar mecanismos nativos de isolamento e controlo** (ex: namespaces, PodSecurity);
-- **Evitar execuções privilegiadas ou como `root`**;
-- **Validar imagens, origem, permissões e uso de recursos**;
-- **Controlar e monitorizar execuções com ferramentas nativas e externas**.
+* **Declarar restrições de execução** (`securityContext`, PSA);
+* **Impor essas restrições tecnicamente** (admission control);
+* **Verificar que o estado real do pod corresponde ao esperado**;
+* **Manter rastreabilidade entre decisão, configuração e execução**.
 
-> ⚠️ Um pod mal configurado pode escalar privilégios, comprometer o nó, aceder à rede interna ou violar segredos partilhados.
+> ⚠️ Um pod pode ser aceite pelo cluster e ainda assim violar expectativas de segurança se o estado efetivo não for verificado.
+
+---
+
+## ⚠️ Configuração não é garantia de segurança
+
+É essencial evitar a equivalência implícita:
+
+* ✔️ `securityContext` definido
+* ❌ execução automaticamente segura
+
+Existem três níveis distintos:
+
+1. **Capacidade da plataforma**
+   O que Kubernetes permite configurar.
+2. **Configuração declarada**
+   O que está nos manifests.
+3. **Estado efetivo de execução**
+   O que o pod realmente aplica em runtime.
+
+Este ficheiro trata explicitamente os **três níveis**, não apenas o segundo.
 
 ---
 
 ## 📘 Mecanismos de segurança aplicáveis
 
-| Mecanismo                  | Objetivo                                      | Exemplo                                       |
-|----------------------------|-----------------------------------------------|-----------------------------------------------|
-| `securityContext`          | Definir UID, capabilities, privilégios        | `runAsNonRoot: true`, `readOnlyRootFilesystem`|
-| Pod Security Standards     | Política de baseline para pods (`restricted`) | Enforcement automático por cluster            |
-| Kyverno / OPA (Gatekeeper) | Enforcement de políticas organizacionais      | Verificar labels, permissões, origem da imagem|
-| NetworkPolicies            | Isolar tráfego entre pods/namespaces          | Restringir comunicação interna                |
-| RuntimeClass / Sandboxing  | Usar runtimes alternativos (gVisor, Kata)     | Maior isolamento de syscalls e processos      |
-| Admission Webhooks         | Validar workload antes de ser executado       | Rejeitar pods fora de política                |
+| Mecanismo                  | Função técnica                             | Limitação inerente                |
+| -------------------------- | ------------------------------------------ | --------------------------------- |
+| `securityContext`          | Define UID, capabilities, privilégios      | Pode ser ignorado se mal aplicado |
+| Pod Security Standards     | Baseline de aceitação de pods              | Não valida estado pós-admission   |
+| Kyverno / OPA (Gatekeeper) | Bloqueio de configurações fora de política | Não avalia risco contextual       |
+| NetworkPolicies            | Isolamento de tráfego                      | Requer cobertura completa         |
+| RuntimeClass / Sandboxing  | Isolamento reforçado                       | Não elimina risco lógico          |
+| Admission Webhooks         | Validação pré-execução                     | Atua antes do runtime             |
 
 ---
 
-## 🛠️ Como aplicar na prática
+## 🛠️ Como aplicar de forma correta
 
-1. **Aplicar `securityContext` obrigatório em todos os pods**:
-   - `runAsNonRoot: true`
-   - `allowPrivilegeEscalation: false`
-   - `capabilities: drop: ["ALL"]`
-   - `readOnlyRootFilesystem: true`
+### 1️⃣ Declarar restrições mínimas obrigatórias
 
-2. **Ativar e aplicar Pod Security Standards (PSA)** no cluster (`restricted`, `baseline`);
+Todos os pods devem declarar explicitamente:
 
-3. **Configurar enforcement com OPA ou Kyverno** para:
-   - Validar origem das imagens;
-   - Proibir execuções com `privileged: true`;
-   - Exigir labels de controlo e rastreabilidade.
+```yaml
+securityContext:
+  runAsNonRoot: true
+  allowPrivilegeEscalation: false
+  readOnlyRootFilesystem: true
+  capabilities:
+    drop: ["ALL"]
+```
 
-4. **Aplicar `NetworkPolicy` restritiva por namespace**;
-5. **Monitorizar eventos de segurança e falhas de política**;
-6. **Usar `RuntimeClass` com runtimes isolados para workloads sensíveis**;
-7. **Evitar montagem de volumes sensíveis (`/var/run/docker.sock`, etc.)**;
-8. **Limitar recursos (`resources.requests` e `limits`) para evitar DoS interno**.
+Estas declarações são **necessárias**, mas não suficientes.
 
 ---
 
-## 📂 Onde configurar e versionar
+### 2️⃣ Impor enforcement técnico
 
-- Diretório `./k8s/security/` com manifests YAML validados;
-- Repositórios Git de IaC com revisão por pull request;
-- Políticas versionadas com ArgoCD, Flux ou Terraform;
-- Dashboards de compliance integrados com Prometheus, Grafana, Kyverno.
+* Ativar Pod Security Admission (`restricted` ou `baseline`);
+* Aplicar políticas via Kyverno ou OPA para:
+
+  * proibir `privileged: true`;
+  * bloquear imagens fora de origem autorizada;
+  * exigir labels e metadados de rastreabilidade.
+
+O enforcement **reduz erro humano**, não substitui governação.
+
+---
+
+### 3️⃣ Verificar estado efetivo em runtime
+
+Para workloads críticos (L2/L3), é necessário:
+
+* Confirmar UID efetivo do processo;
+* Validar mounts e permissões reais;
+* Verificar perfil seccomp / AppArmor ativo;
+* Detetar desvios (*drift*) após admission;
+* Registar evidência para auditoria.
+
+Sem esta verificação, a segurança é apenas **assumida**.
+
+---
+
+## 📂 Onde configurar, versionar e observar
+
+* Manifests em repositórios Git versionados;
+* Políticas como código via GitOps;
+* Logs de admission e rejeições preservados;
+* Métricas de compliance e desvios monitorizadas;
+* Evidência de execução associada ao workload.
 
 ---
 
 ## ✅ Boas práticas
 
-- Começar com modo `audit` e migrar para `enforce` após testes;
-- Usar `pod-template` validado e partilhado entre equipas;
-- Incluir segurança de execução como **aceitação obrigatória em deploys**;
-- Forçar verificação automática no Admission Controller;
-- Rever políticas e permissões após cada nova versão de Kubernetes;
-- Evitar o uso de `hostPath`, `hostNetwork`, `hostPID`, salvo exceções muito justificadas.
+* Tratar Kubernetes como **plataforma de execução**, não como barreira de segurança autónoma;
+* Separar claramente:
+
+  * configuração,
+  * enforcement,
+  * verificação;
+* Aplicar políticas progressivamente (`audit` → `enforce`);
+* Rever permissões após upgrades de cluster;
+* Documentar exceções como decisões temporárias e rastreáveis;
+* Assumir que **configuração sem observação é hipótese, não facto**.
 
 ---
 
 ## 📎 Referências cruzadas
 
-| Documento                      | Relação com Kubernetes                       |
-|-------------------------------|-----------------------------------------------|
-| `02-runners-isolamento.md`      | Runners podem ser executados como pods        |
-| `04-hardening-containers.md`    | `securityContext` aplica-se em Kubernetes     |
-| `05-policies-runtime-opa.md`    | Enforcement via OPA ou Kyverno no cluster     |
-| `09-exemplo-pipeline-container.md` | Caso prático inclui execução em K8s           |
-| `achievable-maturity`              | Aplicação de PSA e policies é critério de maturidade|
+| Documento                       | Relação com execução em Kubernetes     |
+| ------------------------------- | -------------------------------------- |
+| `02-runners-isolamento.md`      | Runners como pods efémeros             |
+| `04-hardening-containers.md`    | Restrições aplicadas ao runtime        |
+| `05-policies-runtime-opa.md`    | Enforcement técnico no admission       |
+| `09-riscos-processo-imagens.md` | Separação entre intenção e estado real |
+| `15-aplicacao-lifecycle.md`     | Integração no SSDLC                    |
 
-> ☁️ Kubernetes não é seguro por omissão. A segurança da execução depende da configuração explícita e do enforcement consistente.
+> ☁️ Kubernetes executa o que lhe é pedido.
+> A segurança existe apenas quando **o que é executado corresponde ao que foi conscientemente decidido**.

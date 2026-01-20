@@ -32,6 +32,14 @@ Para assegurar que a "segurança se vive e respira" e é parte do DNA da organiz
 
 👉 A excecionalidade deste capítulo é que coloca as **pessoas** como vetor de resiliência: uma organização pode ter pipelines seguros e requisitos definidos, mas se os engenheiros, testers, DevOps ou gestores não tiverem formação, a segurança, na prática. degrada-se.
 
+A utilização extensiva de ferramentas automatizadas ao longo do ciclo de vida
+não reduz a necessidade de compreensão humana dos processos,
+dos seus limites e das responsabilidades associadas.
+
+A formação definida neste capítulo assegura que todas as partes envolvidas
+compreendem o funcionamento real do modelo operativo adotado,
+independentemente do grau de automação existente.
+
 ---
 
 ## 🧪 2. Prescrição prática

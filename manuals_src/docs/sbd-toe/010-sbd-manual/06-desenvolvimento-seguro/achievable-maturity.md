@@ -95,7 +95,7 @@ Este mapeamento **não avalia equipas ou organizações**, mas sim o **grau de c
 |-------|------------------------------------------------------|----------------------------------------------|
 | 1     | Validações básicas no pipeline                       | ✅ Linters e PR validation                    |
 | 2     | Proveniência e rastreabilidade de decisões           | ✅ Tracking de alterações e ownership         |
-| 3–4   | Isolamento e builds reproduzíveis                    | ❌ Fora do escopo deste capítulo              |
+| 3–4   | Isolamento e builds reproduzíveis                    | ❌ Fora do âmbito deste capítulo              |
 
 **🔐 Nível máximo suportado por este capítulo: SLSA 2 / 4**
 

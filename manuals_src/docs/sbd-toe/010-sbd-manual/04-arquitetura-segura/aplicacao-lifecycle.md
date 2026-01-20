@@ -1,764 +1,747 @@
 ---
 id: aplicacao-lifecycle
 title: Como Fazer
-description: Integração das práticas de arquitetura segura ao longo do ciclo de desenvolvimento
+description: Integração das práticas de Arquitetura Segura ao longo do ciclo de desenvolvimento
 tags: [tipo:aplicacao, ciclo-vida, arquitetura, requisitos, seguranca]
 genia: us-format-normalization
 ---
 
 # 🏛️ Aplicação de Arquitetura Segura no Ciclo de Vida
 
-Este anexo prescreve **como aplicar sistematicamente as práticas de Arquitetura Segura definidas no Capítulo 4** ao longo do ciclo de desenvolvimento, garantindo rastreabilidade, proporcionalidade ao risco e integração com os requisitos de segurança.
+Este anexo prescreve **como aplicar sistematicamente as práticas de Arquitetura Segura definidas no Capítulo 4** ao longo do ciclo de desenvolvimento, garantindo **rastreabilidade**, **proporcionalidade ao risco (L1–L3)** e integração com requisitos e ameaças.
 
-Inclui modelos reutilizáveis de user stories, ações por papel, artefactos esperados e quadros de aplicação por nível de criticidade (L1–L3).
+Inclui **modelos reutilizáveis de user stories**, ações por papel, artefactos esperados e quadros de aplicação por nível de criticidade.
 
 ---
 
 ## 🧭 Quando aplicar Arquitetura Segura
 
-| Fase / Evento                         | Ação esperada                                                    | Quem participa                           | Artefacto principal              |
-|---------------------------------------|------------------------------------------------------------------|------------------------------------------|----------------------------------|
-| Início de projeto / épico             | Definir princípios de arquitetura segura                         | Arquitetos de Software, DevOps/SRE, AppSec Engineer   | `principios-arquitetura.md`      |
-| Design de solução                     | Produzir ficha de arquitetura com controlos de segurança         | Arquitetos de Software + AppSec Engineer              | `solution-architecture.md`       |
-| Grooming / Planeamento                | Rever padrões e aplicar requisitos de arquitetura                 | Developer + Arquitetos de Software                    | `design-review.md`               |
-| Decisão da arquitetura relevante (ADR)  | Registar decisão, alternativas e impacto (segurança e risco)     | Arquitetos de Software + AppSec Engineer              | `adr/ADR-xxxx.md`                |
-| Integrações / fronteiras de confiança | Rever *trust boundaries* e integrações externas/entre serviços   | Arquitetos de Software + AppSec Engineer + Developer  | `trust-boundaries.md`            |
-| Alterações críticas                   | Atualizar ficha de arquitetura                                   | Developer + Arquitetos de Software + AppSec Engineer  | `arquitetura-atualizada.md`      |
-| Exceção da arquitetura                  | Solicitar, avaliar e aprovar exceção com controlos compensatórios| Product Owner + AppSec Engineer + Arquitetos de Software | `excecao-da arquitetura.md`    |
-| Trigger "arquitetura viva"            | Reavaliar e sincronizar docs após eventos definidos (ver US-12)  | Arquitetos de Software + DevOps/SRE + AppSec Engineer | `arquitetura-triggers.md`        |
-| Release / Go-live                     | Validar que controlos de arquitetura estão cumpridos              | QA / Test Engineer + AppSec Engineer + Arquitetos de Software | `checklist-arquitetura.md`    |
-| CI/CD pipeline                        | Validar controlos de arquitetura automatizáveis                   | DevOps/SRE + AppSec Engineer                          | `ci-logs-validacao.txt`          |
+| Fase / Evento | Ação esperada | Quem participa | Artefacto principal |
+|---|---|---|---|
+| Início de projeto / épico | Definir princípios e baseline inicial | Arquitetos de Software, AppSec Engineer, DevOps/SRE | `principios-arquitetura.md` |
+| Design de solução | Produzir ficha de solução com controlos e decisões | Arquitetos de Software, AppSec Engineer | `solution-architecture.md` |
+| Grooming / Planeamento | Validar requisitos arquiteturais e planeamento de controlos | Developer, Arquitetos de Software, AppSec Engineer | `design-review.md` |
+| Decisão arquitetural relevante | Registar ADR com alternativas, trade-offs e impacto | Arquitetos de Software, AppSec Engineer | `adr/ADR-XXXX.md` |
+| Integrações / fronteiras de confiança | Rever trust boundaries, integrações e fluxos de dados (incl. observabilidade) | Arquitetos de Software, AppSec Engineer, Developer | `trust-boundaries.md` |
+| Alteração arquitetural significativa | Atualizar baseline e invalidar/atualizar decisões afetadas | Developer, Arquitetos de Software, AppSec Engineer | `architecture-update.md` |
+| Exceção arquitetural | Solicitar/avaliar/aprovar exceção com controlos compensatórios e *sunset* | Product Owner, AppSec Engineer, Arquitetos de Software | `excecao-arquitetura.md` |
+| Triggers “arquitetura viva” | Reavaliar docs/ADR/TM quando ocorrerem eventos definidos | Arquitetos de Software, DevOps/SRE, AppSec Engineer | `arquitetura-triggers.md` |
+| Release / Go-live | Gate arquitetural: verificar controlos e exceções | QA/Test Engineer, AppSec Engineer, Arquitetos de Software | `checklist-arquitetura.md` |
+| CI/CD pipeline | Validar automaticamente controlos arquiteturais automatizáveis (quando aplicável) | DevOps/SRE, AppSec Engineer | `ci-architecture-report.*` |
 
 ---
 
 ## 👥 Quem faz o quê
 
-| Papel / Função             | Responsabilidades-chave                                                                 |
-|----------------------------|-----------------------------------------------------------------------------------------|
-| Arquitetos de Software     | Definir princípios, criar fichas de solução, gerir ADR e rever designs                  |
-| Developer                  | Aplicar padrões e requisitos de arquitetura nas implementações                           |
-| QA / Test Engineer         | Validar que requisitos de arquitetura estão refletidos nos testes e no *go-live*         |
-| AppSec Engineer            | Definir controlos de segurança, rever exceções e decisões de arquitetura                 |
-| Product Owner              | Validar impacto de requisitos/exceções em prazos, custo e *scope*                       |
-| DevOps/SRE                 | Automatizar validações de controlos de arquitetura                                       |
+| Papel / Função | Responsabilidades-chave |
+|---|---|
+| Arquitetos de Software | Definir princípios, criar fichas de solução, manter baseline e ADR, rever designs e integrações |
+| Developer | Implementar decisões arquiteturais e controlos especificados, sinalizar alterações significativas |
+| QA / Test Engineer | Garantir que requisitos arquiteturais e controlos estão refletidos em testes e evidência de release |
+| AppSec Engineer | Definir/rever controlos, validar decisões e exceções, assegurar ligação a ameaças (Cap. 3) e requisitos (Cap. 2) |
+| Product Owner | Priorizar investimento/mitigação, aprovar trade-offs de negócio e exceções com impacto em scope/prazos |
+| DevOps/SRE | Integrar validações automatizáveis no pipeline, garantir evidência reprodutível, suportar “arquitetura viva” |
 
 ---
 
-## 📝 User Stories Reutilizáveis
+## 📝 User Stories reutilizáveis
 
-### US-01 - Definição de princípios de arquitetura segura
-**Contexto.**  
-Logo no arranque de um projeto é necessário definir princípios de arquitetura segura.
-
-:::userstory
-**História.**   
-Como **Arquitetos de Software**, quero definir princípios de arquitetura segura para orientar todas as decisões técnicas.
-
-**Critérios de aceitação (BDD).**
-- **Dado** que o projeto inicia
-  **Quando** os princípios de arquitetura são documentados
-  **Então** ficam aprovados e versionados para referência
-
-**Checklist.**
-- [ ] Princípios definidos
-- [ ] Aprovação AppSec Engineer
-- [ ] Evidência arquivada em repositório
-
-:::
-
-**Artefactos & evidências.** `principios-arquitetura.md`
-
-**Proporcionalidade.**
-| Nível | Obrigatório? | Ajustes |
-|---|---|---|
-| L1 | Opcional | Apenas princípios básicos |
-| L2 | Sim | Princípios detalhados |
-| L3 | Sim | Princípios completos + independentes |
-
-**Integração no SDLC.**
-| Fase | Trigger | Responsável | SLA |
-|------|---------|-------------|-----|
-| Início | Novo projeto | Arquitetos de Software | Antes do design detalhado |
-
-**Ligações úteis.**
-- 🔗 [Cap. 2 - Requisitos de Segurança](/sbd-toe/sbd-manual/requisitos-seguranca/intro)
+> **Nota editorial:** cada user story inclui, de forma consistente, **História**, **BDD**, **Checklist**, **Artefactos & evidências**, **Proporcionalidade (L1–L3)**, **Integração no SDLC** e **Ligações úteis**.
 
 ---
 
-### US-02 - Ficha de arquitetura com controlos
+### US-01 — Definição de princípios e baseline de arquitetura segura 
+
 **Contexto.**  
-Ao desenhar a solução é preciso registar controlos de segurança.
+No arranque de um projeto (ou épico significativo), é obrigatório estabelecer **princípios** e uma **baseline inicial**, para orientar decisões e evitar deriva arquitetural.
 
 :::userstory
-**História.**   
-Como **Arquitetos de Software**, quero produzir ficha de arquitetura com controlos de segurança, padrão reutilizável aprovado, e minimização de exposição externa, para garantir que a solução é segura, escalável e alinhada com padrões organizacionais.
+**História.**  
+Como **Arquitetos de Software**, quero definir e versionar princípios de arquitetura segura, para que todas as decisões técnicas sejam consistentes, rastreáveis e proporcionais ao risco.
 
 **Critérios de aceitação (BDD).**
-- **Dado** que o design está em definição  
-  **Quando** documento a solução de arquitetura  
-  **Então** a ficha inclui: zonas de confiança, exposição externa justificada, controlos de isolamento (rate limiting, circuit breakers, segmentação), padrão aplicado, e mapeamento a requisitos ARC-XXX
+- **Dado** que um projeto inicia ou um épico estrutural é criado  
+  **Quando** documento princípios e baseline inicial  
+  **Então** os princípios ficam versionados, aprovados e referenciáveis por release
 
 **Checklist.**
-- [ ] Ficha de solução criada com template aprovado (`solution-architecture.md`)
-- [ ] Zonas de confiança e fronteiras identificadas
-- [ ] Exposição externa minimizada e justificada
-- [ ] Controlos de isolamento especificados (rate limiting, circuit breakers, segregação lógica/física)
-- [ ] Padrão de referência identificado (monólito L1, microserviços L2, plataforma crítica L3)
-- [ ] Mapeamento a requisitos ARC-XXX registado
-- [ ] Aprovação AppSec + Arquiteto arquivada
-
+- [ ] `principios-arquitetura.md` criado e versionado
+- [ ] Princípios incluem: isolamento, trust boundaries, minimização de exposição, gestão de dependências, observabilidade segura
+- [ ] Aprovação registada (AppSec + Arquitetura)
+- [ ] Ligação explícita ao nível de risco (L1–L3)
 :::
 
-**Artefactos & evidências.**  
-- `solution-architecture.md` com zona de confiança diagram
-- `controlos.md` (tipos de controlo, implementação, verificação)
-- Referência a padrão em `modelos-referencia.md`
+**Artefactos & evidências.**
+- `principios-arquitetura.md`
+- Registo de aprovação (PR/issue)
 
-**Proporcionalidade.**
+**Proporcionalidade por risco.**
 | Nível | Obrigatório? | Ajustes |
 |---|---|---|
-| L1 | Opcional | Ficha simplificada, controlos principais |
-| L2 | Sim | Ficha detalhada, todos os controlos, padrão aprovado |
-| L3 | Sim | Ficha completa + validação independente, padrão especializado, segregação física + lógica |
+| L1 | Opcional | Princípios mínimos e baseline simplificada |
+| L2 | Sim | Princípios completos e baseline formal |
+| L3 | Sim | Princípios completos + revisão independente |
 
 **Integração no SDLC.**
 | Fase | Trigger | Responsável | SLA |
 |---|---|---|---|
-| Design | Definição da solução | Arquitetos de Software + AppSec Engineer | Antes da implementação |
+| Início | Novo projeto / épico estrutural | Arquitetos de Software | Antes do design detalhado |
 
 **Ligações úteis.**
-- 🔗 [Modelos de Arquitetura Segura Reutilizáveis - Addon 04](addon/04-diagramas-referencia.md)
-- 🔗 [Catálogo de Requisitos ARC-XXX - Addon 01](addon/01-catalogo-requisitos.md)
+- 🔗 Cap. 2 — Requisitos de Segurança: `/sbd-manual/requisitos-seguranca/intro`
+- 🔗 Cap. 3 — Threat Modeling: `/sbd-manual/threat-modeling/intro`
 
 ---
 
-### US-03 - Revisão de arquitetura
+### US-02 — Ficha de solução com controlos e rastreabilidade arquitetural 
+
 **Contexto.**  
-Antes de implementar, o design deve ser revisto.
+Durante o design, a solução deve ser descrita com **controlos arquiteturais explícitos**, minimização de exposição e ligação a requisitos/ameaças.
 
 :::userstory
-**História.**   
-Como **AppSec Engineer**, quero rever designs de arquitetura para garantir conformidade.
+**História.**  
+Como **Arquitetos de Software**, quero produzir uma ficha de arquitetura com controlos de segurança e rastreabilidade para requisitos arquiteturais, para garantir que a solução é segura e verificável antes da implementação.
 
 **Critérios de aceitação (BDD).**
-- **Dado** que a solução está desenhada
-  **Quando** efetuo revisão
-  **Então** confirmo ou peço ajustes
+- **Dado** que o design está em definição  
+  **Quando** documento a solução  
+  **Então** a ficha inclui trust boundaries, exposição externa justificada, controlos arquiteturais e referências a requisitos e ameaças relevantes
 
 **Checklist.**
-- [ ] Revisão efetuada
-- [ ] Feedback registado
-- [ ] Aprovação arquivada
-
+- [ ] `solution-architecture.md` criado com template aprovado
+- [ ] Trust boundaries e fluxos (incl. logs/métricas/telemetria) identificados
+- [ ] Exposição externa minimizada e justificada
+- [ ] Controlos arquiteturais especificados (isolamento, segmentação, quotas, *timeouts*, *fallbacks*, segregação)
+- [ ] Dependências externas identificadas e tratadas como decisões arquiteturais
+- [ ] Rastreabilidade registada (requisitos arquiteturais ↔ decisões ↔ ameaças ↔ controlos)
+- [ ] Aprovação registada (AppSec + Arquitetura)
 :::
 
-**Artefactos & evidências.** `review-arquitetura.md`
+**Artefactos & evidências.**
+- `solution-architecture.md`
+- `controlos-arquitetura.md` (opcional, se necessário para detalhe)
+- Registo de aprovação (PR/issue)
 
-**Proporcionalidade.**
+**Proporcionalidade por risco.**
+| Nível | Obrigatório? | Ajustes |
+|---|---|---|
+| L1 | Opcional | Ficha simplificada e controlos essenciais |
+| L2 | Sim | Ficha detalhada + rastreabilidade mínima |
+| L3 | Sim | Ficha completa + revisão independente + evidência reforçada |
+
+**Integração no SDLC.**
+| Fase | Trigger | Responsável | SLA |
+|---|---|---|---|
+| Design | Definição de solução | Arquitetos de Software + AppSec Engineer | Antes da implementação |
+
+**Ligações úteis.**
+- 🔗 Catálogo de requisitos arquiteturais (ARC-*): `addon/01-catalogo-requisitos`
+- 🔗 Diagramas/modelos de referência: `addon/04-diagramas-referencia`
+
+---
+
+### US-03 — Revisão formal do design arquitetural
+
+**Contexto.**  
+Antes de implementar, o design deve ser revisto quanto a conformidade com princípios, requisitos e mitigação de ameaças.
+
+:::userstory
+**História.**  
+Como **AppSec Engineer**, quero rever formalmente o design arquitetural, para garantir que os controlos necessários estão especificados e que as decisões são defensáveis e rastreáveis.
+
+**Critérios de aceitação (BDD).**
+- **Dado** que existe uma ficha de solução candidata  
+  **Quando** executo a revisão  
+  **Então** o design é aprovado, ou é devolvido com ações corretivas rastreáveis
+
+**Checklist.**
+- [ ] Revisão registada (checklist + comentários)
+- [ ] Desvios e ações corretivas registados em backlog
+- [ ] Aprovação ou rejeição documentada e versionada
+:::
+
+**Artefactos & evidências.**
+- `design-review.md`
+- Registo de aprovação/rejeição (PR/issue)
+
+**Proporcionalidade por risco.**
 | Nível | Obrigatório? | Ajustes |
 |---|---|---|
 | L1 | Opcional | Revisão simplificada |
 | L2 | Sim | Revisão formal |
-| L3 | Sim | Revisão independente |
+| L3 | Sim | Revisão formal + segregação de funções (revisão independente) |
 
 **Integração no SDLC.**
 | Fase | Trigger | Responsável | SLA |
 |---|---|---|---|
-| Grooming | Design completo | AppSec Engineer | Antes da implementação |
+| Planeamento | Design pronto para implementação | AppSec Engineer | Antes da implementação |
 
 **Ligações úteis.**
-- 🔗 [Cap. 3 - Threat Modeling](/sbd-toe/sbd-manual/threat-modeling/intro)
+- 🔗 Cap. 3 — Threat Modeling: `/sbd-manual/threat-modeling/intro`
 
 ---
 
-### US-04 - Atualização de arquitetura em alterações críticas
+### US-04 — Gestão de decisões arquiteturais (ADR)
+
 **Contexto.**  
-Sempre que há alteração crítica é preciso atualizar documentação.
-
-:::userstory
-**História.**   
-Como **Developer**, quero atualizar ficha de arquitetura em alterações críticas para manter consistência.
-
-**Critérios de aceitação (BDD).**
-- **Dado** que há alteração crítica
-  **Quando** atualizo documentação
-  **Então** a ficha de arquitetura é revista
-
-**Checklist.**
-- [ ] Alteração identificada
-- [ ] Documentação atualizada
-- [ ] Revisão arquivada
-
-:::
-
-**Artefactos & evidências.** `arquitetura-atualizada.md`
-
-**Proporcionalidade.**
-| Nível | Obrigatório? | Ajustes |
-|---|---|---|
-| L1 | Opcional | Apenas alterações maiores |
-| L2 | Sim | Todas as alterações críticas |
-| L3 | Sim | Todas + validação independente |
-
-**Integração no SDLC.**
-| Fase | Trigger | Responsável | SLA |
-|---|---|---|---|
-| Desenvolvimento | Alteração crítica | Developer + Arquitetos de Software | No mesmo sprint |
-
-**Ligações úteis.**
-- 🔗 [Cap. 2 - Requisitos de Segurança](/sbd-toe/sbd-manual/requisitos-seguranca/intro)
-
----
-
-### US-05 - Validação da arquitetura em CI/CD
-**Contexto.**  
-Controlos de arquitetura devem ser validados automaticamente.
-
-:::userstory
-**História.**   
-Como **DevOps/SRE + AppSec Engineer**, quero validar controlos de arquitetura no pipeline (incluindo topologia, IaC e policies), para garantir conformidade automática e reforçar integração da segurança em SDLC.
-
-**Critérios de aceitação (BDD).**
-- **Dado** que o pipeline CI/CD executa  
-  **Quando** corro verificações de arquitetura (topologia, IaC, policies)  
-  **Então** obtenho resultado automático com pass/fail + artefactos de auditoria
-
-**Checklist.**
-- [ ] Job de validação de topologia implementado (ex: Cartography, Clair, ReGraph)
-- [ ] Validação de IaC com lint/scan (ex: Checkov, tfsec, TFLint) e enforcement de policies (ex: OPA, Kyverno)
-- [ ] Backend remoto validado (locking, autenticação, segregação de estado)
-- [ ] Políticas de admissão testadas (rate limiting, RBAC, NetworkPolicy)
-- [ ] Logs e artefactos armazenados com versionamento e hash
-- [ ] Alertas configurados para desconformidades críticas/medium
-- [ ] SLA de remediação definido por nível (L1: alerta, L2: bloqueio H/C, L3: bloqueio M+)
-
-:::
-
-**Artefactos & evidências.**  
-- `ci-pipeline.yml` com jobs de validação
-- Relatórios de validação (Cartography, Checkov, OPA)
-- Logs de bloqueios e remediações
-
-**Proporcionalidade.**
-| Nível | Obrigatório? | Ajustes |
-|---|---|---|
-| L1 | Opcional | Validações básicas (lint), alertas |
-| L2 | Sim | Validações formais (topologia + IaC + policies), bloqueio H/C |
-| L3 | Sim | Validações completas, bloqueio M+, enforcement automático, auditoria centralizada |
-
-**Integração no SDLC.**
-| Fase | Trigger | Responsável | SLA |
-|---|---|---|---|
-| CI/CD | Commit/MR de arquitetura ou IaC | DevOps/SRE + AppSec Engineer | Em cada build |
-
-**Ligações úteis.**
-- 🔗 [Requisitos IaC - Addon 06](addon/06-rastreabilidade.md)
-- 🔗 [Cap. 7 - CI/CD Seguro](/sbd-toe/sbd-manual/cicd-seguro/intro)
-
----
-
-### US-06 - Validação de impacto no negócio
-**Contexto.**  
-É necessário avaliar impacto da arquitetura no negócio.
-
-:::userstory
-**História.**   
-Como **Product Owner**, quero validar impacto de requisitos de arquitetura para priorizar mitigação.
-
-**Critérios de aceitação (BDD).**
-- **Dado** que existem requisitos de arquitetura
-  **Quando** avalio impacto no negócio
-  **Então** priorizo mitigação
-
-**Checklist.**
-- [ ] Impacto avaliado
-- [ ] Priorização registada
-- [ ] Evidência arquivada
-
-:::
-
-**Artefactos & evidências.** `impacto-arquitetura.md`
-
-**Proporcionalidade.**
-| Nível | Obrigatório? | Ajustes |
-|---|---|---|
-| L1 | Opcional | Apenas impactos críticos |
-| L2 | Sim | Avaliação formal |
-| L3 | Sim | Avaliação detalhada |
-
-**Integração no SDLC.**
-| Fase | Trigger | Responsável | SLA |
-|------|---------|-------------|-----|
-| Grooming | Requisitos de arquitetura definidos | Product Owner | Antes da priorização |
-
-**Ligações úteis.**
-- 🔗 [Cap. 1 - Gestão de Risco](/sbd-toe/sbd-manual/classificacao-aplicacoes/intro)
-
----
-
-### US-07 - Validação da arquitetura no Go-live
-**Contexto.**  
-Antes da entrada em produção, a arquitetura deve ser formalmente validada contra requisitos e padrões definidos, assegurando que exceções foram aprovadas e controlos estão implementados.
-
-:::userstory
-**História.**   
-Como **QA / Test Engineer + AppSec Engineer + Arquitetos de Software**, quero validar a arquitetura antes do go-live, para garantir que todos os controlos definidos estão aplicados e exceções documentadas.
-
-**Critérios de aceitação (BDD).**
-- **Dado** que a aplicação está pronta para release  
-  **Quando** executo checklist de validação da arquitetura  
-  **Então** confirmo que todos os controlos estão cumpridos ou exceções aprovadas
-
-**Checklist.**
-- [ ] Checklist de arquitetura preenchido  
-- [ ] Controlos críticos validados  
-- [ ] Exceções aprovadas e documentadas  
-- [ ] Evidência arquivada
-
-:::
-
-**Artefactos & evidências.** `checklist-arquitetura.md`
-
-**Proporcionalidade.**
-| Nível | Obrigatório? | Ajustes |
-|---|---|---|
-| L1 | Opcional | Checklist simplificado |
-| L2 | Sim | Checklist formal  
-| L3 | Sim | Checklist completo + revisão independente |
-
-**Integração no SDLC.**
-| Fase | Trigger | Responsável | SLA |
-|---|---|---|---|
-| Release / Go-live | Preparação de release | QA / Test Engineer + AppSec Engineer + Arquitetos de Software | Antes da entrada em produção |
-
-**Ligações úteis.**
-- 🔗 Critérios de validação da arquitetura - *addon* correspondente
-
----
-
-### US-08 - Gestão de Decisões Arquiteturais (ADR)
-**Contexto.**  
-Decisões de arquitetura críticas devem ser documentadas com alternativas, *trade-offs* e impacto em segurança.
+Decisões de arquitetura críticas devem ser documentadas com alternativas e trade-offs, para preservar rastreabilidade e permitir revisão/invalidação.
 
 :::userstory
 **História.**  
-Como **Arquitetos de Software**, quero registar decisões de arquitetura (ADR - Architecture Decision Record ) com o racional de segurança para garantir rastreabilidade e consistência.
+Como **Arquitetos de Software**, quero registar decisões arquiteturais (ADR) com alternativas e impacto em segurança, para que a baseline seja auditável e evolutiva.
 
 **Critérios de aceitação (BDD).**
-- **Dado** que ocorre uma decisão da arquitetura relevante
-  **Quando** a ADR é criada segundo *template* aprovado
-  **Então** inclui contexto, opções, decisão, impacto (L1–L3), controlos e revisão AppSec Engineer
+- **Dado** que é tomada uma decisão arquitetural relevante  
+  **Quando** crio uma ADR com template aprovado  
+  **Então** ficam registados contexto, alternativas, decisão, trade-offs, impacto e revisão por AppSec
 
 **Checklist.**
-- [ ] ADR criada com *template*
-- [ ] Opções e impactos comparados
-- [ ] Aprovação AppSec Engineer
-- [ ] Referência a requisitos ARC-XXX
-
+- [ ] ADR criada em `adr/ADR-XXXX.md`
+- [ ] Alternativas consideradas e trade-offs documentados
+- [ ] Impacto em segurança e risco explicitado (incl. L1–L3 quando aplicável)
+- [ ] Ligação a requisitos arquiteturais e ameaças relevantes
+- [ ] Aprovação registada
 :::
 
-**Artefactos & evidências.** `adr/ADR-xxxx.md`
+**Artefactos & evidências.**
+- `adr/ADR-XXXX.md`
+- Registo de aprovação (PR/issue)
 
-**Proporcionalidade.**
+**Proporcionalidade por risco.**
 | Nível | Obrigatório? | Ajustes |
 |---|---|---|
 | L1 | Opcional | Apenas ADR de alto impacto |
 | L2 | Sim | ADR para decisões significativas |
-| L3 | Sim | ADR para todas as decisões relevantes + *review* independente |
+| L3 | Sim | ADR para todas as decisões relevantes + revisão independente |
+
+**Integração no SDLC.**
+| Fase | Trigger | Responsável | SLA |
+|---|---|---|---|
+| Design | Decisão arquitetural relevante | Arquitetos de Software | Antes da implementação |
+
+**Ligações úteis.**
+- 🔗 Decisão e evidência arquitetural (addon): `addon/decisao-evidencia-arquitetural`
 
 ---
 
-### US-09 - Revisão de Fronteiras de Confiança e Integrações
+### US-05 — Revisão de fronteiras de confiança e integrações
+
 **Contexto.**  
-Integrações entre serviços e terceiros exigem revisão explícita de fronteiras de confiança.
+Integrações internas e com terceiros exigem revisão explícita de fronteiras de confiança e fluxos de dados (incluindo fluxos implícitos).
 
 :::userstory
 **História.**  
-Como **Arquitetos de Software + AppSec Engineer**, quero rever *trust boundaries* e integrações (internas/terceiros) para validar autenticação, autorização, encriptação e isolamento.
+Como **Arquitetos de Software + AppSec Engineer**, quero rever trust boundaries e integrações, para validar autenticação, autorização, encriptação, isolamento e exposição de dados.
 
 **Critérios de aceitação (BDD).**
-- **Dado** que existe integração nova ou alterada
-  **Quando** avalio fronteiras de confiança e controlos
-  **Então** documento decisões, riscos residuais e mitigação
+- **Dado** que existe uma integração nova ou alterada  
+  **Quando** avalio trust boundaries e controlos  
+  **Então** documento decisões, riscos residuais e controlos mitigadores, com rastreabilidade
 
 **Checklist.**
 - [ ] Inventário de integrações atualizado
-- [ ] Matriz de confiança definida
-- [ ] Controlos verificados (AuthN/AuthZ/TLS/segregação)
-
+- [ ] Trust boundaries e fluxos (incl. logs/métricas/telemetria) documentados
+- [ ] Controlos por integração definidos (AuthN/AuthZ/TLS/segregação/minimização)
+- [ ] Risco residual e exceções (se existirem) formalizados
 :::
 
-**Artefactos & evidências.** `trust-boundaries.md`, `integration-review.md`
+**Artefactos & evidências.**
+- `trust-boundaries.md`
+- `integration-review.md`
+- ADR (quando aplicável)
 
-**Proporcionalidade.**
+**Proporcionalidade por risco.**
 | Nível | Obrigatório? | Ajustes |
 |---|---|---|
-| L1 | Sim | âmbito reduzido |
-| L2 | Sim | âmbito completo |
-| L3 | Sim | *Pen test* / validações adicionais conforme risco |
+| L1 | Sim | Âmbito reduzido (integrações críticas) |
+| L2 | Sim | Âmbito completo |
+| L3 | Sim | Âmbito completo + validações reforçadas (conforme risco) |
+
+**Integração no SDLC.**
+| Fase | Trigger | Responsável | SLA |
+|---|---|---|---|
+| Design / Alteração | Nova integração / alteração | Arquitetos de Software + AppSec Engineer | Antes da implementação |
+
+**Ligações úteis.**
+- 🔗 Riscos de processo na arquitetura (addon): `addon/riscos-processo-arquitetura`
 
 ---
 
-### US-10 - Sincronização Threat Modeling ↔ Arquitetura
+### US-06 — Atualização da baseline após alteração arquitetural significativa
+
 **Contexto.**  
-Decisões de arquitetura devem refletir o modelo de ameaças e vice-versa.
+Alterações arquiteturais significativas invalidam decisões anteriores e exigem atualização da baseline e (quando aplicável) reavaliação de ameaças/requisitos.
 
 :::userstory
 **História.**  
-Como **Arquitetos de Software + AppSec Engineer**, quero sincronizar o modelo de ameaças com as decisões de arquitetura para garantir que controlos cobrem as ameaças priorizadas.
+Como **Developer**, quero atualizar a baseline arquitetural quando ocorrem alterações significativas, para manter coerência entre o sistema real e a evidência arquitetural aprovada.
 
 **Critérios de aceitação (BDD).**
-- **Dado** que há decisão ou alteração da arquitetura
-  **Quando** atualizo o modelo de ameaças e a ficha de solução
-  **Então** mantenho cobertura e rastreabilidade ARC-XXX ↔ ameaça ↔ controlo
+- **Dado** que ocorre uma alteração arquitetural significativa  
+  **Quando** atualizo a documentação e decisões afetadas  
+  **Então** a baseline fica consistente, e as revisões necessárias são desencadeadas
 
 **Checklist.**
-- [ ] Modelo de ameaças atualizado
-- [ ] Ficha de solução alinhada
-- [ ] Evidência de cobertura por controlo
-
+- [ ] Alteração classificada como “significativa” segundo critérios do capítulo
+- [ ] `architecture-update.md` atualizado e versionado
+- [ ] ADR impactadas atualizadas (ou invalidadas e substituídas)
+- [ ] Revisão AppSec acionada quando aplicável
+- [ ] (Se aplicável) revisão de ameaças e requisitos associada
 :::
 
-**Artefactos & evidências.** `threat-model.md`, `architecture-checklist.md`
+**Artefactos & evidências.**
+- `architecture-update.md`
+- ADR atualizadas
+- Registo de revisão (PR/issue)
 
-**Proporcionalidade.**
+**Proporcionalidade por risco.**
 | Nível | Obrigatório? | Ajustes |
 |---|---|---|
-| L1 | Sim | Modelo simplificado |
+| L1 | Opcional | Apenas alterações estruturais relevantes |
+| L2 | Sim | Todas as alterações significativas |
+| L3 | Sim | Todas + revisão independente quando aplicável |
+
+**Integração no SDLC.**
+| Fase | Trigger | Responsável | SLA |
+|---|---|---|---|
+| Desenvolvimento | Alteração significativa | Developer + Arquitetos de Software | No mesmo sprint |
+
+**Ligações úteis.**
+- 🔗 Cap. 3 — Threat Modeling: `/sbd-manual/threat-modeling/intro`
+
+---
+
+### US-07 — Validação arquitetural automatizável no CI/CD (quando aplicável)
+
+**Contexto.**  
+Determinados controlos arquiteturais podem ser validados de forma automatizada (ou semi-automatizada). O objetivo é **produzir evidência reprodutível**, não “substituir” revisão humana.
+
+:::userstory
+**História.**  
+Como **DevOps/SRE + AppSec Engineer**, quero integrar validações automatizáveis de controlos arquiteturais no pipeline, para detetar desconformidades cedo e gerar evidência auditável.
+
+**Critérios de aceitação (BDD).**
+- **Dado** que ocorre uma alteração com impacto em arquitetura, configuração ou infraestrutura  
+  **Quando** o pipeline executa  
+  **Então** são produzidos resultados determinísticos (pass/fail quando aplicável) e artefactos de evidência versionados
+
+**Checklist.**
+- [ ] Critérios de quando executar a validação definidos (paths/labels/condições)
+- [ ] Verificações automatizáveis implementadas (ex.: políticas, configurações, invariantes arquiteturais, requisitos verificáveis)
+- [ ] Evidência produzida como artefacto (`ci-architecture-report.*`)
+- [ ] Regras de bloqueio por risco definidas (ex.: L2 bloqueia falhas críticas; L3 bloqueia falhas de severidade elevada e acima)
+- [ ] SLA de remediação definido e rastreável
+:::
+
+**Artefactos & evidências.**
+- Configuração de pipeline (`ci-pipeline.*`)
+- `ci-architecture-report.*` (relatórios, logs, artefactos)
+- Registos de bloqueio e remediação (PR/issue)
+
+**Proporcionalidade por risco.**
+| Nível | Obrigatório? | Ajustes |
+|---|---|---|
+| L1 | Opcional | Alertas e evidência básica |
+| L2 | Sim | Evidência formal + bloqueio de desconformidades críticas |
+| L3 | Sim | Evidência completa + regras de bloqueio reforçadas + auditoria centralizada |
+
+**Integração no SDLC.**
+| Fase | Trigger | Responsável | SLA |
+|---|---|---|---|
+| CI/CD | Alteração com impacto | DevOps/SRE + AppSec Engineer | Em cada build relevante |
+
+**Ligações úteis.**
+- 🔗 Cap. 7 — CI/CD Seguro: `/sbd-manual/cicd-seguro//intro`
+
+---
+
+### US-08 — Avaliação de impacto no negócio e priorização de trade-offs
+
+**Contexto.**  
+Decisões arquiteturais implicam trade-offs com impacto no negócio. A priorização deve ser explícita e rastreável.
+
+:::userstory
+**História.**  
+Como **Product Owner**, quero avaliar impacto no negócio de requisitos e decisões arquiteturais, para priorizar mitigação e aceitar trade-offs de forma consciente e auditável.
+
+**Critérios de aceitação (BDD).**
+- **Dado** que existem requisitos/decisões com impacto em custo/prazo/UX  
+  **Quando** avalio impacto e priorizo  
+  **Então** a decisão fica documentada e ligada ao backlog e às decisões técnicas
+
+**Checklist.**
+- [ ] Impacto avaliado e registado (custo/prazo/risco)
+- [ ] Priorização refletida no backlog
+- [ ] Trade-off documentado e aprovado quando necessário
+:::
+
+**Artefactos & evidências.**
+- `impacto-arquitetura.md` (ou registo equivalente)
+- Backlog/epics com ligação a ADR/requisitos
+
+**Proporcionalidade por risco.**
+| Nível | Obrigatório? | Ajustes |
+|---|---|---|
+| L1 | Opcional | Apenas impactos críticos |
+| L2 | Sim | Avaliação formal |
+| L3 | Sim | Avaliação formal + validação executiva quando aplicável |
+
+**Integração no SDLC.**
+| Fase | Trigger | Responsável | SLA |
+|---|---|---|---|
+| Planeamento | Requisitos/decisões definidas | Product Owner | Antes da priorização de sprint |
+
+**Ligações úteis.**
+- 🔗 Cap. 1 — Classificação / risco: `/sbd-manual/classificacao-aplicacoes/intro`
+
+---
+
+### US-09 — Sincronização Threat Modeling ↔ Arquitetura
+
+**Contexto.**  
+Decisões de arquitetura devem refletir ameaças priorizadas e, em sentido inverso, alterações arquiteturais exigem atualização do modelo de ameaças quando aplicável.
+
+:::userstory
+**História.**  
+Como **Arquitetos de Software + AppSec Engineer**, quero sincronizar arquitetura e threat modeling, para garantir que controlos arquiteturais cobrem as ameaças priorizadas e que a rastreabilidade permanece válida.
+
+**Critérios de aceitação (BDD).**
+- **Dado** que existe decisão ou alteração arquitetural significativa  
+  **Quando** verifico impacto no modelo de ameaças  
+  **Então** atualizo os artefactos necessários e mantenho rastreabilidade decisão ↔ ameaça ↔ controlo ↔ requisito
+
+**Checklist.**
+- [ ] Impacto da alteração avaliado
+- [ ] Modelo de ameaças atualizado quando aplicável
+- [ ] Ficha de solução e ADR alinhadas
+- [ ] Evidência de cobertura atualizada
+:::
+
+**Artefactos & evidências.**
+- `solution-architecture.md`
+- Artefacto de threat model (conforme Cap. 3)
+- Registo de atualização (PR/issue)
+
+**Proporcionalidade por risco.**
+| Nível | Obrigatório? | Ajustes |
+|---|---|---|
+| L1 | Sim | Modelo simplificado quando aplicável |
 | L2 | Sim | Modelo completo |
-| L3 | Sim | Modelo detalhado + validação por Auditores Internos |
+| L3 | Sim | Modelo detalhado + revisão independente quando aplicável |
+
+**Integração no SDLC.**
+| Fase | Trigger | Responsável | SLA |
+|---|---|---|---|
+| Design / Alteração | Decisão/alteração significativa | Arquitetos de Software + AppSec Engineer | Antes do release |
+
+**Ligações úteis.**
+- 🔗 Cap. 3 — Threat Modeling: `/sbd-manual/threat-modeling/intro`
 
 ---
 
-### US-11 - Gestão de Exceções Arquiteturais
+### US-10 — Gestão de exceções arquiteturais com controlos compensatórios
+
 **Contexto.**  
-Algumas situações exigem exceções formais com controlos compensatórios e prazo.
+Quando um requisito/controlo arquitetural não pode ser aplicado, é necessária exceção formal com controlos compensatórios, *owner* e *sunset*.
 
 :::userstory
 **História.**  
-Como **Product Owner + AppSec Engineer**, quero gerir exceções de arquitetura com aprovação e controlos compensatórios para equilibrar risco e entrega.
+Como **Product Owner + AppSec Engineer**, quero gerir exceções arquiteturais com aprovação e controlos compensatórios, para equilibrar risco e entrega mantendo auditabilidade.
 
 **Critérios de aceitação (BDD).**
-- **Dado** que é solicitada exceção
-  **Quando** avalio impacto, compensações e prazo
-  **Então** aprovo/rejeito e registo evidência e *owner* do risco
+- **Dado** que é solicitada uma exceção arquitetural  
+  **Quando** avalio impacto, compensações e prazo  
+  **Então** a exceção é aprovada/rejeitada, com evidência, *owner* e data de revisão (*sunset*)
 
 **Checklist.**
-- [ ] Formulário de exceção preenchido
-- [ ] Avaliação de impacto e compensações
-- [ ] Decisão e prazo registados
-- [ ] Revisão periódica agendada
-
+- [ ] Pedido de exceção documentado
+- [ ] Impacto e risco residual avaliados
+- [ ] Controlos compensatórios definidos e verificáveis
+- [ ] *Owner* do risco definido
+- [ ] *Sunset* e revisão agendada
+- [ ] Aprovação registada e versionada
 :::
 
-**Artefactos & evidências.** `excecao-da arquitetura.md`
+**Artefactos & evidências.**
+- `excecao-arquitetura.md`
+- Registo de aprovação (PR/issue)
+- Evidência de compensações (tests/configs)
 
-**Proporcionalidade.**
+**Proporcionalidade por risco.**
 | Nível | Obrigatório? | Ajustes |
 |---|---|---|
 | L1 | Sim | Processo simplificado |
 | L2 | Sim | Processo formal |
-| L3 | Sim | *Governance* com auditoria |
+| L3 | Sim | Governação reforçada + auditoria |
+
+**Integração no SDLC.**
+| Fase | Trigger | Responsável | SLA |
+|---|---|---|---|
+| Design / Release | Impossibilidade de cumprir controlo | Product Owner + AppSec Engineer | Antes do go-live |
+
+**Ligações úteis.**
+- 🔗 Cap. 14 — Governação: `/cap14/intro`
 
 ---
 
-### US-12 - trigger para atualização da arquitetura
+### US-11 — Triggers de “arquitetura viva” e disciplina de revisão
+
 **Contexto.**  
-Definir eventos que obrigam a rever e sincronizar documentação e controlos.
+A arquitetura deve ser tratada como baseline viva. Existem eventos que obrigam a revisão e sincronização de evidência.
 
 :::userstory
 **História.**  
-Como **Arquitetos de Software + DevOps/SRE**, quero manter uma lista de triggers que despoletam a revisão da arquitetura para garantir documentação e controlos atualizados.
+Como **Arquitetos de Software + DevOps/SRE**, quero manter uma lista de triggers que despoletam revisão de arquitetura, para garantir que a baseline, ADR e evidências permanecem válidas ao longo do tempo.
 
 **Critérios de aceitação (BDD).**
-- **Dado** que acontece um evento (trigger)  (ex.: nova integração, alteração de dados sensíveis, mudança de infra/pipeline, novo *threat intel*)
-  **Quando** executo a revisão associada
-  **Então** atualizo ADR, fichas, modelo de ameaças e *checklists*
+- **Dado** que ocorre um trigger definido (ex.: nova integração, alteração de dados sensíveis, mudança de fronteira de confiança, mudança estrutural de infraestrutura/pipeline)  
+  **Quando** executo a revisão associada  
+  **Então** atualizo baseline, ADR afetadas e evidência necessária, com registo verificável
 
 **Checklist.**
-- [ ] Lista de triggers publicada (`arquitetura-triggers.md`)
-- [ ] Ações por *trigger* definidas
-- [ ] Evidências de execução arquivadas
-
+- [ ] `arquitetura-triggers.md` publicado e versionado
+- [ ] Triggers definidos com ações mínimas por trigger
+- [ ] Execução do trigger gera evidência (PR/issue/ata)
+- [ ] Rastreabilidade mantida (decisão ↔ evidência)
 :::
 
-**Artefactos & evidências.** `arquitetura-triggers.md`, atualizações nas fichas/ADR
+**Artefactos & evidências.**
+- `arquitetura-triggers.md`
+- Registos de execução (PR/issue)
+- ADR/baseline atualizadas quando aplicável
 
-**Proporcionalidade.**
+**Proporcionalidade por risco.**
 | Nível | Obrigatório? | Ajustes |
 |---|---|---|
 | L1 | Sim | Subconjunto mínimo de triggers |
 | L2 | Sim | Conjunto completo |
-| L3 | Sim | Automação de deteção e *alerts* (quando possível) |
+| L3 | Sim | Conjunto completo + deteção/alertas quando viável |
+
+**Integração no SDLC.**
+| Fase | Trigger | Responsável | SLA |
+|---|---|---|---|
+| Contínuo | Trigger arquitetural | Arquitetos de Software + DevOps/SRE | Dentro do sprint corrente (ou SLA definido) |
 
 ---
-### **US-13 - Padrões de Arquitetura Segura Reutilizáveis - Catálogo e Governação**
+
+### US-12 — Gate arquitetural antes do Go-live
 
 **Contexto.**  
-Padrões de arquitetura aprovados reduzem tempo de design, erros e garantem conformidade com requisitos de segurança (ARC-007).
+Antes de produção, deve existir um **gate arquitetural** que confirme: controlos implementados, decisões válidas e exceções tratadas.
 
 :::userstory
 **História.**  
-Como **Arquitetos de Software**, quero manter um catálogo de padrões de arquitetura segura (monólito L1, microserviços L2, plataforma crítica L3) com requisitos, ameaças mitigadas e checklist de implementação, para que novos projetos reutilizem designs seguros.
+Como **QA/Test Engineer + AppSec Engineer + Arquitetos de Software**, quero executar um gate arquitetural antes do go-live, para garantir que a arquitetura implementada corresponde à baseline aprovada e que controlos/exceções estão verificados.
 
 **Critérios de aceitação (BDD).**
-- **Dado** que é iniciado um novo projeto  
+- **Dado** que a aplicação está pronta para release  
+  **Quando** executo a checklist de validação arquitetural  
+  **Então** confirmo conformidade, ou bloqueio o go-live com desvios rastreáveis
+
+**Checklist.**
+- [ ] `checklist-arquitetura.md` preenchido e versionado
+- [ ] Controlos críticos verificados com evidência
+- [ ] Exceções confirmadas com compensações e *sunset*
+- [ ] Desvios registados e aceites formalmente quando aplicável
+- [ ] Aprovação final registada
+:::
+
+**Artefactos & evidências.**
+- `checklist-arquitetura.md`
+- Evidência de verificação (tests/configs/logs)
+- Registo de aprovação (PR/issue)
+
+**Proporcionalidade por risco.**
+| Nível | Obrigatório? | Ajustes |
+|---|---|---|
+| L1 | Opcional | Checklist simplificada |
+| L2 | Sim | Checklist formal |
+| L3 | Sim | Checklist completa + revisão independente quando aplicável |
+
+**Integração no SDLC.**
+| Fase | Trigger | Responsável | SLA |
+|---|---|---|---|
+| Release / Go-live | Preparação de release | QA/Test Engineer + AppSec + Arquitetura | Antes da entrada em produção |
+
+**Ligações úteis.**
+- 🔗 Critérios e evidência arquitetural (addon): `addon/decisao-evidencia-arquitetural`
+
+---
+
+### US-13 — Catálogo de padrões de arquitetura segura (reutilização governada)
+
+**Contexto.**  
+Padrões aprovados reduzem variação e risco de omissão. A reutilização deve ser governada e versionada.
+
+:::userstory
+**História.**  
+Como **Arquitetos de Software**, quero manter um catálogo versionado de padrões de arquitetura segura, para que novos projetos reutilizem designs aprovados com requisitos, ameaças mitigadas e checklist de implementação.
+
+**Critérios de aceitação (BDD).**
+- **Dado** que um novo projeto inicia  
   **Quando** seleciono um padrão do catálogo  
-  **Então** a ficha do padrão inclui: diagram, requisitos ARC aplicáveis, ameaças mitigadas, checklist de implementação, e rastreabilidade a threat modeling
+  **Então** o padrão fornece baseline, requisitos aplicáveis, ameaças cobertas e checklist verificável
 
 **Checklist.**
-- [ ] Catálogo publicado (`modelos-referencia.md` ou similar)
-- [ ] Mínimo 3 padrões documentados (L1, L2, L3)
-- [ ] Cada padrão tem: diagram (PlantUML/`.drawio`), requisitos ARC-XXX, STRIDE/ameaças mitigadas, componentes-chave
-- [ ] Checklist de implementação por padrão (com referência a US operacionais)
-- [ ] Aprovação formal por AppSec e Arquitetura
-- [ ] Versionamento e changelog mantido
-
+- [ ] Catálogo publicado e versionado
+- [ ] Padrões têm: diagrama, decisões chave, requisitos aplicáveis, ameaças mitigadas, checklist
+- [ ] Aprovação formal (Arquitetura + AppSec)
+- [ ] Histórico de alterações (changelog)
 :::
 
-**Artefactos & evidências.**  
-- `modelos-referencia.md` (catalogo com diagramas)
-- `padroes-checklist.md` (checklist por padrão)
-- Commit com aprovação de padrão
+**Artefactos & evidências.**
+- `modelos-referencia.md`
+- `padroes-checklist.md` (se necessário)
+- Registos de aprovação
 
-**Proporcionalidade.**
+**Proporcionalidade por risco.**
 | Nível | Obrigatório? | Ajustes |
 |---|---|---|
-| L1 | Opcional | Catálogo simplificado |
-| L2 | Sim | Catálogo formal com 2–3 padrões |
-| L3 | Sim | Catálogo completo com evolução contínua |
+| L1 | Opcional | Catálogo reduzido |
+| L2 | Sim | Catálogo formal com padrões principais |
+| L3 | Sim | Catálogo completo e evolução contínua |
 
 **Integração no SDLC.**
 | Fase | Trigger | Responsável | SLA |
 |---|---|---|---|
-| Design | Novo projeto ou reavaliação de padrão | Arquitetos de Software + AppSec Engineer | Antes da ficha de solução |
+| Design | Novo projeto / alteração estrutural | Arquitetos de Software + AppSec Engineer | Antes da ficha de solução |
 
 **Ligações úteis.**
-- 🔗 [Addon 04 - Modelos de Arquitetura Segura Reutilizáveis](addon/04-diagramas-referencia.md)
-- 🔗 [Addon 01 - Catálogo de Requisitos ARC](addon/01-catalogo-requisitos.md)
+- 🔗 Diagramas/modelos: `addon/04-diagramas-referencia`
 
 ---
 
-### **US-14 - Controlos Técnicos de Isolamento - Especificação e Validação**
+### US-14 — Revisão formal de arquitetura para L3 (governação reforçada)
 
 **Contexto.**  
-Controlos como rate limiting, circuit breakers, segregação lógica/física (ARC-006) requerem especificação clara e validação em teste.
+Aplicações L3 exigem validação formal reforçada (incluindo segregação de funções e decisão auditável).
 
 :::userstory
 **História.**  
-Como **Arquitetos de Software + AppSec Engineer**, quero especificar controlos técnicos de isolamento (rate limiting, circuit breakers, ACLs, namespaces, DMZ) para domínios sensíveis, com SLA de implementação, para que a solução resista a sobre-carga, cascata de falhas e acesso não autorizado.
+Como **Gestão Executiva/CISO + Arquitetos de Software**, quero estabelecer um processo formal de aprovação de arquitetura para L3, para garantir que riscos estruturais são identificados, mitigados e aceites de forma auditável antes do go-live.
 
 **Critérios de aceitação (BDD).**
-- **Dado** que identifico um domínio sensível na arquitetura  
-  **Quando** defino controlos de isolamento  
-  **Então** cada controlo tem: métrica (ex: req/s), limiar, ação (drop, retry, fallback), e teste de validação
+- **Dado** que uma aplicação L3 está pronta para aprovação  
+  **Quando** é submetida a revisão formal reforçada  
+  **Então** existe parecer registado (aprovar, aprovar com exceções, rejeitar) com ações e prazos
 
 **Checklist.**
-- [ ] Inventário de domínios sensíveis (ex: API crítica, base de dados, serviço de pagamento)
-- [ ] Controlos definidos por domínio (rate limiting, circuit breakers, timeouts, retries)
-- [ ] SLA de latência, throughput, tolerância a falhas
-- [ ] Testes de carga/caos para validar controlos
-- [ ] Monitorização em produção (métricas, alertas)
-- [ ] Documentação em `isolamento-arquitetura.md`
-
+- [ ] Processo e participantes definidos (responsabilidades explícitas)
+- [ ] Documentação submetida (baseline, ADR, integrações, exceções, evidência)
+- [ ] Revisão concluída com parecer formal
+- [ ] Desvios geram plano de remediação ou exceção com compensações
+- [ ] Decisão arquivada e referenciável por release
 :::
 
-**Artefactos & evidências.**  
-- `isolamento-arquitetura.md` (inventário + controlos)
-- Testes de carga/caos com relatórios
-- Dashboards de monitorização
-
-**Proporcionalidade.**
-| Nível | Obrigatório? | Ajustes |
-|---|---|---|
-| L1 | Opcional | Apenas domínios críticos |
-| L2 | Sim | Todos os domínios sensíveis |
-| L3 | Sim | Cobertura completa + testes periódicos |
-
-**Integração no SDLC.**
-| Fase | Trigger | Responsável | SLA |
-|---|---|---|---|
-| Design + Teste | Identificação de domínios sensíveis | Arquitetos de Software + QA / Test Engineer | Antes de produção |
-
----
-
-### **US-15 - Segregação de Ambientes e Governação de Acesso (ARC-011) - L3**
-
-**Contexto.**  
-Aplicações críticas (L3) requerem segregação rigorosa entre dev/stage/prod com controlo de acesso formal (ARC-011).
-
-:::userstory
-**História.**  
-Como **DevOps/SRE + GRC/Compliance**, quero implementar e validar segregação de ambientes (dev, QA, stage, prod) com isolamento lógico (namespaces, VPCs) e físico (clusters, IAM roles), para que cada ambiente tenha permissões mínimas e riscos de contaminação/acesso não autorizado sejam minimizados.
-
-**Critérios de aceitação (BDD).**
-- **Dado** que uma aplicação L3 é desplegada  
-  **Quando** configuro ambientes  
-  **Então** cada ambiente tem: namespace/VPC dedicado, RBAC mínimo por papel, auditoria de acesso, e alertas de acesso anómalo
-
-**Checklist.**
-- [ ] Ambientes segregados (dev, QA, stage, prod)
-- [ ] Isolamento de rede (VPC, namespaces, subnets por ambiente)
-- [ ] RBAC configurado com mínimo privilégio (SA dedicadas, roles específicas por ambiente)
-- [ ] Credenciais rotacionadas e isoladas por ambiente
-- [ ] Auditoria de acesso (logs, alertas de acesso cruzado)
-- [ ] Validação de IaC com policies (OPA/Kyverno) + testes de segregação
-
-:::
-
-**Artefactos & evidências.**  
-- IaC com segregação (Terraform/Helm com ambiente-specific vars)
-- RBAC manifests (`rbac/*.yaml`)
-- Relatórios de auditoria de acesso
-
-**Proporcionalidade.**
-| Nível | Obrigatório? | Ajustes |
-|---|---|---|
-| L1 | Não | - |
-| L2 | Recomendado | Segregação lógica básica |
-| L3 | Sim | Segregação lógica + física, auditoria formal |
-
-**Integração no SDLC.**
-| Fase | Trigger | Responsável | SLA |
-|---|---|---|---|
-| Deploy | Setup de ambiente L3 | DevOps/SRE + GRC/Compliance | Antes da entrada em produção |
-
-**Ligações úteis.**
-- 🔗 [Addon 02 - Casos Práticos (Caso 1: L3 crítica)](addon/02-casos-praticos.md)
-- 🔗 [Cap. 14 - Governação e Contratação](/sbd-toe/sbd-manual/governanca-contratacao/intro)
-
----
-
-### **US-16 - Threat Modeling no Design Inicial - Obrigatório para L2–L3**
-
-**Contexto.**  
-ARC-005 prescreve que arquitecuras devem considerar threat modeling nos fluxos críticos. Falta US explícita que **obriga** a aplicação de TM **antes** de aprovação de design em L2–L3.
-
-:::userstory
-**História.**  
-Como **Arquitetos de Software + AppSec Engineer**, quero executar Threat Modeling (STRIDE/LINDDUN) no design inicial de arquitetura para L2–L3, identificando ameaças de fluxos críticos antes da aprovação, para que controlos sejam especificados proporcionalidade ao risco real.
-
-**Critérios de aceitação (BDD).**
-- **Dado** que a ficha de solução está em draft  
-  **Quando** executo sessão de Threat Modeling  
-  **Então** produzo DFD anotado com ameaças, severidades e controlos mitigadores, mapeando a requisitos ARC-XXX
-
-**Checklist.**
-- [ ] DFD criado com componentes, fluxos de dados e trust boundaries
-- [ ] Sessão TM realizada com Arquiteto + AppSec + Developer
-- [ ] Ameaças STRIDE catalogadas (S/T/R/I/D/E)
-- [ ] LINDDUN aplicado se dados pessoais presentes
-- [ ] Severidades atribuídas (CVSS ou escala interna)
-- [ ] Controlos de mitigação especificados
-- [ ] Rastreabilidade: ameaça → controlo → requisito ARC-XXX
-- [ ] Evidência arquivada (modelo TM + ata/notas sessão)
-
-:::
-
-**Artefactos & evidências.**  
-- DFD (ferramenta ou `.drawio`)
-- `threat-model-architecture.md` (ameaças + controlos)
-- Ata de sessão TM
-
-**Proporcionalidade.**
-| Nível | Obrigatório? | Ajustes |
-|---|---|---|
-| L1 | Não | - |
-| L2 | Sim | TM formal STRIDE |
-| L3 | Sim | TM completo (STRIDE + LINDDUN) + validação independente |
-
-**Integração no SDLC.**
-| Fase | Trigger | Responsável | SLA |
-|---|---|---|---|
-| Design | Ficha de solução em draft | Arquitetos de Software + AppSec Engineer | Antes da aprovação de design |
-
-**Ligações úteis.**
-- 🔗 [Cap. 3 - Threat Modeling](/sbd-toe/sbd-manual/threat-modeling/intro)
-- 🔗 [US-10 - Sincronização TM ↔ Arquitetura](#us-10)
-
----
-
-### **US-17 - Validação Formal da Arquitetura para L3 - Governance e Comité Técnico**
-
-**Contexto.**  
-ARC-012 prescreve "critérios formais de aprovação para aplicações L3" (Addon 05). Falta US que **formaliza** o processo de aprovação com comité ou governance body.
-
-:::userstory
-**História.**  
-Como **Gestão Executiva/CISO + Arquitetos de Software**, quero estabelecer processo formal de aprovação de arquitetura para L3, com comité técnico ou governance review, para garantir que riscos estruturais são identificados e mitigados antes do go-live.
-
-**Critérios de aceitação (BDD).**
-- **Dado** que uma aplicação L3 está pronta para aprovação de arquitetura  
-  **Quando** submeto ao comité de revisão  
-  **Então** recebo parecer formal, com lista de conformidades/desvios, prazos para remediação, e decisão de aprovação/rejeição/aprovação com exceções
-
-**Checklist.**
-- [ ] Comité definido (participantes, responsabilidades)
-- [ ] Critérios de aprovação formalizados (`20-checklist-revisao.md` ou similar)
-- [ ] Documentação submetida (ficha, ADRs, threat modeling, exceções, validações)
-- [ ] Review realizado (presencial ou assíncrono)
-- [ ] Parecer formal emitido com desvios identificados
-- [ ] Plano de remediação (ou exceção com compensações)
-- [ ] Decisão arquivada com assinaturas
-
-:::
-
-**Artefactos & evidências.**  
-- Termo de referência do comité
-- Checklist de aprovação (`governance-checklist-l3.md`)
-- Parecer formal assinado
+**Artefactos & evidências.**
+- `governance-checklist-l3.md` (ou equivalente)
+- Parecer formal registado
 - Plano de remediação / exceções aprovadas
 
-**Proporcionalidade.**
+**Proporcionalidade por risco.**
 | Nível | Obrigatório? | Ajustes |
 |---|---|---|
-| L1 | Não | - |
-| L2 | Recomendado | Revisão técnica peer |
-| L3 | Sim | Comité formal ou governance body |
+| L1 | Não | — |
+| L2 | Recomendado | Revisão *peer* reforçada |
+| L3 | Sim | Processo formal e auditável |
 
 **Integração no SDLC.**
 | Fase | Trigger | Responsável | SLA |
 |---|---|---|---|
-| Release / Go-live | Preparação de release L3 | Gestão Executiva/CISO + Comité Técnico | 2 semanas antes do go-live |
+| Release / Go-live | Release L3 | Gestão/CISO + Revisores definidos | SLA interno (ex.: ≥ 2 semanas antes) |
 
 **Ligações úteis.**
-- 🔗 [Addon 05 - Critérios de Validação](addon/05-validacao.md)
-- 🔗 [Cap. 14 - Governação](/sbd-toe/sbd-manual/governanca-contratacao/intro)
----
-
-## 📑 Artefactos Esperados
-
-| Artefacto                       | Origem / US | Evidência associada                      |
-|---------------------------------|-------------|------------------------------------------|
-| `principios-arquitetura.md`     | US-01       | Commit + aprovação AppSec                |
-| `solution-architecture.md`      | US-02       | `controles.md`                           |
-| `review-arquitetura.md`         | US-03       | Issue em repositório de arquitetura      |
-| `arquitetura-atualizada.md`     | US-04       | Commit + issue associada                 |
-| `ci-pipeline.yml`               | US-05       | Logs CI/CD                               |
-| `impacto-arquitetura.md`        | US-06       | Backlog atualizado                       |
-| `checklist-arquitetura.md`      | US-07       | Assinatura QA/AppSec/Arquiteto           |
-| `adr/ADR-xxxx.md`               | US-08       | *Template* ADR + revisão AppSec          |
-| `trust-boundaries.md`           | US-09       | Matriz de confiança + integrações        |
-| `integration-review.md`         | US-09       | Lista de controlos por integração        |
-| `tm-sync-arquitetura.md`        | US-10       | Rastreabilidade ameaça ↔ controlo        |
-| `excecao-da arquitetura.md`       | US-11       | Decisão, compensações, prazo, *owner*    |
-| `arquitetura-triggers.md`       | US-12       | Lista de triggers + ações e evidências   |
+- 🔗 Cap. 14 — Governação: `/cap14/intro`
 
 ---
 
-## 📊 Matriz de Proporcionalidade L1–L3
+### US-14 — Identificação e governação de componentes não determinísticos
+
+**Contexto.**  
+Arquiteturas modernas podem incluir componentes cujo comportamento **não é estritamente determinístico** (ex.: motores de decisão probabilísticos, scoring heurístico, modelos estatísticos ou componentes de inferência). Estes componentes introduzem desafios específicos em termos de segurança, auditoria, explicabilidade e controlo operacional, que devem ser explicitamente tratados ao nível da arquitetura.
+
+:::userstory
+**História.**  
+Como **Arquitetos de Software + AppSec Engineer**, quero identificar e governar componentes arquiteturais não determinísticos, documentando o seu impacto em segurança, auditoria e controlo, para garantir que a arquitetura permanece rastreável, governável e proporcional ao risco.
+
+**Critérios de aceitação (BDD).**
+- **Dado** que a solução inclui um componente cujo comportamento não é totalmente determinístico  
+  **Quando** desenho ou revejo a arquitetura  
+  **Então** o componente é explicitamente identificado e classificado  
+- **E** o impacto em segurança, auditoria e controlo é documentado  
+- **E** são definidos controlos arquiteturais adequados (isolamento, supervisão, *fallback*, logging)  
+- **E** existe rastreabilidade entre o componente, ameaças relevantes e requisitos ARC-XXX aplicáveis
+
+**Checklist.**
+- [ ] Componentes não determinísticos identificados na ficha de arquitetura
+- [ ] Tipo de não determinismo classificado (ex.: probabilístico, heurístico, inferencial)
+- [ ] Impacto analisado em:
+  - [ ] Segurança (abuso, *bypass*, comportamento inesperado)
+  - [ ] Auditoria e explicabilidade
+  - [ ] Controlo operacional e mecanismos de *fallback*
+- [ ] Fronteiras de confiança e isolamento revistos (quando aplicável)
+- [ ] Logging e evidência definidos para decisões relevantes
+- [ ] Rastreabilidade documentada (componente ↔ ameaça ↔ controlo ↔ requisito ARC-XXX)
+- [ ] Evidência arquivada em repositório de arquitetura
+:::
+
+**Artefactos & evidências.**
+- Atualização da `solution-architecture.md`
+- Documentação de decisão/evidência arquitetural (ex.: `decision-evidence.md`)
+- Atualização do modelo de ameaças (quando aplicável)
+
+**Proporcionalidade por risco.**
+| Nível | Obrigatório? | Ajustes |
+|---|---|---|
+| L1 | Opcional | Identificação simples e nota de impacto |
+| L2 | Sim | Identificação formal e controlos definidos |
+| L3 | Sim | Governação completa, isolamento explícito e validação independente |
+
+**Integração no SDLC.**
+| Fase | Trigger | Responsável | SLA |
+|---|---|---|---|
+| Design / Revisão | Introdução ou alteração de componente não determinístico | Arquitetos de Software + AppSec Engineer | Antes da aprovação do design |
+
+**Ligações úteis.**
+- 🔗 Cap. 3 — Threat Modeling  
+- 🔗 Requisitos ARC-XXX aplicáveis à arquitetura
+
+---
+
+## 📑 Artefactos esperados
+
+| Artefacto | Origem / US | Evidência associada |
+|---|---|---|
+| `principios-arquitetura.md` | US-01 | Commit + aprovação |
+| `solution-architecture.md` | US-02 | PR/issue + aprovação |
+| `design-review.md` | US-03 | Registo de revisão + backlog |
+| `adr/ADR-XXXX.md` | US-04 | ADR + aprovação |
+| `trust-boundaries.md` | US-05 | Inventário + controlos |
+| `integration-review.md` | US-05 | Revisão por integração |
+| `architecture-update.md` | US-06 | Atualização + revisão |
+| `ci-architecture-report.*` | US-07 | Artefactos do pipeline |
+| `impacto-arquitetura.md` | US-08 | Registo + backlog |
+| `excecao-arquitetura.md` | US-10 | Exceção + *sunset* + compensações |
+| `arquitetura-triggers.md` | US-11 | Lista + evidências de execução |
+| `checklist-arquitetura.md` | US-12 | Gate + aprovações |
+| `modelos-referencia.md` | US-13 | Catálogo + changelog |
+| `governance-checklist-l3.md` | US-14 | Parecer formal |
+
+---
+
+## ⚖️ Matriz de proporcionalidade (L1–L3)
 
 | Nível | Aplicação de práticas de Arquitetura Segura |
-|-------|---------------------------------------------|
-| L1    | Princípios básicos, ADR apenas para decisões de alto impacto, *trust boundaries* essenciais, *checklist* simplificado, triggers mínimos |
-| L2    | Princípios completos, fichas de solução detalhadas, revisões formais, ADR para decisões significativas, gestão de exceções formal, sincronização com Threat Modeling |
-| L3    | Cobertura integral, revisões independentes, validações CI/CD completas, rastreabilidade ARC-XXX ↔ design ↔ ameaça ↔ controlo, detecção/automação de triggers |
+|---|---|
+| L1 | Princípios mínimos; decisões (ADR) apenas para alto impacto; integrações críticas; gate simplificado quando aplicável; triggers mínimos |
+| L2 | Princípios completos; ficha detalhada; revisão formal; ADR para decisões significativas; exceções formais; validações automatizáveis quando aplicável; sincronização com threat modeling |
+| L3 | Cobertura integral; segregação de funções; evidência reforçada; governação formal; gates rigorosos; revisão independente quando aplicável; disciplina de “arquitetura viva” |
 
 ---
 
-## 📌 Recomendações Finais
+## 📌 Recomendações finais
 
-- Garantir SLAs claros para ADR, revisões e exceções (antes do design detalhado, antes da implementação, até ao fecho do sprint).
-- Centralizar artefactos em repositório versionado e com *index* navegável (ADR, fichas, integrações, exceções).
-- Integrar verificações automatizadas no pipeline (onde possível) e alertas de “arquitetura viva”.
-- As *user stories* acima representam a prescrição **atual**; conteúdos de `recomendacoes-avancadas.md` permanecem como evolução futura.
+- Centralizar artefactos em repositório versionado e referenciável por release (baseline, ADR, integrações, exceções).
+- Tratar **dependências externas** e **fluxos implícitos** (observabilidade) como parte da arquitetura, com decisão e evidência.
+- Integrar validações automatizáveis no pipeline **como geração de evidência**, não como substituto de revisão humana.
+- Usar *sunset* e revisão periódica para exceções arquiteturais, evitando dívida estrutural permanente.

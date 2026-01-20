@@ -99,7 +99,7 @@ Cobertura sólida dos domínios **Testing** e **Design & Development**, incluind
 - **Test Coverage**: critérios por tipo e criticidade da aplicação (Addon 00);
 - **Feedback Loop**: dashboards, PR comments e alertas automáticos (Addon 07, 08);
 - **Regression Tests for Findings**: testes escritos a partir de vulnerabilidades (Addon 05);
-- **PenTesting**: escopo formal e planeado (Addon 11);
+- **PenTesting**: âmbito formal e planeado (Addon 11);
 - **Manage Security Findings**: gestão completa do ciclo de vida de findings (Addon 08);
 - **Apply Test Gates**: thresholds e bloqueios configurados (Addon 06);
 - **Document Testing Strategy**: estratégia formal (Addon 00);

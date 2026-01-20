@@ -106,7 +106,7 @@ Este mapeamento **não mede equipas ou ferramentas**, mas sim o **nível de matu
 | 1 | Builds rastreáveis e controlados | ✅ Dockerfiles versionados e CI/CD auditável |
 | 2 | Proveniência autenticada | ✅ _Digest pinning_ e _attestation_ de origem |
 | 3 | Build isolado e reproduzível | ✅ Assinaturas, _attestations_ e verificação automática |
-| 4 | Cadeia totalmente verificada e hermética | ❌ Fora do escopo (nível de integração infraestrutural) |
+| 4 | Cadeia totalmente verificada e hermética | ❌ Fora do âmbito (nível de integração infraestrutural) |
 
 **🔐 Nível atingido: SLSA 3 / 4**
 

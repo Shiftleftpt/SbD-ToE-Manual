@@ -66,17 +66,17 @@ flowchart LR
 
 ## 🧭 Validação de requisitos do Cap. 2
 
-Este modelo valida a necessidade de aplicar requisitos das seguintes categorias:
+Este modelo demonstra a necessidade de aplicar requisitos de segurança e privacidade (Cap. 2) em três domínios:
 
-* **Privacidade e Dados Pessoais** (`REQ-DAT-*`)
-* **Consentimento e Informação** (`REQ-PRI-*`)
-* **Logging e Auditoria** (`REQ-LOG-*`)
+- **Privacidade e Dados Pessoais** (minimização, pseudonimização, finalidade)
+- **Informação e Transparência** (dever de informar, consentimento quando aplicável)
+- **Logging e Auditoria** (minimização de dados em logs, controlo de acesso e retenção)
 
-Todos os requisitos devem ser:
-
-* Gerados automaticamente a partir do modelo;
-* Validados em backlog ou código (ex: commits, testes);
-* Rastreáveis no CI/CD ou na ferramenta de threat modeling (ex: IriusRisk).
+Regras de integração (prescritivas):
+- Os requisitos **devem ser registados em backlog** como itens rastreáveis (ex.: `THREAT-*` / `REQ-*` conforme taxonomia em uso no projeto).
+- A priorização e aceitação de trade-offs é uma **decisão humana** (PO + Tech Lead + AppSec, conforme o caso).
+- A evidência de implementação deve ser verificável (commits, testes, configurações versionadas, registos de revisão).
+- O modelo e as decisões devem permanecer **versionados** e referenciáveis por release.
 
 ---
 

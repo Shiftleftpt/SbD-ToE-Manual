@@ -67,6 +67,16 @@ As ameaças identificadas foram analisadas com base em **OSC&R**, **CAPEC**, **B
 | Falta de política de substituição         | ENISA / ISO 27034 / DSOMM (Governance) | Não se sabe quando substituir bibliotecas inseguras  | Política de atualização + ciclo de vida de substituição                            | `addon/05-politica-atualizacoes.md`         | ✅                                     |
 
 ---
+## Dependências emergentes e não rastreadas
+
+| Ameaça | Fonte | Como surge | Como a prática mitiga | Controlos associados |
+|-------|-------|------------|------------------------|----------------------|
+| Introdução de dependência vulnerável não declarada | Supply Chain | Plugins, build tools, pipelines, code generation | Definição de fronteira SBOM + deteção de *delta* | SBOM boundary, revisão de dependências |
+| Confusão de dependências | Supply Chain | Resolução implícita ou automática de pacotes | Baseline aprovada e validação de origem | SCA, validação de origem |
+| Backdoor via ferramenta de build | Supply Chain | Atualização automática de tooling | Aprovação explícita de dependências emergentes | Governance de tooling |
+| Drift de composição entre builds | Operacional | Mudanças não controladas entre releases | Comparação automática SBOM vs baseline | CI/CD gating |
+
+---
 
 ## ✅ Conclusão
 

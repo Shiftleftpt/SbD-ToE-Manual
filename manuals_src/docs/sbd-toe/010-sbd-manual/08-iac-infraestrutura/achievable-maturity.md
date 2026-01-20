@@ -49,7 +49,7 @@ O objetivo deste mapeamento é demonstrar **completude e maturidade das prática
 
 | Nível | Descrição SAMM                                       | Cobertura pelo Cap. 08                              |
 |-------|-------------------------------------------------------|-----------------------------------------------------|
-| 1     | Configuração manual, sem rastreabilidade              | ❌ Fora do escopo - prática não recomendada         |
+| 1     | Configuração manual, sem rastreabilidade              | ❌ Fora do âmbito - prática não recomendada         |
 | 2     | Uso de linters, controlo automatizado e pipelines     | ✅ Validadores de IaC e enforcement automatizado    |
 | 3     | Integração contínua com artefactos rastreáveis        | ❌ Parcial - depende do ecossistema DevOps          |
 
@@ -94,8 +94,8 @@ O objetivo deste mapeamento é demonstrar **completude e maturidade das prática
 |-------|-------------------------------------------------------------|-----------------------------------------------------|
 | 1     | Proveniência básica e controle manual                      | ✅ Validadores e aprovação manual formal             |
 | 2     | Proveniência verificável e trusted source control          | ✅ Controlo de planos e ambientes                    |
-| 3     | Build reprodutível, assinaturas, isolamento de ambiente    | ❌ Fora do escopo deste capítulo                     |
-| 4     | Reprovação por auditor externo e sandboxing total          | ❌ Fora do escopo deste capítulo                     |
+| 3     | Build reprodutível, assinaturas, isolamento de ambiente    | ❌ Fora do âmbito deste capítulo                     |
+| 4     | Reprovação por auditor externo e sandboxing total          | ❌ Fora do âmbito deste capítulo                     |
 
 **🔐 Nível máximo suportado por este capítulo: SLSA 2 / 4**
 

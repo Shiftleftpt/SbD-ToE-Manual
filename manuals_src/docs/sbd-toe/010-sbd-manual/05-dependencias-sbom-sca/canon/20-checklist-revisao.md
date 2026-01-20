@@ -44,6 +44,8 @@ Todos os itens abaixo devem ser verificados com base em **evidência objetiva** 
 | O fallback para registries externos está controlado e auditado                                     | ☐           |
 | Existe rastreabilidade entre findings, exceções e artefactos entregues (ex: ligação CVE → release) | ☐           |
 | Todas as práticas estão documentadas e rastreáveis no repositório ou pipeline                      | ☐           |
+| Foi definida a fronteira de inventário (SBOM boundary) com exclusões justificadas e documentadas?  | ☐           |
+| Existem controlos para deteção de dependências emergentes (*delta* inesperado) e respetivo processo de aprovação? | ☐           |
 
 
 ---

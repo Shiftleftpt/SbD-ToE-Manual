@@ -20,9 +20,13 @@ Através deles flui código, são construídos artefactos, aplicadas validaçõe
 Se um pipeline for comprometido, o impacto é devastador: **todas as aplicações e serviços que dele dependem herdam esse risco**.
 
 Este capítulo parte de uma constatação inequívoca: **a segurança do pipeline é a segurança do produto**.  
-Não basta proteger o código-fonte ou o runtime da aplicação - é o pipeline que garante que tudo o resto chega a produção de forma íntegra, auditável e confiável.
+Não basta proteger o código-fonte ou o runtime da aplicação — é o pipeline que garante que tudo o resto chega a produção de forma íntegra, auditável e confiável.
 
 Por isso, o SbD-ToE estabelece aqui um corpo prescritivo para pipelines: **como devem ser concebidos, governados e auditados para resistirem a ataques, prevenirem falhas e suportarem a confiança organizacional**.
+
+> **Nota canónica (processo moderno).**  
+> Um pipeline pode automatizar execução e produzir sinais (resultados, scores, recomendações), mas **não substitui decisão humana** em ações irreversíveis (promoção, deploy, bypass de gate).  
+> Do mesmo modo, **outputs plausíveis não substituem evidência empírica**: evidência significa execução observável (logs, *run ids*, *exit codes*, artefactos) e rastreabilidade verificável.
 
 ---
 
@@ -37,6 +41,7 @@ A segurança de CI/CD abrange um conjunto vasto de domínios técnicos e organiz
 - **Assinatura e proveniência de artefactos** para garantir integridade  
 - **Políticas de promoção e gates proporcionais ao risco**  
 - **Rastreabilidade ponta-a-ponta** commit → pipeline → release  
+- **Reprodutibilidade e determinismo operacional** suficientes para auditoria e investigação de incidentes (incluindo registo da configuração efetiva usada na execução, sem expor dados sensíveis)
 
 ---
 
@@ -45,12 +50,13 @@ A segurança de CI/CD abrange um conjunto vasto de domínios técnicos e organiz
 Para que os pipelines CI/CD sejam confiáveis e auditáveis, a organização deve:
 
 1. **Endurecer e isolar runners** por projeto, aplicação ou nível de risco.  
-2. **Integrar scanners automáticos** em fases proporcionais ao impacto esperado.  
+2. **Integrar scanners automáticos** em fases proporcionais ao impacto esperado, garantindo que os resultados correspondem a execução real e observável.  
 3. **Proibir segredos estáticos** e substituir por OIDC, tokens de curta duração e logs mascarados.  
-4. **Assinar e registar proveniência** de todos os artefactos e releases.  
-5. **Impor gates de promoção** configurados por classificação de risco (L1, L2, L3).  
-6. **Registar exceções** de forma formal, temporária e auditável.  
-7. **Garantir rastreabilidade completa** para suportar auditorias e resposta a incidentes.
+4. **Assinar e registar proveniência** de todos os artefactos e releases, com validação obrigatória antes de promoção.  
+5. **Impor gates de promoção** configurados por classificação de risco (L1, L2, L3), mantendo separação explícita entre *sinal automático* e *decisão de promoção*.  
+6. **Registar exceções** de forma formal, temporária e auditável, com dono, prazo e compensações definidas.  
+7. **Garantir rastreabilidade completa** para suportar auditorias e resposta a incidentes (commit → execução do pipeline → artefacto → release).  
+8. **Minimizar exposição de contexto** em logs, artefactos intermédios e integrações externas, tratando qualquer sistema fora do controlo direto da organização como dependência e potencial canal de exfiltração.
 
 ---
 
@@ -61,9 +67,11 @@ Os mecanismos técnicos que permitem implementar estas práticas incluem:
 - Versionamento de pipelines em repositórios Git com revisão por PR  
 - Uso de runners **ephemerais, não privilegiados e segregados**  
 - Integração de ferramentas como `semgrep`, `trivy`, `cosign`, `scorecard` e scanners de IaC/containers  
-- Configuração de **OIDC e TTL curto** para segredos, eliminando chaves long-lived  
+- Configuração de **OIDC e TTL curto** para segredos, eliminando chaves *long-lived*  
 - Assinatura automática de artefactos e proveniência conforme **SLSA**  
 - Retenção estruturada de logs, metadados e correlações commit→pipeline→release  
+- Registo controlado da **configuração efetiva de execução** (sem dados sensíveis), suportando reprodutibilidade e auditoria  
+- Controlo de logging e *debug* (ativação temporária e auditável), prevenindo exposição de segredos, dados sensíveis ou propriedade intelectual
 
 ---
 
@@ -73,9 +81,10 @@ A disciplina de CI/CD Seguro não se ativa pontualmente: acompanha toda a vida d
 Deve ser aplicada:
 
 - **Desde o arranque de um novo pipeline**, mesmo em MVPs  
-- **Sempre que há promoção de releases** para ambientes superiores  
-- **Quando se alteram runners, tooling ou segredos**  
-- **Em auditorias regulares**, para garantir rastreabilidade e conformidade  
+- **Sempre que há promoção de releases** para ambientes superiores (em particular quando a ação é irreversível)  
+- **Quando se alteram runners, tooling, gates ou segredos**  
+- **Quando se integra qualquer dependência externa** no pipeline (scanners, serviços, repos, registries, etc.)  
+- **Em auditorias regulares**, para garantir rastreabilidade, reprodutibilidade e conformidade  
 
 ---
 

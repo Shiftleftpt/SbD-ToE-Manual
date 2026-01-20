@@ -10,6 +10,7 @@ tags: [maturidade, governanca, compliance, evolucao]
 # 📈 Governança e Maturidade Organizacional
 
 Este anexo descreve como o Capítulo 14 contribui para a **maturidade de segurança** da organização, com base nos modelos SAMM, SSDF e SLSA, e como essas práticas se traduzem em controlo efetivo.
+A maturidade organizacional não resulta apenas do aumento da automação, mas da capacidade de a enquadrar num modelo claro de governação, com autoridade explícita, rastreável e revogável.
 
 ---
 
@@ -19,7 +20,8 @@ Este anexo descreve como o Capítulo 14 contribui para a **maturidade de seguran
 | ----- | ------------------------------------------------------------------------------ |
 | 1     | Aplicação pontual de requisitos, sem rastreabilidade ou validação formal       |
 | 2     | Modelo de exceção definido, requisitos mapeados a risco, contratos atualizados |
-| 3     | Rastreabilidade completa, owners designados, validação recorrente automatizada |
+| 3 | Rastreabilidade completa, owners designados, validação recorrente automatizada com governação explícita da autoridade |
+
 
 > 🔹 O Cap. 14 fornece os elementos organizacionais para atingir o Nível 3 de maturidade.
 

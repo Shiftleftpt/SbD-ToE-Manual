@@ -8,231 +8,215 @@ sidebar_position: 1
 
 # 🌍 Security by Design – Theory of Everything
 
-O **Security by Design – Theory of Everything (SbD–ToE)** é a filosofia que unifica, num modelo operativo único, quatro domínios que tradicionalmente funcionam de forma isolada:
+O **Security by Design – Theory of Everything (SbD–ToE)** é uma filosofia, um enquadramento conceptual e um modelo operativo para a engenharia de software seguro. O seu objetivo não é introduzir mais um referencial no ecossistema existente, mas **estabelecer um plano unificador** que torne o *Security by Design* **executável, governável e auditável** ao longo de todo o ciclo de vida do software — do nível normativo e estratégico ao nível do código, do pipeline e da operação.
 
-- **Regulação e legislação**
-- **Normas técnicas e frameworks de referência**
-- **Ameaças e incidentes reais**
-- **Prática diária na engenharia de software seguro (“from the trenches”)**
-
-O SbD–ToE fornece uma **linguagem comum** e um **quadro prescritivo, proporcional ao risco e evidenciável**, permitindo a qualquer organização pensar, desenhar e operar software de forma segura, coerente e verificável — desde o CEO até às equipas técnicas.
-
----
-<div className="toe-layout">
-  {/* 1) TEXTO EM CRUZ */}
-  <div className="toe-layout-grid">
-    <div className="toe-card toe-card-top">
-      <h4>Regulação &amp; Legislação (Top-Down)</h4>
-      <p>
-        Regulamentos como NIS2, DORA, CRA ou GDPR estabelecem obrigações formais
-        e requisitos de governação: definem o que “tem de existir”.
-      </p>
-    </div>
-
-    <div className="toe-card toe-card-left">
-      <h4>Ameaças &amp; Threat Intelligence</h4>
-      <p>
-        Taxonomias de ataques, vulnerabilidades recorrentes e incidentes reais
-        revelam onde os sistemas falham e o que é crítico proteger primeiro.
-      </p>
-    </div>
-
-    <div className="toe-card toe-card-right">
-      <h4>Normas &amp; Frameworks</h4>
-      <p>
-        Normas e modelos de maturidade traduzem obrigações legais em capacidades
-        concretas: processos, controlos e práticas esperadas.
-      </p>
-    </div>
-
-    <div className="toe-card toe-card-bottom">
-      <h4>Experiência “from the trenches”</h4>
-      <p>
-        Auditorias, post-mortems e prática diária revelam o que realmente funciona
-        no terreno e onde a teoria falha.
-      </p>
-    </div>
-  </div>
-
-  {/* 2) DIAGRAMA CENTRADO POR CIMA */}
-  <div className="toe-layout-diagram">
-    <svg
-      className="toe-diagram-svg"
-      viewBox="0 0 800 360"
-      preserveAspectRatio="xMidYMid meet"
-      role="img"
-      aria-label="Diagrama conceptual da Theory of Everything"
-    >
-      <defs>
-        <radialGradient id="toeGlow" cx="50%" cy="50%" r="50%">
-          <stop offset="0%" stopColor="var(--ifm-color-primary)" stopOpacity="0.25" />
-          <stop offset="60%" stopColor="var(--ifm-color-primary)" stopOpacity="0.07" />
-          <stop offset="100%" stopColor="transparent" stopOpacity="0" />
-        </radialGradient>
-      </defs>
-
-      {/* halo maior */}
-      <circle cx="400" cy="180" r="170" fill="url(#toeGlow)" />
-
-      {/* anel */}
-      <circle
-        cx="400"
-        cy="180"
-        r="145"
-        fill="none"
-        stroke="var(--ifm-color-emphasis-400)"
-        strokeWidth="1.8"
-        strokeDasharray="4 3"
-      />
-
-      {/* núcleo */}
-      <circle
-        cx="400"
-        cy="180"
-        r="60"
-        fill="var(--ifm-background-surface-color)"
-        stroke="var(--ifm-color-primary)"
-        strokeWidth="2"
-      />
-
-      {/* orbitas (já bem afastadas do centro) */}
-      <circle cx="400" cy="28"  r="26" fill="var(--ifm-background-surface-color)" stroke="var(--ifm-color-emphasis-400)" />
-      <circle cx="700" cy="180" r="26" fill="var(--ifm-background-surface-color)" stroke="var(--ifm-color-emphasis-400)" />
-      <circle cx="400" cy="332" r="26" fill="var(--ifm-background-surface-color)" stroke="var(--ifm-color-emphasis-400)" />
-      <circle cx="100" cy="180" r="26" fill="var(--ifm-background-surface-color)" stroke="var(--ifm-color-emphasis-400)" />
-
-      {/* linhas */}
-      <line x1="400" y1="92"  x2="400" y2="60"  stroke="var(--ifm-color-emphasis-400)" strokeWidth="1" />
-      <line x1="460" y1="180" x2="674" y2="180" stroke="var(--ifm-color-emphasis-400)" strokeWidth="1" />
-      <line x1="400" y1="268" x2="400" y2="304" stroke="var(--ifm-color-emphasis-400)" strokeWidth="1" />
-      <line x1="340" y1="180" x2="126" y2="180" stroke="var(--ifm-color-emphasis-400)" strokeWidth="1" />
-    </svg>
-  </div>
-</div>
 
 
 ---
 
-## 🔄 Integração Top-Down e Bottom-Up
+export const ToeChart = () => (
+  <svg viewBox="0 -20 1407 744" width="100%" height="auto" preserveAspectRatio="xMidYMid meet" role="img" aria-label="Diagrama conceptual da Theory of Everything" style={{maxWidth: '100%'}}>
+    <defs>
+      <radialGradient id="toeGlow" cx="50%" cy="50%" r="50%">
+        <stop offset="0%" stopColor="var(--ifm-color-primary)" stopOpacity="0.18"/>
+        <stop offset="60%" stopColor="var(--ifm-color-primary)" stopOpacity="0.05"/>
+        <stop offset="100%" stopColor="transparent" stopOpacity="0"/>
+      </radialGradient>
+      <style>{`
+        .toe-title { font-weight: bold; font-size: 27px; fill: currentColor; }
+        .toe-text { font-size: 21px; fill: var(--ifm-color-emphasis-700); }
+        .toe-emergent { font-size: 15px; fill: var(--ifm-color-emphasis-600); opacity: 0.7; }
+      `}</style>
+    </defs>
+    <circle cx="704" cy="353" r="185" fill="url(#toeGlow)"/>
+    <circle cx="704" cy="353" r="205" fill="none" stroke="var(--ifm-color-emphasis-400)" strokeWidth="3.6" strokeDasharray="6 6"/>
+    <circle cx="704" cy="353" r="85" fill="var(--ifm-background-surface-color)" stroke="var(--ifm-color-primary)" strokeWidth="3.6"/>
+    <text x="704" y="347" textAnchor="middle" fontSize="18" fontWeight="bold" fill="currentColor">Security by Design</text>
+    <text x="704" y="362" textAnchor="middle" fontSize="16" fill="currentColor">Theory of Everything</text>
+    <circle cx="704" cy="148" r="47" fill="var(--ifm-background-surface-color)"/>
+    <circle cx="704" cy="148" r="47" fill="none" stroke="var(--ifm-color-emphasis-400)"/>
+    <text x="704" y="70" textAnchor="middle" className="toe-title">Top-Down</text>
+    <text x="704" y="92" textAnchor="middle" className="toe-text">Normas &amp; Regulação</text>
+    <line x1="704" y1="195" x2="704" y2="268" stroke="var(--ifm-color-emphasis-400)" strokeWidth="3.6"/>
+    <circle cx="704" cy="558" r="47" fill="var(--ifm-background-surface-color)"/>
+    <circle cx="704" cy="558" r="47" fill="none" stroke="var(--ifm-color-emphasis-400)"/>
+    <text x="704" y="635" textAnchor="middle" className="toe-title">Bottom-Up</text>
+    <text x="704" y="657" textAnchor="middle" className="toe-text">Ameaças &amp; Incidentes</text>
+    <line x1="704" y1="511" x2="704" y2="438" stroke="var(--ifm-color-emphasis-400)" strokeWidth="3.6"/>
+    <circle cx="499" cy="353" r="47" fill="var(--ifm-background-surface-color)"/>
+    <circle cx="499" cy="353" r="47" fill="none" stroke="var(--ifm-color-emphasis-400)"/>
+    <text x="420" y="345" textAnchor="end" className="toe-title">Engineering</text>
+    <text x="420" y="365" textAnchor="end" className="toe-text">Execução &amp; Ciclo de vida</text>
+    <line x1="546" y1="353" x2="619" y2="353" stroke="var(--ifm-color-emphasis-400)" strokeWidth="3.6"/>
+</svg>
+);
 
-As perspetivas **Top-Down** estabelecem expectativas externas (regulamentos, normas, políticas, controlos e maturidade).  
-As perspetivas **Bottom-Up** revelam a realidade técnica (ameaças, incidentes, vulnerabilidades recorrentes).
+<ToeChart />
+---
 
-O SbD–ToE faz a síntese:
+O SbD–ToE nasce da observação sistemática de falhas recorrentes na forma como a segurança é concebida, implementada e governada nas organizações modernas. Essas falhas raramente resultam da ausência de normas, de conhecimento sobre ameaças ou de ferramentas técnicas. Resultam, quase sempre, de um problema mais profundo:
 
-- cumpre normas e regulamentos;  
-- responde a ameaças reais;  
-- define práticas aplicáveis ao SDLC;  
-- produz evidência verificável e rastreável.
+> A segurança falha por **ausência de um modelo integrador** que transforme fontes de verdade heterogéneas — normas, ameaças e prática de engenharia — em **decisões coerentes**, **práticas executáveis** e **evidência verificável**.
+
+Na prática, o *Security by Design* surge fragmentado entre regulação, frameworks, engenharia, operação e pessoas. O SbD–ToE existe para **resolver esta fratura estrutural**, tratando a segurança como um **sistema socio-técnico único**, e não como um conjunto de domínios isolados.
 
 ---
 
-## 🏛️ Princípios fundadores
+## 🧠 O problema estrutural do Security by Design moderno
 
-A filosofia ToE assenta em cinco princípios operativos:
+No contexto organizacional contemporâneo, a segurança tende a manifestar-se de forma assimétrica:
 
-- **1. Proporcionalidade ao risco** - Práticas aplicadas por criticidade (L1–L3), com rigor e evidência ajustados ao impacto.
+- a **regulação** define obrigações de alto nível, frequentemente tecnicamente neutras;
+- as **normas e frameworks** descrevem capacidades esperadas e níveis de maturidade, mas raramente prescrevem execução concreta;
+- as **ameaças reais** evoluem de forma adversarial, empírica e mais rápida do que os modelos normativos;
+- a **engenharia** opera sob constrangimentos severos de tempo, custo, competências e legado tecnológico.
 
-- **2. Modularidade** - Capítulos autónomos por domínio técnico, permitindo adoção progressiva e melhoria contínua.
+Cada uma destas dimensões é legítima por si só. O problema surge quando **não existe um mecanismo disciplinado que as faça convergir**.
 
-- **3. Prescritividade útil** - Define **o que fazer, quando, como e por quem** — com requisitos, critérios, user stories e validações.
+O resultado típico inclui:
+- conformidade declarativa sem mitigação efetiva;
+- práticas técnicas desconectadas do risco e da norma;
+- decisões implícitas sem atribuição de responsabilidade;
+- dificuldade em produzir evidência auditável;
+- incapacidade de melhoria contínua mensurável.
 
-- **4. Responsabilidade partilhada** - Segurança distribuída entre gestão, risco, arquitetura, engenharia, QA, operações e terceiros.
-
--  **5. Rastreabilidade e evidência** - Cada prática é mapeada a normas, regulamentos, ameaças e validações técnicas.  
-O *cross-check* demonstra como cada capítulo garante conformidade.
-
----
-
-## 🧩 Como o SbD–ToE se posiciona perante os referenciais
-
-Nenhum referencial cobre o *Security by Design* end-to-end com detalhe prescritivo, proporcionalidade ao risco, user stories, papéis, validações CI/CD e evidência técnica.
-
-O SbD–ToE:
-
-- usa cada framework **onde é mais forte**  
-- preenche lacunas **onde são abstratas**  
-- unifica tudo num **modelo operativo único**
-
-### Referências do manual
-
-O manual referencia e adota conceitos de várias fontes:
-
-- **OWASP**: SAMM, ASVS, DSOMM  
-- **NIST**: SSDF, CSF, SP 800-53, SP 800-161, SP 800-190  
-- **MITRE**: ATT&CK, CAPEC, CWE  
-- **ISO / IEC**: 27001, 27034  
-- **ENISA**: boas práticas de SDLC e supply chain  
-- **CIS Controls**  
-- **SLSA**  
-- **CNCF Secure Supply Chain**  
-- **OSC&R**
-
-Cada uma contribui com valor específico:
-
-- OWASP oferece requisitos e modelos de maturidade aplicacionais.  
-- NIST fornece governação, desenvolvimento seguro e controlos técnicos.  
-- MITRE descreve ameaças, padrões de ataque e fraquezas estruturais.  
-- ISO estabelece sistemas de gestão e enquadramento organizacional.  
-- ENISA recomenda práticas modernas para SDLC e supply chain.  
-- CIS define salvaguardas operacionais priorizadas.  
-- SLSA foca-se na proveniência e integridade da cadeia de build.  
-
-**Todas são essenciais — mas nenhuma é suficiente por si só.**
-
-Apesar da sua importância, partilham limitações estruturais que são críticas para a adoção prática:
-
-- **não definem papéis e responsabilidades operacionais** no SDLC  
-- **não fornecem user stories**, critérios BDD ou artefactos concretos  
-- **não integram requisitos com threat modeling** de forma coerente por domínio  
-- **não tratam formação por função**, onboarding de internos e terceiros, nem caminhos de capacitação  
-- **não prescrevem práticas contratuais** ou due diligence operacional sobre fornecedores  
-- **não garantem proporcionalidade ao risco (L1–L3)**  
-- **não oferecem rastreabilidade bidirecional completa** entre requisitos, normas e ameaças
-
-O SbD–ToE preenche estas lacunas através de um modelo unificado, proporcional e prescritivo que atravessa toda a organização — da gestão à engenharia, da governação ao pipeline, da operação aos fornecedores.
-
-> O ToE é o ***“plano unificador”*** que transforma estes referenciais num corpo prescritivo, prático e proporcional ao risco.
-
-O SbD–ToE reúne, num modelo unificado:
-
-1. **Maturidade organizacional**  
-2. **Requisitos técnicos de segurança**  
-3. **Maturidade DevSecOps**  
-4. **Salvaguardas operacionais**  
-5. **Integridade da cadeia de fornecimento**
-
-Cada perspetiva é essencial;  
-o ToE integra-as num modelo único, prescritivo e aplicável ao SDLC real.
+O SbD–ToE parte do princípio de que **a segurança só é defensável quando estas dimensões são tratadas como partes de um único sistema**, com regras claras de integração, decisão e validação.
 
 ---
 
-<details>
-<summary><strong>📊 Tabela comparativa completa das referências</strong></summary>
+## 🧭 Os três vetores basilares do SbD–ToE
 
-<br/>
+O SbD–ToE assenta em **três vetores fundamentais**, que representam forças estruturais irredutíveis presentes em qualquer sistema de engenharia segura. Estes vetores são **necessários e suficientes**; tudo o que é relevante para o *Security by Design* emerge da sua interação disciplinada.
 
-| Referencial | Foco principal | Limitações típicas (factuais) | O que o SbD–ToE acrescenta |
-|------------|----------------|-------------------------------|-----------------------------|
-| **OWASP SAMM** | Maturidade organizacional | Não prescreve práticas técnicas; não define evidência; não aplica proporcionalidade L1–L3 | Converte maturidade em práticas concretas proporcionais ao risco |
-| **OWASP ASVS** | Requisitos técnicos | Não explica implementação; não integra no SDLC; não cobre supply chain, IaC, CI/CD | Traduz requisitos em histórias, critérios BDD, validações e artefactos |
-| **OWASP DSOMM** | Maturidade DevSecOps | Não define requisitos técnicos; não cobre o SDLC completo | Define gates, validações automáticas e evidência operacional |
-| **NIST SSDF (SP 800-218)** | Desenvolvimento seguro | Genérico; sem proporcionalidade explícita; sem artefactos mínimos | Distribui práticas por capítulos com critérios, validações e evidência |
-| **NIST CSF** | Gestão de risco | Macro; não orientado a engenharia de software | Traduz funções CSF em práticas técnicas (requisitos, CI/CD, operação) |
-| **NIST SP 800-53** | Controlos técnicos | Abstrato; exige tailoring; não define SDLC | Mapeia controlos para práticas de engenharia modernas |
-| **NIST SP 800-161** | Supply chain | Alto nível; focado em gestão | Operacionaliza SBOM, proveniência e integrações CI/CD |
-| **NIST SP 800-190** | Riscos em containers | Descritivo; sem prescrição SDLC | Converte riscos em requisitos e validações no capítulo de containers |
-| **ISO/IEC 27001** | Governação (ISMS) | Abstrato; não detalha práticas de engenharia | Traduz controlos em práticas técnicas evidenciáveis por capítulo |
-| **ISO/IEC 27034** | Segurança de aplicações | Conceptual; orientado a princípios | Torna 27034 operacional com requisitos e responsabilidades por capítulo |
-| **ENISA Guidance** | SDLC seguro e supply chain | Não prescritiva; orientada a recomendações | Transforma guidance em requisitos verificáveis e evidência mínima |
-| **CIS Controls** | Salvaguardas operacionais | Focado em infraestrutura; não no SDLC | Integra CIS em pipelines, IaC e operação aplicacional |
-| **SLSA** | Proveniência e builds | Não cobre threat modeling nem governação | Define SBOM, proveniência, assinatura, builders isolados e evidência |
-| **MITRE ATT&CK** | Técnicas de ataque | Não prescreve mitigação | Usa ATT&CK para reforçar requisitos e cenários de teste |
-| **MITRE CAPEC** | Padrões de ataque | Não define SDLC | Converte ataques em mitigação prescritiva por domínio técnico |
-| **MITRE CWE** | Fraquezas estruturais | Não define práticas de engenharia | Mapeia CWE para requisitos de código, arquitetura e testes |
-| **OSC&R** | Ameaças à supply chain | Descritivo; focado em cenários | Integra OSC&R nos capítulos de CI/CD, SBOM e IaC |
-| **CNCF Secure Supply Chain** | Cloud-native supply chain | Parcial; orientado a ecossistemas específicos | Define validações, políticas e gates em ambientes cloud-native |
+---
 
-</details>
+### 🏛️ Vetor Top-Down — Normativo, regulatório e intencional
+
+O vetor **top-down** representa aquilo que é **exigido, esperado ou considerado aceitável** por reguladores, clientes e pela própria organização.
+
+Inclui:
+- regulação e legislação (ex.: NIS2, DORA, CRA, GDPR);
+- normas e standards técnicos (ISO/IEC, NIST);
+- frameworks de maturidade e boas práticas (OWASP SAMM, BSIMM, SSDF, DSOMM, SLSA, CIS, ENISA).
+
+Este vetor define o **espaço de obrigação**:
+- o que tem de existir;
+- quem responde;
+- o que deve ser demonstrável;
+- quando e em que condições a segurança é avaliada.
+
+Por natureza, este vetor é **declarativo e abstrato**. Não descreve como desenvolver software seguro, mas condiciona todas as decisões técnicas e organizacionais.
+
+---
+
+### 🔍 Vetor Bottom-Up — Ameaças, falhas e impacto real
+
+O vetor **bottom-up** representa a realidade empírica da falha: como os sistemas são efetivamente comprometidos, abusados ou degradados no mundo real.
+
+Inclui:
+- ameaças e taxonomias de ataque (STRIDE, CAPEC, ATT&CK, OSC&R);
+- classes recorrentes de vulnerabilidades e fraquezas estruturais (CWE, OWASP Top 10);
+- incidentes reais, *post-mortems* e padrões de falha observados.
+
+Este vetor define o **espaço de risco real** e atua como força corretiva sobre o pensamento puramente normativo. Sem ele, a segurança degrada-se rapidamente em conformidade abstrata e mitigação teórica.
+
+---
+
+### ⚙️ Vetor de Engenharia — Prática, execução e experiência
+
+O terceiro vetor corresponde à **engenharia real**: o espaço onde normas e ameaças colidem com pessoas, processos, tooling e limitações organizacionais.
+
+Inclui:
+- desenvolvimento, CI/CD, IaC, testes, operação e resposta a incidentes;
+- práticas técnicas concretas, *user stories*, checklists e artefactos;
+- aplicação proporcional ao risco (L1–L3);
+- experiência acumulada da prática diária (“from the trenches”).
+
+Este vetor define o **espaço de execução possível** e funciona como **mecanismo de validação estrutural** do modelo.
+
+---
+
+## 🧱 Propriedades emergentes e invariantes do sistema
+
+Da interação disciplinada entre os três vetores emergem **propriedades estruturais** que não são opcionais. Entre estas, destacam-se os **invariantes do processo de engenharia segura**.
+
+Um **invariante** é uma condição que:
+- atravessa todo o SDLC;
+- é independente de tecnologia, ferramenta ou metodologia;
+- quando violada, torna o sistema **não auditável**, **não atribuível** ou **não defensável**.
+
+Exemplos de invariantes canónicos no SbD–ToE incluem:
+- separação explícita entre sugestão automática e decisão humana;
+- primazia de evidência verificável sobre plausibilidade narrativa;
+- rastreabilidade entre decisão, execução e artefactos;
+- reprodutibilidade do processo ou controlo compensatório explícito;
+- proteção dos ativos críticos do próprio processo (segredos, IP, pipelines, builders).
+
+Os invariantes **não constituem um vetor autónomo**. São **propriedades emergentes** que estabilizam a interação entre normativo, ameaça e engenharia.
+
+---
+
+## 📚 *Security by Design* nos referenciais normativos e regulatórios
+
+O princípio de *Security by Design* encontra-se hoje amplamente consagrado nos principais referenciais normativos, técnicos e regulatórios, ainda que com diferentes graus de explicitação, prescrição e detalhe operacional. Existe uma convergência clara na premissa de que a segurança deve ser integrada desde a conceção e mantida ao longo de todo o ciclo de vida, mas essa convergência ocorre sobretudo ao nível do **princípio normativo**, deixando em aberto a sua **operacionalização sistemática**.
+
+Em particular:
+
+- **NIST — Secure Software Development Framework (SP 800-218)**  
+  > “**Addressing security requirements and risks during software design (secure by design) is key for improving software security and also helps improve development efficiency.**”  
+  > — *NIST Special Publication 800-218, Secure Software Development Framework (SSDF)*  
+  > Fonte oficial: https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-218.pdf  
+
+  O SSDF afirma explicitamente o princípio, mas não prescreve proporcionalidade ao risco, artefactos mínimos, ligação sistemática a ameaças ou governação operacional integrada do SDLC.
+
+- **Diretiva (UE) 2022/2555 — NIS2**  
+  > “**appropriate and proportionate technical and organisational measures to manage the risks posed to the security of network and information systems**”  
+  > — *Artigo 21.º, n.º 1, Diretiva (UE) 2022/2555*  
+  > Fonte oficial: https://eur-lex.europa.eu/eli/dir/2022/2555/oj  
+
+  A NIS2 define obrigações claras e responsabilidade formal, mas não especifica como traduzir essas medidas em práticas de engenharia repetíveis e auditáveis.
+
+- **Regulamento (UE) 2022/2554 — DORA**  
+  > “**uniform requirements concerning the security of network and information systems supporting the business processes of financial entities**”  
+  > — *Regulation (EU) 2022/2554 (DORA)*  
+  > Fonte oficial: https://eur-lex.europa.eu/eli/reg/2022/2554/oj  
+
+  O DORA reforça segurança integrada e governada, incluindo terceiros, sem fornecer um modelo técnico prescritivo ao nível do SDLC.
+
+---
+
+## 🧱 Convergência no princípio, lacuna na operacionalização
+
+Em conjunto, estes referenciais:
+- convergem no **quê** (integração da segurança desde a conceção);
+- estabelecem expectativas quanto ao **quando** (ao longo do ciclo de vida);
+- definem responsabilidades organizacionais e regulatórias.
+
+Deixam, porém, sistematicamente em aberto:
+- o **como** operacionalizar *Security by Design* de forma coerente;
+- o **como** garantir reprodutibilidade, rastreabilidade e evidência;
+- a ligação explícita entre normas, ameaças, engenharia e pessoas;
+- a governação transversal de projetos modernos e sistemas *legacy*;
+- a capacitação e responsabilização de pessoas, internas e externas.
+
+---
+
+## 🔄 O papel do SbD–ToE
+
+É precisamente neste espaço — entre o princípio normativo e a execução técnica — que o **Security by Design – Theory of Everything (SbD–ToE)** se posiciona.
+
+O SbD–ToE fornece:
+- o **como**: práticas prescritivas, pipelines, testes, artefactos e evidência;
+- o **porquê**: ligação explícita a risco, ameaça e obrigação;
+- o **para quê**: decisão responsável, governação eficaz e auditoria defensável.
+
+Fá-lo de forma coerente:
+- do nível da norma ao nível do código;
+- do projeto moderno ao sistema *legacy*;
+- da engenharia à formação de pessoas;
+- da execução técnica à governação organizacional.
+
+> O SbD–ToE não substitui normas ou frameworks.  
+> É o **plano unificador** que as torna operacionalmente coerentes, reprodutíveis e auditáveis num único sistema socio-técnico.
 
 ---

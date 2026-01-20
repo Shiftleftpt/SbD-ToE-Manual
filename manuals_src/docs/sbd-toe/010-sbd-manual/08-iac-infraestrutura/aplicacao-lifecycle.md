@@ -12,6 +12,18 @@ Este documento operacionaliza as práticas prescritas para **Infraestrutura como
 Enquanto o `intro.md` define o “quê” e o “porquê”, aqui mostramos o “como”: em que fases do ciclo de vida cada requisito se aplica, quem é responsável por executá-lo, como traduzi-lo em user stories reutilizáveis e quais as evidências que asseguram rastreabilidade e auditabilidade.  
 A intenção é clara: transformar prescrições em **ações verificáveis**, com proporcionalidade por risco e rastreabilidade completa.
 
+:::caution Nota Operacional — IaC como processo automatizado e assistido
+A execução de IaC ocorre tipicamente em pipelines automatizados e, cada vez mais, com **apoio de mecanismos de geração/sugestão de código e configuração** (templates, normalizadores, geradores, assistentes, etc.).  
+Para manter controlo efetivo e auditável, aplicam-se invariantes operacionais:
+
+- **Sugestão não é decisão**: apenas mudanças aprovadas podem chegar a `apply` (gates formais e SoD quando aplicável).
+- **Plausibilidade não é evidência**: a única verdade é o `plan` efetivo (e os artefactos gerados), não a “intenção” descrita no PR.
+- **Determinismo é obrigatório**: versões, providers, módulos, políticas e ambiente de execução devem permitir reprodução do `plan`.
+- **Minimização de contexto**: planos, logs, diffs e integrações externas não devem expor segredos nem topologia sensível.
+
+As user stories abaixo operacionalizam estes princípios de forma verificável e proporcional ao risco (L1–L3).
+:::
+
 ---
 
 ## 🧭 Quando aplicar
@@ -21,7 +33,7 @@ A segurança em IaC deve ser aplicada **desde o planeamento até à operação**
 | Momento *trigger* | Objetivo de segurança | Papéis principais |
 |------------------|-----------------------|------------------|
 | Criação de módulo IaC | Garantir origem confiável e *pinning* | DevOps / SRE, AppSec Engineers |
-| Execução de `plan` | Validar alterações e simulações seguras | DevOps / SRE, Developers |
+| Execução de `plan` | Validar alterações e simulações seguras | DevOps / SRE, AppSec Engineers |
 | Execução de `apply` | Executar apenas alterações aprovadas e assinadas | DevOps / SRE, GRC / Compliance |
 | Auditorias de *drift* | Detetar divergências entre IaC e ambiente real | DevOps / SRE, AppSec Engineers |
 | Atualização de módulos | Rever proveniência e *attestations* | AppSec Engineers, Auditores Internos |
@@ -120,7 +132,7 @@ Estrutura de repositório (`envs/`), código de módulo com `tags` obrigatórias
 **⚖️ Proporcionalidade.**
 | Nível | Obrigatório? | Ajustes |
 |---|---:|---|
-| L1 | Sim | Segregação básica + tags simples |
+| L1 | Sim | Segregação mínima + tags básicas |
 | L2 | Sim | Segregação + tags completas + validação de permissões |
 | L3 | Sim | Segregação + tags + permissões mínimas + enforcement em OPA |
 
@@ -575,8 +587,7 @@ Como **GRC / Compliance** e **AppSec Engineers**, quero **exceções registadas*
 **🧾 Artefactos & evidências.**  
 `excecoes-iac.json`; decisões; *logs* de revisão e expiração.
 
-> **Referência:** Este US implementa [Cap 14-US-01: Processo formal de exceções]
-> no contexto de Infrastructure-as-Code. Aprovação dupla, TTL e compensações devem seguir a política master de exceções em Cap 14.
+> **Referência:** Este US implementa o processo formal de exceções (governação) no contexto de Infrastructure-as-Code. Aprovação, TTL e compensações devem seguir a política organizacional aplicável.
 
 **⚖️ Proporcionalidade.**
 | Nível | Obrigatório? | Ajustes |
@@ -593,13 +604,13 @@ Como **GRC / Compliance** e **AppSec Engineers**, quero **exceções registadas*
 
 O princípio de **fail securely** em IaC estabelece que recursos e permissões devem ter **defaults seguros** por omissão, com **recusa explícita** em vez de permissão ampla:
 
-**Implementação prática (US-02, US-06, US-09):**
+**Implementação prática (US-02, US-08):**
 - Recursos criados **sem permissões**; permissões são adicionadas explicitamente após justificação
 - Exemplo: `aws_s3_bucket` com `block_public_acls = true` como default automático
 - Policy-as-code rejeita qualquer S3 bucket **sem** *server-side encryption* ativada
-- Regra Rego: `deny[msg] { input.resource == "aws_s3_bucket" }`  com ausência de encriptação
+- Regra Rego: `deny[msg] { input.resource == "aws_s3_bucket" }` com ausência de encriptação
 
-**Checklist de validação (reforço em US-03, US-09):**
+**Checklist de validação (reforço em US-03, US-08):**
 - [ ] Validação de defaults seguros em **policy-as-code** (OPA/Sentinel)
 - [ ] Rejeição automática de recursos sem conformidade mínima
 - [ ] Documentação de exceções a defaults (rastreáveis e temporárias)
@@ -608,9 +619,9 @@ O princípio de **fail securely** em IaC estabelece que recursos e permissões d
 
 ### Desacoplamento entre Módulos e Ambientes
 
-O princípio de **desacoplamento** previne dependências circulares ou implícitas que comprometem a reutilização e criatividade:
+O princípio de **desacoplamento** previne dependências circulares ou implícitas que comprometem a reutilização e testabilidade:
 
-**Implementação prática (US-02, US-04, US-05):**
+**Implementação prática (US-02, US-04):**
 - Módulos IaC não contêm **hardcodes** de outputs de outros módulos
 - Exemplo ERRADO: `security_group_id = module.network.security_group_id` hardcoded
 - Exemplo CERTO: `security_group_id = var.security_group_id` (passado como variável)
@@ -628,33 +639,34 @@ O princípio de **desacoplamento** previne dependências circulares ou implícit
 Cada prática deixa uma pegada objetiva.  
 Sem evidência, não há conformidade. A tabela abaixo resume os outputs esperados.
 
-| Artefacto/Evidência                   | Origem / US | Observações                         |
-|---------------------------------------|-------------|-------------------------------------|
-| `backend.tf` + logs de locking        | US-01       | Prova de locking e encriptação KMS  |
-| Estrutura de diretórios por ambiente  | US-01       | `dev/`, `staging/`, `prod/`         |
-| Relatórios de lint/security/policies  | US-02       | Arquivados em pipeline              |
-| Configuração de validações em CI/CD   | US-02       | Pré-commit hooks + pipeline jobs    |
-| Lista de módulos aprovados            | US-03       | Allowlist de fontes externas + SBOM |
-| Registry de módulos internos          | US-03       | Versionado e com documentação       |
-| Diretórios `envs/dev`, `envs/staging`, `envs/prod` | US-05 | Segregação física |
-| Tags obrigatórias em recursos         | US-05       | Environment, Owner, Application, Criticality, ManagedBy |
-| Política de permissões mínimas (OPA)  | US-05       | Regras de validação de IAM |
-| `NAMING.md` + pre-commit hooks        | US-06       | Convenções de nomeação |
-| Histórico Git com padrão de commits   | US-06       | `[IaC] Tipo em ambiente (issue-XXX)` |
-| Tags git semânticas e releases        | US-06       | `iac-prod-v2025.07.10` |
-| PR com `terraform plan` anexado       | US-07       | Aprovação formal antes do apply     |
-| Trilha de aprovações multinível       | US-07       | DevOps + AppSec |
-| Dashboard/script de rastreabilidade   | US-08       | Mapas ficheiro→recurso→ambiente     |
-| Metadata em `locals` (app, owner)     | US-08       | Aplicação e equipa associadas       |
-| Regras OPA/Rego/Sentinel versionadas  | US-09       | Enforcement policy-as-code |
-| Logs de bloqueios e conformidade      | US-09       | Métricas de enforcement, exceções ativas |
-| Lista de módulos aprovados (origem)   | US-04       | Origem + hash/version               |
-| `CHANGELOG`, tags, releases           | US-05       | Evidência de change control         |
-| Assinaturas + Proveniência (SLSA)     | US-10       | Gate obrigatório em L2/L3           |
-| SBOM de módulos/providers             | US-10       | CycloneDX/SPDX                      |
-| Política de segredos OIDC/workload    | US-11       | Tokens efémeros e permissões mínimas|
-| Relatórios de drift e correção        | US-12       | Auditorias periódicas de infraestrutura|
-| Snapshots e logs de rollback          | US-13       | Recuperação após falha              |
+| Artefacto/Evidência | Origem / US | Observações |
+|---|---|---|
+| `backend.tf` + logs de locking | US-01 | Prova de locking e encriptação KMS |
+| Histórico de `plan` com metadados | US-01 | Timestamp, autor, PR/MR ID, hash |
+| Estrutura de diretórios por ambiente | US-02 | `envs/dev/`, `envs/staging/`, `envs/prod/` |
+| Tags obrigatórias em recursos | US-02 | Environment, Owner, Application, Criticality, ManagedBy |
+| Evidência de permissões mínimas (IAM/policies) | US-02 | Outputs de `plan` + validações em policy-as-code |
+| Relatórios de lint/security | US-03 | `terraform validate`, `tflint`, `tfsec`, `checkov`, etc. |
+| Configuração de validações em CI/CD + pre-commit | US-03 | Jobs de pipeline, hooks obrigatórios |
+| Allowlist/denylist de módulos e fontes | US-04 | Política publicada e versionada |
+| Registry de módulos internos + documentação | US-04 | Versionado, com testes e revisão |
+| SBOM/digest/attestation de módulos (quando aplicável) | US-04 | Evidência de proveniência e integridade |
+| `NAMING.md` + pre-commit hooks | US-05 | Convenções de nomeação |
+| Histórico Git com padrão de commits + CHANGELOG | US-05 | Change control e auditoria |
+| Tags git semânticas e releases | US-05 | Ex.: `iac-prod-v2025.07.10` |
+| PR com `terraform plan` anexado | US-06 | Revisão humana antes de `apply` |
+| Trilha de aprovações (roles) | US-06 | DevOps + AppSec (mínimo) |
+| Dashboard/script de rastreabilidade | US-07 | Mapas ficheiro → recurso → ambiente |
+| Metadata em `locals` e tags por equipa/aplicação | US-07 | Suporte a rastreabilidade automática |
+| Regras OPA/Rego/Sentinel versionadas | US-08 | Enforcement policy-as-code |
+| Logs de bloqueios, métricas e exceções | US-08 | Exceções ativas, % conformidade |
+| Assinaturas + `attestation.json` | US-09 | Gate obrigatório em L2/L3 |
+| Logs de verificação de proveniência antes de `prod` | US-09 | Rejeição automática quando inválido |
+| Configuração OIDC/workload identity | US-10 | Tokens efémeros, TTL curto |
+| Relatórios de drift e correção | US-11 | Auditorias periódicas por ambiente |
+| Snapshots e logs de rollback | US-12 | Recuperação após falha |
+| Calendário/janelas de mudança + aprovações | US-13 | Gestão operacional de mudanças |
+| Registo de exceções com TTL e contramedidas | US-14 | Dívida controlada, revisões |
 
 ---
 
@@ -663,21 +675,21 @@ Sem evidência, não há conformidade. A tabela abaixo resume os outputs esperad
 Nem todas as aplicações exigem o mesmo rigor.  
 A proporcionalidade permite equilibrar custo, risco e controlo.
 
-| Prática                             | L1 (baixo)      | L2 (médio)                | L3 (alto/crítico)                        |
-|-------------------------------------|-----------------|---------------------------|------------------------------------------|
-| Backend remoto + locking            | Recomendado     | Obrigatório               | Obrigatório + monitorização              |
-| Validações automáticas              | Aviso           | Bloqueio falhas severas   | Bloqueio total + cobertura completa      |
-| Governança de módulos               | Whitelist simples | Whitelist + validação automática | Whitelist + validação + SBOM + aprovação |
-| **Segregação ambientes + tagging**  | **Recomendado** | **Obrigatório + tagging completo** | **Obrigatório + tags + validação OPA** |
-| **Rastreabilidade e naming**        | **Recomendado** | **Obrigatório + convenções formais** | **Obrigatório + pre-commit + CHANGELOG** |
-| **Revisão formal de plan**          | **Recomendado** | **Obrigatório** | **Obrigatório + dupla aprovação** |
-| **Rastreabilidade ficheiro→recurso**| **Recomendado** | **Obrigatório + documentação** | **Obrigatório + dashboard automático** |
-| **Enforcement de políticas**        | **Recomendado** | **OPA/Rego obrigatório** | **OPA + exceções formais + métricas** |
-| Origem confiável de módulos         | Recomendado     | Obrigatório + pinagem     | Obrigatório + proveniência formal        |
-| Policy-as-code                      | Aviso           | Bloqueio falhas severas   | Bloqueio total + métricas conformidade   |
-| Gestão de segredos IaC              | Recomendado     | Obrigatório (OIDC/TTL curto) | Obrigatório + JIT + auditoria           |
-| Rollback e contingência             | Recomendado     | Obrigatório (snapshots automáticos) | Obrigatório + rollback automatizado     |
-| Assinatura + proveniência artefactos| Recomendado     | Obrigatório (gate críticos)| Obrigatório + rejeição automática        |
+| Prática | L1 (baixo) | L2 (médio) | L3 (alto/crítico) |
+|---|---|---|---|
+| Backend remoto + locking | **Obrigatório** | Obrigatório | Obrigatório + auditoria reforçada |
+| Validações automáticas | Aviso | Bloqueio falhas severas | Bloqueio total + cobertura completa |
+| Governança de módulos | Whitelist simples | Whitelist + validação automática | Whitelist + validação + SBOM + revisão reforçada |
+| Segregação ambientes + tagging | **Obrigatório (mínimo)** | Obrigatório + tagging completo | Obrigatório + tags + validação OPA |
+| Rastreabilidade e naming | Recomendado | Obrigatório + convenções formais | Obrigatório + pre-commit + CHANGELOG |
+| Revisão formal de plan | Recomendado | Obrigatório | Obrigatório + dupla aprovação + janela de mudança |
+| Rastreabilidade ficheiro→recurso | Recomendado | Obrigatório + documentação | Obrigatório + dashboard automático |
+| Enforcement de políticas | Recomendado | OPA/Rego obrigatório | OPA + exceções formais + métricas |
+| Origem confiável de módulos | Recomendado | Obrigatório + pinagem | Obrigatório + proveniência formal |
+| Gestão de segredos IaC | Recomendado | Obrigatório (OIDC/TTL curto) | Obrigatório + JIT + auditoria |
+| Drift detection | Recomendado | Obrigatório (quinzenal) | Obrigatório (semanal) + alertas |
+| Rollback e guardrails | Recomendado | Obrigatório (snapshots) | Obrigatório + rollback automatizado |
+| Assinatura + proveniência | Recomendado | Obrigatório (gate críticos) | Obrigatório + rejeição automática |
 
 ---
 
@@ -688,9 +700,128 @@ Não basta aplicar controlos isolados: é preciso garantir que todos se reforça
 
 - **Padronizar backends e providers** para reduzir drift.  
 - **Adotar policy-as-code** como prática central, versionada e testada.  
-- **Assinar artefactos** e aplicar proveniência SLSA como gates obrigatórios.  
+- **Assinar artefactos** e aplicar proveniência como gates obrigatórios em ambientes críticos.  
 - **Automatizar o ciclo plan→review→apply** em pipelines com aprovação formal.  
 - **Medir conformidade** com métricas (drift, bloqueios, exceções) e reportar por L1–L3.  
-- **Rever exceções periodicamente**, garantindo que não se eternizam como riscos ocultos.  
+- **Rever exceções periodicamente**, garantindo que não se eternizam como riscos ocultos.
 
-Em síntese, **IaC é software** - e deve ser tratado com o mesmo rigor, visibilidade e proporcionalidade que qualquer outra peça crítica do ciclo de vida.
+Em síntese, **IaC é software** — e deve ser tratado com o mesmo rigor, visibilidade e proporcionalidade que qualquer outra peça crítica do ciclo de vida.
+
+---
+
+## 🆕 User Stories adicionais (processo automatizado e assistido)
+
+### US-15 - Separação de funções (SoD) e controlo de execução de `apply`
+
+**Contexto.**  
+Em IaC, `apply` é a ação de maior impacto: cria, altera ou destrói recursos reais. Para reduzir risco operacional e evitar abuso (incluindo por automatismos), é necessário aplicar **separação de funções** e controlo explícito de quem pode executar.
+
+:::userstory
+**História.**  
+Como **GRC / Compliance** e **DevOps / SRE**, quero **impor separação de funções e controlo de execução de `apply`**, para garantir que nenhuma alteração chega a ambientes críticos sem aprovação e rastreabilidade.
+
+**Critérios de aceitação (BDD).**
+- **Dado** um `apply` para ambiente `prod`  
+  **Quando** é solicitado  
+  **Então** requer **aprovação explícita** de pelo menos dois papéis (DevOps + AppSec/GRC) e execução numa **janela de mudança**.
+- **Dado** um `apply` para ambiente `staging`  
+  **Quando** é solicitado  
+  **Então** requer aprovação de pelo menos um segundo revisor independente.  
+- **Dado** um utilizador sem permissão de execução  
+  **Quando** tenta acionar `apply`  
+  **Então** é bloqueado pelo pipeline (RBAC / environment protection).
+
+**Checklist.**
+- [ ] Proteção de ambientes configurada (RBAC + approvals)  
+- [ ] Aprovação exigida antes de `apply` em ambientes críticos  
+- [ ] SoD documentado (quem propõe ≠ quem executa, quando aplicável)  
+- [ ] Evidência de execução associada a aprovações  
+:::
+
+**🧾 Artefactos & evidências.**  
+Políticas de environment protection, logs de aprovações, registos de execução, auditoria de RBAC.
+
+**⚖️ Proporcionalidade.**
+| Nível | Obrigatório? | Ajustes |
+|---|---:|---|
+| L1 | Recomendado | Aprovação simples |
+| L2 | Sim | Aprovação 2nd reviewer + RBAC |
+| L3 | Sim | SoD + dupla aprovação + janela de mudança + auditoria reforçada |
+
+---
+
+### US-16 - Minimização de contexto e proteção de informação sensível em IaC
+
+**Contexto.**  
+Planos, logs de pipeline, outputs e diffs podem revelar segredos e informação sensível (IDs, naming, topologias, permissões, endpoints). Este risco aumenta quando existe automação assistida, integrações externas ou exportação de artefactos.
+
+:::userstory
+**História.**  
+Como **AppSec Engineers** e **DevOps / SRE**, quero **impor minimização de contexto e redaction automática de informação sensível** em artefactos e logs de IaC, para reduzir risco de exfiltração e exposição involuntária.
+
+**Critérios de aceitação (BDD).**
+- **Dado** um `plan` e logs de pipeline  
+  **Quando** são publicados em PR, storage ou sistemas de observabilidade  
+  **Então** segredos e campos sensíveis são **mascarados** (redaction) e nunca ficam em claro.  
+- **Dado** um PR que inclui outputs sensíveis (ex.: access keys, tokens, endpoints privados)  
+  **Quando** é analisado pelo pipeline  
+  **Então** é bloqueado por **secret scanning** e políticas de exposição mínima.  
+- **Dado** integração com sistemas externos (tickets, chatops, assistentes, etc.)  
+  **Quando** ocorre exportação de logs/plan  
+  **Então** apenas é enviado o **mínimo necessário**, sem topologia detalhada nem segredos.
+
+**Checklist.**
+- [ ] Redaction configurada para logs e artefactos  
+- [ ] Secret scanning antes de publicar artefactos  
+- [ ] Política de “mínimo necessário” para integrações externas  
+- [ ] Exceções rastreáveis e temporárias  
+:::
+
+**🧾 Artefactos & evidências.**  
+Config de redaction, relatórios de secret scanning, evidência de bloqueios, registo de exceções.
+
+**⚖️ Proporcionalidade.**
+| Nível | Obrigatório? | Ajustes |
+|---|---:|---|
+| L1 | Sim | Secret scanning + boas práticas |
+| L2 | Sim | Redaction automática + políticas de publicação |
+| L3 | Sim | Redaction + classificação de outputs + controlos reforçados em integrações |
+
+---
+
+### US-17 - Determinismo e reprodutibilidade do `plan`
+
+**Contexto.**  
+Sem determinismo, o `plan` pode variar consoante versões de provider, módulos, ambiente de runner ou dependências transitivas, tornando auditoria e controlo de mudança frágeis. Em ambientes críticos, a organização deve conseguir reproduzir o `plan` e explicar diferenças.
+
+:::userstory
+**História.**  
+Como **DevOps / SRE** e **AppSec Engineers**, quero **garantir determinismo e reprodutibilidade do `plan`**, para que cada alteração possa ser reproduzida, auditada e analisada retrospetivamente.
+
+**Critérios de aceitação (BDD).**
+- **Dado** um repositório IaC  
+  **Quando** é executado `plan` em CI  
+  **Então** providers e módulos estão **pinados** (sem ranges) e o ambiente de execução é conhecido e versionado.  
+- **Dado** um `plan` aprovado  
+  **Quando** é reexecutado para validação  
+  **Então** o resultado é funcionalmente equivalente, ou diferenças são justificadas e registadas.  
+- **Dado** uma alteração de versão de provider/módulo  
+  **Quando** é proposta  
+  **Então** é tratada como mudança de risco (revisão reforçada e evidência adicional).
+
+**Checklist.**
+- [ ] Pinning de versões (providers e módulos)  
+- [ ] Ambiente de runner versionado e rastreável  
+- [ ] Registo de versões efetivas usadas no `plan`  
+- [ ] Reexecução/verificação de consistência quando aplicável  
+:::
+
+**🧾 Artefactos & evidências.**  
+Lockfiles, manifests de versões, logs de execução, registo de diffs justificadas.
+
+**⚖️ Proporcionalidade.**
+| Nível | Obrigatório? | Ajustes |
+|---|---:|---|
+| L1 | Sim | Pinning básico |
+| L2 | Sim | Pinning + registo de versões efetivas |
+| L3 | Sim | Pinning + reexecução/verificação + revisão reforçada de upgrades |

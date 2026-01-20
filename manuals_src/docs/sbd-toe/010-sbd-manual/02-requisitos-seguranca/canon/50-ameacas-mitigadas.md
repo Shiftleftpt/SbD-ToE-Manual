@@ -40,7 +40,7 @@ As ameaças mitigadas estão diretamente ligadas à **ausência, má definição
 
 ---
 
-## 🧾 Categoria 3 - Gestão deficiente de exceções e escopo
+## 🧾 Categoria 3 - Gestão deficiente de exceções e âmbito
 
 | Ameaça                                 | Fonte                          | Como surge                                              | Como a prática mitiga                                                            | Controlos associados                       | 🧩 Mitigada apenas por este capítulo? |
 |----------------------------------------|---------------------------------|---------------------------------------------------------|-----------------------------------------------------------------------------------|--------------------------------------------|----------------------------------------|

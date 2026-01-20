@@ -9,83 +9,133 @@ tags: [tipo:analise, risco-residual, aceitacao, excecao]
 
 # 🛠️ Análise de Risco Residual
 
-O conceito de **risco residual** é essencial para a tomada de decisão consciente e justificada sobre a segurança de uma aplicação ou sistema. Representa o risco que **permanece após a aplicação de controlos**, e deve ser sempre comparado com os limites de tolerância da organização.
+O **risco residual** representa o risco que **permanece após a aplicação efetiva dos controlos definidos**, e constitui a base factual para qualquer decisão consciente de aceitação, mitigação adicional ou rejeição.
 
-Este ficheiro complementa o modelo de avaliação semiquantitativa apresentado anteriormente, introduzindo a lógica de "antes e depois dos controlos".
+No *Security by Design – Theory of Everything (SbD-ToE)*, o risco residual **não é um valor abstrato**, mas o resultado de uma avaliação contextual que considera:
+- o nível de criticidade da aplicação (L1–L3),
+- os **atributos do risco**,
+- a **eficácia real dos controlos**,
+- e a **evidência disponível**.
 
-## 🔢 Definições e Relações
-
-* **Risco Bruto (Inerente)**: Valor do risco antes da aplicação de qualquer controlo.
-* **Risco Residual**: Valor do risco remanescente após a aplicação efetiva dos controlos.
-* **Risco Aceitável**: Limite máximo de risco residual tolerado pela organização.
-
-> Risco Residual = Risco Bruto - Eficácia dos Controlos Aplicados
-
-Na prática, esta subtração é avaliada qualitativamente ou reavaliando os fatores de impacto e probabilidade após os controlos.
+Este ficheiro complementa o modelo de classificação e aceitação de risco, introduzindo a lógica de **“antes e depois dos controlos”**, de forma operacional e auditável.
 
 ---
 
-## 📝 Exemplo Prático
+## 🔢 Definições fundamentais
 
-**Cenário:** API de autenticação exposta
+- **Risco Bruto (inerente)**  
+  Risco identificado **antes da aplicação de controlos**, resultante da combinação de exposição, dados e impacto.
 
-| Fator                  | Valor Inicial | Valor Após Controlos           |
-| ---------------------- | ------------- | ------------------------------ |
-| Impacto (I)            | 5             | 4 (uso de MFA e rate limiting) |
-| Probabilidade (P)      | 4             | 2 (hardening, WAF, alertas)    |
-| Risco Bruto = 5x4 = 20 |               | Risco Residual = 4x2 = 8       |
+- **Risco Residual**  
+  Risco remanescente **após a aplicação efetiva dos controlos**, considerando:
+  - redução real de impacto,
+  - aumento de detetabilidade,
+  - melhoria de evidenciabilidade,
+  - e limitação de alcance ou superfície.
 
-> Neste caso, o risco é reduzido de "Crítico" para "Médio", o que pode ser aceitável para aplicações L1 ou L2.
+- **Risco Aceitável**  
+  Limite máximo de risco residual tolerado pela organização, dependente do nível da aplicação (L1–L3).
 
----
-
-## 🏛️ Papel do Risco Residual na Tomada de Decisão
-
-O risco residual deve ser sempre comparado com os **limiares definidos por nível de aplicação (L1–L3)**:
-
-* **Se inferior ao limiar de aceitação**: Pode ser aceite, com registo formal.
-* **Se igual ou superior**: Deve ser mitigado adicionalmente ou sujeito a tratamento (exceção, transferência, etc).
-
-### Tabela exemplo de decisão por nível:
-
-| Nível da Aplicação         | Risco Residual Aceitável (exemplo) |
-| -------------------------- | ---------------------------------- |
-| **L1** (baixa criticidade) | até 9                              |
-| **L2** (média criticidade) | até 6                              |
-| **L3** (alta criticidade)  | até 4                              |
+> 📌 No SbD-ToE, o risco residual **não resulta de uma subtração matemática simples**, mas de uma **reavaliação consciente dos atributos do risco após controlo**.
 
 ---
 
-## ✅ Benefícios da Análise de Risco Residual
+## 🧠 Relação com o modelo E/D/I
 
-* Permite validação da **eficácia dos controlos** implementados.
-* Apoia decisões de "go/no-go" em deploys.
-* Proporciona base documental para justificar aceitação de risco.
-* Promove cultura de responsabilização e gestão consciente do risco.
+A análise de risco residual deve ser sempre coerente com a classificação **E/D/I** da aplicação:
 
----
+- os controlos **não alteram retroativamente a exposição ou os dados tratados**;
+- os controlos podem:
+  - reduzir impacto,
+  - limitar probabilidade de exploração,
+  - aumentar deteção,
+  - e melhorar evidência.
 
-## ⚠️ Riscos de Má Utilização
-
-* Considerar o risco residual como "valor fixo" em vez de dinâmico.
-* Não validar se os controlos foram **efetivamente aplicados**.
-* Aceitar riscos sem registo formal ou sem envolvimento de decisores.
+Sempre que a aplicação de controlos **não altere materialmente os atributos relevantes do risco**, o risco residual **permanece elevado**, mesmo que existam controlos “teóricos”.
 
 ---
 
-## 🔄 Integração com o Ciclo de Vida e com o GRC
+## 🧩 Avaliação prática do risco residual
 
-* O risco residual deve ser **revisto a cada alteração de arquitetura ou funcionalidade relevante**.
-* Pode ser integrado em sistemas de GRC com thresholds automáticos.
-* Deve ser parte dos artefactos de revisão de segurança antes de releases.
+A avaliação do risco residual deve responder explicitamente às seguintes perguntas:
+
+- Os controlos estão **implementados e ativos**?
+- A sua eficácia é **verificável e evidenciável**?
+- Existe **validação humana efetiva**, quando aplicável?
+- O comportamento residual é **determinístico e reproduzível**?
+- O impacto residual é **compatível com o nível da aplicação**?
+
+A ausência de resposta positiva a qualquer uma destas questões **impede a aceitação válida do risco**.
 
 ---
 
-## 📌 Recomendação Final
+## 📝 Exemplo ilustrativo (não normativo)
 
-Todas as decisões sobre aceitação de risco residual devem ser:
+**Cenário:** API exposta com autenticação forte
 
-* Formalmente registadas
-* Justificadas com base em evidência técnica e impacto
-* Coerentes com os limiares definidos por nível da aplicação
-* Sujeitas a reavaliação periódica
+| Dimensão avaliada            | Antes dos controlos | Após controlos efetivos                  |
+|-----------------------------|---------------------|------------------------------------------|
+| Exposição (E)               | 3                   | 3 (permanece exposta)                    |
+| Tipo de Dados (D)           | 2                   | 2                                        |
+| Impacto (I)                 | 3                   | 2 (limitação de abuso, rate limiting)    |
+| Detetabilidade              | Baixa               | Alta (alertas, logging)                  |
+| Evidenciabilidade           | Limitada            | Elevada (logs, métricas)                 |
+
+👉 O risco residual é **reduzido**, mas **não eliminado**.  
+A sua aceitação depende do nível da aplicação e da evidência disponível.
+
+---
+
+## ⚖️ Papel do risco residual na decisão
+
+O risco residual deve ser comparado com os **limiares de aceitação definidos por nível de aplicação**:
+
+| Nível da Aplicação         | Risco Residual Máximo Aceitável |
+|---------------------------|----------------------------------|
+| **L1** (baixa criticidade) | até 9                            |
+| **L2** (média criticidade) | até 6                            |
+| **L3** (alta criticidade)  | até 4                            |
+
+> 📌 Estes valores **assumem evidência adequada e controlo efetivo**.  
+> Sem evidência suficiente, o risco residual **não pode ser considerado baixo**, independentemente do valor estimado.
+
+---
+
+## ❌ Situações em que o risco residual **não é aceitável**
+
+Não é aceitável considerar risco residual como tolerável quando:
+
+- os controlos não estão comprovadamente ativos;
+- a decisão depende exclusivamente de confiança implícita em automação ou tooling;
+- os resultados não são reprodutíveis ou verificáveis;
+- existe impacto legal, regulatório ou reputacional significativo;
+- a aplicação é **L3** e o risco residual depende de validação não determinística.
+
+---
+
+## 🔄 Integração com o ciclo de vida e com GRC
+
+- O risco residual deve ser **reavaliado sempre que ocorra alteração relevante**:
+  - arquitetura,
+  - dados,
+  - exposição,
+  - automação ou processo.
+- Deve integrar:
+  - gates de release,
+  - artefactos de revisão de segurança,
+  - e sistemas de GRC com thresholds explícitos.
+- O risco residual **não é permanente**: tem prazo, contexto e responsáveis.
+
+---
+
+## 📌 Recomendação final
+
+Toda a decisão de aceitação de risco residual deve ser:
+
+- **formalmente registada**;
+- **justificada com evidência técnica**;
+- **compatível com o nível da aplicação**;
+- **limitada no tempo e sujeita a reavaliação**.
+
+> O risco residual não é um “resto inevitável”,  
+> é uma **decisão consciente sobre o que a organização está disposta a assumir, aqui e agora**.

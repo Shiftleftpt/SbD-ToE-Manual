@@ -21,6 +21,10 @@ Este modelo assegura que:
 - A aceitação de risco, exceções e compensações é rastreável;
 - Existe uma cadeia clara de **responsabilização técnica, funcional e executiva**.
 
+Este modelo assume que a autoridade para decidir, aprovar exceções ou aceitar risco reside sempre em papéis organizacionais explicitamente definidos.
+
+A execução técnica dessas decisões pode ser suportada por processos ou mecanismos automatizados, mas a responsabilidade e a legitimidade da decisão permanecem humanas, explícitas e rastreáveis.
+
 ---
 
 ## 👥 Papéis e responsabilidades
@@ -59,6 +63,7 @@ Cada decisão deve incluir:
 - Responsável pela decisão (nome e função);
 - Validade (temporária ou permanente);
 - Referência à evidência (scanner, revisão, formulário de exceção).
+- Identificação de processos ou mecanismos técnicos envolvidos na execução da decisão, quando aplicável.
 
 > Pode usar-se um sistema formal (Jira, wiki versionado, SharePoint, etc.) para registo estruturado.
 

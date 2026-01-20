@@ -9,7 +9,7 @@ sidebar_position: 0
 
 # Papéis e Responsabilidades Organizacionais
 
-## Estrutura e Escopo
+## Estrutura e âmbito
 
 O SbD-ToE define 13 papéis organizacionais com responsabilidades específicas ligadas aos capítulos técnicos e às obrigações regulatórias (NIS2, DORA, GDPR). Cada papel é documentado com User Stories mapeadas aos capítulos onde intervêm.
 

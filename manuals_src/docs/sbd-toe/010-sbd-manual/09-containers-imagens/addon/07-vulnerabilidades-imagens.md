@@ -1,7 +1,7 @@
 ---
 id: vulnerabilidades-imagens
 title: Deteção e Tratamento de Vulnerabilidades em Imagens
-description: Identificação, triagem e mitigação de vulnerabilidades em *containers* com base em SBOM e scanners automatizados
+description: Identificação e análise técnica de vulnerabilidades em containers como sinal de risco, não como decisão automática
 tags: [containers, vulnerabilidades, cve, sca, trivy, syft, imagem]
 ---
 
@@ -9,80 +9,131 @@ tags: [containers, vulnerabilidades, cve, sca, trivy, syft, imagem]
 
 ## 🌟 Objetivo
 
-Garantir que todas as imagens de *container* utilizadas em execução **são analisadas quanto a vulnerabilidades conhecidas (CVEs)** antes de serem usadas em pipelines, ambientes de staging ou produção - e que existem mecanismos claros para:
+Assegurar que todas as imagens de container utilizadas em pipelines, ambientes de teste ou produção **são analisadas quanto a vulnerabilidades conhecidas (CVEs)**, produzindo **sinais técnicos objetivos** que suportam decisões informadas sobre mitigação, aceitação ou bloqueio.
 
-- **Identificar vulnerabilidades presentes nas imagens**;
-- **Classificá-las por severidade, contexto e impacto real**;
-- **Definir critérios de aceitação ou bloqueio automático**;
-- **Reforçar o ciclo de feedback e correção contínua**.
+Este ficheiro define **como detetar e classificar vulnerabilidades**, não como decidir automaticamente a aceitabilidade do risco.
 
 ---
 
 ## 🧬 O que são vulnerabilidades em imagens
 
-Cada imagem de *container* inclui **bibliotecas, runtimes e binários** que podem conter vulnerabilidades conhecidas (ex: CVE-2023-0464). Estas vulnerabilidades podem ser:
+Cada imagem de container inclui **bibliotecas, runtimes e binários** potencialmente vulneráveis, introduzidos por diferentes vias:
 
-- Herdadas da imagem base (`ubuntu`, `alpine`, etc.);
-- Introduzidas por `RUN apt install`, `pip install`, `npm install`;
-- Transitivas - dependências de bibliotecas usadas pela aplicação.
+- Herdados da imagem base;
+- Introduzidos por dependências aplicacionais;
+- Transitivos (dependências de dependências);
+- Resultantes do próprio processo de build.
 
-> ⚠️ Uma imagem funcional pode conter dezenas ou centenas de vulnerabilidades - especialmente se não for minimizada.
+Uma vulnerabilidade identificada por um scanner indica:
+- presença de um componente afetado,
+- associação a uma CVE conhecida,
+- potencial impacto técnico.
 
----
-
-## 📘 Ferramentas de análise (SCA para *containers*)
-
-| Ferramenta      | Descrição                                | Integração recomendada               |
-|------------------|--------------------------------------------|--------------------------------------|
-| **Trivy**        | Scanner leve, rápido e atualizado          | GitHub Actions, CLI, K8s Admission   |
-| **Grype**        | Foco em precisão e integração com Syft     | Pipelines CI/CD, build-time          |
-| **Snyk Container** | Serviço SaaS com CVSS e contexto fix     | Dashboards e pipelines premium       |
-| **Docker Scout** | Visual interativo de camadas e CVEs        | Docker Desktop, pipelines via CLI    |
+> ⚠️ A presença de uma CVE **não implica automaticamente risco explorável** no contexto real da aplicação.
 
 ---
 
-## 🛠️ Como aplicar a validação
+## ⚠️ Deteção não é avaliação de risco
 
-1. **Gerar SBOM da imagem** (ver `06-sbom-containers.md`);
-2. **Executar scanner SCA** (ex: `trivy image nome:tag`);
-3. **Analisar resultados por severidade, pacote e contexto**;
-4. **Classificar CVEs como “aceitáveis”, “corrigíveis” ou “bloqueantes”**;
-5. **Gerar relatório com metadados: score CVSS, fix disponível, pacote afetado**;
-6. **Integrar a validação como etapa obrigatória no pipeline**;
-7. **Marcar builds como falhados se violarem políticas de risco definidas**;
-8. **Armazenar resultados como artefacto audível e versionado**.
+É fundamental evitar a seguinte equivalência incorreta:
+
+- ✔️ CVE detetada → sinal técnico válido  
+- ❌ CVE detetada ≠ risco automaticamente inaceitável  
+- ❌ CVSS elevado ≠ impacto real garantido
+
+A avaliação de risco exige contexto adicional:
+- código efetivamente exposto;
+- vetores de ataque disponíveis;
+- permissões e hardening do runtime;
+- criticidade da aplicação e dados tratados.
+
+Este ficheiro trata da **deteção e classificação técnica**, não da decisão final.
 
 ---
 
-## 📂 Onde configurar e armazenar resultados
+## 📘 Ferramentas de análise (SCA para containers)
 
-- Diretório dedicado por imagem: `/.sca-reports/<imagem>.json`;
-- Publicação como artefacto da build (GitHub, ADO, GitLab);
-- Integração com sistemas de alerta contínuo;
-- Armazenamento opcional em transparency log (vinculado ao SBOM).
+| Ferramenta        | Função técnica                                  | Papel no SbD-ToE                     |
+|-------------------|-------------------------------------------------|--------------------------------------|
+| **Trivy**         | Deteção rápida de CVEs                          | Sinal inicial                         |
+| **Grype**         | Correlação SBOM ↔ vulnerabilidades              | Precisão e rastreabilidade            |
+| **Snyk Container**| Contextualização adicional (SaaS)               | Apoio à triagem                       |
+| **Docker Scout**  | Visualização de camadas e dependências           | Análise exploratória                  |
+
+Estas ferramentas **detetam presença**, não explorabilidade nem impacto real.
+
+---
+
+## 🛠️ Como aplicar a deteção corretamente
+
+1. **Gerar SBOM da imagem final** (ver `06-sbom-containers.md`);
+2. **Executar scanner SCA** sobre a imagem real;
+3. **Produzir relatório técnico**, incluindo:
+   - CVE;
+   - pacote afetado;
+   - versão;
+   - CVSS;
+   - fix disponível ou não;
+4. **Classificar tecnicamente as vulnerabilidades**:
+   - com correção disponível;
+   - sem correção disponível;
+   - herdadas da base image;
+5. **Preservar os resultados como evidência versionada**;
+6. **Encaminhar os resultados para análise humana**, quando aplicável.
+
+A automatização **não elimina a necessidade de interpretação**.
+
+---
+
+## 📂 Armazenamento e rastreabilidade dos resultados
+
+Para garantir auditabilidade:
+
+- Armazenar relatórios por imagem e digest;
+- Versionar resultados por build;
+- Associar scanner, base de dados e timestamp;
+- Correlacionar com SBOM e assinatura da imagem.
+
+Resultados não rastreáveis **não têm valor operacional nem auditável**.
+
+---
+
+## 🔍 Utilização correta dos resultados de scanning
+
+No SbD-ToE, os resultados de vulnerabilidades devem ser usados para:
+
+- Priorizar correções;
+- Detetar regressões de segurança;
+- Apoiar decisões documentadas de aceitação ou mitigação;
+- Alimentar métricas de melhoria contínua.
+
+Não devem ser usados como:
+- substituto de análise de risco;
+- prova de segurança;
+- mecanismo único de bloqueio sem contexto.
 
 ---
 
 ## ✅ Boas práticas
 
-- Usar **CVSS ≥ 7.0 como limite inicial** para bloqueio;
-- Validar também **dependências transitivas e sistema base**;
-- Integrar validação com `pull request checks` e `pre-deploy gates`;
-- Estabelecer políticas claras de aceitação de risco e triagem;
-- Automatizar criação de tarefas para CVEs com correção disponível;
-- Sincronizar scanners com bases de dados atualizadas (NVD, GHSA, Alpine SecDB);
-- Evitar `false positives` com context-aware validation (ex: exploitability).
+- Definir **limiares técnicos iniciais** (ex.: CVSS ≥ 7) como *trigger*, não como veredicto;
+- Distinguir vulnerabilidades exploráveis de teóricas;
+- Rever vulnerabilidades herdadas da base image regularmente;
+- Automatizar correção quando fix está disponível;
+- Documentar aceitação de risco quando aplicável;
+- Rever decisões após incidentes ou novas informações.
 
 ---
 
 ## 📎 Referências cruzadas
 
-| Documento                      | Relação com validação de vulnerabilidades     |
-|-------------------------------|-----------------------------------------------|
-| `01-imagens-base.md`             | Imagens devem ser validadas antes do uso       |
-| `06-sbom-containers.md`         | Scanner utiliza SBOM como input                |
-| `03-assinatura-cadeia-trust.md` | Pode associar validação ao registo de confiança|
-| `09-exemplo-pipeline-container.md` | Exemplo de scanner no pipeline                 |
-| `achievable-maturity`              | Deteção automatizada é critério de maturidade  |
+| Documento                         | Relação com vulnerabilidades                 |
+|----------------------------------|----------------------------------------------|
+| `01-imagens-base.md`             | Minimização reduz superfície de CVEs         |
+| `06-sbom-containers.md`          | Scanner usa SBOM como base                   |
+| `03-assinatura-cadeia-trust.md` | Integridade da imagem analisada              |
+| `09-riscos-processo-imagens.md` | Scanners como sinal, não decisão             |
+| `15-aplicacao-lifecycle.md`     | Integração no SSDLC                          |
 
-> 🚨 Ignorar vulnerabilidades conhecidas em imagens de produção é aceitar riscos silenciosos. A triagem contínua deve ser integrada no ciclo de desenvolvimento.
+> 🚨 Vulnerabilidades detetadas são **sinais técnicos**, não sentenças.  
+> O risco real só existe quando o sinal é interpretado no contexto correto.

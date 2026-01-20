@@ -560,6 +560,316 @@ Como **AppSec + DevOps**, quero **automatizar delivery de findings nos pontos de
 
 ---
 
+### US-12 - Decisão Assistida para Findings de Testes de Segurança
+
+**Contexto.**  
+Ferramentas de teste (SAST, DAST, IAST, fuzzing) reportam centenas de findings por build, bloqueando pipelines sem análise de contexto. Sem framework de decisão estruturado, equipas aceitam riscos "às cegas" ou fazem bypass de gates para cumprir deadlines, sem rastreabilidade.
+
+:::userstory
+**História.**   
+Como **AppSec + DevOps**, quero **framework de decisão estruturado para findings de testes de segurança**, para separar sugestão (ferramenta) de decisão (humano), documentar rationale com checklist C1 e escalar conflitos entre timeline e segurança.
+
+**Critérios de aceitação (BDD).**  
+- **Dado** que SAST reporta finding CRITICAL (SQL injection)  
+  **Quando** Developer analisa com checklist C1 (exploitabilidade, mitigações, remediação, negócio)  
+  **Então** decisão é documentada em template T1 (CORRIGIR/ACEITAR/SUPRIMIR/DEFER) com justificação rastreável
+- **Dado** finding HIGH em L3  
+  **Quando** DevOps propõe ACEITAR-risco mas AppSec discorda  
+  **Então** conflito é escalado com template T2 para CISO/Tech Lead, com resolução em SLA 4h
+- **Dado** decisão de CORRIGIR-IMEDIATO  
+  **Quando** correção é aplicada em PR  
+  **Então** revalidação confirma que finding desapareceu e nenhum novo finding CRITICAL foi introduzido
+- **Dado** métrica de decisão  
+  **Quando** revisão trimestral  
+  **Então** >95% findings CRITICAL/HIGH têm C1 documentado, tempo-de-decisão `<4h`, taxa de bloqueio `<10%`
+
+**Checklist.**  
+- [ ] Checklist C1 integrado em workflow de findings (4 perguntas: exploitabilidade, mitigações, remediação, negócio)
+- [ ] Template T1 de decisão (CORRIGIR/ACEITAR/SUPRIMIR/DEFER) com campos obrigatórios (Finding ID, análise C1, rationale, implementação, aprovador)
+- [ ] Template T2 de escalação para conflitos (Timeline vs. Segurança, FP disputes, Compensating controls)
+- [ ] Matriz de decisores por severidade (CRITICAL/HIGH/MEDIUM/LOW) × nível (L1/L2/L3)
+- [ ] SLA por severidade: 2h análise CRITICAL (L3), 4h HIGH, 8h MEDIUM, 24h LOW
+- [ ] Repositório de decisões em Git (decisoes/DEC-YYYY-MM-DD-XXX.md) linkado a Finding ID
+- [ ] Dashboard KPIs: % findings documentados, tempo-de-decisão, taxa bloqueio pipeline, taxa aceitação risco
+- [ ] Integração com plataforma centralizada (DefectDojo/Vulcan) para rastreabilidade
+
+:::
+
+**🧾 Artefactos & evidências.**  
+- Checklist C1 aplicado para cada finding CRITICAL/HIGH (exploitabilidade, mitigações, remediação, negócio)
+- Template T1 preenchido para cada decisão (CORRIGIR/ACEITAR/SUPRIMIR/DEFER com rationale)
+- Template T2 de escalação para conflitos documentado (Timeline vs. Segurança, resolução formal)
+- Matriz de decisores definida (quem decide por severidade × nível)
+- Repositório Git de decisões (decisoes/*.md) com linkagem Finding ID → PR → Commit
+- Dashboard de KPIs de decisão (cobertura C1, tempo-decisão, bloqueio, aceitação risco)
+- Logs de escalação com timestamps e resolução formal
+
+**⚖️ Proporcionalidade.**  
+| Nível | Obrigatório? | Ajustes |
+|---|---:|---|
+| L1 | Recomendado | Checklist simplificado para CRITICAL apenas, sem SLA rígido |
+| L2 | Sim | Checklist C1 obrigatório para CRITICAL+HIGH, template T1, decisores definidos, SLA 4h HIGH |
+| L3 | Sim | Checklist C1 para todos findings ≥MEDIUM, template T1+T2, escalação formal, SLA 2h CRITICAL |
+
+**Integração no SDLC.**  
+| Fase | Trigger | Responsável | SLA |
+|------|---------|-------------|-----|
+| CI/CD | Ferramenta reporta finding | DevOps + AppSec | 2h CRITICAL, 4h HIGH, 8h MEDIUM |
+| Deploy | Gate bloqueado por finding | DevOps | Decisão com C1 antes de override |
+| Revisão | Trimestral | GRC + AppSec | Análise KPIs (cobertura, tempo-decisão) |
+
+**Ligações úteis.**  
+[Addon 11 — Framework de Decisão para Findings](/sbd-toe/sbd-manual/testes-seguranca/addon/decisao-findings-testes)  
+[Addon 12 — Validação Empírica de Findings](/sbd-toe/sbd-manual/testes-seguranca/addon/validacao-empirica-findings)
+
+---
+
+### US-13 - Validação Empírica de Exploitabilidade de Findings
+
+**Contexto.**  
+Ferramentas reportam findings baseados em heurísticas, não em exploração empírica. Falsos positivos bloqueiam pipelines desnecessariamente; falsos negativos deixam vulnerabilidades em produção. Sem validação empírica, decisões são baseadas em "achismo" ("parece seguro") sem evidência.
+
+:::userstory
+**História.**   
+Como **AppSec + DevOps**, quero **framework de validação empírica de findings**, para testar exploitabilidade real com PoC reproduzível, documentar falsos positivos/negativos com evidência técnica, e otimizar configuração de ferramentas.
+
+**Critérios de aceitação (BDD).**  
+- **Dado** que SAST reporta SQL injection CRITICAL  
+  **Quando** DevOps executa teste T1 (code path analysis + payload test em staging)  
+  **Então** se exploitável, finding confirmado; se dead code ou validação bloqueia, marcado como FP com template S1
+- **Dado** DAST reporta XSS HIGH  
+  **Quando** executa teste T2 (reproduzir payload + testar bypasses WAF)  
+  **Então** se bypass funciona, finding confirmado; se WAF bloqueia todos payloads, marcado como mitigado com evidência
+- **Dado** fuzzing reporta crash com input >10KB  
+  **Quando** executa teste T4 (reproduzir crash + root cause analysis + testar RCE)  
+  **Então** se DoS confirmado, severidade ajustada; se apenas edge case handled, marcado como LOW
+- **Dado** incidente de produção (XSS explorado)  
+  **Quando** confirmo que SAST/DAST não detetaram  
+  **Então** registo FN com template S2 (Root Cause Analysis), ajusto ferramentas, adiciono teste de regressão
+- **Dado** métrica de qualidade  
+  **Quando** revisão mensal  
+  **Então** FP `<20%`, FN `<5%`, tempo-validação `<4h` (L2) ou `<2h` (L3)
+
+**Checklist.**  
+- [ ] Taxonomia T1-T5 definida (SAST, DAST, IAST, Fuzzing, Pentesting) com procedimentos de teste por tipo
+- [ ] Procedimentos de teste: T1 (code path + payload test), T2 (bypass WAF), T3 (PoC manual IAST), T4 (crash analysis), T5 (reprodução pentesting)
+- [ ] Template S1 de supressão FP com campos obrigatórios (Finding ID, análise técnica, evidência de teste, aprovador AppSec)
+- [ ] Template S2 de RCA para FN (vulnerabilidade não-detetada, root cause, correção de ferramenta, prevenção futura)
+- [ ] Repositório de PoCs versionado em Git (pocs/FINDING-ID-poc.py)
+- [ ] Staging environment isolado para testes de exploração (network segmentado, dados não-produção)
+- [ ] Dashboard de métricas qualidade: FP rate `<20%`, FN rate `<5%`, tempo-validação, cobertura testes
+- [ ] Integração com ferramentas para supressão automática de FP validados (comentários inline + whitelist)
+
+:::
+
+**🧾 Artefactos & evidências.**  
+- Taxonomia T1-T5 aplicada (SAST, DAST, IAST, Fuzzing, Pentesting com procedimentos específicos)
+- Testes de exploração executados em staging (T1: code path, T2: WAF bypass, T3: PoC IAST, T4: crash RCA, T5: reprodução pentesting)
+- Template S1 de supressão FP preenchido (Finding ID, razão técnica, evidência de teste não-exploitável)
+- Template S2 de RCA para FN documentado (vulnerabilidade missed, root cause, ajuste ferramenta)
+- Repositório de PoCs versionado em Git (pocs/*.py com payloads reproduzíveis)
+- Dashboard de métricas: FP rate `<`20%, FN rate `<`5%, tempo-validação `<`4h, confirmation rate \>70%
+- Logs de testes de exploração com timestamps e evidência (screenshots, HTTP logs, crash dumps)
+
+**⚖️ Proporcionalidade.**  
+| Nível | Obrigatório? | Ajustes |
+|---|---:|---|
+| L1 | Opcional | Testes para CRITICAL apenas, sem exigência de tempo-validação |
+| L2 | Sim | Testes T1-T5 para CRITICAL+HIGH, template S1 obrigatório, métricas FP `<30%`, tempo `<4h` |
+| L3 | Sim | Testes T1-T5 para todos findings ≥MEDIUM, template S1+S2, métricas FP `<20%`, FN `<5%`, tempo `<2h` |
+
+**Integração no SDLC.**  
+| Fase | Trigger | Responsável | SLA |
+|------|---------|-------------|-----|
+| CI/CD | Ferramenta reporta finding | AppSec + DevOps | 4h HIGH (L2), 2h CRITICAL (L3) |
+| Staging | Deploy de nova versão | AppSec | Testes T1-T5 antes de produção |
+| Revisão | Mensal | AppSec + GRC | Análise métricas (FP, FN, cobertura) |
+| Incidente | Vulnerabilidade explorada | AppSec + CISO | RCA obrigatório com Template S2 |
+
+**Ligações úteis.**  
+[Addon 12 — Validação Empírica de Findings](/sbd-toe/sbd-manual/testes-seguranca/addon/validacao-empirica-findings)  
+[Addon 11 — Framework de Decisão para Findings](/sbd-toe/sbd-manual/testes-seguranca/addon/decisao-findings-testes)
+
+---
+
+---
+
+### US-14 - Validação humana da interpretação final dos resultados
+
+Ferramentas podem correlacionar, priorizar e sugerir severidade — mas **não substituem validação humana**.  
+Esta US garante que a equipa não toma decisões (merge/release/aceitação) com base apenas em scoring automático ou agregação de resultados.
+
+**Contexto.**  
+Resultados “plausíveis” ou bem priorizados podem estar errados, incompletos ou fora de contexto. Sem validação humana, aumenta o risco de falsos positivos/negativos e de decisões não auditáveis.
+
+:::userstory
+**História.**  
+Como **AppSec**, quero **validar a interpretação final dos resultados de testes (severidade, exploitabilidade, prioridade e ação recomendada)**, para **garantir que decisões de engenharia e governação se baseiam em evidência e contexto, e não apenas em correlação automática**.
+
+**Critérios de aceitação (BDD).**  
+- **Dado** que um conjunto de testes (SAST/DAST/SCA/IAST/fuzzing) produziu findings  
+  **Quando** a triagem é concluída  
+  **Então** existe validação humana documentada para todos os findings acima do threshold definido para Lx
+
+- **Dado** que um finding é marcado como “falso positivo”, “mitigado” ou “aceite”  
+  **Quando** a decisão é registada  
+  **Então** existe racional técnico e evidência anexada que suporta a classificação
+
+**Checklist.**  
+- [ ] Triagem humana obrigatória para severidade ≥ threshold Lx  
+- [ ] Racional registado (porque é crítico/alto/médio/baixo)  
+- [ ] Evidência anexada (logs, PoC mínima, referências técnicas)  
+- [ ] Falsos positivos com justificação e aprovação  
+- [ ] Resultado final publicado (ex: backlog / plataforma central) com responsável identificado  
+
+:::
+
+**Artefactos & evidências.** Registo de triagem (ticket/nota), anexos técnicos, link para finding original e decisão final.
+
+**Proporcionalidade por risco.**  
+| Nível | Exigência |
+|---|---|
+| L1 | Triagem humana para High/Critical |
+| L2 | Triagem humana para Medium+ |
+| L3 | Triagem humana para todos os findings acima de Low |
+
+**Integração no SDLC.**  
+| Fase | Trigger | Responsável | SLA |
+|------|---------|-------------|-----|
+| CI/CD / Staging | Geração de findings | AppSec + QA | Antes de merge/release |
+
+---
+
+### US-15 - Reprodutibilidade de resultados críticos de testes de segurança
+
+Sem reprodutibilidade não há auditoria fiável.  
+Esta US garante que qualquer finding relevante pode ser reexecutado de forma controlada, com contexto suficiente para validação independente.
+
+**Contexto.**  
+Testes podem depender de configuração, seeds, estados de ambiente, versões de ferramentas e inputs dinâmicos. Resultados não reproduzíveis degradam governação e aumentam risco de decisões incorretas.
+
+:::userstory
+**História.**  
+Como **QA/Testes**, quero **garantir que resultados críticos/altos de testes de segurança são reprodutíveis**, para **permitir validação independente, auditoria e correção eficaz sem ambiguidade**.
+
+**Critérios de aceitação (BDD).**  
+- **Dado** que um finding Critical/High é detetado  
+  **Quando** é escalado para correção ou decisão  
+  **Então** existe um procedimento documentado que permite reproduzir o resultado em ambiente controlado
+
+- **Dado** que o finding depende de inputs dinâmicos (ex: fuzzing)  
+  **Quando** o teste é registado  
+  **Então** o input/corpus e o contexto (seed, versão, configuração) são preservados e versionados
+
+**Checklist.**  
+- [ ] Configuração do teste versionada (ruleset, flags, scope)  
+- [ ] Versão da ferramenta registada (e.g., container digest)  
+- [ ] Inputs relevantes preservados (request, payload, corpus, seed)  
+- [ ] Ambiente de reprodução definido (staging/lab)  
+- [ ] Procedimento de reprodução documentado (passo-a-passo)  
+- [ ] Evidência do retest após correção (antes/depois)  
+
+:::
+
+**Artefactos & evidências.** Runbook de reprodução, ficheiros de input/corpus, logs antes/depois, identificação da versão de ferramenta e configuração.
+
+**Proporcionalidade por risco.**  
+| Nível | Exigência |
+|---|---|
+| L1 | Reprodutibilidade para Critical |
+| L2 | Reprodutibilidade para High/Critical |
+| L3 | Reprodutibilidade para Medium+ (e Critical/High obrigatórios) |
+
+**Integração no SDLC.**  
+| Fase | Trigger | Responsável | SLA |
+|------|---------|-------------|-----|
+| Staging / Pré-release | Finding ≥ threshold | QA + AppSec | Antes de decisão go/no-go |
+
+---
+
+### US-16 - Separação formal entre sinal automático e decisão de bloqueio/override
+
+Gates são necessários, mas não substituem governação.  
+Esta US garante que a decisão (bloquear, excecionar, promover) é sempre atribuída a um role humano e deixa evidência.
+
+**Contexto.**  
+Sem separação clara, pipelines tornam-se “autoridade” e decisões de risco ficam implícitas, difíceis de auditar e fáceis de contornar informalmente.
+
+:::userstory
+**História.**  
+Como **DevOps**, quero **separar formalmente o sinal automático (resultado de ferramentas) da decisão de bloqueio/override**, para **garantir que ações irreversíveis são controladas e auditáveis, com responsabilidade humana explícita**.
+
+**Critérios de aceitação (BDD).**  
+- **Dado** que um gate falha por finding acima do threshold  
+  **Quando** a equipa pretende fazer override  
+  **Então** o override só é permitido com decisão humana documentada e validade temporal definida
+
+- **Dado** que um finding é marcado como exceção  
+  **Quando** a release é aprovada  
+  **Então** a evidência da decisão (quem, porquê, compensações, expiração) está registada e anexada à release
+
+**Checklist.**  
+- [ ] Gates definidos (o que é sinal vs o que é bloqueio)  
+- [ ] Override apenas via mecanismo formal (PR/issue/workflow)  
+- [ ] Decisor identificado (role e pessoa)  
+- [ ] Justificação técnica e compensações registadas  
+- [ ] Data de expiração obrigatória para exceções  
+- [ ] Retest planeado antes do fim da expiração (L2/L3)  
+
+:::
+
+**Artefactos & evidências.** Registo de override/aceitação, evidência de compensações, expiração, ligação a release e findings.
+
+**Proporcionalidade por risco.**  
+| Nível | Exigência |
+|---|---|
+| L1 | Overrides permitidos com registo simples |
+| L2 | Override exige aprovação AppSec + expiração |
+| L3 | Override exige dupla aprovação (AppSec + Produto/Tech Lead) + expiração + retest obrigatório |
+
+**Integração no SDLC.**  
+| Fase | Trigger | Responsável | SLA |
+|------|---------|-------------|-----|
+| CI/CD / Pré-release | Gate falhou ou exceção proposta | DevOps + AppSec | Antes do merge/release |
+
+---
+
+### US-17 - Avaliação crítica de cobertura real e limitações
+
+Cobertura “boa” em métricas não significa segurança real.  
+Esta US introduz o controlo de processo que previne over-confidence e força documentação de lacunas.
+
+**Contexto.**  
+Métricas automáticas (percentagens, checks verdes, contagem de testes) podem mascarar lacunas: endpoints fora de scope, fluxos autenticados não cobertos, caminhos raros, ameaças específicas sem teste.
+
+:::userstory
+**História.**  
+Como **AppSec Lead**, quero **avaliar criticamente a cobertura real dos testes de segurança e documentar limitações**, para **evitar falsas garantias e assegurar que lacunas relevantes são conhecidas e tratadas**.
+
+**Critérios de aceitação (BDD).**  
+- **Dado** um conjunto de testes executado para uma release  
+  **Quando** é produzido o sumário de validação  
+  **Então** existem métricas de cobertura interpretadas por humano e limitações explicitamente registadas
+
+- **Dado** que existem áreas fora de cobertura (ex: endpoints críticos não testados)  
+  **Quando** a release é aprovada  
+  **Então** existe plano de mitigação (teste adicional, controlo compensatório ou exceção formal)
+
+**Checklist.**  
+- [ ] Scope real documentado (o que foi testado vs não testado)  
+- [ ] Cobertura por domínio (autenticação, autorização, inputs, APIs críticas)  
+- [ ] Limitações registadas (porquê não cobriu)  
+- [ ] Ameaças não cobertas identificadas (ligação a threat model quando aplicável)  
+- [ ] Plano de mitigação por lacuna (owner + prazo)  
+- [ ] Revisão e aprovação por role humano (AppSec/QA)  
+
+:::
+
+**Artefactos & evidências.** Relatório de cobertura comentado, list
+
+
+---
+
 ## 📦 Artefactos esperados
 
 Cada teste deixa um rasto tangível.  

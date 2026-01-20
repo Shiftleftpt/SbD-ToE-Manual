@@ -36,11 +36,11 @@ Este documento aborda a aplicação proporcional e adaptada do modelo SbD-ToE a 
 2. **Mapear requisitos aplicáveis**, mesmo que não cumpridos;
 3. **Analisar viabilidade de aplicação técnica de controlos**;
 4. **Registar exceções formais**, se aplicável, com:
-
    * Justificação de negócio
    * Riscos reconhecidos
    * Compensações propostas
    * Validade e plano de reavaliação
+
 5. **Incluir o ativo no ciclo de revisão continuada** (Cap. 14.6)
 
 ---

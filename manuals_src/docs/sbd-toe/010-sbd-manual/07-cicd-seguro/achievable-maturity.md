@@ -96,7 +96,7 @@ Este mapeamento **não mede a maturidade da organização**, mas sim o **nível 
 | 1     | Build controlado e rastreável                           | ✅ Execução autenticada com logs                    |
 | 2     | Proveniência e controlo de configuração                 | ✅ Validação e assinatura de artefactos             |
 | 3     | Builds reprodutíveis e trusted builders                 | ✅ Trusted environments e runners                   |
-| 4     | Isolamento hermético e verificações externas            | ❌ Fora do escopo do capítulo (ver Cap. 08 e 09)    |
+| 4     | Isolamento hermético e verificações externas            | ❌ Fora do âmbito do capítulo (ver Cap. 08 e 09)    |
 
 **🔐 Nível máximo suportado por este capítulo: SLSA 3 / 4**
 

@@ -50,7 +50,7 @@ function HomepageHeader() {
 function ToeDiagramSection() {
   return (
     <section className={styles.features}>
-      <div className="container">
+      <div className={clsx('container', styles.diagramContainer)}>
         <div className="text--center">
           {/* Diagrama clicável para o Capítulo 00 / ToE */}
           <Link to={toeIntroUrl} className={styles.diagramLink}>
@@ -64,22 +64,12 @@ function ToeDiagramSection() {
 
 function ToeDiagram() {
   return (
-    <div
-      style={{
-        textAlign: 'center',
-        padding: '0.5rem 0',
-        color: 'var(--ifm-font-color-base)', // para o SVG herdar a cor de texto do tema
-      }}
-    >
+    <div className={styles.diagramWrapper}>
       <svg
-        viewBox="0 0 1407 704"
+        viewBox="0 -20 1407 744"
         role="img"
         aria-label="Diagrama conceptual da Theory of Everything"
-        style={{
-          maxWidth: '1690px',
-          width: '100%',
-          height: 'auto',
-        }}
+        className={styles.diagramSvg}
         preserveAspectRatio="xMidYMid meet"
       >
         <defs>
@@ -97,19 +87,19 @@ function ToeDiagram() {
             <stop offset="100%" stopColor="transparent" stopOpacity="0" />
           </radialGradient>
           <style>{`
-            .toe-home-title { font-weight: bold; font-size: 27px; fill: currentColor; }
-            .toe-home-text { font-size: 21px; fill: var(--ifm-color-emphasis-700); }
+            .toe-home-title { font-weight: bold; font-size: 31px; fill: currentColor; }
+            .toe-home-text { font-size: 24px; fill: var(--ifm-color-emphasis-700); }
           `}</style>
         </defs>
 
         {/* halo */}
-        <circle cx="704" cy="353" r="260" fill="url(#toeGlow)" />
+        <circle cx="704" cy="353" r="185" fill="url(#toeGlow)" />
 
-        {/* anel — 5 satélites a 72° intervalo */}
+        {/* anel tracejado — 3 eixos */}
         <circle
           cx="704"
           cy="353"
-          r="224"
+          r="205"
           fill="none"
           stroke="var(--ifm-color-emphasis-400)"
           strokeWidth="3.6"
@@ -120,16 +110,16 @@ function ToeDiagram() {
         <circle
           cx="704"
           cy="353"
-          r="113"
+          r="85"
           fill="var(--ifm-background-surface-color)"
           stroke="var(--ifm-color-primary)"
           strokeWidth="3.6"
         />
         <text
           x="704"
-          y="338"
+          y="347"
           textAnchor="middle"
-          fontSize="29"
+          fontSize="22"
           fontWeight="bold"
           fill="currentColor"
         >
@@ -137,213 +127,127 @@ function ToeDiagram() {
         </text>
         <text
           x="704"
-          y="375"
+          y="362"
           textAnchor="middle"
-          fontSize="27"
+          fontSize="19"
           fill="currentColor"
         >
           Theory of Everything
         </text>
 
-        {/* cinco satélites a 72° intervalo */}
-        {/* Top (0°) */}
+        {/* Top-Down satélite */}
         <circle
           cx="704"
-          cy="129"
+          cy="148"
           r="47"
           fill="var(--ifm-background-surface-color)"
         />
         <circle
           cx="704"
-          cy="129"
+          cy="148"
           r="47"
           fill="none"
           stroke="var(--ifm-color-emphasis-400)"
         />
         <text
           x="704"
-          y="120"
+          y="70"
           textAnchor="middle"
           className="toe-home-title"
         >
-          Normativos
+          Top-Down
         </text>
         <text
           x="704"
-          y="149"
+          y="92"
           textAnchor="middle"
           className="toe-home-text"
         >
-          &amp; Regulação
+          Normas &amp; Regulação
         </text>
-
-        {/* NE (72°) */}
-        <circle
-          cx="915"
-          cy="284"
-          r="47"
-          fill="var(--ifm-background-surface-color)"
-        />
-        <circle
-          cx="915"
-          cy="284"
-          r="47"
-          fill="none"
-          stroke="var(--ifm-color-emphasis-400)"
-        />
-        <text
-          x="984"
-          y="270"
-          textAnchor="start"
-          className="toe-home-title"
-        >
-          Normas &
-        </text>
-        <text
-          x="984"
-          y="299"
-          textAnchor="start"
-          className="toe-home-text"
-        >
-          Frameworks
-        </text>
-
-        {/* SE (144°) */}
-        <circle
-          cx="834"
-          cy="533"
-          r="47"
-          fill="var(--ifm-background-surface-color)"
-        />
-        <circle
-          cx="834"
-          cy="533"
-          r="47"
-          fill="none"
-          stroke="var(--ifm-color-emphasis-400)"
-        />
-        <text
-          x="834"
-          y="579"
-          textAnchor="middle"
-          className="toe-home-title"
-        >
-          Ameaças
-        </text>
-        <text
-          x="834"
-          y="608"
-          textAnchor="middle"
-          className="toe-home-text"
-        >
-          &amp; incidentes
-        </text>
-
-        {/* SW (216°) */}
-        <circle
-          cx="572"
-          cy="533"
-          r="47"
-          fill="var(--ifm-background-surface-color)"
-        />
-        <circle
-          cx="572"
-          cy="533"
-          r="47"
-          fill="none"
-          stroke="var(--ifm-color-emphasis-400)"
-        />
-        <text
-          x="572"
-          y="579"
-          textAnchor="middle"
-          className="toe-home-title"
-        >
-          Engenharia
-        </text>
-        <text
-          x="572"
-          y="608"
-          textAnchor="middle"
-          className="toe-home-text"
-        >
-          &amp; ciclo de vida
-        </text>
-
-        {/* NW (288°) */}
-        <circle
-          cx="494"
-          cy="284"
-          r="47"
-          fill="var(--ifm-background-surface-color)"
-        />
-        <circle
-          cx="494"
-          cy="284"
-          r="47"
-          fill="none"
-          stroke="var(--ifm-color-emphasis-400)"
-        />
-        <text
-          x="422"
-          y="270"
-          textAnchor="end"
-          className="toe-home-title"
-        >
-          SDLC,
-        </text>
-        <text
-          x="422"
-          y="299"
-          textAnchor="end"
-          className="toe-home-text"
-        >
-          CI/CD, deploy
-        </text>
-
-        {/* ligações — 5 satélites */}
-        {/* top */}
         <line
           x1="704"
-          y1="240"
+          y1="195"
           x2="704"
-          y2="177"
+          y2="268"
           stroke="var(--ifm-color-emphasis-400)"
           strokeWidth="3.6"
         />
-        {/* NE */}
+
+        {/* Bottom-Up satélite */}
+        <circle
+          cx="704"
+          cy="558"
+          r="47"
+          fill="var(--ifm-background-surface-color)"
+        />
+        <circle
+          cx="704"
+          cy="558"
+          r="47"
+          fill="none"
+          stroke="var(--ifm-color-emphasis-400)"
+        />
+        <text
+          x="704"
+          y="635"
+          textAnchor="middle"
+          className="toe-home-title"
+        >
+          Bottom-Up
+        </text>
+        <text
+          x="704"
+          y="657"
+          textAnchor="middle"
+          className="toe-home-text"
+        >
+          Ameaças &amp; Incidentes
+        </text>
         <line
-          x1="812"
-          y1="317"
-          x2="870"
-          y2="299"
+          x1="704"
+          y1="511"
+          x2="704"
+          y2="438"
           stroke="var(--ifm-color-emphasis-400)"
           strokeWidth="3.6"
         />
-        {/* SE */}
-        <line
-          x1="770"
-          y1="443"
-          x2="807"
-          y2="495"
-          stroke="var(--ifm-color-emphasis-400)"
-          strokeWidth="3.6"
+
+        {/* Engineering satélite */}
+        <circle
+          cx="499"
+          cy="353"
+          r="47"
+          fill="var(--ifm-background-surface-color)"
         />
-        {/* SW */}
-        <line
-          x1="638"
-          y1="443"
-          x2="600"
-          y2="495"
+        <circle
+          cx="499"
+          cy="353"
+          r="47"
+          fill="none"
           stroke="var(--ifm-color-emphasis-400)"
-          strokeWidth="3.6"
         />
-        {/* NW */}
+        <text
+          x="420"
+          y="345"
+          textAnchor="end"
+          className="toe-home-title"
+        >
+          Engineering
+        </text>
+        <text
+          x="420"
+          y="365"
+          textAnchor="end"
+          className="toe-home-text"
+        >
+          Execução &amp; Ciclo de vida
+        </text>
         <line
-          x1="597"
-          y1="317"
-          x2="537"
-          y2="299"
+          x1="546"
+          y1="353"
+          x2="619"
+          y2="353"
           stroke="var(--ifm-color-emphasis-400)"
           strokeWidth="3.6"
         />
@@ -357,9 +261,9 @@ function ToeDiagram() {
           marginInline: 'auto',
         }}
       >
-        O SbD–ToE é o núcleo onde convergem normativos, frameworks, ameaças e
-        engenharia. A partir deste centro, cada capítulo do manual desdobra a
-        visão em práticas e controlos concretos.
+        O SbD–ToE é o núcleo onde convergem normas, ameaças e engenharia.
+        A partir deste centro, cada capítulo do manual desdobra a visão em
+        práticas e controlos concretos.
       </p>
     </div>
   );

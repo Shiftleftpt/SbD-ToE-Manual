@@ -66,6 +66,13 @@
 .features {
   background: var(--ifm-background-color);
   padding: 1.25rem 0;              /* menos espaço vertical */
+  /* ampliar largura efetiva do container nesta secção */
+  --ifm-container-width: 1690px;
+}
+
+/* Tornar o container desta secção mais largo para o diagrama */
+.features :global(.container) {
+  max-width: 1690px;
 }
 
 .featureItem {
@@ -97,16 +104,44 @@ html[data-theme='dark'] .card {
 }
 
 .diagramLink {
-  display: inline-block;
+  /* CRITICAL: block + 100% para permitir SVG expandir */
+  display: block;
+  width: 100%;
   text-decoration: none;
 }
 
-.diagramLink:hover svg {
-  transform: scale(1.02);
+.diagramLink:hover .diagramSvg {
+  transform: scale(1.01);
   transition: transform 150ms ease-out;
 }
 
 .diagramLink:focus-visible {
   outline: 2px solid var(--ifm-color-primary);
   outline-offset: 4px;
+  border-radius: 8px;
+}
+
+/* container dedicado do diagrama com largura maior */
+.diagramContainer {
+  /* FORÇA expansão total ignorando restrições Docusaurus */
+  max-width: min(96vw, 800px) !important;
+  width: 100% !important;
+  padding-inline: 1rem;
+}
+
+/* Wrapper interno do diagrama: full width */
+.diagramWrapper {
+  width: 100%;
+  text-align: center;
+  padding: 0.5rem 0;
+  color: var(--ifm-font-color-base);
+}
+
+/* SVG responsivo com largura controlada */
+.diagramSvg {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-width: min(96vw, 800px);
+  margin-inline: auto;
 }

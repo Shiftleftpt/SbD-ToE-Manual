@@ -45,6 +45,10 @@ const config: Config = {
       tagName: 'link',
       attributes: { rel: 'apple-touch-icon', href: '/img/brand/favicon-180.png' },
     },
+      {
+        tagName: 'meta',
+        attributes: { name: 'algolia-site-verification', content: 'DC1E05B6D8DFA537' },
+      },
   ],
   
   // ⤵️ injeta apenas script de analítica (removido fallback mermaid)

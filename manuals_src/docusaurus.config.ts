@@ -194,4 +194,16 @@ const config: Config = {
   },
 };
 
+          // Algolia DocSearch
+          // Para credenciais reais, inserir appId, apiKey e indexName abaixo.
+          // Ask AI: Quando disponível, Algolia irá ativar automaticamente (ver documentação Algolia).
+          // Para campos ou configurações específicas de Ask AI, consulte https://docsearch.algolia.com/ask-ai/
+          algolia: {
+            appId: process.env.ALGOLIA_APP_ID || 'REPLACE_WITH_ALGOLIA_APP_ID',
+            apiKey: process.env.ALGOLIA_SEARCH_API_KEY || 'REPLACE_WITH_ALGOLIA_SEARCH_API_KEY',
+            indexName: process.env.ALGOLIA_INDEX_NAME || 'REPLACE_WITH_ALGOLIA_INDEX_NAME',
+            contextualSearch: true,
+            searchPagePath: 'search',
+            // askAI: true // Descomente quando Algolia Ask AI estiver disponível
+          },
 export default config;

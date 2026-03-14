@@ -1,6 +1,6 @@
 ---
 id: aplicacao-lifecycle
-title: Como Fazer
+title: Aplicação de Governança e Contratação no Ciclo de Vida
 description: Integração prática das práticas de governação, exceções e contratação no ciclo de vida SbD-ToE
 tags: [tipo:aplicacao, ciclo-vida, governanca, contratacao, excecoes, rastreabilidade]
 genia: us-format-normalization

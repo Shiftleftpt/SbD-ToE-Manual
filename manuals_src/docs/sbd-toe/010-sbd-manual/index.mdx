@@ -161,11 +161,14 @@ export const TYPE_INFO = {
 `}</style>
 
 <div className="container margin-vert--lg">
-  
+  <h2>Visão geral</h2>
+
   <div className="intro-text">
     O Manual SbD-ToE está organizado em <strong>14 capítulos</strong> que cobrem todo o ciclo de vida de desenvolvimento seguro, 
     desde a classificação inicial até à operação e governação contínua.
   </div>
+
+  <h2>Tipos de capítulo</h2>
 
   <div className="legend">
     {Object.entries(TYPE_INFO).map(([key, info]) => (
@@ -178,6 +181,8 @@ export const TYPE_INFO = {
       </div>
     ))}
   </div>
+
+  <h2>Navegação por capítulo</h2>
 
   <div className="chapters-grid">
     {CHAPTERS.map(chapter => {

@@ -1,6 +1,6 @@
 ---
 id: aplicacao-lifecycle
-title: Como Fazer
+title: Aplicação de Threat Modeling no Ciclo de Vida
 description: Integração do threat modeling ao longo do ciclo de desenvolvimento
 tags: [tipo:aplicacao, ciclo-vida, threat-modeling, requisitos, mitigacao, rastreabilidade]
 genia: us-format-normalization

@@ -1,6 +1,6 @@
 ---
 id: aplicacao-lifecycle
-title: Como Fazer
+title: Aplicação de Requisitos de Segurança no Ciclo de Vida
 description: Integração das práticas de requisitos ao longo das fases do ciclo de desenvolvimento
 tags: [tipo:aplicacao, ciclo-vida, requisitos, validacao, rastreabilidade, excecoes]
 genia: us-format-normalization

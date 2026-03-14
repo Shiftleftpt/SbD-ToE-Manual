@@ -1,6 +1,6 @@
 ---
 id: aplicacao-lifecycle
-title: Como Fazer
+title: Aplicação de Monitorização e Operações no Ciclo de Vida
 description: Integração prática das práticas de monitorização e resposta no ciclo de vida seguro
 tags: [tipo:aplicacao, ciclo-vida, monitorizacao, deteccao, operacoes, incidentes]
 genia: us-format-normalization

@@ -105,20 +105,24 @@ clean:
 	rm -rf "$(WEB_DIR)"
 
 .PHONY: clear
-clear:
-	@echo ">> Limpar caches Docusaurus"
-	cd "$(WEB_DIR)"; \
-	rm -rf .docusaurus node_modules/.cache build
-
-# ---------------------------------------------------------------
-# Setup inicial para desenvolvimento
-# ---------------------------------------------------------------
-.PHONY: dev-setup
-dev-setup: clean prepare install
-	@echo ">> Setup completo. Agora podes correr 'make dev'"
-
-# ---------------------------------------------------------------
-# Dev server (usa dev-setup primeiro se _out/web não existir)
+prepare:
+		@echo ">> Copiando $(SRC_DIR) -> $(WEB_DIR)"
+		@if [ ! -d "$(SRC_DIR)" ]; then \
+			echo "!! Origem não encontrada: $(SRC_DIR)"; exit 1; fi
+		@mkdir -p "$(WEB_DIR)"
+		@if command -v rsync >/dev/null 2>&1; then \
+			rsync -a --delete --exclude '.git' --exclude '.docusaurus' \
+				--exclude 'node_modules' --exclude 'build' --exclude '.DS_Store' \
+				"$(SRC_DIR)/" "$(WEB_DIR)/"; \
+		else \
+			echo ">> rsync não encontrado, a usar cp -R"; \
+			rm -rf "$(WEB_DIR)"; mkdir -p "$(WEB_DIR)"; \
+			cp -R "$(SRC_DIR)/." "$(WEB_DIR)/"; \
+		fi
+		@if [ -f "$(SRC_DIR)/.env" ]; then \
+			echo ">> Copiando .env para $(WEB_DIR)"; \
+			cp "$(SRC_DIR)/.env" "$(WEB_DIR)/.env"; \
+		fi
 # ---------------------------------------------------------------
 .PHONY: dev
 dev:

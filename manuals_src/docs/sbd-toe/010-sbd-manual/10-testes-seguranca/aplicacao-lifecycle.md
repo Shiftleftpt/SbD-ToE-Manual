@@ -1,6 +1,6 @@
 ---
 id: aplicacao-lifecycle
-title: Como Fazer
+title: Aplicação de Testes de Segurança no Ciclo de Vida
 description: Integração prática das práticas de validação contínua nas diferentes fases do ciclo de vida da aplicação
 tags: [tipo:aplicacao, ciclo-vida, testes, seguranca, integracao, validacao]
 genia: us-format-normalization

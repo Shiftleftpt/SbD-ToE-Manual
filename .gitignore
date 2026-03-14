@@ -142,3 +142,4 @@ pnpm-debug.log*
 # Independent projects (manual-rag, etc.)
 
 work-documents/
+indexes/

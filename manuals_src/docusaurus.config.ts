@@ -1,18 +1,83 @@
 import type {Config} from '@docusaurus/types';
+import {existsSync, readFileSync} from 'node:fs';
 import {themes as prismThemes} from 'prism-react-renderer';
 
 const sidebarPath = './sidebars-sbd-toe.ts';
+
+function loadEnvFile() {
+  const envPath = new URL('./.env', import.meta.url);
+
+  if (!existsSync(envPath)) {
+    return;
+  }
+
+  for (const line of readFileSync(envPath, 'utf8').split(/\r?\n/)) {
+    const trimmed = line.trim();
+
+    if (!trimmed || trimmed.startsWith('#')) {
+      continue;
+    }
+
+    const separatorIndex = trimmed.indexOf('=');
+
+    if (separatorIndex <= 0) {
+      continue;
+    }
+
+    const key = trimmed.slice(0, separatorIndex).trim();
+
+    if (!key || process.env[key] !== undefined) {
+      continue;
+    }
+
+    let value = trimmed.slice(separatorIndex + 1).trim();
+
+    if (
+      (value.startsWith('"') && value.endsWith('"')) ||
+      (value.startsWith("'") && value.endsWith("'"))
+    ) {
+      value = value.slice(1, -1);
+    }
+
+    process.env[key] = value;
+  }
+}
+
+loadEnvFile();
+
+const algoliaAppId =
+  process.env.ALGOLIA_APP_ID ?? 'REPLACE_WITH_ALGOLIA_APP_ID';
+const algoliaSearchApiKey =
+  process.env.ALGOLIA_SEARCH_API_KEY ??
+  'REPLACE_WITH_ALGOLIA_SEARCH_API_KEY';
+const algoliaIndexName =
+  process.env.ALGOLIA_INDEX_NAME ?? 'REPLACE_WITH_ALGOLIA_INDEX_NAME';
+const algoliaAskAiAssistantId = process.env.ALGOLIA_ASK_AI_ASSISTANT_ID;
+const algoliaAskAiConfig = algoliaAskAiAssistantId
+  ? {
+      assistantId: algoliaAskAiAssistantId,
+      agentStudio: true,
+      sidePanel: true,
+      suggestedQuestions: true,
+    }
+  : undefined;
+
+const hasAlgoliaCredentials = [
+  algoliaAppId,
+  algoliaSearchApiKey,
+  algoliaIndexName,
+].every(value => !value.startsWith('REPLACE_WITH_'));
 
 const config: Config = {
   title: 'Security by Design',
   tagline: 'Theory of Everything',
   favicon: 'img/brand/favicon-32.png',
 
+  // Keep this aligned with the public production hostname indexed by Algolia.
   url: 'https://www.securitybydesign.dev',
   baseUrl: '/',
   organizationName: 'shiftleftpt',
   projectName: 'SbD-ToE-Manual',
-
   onBrokenLinks: 'warn',
 
   i18n: {
@@ -49,7 +114,7 @@ const config: Config = {
     },
   ],
 
-  themes: ['@docusaurus/theme-mermaid'],
+  themes: ['@docusaurus/theme-mermaid', '@docsearch/docusaurus-adapter'],
 
   presets: [
     [
@@ -78,7 +143,13 @@ const config: Config = {
           changefreq: 'weekly',
           priority: 0.5,
           filename: 'sitemap.xml',
-          ignorePatterns: ['/search', '/tags/**'],
+          ignorePatterns: [
+            '/search',
+            '/tags',
+            '/tags/**',
+            '/sbd-toe/tags',
+            '/sbd-toe/tags/**',
+          ],
         },
       },
     ],
@@ -129,6 +200,14 @@ const config: Config = {
           label: 'Licença',
           position: 'right',
         },
+        ...(hasAlgoliaCredentials
+          ? [
+              {
+                type: 'search' as const,
+                position: 'right' as const,
+              },
+            ]
+          : []),
         {
           href: 'https://github.com/Shiftleftpt/SbD-ToE-Manual',
           label: 'GitHub',
@@ -157,6 +236,17 @@ const config: Config = {
     colorMode: {
       respectPrefersColorScheme: true,
       defaultMode: 'dark',
+    },
+
+    // DocSearch is provided by the official Algolia adapter. The current Ask AI
+    // setup expects an Agent Studio assistant ID and enables the sidepanel UI.
+    docsearch: {
+      appId: algoliaAppId,
+      apiKey: algoliaSearchApiKey,
+      indexName: algoliaIndexName,
+      askAi: algoliaAskAiConfig,
+      contextualSearch: false,
+      searchPagePath: 'search',
     },
 
     docs: {

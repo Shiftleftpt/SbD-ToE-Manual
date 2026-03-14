@@ -1,6 +1,6 @@
 ---
 id: aplicacao-lifecycle
-title: Como Fazer
+title: Aplicação de Containers e Imagens no Ciclo de Vida
 description: Como aplicar as práticas prescritas de segurança em containers ao longo do ciclo de vida de desenvolvimento e operação
 tags: [tipo:aplicacao, ciclo-vida, containers, imagens, seguranca, isolamento, sbom, supply-chain]
 genia: us-format-normalization

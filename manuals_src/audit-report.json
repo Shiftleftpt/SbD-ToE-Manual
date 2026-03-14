@@ -1,0 +1,1108 @@
+{
+  "auditReportVersion": 2,
+  "vulnerabilities": {
+    "@chevrotain/cst-dts-gen": {
+      "name": "@chevrotain/cst-dts-gen",
+      "severity": "moderate",
+      "isDirect": false,
+      "via": [
+        "@chevrotain/gast",
+        "lodash-es"
+      ],
+      "effects": [],
+      "range": "11.0.0 - 11.1.0",
+      "nodes": [
+        "node_modules/@chevrotain/cst-dts-gen"
+      ],
+      "fixAvailable": true
+    },
+    "@chevrotain/gast": {
+      "name": "@chevrotain/gast",
+      "severity": "moderate",
+      "isDirect": false,
+      "via": [
+        "lodash-es"
+      ],
+      "effects": [],
+      "range": "11.0.0 - 11.1.0",
+      "nodes": [
+        "node_modules/@chevrotain/gast"
+      ],
+      "fixAvailable": true
+    },
+    "@docusaurus/bundler": {
+      "name": "@docusaurus/bundler",
+      "severity": "high",
+      "isDirect": false,
+      "via": [
+        "copy-webpack-plugin",
+        "css-minimizer-webpack-plugin"
+      ],
+      "effects": [
+        "@docusaurus/core"
+      ],
+      "range": "*",
+      "nodes": [
+        "node_modules/@docusaurus/bundler"
+      ],
+      "fixAvailable": {
+        "name": "@docusaurus/core",
+        "version": "3.5.2",
+        "isSemVerMajor": true
+      }
+    },
+    "@docusaurus/core": {
+      "name": "@docusaurus/core",
+      "severity": "high",
+      "isDirect": true,
+      "via": [
+        "@docusaurus/bundler"
+      ],
+      "effects": [
+        "@docusaurus/plugin-content-blog",
+        "@docusaurus/plugin-content-docs",
+        "@docusaurus/plugin-content-pages",
+        "@docusaurus/plugin-css-cascade-layers",
+        "@docusaurus/plugin-debug",
+        "@docusaurus/plugin-google-analytics",
+        "@docusaurus/plugin-google-gtag",
+        "@docusaurus/plugin-google-tag-manager",
+        "@docusaurus/plugin-sitemap",
+        "@docusaurus/plugin-svgr",
+        "@docusaurus/preset-classic",
+        "@docusaurus/theme-classic",
+        "@docusaurus/theme-mermaid",
+        "@docusaurus/theme-search-algolia"
+      ],
+      "range": "<=0.0.0-6119 || 3.5.2-canary-6121 - 3.5.2-canary-6131 || >=3.6.0-canary-6132",
+      "nodes": [
+        "node_modules/@docusaurus/core"
+      ],
+      "fixAvailable": {
+        "name": "@docusaurus/core",
+        "version": "3.5.2",
+        "isSemVerMajor": true
+      }
+    },
+    "@docusaurus/plugin-content-blog": {
+      "name": "@docusaurus/plugin-content-blog",
+      "severity": "high",
+      "isDirect": false,
+      "via": [
+        "@docusaurus/core"
+      ],
+      "effects": [],
+      "range": "<=0.0.0-6119 || 3.5.2-canary-6121 - 3.5.2-canary-6131 || >=3.6.0-canary-6132",
+      "nodes": [
+        "node_modules/@docusaurus/plugin-content-blog"
+      ],
+      "fixAvailable": true
+    },
+    "@docusaurus/plugin-content-docs": {
+      "name": "@docusaurus/plugin-content-docs",
+      "severity": "high",
+      "isDirect": false,
+      "via": [
+        "@docusaurus/core"
+      ],
+      "effects": [],
+      "range": "<=0.0.0-6119 || 3.5.2-canary-6121 - 3.5.2-canary-6131 || >=3.6.0-canary-6132",
+      "nodes": [
+        "node_modules/@docusaurus/plugin-content-docs"
+      ],
+      "fixAvailable": true
+    },
+    "@docusaurus/plugin-content-pages": {
+      "name": "@docusaurus/plugin-content-pages",
+      "severity": "high",
+      "isDirect": false,
+      "via": [
+        "@docusaurus/core"
+      ],
+      "effects": [],
+      "range": "<=0.0.0-6119 || 3.5.2-canary-6121 - 3.5.2-canary-6131 || >=3.6.0-canary-6132",
+      "nodes": [
+        "node_modules/@docusaurus/plugin-content-pages"
+      ],
+      "fixAvailable": true
+    },
+    "@docusaurus/plugin-css-cascade-layers": {
+      "name": "@docusaurus/plugin-css-cascade-layers",
+      "severity": "high",
+      "isDirect": false,
+      "via": [
+        "@docusaurus/core"
+      ],
+      "effects": [
+        "@docusaurus/preset-classic"
+      ],
+      "range": "*",
+      "nodes": [
+        "node_modules/@docusaurus/plugin-css-cascade-layers"
+      ],
+      "fixAvailable": {
+        "name": "@docusaurus/preset-classic",
+        "version": "3.5.2",
+        "isSemVerMajor": true
+      }
+    },
+    "@docusaurus/plugin-debug": {
+      "name": "@docusaurus/plugin-debug",
+      "severity": "high",
+      "isDirect": false,
+      "via": [
+        "@docusaurus/core"
+      ],
+      "effects": [],
+      "range": "<=0.0.0-6119 || 3.5.2-canary-6121 - 3.5.2-canary-6131 || >=3.6.0-canary-6132",
+      "nodes": [
+        "node_modules/@docusaurus/plugin-debug"
+      ],
+      "fixAvailable": true
+    },
+    "@docusaurus/plugin-google-analytics": {
+      "name": "@docusaurus/plugin-google-analytics",
+      "severity": "high",
+      "isDirect": false,
+      "via": [
+        "@docusaurus/core"
+      ],
+      "effects": [],
+      "range": "<=0.0.0-6119 || 3.5.2-canary-6121 - 3.5.2-canary-6131 || >=3.6.0-canary-6132",
+      "nodes": [
+        "node_modules/@docusaurus/plugin-google-analytics"
+      ],
+      "fixAvailable": true
+    },
+    "@docusaurus/plugin-google-gtag": {
+      "name": "@docusaurus/plugin-google-gtag",
+      "severity": "high",
+      "isDirect": false,
+      "via": [
+        "@docusaurus/core"
+      ],
+      "effects": [],
+      "range": "<=0.0.0-6119 || 3.5.2-canary-6121 - 3.5.2-canary-6131 || >=3.6.0-canary-6132",
+      "nodes": [
+        "node_modules/@docusaurus/plugin-google-gtag"
+      ],
+      "fixAvailable": true
+    },
+    "@docusaurus/plugin-google-tag-manager": {
+      "name": "@docusaurus/plugin-google-tag-manager",
+      "severity": "high",
+      "isDirect": false,
+      "via": [
+        "@docusaurus/core"
+      ],
+      "effects": [],
+      "range": "<=0.0.0-6119 || 3.5.2-canary-6121 - 3.5.2-canary-6131 || >=3.6.0-canary-6132",
+      "nodes": [
+        "node_modules/@docusaurus/plugin-google-tag-manager"
+      ],
+      "fixAvailable": true
+    },
+    "@docusaurus/plugin-sitemap": {
+      "name": "@docusaurus/plugin-sitemap",
+      "severity": "high",
+      "isDirect": false,
+      "via": [
+        "@docusaurus/core"
+      ],
+      "effects": [],
+      "range": "<=0.0.0-6119 || 3.5.2-canary-6121 - 3.5.2-canary-6131 || >=3.6.0-canary-6132",
+      "nodes": [
+        "node_modules/@docusaurus/plugin-sitemap"
+      ],
+      "fixAvailable": true
+    },
+    "@docusaurus/plugin-svgr": {
+      "name": "@docusaurus/plugin-svgr",
+      "severity": "high",
+      "isDirect": false,
+      "via": [
+        "@docusaurus/core"
+      ],
+      "effects": [
+        "@docusaurus/preset-classic"
+      ],
+      "range": "*",
+      "nodes": [
+        "node_modules/@docusaurus/plugin-svgr"
+      ],
+      "fixAvailable": {
+        "name": "@docusaurus/preset-classic",
+        "version": "3.5.2",
+        "isSemVerMajor": true
+      }
+    },
+    "@docusaurus/preset-classic": {
+      "name": "@docusaurus/preset-classic",
+      "severity": "high",
+      "isDirect": true,
+      "via": [
+        "@docusaurus/core",
+        "@docusaurus/plugin-content-blog",
+        "@docusaurus/plugin-content-docs",
+        "@docusaurus/plugin-content-pages",
+        "@docusaurus/plugin-css-cascade-layers",
+        "@docusaurus/plugin-debug",
+        "@docusaurus/plugin-google-analytics",
+        "@docusaurus/plugin-google-gtag",
+        "@docusaurus/plugin-google-tag-manager",
+        "@docusaurus/plugin-sitemap",
+        "@docusaurus/plugin-svgr",
+        "@docusaurus/theme-classic",
+        "@docusaurus/theme-search-algolia"
+      ],
+      "effects": [],
+      "range": "<=0.0.0-6119 || 3.5.2-canary-6121 - 3.5.2-canary-6131 || >=3.6.0-canary-6132",
+      "nodes": [
+        "node_modules/@docusaurus/preset-classic"
+      ],
+      "fixAvailable": {
+        "name": "@docusaurus/preset-classic",
+        "version": "3.5.2",
+        "isSemVerMajor": true
+      }
+    },
+    "@docusaurus/theme-classic": {
+      "name": "@docusaurus/theme-classic",
+      "severity": "high",
+      "isDirect": false,
+      "via": [
+        "@docusaurus/core",
+        "@docusaurus/plugin-content-blog",
+        "@docusaurus/plugin-content-docs",
+        "@docusaurus/plugin-content-pages"
+      ],
+      "effects": [],
+      "range": "<=0.0.0-6119 || 3.5.2-canary-6121 - 3.5.2-canary-6131 || >=3.6.0-canary-6132",
+      "nodes": [
+        "node_modules/@docusaurus/theme-classic"
+      ],
+      "fixAvailable": true
+    },
+    "@docusaurus/theme-mermaid": {
+      "name": "@docusaurus/theme-mermaid",
+      "severity": "high",
+      "isDirect": true,
+      "via": [
+        "@docusaurus/core"
+      ],
+      "effects": [],
+      "range": "<=0.0.0-6119 || 3.5.2-canary-6121 - 3.5.2-canary-6131 || >=3.6.0-canary-6132",
+      "nodes": [
+        "node_modules/@docusaurus/theme-mermaid"
+      ],
+      "fixAvailable": {
+        "name": "@docusaurus/theme-mermaid",
+        "version": "3.5.2",
+        "isSemVerMajor": true
+      }
+    },
+    "@docusaurus/theme-search-algolia": {
+      "name": "@docusaurus/theme-search-algolia",
+      "severity": "high",
+      "isDirect": false,
+      "via": [
+        "@docusaurus/core",
+        "@docusaurus/plugin-content-docs"
+      ],
+      "effects": [],
+      "range": "<=0.0.0-6119 || 3.5.2-canary-6121 - 3.5.2-canary-6131 || >=3.6.0-canary-6132",
+      "nodes": [
+        "node_modules/@docusaurus/theme-search-algolia"
+      ],
+      "fixAvailable": true
+    },
+    "@isaacs/brace-expansion": {
+      "name": "@isaacs/brace-expansion",
+      "severity": "high",
+      "isDirect": false,
+      "via": [
+        {
+          "source": 1112954,
+          "name": "@isaacs/brace-expansion",
+          "dependency": "@isaacs/brace-expansion",
+          "title": "@isaacs/brace-expansion has Uncontrolled Resource Consumption",
+          "url": "https://github.com/advisories/GHSA-7h2j-956f-4vf2",
+          "severity": "high",
+          "cwe": [
+            "CWE-1333"
+          ],
+          "cvss": {
+            "score": 0,
+            "vectorString": null
+          },
+          "range": "<=5.0.0"
+        }
+      ],
+      "effects": [],
+      "range": "5.0.0",
+      "nodes": [
+        "node_modules/@isaacs/brace-expansion"
+      ],
+      "fixAvailable": true
+    },
+    "@mermaid-js/parser": {
+      "name": "@mermaid-js/parser",
+      "severity": "moderate",
+      "isDirect": false,
+      "via": [
+        "langium"
+      ],
+      "effects": [
+        "mermaid"
+      ],
+      "range": "<=0.6.3",
+      "nodes": [
+        "node_modules/@mermaid-js/parser"
+      ],
+      "fixAvailable": true
+    },
+    "ajv": {
+      "name": "ajv",
+      "severity": "moderate",
+      "isDirect": false,
+      "via": [
+        {
+          "source": 1113714,
+          "name": "ajv",
+          "dependency": "ajv",
+          "title": "ajv has ReDoS when using `$data` option",
+          "url": "https://github.com/advisories/GHSA-2g4f-4pwh-qvx6",
+          "severity": "moderate",
+          "cwe": [
+            "CWE-400",
+            "CWE-1333"
+          ],
+          "cvss": {
+            "score": 0,
+            "vectorString": null
+          },
+          "range": "<6.14.0"
+        },
+        {
+          "source": 1113715,
+          "name": "ajv",
+          "dependency": "ajv",
+          "title": "ajv has ReDoS when using `$data` option",
+          "url": "https://github.com/advisories/GHSA-2g4f-4pwh-qvx6",
+          "severity": "moderate",
+          "cwe": [
+            "CWE-400",
+            "CWE-1333"
+          ],
+          "cvss": {
+            "score": 0,
+            "vectorString": null
+          },
+          "range": ">=7.0.0-alpha.0 <8.18.0"
+        }
+      ],
+      "effects": [],
+      "range": "<6.14.0 || >=7.0.0-alpha.0 <8.18.0",
+      "nodes": [
+        "node_modules/ajv",
+        "node_modules/file-loader/node_modules/ajv",
+        "node_modules/null-loader/node_modules/ajv",
+        "node_modules/url-loader/node_modules/ajv"
+      ],
+      "fixAvailable": true
+    },
+    "body-parser": {
+      "name": "body-parser",
+      "severity": "low",
+      "isDirect": false,
+      "via": [
+        "qs"
+      ],
+      "effects": [
+        "express"
+      ],
+      "range": "1.19.0 - 1.20.3 || 2.0.0-beta.1 - 2.0.2",
+      "nodes": [
+        "node_modules/body-parser"
+      ],
+      "fixAvailable": true
+    },
+    "chevrotain": {
+      "name": "chevrotain",
+      "severity": "moderate",
+      "isDirect": false,
+      "via": [
+        "@chevrotain/cst-dts-gen",
+        "@chevrotain/gast",
+        "lodash-es"
+      ],
+      "effects": [
+        "langium"
+      ],
+      "range": "11.0.0 - 11.1.0",
+      "nodes": [
+        "node_modules/chevrotain"
+      ],
+      "fixAvailable": true
+    },
+    "copy-webpack-plugin": {
+      "name": "copy-webpack-plugin",
+      "severity": "high",
+      "isDirect": false,
+      "via": [
+        "serialize-javascript"
+      ],
+      "effects": [
+        "@docusaurus/bundler"
+      ],
+      "range": "4.3.0 - 13.0.1",
+      "nodes": [
+        "node_modules/copy-webpack-plugin"
+      ],
+      "fixAvailable": {
+        "name": "@docusaurus/core",
+        "version": "3.5.2",
+        "isSemVerMajor": true
+      }
+    },
+    "css-minimizer-webpack-plugin": {
+      "name": "css-minimizer-webpack-plugin",
+      "severity": "high",
+      "isDirect": false,
+      "via": [
+        "serialize-javascript"
+      ],
+      "effects": [
+        "@docusaurus/bundler"
+      ],
+      "range": "<=7.0.4",
+      "nodes": [
+        "node_modules/css-minimizer-webpack-plugin"
+      ],
+      "fixAvailable": {
+        "name": "@docusaurus/core",
+        "version": "3.5.2",
+        "isSemVerMajor": true
+      }
+    },
+    "dompurify": {
+      "name": "dompurify",
+      "severity": "moderate",
+      "isDirect": false,
+      "via": [
+        {
+          "source": 1114017,
+          "name": "dompurify",
+          "dependency": "dompurify",
+          "title": "DOMPurify contains a Cross-site Scripting vulnerability",
+          "url": "https://github.com/advisories/GHSA-v2wj-7wpq-c8vv",
+          "severity": "moderate",
+          "cwe": [
+            "CWE-79"
+          ],
+          "cvss": {
+            "score": 6.1,
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N"
+          },
+          "range": ">=3.1.3 <=3.3.1"
+        }
+      ],
+      "effects": [],
+      "range": "3.1.3 - 3.3.1",
+      "nodes": [
+        "node_modules/dompurify"
+      ],
+      "fixAvailable": true
+    },
+    "express": {
+      "name": "express",
+      "severity": "low",
+      "isDirect": false,
+      "via": [
+        "body-parser",
+        "qs"
+      ],
+      "effects": [],
+      "range": "4.17.0 - 4.21.2 || 5.0.0-alpha.1 - 5.0.1",
+      "nodes": [
+        "node_modules/express"
+      ],
+      "fixAvailable": true
+    },
+    "glob": {
+      "name": "glob",
+      "severity": "high",
+      "isDirect": false,
+      "via": [
+        {
+          "source": 1109843,
+          "name": "glob",
+          "dependency": "glob",
+          "title": "glob CLI: Command injection via -c/--cmd executes matches with shell:true",
+          "url": "https://github.com/advisories/GHSA-5j98-mcp5-4vw2",
+          "severity": "high",
+          "cwe": [
+            "CWE-78"
+          ],
+          "cvss": {
+            "score": 7.5,
+            "vectorString": "CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:U/C:H/I:H/A:H"
+          },
+          "range": ">=11.0.0 <11.1.0"
+        }
+      ],
+      "effects": [],
+      "range": "11.0.0 - 11.0.3",
+      "nodes": [
+        "node_modules/glob"
+      ],
+      "fixAvailable": true
+    },
+    "js-yaml": {
+      "name": "js-yaml",
+      "severity": "moderate",
+      "isDirect": false,
+      "via": [
+        {
+          "source": 1112714,
+          "name": "js-yaml",
+          "dependency": "js-yaml",
+          "title": "js-yaml has prototype pollution in merge (<<)",
+          "url": "https://github.com/advisories/GHSA-mh29-5h37-fv8m",
+          "severity": "moderate",
+          "cwe": [
+            "CWE-1321"
+          ],
+          "cvss": {
+            "score": 5.3,
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:N"
+          },
+          "range": "<3.14.2"
+        },
+        {
+          "source": 1112715,
+          "name": "js-yaml",
+          "dependency": "js-yaml",
+          "title": "js-yaml has prototype pollution in merge (<<)",
+          "url": "https://github.com/advisories/GHSA-mh29-5h37-fv8m",
+          "severity": "moderate",
+          "cwe": [
+            "CWE-1321"
+          ],
+          "cvss": {
+            "score": 5.3,
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:N"
+          },
+          "range": ">=4.0.0 <4.1.1"
+        }
+      ],
+      "effects": [],
+      "range": "<3.14.2 || >=4.0.0 <4.1.1",
+      "nodes": [
+        "node_modules/gray-matter/node_modules/js-yaml",
+        "node_modules/js-yaml"
+      ],
+      "fixAvailable": true
+    },
+    "langium": {
+      "name": "langium",
+      "severity": "moderate",
+      "isDirect": false,
+      "via": [
+        "chevrotain"
+      ],
+      "effects": [
+        "@mermaid-js/parser"
+      ],
+      "range": "2.1.0 - 4.1.3",
+      "nodes": [
+        "node_modules/langium"
+      ],
+      "fixAvailable": true
+    },
+    "lodash": {
+      "name": "lodash",
+      "severity": "moderate",
+      "isDirect": false,
+      "via": [
+        {
+          "source": 1112455,
+          "name": "lodash",
+          "dependency": "lodash",
+          "title": "Lodash has Prototype Pollution Vulnerability in `_.unset` and `_.omit` functions",
+          "url": "https://github.com/advisories/GHSA-xxjr-mmjv-4gpg",
+          "severity": "moderate",
+          "cwe": [
+            "CWE-1321"
+          ],
+          "cvss": {
+            "score": 6.5,
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:L"
+          },
+          "range": ">=4.0.0 <=4.17.22"
+        }
+      ],
+      "effects": [],
+      "range": "4.0.0 - 4.17.21",
+      "nodes": [
+        "node_modules/lodash"
+      ],
+      "fixAvailable": true
+    },
+    "lodash-es": {
+      "name": "lodash-es",
+      "severity": "moderate",
+      "isDirect": false,
+      "via": [
+        {
+          "source": 1112453,
+          "name": "lodash-es",
+          "dependency": "lodash-es",
+          "title": "Lodash has Prototype Pollution Vulnerability in `_.unset` and `_.omit` functions",
+          "url": "https://github.com/advisories/GHSA-xxjr-mmjv-4gpg",
+          "severity": "moderate",
+          "cwe": [
+            "CWE-1321"
+          ],
+          "cvss": {
+            "score": 6.5,
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:L"
+          },
+          "range": ">=4.0.0 <=4.17.22"
+        }
+      ],
+      "effects": [
+        "@chevrotain/cst-dts-gen",
+        "@chevrotain/gast",
+        "chevrotain"
+      ],
+      "range": "4.0.0 - 4.17.22",
+      "nodes": [
+        "node_modules/lodash-es"
+      ],
+      "fixAvailable": true
+    },
+    "mdast-util-to-hast": {
+      "name": "mdast-util-to-hast",
+      "severity": "moderate",
+      "isDirect": false,
+      "via": [
+        {
+          "source": 1113048,
+          "name": "mdast-util-to-hast",
+          "dependency": "mdast-util-to-hast",
+          "title": "mdast-util-to-hast has unsanitized class attribute",
+          "url": "https://github.com/advisories/GHSA-4fh9-h7wg-q85m",
+          "severity": "moderate",
+          "cwe": [
+            "CWE-20",
+            "CWE-915"
+          ],
+          "cvss": {
+            "score": 5.3,
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:N"
+          },
+          "range": ">=13.0.0 <13.2.1"
+        }
+      ],
+      "effects": [],
+      "range": "13.0.0 - 13.2.0",
+      "nodes": [
+        "node_modules/mdast-util-to-hast"
+      ],
+      "fixAvailable": true
+    },
+    "mermaid": {
+      "name": "mermaid",
+      "severity": "moderate",
+      "isDirect": false,
+      "via": [
+        "@mermaid-js/parser"
+      ],
+      "effects": [],
+      "range": "11.0.0-alpha.1 - 11.12.2",
+      "nodes": [
+        "node_modules/mermaid"
+      ],
+      "fixAvailable": true
+    },
+    "minimatch": {
+      "name": "minimatch",
+      "severity": "high",
+      "isDirect": false,
+      "via": [
+        {
+          "source": 1113459,
+          "name": "minimatch",
+          "dependency": "minimatch",
+          "title": "minimatch has a ReDoS via repeated wildcards with non-matching literal in pattern",
+          "url": "https://github.com/advisories/GHSA-3ppc-4f35-3m26",
+          "severity": "high",
+          "cwe": [
+            "CWE-1333"
+          ],
+          "cvss": {
+            "score": 0,
+            "vectorString": null
+          },
+          "range": "<3.1.3"
+        },
+        {
+          "source": 1113466,
+          "name": "minimatch",
+          "dependency": "minimatch",
+          "title": "minimatch has a ReDoS via repeated wildcards with non-matching literal in pattern",
+          "url": "https://github.com/advisories/GHSA-3ppc-4f35-3m26",
+          "severity": "high",
+          "cwe": [
+            "CWE-1333"
+          ],
+          "cvss": {
+            "score": 0,
+            "vectorString": null
+          },
+          "range": ">=10.0.0 <10.2.1"
+        },
+        {
+          "source": 1113538,
+          "name": "minimatch",
+          "dependency": "minimatch",
+          "title": "minimatch has ReDoS: matchOne() combinatorial backtracking via multiple non-adjacent GLOBSTAR segments",
+          "url": "https://github.com/advisories/GHSA-7r86-cg39-jmmj",
+          "severity": "high",
+          "cwe": [
+            "CWE-407"
+          ],
+          "cvss": {
+            "score": 7.5,
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+          },
+          "range": "<3.1.3"
+        },
+        {
+          "source": 1113545,
+          "name": "minimatch",
+          "dependency": "minimatch",
+          "title": "minimatch has ReDoS: matchOne() combinatorial backtracking via multiple non-adjacent GLOBSTAR segments",
+          "url": "https://github.com/advisories/GHSA-7r86-cg39-jmmj",
+          "severity": "high",
+          "cwe": [
+            "CWE-407"
+          ],
+          "cvss": {
+            "score": 7.5,
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+          },
+          "range": ">=10.0.0 <10.2.3"
+        },
+        {
+          "source": 1113546,
+          "name": "minimatch",
+          "dependency": "minimatch",
+          "title": "minimatch ReDoS: nested *() extglobs generate catastrophically backtracking regular expressions",
+          "url": "https://github.com/advisories/GHSA-23c5-xmqv-rm74",
+          "severity": "high",
+          "cwe": [
+            "CWE-1333"
+          ],
+          "cvss": {
+            "score": 7.5,
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+          },
+          "range": "<3.1.4"
+        },
+        {
+          "source": 1113553,
+          "name": "minimatch",
+          "dependency": "minimatch",
+          "title": "minimatch ReDoS: nested *() extglobs generate catastrophically backtracking regular expressions",
+          "url": "https://github.com/advisories/GHSA-23c5-xmqv-rm74",
+          "severity": "high",
+          "cwe": [
+            "CWE-1333"
+          ],
+          "cvss": {
+            "score": 7.5,
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+          },
+          "range": ">=10.0.0 <10.2.3"
+        }
+      ],
+      "effects": [
+        "serve-handler"
+      ],
+      "range": "<=3.1.3 || 10.0.0 - 10.2.2",
+      "nodes": [
+        "node_modules/minimatch",
+        "node_modules/serve-handler/node_modules/minimatch"
+      ],
+      "fixAvailable": true
+    },
+    "node-forge": {
+      "name": "node-forge",
+      "severity": "high",
+      "isDirect": false,
+      "via": [
+        {
+          "source": 1110996,
+          "name": "node-forge",
+          "dependency": "node-forge",
+          "title": "node-forge has ASN.1 Unbounded Recursion",
+          "url": "https://github.com/advisories/GHSA-554w-wpv2-vw27",
+          "severity": "high",
+          "cwe": [
+            "CWE-674"
+          ],
+          "cvss": {
+            "score": 0,
+            "vectorString": null
+          },
+          "range": "<1.3.2"
+        },
+        {
+          "source": 1110998,
+          "name": "node-forge",
+          "dependency": "node-forge",
+          "title": "node-forge has an Interpretation Conflict vulnerability via its ASN.1 Validator Desynchronization",
+          "url": "https://github.com/advisories/GHSA-5gfm-wpxj-wjgq",
+          "severity": "high",
+          "cwe": [
+            "CWE-436"
+          ],
+          "cvss": {
+            "score": 8.6,
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:N/I:H/A:N"
+          },
+          "range": "<1.3.2"
+        },
+        {
+          "source": 1111068,
+          "name": "node-forge",
+          "dependency": "node-forge",
+          "title": "node-forge is vulnerable to ASN.1 OID Integer Truncation",
+          "url": "https://github.com/advisories/GHSA-65ch-62r8-g69g",
+          "severity": "moderate",
+          "cwe": [
+            "CWE-190"
+          ],
+          "cvss": {
+            "score": 0,
+            "vectorString": null
+          },
+          "range": "<1.3.2"
+        }
+      ],
+      "effects": [],
+      "range": "<=1.3.1",
+      "nodes": [
+        "node_modules/node-forge"
+      ],
+      "fixAvailable": true
+    },
+    "qs": {
+      "name": "qs",
+      "severity": "moderate",
+      "isDirect": false,
+      "via": [
+        {
+          "source": 1113161,
+          "name": "qs",
+          "dependency": "qs",
+          "title": "qs's arrayLimit bypass in comma parsing allows denial of service",
+          "url": "https://github.com/advisories/GHSA-w7fw-mjwx-w883",
+          "severity": "low",
+          "cwe": [
+            "CWE-20"
+          ],
+          "cvss": {
+            "score": 3.7,
+            "vectorString": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:N/A:L"
+          },
+          "range": ">=6.7.0 <=6.14.1"
+        },
+        {
+          "source": 1113719,
+          "name": "qs",
+          "dependency": "qs",
+          "title": "qs's arrayLimit bypass in its bracket notation allows DoS via memory exhaustion",
+          "url": "https://github.com/advisories/GHSA-6rw7-vpxm-498p",
+          "severity": "moderate",
+          "cwe": [
+            "CWE-20"
+          ],
+          "cvss": {
+            "score": 3.7,
+            "vectorString": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:N/A:L"
+          },
+          "range": "<6.14.1"
+        }
+      ],
+      "effects": [
+        "body-parser",
+        "express"
+      ],
+      "range": "<=6.14.1",
+      "nodes": [
+        "node_modules/qs"
+      ],
+      "fixAvailable": true
+    },
+    "serialize-javascript": {
+      "name": "serialize-javascript",
+      "severity": "high",
+      "isDirect": false,
+      "via": [
+        {
+          "source": 1113686,
+          "name": "serialize-javascript",
+          "dependency": "serialize-javascript",
+          "title": "Serialize JavaScript is Vulnerable to RCE via RegExp.flags and Date.prototype.toISOString()",
+          "url": "https://github.com/advisories/GHSA-5c6j-r48x-rmvq",
+          "severity": "high",
+          "cwe": [
+            "CWE-96"
+          ],
+          "cvss": {
+            "score": 8.1,
+            "vectorString": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H"
+          },
+          "range": "<=7.0.2"
+        }
+      ],
+      "effects": [
+        "copy-webpack-plugin",
+        "css-minimizer-webpack-plugin",
+        "terser-webpack-plugin"
+      ],
+      "range": "<=7.0.2",
+      "nodes": [
+        "node_modules/serialize-javascript"
+      ],
+      "fixAvailable": {
+        "name": "@docusaurus/core",
+        "version": "3.5.2",
+        "isSemVerMajor": true
+      }
+    },
+    "serve-handler": {
+      "name": "serve-handler",
+      "severity": "high",
+      "isDirect": false,
+      "via": [
+        "minimatch"
+      ],
+      "effects": [],
+      "range": "1.1.0 - 6.1.6",
+      "nodes": [
+        "node_modules/serve-handler"
+      ],
+      "fixAvailable": true
+    },
+    "svgo": {
+      "name": "svgo",
+      "severity": "high",
+      "isDirect": false,
+      "via": [
+        {
+          "source": 1114151,
+          "name": "svgo",
+          "dependency": "svgo",
+          "title": "SVGO DoS through entity expansion in DOCTYPE (Billion Laughs)",
+          "url": "https://github.com/advisories/GHSA-xpqw-6gx7-v673",
+          "severity": "high",
+          "cwe": [
+            "CWE-776"
+          ],
+          "cvss": {
+            "score": 7.5,
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+          },
+          "range": ">=3.0.0 <3.3.3"
+        }
+      ],
+      "effects": [],
+      "range": "3.0.0 - 3.3.2",
+      "nodes": [
+        "node_modules/svgo"
+      ],
+      "fixAvailable": true
+    },
+    "terser-webpack-plugin": {
+      "name": "terser-webpack-plugin",
+      "severity": "high",
+      "isDirect": false,
+      "via": [
+        "serialize-javascript"
+      ],
+      "effects": [],
+      "range": "<=5.3.16",
+      "nodes": [
+        "node_modules/terser-webpack-plugin"
+      ],
+      "fixAvailable": true
+    },
+    "webpack": {
+      "name": "webpack",
+      "severity": "low",
+      "isDirect": false,
+      "via": [
+        {
+          "source": 1113041,
+          "name": "webpack",
+          "dependency": "webpack",
+          "title": "webpack buildHttp: allowedUris allow-list bypass via URL userinfo (@) leading to build-time SSRF behavior",
+          "url": "https://github.com/advisories/GHSA-8fgc-7cc6-rx7x",
+          "severity": "low",
+          "cwe": [
+            "CWE-918"
+          ],
+          "cvss": {
+            "score": 3.7,
+            "vectorString": "CVSS:3.1/AV:N/AC:H/PR:L/UI:R/S:U/C:L/I:L/A:N"
+          },
+          "range": ">=5.49.0 <=5.104.0"
+        },
+        {
+          "source": 1113042,
+          "name": "webpack",
+          "dependency": "webpack",
+          "title": "webpack buildHttp HttpUriPlugin allowedUris bypass via HTTP redirects → SSRF + cache persistence",
+          "url": "https://github.com/advisories/GHSA-38r7-794h-5758",
+          "severity": "low",
+          "cwe": [
+            "CWE-918"
+          ],
+          "cvss": {
+            "score": 3.7,
+            "vectorString": "CVSS:3.1/AV:N/AC:H/PR:L/UI:R/S:U/C:L/I:L/A:N"
+          },
+          "range": ">=5.49.0 <5.104.0"
+        }
+      ],
+      "effects": [],
+      "range": "5.49.0 - 5.104.0",
+      "nodes": [
+        "node_modules/webpack"
+      ],
+      "fixAvailable": true
+    }
+  },
+  "metadata": {
+    "vulnerabilities": {
+      "info": 0,
+      "low": 3,
+      "moderate": 13,
+      "high": 26,
+      "critical": 0,
+      "total": 42
+    },
+    "dependencies": {
+      "prod": 1386,
+      "dev": 22,
+      "optional": 3,
+      "peer": 1,
+      "peerOptional": 0,
+      "total": 1411
+    }
+  }
+}

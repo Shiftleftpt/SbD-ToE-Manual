@@ -1,6 +1,6 @@
 ---
 id: aplicacao-lifecycle
-title: Como Fazer
+title: Aplicação de Deploy Seguro no Ciclo de Vida
 description: Integração prática das práticas de release e deploy seguro no ciclo de vida de software
 tags: [tipo:aplicacao, ciclo-vida, deploy, release, rollback, gates, producao]
 genia: us-format-normalization

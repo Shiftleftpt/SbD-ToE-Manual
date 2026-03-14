@@ -1,6 +1,6 @@
 ---
 id: aplicacao-lifecycle
-title: Como Fazer
+title: Aplicação de Dependências, SBOM e SCA no Ciclo de Vida
 description: Integração prática das prescrições de gestão de dependências, geração de SBOM e execução de SCA ao longo do ciclo de vida da aplicação
 tags: [tipo:aplicacao, ciclo-vida, dependencias, sbom, sca, supply-chain, governance]
 genia: us-format-normalization
@@ -754,4 +754,3 @@ Ums dos aspetos fundamentais no  **Cap. 12 — Monitorização & Operação Segu
   - PRs de *patches triviais* → *auto-merge*;  
   - PRs com impacto → revisão humana, *canary* e promoção por estágios (sobretudo em L3).  
 - **Integração com Cap. 12** deve garantir visibilidade total, alertas em tempo real e métricas operacionais de resposta (MTTA/MTTR) por severidade e ambiente.
-

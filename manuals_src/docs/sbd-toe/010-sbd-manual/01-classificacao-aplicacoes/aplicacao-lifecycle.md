@@ -1,6 +1,6 @@
 ---
 id: aplicacao-lifecycle
-title: Como Fazer
+title: Aplicação da Classificação de Criticidade no Ciclo de Vida
 description: Aplicação da classificação de criticidade ao longo do ciclo de vida de desenvolvimento
 tags: [tipo:aplicacao, ciclo-vida, classificacao, risco, user-stories, genia:us-format-normalization]
 ---
